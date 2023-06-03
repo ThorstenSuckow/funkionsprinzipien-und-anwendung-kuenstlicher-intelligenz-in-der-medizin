@@ -1,6 +1,6 @@
 # Notizen
 
-- Graphentheorie: ein Algorithmus ist in der Lage, zwischen verschiedenen Punkten den kürzesten Weg zu finden. Eine KI kann unter BBerücksichtigung zusätzlicher MErk-male herausfinden, ob es einen Weg gibt, den bereits andere mit ähnlichen Merkmalen bevorzugen, und braucht die Berechnung unit durchführen (Big Data) - siehe [ERT20], Seite 11, "Hybride Systeme": §neuronale Netze einsetzen, um Heuristiken zur Reduktion riesiger kombinatorischer Suchräume bei der Suche nach Beweisen zu lernen"
+- Graphentheorie: ein Algorithmus ist in der Lage, zwischen verschiedenen Punkten den kürzesten Weg zu finden. Eine KI kann unter BBerücksichtigung zusätzlicher MErk-male herausfinden, ob es einen Weg gibt, den bereits andere mit ähnlichen Merkmalen bevorzugen, und braucht die Berechnung unit durchführen (Big Data) - siehe [ERT20], Seite 11, "Hybride Systeme": §neuronale Netze einsetzen, um Heuristiken zur Reduktion riesiger kombinatorischer Suchräume bei der Suche nach Beweisen zu lernen" (informaierte Suche?)
 
 - Definition KI Elaine Rich: Artificial Intelligence is the study of how to make computers do things at which, at the moment, people are better
 
@@ -10,6 +10,20 @@
 
 - probabilistisches Schließen: Welche Rolle hat der Nicht-Determinismus?
 
+- KI übeernimmt Arbeiten: Mehr Ressourcen für die KI werden benötigt - welche Auswirkungen hat das auf die Umwelt?
+
+- Sinnhaftigkeit KI: Siehe Spiegel Drohne greift General an. In welchen Dienst stellen wir die KI? Medizin? Militär? Das eine vernichtet und schützt Leben, das andere schützt Lebe. Siehe auch Hawking Zitat reddit: "Please encourage your students to think not only about how to create AI, but also about how to ensure its beenficial use".
+
+- Wie sicher ist KI im Verkehr? Weniger Unfälle durch weniger Emotionen & Unkonzentriertheit? Dann wären die Algorithmen, de ein Auto steuern besser als der Fahrer (ähnlich bildgeb. Verfahren, bei denen Fehlerquote geringer ist als der von Medizinern)
+
+- Medizin vs KI: Menschen können KI bald nicht mehr verstehen, siehe [ERT20, 9.10.1] - Medizin basiert bei manchen Medikamentn auch auf Statisken, Medikamente werden zugelassen, ohne das Nebenwirkungen komplett evrstanden sind
+
+- Sicherheit in der KI wird relevant - bspw wenn Verkehr Fahrzeugführung übernommen wird, Medizin möglich? KI gestützte Systeme - Netzwerkangriff - Krankenhaus kann nicht weiterarbeiten oder nur auf Reserve
+
+- Agent: System, das Informationen verarbeitet und aus Eingabe Ausgabe produziert
+
+- unterschied Reflex Agent / Agent mit Gedächtnis: Wenn Agent seinen Ort und die Zeit kennt, kann er Geschwindigkeit nicht bestimmen, Agent mit Gedächtnis kann das, wenn er in kurzen Zeitabständen Ort speichert und abgleicht - Heisenbergsche Unschärferelation: Entweder Ort oder Geschwindigkeit bestimmen - ggfl Analogie
+
 # Persona
 - Gödel (Unvollständigkeitssatz), 
 - Church (Lambda Kalkül, kombinatorische Logik?) 
@@ -17,10 +31,13 @@
 - Schönfinkel, Über die Bausteine mathematischer Logik
 
 # Agenda
-- Prädikatenlogik, neuronale Netze, Kognitionswissenschaften, Turing Test, Berechenbarkeit, Nicht-Determinismus, Monte Carlo Tree Search, Dartmouth Konferenz, Hornklauseln (Prolog), Konnektionismus (Teilgebiet KI), probabilistisches Schließen, Fuzzy Logik, Backpropagation Netz
+- Prädikatenlogik, neuronale Netze, Kognitionswissenschaften, Turing Test, Berechenbarkeit, Nicht-Determinismus, Monte Carlo Tree Search, Dartmouth Konferenz, Hornklauseln (Prolog), Konnektionismus (Teilgebiet KI), probabilistisches Schließen, Fuzzy Logik, Backpropagation Netz, Industrie 4.0, MArkov Entscheidungsprozess 
 
 # Quellen 
 - German Journal of Articial Intelligence
+- The future of Jobs - Weltwirtschaftsforum hat 2016 Studie veröffentlicht, das innerhalb der nächsten 5 Jahre (2021) über 5 Millionen Arbeitsplätze vernichtet werden mit Industrie 4.0
+- Im zusammenhang mit KI / Green IT:Befreiung vom Überfluss - Grundlagen einer Wirtschaft ohne Wachstum, Paech, N.
+
 
 # Struktur
 - "Wir müssen wissen, wir werden wissen" als Einleitung
