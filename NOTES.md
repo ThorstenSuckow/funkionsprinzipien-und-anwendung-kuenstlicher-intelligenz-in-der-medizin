@@ -52,4 +52,6 @@
 
 # Struktur
 - "Wir müssen wissen, wir werden wissen" als Einleitung
+- Hobbes Zitat "künstliches Tier"
 - verwendete KI (spielt Natural Language Processing eine Rolle? Welche VErfahren sollten vorgestellt werden, mit denen dann eine Vorstellung der verwendeten KI als Technologie eingergeht?)
+- Russell Norvig Einrdnung Zitat Rich (menschliches Handeln)
