@@ -24,6 +24,16 @@
 
 - unterschied Reflex Agent / Agent mit Gedächtnis: Wenn Agent seinen Ort und die Zeit kennt, kann er Geschwindigkeit nicht bestimmen, Agent mit Gedächtnis kann das, wenn er in kurzen Zeitabständen Ort speichert und abgleicht - Heisenbergsche Unschärferelation: Entweder Ort oder Geschwindigkeit bestimmen - ggfl Analogie
 
+- Architektur wissensbasierter Systeme: Welches Modeel eignet sich hier? Gibt es Architekten, die sich speziell um die Planung KI basierter Systeme kümmern? (ggfl. E Wolff?)
+
+- wie trennen wir KI von Intelligenz Mehscne: Stichwort wissensbasierte Systeme: Wissen ist vorgegeben, Abrufbar für Computer, ähnlich Lexikon für Menschen. Wie kann ein Computer nun Schlüsse zwischen Aussagen herziehen? Auch: Wenn Computer sich nur auf KB (Knowledge Base) stützt, geschieht dort eine Trennung zu dem Menschen (Bewußtsein, Instinkte, Reflexe und Lernen, während Comouter "nur lernen")
+
+- KI Medizin: Ist nur Analyse möglich/ sinnvoll, oder auch berattende KI (Stichwort Expertensysteme); welche Rolle spielt dann bspw. Natural Language Processing
+
+- In welchem Kontext steht bei KI das Verstehen der menschlichen Sprache (Anfragen verarbeiten in natürlicher Sprache statt Formalismen) und das Beantworten in menschlicher Sprache (statt in Formalismen)? Hier ggfl. interessant Komplexität und Aufwand für das Umsetzen einer Sprache <-> zu beschreiben (Turing, Automat?, Eingabe, Alphabet)
+
+- Abgrenzung: Reagiert ein System schnller als ein Mensch - ist es dem Menschen dann überlegen, oder sind die Art seiner Reaktionen (ausschließlich) wesentlich für die Einschätzung der Intelligenz einer KI - bsp. KI Rateshow Watson Jeopardy: Schnellere Reaktion - eher verstanden und deshalb schneller gerdrückt oder gleich schnell verstanden wie der Mensch und Reaktionszeit maschinell begünstigt?
+
 # Persona
 - Gödel (Unvollständigkeitssatz), 
 - Church (Lambda Kalkül, kombinatorische Logik?) 
@@ -31,13 +41,15 @@
 - Schönfinkel, Über die Bausteine mathematischer Logik
 
 # Agenda
-- Prädikatenlogik, neuronale Netze, Kognitionswissenschaften, Turing Test, Berechenbarkeit, Nicht-Determinismus, Monte Carlo Tree Search, Dartmouth Konferenz, Hornklauseln (Prolog), Konnektionismus (Teilgebiet KI), probabilistisches Schließen, Fuzzy Logik, Backpropagation Netz, Industrie 4.0, MArkov Entscheidungsprozess 
+- Prädikatenlogik, neuronale Netze, Kognitionswissenschaften, Turing Test, Berechenbarkeit, Nicht-Determinismus, Monte Carlo Tree Search, Dartmouth Konferenz, Hornklauseln (Prolog), Konnektionismus (Teilgebiet KI), probabilistisches Schließen, Fuzzy Logik, Backpropagation Netz, Industrie 4.0, MArkov Entscheidungsprozess, Watson IBM, Architektur Wissensbasierter Systeme, KI allgemein, Inferenzmechanismus, Prädikatenlogik (PL1) 
 
 # Quellen 
 - German Journal of Articial Intelligence
 - The future of Jobs - Weltwirtschaftsforum hat 2016 Studie veröffentlicht, das innerhalb der nächsten 5 Jahre (2021) über 5 Millionen Arbeitsplätze vernichtet werden mit Industrie 4.0
 - Im zusammenhang mit KI / Green IT:Befreiung vom Überfluss - Grundlagen einer Wirtschaft ohne Wachstum, Paech, N.
+- Weizenbaum ELIZA Paper
 
 
 # Struktur
 - "Wir müssen wissen, wir werden wissen" als Einleitung
+- verwendete KI (spielt Natural Language Processing eine Rolle? Welche VErfahren sollten vorgestellt werden, mit denen dann eine Vorstellung der verwendeten KI als Technologie eingergeht?)
