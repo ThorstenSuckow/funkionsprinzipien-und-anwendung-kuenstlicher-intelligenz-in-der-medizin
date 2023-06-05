@@ -34,6 +34,12 @@
 
 - Abgrenzung: Reagiert ein System schnller als ein Mensch - ist es dem Menschen dann überlegen, oder sind die Art seiner Reaktionen (ausschließlich) wesentlich für die Einschätzung der Intelligenz einer KI - bsp. KI Rateshow Watson Jeopardy: Schnellere Reaktion - eher verstanden und deshalb schneller gerdrückt oder gleich schnell verstanden wie der Mensch und Reaktionszeit maschinell begünstigt?
 
+- KI kann nur mit Daten arbeiten. Wo kommen die Daten her, wie sieht es mit Datenschutz aus. Bspw USA, Daten müssen öffentlich sein wenn finanziell Unterstützt vom Staat (KI Lectures an der LMU, Folge 2) - können wir die Daten garantieren?
+
+- Gibt es in der Wirtschaft Lobbyisten, die gegen KI in der Medizin sind?
+
+- Wer trägt Verantwortung für KI? Programmierer? Datenlieferant? Unternehmen, das KI einsetzt?
+
 # Persona
 - Gödel (Unvollständigkeitssatz), 
 - Church (Lambda Kalkül, kombinatorische Logik?) 
