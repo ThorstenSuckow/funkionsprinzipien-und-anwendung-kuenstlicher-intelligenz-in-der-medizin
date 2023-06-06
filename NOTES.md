@@ -40,6 +40,14 @@
 
 - Wer trägt Verantwortung für KI? Programmierer? Datenlieferant? Unternehmen, das KI einsetzt?
 
+- Dizzerenzierung KI Kognitionswissenschaften
+
+- Time Sharing wg geringer Rechenleistung: MMM?
+
+- wie skaliert KI?
+
+- KI und Silver Bullet?
+
 # Persona
 - Gödel (Unvollständigkeitssatz), 
 - Church (Lambda Kalkül, kombinatorische Logik?) 
@@ -47,17 +55,22 @@
 - Schönfinkel, Über die Bausteine mathematischer Logik
 
 # Agenda
-- Prädikatenlogik, neuronale Netze, Kognitionswissenschaften, Turing Test, Berechenbarkeit, Nicht-Determinismus, Monte Carlo Tree Search, Dartmouth Konferenz, Hornklauseln (Prolog), Konnektionismus (Teilgebiet KI), probabilistisches Schließen, Fuzzy Logik, Backpropagation Netz, Industrie 4.0, MArkov Entscheidungsprozess, Watson IBM, Architektur Wissensbasierter Systeme, KI allgemein, Inferenzmechanismus, Prädikatenlogik (PL1) 
+- Prädikatenlogik, neuronale Netze, Kognitionswissenschaften, Turing Test, Berechenbarkeit, Nicht-Determinismus, Monte Carlo Tree Search, Dartmouth Konferenz, Hornklauseln (Prolog), Konnektionismus (Teilgebiet KI), probabilistisches Schließen, Fuzzy Logik, Backpropagation Netz, Industrie 4.0, MArkov Entscheidungsprozess, Watson IBM, Architektur Wissensbasierter Systeme, KI allgemein, Inferenzmechanismus, Prädikatenlogik (PL1), Apple Watch V17(?), Mood Tracker, Cambridge: Roboter lernt kochen, Dendral u. Mycin ggfl. als Beispiel
 
 # Quellen 
 - German Journal of Articial Intelligence
 - The future of Jobs - Weltwirtschaftsforum hat 2016 Studie veröffentlicht, das innerhalb der nächsten 5 Jahre (2021) über 5 Millionen Arbeitsplätze vernichtet werden mit Industrie 4.0
 - Im zusammenhang mit KI / Green IT:Befreiung vom Überfluss - Grundlagen einer Wirtschaft ohne Wachstum, Paech, N.
 - Weizenbaum ELIZA Paper
+- Mc Carthy, 156, Geburtsstunde Ki S. Russel Norvig)
+- Russel, norvig: definition ki.:...maschinen zu erstellen, ie in komplexen, sich ändernden Umgebungen autonom arbeiten
+- Zitat Herbert Simon 1957 auch in Relation zu Rich Zitat (KI strebt nach Können des Menschen)
 
 
 # Struktur
+- Vorwort: Plötzlich ist KI allgegenwärtig - Deus Ex machina - vs. wird uns die KI vernichten
 - "Wir müssen wissen, wir werden wissen" als Einleitung
 - Hobbes Zitat "künstliches Tier"
 - verwendete KI (spielt Natural Language Processing eine Rolle? Welche VErfahren sollten vorgestellt werden, mit denen dann eine Vorstellung der verwendeten KI als Technologie eingergeht?)
 - Russell Norvig Einrdnung Zitat Rich (menschliches Handeln)
+- Klassifizierung, Prädikatenlogik
