@@ -1,0 +1,14 @@
+# Quellen
+- German Journal of Articial Intelligence
+- The future of Jobs - Weltwirtschaftsforum hat 2016 Studie veröffentlicht, das innerhalb der nächsten 5 Jahre (2021) über 5 Millionen Arbeitsplätze vernichtet werden mit Industrie 4.0
+- Im zusammenhang mit KI / Green IT:Befreiung vom Überfluss - Grundlagen einer Wirtschaft ohne Wachstum, Paech, N.
+- Weizenbaum ELIZA Paper
+- Mc Carthy, 156, Geburtsstunde Ki S. Russel Norvig)
+- Russel, norvig: definition ki.:...maschinen zu erstellen, ie in komplexen, sich ändernden Umgebungen autonom arbeiten
+- Zitat Herbert Simon 1957 auch in Relation zu Rich Zitat (KI strebt nach Können des Menschen)
+- aaai.org
+- Encyclopedia of AI
+- Probabilistic Resonin in Intelligent Systems (Pearl, 1988)
+- In Defense of Probability (Cheeseman, 1985)
+- Arbeit Yarowsky (1995) Mehrdeutigkeit Wortsinn
+- Hays Efros diskutieren 2007 möglichkeiten Leerstellen in Fotos durch KI ersetzen zu lassen, schlechte Ergebniise mit 10000en, ausgezeichnete mit etwa 2 Millinen
