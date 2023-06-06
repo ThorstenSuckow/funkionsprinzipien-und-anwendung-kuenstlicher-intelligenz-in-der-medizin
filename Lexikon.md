@@ -1,0 +1,27 @@
+# Lexikon
+- Prädikatenlogik,
+- neuronale Netze,
+- Kognitionswissenschaften,
+- Turing Test,
+- Berechenbarkeit,
+- Nicht-Determinismus,
+- Monte Carlo Tree Search,
+- Dartmouth Konferenz,
+- Hornklauseln (Prolog),
+- Konnektionismus (Teilgebiet KI),
+- probabilistisches Schließen,
+- Fuzzy Logik,
+- Backpropagation Netz,
+- Industrie 4.0,
+- MArkov Entscheidungsprozess,
+- Watson IBM,
+- Architektur Wissensbasierter Systeme,
+- KI allgemein,
+- Inferenzmechanismus,
+- Prädikatenlogik (PL1),
+- Apple Watch V17(?),
+- Mood Tracker,
+- Cambridge: Roboter lernt kochen,
+- Dendral u. Mycin ggfl. als Beispiel
+- Hidden-Markov-Modelle
+- Dartmouth Konferenz 1956
