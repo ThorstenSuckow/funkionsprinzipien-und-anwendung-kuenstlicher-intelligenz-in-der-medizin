@@ -64,7 +64,7 @@
 
 - KI: Internet als Datengrundlage: neueste Arbeiten zeigen daß große Datengrundlage effektiver als gute Algorithmen
 
-- 
+- FAIR (?), standardisierte Daten; Problem Freitext in Befunden, Herausforderung für KI; elektronische Patientenakte als mögliche lösung; bzgl. standardisierte Verfahren: Blaue Buch, Beschreibung Modelfindung für Chemie/Biologie
 
 # Struktur
 - Vorwort: Plötzlich ist KI allgegenwärtig - Deus Ex machina - vs. wird uns die KI vernichten
