@@ -64,7 +64,7 @@
 
 - KI: Internet als Datengrundlage: neueste Arbeiten zeigen daß große Datengrundlage effektiver als gute Algorithmen
 
-- 
+- KI: finde Waldo? 
 
 # Struktur
 - Vorwort: Plötzlich ist KI allgegenwärtig - Deus Ex machina - vs. wird uns die KI vernichten
@@ -73,3 +73,5 @@
 - verwendete KI (spielt Natural Language Processing eine Rolle? Welche VErfahren sollten vorgestellt werden, mit denen dann eine Vorstellung der verwendeten KI als Technologie eingergeht?)
 - Russell Norvig Einordnung Zitat Rich (menschliches Handeln)
 - Klassifizierung, Prädikatenlogik
+- Einleitung: Bild mit vielen Details, aus dem eins hervorsticht: Frage: Wie kann ein Computer wissen, daß es sich bei der
+Abbildung um ein Bild handelt, das etwas ganz bestimmtes Zeigt, ohne, daß sich KI bei der Analyse in Details verliert? "Man präsentiert etwas" anstatt "Leute schauen Mann zu" - obwohl beides richtig ist, gibt es ja nur eine Kernaussage; genauso wird das ja auch Kindern beigebracht, wenn ihnen etwas gezeigt wird, es folgt ja immer eine Erklärung => Machine Learning
