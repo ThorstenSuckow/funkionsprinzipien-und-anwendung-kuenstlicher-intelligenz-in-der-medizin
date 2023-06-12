@@ -12,3 +12,4 @@
 - In Defense of Probability (Cheeseman, 1985)
 - Arbeit Yarowsky (1995) Mehrdeutigkeit Wortsinn
 - Hays Efros diskutieren 2007 möglichkeiten Leerstellen in Fotos durch KI ersetzen zu lassen, schlechte Ergebniise mit 10000en, ausgezeichnete mit etwa 2 Millinen
+- Tom Mitchell "Machine Larning" 1997, "Machine Learning is the study of computer algorithms that improve automatically through experience"
