@@ -67,6 +67,9 @@
 - FAIR (?), standardisierte Daten; Problem Freitext in Befunden, Herausforderung für KI; elektronische Patientenakte als mögliche lösung; bzgl. standardisierte Verfahren: Blaue Buch, Beschreibung Modelfindung für Chemie/Biologie
 - KI: finde Waldo? 
 
+- ethische Herausforderungen; Ehtik: Normative Reflexionswissenschaften; kann KI zu einem GUTEN Leben beitragen; VErantwortung: Differenzierung Ethik/Juristisch
+- 
+
 # Struktur
 - Vorwort: Plötzlich ist KI allgegenwärtig - Deus Ex machina - vs. wird uns die KI vernichten
 - "Wir müssen wissen, wir werden wissen" als Einleitung
