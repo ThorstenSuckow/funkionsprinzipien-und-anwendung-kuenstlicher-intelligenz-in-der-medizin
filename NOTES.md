@@ -68,7 +68,16 @@
 - KI: finde Waldo? 
 
 - ethische Herausforderungen; Ehtik: Normative Reflexionswissenschaften; kann KI zu einem GUTEN Leben beitragen; VErantwortung: Differenzierung Ethik/Juristisch
-- 
+
+- Russel Norvig Umgebung Bildanalyse deterministisch p. 72, medizinische Diagnose
+
+- Problem bei Klassifikation mit vielen Features: Wie läßt sich bspw Wetter klassifizieren?
+
+- COVID Data Analysis Goup LMU
+
+- narziss kunstinstallation, Computer vor Spiegel
+
+- Domain specific machine learning: Medizin, Biologie, Physik, Geowwissenschaften, Humane KI
 
 # Struktur
 - Vorwort: Plötzlich ist KI allgegenwärtig - Deus Ex machina - vs. wird uns die KI vernichten
