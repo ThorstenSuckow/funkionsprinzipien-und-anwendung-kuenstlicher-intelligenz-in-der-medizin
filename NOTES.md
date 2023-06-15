@@ -64,10 +64,10 @@
 
 - KI: Internet als Datengrundlage: neueste Arbeiten zeigen daß große Datengrundlage effektiver als gute Algorithmen
 
-- FAIR (?), standardisierte Daten; Problem Freitext in Befunden, Herausforderung für KI; elektronische Patientenakte als mögliche lösung; bzgl. standardisierte Verfahren: Blaue Buch, Beschreibung Modelfindung für Chemie/Biologie
+- FAIR (?), standardisierte Daten; Problem Freitext in Befunden, Herausforderung für KI; elektronische Patientenakte als mögliche Lösung; bzgl. standardisierte Verfahren: Blaue Buch, Beschreibung Modellfindung für Chemie/Biologie
 - KI: finde Waldo? 
 
-- ethische Herausforderungen; Ehtik: Normative Reflexionswissenschaften; kann KI zu einem GUTEN Leben beitragen; VErantwortung: Differenzierung Ethik/Juristisch
+- ethische Herausforderungen; Ethik: Normative Reflexionswissenschaften; kann KI zu einem GUTEN Leben beitragen; Verantwortung: Differenzierung Ethik/Juristisch
 
 - Russel Norvig Umgebung Bildanalyse deterministisch p. 72, medizinische Diagnose
 
@@ -75,7 +75,7 @@
 
 - COVID Data Analysis Goup LMU
 
-- narziss kunstinstallation, Computer vor Spiegel
+- narziss kunstinstallation, Computer vor Spiegel: https://christianmioloclair.com/narciss
 
 - Domain specific machine learning: Medizin, Biologie, Physik, Geowwissenschaften, Humane KI
 
