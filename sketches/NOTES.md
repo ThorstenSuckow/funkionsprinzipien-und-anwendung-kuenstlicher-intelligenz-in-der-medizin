@@ -79,6 +79,10 @@
 
 - Domain specific machine learning: Medizin, Biologie, Physik, Geowwissenschaften, Humane KI
 
+- KI unterscheidung menschliches Handeln, denken, siehe erste Vorlesung Clausthal
+
+- unterschied übersetzung intelligence deutsch / englisch ("artificial intelligence", intelligence ~ Intelligenz)
+
 # Struktur
 - Vorwort: Plötzlich ist KI allgegenwärtig - Deus Ex machina - vs. wird uns die KI vernichten
 - "Wir müssen wissen, wir werden wissen" als Einleitung
