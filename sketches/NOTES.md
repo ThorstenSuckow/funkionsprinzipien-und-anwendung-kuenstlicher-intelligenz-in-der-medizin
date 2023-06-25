@@ -83,6 +83,14 @@
 
 - unterschied übersetzung intelligence deutsch / englisch ("artificial intelligence", intelligence ~ Intelligenz)
 
+- Ertel beschreibt in 7.3.7 die Erfahrungen mit LEXMED in der PRaxis und geht u.a. darauf ein, daß sich so ein System in D schwierig vermarkten läßt. Diverse Gründe sind dem Absatz zu entnehmen, darunter u.a. die konservative Lehre und das Mißtrauen der Patienten
+
+- Bayes Netz Beispiel Alarm original in Russel und Norvig, bei Ertel in 7.4.1
+
+- Ertel, Kap. 8, Lernen mit Bayes Netzen
+
+- Ertel, in 7.5: Scores veraltet, zu schwach? Lernende Modelle besser?
+
 # Struktur
 - Vorwort: Plötzlich ist KI allgegenwärtig - Deus Ex machina - vs. wird uns die KI vernichten
 - "Wir müssen wissen, wir werden wissen" als Einleitung
