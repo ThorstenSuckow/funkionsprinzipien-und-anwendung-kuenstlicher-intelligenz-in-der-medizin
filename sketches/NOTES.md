@@ -91,6 +91,8 @@
 
 - Ertel, in 7.5: Scores veraltet, zu schwach? Lernende Modelle besser?
 
+- ist ein Lichtschalter schon KI? Sensoren registriere, Aktuatoren reagieren.
+
 # Struktur
 - Vorwort: Plötzlich ist KI allgegenwärtig - Deus Ex machina - vs. wird uns die KI vernichten
 - "Wir müssen wissen, wir werden wissen" als Einleitung
