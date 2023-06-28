@@ -93,6 +93,12 @@
 
 - ist ein Lichtschalter schon KI? Sensoren registriere, Aktuatoren reagieren.
 
+- "Beim Perzeptron wird das in den Trainingsdaten vorhandene Wissen extrahiert und in komprimierter Form in den Gewichten w_i gespeichert." [ERT21, p.217] 
+
+- Punkt, um Fehlerminimum auf den Testdaten zu finden: Kreuzvalidierung (cross validation) [ERT21, p.246]
+
+- Zweiklassenproblem zur Vorstellung eines Perzeptors, ggf. auch Lernen von Entscheidungsbäumen
+
 # Struktur
 - Vorwort: Plötzlich ist KI allgegenwärtig - Deus Ex machina - vs. wird uns die KI vernichten
 - "Wir müssen wissen, wir werden wissen" als Einleitung
