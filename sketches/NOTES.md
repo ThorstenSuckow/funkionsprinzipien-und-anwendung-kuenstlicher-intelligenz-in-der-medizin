@@ -99,6 +99,10 @@
 
 - Zweiklassenproblem zur Vorstellung eines Perzeptors, ggf. auch Lernen von Entscheidungsbäumen
 
+- Perzeptron ist ein feed-forward Netzwerk mit einer Schicht
+
+- Konvergenztheorem von Rosenblatt: Alle Funktionen, die mit Perzeptronen dargestellt werden können, können mit Lernalgorithmus gelernt werden kann.
+
 # Struktur
 - Vorwort: Plötzlich ist KI allgegenwärtig - Deus Ex machina - vs. wird uns die KI vernichten
 - "Wir müssen wissen, wir werden wissen" als Einleitung
