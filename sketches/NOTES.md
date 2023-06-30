@@ -103,6 +103,20 @@
 
 - Konvergenztheorem von Rosenblatt: Alle Funktionen, die mit Perzeptronen dargestellt werden können, können mit Lernalgorithmus gelernt werden kann.
 
+- Welche Heuristiken gibt es zur optimalen Bestimmung von Knoten in einem neuronalen Netzwerk
+
+- Qualität eines gelernten Modells ist gegeben durch dessen generalisierungsfähigkeit auf neue Daten, hängt stark von den Trainingsdaten ab [ERT21, p.249]. Siehe auch Bilderkernnung, Rotation um bestimmte Gradmaße zur Veränderung der Trainingsdaten: VErrauschen von Daten, um Overfitting zu vermeiden: Translationsinvarianz, Rotationsinvarianz (auch [ERT21, p 249])
+
+- Zitat Turing Lernen Kind / Erwachsen: Imitiation Game oder Computing Machinery and Intelligence?
+
+- Normalisierung von Daten wichtig für maschninelles Lernen, z.b Schrifterkennung: einfarbiger Hintergrund, Schrift dann andersfarbig und stärker saturiert je nach Druckstärke Stift, einzelne Buchstaben auf gewisse Größe, e.g. 64 x 64
+
+- Recherche: müssen für neuronale Netze Daten normalisiert werden?
+
+- KNIME (Konstanz Information Miner) als Tool für Data Mining, MLOSS.org, frei verfügbare Software für maschinelles Lernen
+
+- Zwei der besten Algorithmen zum Lernen mit Lehrer: Xboost und Random Forest [ERT21, p.273]
+
 # Struktur
 - Vorwort: Plötzlich ist KI allgegenwärtig - Deus Ex machina - vs. wird uns die KI vernichten
 - "Wir müssen wissen, wir werden wissen" als Einleitung

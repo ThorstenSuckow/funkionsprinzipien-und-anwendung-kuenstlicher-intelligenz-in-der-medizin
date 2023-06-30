@@ -25,3 +25,8 @@
 - Dendral u. Mycin ggfl. als Beispiel
 - Hidden-Markov-Modelle
 - Dartmouth Konferenz 1956
+- Hyperfläche, Trenngerade
+- Zweiklassenproblem
+- Lernen durch Verstärkung (ff: [ERT21, p.274])
+- Lernen mit Lehrer
+- Lernen ohne Lehrer (Clustering, Daten liegen nicht in Klassen vor)
