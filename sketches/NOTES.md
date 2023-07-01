@@ -117,6 +117,54 @@
 
 - Zwei der besten Algorithmen zum Lernen mit Lehrer: Xboost und Random Forest [ERT21, p.273]
 
+- grundstein KI neuronale Netze [ERT21, p285]: 1943 McCulloch und Pitts "A logical Calculus of the ideas immanent in nervous activity" [Anderson, Rosenfeld: Neurocomputing: Foundations of Research, MIT Press, 1988]
+
+- In fast allen Gebieten drer KI wird versucht, kognitive Prozesse nachzubilen, etwa in der Logik oder beim pobabilistischen Schließen [ERT21, p. 285]
+
+- Hopfield Netz: Anzahl Neuronen == Anzahl Bildpunkte wenn Autoassoziativspeicher genutzt wird für Mustererkennung? Auch: Phasenübergang geordneter Musterererkennung hin zu chaotische Dynamik: Wie lange arbeiten Hopfield-Netze zuverlässig, d.h. bei wievielen gespeicherten Mustern?
+
+- Boltzmann-Maschine mit stetigen Aktivierungswerten und probabilistischen Aktualisierungsregeln für die Netzwerkdynaik, damit Netz nicht in einem lokalen Minimum hängenbleibt: simulated annealing - auch hier Bezug Physik <-> mathematisches Modell KI Netz, siehe Hopfield Netze und Spins [ERT21, p297]
+
+- Teuvo Kohonen: Pionier auf dem Gebiet Assoziativspeicher
+
+- neuronale Netze: Unterschiedliche Speichermodelle
+
+- Ab wann enbthält ein neuronales Netz keine Information mehr? Bsp.: binäre Hebb-Regel, [ERT21 p. 302] solange Gewichtsmatrix dünn besetzt ist geht Verfahren gut, aber je mehr unterschiedliche Muster gespeichert werden, desto voller wird die Matrix unddie Antworten enthalten keine Informatione mehr: Speichereffizienz, formale Definitionen recherchieren
+
+- Optimale Gewichtsmatrix in einem Netz minimiert mittleren Fehler. Wie findet man das Optimum [ERT21, p.305]
+
+- Intelligenz: Möglichst gut generalisieren, aus Fehlern lernen, keine Überanpassung [ERT21, p.306]
+
+- Batch-Lernverfahren vs. inkrementelles Lernen: Neue Trainingsdaten müssen mit allen anderen Trainingsdaten wiederholt eingespeist werden, inkrementelles erlaubt einzelnes hinzufügen
+
+- Lernrate: Konstante, große Lernrate konvergiert schneller, erhöht aber Risiko für Oszillation  um minima oder flache Täler [ERT21, p.310] (Oszillation: Siehe auch Gradientenabstiegsverfahren http://www.neuronalesnetz.de/backpropagation5.html)
+
+- Backpropagation-Algorithmus geht aus der inkrementellen Delta-Regel hervor [ERT21, p. 313], bekannt durch Rumelhart, Hinton, Williams: Learning Internal Representations by Error Propagation (in: Rumelhart, McClelland: Parallel Distributed Processing, MIT Press, 1986)
+
+- Nettalk: Ein Netz lernt Sprechen [ERT21, p.317] - hier besonders interessant die lange Rechenzeit für das Trainieren des Netzes sowie die Beobachtungen des Forcherteams; Recherche: JNNS (Java Neural Network Simulator)
+
+- Problematisch bei Back-Propagation:  bei vielen Gewichten udn TRainingsdaten konvergiert das Netz zu lokalen Minima der quadratischen Fehlerfunktion, Konvergen oft sehr langsam. Oszillationen können vermieden werden, durch das langsame Verkleinern der Lernrate, oder durch Verwendung eines Impulsterms; mit Hilfe von ReLU kann Konvergenz schneller erreicht werden [ERT21, p. 319-321] 
+
+- KI nicht einzige Herausforderung, auch Winnsensingenieurs müssen sinnvolle Traininsdaten erarbeiten und beisteuern
+
+- Deep Learning: klasse von Algorithmen wie Convolutional Neural Networks oder Deep Belief Networks: Netzwerke mit bis zu 1000 Schichten, Übersicht: deeplearning.stanford.eu
+
+- Mustererkennung ist leicht in niedrigdimensionalen Räumen oder wenn Klassen linear separabel sind (Zweiklassenproblem): Sonst treten Probleme auf, denn Lernen stellt schwieriges nichtlineares Optimierungsprobelm dar [ERT21, p. 322]; Backpropagation und Gradientenabstiegsverfahren sind Lösungen, aber wegen Konvergenzproblemen und Rechenzeiten wurde nach anderen Verfahren gesucht
+
+- Deep Learning Architektur: Unsupervises Learning & Supervised Learning (Backpropagation)
+
+- Das Finden der optimalen Metaparameter  für einen Lernalgorihmus kann durch kreuzvalidierung erfolgen [ERT21, p.326]
+
+- keine Theorie für Deep Learning Netze: Verweis in [ERT21, p. 327] auf https://math.ias.edu/tml/dlsagenda
+
+- Deep Residual Learning erlaubt das effiziente Trainieren von bis zu 1000 Schichten mit minimalem Fehler (ZHANG, REN, SUN: Deep residual learning for image recognition (2016))
+
+- Image Net Datenbank: 14 Mio Fotos mit Objekten aus 21.000 Klassen, alle manuell gelabelt
+
+- semantische Segmentierung von Bildern: Aufteilen eines Bildes in Bereiche mit unterschiedlicher Bedeutung (bspw. autonomes Fahren, Verkehrslage: Auto, Ampel, Bürgersteig...)
+
+- Recherche: CNN gut bei Objekterkennung, Rolle in der Medizin?
+
 # Struktur
 - Vorwort: Plötzlich ist KI allgegenwärtig - Deus Ex machina - vs. wird uns die KI vernichten
 - "Wir müssen wissen, wir werden wissen" als Einleitung

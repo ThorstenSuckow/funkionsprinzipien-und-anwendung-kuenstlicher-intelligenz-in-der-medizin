@@ -30,3 +30,14 @@
 - Lernen durch Verstärkung (ff: [ERT21, p.274])
 - Lernen mit Lehrer
 - Lernen ohne Lehrer (Clustering, Daten liegen nicht in Klassen vor)
+- Hopfield-Netz
+- Autoassoziativspeicher
+- Hebb-Regel
+- Lernrate
+- Inferenz, Inferenzschritt
+- Random Forest
+- Convolutional Neural Networks
+- Deep Belief Networks
+- PCS, Dimensionsreduktion, Proncipal Component Analysis
+- Bildverarbeitung: Whitening, um Redundanzen der Merkmale zu reduzieren
+- Translationsinvarianz bei Objekterkennung
