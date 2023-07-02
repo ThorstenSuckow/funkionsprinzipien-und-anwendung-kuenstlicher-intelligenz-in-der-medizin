@@ -41,3 +41,6 @@
 - PCS, Dimensionsreduktion, Proncipal Component Analysis
 - Bildverarbeitung: Whitening, um Redundanzen der Merkmale zu reduzieren
 - Translationsinvarianz bei Objekterkennung
+- Rekurrentes Netz
+- GPT (Generative Pretrained Transformer)
+- Prädikatenlogik, ggf. Beispiel Prolog

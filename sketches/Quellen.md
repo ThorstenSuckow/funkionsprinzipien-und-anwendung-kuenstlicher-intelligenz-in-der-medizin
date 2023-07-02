@@ -15,3 +15,5 @@
 - Tom Mitchell "Machine Larning" 1997, "Machine Learning is the study of computer algorithms that improve automatically through experience"
 - https://www.ki.fau.de/ki-in-der-medizin/, auch andere Universitätskliniken recherchieren: Charite Berlin, UK Aachen, UK ULM, München
 - https://www.auai.org, Association for Uncertainty in Artifial Intelligenz
+- Anschauliche Darstellung Merkmale Schichten Deep Learning: http://mlss.tuebingen.mpg.de/2015/slides/fergus/Fergus_1.pdf [ERT21, p. 322]
+- deeplearning.net/software_links

@@ -161,9 +161,27 @@
 
 - Image Net Datenbank: 14 Mio Fotos mit Objekten aus 21.000 Klassen, alle manuell gelabelt
 
-- semantische Segmentierung von Bildern: Aufteilen eines Bildes in Bereiche mit unterschiedlicher Bedeutung (bspw. autonomes Fahren, Verkehrslage: Auto, Ampel, Bürgersteig...)
+- semantische Segmentierung von Bildern: Aufteilen eines Bildes in Bereiche mit unterschiedlicher Bedeutung (bspw. autonomes Fahren, Verkehrslage: Auto, Ampel, Bürgersteig...) - relevant für Medizin?
 
 - Recherche: CNN gut bei Objekterkennung, Rolle in der Medizin?
+
+- Tensorflow: frei verfügbares SOftware System für Deep Learning
+
+- Generative Adversarial Networks können Bilder auf Basis von textueller Beschreibung generieren, semantische Segmentierung kann erzeugt werden, Objekte können ausgetauscht werden; Generatornetz <-> Diskrimonatornetz im Wechselspiel
+
+- GPT ist ein Transformernetz: UL bekommt viele Texte als Eingabe für das Training, um Sprachmodell zur Vorhersage eines nächsten Wortes zu lernen (siehe RADFORD, NARASIMHAN, SALIMANS, SUTSKEVER: Improving language understanding by generative pre-training, 2018)
+
+- Gerichtete neuronale Netze mit nur einer Lage von Gewichten sind linear; Gefahr overfitting gering; wenn Klassen nicht separabel sind, kommen Backpropagation in mehrschichtigen Netzen zum Einsatz: Konvergenzprobleme, Overfitting, lokale Minima [ERT21, p.340]
+
+- bzgl. Klassifikationsaufgaben sind auch die SVM (Support Vektor Machinen bzw. Kernel Methoden) interressant, die mittlerweile auch auf Regressoinsprobleme anwendbar sind
+
+- Perzeptron, Delta-Regel, Backpropagation udn Deep Learning: Feed Forward Netze, Klasse neuronale Netze
+
+- Prädikatenlogik erlaubt es, Relationen zu formalisieren
+
+- Deep Learning erstellt bessere Diagnosen als Ärzte [ERT21, p. 343]: ESTEVA, KUPREL, NOVOA: Dermatologist-level classificarion of skin cancer with deep neural networks, Nature 542 (2017); LITJENS, SANCHES, TIMOFEEVA: Deep Learning as a toll for increased accuracy and efficiency of histopathological diagnosis, Nature Scientific Reports 6 (2016) 
+
+- Zweiklassenproblem: Daten werden in pos/neg halbraum eingeteilt, Gewichtsvektor steht hierbei senkrecht auf der Trenngerade, warum? (Beweis) w*x = 0 
 
 # Struktur
 - Vorwort: Plötzlich ist KI allgegenwärtig - Deus Ex machina - vs. wird uns die KI vernichten
