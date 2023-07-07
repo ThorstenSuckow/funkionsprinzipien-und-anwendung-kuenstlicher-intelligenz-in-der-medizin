@@ -183,6 +183,11 @@
 
 - Zweiklassenproblem: Daten werden in pos/neg halbraum eingeteilt, Gewichtsvektor steht hierbei senkrecht auf der Trenngerade, warum? (Beweis) w*x = 0 
 
+- cosinusabstand als mass ähnlichkeit daten und die Bedeutung desselben in den verschiedenen Modelle 
+
+- ix.de/zq3t quellen ki software: auch modelle für verschiedene Wissenschaftsdisziplinen, also domänenspezifisch
+
+
 # Struktur
 - Vorwort: Plötzlich ist KI allgegenwärtig - Deus Ex machina - vs. wird uns die KI vernichten
 - "Wir müssen wissen, wir werden wissen" als Einleitung
