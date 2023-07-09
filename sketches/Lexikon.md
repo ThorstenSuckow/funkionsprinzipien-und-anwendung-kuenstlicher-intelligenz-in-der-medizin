@@ -44,3 +44,6 @@
 - Rekurrentes Netz
 - GPT (Generative Pretrained Transformer)
 - Prädikatenlogik, ggf. Beispiel Prolog
+- Datenaugmentierung
+- Gradientenabstieg
+- Lokales Minimum

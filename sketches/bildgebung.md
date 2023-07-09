@@ -1,0 +1,5 @@
+- Bildsegmentierung, bspw um Organe (Umriss) zu erkennen
+- Physikalische Simulation: Unberath: DeepDDR https://deepdrr.readthedocs.io/README.html Röntgenbildgebung
+- Wang: image reconstruction is a new frontier if machine learning IEEE transactions on medical imaging: https://ieeexplore.ieee.org/document/8359079
+- Deep Learning: Datenhungrig (PFANN, 694), deshalb: https://grand-challenge.org, Spenden medizinischer Daten (https:// medicaldatadonors.org)
+- Ronneberger: Convolutional networks for biomedical image segmentation
