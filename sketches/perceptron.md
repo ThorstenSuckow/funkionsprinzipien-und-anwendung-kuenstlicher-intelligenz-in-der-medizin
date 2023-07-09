@@ -1,0 +1,1 @@
+- wenn Daten linear separabel sind, dann findet das Perzeptron Halbräume nach einer endlichen Anzahl von Updates - wenn die Daten nice linear separabel sind, dann bleibt das Perzeptron in der lernschleife hängen (Nachweis)
