@@ -47,3 +47,4 @@
 - Datenaugmentierung
 - Gradientenabstieg
 - Lokales Minimum
+- Diskriminanzfunktion
