@@ -1,0 +1,2 @@
+ - Von Seite 33 an weist Minsky nach, daß ein MCP Netz einen endlichen Automat repräsentieren kann. "The machines discussed in this chapter are made of particularly simple parts. In fact, each part is nohing more than a very simple two-state machine" [MIN67, p.32]
+ - Theorem 3.5 Jeder endlicher Automat ist äquivalent zu und kann durch ein neuronales netz simuliert werden. [MIN67, p.55]
