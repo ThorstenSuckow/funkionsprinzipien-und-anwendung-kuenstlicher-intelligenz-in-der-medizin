@@ -1,4 +1,0 @@
- - [ROS57] Rosenblatt, Frank (1957). "The Perceptron — a perceiving and recognizing automaton". Report 85-460-1. Cornell Aeronautical Laboratory
- - [ROS58] Rosenblatt, Frank (1958). "The perceptron: A probabilistic model for information storage and organization in the brain". Psychological Review, 65(6), 386–408. doi:10.1037/h0042519
- - [BLO62] Block, H. D. (1962). "The Perceptron: A Model for Brain Functioning". I. Reviews of Modern Physics, 34(1), 123–135. doi:10.1103/revmodphys.34.123
- - [NOV62] Novikoff, A. B. (1962). "On convergence proofs on perceptrons". Symposium on the Mathematical Theory of Automata, 12, 615–622. Polytechnic Institute of Brooklyn.
