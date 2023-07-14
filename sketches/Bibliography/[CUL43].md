@@ -35,4 +35,4 @@ Anmerkungen:
 - Mit den Inhibitoren, And und Or haben wir ein vollständiges Operatorensystem, das heißt, jede boolesche Funktion läßz sich durch einen aussagenlogischen Ausdruck beweisen, in dem nur Operatoren aus dieser Menge vorkommen [HOF22, p.93] und [FAU94, p.28]
 - Abbildungen AND, OR, XOR, NOT hinzufügen
 Alles oder Nichts gesetz :
-Ein  Funktionsprinzip von Nervenzellen, das besagt, daß nach übertreten eines bestimmten Schwellenwertes innerhalb des Axons Aktionspotentiale generiert werden, die Nervenzelle diese Potentialle weiterleitet. Alle unterhalb dieser Schwelle liegenden Potentiale werden nciht weitergeleitet. Sie auch ReLu
+Ein  Funktionsprinzip von Nervenzellen, das besagt, daß nach übertreten eines bestimmten Schwellenwertes innerhalb des Axons Aktionspotentiale generiert werden, die Nervenzelle diese Potentialle weiterleitet. Alle unterhalb dieser Schwelle liegenden Potentiale werden nciht weitergeleitet. Sie auch ReLu u. [SIL07, p.46]
