@@ -20,7 +20,20 @@
 # Das Neuron 
 > Eine erregbare Zelle reagiert auf einen Reiz mit einer Änderung ihrer Membraneigenschaften (S. 32). Es gibt zweierlei Typen erregbarer Zellen, nämlich Nervenzellen, die Impulse übertragen und im Zellverband modifizieren können, und Muskelzellen, die sich auf diese Impulse hin oder autonom kontrahieren (S. 42). [SIL07, p.42]
 > Das Neuron (A1) ist die strukturelle und funktionelle Einheit des Nervensystems.  [SIL07, p.42]
->  Über die meist baumartig verzweigten Dendriten nimmt das Neuron (fördernde und hemmende) afferente Signale von anderen (oft von tausenden) Neuronen auf und bildet über die Zellmembran des Somas eine Signalsumme. Das Axon, das am Axonhügel des Somas entspringt, hat die Aufgabe, das efferente Nervensignal auf häufig weit entfernte Effektoren(Muskel- oder Drüsenzellen) sowie auf nachgeschaltete Neurone zu übertragen. Es gibt in seinem Verlauf oft Äste (Kollateralen) ab, die sich am Ende nochmals aufsplittern. Überschreitet die Signalsumme am Axonhügel einen Schwellenwert, wird im Axon ein Aktionspotenzial abgeschickt (S. 46), das an den Endknöpfen (A1,3) die nächste Synapse(s. u.) erreicht.  [SIL07, p.42]
+> Über die meist baumartig verzweigten Dendriten nimmt das Neuron (fördernde und hemmende) afferente Signale von anderen (oft von tausenden) Neuronen auf und bildet über die Zellmembran des Somas eine Signalsumme.  [SIL07, p.42]
+
+## Das Axon
+>  Das Axon, das am Axonhügel des Somas entspringt, hat die Aufgabe, das efferente Nervensignal auf häufig weit entfernte Effektoren(Muskel- oder Drüsenzellen) sowie auf nachgeschaltete Neurone zu übertragen. Es gibt in seinem Verlauf oft Äste (Kollateralen) ab, die sich am Ende nochmals aufsplittern. Überschreitet die Signalsumme am Axonhügel einen Schwellenwert, wird im Axon ein Aktionspotenzial abgeschickt (S. 46), das an den Endknöpfen (A1,3) die nächste Synapse(s. u.) erreicht.[SIL07, p.42]
+
+# Potentiale
+
+## Schwellenpotential: 
+Als Schwellenpotential bezeichnet man im Zusammenhang mit der Signalübermittlung in Nerven und Muskelfasern jene Potentialdifferenz, bei der ein Aktionspotential ausgelöst wird. (https://de.wikipedia.org/wiki/Schwellenpotential, 15.07.2023)
+
+## Ruhemembranpotential:   
+Als Ruhemembranpotential oder auch knapp Ruhepotential (abgekürzt RMP bzw. RP) wird das Membranpotential von erregbaren Zellen in Ruhe bezeichnet, also bei nicht erregten Nervenzellen oder Muskelzellen. Eine charakteristische, vorübergehende Abweichung vom Ruhepotential ist beispielsweise das Aktionspotential (AP) dieser Zellen bei Erregung. Die als Ruhemembranpotential bezeichnete Potentialdifferenz zwischen negativ geladenem Zellinneren und extrazellulärer Umgebung über die Membran beträgt je nach Zelltyp zwischen −100 und −50 mV [SIL07, p.44], bei den meisten Nervenzellen rund −70 mV. https://de.wikipedia.org/wiki/Ruhemembranpotential 15.07.2023
+> Die Ursache des Ruhepotenzials ist eine ungleiche Ionenverteilung (B) zwischen der intrazellulären Flüssigkeit (IZF) und der extrazellulären Flüssigkeit (EZF) [SIL07, p. 44]
+> > Alle lebenden Zellen weisen ein (Ruhe-) Membranpotenzial auf, aber nur die erregbaren Zellen (Nerv, Muskel) haben die Fähigkeit, die Ionenleitfähigkeit ihrer Membran auf einen Reiz hin stark zu verändern: Aktionspotenzial (S. 46) [SIL07, p. 44]
 
 ## Das Aktionspotenzial
 > Das Aktionspotenzial ist das im Axon weitergeleitete Signal und löst am Muskel die Kontraktion aus.  [SIL07, p.46]
@@ -32,31 +45,49 @@ schnelle) potenzialgesteuerte Na+ -Kanäle aktiviert (B4 und B1⇒B2), d. h. die
 > Überschreitet Em das Schwellenpotenzial, so startet ein Aktionspotenzial (AP, A1), das normalerweise als „Alles-oder-Nichts-Antwort“ abläuft, d. h. in der für diese Zellart typischen Weise ohne Rücksicht darauf, wie groß
 der auslösende Reiz war [SIL07, p.46]
 
-### Erregende Tansmitter  
-> Der Kationeneinstrom führt zur Depolarisation: exzitatorisches postsynaptisches Potenzial (EPSP) (max. ca. 20 mV; B). [SIL07, p.52]
-
-
-### Hemmende Transmitter
->  Sie erhöhen an der subsynaptischen Membran nur die Leitfähigkeit (g) für K+ (z. B. der metabotrope GABAB-Rezeptor) oder für Cl–
-(z. B. die ionotropen Glycin- und GABAA-Rezeptoren; F). Die Membran wird dadurch meist etwas hyperpolarisiert, bei erhöhter gK
-deswegen, weil sich das Em dem EK nähert (S. 44). Dieses inhibitorische postsynaptische Potenzial (IPSP) (max. ca. 4 mV; D) [SIL07, p.52]
-
 
 ## Synapse
 > Die Synapse (A3) ist die Kontaktstelle des Axons einer Nervenzelle mit den Effektoren oder einem anderen Neuron (s. a. S. 50 ff.). [SIL07, p.42]
 
-> Dabei wird durch das elektrische Signal im Axon aus exozytotischen Vesikeln an der präsynaptischen Membran ein Überträgerstoff (Neurotransmitter) freigesetzt, der durch den synaptischen Spalt (10 – 40 nm) zur postsynaptischen Membran diffundiert und dort erneut elektrische Veränderungen bewirkt (A3). Je nach Art des Überträgerstoffes und je nach postsynaptischem Rezeptortyp wird die postsynaptische Membran erregt (z. B. Acetylcholin am Skelettmuskel) oder ihre Erregung gehemmt (z. B. Glycin im ZNS). Da die postsynaptische Membran (mit wenigen Ausnahmen, z. B. S. 346)keine Neurotransmitter ausschüttet, lassen Synapsen das Signal nur in einer Richtung durch, d. h. sie haben Ventilfunktion, ohne die eine geordnete Informationsübertragung nicht möglich wäre. Synapsen sind außerdem der Ort, an dem die neuronale Signalübertragung durch andere (fördernde oder hemmende) Neurone modifiziert werden kann. [SIL07, p.42]
+> Dabei (chemische Übertragung, Anm. Autor) wird durch das elektrische Signal im Axon aus exozytotischen Vesikeln an der präsynaptischen Membran ein Überträgerstoff (Neurotransmitter) freigesetzt, der durch den synaptischen Spalt (10 – 40 nm) zur postsynaptischen Membran diffundiert und dort erneut elektrische Veränderungen bewirkt (A3). Je nach Art des Überträgerstoffes und je nach postsynaptischem Rezeptortyp wird die postsynaptische Membran erregt (z. B. Acetylcholin am Skelettmuskel) oder ihre Erregung gehemmt (z. B. Glycin im ZNS). Da die postsynaptische Membran (mit wenigen Ausnahmen, z. B. S. 346)keine Neurotransmitter ausschüttet, lassen Synapsen das Signal nur in einer Richtung durch, d. h. sie haben Ventilfunktion, ohne die eine geordnete Informationsübertragung nicht möglich wäre. Synapsen sind außerdem der Ort, an dem die neuronale Signalübertragung durch andere (fördernde oder hemmende) Neurone modifiziert werden kann. [SIL07, p.42]
 
 > Neuronale Informationen werden über Synapsen vermittelt. Im Wesentlichen setzt sich eine Synapse aus einem prä- und postsynaptischen Anteil mit einer dazwischenliegenden synaptischen Kontaktzone zusammen. [ROH17, p.134]
 
 > Übertragungsmechanismen können elektrisch oder chemisch ablaufen. [ROH17, p.134]
 
 ### Elektrische vs chemische Synapsen
-> Elektrische Synapsen geben ihre Informationen über kanalartige Proteinkomplexe (Konnexone) weiter, die sich in einem eng aneinander liegenden Bereich („gap junctions“) benachbarter Zellmembranen befinden. Die Übertragung vollzieht sich als Ionenstrom, der in beide Richtungen fließen kann. Solche Synapsen finden sich beispielsweise in Epithel- und Gliazellen. Demgegenüber sind chemische Synapsen in der Lage, sowohl exzitatorische als auch inhibitorische Funktionen zu entfalten. Diese größere Funktionsvielfalt ermöglichen Überträgerstoffe (Neurotransmitter). Sie werden im präsynaptischen Anteil freigesetzt, überwinden den synaptischen Spalt und öffnen im postsynaptischen Anteil Ionenkanäle. Damit ändern sie die Leitfähigkeit für Ionen und steuern so den Informationsfluss. Bei chemischen Synapsen ist im Gegensatz zu den elektrischen kein direkter Zellkontakt vorhanden, sondern ein schmaler (synaptischer) Spalt trennt die präsynaptische von der postsynaptischen Membran.  [ROH17, p.134]
+> Elektrische Synapsen geben ihre Informationen über kanalartige Proteinkomplexe (Konnexone) weiter, die sich in einem eng aneinander liegenden Bereich („gap junctions“) benachbarter Zellmembranen befinden. Die Übertragung vollzieht sich als Ionenstrom, der in beide Richtungen fließen kann. Solche Synapsen finden sich beispielsweise in Epithel- und Gliazellen. Demgegenüber sind chemische Synapsen in der Lage, sowohl exzitatorische als auch inhibitorische Funktionen zu entfalten. Diese größere Funktionsvielfalt ermöglichen Überträgerstoffe (Neurotransmitter). Sie werden im präsynaptischen Anteil freigesetzt, überwinden den synaptischen Spalt (10-40nm, [SIL07, p.42]) und öffnen im postsynaptischen Anteil Ionenkanäle. Damit ändern sie die Leitfähigkeit für Ionen und steuern so den Informationsfluss. Bei chemischen Synapsen ist im Gegensatz zu den elektrischen kein direkter Zellkontakt vorhanden, sondern ein schmaler (synaptischer) Spalt trennt die präsynaptische von der postsynaptischen Membran.  [ROH17, p.134]
+
+> Chemische Synapsen, an denen die Informationsweitergabe durch eine Überträgersubstanz, einen (Neuro-)Transmitter, erfolgt, dienen nicht nur der einfachen 1 : 1-Verbindung, sondern sie sind auch die Schaltelemente des  Nervensystems, an denen die Impulsübertragung gebahnt und gehemmt sowie mit anderen Informationen verrechnet werden kann. An der chemischen Synapse setzt das im Axon eintreffende Aktionspotenzial (AP; A1,2 u. S. 48) den Transmitter (u. U. auch mehr als einen) aus den präsynaptischen Axonendigungen frei; er diffundiert dann durch den schmalen synaptischen Spalt (ca. 30 nm), um postsynaptisch an Rezeptoren der subsynaptischen Membran eines Neurons, einer Drüsen- oder einer Muskelzelle gebunden zu werden. Je nach Art von Transmitter und Rezeptortyp kann dadurch die postsynaptische Membran erregt oder deren Erregung gehemmt werden (s. u.)[SIL07, p50]
 
 ## Neurotransmitter 
+> Synapsen werden zwar nach ihrem Haupttransmitter benannt, jedoch sind präsynaptisch in der Regel mehrere Transmitter (Kotransmitter) vorhanden, die die Synapsenfunktion zusätzlich beeinflussen. Entsprechend den in ihnen hauptsächlich wirksamen Transmittern sind unterschiedliche funktionelle neuronale Systeme bekannt. Diese Neurotransmittersysteme (s. ▶Tab. 6.20) üben inhibitorische, exzitatorische und/oder neuromodulatorische Funktionen aus. Sie besitzen weitverzweigte
+Projektionen in unterschiedlichen Abschnitten von Gehirn und Rückenmark. Störungen von Neurotransmittersystemen sind bei vielen neurologischen Krankheitsbildern vorhanden.Klinisch bedeutsam ist dabei u. a. die Möglichkeit, Transmittersysteme pharmakologisch zu beeinflussen. [ROH17, p.134]
+
 > Die werden innerhalb von Neuronen synthetisiert, sind präsynaptisch in erhöhter Konzentration vorhanden, bewirken (endogen freigesetzt oder exogen zugeführt) einen postsynaptischen Effekt und werden durch ein auf sie abgestimmtes System im synaptischen Spalt inaktiviert. Die von einem Neurotransmitter entfaltete Wirkung ist eine Funktion des postsynaptischen Rezeptors. Deshalb kann ein Neurotransmitter abhängig vom jeweiligen (postsynaptischen) Zellrezeptor inhibitorische und/oder exzitatorische Reaktionen hervorrufen. [ROH17, p.134]
 
+### Erregende Tansmitter
+> Der Kationeneinstrom führt zur Depolarisation: exzitatorisches postsynaptisches Potenzial (EPSP) (max. ca. 20 mV; B). [SIL07, p.52]
+
+> Ein einzelnes EPSP vermag gewöhnlich kein axonales AP (APA) auszulösen, sondern es bedarf dazu vieler gleichzeitig an den Dendriten ausgelöster lokaler Depolarisationen, die über das Soma elektrotonisch weitergeleitet (S. 48) und am Axonhügel aufsummiert werden: Räumliche Summation (B). Treffen die Einzelreize zeitlich getrennt (innerhalb von ca.
+50 ms) ein, so ist die vorausgegangene Depolarisation noch nicht abgeklungen und die nächste propft sich darauf auf, so dass das
+Schwellenpotenzial leichter erreicht wird, d. h. die Erregbarkeit des postsynaptischen Neurons wird durch diese zeitliche Summation erhöht (C) [SIL07, p. 52]
+
+### Hemmende Transmitter
+> Hemmende Transmitter sind z. B. Glycin und GABA sowie Acetylcholin (M2- und M3- Rezeptor an M-cholinergen Synapsen;  S. 82). Sie erhöhen an der subsynaptische Membran nur die Leitfähigkeit (g) für K+ (z. B. der metabotrope GABAB-Rezeptor) oder für Cl–
+(z. B. die ionotropen Glycin- und GABAA-Rezeptoren;  F). Die Membran wird dadurch meist etwas hyperpolarisiert, bei erhöhter gK
+deswegen, weil sich das Em dem EK nähert ( S. 44). Dieses inhibitorische postsynaptische Potenzial (IPSP) (max. ca. 4 mV;  D) wirkt aber weniger durch seine – der Depolarisation des EPSP entgegenlaufende – Hyperpolarisation (das IPSP kann sogar selbst leicht depolarisierend sein), sondern dadurch, dass die während des IPSPs erhöhte Membranleitfähigkeit die elektrotonischen Ströme der EPSPs kurzschließt (gK oder gCl hoch!). Da sowohl EK als auch ECl nahe dem Ruhepotenzial liegen
+( S. 44), wird dieses stabilisiert, d. h. die EPSPs werden durch hohe K+ - und Cl–-Kurzschluss-Ströme unwirksam gemacht. Die Depolarisation der EPSPs ist daher kleiner und   die Erregung des postsynaptischen Neurons somit gehemmt [SIL07, p.52]
+
+### Transmitterfreisetzung
+> Die Transmitterfreisetzung (A1) erfolgt durch regulierte Exozytose sog. synaptischer Vesikel. Jedes davon enthält ein sog. TransmitterQuantum; im Falle der motorischen Endplatte (S. 56) sind dies ca. 7000 Moleküle Acetylcholin. Ein Teil der Vesikel ist bereits an der Membran angedockt („aktive Zone“) und steht zur Exozytose ihres Inhalts bereit. Signal für
+die Freisetzung ist ein eintreffendes AP (A1,2), und je höher die AP-Frequenz im Axon ist, desto mehr Vesikel setzen ihren Inhalt frei. [SIL07, p.50]
+
+
+
+
+ - nm: Nanometer, 1 Millionstel Millimeter 
+ - VEntilfunktion: Information fließen geordnet in eine Richtung [SIL07, p. 42]
  - inhibitorisch: hemmend
  - exzitatorisch: erregend
  - Exozytose
@@ -66,23 +97,9 @@ deswegen, weil sich das Em dem EK nähert (S. 44). Dieses inhibitorische postsyn
  "An dem Parameter Stärke der Reaktion ist keine Abstufung (Differenzierung) zu beobachten" (https://de.wikipedia.org/wiki/Alles-oder-nichts-Gesetz, 14.07.2023)
  - Depolarisation
 Verringerung des Membrampotentials einer Zellmembran; Die Membranspannung kann durch Ausschüttung eines Transmitters depolarisiert werden; bei dem erregenden Potential steigt die Spannung in der postsynaptischen Zelle -> Spannung wird positiver, weil die begative Spannung also abnimmt, spricht man von Depolarisierung
- - 
-
- 
 
 
-
- - Chemische Synapsen, an denen die Informationsweitergabe durch eine Überträgersubstanz, einen (Neuro-)Transmitter, erfolgt, dienen nicht nur der einfachen 1 : 1-Verbindung,
-   sondern sie sind auch die Schaltelemente des
-   Nervensystems, an denen die Impulsübertragung gebahnt und gehemmt sowie mit andeen Informationen verrechnet werden kann.
-   An der chemischen Synapse setzt das im Axon
-   eintreffende Aktionspotenzial (AP; A1,2 u.
-   S. 48) den Transmitter (u. U. auch mehr als einen) aus den präsynaptischen Axonendigungen
-   frei; er diffundiert dann durch den schmalen
-   synaptischen Spalt (ca. 30 nm), um postsynaptisch an Rezeptoren der subsynaptischen Membran eines Neurons, einer Drüsen- oder einer
-   Muskelzelle gebunden zu werden. Je nach Art
-   von Transmitter und Rezeptortyp kann dadurch die postsynaptische Membran erregt oder
-   deren Erregung gehemmt werden (s. u.)[SIL07, p50]
+   
 
 
 - Die Langzeitspeicherung im sekundären Gedächtnis gelingt durch
