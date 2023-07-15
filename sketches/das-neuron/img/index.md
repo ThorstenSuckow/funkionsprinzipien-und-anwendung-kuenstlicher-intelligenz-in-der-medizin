@@ -1,0 +1,5 @@
+- bau-und-funktion-nervenzelle.png [SIL07, p43]
+- aktionspotenzial.png [SIL07, p47]
+- synaptische-uebertragung.png [SIL07, p51]
+- räumliche-zeitliche-summation-erreger.png[SIL, p.53]
+- einfluss-ipsp.png [SIL, p.54]
