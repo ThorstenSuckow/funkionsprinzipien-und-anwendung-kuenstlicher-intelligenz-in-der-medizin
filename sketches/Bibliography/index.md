@@ -10,5 +10,6 @@
  - [FAU94] Fausett L. (1994) "Fundamentals of Neural Networks - Architectures, Algorithms, and Applications". Prentice Hall, 1994
  - [SIL07] Silbernagl, S., Despopoulos, A. (2007). "Taschenatlas Physiologie", 7. Auflage, 2007 Georg Thieme Verlag, Stuttgart
  - [ROH18]  Rohkamm R., Pawel K. (2017) "Taschenatlas Neurologie", 4. Auflage, 2018 Georg Thieme Verlag
+ - [RUS12] Russell, S.; Norvig, P. (2012) "Künstliche Intelligenz - Ein moderner Ansatz" 3- Auflage, 2012, Pearson Deutschland
  - [RAS16] Rassow, J.; Hauser, K.; Netzker, R.; Deutzmann, R. (2016). "Duale Reihe Biochemie", 4. Auflage, 2016 Georg Thieme Verlag, Stuttgart
  - [HOF22] Hoffmann, D. W. (2022) "Theoretische Informatik", 5. Auflage, 2022 Carl Hanser Verlag
