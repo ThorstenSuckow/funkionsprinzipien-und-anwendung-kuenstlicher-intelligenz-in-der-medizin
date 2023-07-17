@@ -1,3 +1,9 @@
 - wenn Daten linear separabel sind, dann findet das Perzeptron Halbräume nach einer endlichen Anzahl von Updates - wenn die Daten nice linear separabel sind, dann bleibt das Perzeptron in der lernschleife hängen (Nachweis)
 - rummelhart: Backpropagation
 - Kurzer Konvergenzbeweis: Novikoff
+- linearer Separator ist eine Entschdiungsgrenze [RUS12, p.842]
+- verrauschte daten, kine Konvergenz: anpassung der LErnrate a(t) = 1000/(1000+t) [RUS12, p.843]
+- Sigmoidfunktion statt heaviside: Ausgabe läßt eine Wahrscheinlichkeit zwischen 0 und 1 zu, also 0.5 wenn in der Mitte der Grenzregion zwischen pos neg Halbraum, 1 sehr wahrscheinlich, 0 unwahrscheinlich [RUS12, p.844] (logistische Regression, heavbisde: lineare Regression(? Nachweis)) (ggf. Codebeispiel logistisch & regressiv)
+- garantie für Konvergenz über Plan für fallende Lernrate [RUS12, p.838]
+- Entscheidungsgrenze ist ein lineafrer Separator [RUS12, p. 842]
+- Perzeptron Netz ist ein einschichtiges neuronales Feedforward Netz [RUS12, p.848]

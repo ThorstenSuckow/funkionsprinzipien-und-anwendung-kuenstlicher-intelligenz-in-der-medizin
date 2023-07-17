@@ -42,9 +42,13 @@
 - Bildverarbeitung: Whitening, um Redundanzen der Merkmale zu reduzieren
 - Translationsinvarianz bei Objekterkennung
 - Rekurrentes Netz
+- Feedforward Netz
 - GPT (Generative Pretrained Transformer)
 - Prädikatenlogik, ggf. Beispiel Prolog
 - Datenaugmentierung
 - Gradientenabstieg
 - Lokales Minimum
 - Diskriminanzfunktion
+- logistische Regression
+- lineare Regression
+- Differenzierbarkeit (logistische Aktivierungsfunktion is differenzierbar)
