@@ -18,7 +18,7 @@ Da sich diese Arbeit auf die Funktionsweise _künstlicher neuronaler Netze_ konz
 
 ## Aufbau
 
-In der folgenden Abbildung haben wir das Neuron in drei Bereiche eingeteilt:_Dendrite_<sup>[4]</sup>, die _afferente_<sup>[5]</sup> Signale zum _Soma_<sup>[6]</sup>, dem Zellkörper, weiterleiten. Unter bestimmten Bedingungen, die in einem späteren Abschnitt erläutert werden, lösen diese Signale ein "feuern" des Neurons aus, und das _Axon_<sup>[7]</sup> leitet ein _efferentes_<sup>[8]</sup> Nervensignal über _präsynaptische Endigungen_ (auch _Axonterminale_ genannt) an (häufig weit entfernte<sup>[9]</sup>) _Effektoren_<sup>[10]</sup> wie Muskeln und Drüsen oder nachgeschaltete Neuronen weiter<sup>[11]</sup><sup>[12]</sup> [vgl. SD07, S. 42, Abs. 2]
+In der folgenden Abbildung haben wir das Neuron in drei Bereiche eingeteilt. Ihre Rolle innerhalb des Neurons ist wie folgt: 1) _Dendrite_<sup>[4]</sup> leiten _afferente_<sup>[5]</sup> Signale zum 2) _Soma_<sup>[6]</sup>, dem Zellkörper, weiter. Unter bestimmten Bedingungen, die in einem späteren Abschnitt erläutert werden, lösen diese Signale ein "feuern" des Neurons aus, und das 3) _Axon_<sup>[7]</sup> leitet ein _efferentes_<sup>[8]</sup> Nervensignal über _präsynaptische Endigungen_ (_Axonterminale_) an (häufig weit entfernte<sup>[9]</sup>) _Effektoren_<sup>[10]</sup> wie Muskeln und Drüsen oder nachgeschaltete Neuronen weiter<sup>[11]</sup><sup>[12]</sup> [vgl. SD07, S. 42, Abs. 2]
 
 <!-- ![](./img/bau-und-funktion-nervenzelle.png) -->
 
