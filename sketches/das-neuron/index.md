@@ -3,26 +3,37 @@
 # Das Neuron
 
 ## Einleitung 
-Um ein Verständnis für das Modell der im weiteren Verlauf dieser Arbeit beschriebenen _künstlichen_ neuronalen Netze zu erlangen, wollen wir uns zunächst mit dem menschlichen Neuron als "strukturelle und funktionelle Einheit des Nervensystems" [vgl. SD07, S.42] beschäftigen.<br /> 
-Insbesondere wollen wir die Funktionsweise dieser Zellen im Kontext von Informationsverarbeitung und -weiterleitung betrachten.
+Um ein Verständnis für das Modell der im weiteren Verlauf dieser Arbeit beschriebenen _künstlichen neuronalen Netze_ zu erlangen, wollen wir uns zunächst mit dem menschlichen Neuron als "strukturelle und funktionelle Einheit des Nervensystems" [SD07, S.42] beschäftigen.<br /> 
+Insbesondere wollen wir die Funktionsweise dieser Zellen im Kontext von Informationsverarbeitung und -weiterleitung untersuchen.
 
-Hierzu skizzieren wir zunächst den Aufbau einer Nervenzelle und verschaffen uns im Anschluss einen Überblick über die komplexen biochemischen Vorgänge, welche die Signalweiterleitungen von Neuron zu Neuron möglich machen. Hier werden wir sehen, dass die Änderung von Zellmembran-Eigenschaften (hier: das _Membranpotenzial_) eines Neurons mitverantwortlich für die _Exozytose_<sup>[1]</sup> von Neurotransmittern in präsynaptischen Endigungen und deren Freisetzung in den synaptischen Spalt sind, der zwischen den benachbarten Neuronen liegt. Rezeptoren an postsynaptische Endigungen benachbarter Neuronen sorgen dann für die "Verarbeitung" von den ursprünglich _inhibitorischen_<sup>[2]</sup> oder _exzitatorischen_<sup>[3]</sup> Transmittern hin zu inhibitorischen oder exzitatorischen Signalen. Dies wird grundlegend als Inspiration für die Modellierung eines künstlichen neuronalen Netzes in Programmcode und mathematischen Formeln sein.
+Hierzu skizzieren wir zunächst den Aufbau eines Neurons und verschaffen uns im Anschluss einen Überblick über die komplexen biochemischen Vorgänge, die nötig sind, damit Neuronen Signale verarbeiten können. Hier werden wir sehen, dass die Änderung von Zellmembran-Eigenschaften (hier: das _Membranpotenzial_) eines Neurons mitverantwortlich für die _Exozytose_<sup>[1]</sup> von Neurotransmittern in präsynaptischen Endigungen und deren Freisetzung in den synaptischen Spalt sind, der zwischen den benachbarten Neuronen liegt. Rezeptoren an postsynaptische Endigungen benachbarter Neuronen sorgen dann für die "Verarbeitung" von den ursprünglich _inhibitorischen_<sup>[2]</sup> oder _exzitatorischen_<sup>[3]</sup> Transmittern hin zu inhibitorischen oder exzitatorischen Signalen. Auf diesen Vorgängen fußt das mathematische Model und die Architektur künstlicher neuronaler Netze, wie wir in den nachfolgenden Kapiteln sehen werden.
 
-Da sich diese Arbeit auf die Funktionsweise _künstlicher neuronaler Netze_ konzentriert, verstehen wir im Folgenden unter _neuronales Netz_ ein eben solches. Reden wir von _biologischem neuronalen Netz_, wollen wir darunter ein Netzwerk von Nervenzellen verstehen, in dem ein Informationsaustausch stattfindet - so, wie es im Gehirn existiert [vgl. BCP18, S. 113].
+Da sich diese Arbeit auf die Funktionsweise _künstlicher neuronaler Netze_ konzentriert, verstehen wir im Folgenden unter _neuronales Netz_ ein eben solches. Reden wir von _biologischem neuronalen Netz_, wollen wir darunter ein Netzwerk von Nervenzellen verstehen, in dem ein Informationsaustausch stattfindet - so, wie es im menschlichen Gehirn existiert [vgl. BCP18, S. 113, Abs. 2].
 
 -----
-<sup>[1]</sup> _Exozytose_ beschreibt den Vorgang, bei dem zellinnere Substanzen nach Außen weitergegeben werden. Wir kommen darauf zurück, wenn wir uns mit der synaptischen Übertragung beschäftigen<br />
+<sup>[1]</sup> _Exozytose_ beschreibt den Vorgang, bei dem zellinnere Substanzen nach Außen weitergegeben werden. Wir kommen im Abschnitt über  synaptische Übertragung darauf zurück.<br />
 <sup>[2]</sup> "_inhibere_" (lat.): anhalten<br />
 <sup>[3]</sup> "_excitare_" (lat.): erregen, anregen
 -----
 
 ## Aufbau
 
-erständisses der Funktionsweise eines Neurons im späteren Verbund innerhalb eines künstlichen nneuronalen netwzerkes teilen wir das Neuron zunächst grogranular in 3 Teile ein Den Dendriten, die afferente (also hinführende) Signale entgegennehmen und zum Soma, dem Zellkörper des Neurons, weiterleiten, die, einen entsprechenden Summationswert zur Überschreitung eines Schwellwertes, auf den wir im folgenden noch näher eingehen werden, überschreiten müssen, damit über das Axon und seinen präsynaptischen Endigungen (auch Axonterminale [BCP18, p.43] )  eine Weiterleitung der Signale durch chemische Diffusion erfolgt [QUELLE]. 
+In der folgenden Abbildung haben wir das Neuron in drei Bereiche eingeteilt:_Dendrite_<sup>[4]</sup>, die _afferente_<sup>[5]</sup> Signale zum _Soma_<sup>[6]</sup>, dem Zellkörper, weiterleiten. Unter bestimmten Bedingungen, die in einem späteren Abschnitt erläutert werden, lösen diese Signale ein "feuern" des Neurons aus, und das _Axon_<sup>[7]</sup> leitet ein _efferentes_<sup>[8]</sup> Nervensignal über _präsynaptische Endigungen_ (auch _Axonterminale_ genannt) an (häufig weit entfernte<sup>[9]</sup>) _Effektoren_<sup>[10]</sup> wie Muskeln und Drüsen oder nachgeschaltete Neuronen weiter<sup>[11]</sup><sup>[12]</sup> [vgl. SD07, S. 42, Abs. 2]
 
-Zur Erlangung des verständisses der Funktionsweise eines Neurons im späteren Verbund innerhalb eines künstlichen nneuronalen netwzerkes einigen wir uns zunächst darauf, multipolare Neuronen zu betrachten, die aus mehreren Dendriten und einem Axon bestehen [BCP18, p.49]
+<!-- ![](./img/bau-und-funktion-nervenzelle.png) -->
 
-Die folgende Abbildung stellt schematisch den Aufbau eines solchen Neurons dar. Es folgt Beschreibung der in dieser Abbildung dargestellten Struktur, von der "Baumkrone" (Dendrit, griech. Baum) zu dem Axon und seinen Axonterminal.  ]
+
+-------------
+<sup>[4]</sup> "_δένδρον (dendrón)_": (altgriechisch): Baum<br />
+<sup>[5]</sup> "_afferre_" (lat.): herbeibringen, melden, bringen<br />
+<sup>[6]</sup> "_σῶμα (sõma)_" (altgriechisch): Körper<br />
+<sup>[7]</sup> "_axon_" (lat.): Achse<br />
+<sup>[8]</sup> "_efferre_" (lat.): hinaustragen, mitnehmen<br />
+<sup>[9]</sup> Axone können sich im menschlichen Körper über Entfernungen von bis zu über 1m ausstrecken [vgl. BCP18, S. 28, Abs. 2] <br />
+<sup>[10]</sup> "_efficere_" (lat.): bewirken, hervorbringen<br />
+<sup>[11]</sup> in diesem Fall empfangen _postsynaptische Rezeptoren_ an den Dendriten des nachgeschalteten Neurons ein Signal und der beschriebene Prozess wiederholt sich. <br />
+<sup>[12]</sup> etwas bildlicher können wir uns Effektoren als Endglied der Signalübertragung vorstellen, auch wenn hier wieder interzelluläre Vorgänge stattfinden. Vgl. "neuromuskuläre Endplatte" [BCP18, S. 127, Abs. 3]
+----------
 
 ### Dendriten
 Dendriten bilden die eingehende Schnittstelle eines Neurons und nehmen afferente Signale anderer Neurone entgegen, (oft von tausenden [SD07, p.42]). Diese Signale können sowohl inhibitorisch als auch exzitatorisch sein. Auf Die Bedeutung dieser Signale kommen wir  Abschnitt Synaposen zurück.
@@ -100,6 +111,9 @@ Die Änderung des Membranpotentials geschieht, wenn die Membran ihre Durchlässi
 
 
 ### Neurotransmitter
+
+> Sie sollten sich jedenfalls darüber im Klaren sein, dass derselbe
+Neurotransmitter verschiedene postsynaptische Aktivitäten auslösen kann, abhängig davon, an welche Rezeptoren er bindet. [BCP18, S. 148, Abs. 2]
 
 #### Erregende TRansmitter 
 
