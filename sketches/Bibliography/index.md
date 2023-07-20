@@ -3,13 +3,44 @@
 Quotation style: IEEE
 
 ### Das Neuron
+
+#### Zitierte Literatur
 - [BCP18] M. F. Bear, B. W. Connors und M. A. Paradiso, _Neurowissenschaften: Ein grundlegendes Lehrbuch für Biologie, Medizin und Psychologie_, A. K. Engel, Hrsg., Berlin, Heidelberg: Springer Berlin Heidelberg, 2018. https://doi.org/10.1007/978-3-662-57263-4.
+
+- [Lyr17] H. Lyre, "Philosophie der Neurowissenschaften". In: S. Lohse und T. Reydon (Hg.): _Grundriss Wissenschaftsphilosophie: Die Philosophien der Einzelwissenschaften_. S. 319-353, Hamburg: Meiner, 2017. (Zitate aus http://philpapers.org/archive/LYRCFV.pdf)
 
 - [RHN+16] J. Rassow, K. Hauser, R. Netzker und R. Deutzmann, _Duale Reihe Biochemie_, ed. 4. Auflage. Stuttgart: Thieme, 2016. https://doi.org/10.1055/b-003-129341
 
 - [SD07] S. Silbernagl und A. Despopoulos, _Taschenatlas Physiologie_, ed. 7. Auflage. Stuttgart: Thieme, 2007. https://doi.org/10.1055/b-002-89576
 
+- [Eil19] J. Eilers, „Nervenzellen“, in _Physiologie des Menschen: mit Pathophysiologie_, R. Brandes, F. Lang, und R. F. Schmidt, Hrsg., Berlin, Heidelberg: Springer Berlin Heidelberg, 2019, S. 57–64. https://doi.org/10.1007/978-3-662-56468-4_5.
+
+
+#### Sonstige Quellen
+ - [Wemb] „Größenordnungen in der Mikrowelt“. https://homepage.univie.ac.at/franz.embacher/groessenordnungenNano.html (zugegriffen 20. Juli 2023).
+
+
 ##### Unkategorisiert
+
+[1] „Hippokampale Langzeitpotenzierung (LTP) – Geschichte, Gegenwart und Zukunft“, Neuroforum, Bd. 24, Nr. 3, S. 161–162, Aug. 2018, doi: 10.1515/nf-2017-0058.
+
+[1] „Geschichte der Hirnforschung - Lexikon der Neurowissenschaft“. https://www.spektrum.de/lexikon/neurowissenschaft/geschichte-der-hirnforschung/14480 (zugegriffen 20. Juli 2023).
+
+[DM04] R. W. Davies und B. J. Morris, Hrsg., Molecular biology of the neuron, 2nd ed. in Molecular and cellular neurobiology series. Oxford: Oxford University Press, 2004.
+
+
+[DA01] P. Dayan und L. F. Abbott, _Theoretical neuroscience: computational and mathematical modeling of neural systems. in Computational neuroscience. Cambridge, Mass: Massachusetts Institute of Technology Press, 2001.
+
+[OF96] Olshausen, B., Field, D. Emergence of simple-cell receptive field properties by learning a sparse code for natural images. Nature 381, 607–609 (1996). https://doi.org/10.1038/381607a0
+
+[KSJ+13] E. R. Kandel, Principles of Neural Science, Fifth Edition. in McGraw-Hill’s AccessMedicine. McGraw-Hill Education, 2013. 
+
+[Izh06] E. M. Izhikevich, _Dynamical Systems in Neuroscience: The Geometry of Excitability and Bursting_. The MIT Press, 2006. https://doi.org/10.7551/mitpress/2526.001.0001.
+
+[GKN+14] W. Gerstner, W. M. Kistler, R. Naud, und L. Paninski, _Neuronal Dynamics: From Single Neurons to Networks and Models of Cognition_, 1. Aufl. Cambridge University Press, 2014. https://doi.org/10.1017/CBO9781107447615.
+
+[Ber02] Julius Bernstein (1902). Untersuchungen zur Thermodynamik der bioelektrischen Ströme.Pflfigers Arch. ges. Physiol.92: 521-562. doi:10.1007/bf01790181
+
 
  - [TUR36] Turing, A (1936): "On Computable Numbers, with an Application to the Entscheidungsproblem". In: Proceedings of the London Mathematical Society. Band s2-42, Nr. 1, 1937, S. 230–265, doi:10.1112/plms/s2-42.1.230
  - [CUL43] McCulloch, W. S; Walter Pitts (1943) "A logical calculus of the ideas immanent in nervous activity." Bulletin of Mathematical Biophysis, Vol. 5, pp. 115-133
