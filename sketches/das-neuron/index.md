@@ -4,9 +4,9 @@
 
 ## Einleitung 
 Um ein Verständnis für das Modell der im weiteren Verlauf dieser Arbeit beschriebenen _künstlichen neuronalen Netze_ zu erlangen, wollen wir uns zunächst mit dem menschlichen Neuron als "strukturelle und funktionelle Einheit des Nervensystems" [SD07, S.42] beschäftigen.<br /> 
-Insbesondere wollen wir die Funktionsweise dieser Zellen im Kontext von Informationsverarbeitung und -weiterleitung untersuchen.
+Von Interesse ist für uns die Funktionsweise dieser Zellen im Kontext von Informationsverarbeitung und -weiterleitung, weshalb wir die molekulare und die zelluläre Ebene des einzelnen Neurons betrachten wollen, sowie den Verbund von Neuronen, also dem neuronalen Netz [vgl. Lyr17, S. 2, Abs. 5]. 
 
-Hierzu skizzieren wir zunächst den Aufbau eines Neurons und verschaffen uns im Anschluss einen Überblick über die komplexen biochemischen Vorgänge, die nötig sind, damit Neuronen Signale verarbeiten können. Hier werden wir sehen, dass die Änderung von Zellmembran-Eigenschaften (hier: das _Membranpotenzial_) eines Neurons mitverantwortlich für die _Exozytose_<sup>[1]</sup> von Neurotransmittern in präsynaptischen Endigungen und deren Freisetzung in den synaptischen Spalt sind, der zwischen den benachbarten Neuronen liegt. Rezeptoren an postsynaptische Endigungen benachbarter Neuronen sorgen dann für die "Verarbeitung" von den ursprünglich _inhibitorischen_<sup>[2]</sup> oder _exzitatorischen_<sup>[3]</sup> Transmittern hin zu inhibitorischen oder exzitatorischen Signalen. Auf diesen Vorgängen fußt das mathematische Model und die Architektur künstlicher neuronaler Netze, wie wir in den nachfolgenden Kapiteln sehen werden.
+Hierzu skizzieren wir zunächst den Aufbau eines Neurons und verschaffen uns im Anschluss einen Überblick über die komplexen biochemischen Vorgänge, die nötig sind, damit Neuronen Signale senden und empfangen können. Wir werden sehen, dass Änderungen der Zellmembran-Eigenschaften (hier: das _Membranpotenzial_) eines Neurons mitverantwortlich sind für die _Exozytose_<sup>[1]</sup> von hemmenden oder erregenden Neurotransmittern in den synaptischen Spalt (s. Abb. X); postsynaptischen Rezeptoren nachgeschalteter Neuronen verarbeiten diese Substanzen dann gemäß ihren _inhibitorischen_<sup>[2]</sup> oder _exzitatorischen_<sup>[3]</sup> Eigenschaften zu inhibitorischen oder exzitatorischen Signalen. Auf diesen Vorgängen fußt das mathematische Model und die Architektur künstlicher neuronaler Netze [QUELLE?], wie wir in den nachfolgenden Kapiteln sehen werden.
 
 Da sich diese Arbeit auf die Funktionsweise _künstlicher neuronaler Netze_ konzentriert, verstehen wir im Folgenden unter _neuronales Netz_ ein eben solches. Reden wir von _biologischem neuronalen Netz_, wollen wir darunter ein Netzwerk von Nervenzellen verstehen, in dem ein Informationsaustausch stattfindet - so, wie es im menschlichen Gehirn existiert [vgl. BCP18, S. 113, Abs. 2].
 
@@ -23,6 +23,14 @@ In der folgenden Abbildung haben wir das Neuron in drei Bereiche eingeteilt. Ihr
 <!-- ![](./img/bau-und-funktion-nervenzelle.png) -->
 
 
+Die eingehende Schnittstelle eines Neurons sind seine **Dendriten**: Baumförmige Fortsätze, die um das Soma herum gelagert sind. Diese Dendritenbäume [vgl. BSP18, S.47] fungieren _postsynaptisch_, denn sie empfangen afferente Signale<sup>[13]</sup> in Form von Neurotransmittern. Diese werden von Rezeptoren, die sich an den Enden der Dendriten befinden, aufgenommen. Oft stehen tausende Neuronen in Verbindung mit den Dendriten eines einzelnen Neurons<sup>[14]</sup> [vgl. D07, p.42].
+Im Gegensatz zu den Axonen, die bis zu über 1 m lang sein können, werden einzelne Dendrite selten länger als 2 mm [vgl. BCP 18, S. 28, Abs. 2].
+
+Die Dendriten leiten Signale weiter an das **Soma**, den Zellkörper des Neurons, der eine Größe von ca. 20 μm [BCP18, p.29] besitzt: In diesem befindet sich - durch die _Neuronenmembran_ getrennt - _Cytosol_, eine salzige, wässrige Flüssigkeit mit einem hohen Anteil von Kalium.
+
+Am **Axonhügel** entspringt das **Axon**, welches in einer "salzigen extrazellulären Flüssigkeit mit hoher Leitfähigkeit" [PCB18, S. 61, Abs. 1]<sup>[16]</sup> liegt. Die Summation der afferenten Signale (räumlich oder zeitlich) entscheidet, ob das Neuron feuert: Wird die Membran am Axonhügel [vgl. Eil19, S. 61, "Soma"] über einen gewissen **Schwellenwert** depolarisiert<sup>[17]</sup>, wird ein **Aktionspotential**<sup>[18]</sup> ausgelöst [vgl. BCP18, S. 142 f.], das dann an den präsynaptischen Endigungen die Exozytose auslöst.
+
+
 -------------
 <sup>[4]</sup> "_δένδρον (dendrón)_": (altgriechisch): Baum<br />
 <sup>[5]</sup> "_afferre_" (lat.): herbeibringen, melden, bringen<br />
@@ -32,20 +40,37 @@ In der folgenden Abbildung haben wir das Neuron in drei Bereiche eingeteilt. Ihr
 <sup>[9]</sup> Axone können sich im menschlichen Körper über Entfernungen von bis zu über 1m ausstrecken [vgl. BCP18, S. 28, Abs. 2] <br />
 <sup>[10]</sup> "_efficere_" (lat.): bewirken, hervorbringen<br />
 <sup>[11]</sup> in diesem Fall empfangen _postsynaptische Rezeptoren_ an den Dendriten des nachgeschalteten Neurons ein Signal und der beschriebene Prozess wiederholt sich. <br />
-<sup>[12]</sup> etwas bildlicher können wir uns Effektoren als Endglied der Signalübertragung vorstellen, auch wenn hier wieder interzelluläre Vorgänge stattfinden. Vgl. "neuromuskuläre Endplatte" [BCP18, S. 127, Abs. 3]
+<sup>[12]</sup> etwas bildlicher können wir uns Effektoren als Endglied der Signalübertragung vorstellen, auch wenn hier wieder interzelluläre Vorgänge stattfinden. Vgl. "neuromuskuläre Endplatte" [BCP18, S. 127, Abs. 3] <br />
+<sup>[13]</sup> aufgrund der signalempfangenden Eigenschaften und der dünnen Spitzen der Dendriten liegt der Vergleich mit "Antennen" nahe [vgl. BCP18, S. 28, Abs. 2] <br />
+<sup>[14]</sup> mit dem Wissen, daß das menschliche Gehirn mindestens $10^11$ Neuronen besitzt [KSJ+13, S. 175, Abs. 2], ist diese Größenordnung schneller nachvollziehbar<br />
+<sup>[15]</sup> ein menschliches Haar hat einen Durchmesser von ca. 70 μm, kleine Bakterien bis zu 20 μm [WEmb] <br />
+<sup>[16]</sup> [BCP18, p.43, Abs. 1] führt das Axon metaphorisch mit einer Telefonleitung zusammen <br />
+<sup>[17]</sup> Depolarisation bezeichnet die Verringerung des Membranpotenzials  [vgl. RHN+16, S. 812 "Neurotransmitter und ihre Rezeptoren"], bspw. von einem negativen Wert auf einen weniger negativen oder gar einen positiven Wert<br />
+<sup>[18]</sup> der formale Begriff für das Signal, das zu den Axonterminalen gesendet wird <br />
+
 ----------
 
-### Dendriten
-Dendriten bilden die eingehende Schnittstelle eines Neurons und nehmen afferente Signale anderer Neurone entgegen, (oft von tausenden [SD07, p.42]). Diese Signale können sowohl inhibitorisch als auch exzitatorisch sein. Auf Die Bedeutung dieser Signale kommen wir  Abschnitt Synaposen zurück.
-
-### Soma
-
-Das Soma is der Zellkern des Neurons und wird i.d.R. ohne Axon verstanden [QUELLE AR88, Heb49], ein kurgelförmiger Teil des Neurons mit einer Größe von ca. 20 nanometer [BCP18, p.29]. Das Soma besteht im weiteren aus Zellkern und beinhaltet weitere Strukturen (sog. Organellen), auf die wir im näheren nicht eingehen wollen (dem Leser sei [BCP18.] empfohlemn). Wir halten aber fest, das das Innere des Somas eine wässrige Flüssigkeit beinhaltet, die als Cytosol bezeichnet wird, eine kaliumreiche Lösung, die von der Umgebung durch die **Neuronenmembran** getrennt ist [BCP18, p.29], Aus dem Soma geht das Axon hervor.
-
 ### Das Axon: Axonhügel, Axon  und Axonterminal
-Das Axon beginnt in einem Bereich, den man als Axonhügel bezeichnet, un der den eigentlichen ersten Abschnitt des Axons bildet. [BCP18, p.42] Es iszt ein länglicher Fortsatz und besitzt größen von weniger als 1mm bis hin zu 1m, und fungiert im menschlichen Körper wie eine "Telefonleitung", um Informationen über größere Bereiche zu übertragen. [BCP18, p.43], und liegt in einer salzigen EZ flüssigkeit mit hoher elektrischen Leitfähigkeit [BCP18, p.61].  Umgansgsprachlich dürfen wir das letzte Zitat ergänzen hin zu: Eine Weiterleitung von Informationen geschicht erst, wenn die Information stark genug gewesen ist, um über den Hügel - den Axonhügel zu kommen. Etwas formaler hält [SD07, p.42] fest, dass das Axon die Aufgabe hat" Axonhügel des Somas entspringt, hat die Aufgabe, "das efferente Nervensignal auf häufig weit entfernte Effektoren(Muskel- oder Drüsenzellen) sowie auf nachgeschaltete Neurone zu übertragen"
 
-Der Axonhügel besitzt einen Schwellenwert, der übertroffen werden muß, damit ein Neuron "feuert": Man kann sich das in etwa so vorstellen, als das die Summer der Informationen, die durch die Dendriten empfangen werden (räumlich ode rzeitlich) [räumlich bedeutet mehrere Funken gleichzeitig, zeitlich bedeutet die in einer gewissen Zeitabstand hintereinander eintreffende Signale] den Schwellenwert des Axonhügels übertreffen müssen, damit das Neuron Informationen an andere Informationen weiterleitet. Hierzu mß die Membran des Axonhügels über den Schwellenwert depolarisiert werden [BCP18, p.111] damit über eine chemische Reaktion in den präsynaptischen Endigungen des Neurons (den Axonterminalen) Informationen an postsynaptische Synapsen (Dendriten anderer Neuronen) weitergeleitet werden können. Gleiche Quelle verweist in diesem Zusammenhang auf den Axonhügel als "Initiationszone". Hierzu müssen wir noch Bedeutung und Funktion der Potentiale eines Neurons sowie Funktionsweise der Synapsen betrachten, bevor wir imf olgenden Abschnitt die gesammelten Informationen zusammen mit McCulloch und Pitts in ein Modell gießen können.
+[BCP18, p.111] verweist auf die initiationszone, woraus auch ghervorgeht, daß die membran an den dendriten ein höheren Schwellenwert hat, also nicht so schnell zu depolarisieren ist
+
+
+
+These four properties of the action potential—
+initiation threshold, all-or-none nature, conduction
+without decrement, and refractory period [KSJ+13, S. 149]
+
+
+Afferente und efferente Axone
+Die Besprechung des PNS ist eine gute Gelegenheit, zwei Begriffe einzuführen, die zur
+Beschreibung von Axonen im Nervensystem verwendet werden: afferent („hinbringen“)
+und efferent („wegbringen“) sind aus dem Lateinischen abgeleitet und geben an, ob Axone Informationen zu einem bestimmten Ort transportieren oder von dort holen. Betrachten
+wir die Axone des PNS im Verhältnis zu einem Bezugspunkt im ZNS. Die somatischen
+oder viszeralen sensorischen Axone, die Informationen zum ZNS bringen, sind viszeroafferent, die Axone, die aus dem ZNS herausgehen und zu den Muskeln und Drüsen führen,
+sind viszeroefferent. [BCP18, S. 197, "Afferente udn efferente Axone"]
+
+> Da sich Axone im Körper über große Entfernungen erstrecken können (1 m oder mehr), [BCP18, S. 28, Abs. 2]
+
 
 
 ### Membranpotential
@@ -98,7 +123,11 @@ Die Änderung des Membranpotentials geschieht, wenn die Membran ihre Durchlässi
 
 ## Synapsen
 
-
+> 1011 neurons. Thus 1014
+to 1015 synaptic connections are formed in the brain. There are 1,000-fold
+more synapses in one brain than the 100 billion stars in our galaxy! Fortunately,
+only a few basic mechanisms underlie synaptic transmission at these many
+connections. [KSJ+13, S. 175]
 
 ### Präsynaptische Endigung
 
@@ -126,6 +155,7 @@ postsynaptischen Neurons zu beeinflussen [BCP18, p.148]
 ### Transmitterfreisetzeung
 
 
+# Schluss bemerkung
 
 
 
@@ -166,6 +196,15 @@ Als Ruhemembranpotential oder auch knapp Ruhepotential (abgekürzt RMP bzw. RP) 
 > > Alle lebenden Zellen weisen ein (Ruhe-) Membranpotenzial auf, aber nur die erregbaren Zellen (Nerv, Muskel) haben die Fähigkeit, die Ionenleitfähigkeit ihrer Membran auf einen Reiz hin stark zu verändern: Aktionspotenzial (S. 46) [SD07, p. 44]
 
 ## Das Aktionspotenzial
+> lan Hodgkin und Andrew Huxley um 1950 durchführten. Die Spannungsklemme
+ermöglichte es Hodgkin und Huxley, das Membranpotenzial eines Axons bei jedem beliebigen Wert abgreifen zu können. So konnten sie die Ströme messen, die durch die
+Membran flossen, und auf die Veränderungen der Membranleitfähigkeit rückschließen,
+die bei verschiedenen Membranpotenzialen auftraten. In einer ausgeklügelten Reihe von
+Experimenten konnten Hodgkin und Huxley zeigen, dass der Aufstrich des Aktionspotenzials tatsächlich von einem vorübergehenden Anstieg von gNa und einem Einstrom von
+NaC-Ionen herrührt und dass die fallende Phase mit einer Zunahme von gK und einem
+Ausstrom von KC-Ionen einhergeht. Ihre Ergebnisse wurden 1963 mit dem Nobelpreis
+gewürdigt []
+
 > Das Aktionspotenzial ist das im Axon weitergeleitete Signal und löst am Muskel die Kontraktion aus.  [SD07, p.46]
 
 >  Ursache der Erregung kann z. B. die Öffnung postsynaptischer Kationenkanäle durch Neurotransmitter (S. 50 ff.) oder eine aus der Umgebung weitergeleitete (elektrotonische) Erregung sein (S. 48).
