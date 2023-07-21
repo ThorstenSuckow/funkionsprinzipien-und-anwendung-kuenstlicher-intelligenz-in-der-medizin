@@ -6,15 +6,15 @@
 Um ein Verständnis für das Modell der im weiteren Verlauf dieser Arbeit beschriebenen _künstlichen neuronalen Netze_ zu erlangen, wollen wir uns zunächst mit dem menschlichen Neuron als "strukturelle und funktionelle Einheit des Nervensystems" [SD07, S.42] beschäftigen.<br /> 
 Von Interesse ist für uns die Funktionsweise dieser Zellen im Kontext von Informationsverarbeitung und -weiterleitung, weshalb wir die molekulare und die zelluläre Ebene des einzelnen Neurons betrachten wollen, sowie den Verbund von Neuronen, also dem neuronalen Netz [vgl. Lyr17, S. 2, Abs. 5]. 
 
-Hierzu skizzieren wir zunächst den Aufbau eines Neurons und verschaffen uns im Anschluss einen Überblick über die komplexen biochemischen Vorgänge, die nötig sind, damit Neuronen Signale senden und empfangen können. Wir werden sehen, dass Änderungen der Zellmembran-Eigenschaften (hier: das _Membranpotenzial_) eines Neurons mitverantwortlich sind für die _Exozytose_<sup>[1]</sup> von hemmenden oder erregenden Neurotransmittern in den synaptischen Spalt (s. Abb. X); postsynaptischen Rezeptoren nachgeschalteter Neuronen verarbeiten diese Substanzen dann gemäß ihren _inhibitorischen_<sup>[2]</sup> oder _exzitatorischen_<sup>[3]</sup> Eigenschaften zu inhibitorischen oder exzitatorischen Signalen. Auf diesen Vorgängen fußt das mathematische Model und die Architektur künstlicher neuronaler Netze [QUELLE?], wie wir in den nachfolgenden Kapiteln sehen werden.
+Hierzu skizzieren wir zunächst den Aufbau eines Neurons und verschaffen uns im Anschluss einen Überblick über die komplexen biochemischen Vorgänge, die nötig sind, damit Neuronen Signale senden und empfangen können. Wir werden sehen, dass Änderungen der Zellmembran-Eigenschaften (hier: das _Membranpotenzial_) eines Neurons mitverantwortlich sind für die _Exozytose_<sup>[1]</sup> von hemmenden oder erregenden Neurotransmittern in den synaptischen Spalt (s. Abb. X); Rezeptoren postsynaptischer Zellen verarbeiten diese Substanzen dann gemäß ihren _inhibitorischen_<sup>[2]</sup> oder _exzitatorischen_<sup>[3]</sup> Eigenschaften zu inhibitorischen oder exzitatorischen Signalen. 
 
 Da sich diese Arbeit auf die Funktionsweise _künstlicher neuronaler Netze_ konzentriert, verstehen wir im Folgenden unter _neuronales Netz_ ein eben solches. Reden wir von _biologischem neuronalen Netz_, wollen wir darunter ein Netzwerk von Nervenzellen verstehen, in dem ein Informationsaustausch stattfindet - so, wie es im menschlichen Gehirn existiert [vgl. BCP18, S. 113, Abs. 2].
 
------
-<sup>[1]</sup> _Exozytose_ beschreibt den Vorgang, bei dem zellinnere Substanzen nach Außen weitergegeben werden. Wir kommen im Abschnitt über  synaptische Übertragung darauf zurück.<br />
-<sup>[2]</sup> "_inhibere_" (lat.): anhalten<br />
-<sup>[3]</sup> "_excitare_" (lat.): erregen, anregen
------
+Wir werden im folgenden öfter von präsynaptisch und postsynaptisch lesen. Im KIOntext der Informationsverarbeitung bedeutet präsynaptisch Ursprung der Informationen, postsynaptisch Ziel der Informationen.
+
+Die Betrachtungen berücksichtigen  ausschlißelich den menschlichen Organismus.
+Wir betrachten checmischen Synapsen.
+
 
 ## Aufbau
 
@@ -23,32 +23,64 @@ In der folgenden Abbildung haben wir das Neuron in drei Bereiche eingeteilt. Ihr
 <!-- ![](./img/bau-und-funktion-nervenzelle.png) -->
 
 
-Die eingehende Schnittstelle eines Neurons sind seine **Dendriten**: Baumförmige Fortsätze, die um das Soma herum gelagert sind. Diese Dendritenbäume [vgl. BSP18, S.47] fungieren _postsynaptisch_, denn sie empfangen afferente Signale<sup>[13]</sup> in Form von Neurotransmittern. Diese werden von Rezeptoren, die sich an den Enden der Dendriten befinden, aufgenommen. Oft stehen tausende Neuronen in Verbindung mit den Dendriten eines einzelnen Neurons<sup>[14]</sup> [vgl. D07, p.42].
-Im Gegensatz zu den Axonen, die bis zu über 1 m lang sein können, werden einzelne Dendrite selten länger als 2 mm [vgl. BCP 18, S. 28, Abs. 2].
+Die eingehende Schnittstelle eines Neurons sind seine **Dendriten**: Baumförmige Fortsätze (einzelne selten länger als 2 mm<sup>[14.1]</sup> [vgl. BCP18, S. 28, Abs. 2]), die um das Soma herum gelagert sind. Diese Dendritenbäume [vgl. BSP18, S.47] fungieren _postsynaptisch_ und empfangen afferente Signale<sup>[13]</sup> in Form von Neurotransmittern [vgl. Eil19, S. 61, "Synapsen"]. Diese werden von Rezeptoren, die sich an den Enden der Dendriten befinden, aufgenommen. Oft stehen tausende Neuronen in Verbindung mit den Dendriten eines einzelnen Neurons<sup>[14]</sup> [vgl. D07, p.42].<br />
 
-Die Dendriten leiten Signale weiter an das **Soma**, den Zellkörper des Neurons, der eine Größe von ca. 20 μm [BCP18, p.29] besitzt: In diesem befindet sich - durch die _Neuronenmembran_ getrennt - _Cytosol_, eine salzige, wässrige Flüssigkeit mit einem hohen Anteil von Kalium.
-
-Am **Axonhügel** entspringt das **Axon**, welches in einer "salzigen extrazellulären Flüssigkeit mit hoher Leitfähigkeit" [PCB18, S. 61, Abs. 1]<sup>[16]</sup> liegt. Die Summation der afferenten Signale (räumlich oder zeitlich) entscheidet, ob das Neuron feuert: Wird die Membran am Axonhügel [vgl. Eil19, S. 61, "Soma"] über einen gewissen **Schwellenwert** depolarisiert<sup>[17]</sup>, wird ein **Aktionspotential**<sup>[18]</sup> ausgelöst [vgl. BCP18, S. 142 f.], das dann an den präsynaptischen Endigungen die Exozytose auslöst.
+Die Dendriten leiten Signale weiter an das **Soma** (oder _Perikaryon_ [vgl. RK18, S. 58, "Aufbau"]), den Zellkörper und das Stoffwechselzentrum des Neurons, der eine Größe von ca. 20 μm<sup>[15]</sup> [BCP18, p.29] besitzt. In der Zelle befindet sich - durch die _Neuronenmembran_ von der Umgebung getrennt - _Zytosol_, eine salzige, wässrige Flüssigkeit mit einem hohen Anteil von Kalium [vgl. BCP18. S.29 "Das Soma"] (s. Tab. 1.1). In dem Zytosol eingebettet sind weitere subzelluläre Strukturen mit eigener Membranbegrenzung, die _Zellorganellen_ [vgl. SD07 S.8, Abs. 2]. Für die nachfolgenden Untersuchungen interessieren uns bei dem Zellkörper aber vor allem die Zellmembran und der _transmembranale Transport_ von Ionen<sup>[15.1]</sup> zur Änderung des Membranpotenzials, insbesondere in der Nähe des **Axonhügels**: Dort entspringt das **Axon**, welches in einer "salzigen extrazellulären Flüssigkeit mit hoher Leitfähigkeit" [PCB18, S. 61, Abs. 1]<sup>[16]</sup> liegt. Hier entscheidet sich, ob das Neuron Informationen weiterleitet: Die Summation der durch die postsynaptischen Endigungen einhergehenden Signale kann eine Depolarisation<sup>[17]</sup> der Membran an dieser Stelle [vgl. Eil19, S. 61, "Soma"] über einen gewissen **Schwellenwert** bewirken, so das ein **Aktionspotenzial**<sup>[18]</sup> ausgelöst wird [vgl. BCP18, S. 142 f.]. Dadurch wird in den präsynaptischen Endigungen die Exozytose ausgelöst. 
 
 
 -------------
+<sup>[1]</sup> _Exozytose_ beschreibt den Vorgang, bei dem zellinnere Substanzen nach Außen weitergegeben werden. Wir kommen im Abschnitt über  synaptische Übertragung darauf zurück.<br />
+<sup>[2]</sup> "_inhibere_" (lat.): anhalten<br />
+<sup>[3]</sup> "_excitare_" (lat.): erregen, anregen<br />
 <sup>[4]</sup> "_δένδρον (dendrón)_": (altgriechisch): Baum<br />
 <sup>[5]</sup> "_afferre_" (lat.): herbeibringen, melden, bringen<br />
 <sup>[6]</sup> "_σῶμα (sõma)_" (altgriechisch): Körper<br />
 <sup>[7]</sup> "_axon_" (lat.): Achse<br />
 <sup>[8]</sup> "_efferre_" (lat.): hinaustragen, mitnehmen<br />
-<sup>[9]</sup> Axone können sich im menschlichen Körper über Entfernungen von bis zu über 1m ausstrecken [vgl. BCP18, S. 28, Abs. 2] <br />
+<sup>[9]</sup> Axone können sich im menschlichen Körper über Entfernungen von bis zu über 1m ausstrecken [vgl. BCP18, S. 28, Abs. 2]; [BLS] <br />
 <sup>[10]</sup> "_efficere_" (lat.): bewirken, hervorbringen<br />
 <sup>[11]</sup> in diesem Fall empfangen _postsynaptische Rezeptoren_ an den Dendriten des nachgeschalteten Neurons ein Signal und der beschriebene Prozess wiederholt sich. <br />
 <sup>[12]</sup> etwas bildlicher können wir uns Effektoren als Endglied der Signalübertragung vorstellen, auch wenn hier wieder interzelluläre Vorgänge stattfinden. Vgl. "neuromuskuläre Endplatte" [BCP18, S. 127, Abs. 3] <br />
 <sup>[13]</sup> aufgrund der signalempfangenden Eigenschaften und der dünnen Spitzen der Dendriten liegt der Vergleich mit "Antennen" nahe [vgl. BCP18, S. 28, Abs. 2] <br />
-<sup>[14]</sup> mit dem Wissen, daß das menschliche Gehirn mindestens $10^11$ Neuronen besitzt [KSJ+13, S. 175, Abs. 2], ist diese Größenordnung schneller nachvollziehbar<br />
+<sup>[14]</sup> das menschliche Gehirn besitzt mindestens $10^11$ Neuronen [vgl. KSJ+13, S. 175, Abs. 2]<br />
+<sup>[14.1]</sup> [Eil19, S. 58, "Polarisierung"] nennt für die "Dendritenlänge kortikaler Pyramidenzellen" eine Länge von 1 cm <br />
 <sup>[15]</sup> ein menschliches Haar hat einen Durchmesser von ca. 70 μm, kleine Bakterien bis zu 20 μm [WEmb] <br />
+<sup>[15.1]</sup> hier: der Austausch von Ionen zwischen dem intra- und extrazellulären Raum durch Kanäle und Pumpen<br />
 <sup>[16]</sup> [BCP18, p.43, Abs. 1] führt das Axon metaphorisch mit einer Telefonleitung zusammen <br />
 <sup>[17]</sup> Depolarisation bezeichnet die Verringerung des Membranpotenzials  [vgl. RHN+16, S. 812 "Neurotransmitter und ihre Rezeptoren"], bspw. von einem negativen Wert auf einen weniger negativen oder gar einen positiven Wert<br />
 <sup>[18]</sup> der formale Begriff für das Signal, das zu den Axonterminalen gesendet wird <br />
 
 ----------
+
+### Das Ruhepotenzial des Neurons
+
+Ein Neuron weist in Ruhe<sup>[19]</sup> eine ungleiche Ionenverteilung zwischen dem durch die Zellmembran getrennten intrazellulärem (IZR) und dem extrazellulärem Raum (EZR) auf. Im IZR befinden sich mehr positiv geladene Natrium-Ionen (Na+), und im EZR mehr positiv geladene Kalium- und Calcium-Ionen (Ka+ und Ca²+) sowie mehr negativ geladene Chlorid-Ionen (Cl-). 
+
+| Ion  | Konzentration EZR (mmol/l) | Konzentration IZR (mmol/l) | Verhältnis |
+|------|----------------------------|-------------------|------------|
+| K+   | 5                          | 100               | 1 : 20     |
+| Na+  | 150                        | 15                | 10:1       |
+| Ca²+ | 2                          | 0,0002            | 10000 : 1  |
+| Cl-  | 150                        | 13                | 11,5 : 1   |
+Tabelle Ionenkonzentration nach [BCP18, S.75, Abb.3.15]
+
+Die ungleiche Ionenverteilung bewirkt eine _Membranspannung_ $V_m$ [vgl. FE19, S.66, "Diffusionspotenzial – elektrische Spannung über der Zellmembran"]: Wenn auf das Neuron kein _postsynaptisches Potenzial_ (**PSP**) wirkt und das Neuron kein Impuls abgibt, liegt das Ruhepotenzial $V_r$ der Zelle zwischen -70 mV und -90 mV [vgl. SD07 S. 47, Tafel 2.3 A.1]<sup>[20]</sup>: Das Zytosol weist entlang der Membranoberfläche im also IZR eine negative Ladung auf [vgl. BCP18, S.61, Abs.3].
+
+$V_m$ ergibt sich als die Differenz der Spannungen $V_{izr}$ und $V_{ezr}$, wobei $V_{izr}$ die Spannung im IZR und $V_{ezr}$ die Spannung im EZR ist. $V_r$ ist dann gleich zu $V_{izr}$, da nach Konvention<sup>[21]</sup> die Spannung im EZR als $0$ definiert ist [vgl. KSJ+13 S. 127, rechte Spalte, 2. Abs.].  
+
+##### ionenpumpe (ausgleich)
+##### Depolarisation
+##### Hyperpolarisation
+##### Aktionspotenzial
+
+Die Membran ist durchzogen von Ionenkanaäle, die selektiv permeable für Ionen sind (Ionenselektivität [BCP18, p 66.]): So sind Kaliumkanäle durchlässig für Ka+ Ionen, Natriumkanaäle durchlässig für NA Ionen. Die Kanäle sind in einem geöffneten oder geschlossen Zustand, was durch Änderungen in der lokalen Mikroumgebung der Membran gesteuert werden kann. [BCP18, p 66.] Ein Konzentrationsgradient zur Aufrechterhaltung eines Konzentrationsgradientent, der für die Anzahl der Na+ und Ka+ Ionen IZ und EZ zuständig ist [SD07, p.44], übernehmen Natrium-Kalium-Pumpen (ATPasen [SD07 p. 26])
+
+
+-------------------
+<sup>[19]</sup> vgl. **Mempranpotenzial**: "die Spannung an der Nervenzellmembran zu einem beliebigen Zeitpunkt" [BCP18, S.70, "Ionen als Grundlage des Ruhepotenzials"]; **Ruhepotenzial**: "the electrical potential across the membrane in the absence of signaling" [KSJ+13, S. 126] <br />
+<sup>[20]</sup> [BCP18, S.70, "Ionen als Grundlage des Ruhepotenzials"] gibt -65 mV an <br />
+<sup>[21]</sup> vorausgesetzt, die Zelle ist in Ruhe <br />
+---------------------
 
 ### Das Axon: Axonhügel, Axon  und Axonterminal
 
@@ -56,7 +88,7 @@ Am **Axonhügel** entspringt das **Axon**, welches in einer "salzigen extrazellu
 
 
 
-These four properties of the action potential—
+These four properties of the action Potenzial—
 initiation threshold, all-or-none nature, conduction
 without decrement, and refractory period [KSJ+13, S. 149]
 
@@ -73,17 +105,17 @@ sind viszeroefferent. [BCP18, S. 197, "Afferente udn efferente Axone"]
 
 
 
-### Membranpotential
-Das MEmpranpotential (im folgenden $E_m$) oder auch Ruhepotential ist das Potential einer erregbaren Zelle in Ruhe, also Zellen, die momentan weder inhibitorisch oder exzitatorisch beeinflußt werden und deshalb keine Impulse erzeugen [BCP18, p.61]. Es liegt laut [SD07, p.44] je nach Zelltyp zwischen −100 und −50 mV: Bei den hier betrachteten Neuronen dürfen wir von einem Ruhepotential von -65 mV ausgehen. [BCP18, p.70], [SD07 sagt -70- -90, p. 47] Das membranpotential entsteht  durch eine ungleiche Ionenverteilung VErteilung zwischen der intrazellulären und der extrazellulären Flüssigkeit [SD07, p.44], wobei die das Zytosol **Entlang der MEmbranoberfläche** im im intrazelllulären Raum im Verhältnis zum EZR eine negative Ladung aufweist. [BCP18, p.61]: Die durch die Membran von dem EZR und dem IZR weisen die gleiche Anzahl gelöster Stoffe auf (isotoniosch), allerdings haben wir eine ungleichmäßige Verteilung von K+ und Na+ Ionen: Im EZR haben wir mehr NA Ionen als KA Ionen sowie mehr CA+ Ionen (NA: 150 mmol/kg H_2O, 15mmol IZR; 5 zu 100; Ca+ 2 zu 0,0002 [BCP18, p.75, Abb.3.15]). 
+### MembranPotenzial
+Das MEmpranPotenzial (im folgenden $E_m$) oder auch RuhePotenzial ist das Potenzial einer erregbaren Zelle in Ruhe, also Zellen, die momentan weder inhibitorisch oder exzitatorisch beeinflußt werden und deshalb keine Impulse erzeugen [BCP18, p.61]. Es liegt laut [SD07, p.44] je nach Zelltyp zwischen −100 und −50 mV: Bei den hier betrachteten Neuronen dürfen wir von einem RuhePotenzial von -65 mV ausgehen. [BCP18, p.70], [SD07 sagt -70- -90, p. 47] Das membranPotenzial entsteht  durch eine ungleiche Ionenverteilung VErteilung zwischen der intrazellulären und der extrazellulären Flüssigkeit [SD07, p.44], wobei die das Zytosol **Entlang der MEmbranoberfläche** im im intrazelllulären Raum im Verhältnis zum EZR eine negative Ladung aufweist. [BCP18, p.61]: Die durch die Membran von dem EZR und dem IZR weisen die gleiche Anzahl gelöster Stoffe auf (isotoniosch), allerdings haben wir eine ungleichmäßige Verteilung von K+ und Na+ Ionen: Im EZR haben wir mehr NA Ionen als KA Ionen sowie mehr CA+ Ionen (NA: 150 mmol/kg H_2O, 15mmol IZR; 5 zu 100; Ca+ 2 zu 0,0002 [BCP18, p.75, Abb.3.15]). 
 
 Die Membran ist durchzogen von Ionenkanaäle, die selektiv permeable für Ionen sind (Ionenselektivität [BCP18, p 66.]): So sind Kaliumkanäle durchlässig für Ka+ Ionen, Natriumkanaäle durchlässig für NA Ionen. Die Kanäle sind in einem geöffneten oder geschlossen Zustand, was durch Änderungen in der lokalen Mikroumgebung der Membran gesteuert werden kann. [BCP18, p 66.] Ein Konzentrationsgradient zur Aufrechterhaltung eines Konzentrationsgradientent, der für die Anzahl der Na+ und Ka+ Ionen IZ und EZ zuständig ist [SD07, p.44], übernehmen Natrium-Kalium-Pumpen (ATPasen [SD07 p. 26])
 
-Der Wert des Ruhepotentials ergibt sich nun
+Der Wert des RuhePotenzials ergibt sich nun
 
 
-Das Ruhepotential wird später bei der Betrachtung des Aktionspotentials eine bedeutende Rolle spielen: Die Depolarisation des Ruhepotentials ist für ein Neuron der Anstoß, um Signale zu weiterzuleiten. Erwähnenswert ist im übrigen, dass zwar alle lebenden Zellen ein Membranpotential aufweisen, aber nur erregbare Zellen (wie nerven oder Muskelzellen dazu in der Lage sind, die "IOonenleitfähigkeit ihrer Membran auf einen Reiz hin stark zu verändern" [SD07, p. 44]. 
+Das RuhePotenzial wird später bei der Betrachtung des AktionsPotenzials eine bedeutende Rolle spielen: Die Depolarisation des RuhePotenzials ist für ein Neuron der Anstoß, um Signale zu weiterzuleiten. Erwähnenswert ist im übrigen, dass zwar alle lebenden Zellen ein MembranPotenzial aufweisen, aber nur erregbare Zellen (wie nerven oder Muskelzellen dazu in der Lage sind, die "IOonenleitfähigkeit ihrer Membran auf einen Reiz hin stark zu verändern" [SD07, p. 44]. 
 
-### Schwellenpotential und Aktionspotential
+### SchwellenPotenzial und AktionsPotenzial
 
 > Der Aufstrich des Aktionspotenzials lässt sich durch einen Natriumeinstrom erklären, die
 fallende Phase durch einen Kaliumausstrom. Das Aktionspotenzial ist also einfach auf die
@@ -105,11 +137,11 @@ der ursprünglichen Ionenkonzentrationen
 ( S. 46) [SD07, p.46]
 
  
-der selektive Na+ Ionenkanal öffnet sich bei Veränderung des elektrischen Membranpotentials. [BA18, p97, weitergehende Erklärungen zu der Funktionsweise des Spannunsgssensors dieses Kanals auch auf dieser Seite]
+der selektive Na+ Ionenkanal öffnet sich bei Veränderung des elektrischen MembranPotenzials. [BA18, p97, weitergehende Erklärungen zu der Funktionsweise des Spannunsgssensors dieses Kanals auch auf dieser Seite]
 
 Die Membran wird depolarisiert, so dass die Ionenkanaäle öffnen und Na+ in die Zelle eindringt. Dringen genug Zellen in das ZI, wird das Neuron depolarisiert 
 
-Das Membrampotential kann über komplexe Vorgänge durch den Austausch von Ka+ und Na+ Ionen verstehen. Man klann sich das so vorstellen, dass eine Mebran in Ruheszustand für NatriumIonen imperable ist für EZF Na+ Ionen weniger durchlässig ist, und das Ruhepotenzial durch die ungleiche Verteilung von Na+ und Ka+ Ionen (UZF und EZF) bedingt ist. Durch entsprechende positive  Reize wird die Membran pereabel durchlässig für die NatriumIonen, die nun in das Zellinnere strömen könen und eine Verschiebung des Mebranpotenzials erwirken. Es findet eine Depolarisation statt,. Öffnen sich genug Natriumkanaäle, und wird der Schwellenwert des Axonhügels überschritten, findet ein Aktionspotential statt. das sich entlang des Axons fortpflanzt und letztendlich am Axonterminal für die Exozytose von Neurotransmittern sorgt.
+Das MembramPotenzial kann über komplexe Vorgänge durch den Austausch von Ka+ und Na+ Ionen verstehen. Man klann sich das so vorstellen, dass eine Mebran in Ruheszustand für NatriumIonen imperable ist für EZF Na+ Ionen weniger durchlässig ist, und das Ruhepotenzial durch die ungleiche Verteilung von Na+ und Ka+ Ionen (UZF und EZF) bedingt ist. Durch entsprechende positive  Reize wird die Membran pereabel durchlässig für die NatriumIonen, die nun in das Zellinnere strömen könen und eine Verschiebung des Mebranpotenzials erwirken. Es findet eine Depolarisation statt,. Öffnen sich genug Natriumkanaäle, und wird der Schwellenwert des Axonhügels überschritten, findet ein AktionsPotenzial statt. das sich entlang des Axons fortpflanzt und letztendlich am Axonterminal für die Exozytose von Neurotransmittern sorgt.
 
 ### Alles oder Nichts Prinzip
 
@@ -118,7 +150,7 @@ Das Membrampotential kann über komplexe Vorgänge durch den Austausch von Ka+ u
 
 
 
-Die Änderung des Membranpotentials geschieht, wenn die Membran ihre Durchlässigkeit verändert und von dem impereablen Zustand (Ruhezustand) exzitatorisch erregt wird: Kommen bei dem Neuron entsprechende positive Ladungen an, Signale an, Dies geschieht mit hilfe der Natrium Kaium Pumpe, die einen Na+/Ka+ Austausch zwischen IZF und EZF möglich macht, und somit das Membranpotenzial der Zelle verringert bzw. erhöht. Wir erinnern uns, dass das Innere des Soma aus Cytosol besteht, einer Kaliumreichen flüssigkeit. Der Kaliumgehalt EZF ist dagegen niedriger als der dort befindliche als der  Natriumgehalt. Allerdings kann durch komplexe chemische Vorgänge ein Austaiusch der Na+Ka+ Konztentration statfinden, indem sich die Durchklässigkeit der Membran für verschiedene IOnen ändertein Austritt der KA+ und der Na+ Ionen stattfinden, so dass sie das Mebrampotential ändert: Strömen mehr NA+ Ionen in das zellinnere, änderts ich das Membranpotential hin zum positiven. 
+Die Änderung des MembranPotenzials geschieht, wenn die Membran ihre Durchlässigkeit verändert und von dem impereablen Zustand (Ruhezustand) exzitatorisch erregt wird: Kommen bei dem Neuron entsprechende positive Ladungen an, Signale an, Dies geschieht mit hilfe der Natrium Kaium Pumpe, die einen Na+/Ka+ Austausch zwischen IZF und EZF möglich macht, und somit das Membranpotenzial der Zelle verringert bzw. erhöht. Wir erinnern uns, dass das Innere des Soma aus Cytosol besteht, einer Kaliumreichen flüssigkeit. Der Kaliumgehalt EZF ist dagegen niedriger als der dort befindliche als der  Natriumgehalt. Allerdings kann durch komplexe chemische Vorgänge ein Austaiusch der Na+Ka+ Konztentration statfinden, indem sich die Durchklässigkeit der Membran für verschiedene IOnen ändertein Austritt der KA+ und der Na+ Ionen stattfinden, so dass sie das MebramPotenzial ändert: Strömen mehr NA+ Ionen in das zellinnere, änderts ich das MembranPotenzial hin zum positiven. 
 
 
 ## Synapsen
@@ -159,13 +191,13 @@ postsynaptischen Neurons zu beeinflussen [BCP18, p.148]
 
 
 
-- Neuron besteht aus dem Zellkörper, Dendriten und dem Axon (Soma bezeichnet alles außer dem Axon s. [HEB49]: Zerllkörper wird auch Perikaryon genannt [ROH17, p58]
+- Neuron besteht aus dem Zellkörper, Dendriten und dem Axon (Soma bezeichnet alles außer dem Axon s. [HEB49]: Zerllkörper wird auch Perikaryon genannt [RK18, S. 58, "Aufbau"]
 -
 - Dendriten führt zum Neuron hin, Axon (auch Neurit geannt [SD07, p.43]) führt zum Neuron Weg: Dendrit eingehende Verbindung, Axon ist ausgehende Verbindinung
 -
-- Übertragung zwischen Neuronen geschieht über Synapsen, über die die Nervenzellen miteinander verbunden sind: zwischen präsynaptischen Endigungen (Acxon)) und den postsynapitschen Zelle (Dendrit) ein Spalte existiert, über den durch Bitenstoffe (Neurotransmitter) die Signale weitergeleitet werden, sofern ein Aktionspotential das Schwellenpotenzial des Axonhügels übertroffen hat.
+- Übertragung zwischen Neuronen geschieht über Synapsen, über die die Nervenzellen miteinander verbunden sind: zwischen präsynaptischen Endigungen (Acxon)) und den postsynapitschen Zelle (Dendrit) ein Spalte existiert, über den durch Bitenstoffe (Neurotransmitter) die Signale weitergeleitet werden, sofern ein AktionsPotenzial das Schwellenpotenzial des Axonhügels übertroffen hat.
 -
-- Hierbei wird zwischen exzitatorischen postsynaptischen Potential (EPSP )und inhibotoirischem postsynaptischen Potential (IPSP) unterschieden: EPSP hat erregende Wirkung, IPSP hemmende (als erregende Transmitter sind bspw. Glutamat bekannt, auch bekant als Geschmacksversärker; Hemmende TRansmitter sind bspw. GABA - Gamma-Aminobuttersäure (GABA), so erhöht bspw. das Medikament Gabapentin den GABA Spiegel[1] und wird zur Behandlung von Anfallsleiden wie der Epilepsie sowie bei Nervenschmerzen (Neuropathien) angewendet[2]
+- Hierbei wird zwischen exzitatorischen postsynaptischen Potenzial (EPSP )und inhibotoirischem postsynaptischen Potenzial (IPSP) unterschieden: EPSP hat erregende Wirkung, IPSP hemmende (als erregende Transmitter sind bspw. Glutamat bekannt, auch bekant als Geschmacksversärker; Hemmende TRansmitter sind bspw. GABA - Gamma-Aminobuttersäure (GABA), so erhöht bspw. das Medikament Gabapentin den GABA Spiegel[1] und wird zur Behandlung von Anfallsleiden wie der Epilepsie sowie bei Nervenschmerzen (Neuropathien) angewendet[2]
 -
 [1] https://www.aerzteblatt.de/archiv/20049/Neuropathien-Gabapentin-bremst-ueberaktive-Neurone )
 [2]  https://www.gelbe-liste.de/wirkstoffe/Gabapentin_21579
@@ -185,13 +217,13 @@ postsynaptischen Neurons zu beeinflussen [BCP18, p.148]
 ## Das Axon
 >  Das Axon, das am Axonhügel des Somas entspringt, hat die Aufgabe, das efferente Nervensignal auf häufig weit entfernte Effektoren(Muskel- oder Drüsenzellen) sowie auf nachgeschaltete Neurone zu übertragen. Es gibt in seinem Verlauf oft Äste (Kollateralen) ab, die sich am Ende nochmals aufsplittern. Überschreitet die Signalsumme am Axonhügel einen Schwellenwert, wird im Axon ein Aktionspotenzial abgeschickt (S. 46), das an den Endknöpfen (A1,3) die nächste Synapse(s. u.) erreicht.[SD07, p.42]
 
-# Potentiale
+# Potenziale
 
-## Schwellenpotential: 
-Als Schwellenpotential bezeichnet man im Zusammenhang mit der Signalübermittlung in Nerven und Muskelfasern jene Potentialdifferenz, bei der ein Aktionspotential ausgelöst wird. (https://de.wikipedia.org/wiki/Schwellenpotential, 15.07.2023)
+## SchwellenPotenzial: 
+Als SchwellenPotenzial bezeichnet man im Zusammenhang mit der Signalübermittlung in Nerven und Muskelfasern jene Potenzialdifferenz, bei der ein AktionsPotenzial ausgelöst wird. (https://de.wikipedia.org/wiki/SchwellenPotenzial, 15.07.2023)
 
-## Ruhemembranpotential:   
-Als Ruhemembranpotential oder auch knapp Ruhepotential (abgekürzt RMP bzw. RP) wird das Membranpotential von erregbaren Zellen in Ruhe bezeichnet, also bei nicht erregten Nervenzellen oder Muskelzellen. Eine charakteristische, vorübergehende Abweichung vom Ruhepotential ist beispielsweise das Aktionspotential (AP) dieser Zellen bei Erregung. Die als Ruhemembranpotential bezeichnete Potentialdifferenz zwischen negativ geladenem Zellinneren und extrazellulärer Umgebung über die Membran beträgt je nach Zelltyp zwischen −100 und −50 mV [SD07, p.44], bei den meisten Nervenzellen rund −70 mV. https://de.wikipedia.org/wiki/Ruhemembranpotential 15.07.2023
+## RuhemembranPotenzial:   
+Als RuhemembranPotenzial oder auch knapp RuhePotenzial (abgekürzt RMP bzw. RP) wird das MembranPotenzial von erregbaren Zellen in Ruhe bezeichnet, also bei nicht erregten Nervenzellen oder Muskelzellen. Eine charakteristische, vorübergehende Abweichung vom RuhePotenzial ist beispielsweise das AktionsPotenzial (AP) dieser Zellen bei Erregung. Die als RuhemembranPotenzial bezeichnete Potenzialdifferenz zwischen negativ geladenem Zellinneren und extrazellulärer Umgebung über die Membran beträgt je nach Zelltyp zwischen −100 und −50 mV [SD07, p.44], bei den meisten Nervenzellen rund −70 mV. https://de.wikipedia.org/wiki/RuhemembranPotenzial 15.07.2023
 > Die Ursache des Ruhepotenzials ist eine ungleiche Ionenverteilung (B) zwischen der intrazellulären Flüssigkeit (IZF) und der extrazellulären Flüssigkeit (EZF) [SD07, p. 44]
 > > Alle lebenden Zellen weisen ein (Ruhe-) Membranpotenzial auf, aber nur die erregbaren Zellen (Nerv, Muskel) haben die Fähigkeit, die Ionenleitfähigkeit ihrer Membran auf einen Reiz hin stark zu verändern: Aktionspotenzial (S. 46) [SD07, p. 44]
 
@@ -267,7 +299,7 @@ die Freisetzung ist ein eintreffendes AP (A1,2), und je höher die AP-Frequenz i
  - Alles-oder-nichts-Antwort
  "An dem Parameter Stärke der Reaktion ist keine Abstufung (Differenzierung) zu beobachten" (https://de.wikipedia.org/wiki/Alles-oder-nichts-Gesetz, 14.07.2023)
  - Depolarisation
-Verringerung des Membrampotentials einer Zellmembran; Die Membranspannung kann durch Ausschüttung eines Transmitters depolarisiert werden; bei dem erregenden Potential steigt die Spannung in der postsynaptischen Zelle -> Spannung wird positiver, weil die begative Spannung also abnimmt, spricht man von Depolarisierung
+Verringerung des MembramPotenzials einer Zellmembran; Die Membranspannung kann durch Ausschüttung eines Transmitters depolarisiert werden; bei dem erregenden Potenzial steigt die Spannung in der postsynaptischen Zelle -> Spannung wird positiver, weil die begative Spannung also abnimmt, spricht man von Depolarisierung
 - Der Anstieg von [Ca2+]i ist ein Signal für viele
   wichtige Zellfunktionen ( A). Er bewirkt u. a.
   in Muskelzellen deren Kontraktion, in den präsynaptischen Endigungen der Neurone die
@@ -287,3 +319,9 @@ Verringerung des Membrampotentials einer Zellmembran; Die Membranspannung kann d
   Dornen (Spines) der Kortexdendriten (D, oben),
   die schließlich in langfristige, genomische Veränderungen übergehen (späte LTP-Phasen). Dadurch
   wird die synaptische Übertragung an definierten Synapsen verstärkt und der Lernvorgang konsolidiert [SD07, p.342]
+
+# Zusammenfassung
+- Nervenzellen zeigen Polarisierung [Eil19, S. 60]
+- Eingang -> VErrechnen -> Ausgang [Eil19] S.57
+- VErschaltungsmuster [Eil19, S. 59]
+- Auf diesen Vorgängen fußt das mathematische Model und die Architektur künstlicher neuronaler Netze [QUELLE?], wie wir in den nachfolgenden Kapiteln sehen werden.
