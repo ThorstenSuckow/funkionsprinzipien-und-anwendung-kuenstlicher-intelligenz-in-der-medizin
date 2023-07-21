@@ -15,6 +15,12 @@ Quotation style: IEEE
 
 - [Eil19] J. Eilers, „Nervenzellen“, in _Physiologie des Menschen: mit Pathophysiologie_, R. Brandes, F. Lang, und R. F. Schmidt, Hrsg., Berlin, Heidelberg: Springer Berlin Heidelberg, 2019, S. 57–64. https://doi.org/10.1007/978-3-662-56468-4_5.
 
+ - [RK18] R. Rohkamm, P. Kermer, und M. Güther, _Taschenatlas Neurologie_, ed. 4. Auflage. Stuttgart New York: Georg Thieme Verlag, 2018. https://10.1055/b-005-143299.
+
+- [FE19] B. Fakler und J. Eilers, „Ruhemembranpotenzial und Aktionspotenzial“, in _Physiologie des Menschen: mit Pathophysiologie_, R. Brandes, F. Lang, und R. F. Schmidt, Hrsg., Berlin, Heidelberg: Springer Berlin Heidelberg, 2019, S. 65–71. https://doi.org/10.1007/978-3-662-56468-4_6.
+
+- [KSJ+13]  E. R. Kandel, J. H. Schwartz, T. M. Jessell, S. A. Siegelbaum und A. J. Hudspeth eds. _Principles of Neural Science_, ed. Fifth Edition. New York: McGraw-Hill Education, 2013.
+
 
 #### Sonstige Quellen
  - [Wemb] „Größenordnungen in der Mikrowelt“. https://homepage.univie.ac.at/franz.embacher/groessenordnungenNano.html (zugegriffen 20. Juli 2023).
@@ -33,7 +39,7 @@ Quotation style: IEEE
 
 [OF96] Olshausen, B., Field, D. Emergence of simple-cell receptive field properties by learning a sparse code for natural images. Nature 381, 607–609 (1996). https://doi.org/10.1038/381607a0
 
-[KSJ+13] E. R. Kandel, Principles of Neural Science, Fifth Edition. in McGraw-Hill’s AccessMedicine. McGraw-Hill Education, 2013. 
+
 
 [Izh06] E. M. Izhikevich, _Dynamical Systems in Neuroscience: The Geometry of Excitability and Bursting_. The MIT Press, 2006. https://doi.org/10.7551/mitpress/2526.001.0001.
 
