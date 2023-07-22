@@ -24,6 +24,7 @@ Quotation style: IEEE
 
 #### Sonstige Quellen
  - [Wemb] „Größenordnungen in der Mikrowelt“. https://homepage.univie.ac.at/franz.embacher/groessenordnungenNano.html (zugegriffen 20. Juli 2023).
+ - [Wner] „Walther Nernst“. https://de.wikipedia.org/wiki/Walther_Nernst (zugegriffen 22. Juli 2023).
 
 
 ##### Unkategorisiert
