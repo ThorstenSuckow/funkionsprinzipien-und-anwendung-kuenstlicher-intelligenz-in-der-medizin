@@ -45,41 +45,72 @@ Die Dendriten leiten Signale weiter an das **Soma** (oder _Perikaryon_ [vgl. RK1
 <sup>[14]</sup> das menschliche Gehirn besitzt mindestens $10^11$ Neuronen [vgl. KSJ+13, S. 175, Abs. 2]<br />
 <sup>[14.1]</sup> [Eil19, S. 58, "Polarisierung"] nennt für die "Dendritenlänge kortikaler Pyramidenzellen" eine Länge von 1 cm <br />
 <sup>[15]</sup> ein menschliches Haar hat einen Durchmesser von ca. 70 μm, kleine Bakterien bis zu 20 μm [WEmb] <br />
-<sup>[15.1]</sup> hier: der Austausch von Ionen zwischen dem intra- und extrazellulären Raum durch Kanäle und Pumpen<br />
+<sup>[15.1]</sup> hier: der Austausch von Ionen zwischen dem intra- und extrazellulären Raum durch Kanäle und Pumpen. Als **Ion** bezeichnet man ein elektrisch geladenes Atom oder Molekül.<br />
 <sup>[16]</sup> [BCP18, p.43, Abs. 1] führt das Axon metaphorisch mit einer Telefonleitung zusammen <br />
 <sup>[17]</sup> Depolarisation bezeichnet die Verringerung des Membranpotenzials  [vgl. RHN+16, S. 812 "Neurotransmitter und ihre Rezeptoren"], bspw. von einem negativen Wert auf einen weniger negativen oder gar einen positiven Wert<br />
 <sup>[18]</sup> der formale Begriff für das Signal, das zu den Axonterminalen gesendet wird <br />
 
 ----------
 
-### Das Ruhepotenzial des Neurons
+### Membranpotenziale des Neurons
 
-Ein Neuron weist in Ruhe<sup>[19]</sup> eine ungleiche Ionenverteilung zwischen dem durch die Zellmembran getrennten intrazellulärem (IZR) und dem extrazellulärem Raum (EZR) auf. Im IZR befinden sich mehr positiv geladene Natrium-Ionen (Na+), und im EZR mehr positiv geladene Kalium- und Calcium-Ionen (Ka+ und Ca²+) sowie mehr negativ geladene Chlorid-Ionen (Cl-). 
+Ein Neuron weist in Ruhe<sup>[19]</sup> eine ungleiche Ionenverteilung zwischen dem durch die Zellmembran getrennten intrazellulärem (IZF) und dem extrazellulärem Raum (EZF) auf. Im IZF befinden sich mehr positiv geladene Natrium-Ionen (Na+), und im EZF mehr positiv geladene Kalium- und Calcium-Ionen (Ka+ und Ca²+) sowie mehr negativ geladene Chlorid-Ionen (Cl-). 
 
-| Ion  | Konzentration EZR (mmol/l) | Konzentration IZR (mmol/l) | Verhältnis |
+| Ion  | Konzentration EZF (mmol/l) | Konzentration IZF (mmol/l) | Verhältnis |
 |------|----------------------------|-------------------|------------|
 | K+   | 5                          | 100               | 1 : 20     |
 | Na+  | 150                        | 15                | 10:1       |
 | Ca²+ | 2                          | 0,0002            | 10000 : 1  |
 | Cl-  | 150                        | 13                | 11,5 : 1   |
-Tabelle Ionenkonzentration nach [BCP18, S.75, Abb.3.15]
+Tabelle Ionenkonzentration in Ruhe nach [BCP18, S.75, Abb.3.15]
 
-Die ungleiche Ionenverteilung bewirkt eine _Membranspannung_ $V_m$ [vgl. FE19, S.66, "Diffusionspotenzial – elektrische Spannung über der Zellmembran"]: Wenn auf das Neuron kein _postsynaptisches Potenzial_ (**PSP**) wirkt und das Neuron kein Impuls abgibt, liegt das Ruhepotenzial $V_r$ der Zelle zwischen -70 mV und -90 mV [vgl. SD07 S. 47, Tafel 2.3 A.1]<sup>[20]</sup>: Das Zytosol weist entlang der Membranoberfläche im also IZR eine negative Ladung auf [vgl. BCP18, S.61, Abs.3].
+Das Membranpotenzial des Neurons wird durch die Verteilung von Ionen im IZF und EZF bestimmt. In der Membran befinden sich **Ionenkanäle**, die, über die Änderung in der Umgebung des Neurons, geöffnet oder geschlossen werden können (**Gating**). Die meisten Ionenkanäle sind selektiv permeable, d.h., sie lassen nur bestimmte Ionen durch (_Ionenselektivität_)<sup>[22]</sup> (vgl. vgl. [BCP18], S 66., Abs. 3). Hierdurch ist ein Austausch von Ionen zwischen dem IZF und dem EZF möglich, somit auch eine Spannungsänderung des Membranpotenzials. Neben den Ionenkanälen existieren auch **Ionenpumpen** ("**ATPasen**"<sup>[23]</sup>, [SD07], S. 26, 2. Abs), die für die Aufrechterhaltung der Ionenverteilung zuständig sind: die Ca²+- und Na+-K+-ATPasen sorgen dafür, daß im Neuron laufend  Ca²+ und Na+ aus und K+ in die Zelle gepumpt wird (vg. [SD07], S. 44). Hierdurch ergeben sich die Ionenkonzentration in Tabelle 1.1
 
-$V_m$ ergibt sich als die Differenz der Spannungen $V_{izr}$ und $V_{ezr}$, wobei $V_{izr}$ die Spannung im IZR und $V_{ezr}$ die Spannung im EZR ist. $V_r$ ist dann gleich zu $V_{izr}$, da nach Konvention<sup>[21]</sup> die Spannung im EZR als $0$ definiert ist [vgl. KSJ+13 S. 127, rechte Spalte, 2. Abs.].  
+Die ungleiche Ionenverteilung bewirkt eine _Membranspannung_ $V_m$ [vgl. FE19, S.66, "Diffusionspotenzial – elektrische Spannung über der Zellmembran"], verursacht durch die Ladung der Teilchen im IZF und EZF in Membrannnähe<sup>[19.1]</sup>: "Die negativen Ladungen im Inneren des Neurons und die positiven Ladungen außerhalb des Neurons ziehen sich in Richtung Zellmembran gegenseitig an, [...] Dementsprechend ist die negative Nettoladung im Inneren der Zelle nicht gleichmäßig im Cytosol verteilt, sondern an der Innenseite der Membran lokalisiert" ([BCP18], S. 72, Punkt 2.)
 
-##### ionenpumpe (ausgleich)
-##### Depolarisation
-##### Hyperpolarisation
-##### Aktionspotenzial
+Wenn auf das Neuron kein _postsynaptisches Potenzial_ (**PSP**) wirkt und das Neuron kein Impuls abgibt, liegt das Ruhepotenzial $V_r$ der Zelle zwischen -70 mV und -90 mV [vgl. SD07 S. 47, Tafel 2.3 A.1]<sup>[20]</sup>: Das Zytosol weist entlang der Membranoberfläche im also IZF eine negative Ladung auf (vgl. [BCP18], S.61, Abs.3).
 
-Die Membran ist durchzogen von Ionenkanaäle, die selektiv permeable für Ionen sind (Ionenselektivität [BCP18, p 66.]): So sind Kaliumkanäle durchlässig für Ka+ Ionen, Natriumkanaäle durchlässig für NA Ionen. Die Kanäle sind in einem geöffneten oder geschlossen Zustand, was durch Änderungen in der lokalen Mikroumgebung der Membran gesteuert werden kann. [BCP18, p 66.] Ein Konzentrationsgradient zur Aufrechterhaltung eines Konzentrationsgradientent, der für die Anzahl der Na+ und Ka+ Ionen IZ und EZ zuständig ist [SD07, p.44], übernehmen Natrium-Kalium-Pumpen (ATPasen [SD07 p. 26])
+$V_m$ ergibt sich als die Differenz der Spannungen $V_{IZF}$ und $V_{EZF}$, wobei $V_{IZF}$ die Spannung im IZF und $V_{EZF}$ die Spannung im EZF ist. $V_r$ ist dann gleich zu $V_{IZF}$, da nach Konvention<sup>[21]</sup> die Spannung im EZF als $0$ definiert ist (vgl. [KSJ+13] S. 127, rechte Spalte, 2. Abs.).  
+
+Das Membranpotenzial nähert sich dem Gleichgewichtspotenzial des Ions an, für den die Membran besonders permeabel ist (vgl. [KSJ+13], S. 145, Ende). Überprüfen läßt siuch das mit der Nernst-Gleichung<sup>[24]</sup> mit der sich das Diffusions- bzw. Gleichgewichtspotenzials eines Ions beschreiben läßt (vgl. [BLS19], S. 67, "Nernst-Gleichung").
+
+$NERNST_GLEICHUNG$
+
+- $E_{ion}$<sup>[25]</sup> Gleichgewichtspotenzial für das jeweilige Ion
+- $R$ = Gaskonstante
+- $T$ = absolute Temperatur
+- $z$ = Ladung des Ions
+- $F$ = Faraday-Konstante (elektrische Ladung eines Mols einfach geladener Ionen (1 Mol = $6.02214076e10^{23}$ Teilchen))
+- log = $log_{10}$
+- $Ion_{EZF}$ Ionenkonzentration außerhalb der Zelle
+- $Ion_{IZF}$ Ionenkonzentration innerhalb der Zelle
+
+
+Wobei  (vgl. [BCP18], S. 74, Exkurs 3.2)
+
+Für eine Körpertemperatur von 37° läßt sich die Nernst-Gleichung für das Gleichgewichtspotenzial $E_k$ wie folgt vereinfachen:
+
+$Vereinfachung_E_k$ und es ergibt sich $E_{k} = xx.xx$
+
+Wir wissen allerdings bereits, daß das Ruhepotential eines Neurons bei 65 liegt. Wie können wir jetzt darauf schließen, daß das Ruhepotenzial durch die membranpermeabilität von K+ bestimmt wird, wenn die Differenz so hoch ist`, und die Mebran auch noch für andeere Ionen selektiv permeabel ist? Wäre die Membran nur für K+ permeable, so läge $V_m$ sicher bei $E_k$ (vgl. [SD07] S.32 Abs. 4). Hierzu dient die Goldmangleichung, die zusätzlich für die Berechnung des Membranpotenzials $V_m$  die Permeabilität der MEmbran für einzelne Ionen berücksichtigt. Allerdings ist zu beachten, "dass die Permeabilitäten in komplizierter Weise von der Membranspannung und
+den Ionenkonzentrationen [...] abhängen und sich meist nur näherungsweise bestimmen lassen." ([BLS19], S.67, Goldman Gleichung) 
+
+Kann man mit Hilfe des Fickschen Diffusiongesetz die PErmeabilität einer NEuronenmebran für ein bestimmtes Ion berechnen
+
+
+
 
 
 -------------------
 <sup>[19]</sup> vgl. **Mempranpotenzial**: "die Spannung an der Nervenzellmembran zu einem beliebigen Zeitpunkt" [BCP18, S.70, "Ionen als Grundlage des Ruhepotenzials"]; **Ruhepotenzial**: "the electrical potential across the membrane in the absence of signaling" [KSJ+13, S. 126] <br />
-<sup>[20]</sup> [BCP18, S.70, "Ionen als Grundlage des Ruhepotenzials"] gibt -65 mV an <br />
+<sup>[19.1]</sup> 
+<sup>[20]</sup> [BCP18, S.70, "Ionen als Grundlage des Ruhepotenzials"] gibt -65 mV an (1 mV = 0,001 V). Die Autoren gehen hierbei von einer 40-mal so hohen Ionenpermeabilität für K+ gegenüber Na+ aus (vgl. [BCP18], S. 74, Exkurs 3.2)<br />
 <sup>[21]</sup> vorausgesetzt, die Zelle ist in Ruhe <br />
+<sup>[22]</sup> Kaliumkanäle sind durchlässig für K+ Ionen, Natriumkanäle durchlässig für NA+ Ionen usw. <br />
+<sup>[23]</sup> Adenosintriphosphasen - Enzyme, die ATP in ADP und Phosphat aufspalten [QUELLE] <br />
+<sup>[24]</sup> Walther Nernst (1864 - 1941), dt. Physiker und Chemiker, gehört zu den Begründern der physikalischen Chemie [Wern] <br />
+<sup>[25]</sup> $E$ steht für _Equilibrium_: "Gleichgewicht" (lat. aequus "gleich", libra lat. "Waage/Gewicht")<br />
+
 ---------------------
 
 ### Das Axon: Axonhügel, Axon  und Axonterminal
@@ -106,7 +137,7 @@ sind viszeroefferent. [BCP18, S. 197, "Afferente udn efferente Axone"]
 
 
 ### MembranPotenzial
-Das MEmpranPotenzial (im folgenden $E_m$) oder auch RuhePotenzial ist das Potenzial einer erregbaren Zelle in Ruhe, also Zellen, die momentan weder inhibitorisch oder exzitatorisch beeinflußt werden und deshalb keine Impulse erzeugen [BCP18, p.61]. Es liegt laut [SD07, p.44] je nach Zelltyp zwischen −100 und −50 mV: Bei den hier betrachteten Neuronen dürfen wir von einem RuhePotenzial von -65 mV ausgehen. [BCP18, p.70], [SD07 sagt -70- -90, p. 47] Das membranPotenzial entsteht  durch eine ungleiche Ionenverteilung VErteilung zwischen der intrazellulären und der extrazellulären Flüssigkeit [SD07, p.44], wobei die das Zytosol **Entlang der MEmbranoberfläche** im im intrazelllulären Raum im Verhältnis zum EZR eine negative Ladung aufweist. [BCP18, p.61]: Die durch die Membran von dem EZR und dem IZR weisen die gleiche Anzahl gelöster Stoffe auf (isotoniosch), allerdings haben wir eine ungleichmäßige Verteilung von K+ und Na+ Ionen: Im EZR haben wir mehr NA Ionen als KA Ionen sowie mehr CA+ Ionen (NA: 150 mmol/kg H_2O, 15mmol IZR; 5 zu 100; Ca+ 2 zu 0,0002 [BCP18, p.75, Abb.3.15]). 
+Das MEmpranPotenzial (im folgenden $E_m$) oder auch RuhePotenzial ist das Potenzial einer erregbaren Zelle in Ruhe, also Zellen, die momentan weder inhibitorisch oder exzitatorisch beeinflußt werden und deshalb keine Impulse erzeugen [BCP18, p.61]. Es liegt laut [SD07, p.44] je nach Zelltyp zwischen −100 und −50 mV: Bei den hier betrachteten Neuronen dürfen wir von einem RuhePotenzial von -65 mV ausgehen. [BCP18, p.70], [SD07 sagt -70- -90, p. 47] Das membranPotenzial entsteht  durch eine ungleiche Ionenverteilung VErteilung zwischen der intrazellulären und der extrazellulären Flüssigkeit [SD07, p.44], wobei die das Zytosol **Entlang der MEmbranoberfläche** im im intrazelllulären Raum im Verhältnis zum EZF eine negative Ladung aufweist. [BCP18, p.61]: Die durch die Membran von dem EZF und dem IZF weisen die gleiche Anzahl gelöster Stoffe auf (isotoniosch), allerdings haben wir eine ungleichmäßige Verteilung von K+ und Na+ Ionen: Im EZF haben wir mehr NA Ionen als KA Ionen sowie mehr CA+ Ionen (NA: 150 mmol/kg H_2O, 15mmol IZF; 5 zu 100; Ca+ 2 zu 0,0002 [BCP18, p.75, Abb.3.15]). 
 
 Die Membran ist durchzogen von Ionenkanaäle, die selektiv permeable für Ionen sind (Ionenselektivität [BCP18, p 66.]): So sind Kaliumkanäle durchlässig für Ka+ Ionen, Natriumkanaäle durchlässig für NA Ionen. Die Kanäle sind in einem geöffneten oder geschlossen Zustand, was durch Änderungen in der lokalen Mikroumgebung der Membran gesteuert werden kann. [BCP18, p 66.] Ein Konzentrationsgradient zur Aufrechterhaltung eines Konzentrationsgradientent, der für die Anzahl der Na+ und Ka+ Ionen IZ und EZ zuständig ist [SD07, p.44], übernehmen Natrium-Kalium-Pumpen (ATPasen [SD07 p. 26])
 
