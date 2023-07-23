@@ -25,7 +25,7 @@ In der folgenden Abbildung haben wir das Neuron in drei Bereiche eingeteilt. Ihr
 
 Die eingehende Schnittstelle eines Neurons sind seine **Dendriten**: Baumförmige Fortsätze (einzelne selten länger als 2 mm<sup>[14.1]</sup> [vgl. BCP18, S. 28, Abs. 2]), die um das Soma herum gelagert sind. Diese Dendritenbäume [vgl. BSP18, S.47] fungieren _postsynaptisch_ und empfangen afferente Signale<sup>[13]</sup> in Form von Neurotransmittern [vgl. Eil19, S. 61, "Synapsen"]. Diese werden von Rezeptoren, die sich an den Enden der Dendriten befinden, aufgenommen. Oft stehen tausende Neuronen in Verbindung mit den Dendriten eines einzelnen Neurons<sup>[14]</sup> [vgl. D07, p.42].<br />
 
-Die Dendriten leiten Signale weiter an das **Soma** (oder _Perikaryon_ [vgl. RK18, S. 58, "Aufbau"]), den Zellkörper und das Stoffwechselzentrum des Neurons, der eine Größe von ca. 20 μm<sup>[15]</sup> [BCP18, p.29] besitzt. In der Zelle befindet sich - durch die _Neuronenmembran_ von der Umgebung getrennt - _Zytosol_, eine salzige, wässrige Flüssigkeit mit einem hohen Anteil von Kalium [vgl. BCP18. S.29 "Das Soma"] (s. Tab. 1.1). In dem Zytosol eingebettet sind weitere subzelluläre Strukturen mit eigener Membranbegrenzung, die _Zellorganellen_ [vgl. SD07 S.8, Abs. 2]. Für die nachfolgenden Untersuchungen interessieren uns bei dem Zellkörper aber vor allem die Zellmembran und der _transmembranale Transport_ von Ionen<sup>[15.1]</sup> zur Änderung des Membranpotenzials, insbesondere in der Nähe des **Axonhügels**: Dort entspringt das **Axon**, welches in einer "salzigen extrazellulären Flüssigkeit mit hoher Leitfähigkeit" [PCB18, S. 61, Abs. 1]<sup>[16]</sup> liegt. Hier entscheidet sich, ob das Neuron Informationen weiterleitet: Die Summation der durch die postsynaptischen Endigungen einhergehenden Signale kann eine Depolarisation<sup>[17]</sup> der Membran an dieser Stelle [vgl. Eil19, S. 61, "Soma"] über einen gewissen **Schwellenwert** bewirken, so das ein **Aktionspotenzial**<sup>[18]</sup> ausgelöst wird [vgl. BCP18, S. 142 f.]. Dadurch wird in den präsynaptischen Endigungen die Exozytose ausgelöst. 
+Die Dendriten leiten Signale weiter an das **Soma** (oder _Perikaryon_ [vgl. RK18, S. 58, "Aufbau"]), den Zellkörper und das Stoffwechselzentrum des Neurons, der eine Größe von ca. 20 μm<sup>[15]</sup> [BCP18, p.29] besitzt. In der Zelle befindet sich - durch die _Neuronenmembran_<sup>[15.1]</sup> von der Umgebung getrennt - _Zytosol_, eine salzige, wässrige Flüssigkeit mit einem hohen Anteil von Kalium [vgl. BCP18. S.29 "Das Soma"] (s. Tab. 1.1). In dem Zytosol eingebettet sind weitere subzelluläre Strukturen mit eigener Membranbegrenzung, die _Zellorganellen_ [vgl. SD07 S.8, Abs. 2]. Für die nachfolgenden Untersuchungen interessieren uns bei dem Zellkörper aber vor allem die Zellmembran und der _transmembranale Transport_ von Ionen<sup>[15.2]</sup> zur Änderung des Membranpotenzials, insbesondere in der Nähe des **Axonhügels**: Dort entspringt das **Axon**, welches in einer "salzigen extrazellulären Flüssigkeit mit hoher Leitfähigkeit" [PCB18, S. 61, Abs. 1]<sup>[16]</sup> liegt. Hier entscheidet sich, ob das Neuron Informationen weiterleitet: Die Summation der durch die postsynaptischen Endigungen einhergehenden Signale kann eine Depolarisation<sup>[17]</sup> der Membran an dieser Stelle [vgl. Eil19, S. 61, "Soma"] über einen gewissen **Schwellenwert** bewirken, so das ein **Aktionspotenzial**<sup>[18]</sup> ausgelöst wird [vgl. BCP18, S. 142 f.]. Dadurch wird in den präsynaptischen Endigungen die Exozytose ausgelöst. 
 
 
 -------------
@@ -45,7 +45,8 @@ Die Dendriten leiten Signale weiter an das **Soma** (oder _Perikaryon_ [vgl. RK1
 <sup>[14]</sup> das menschliche Gehirn besitzt mindestens $10^11$ Neuronen [vgl. KSJ+13, S. 175, Abs. 2]<br />
 <sup>[14.1]</sup> [Eil19, S. 58, "Polarisierung"] nennt für die "Dendritenlänge kortikaler Pyramidenzellen" eine Länge von 1 cm <br />
 <sup>[15]</sup> ein menschliches Haar hat einen Durchmesser von ca. 70 μm, kleine Bakterien bis zu 20 μm [WEmb] <br />
-<sup>[15.1]</sup> hier: der Austausch von Ionen zwischen dem intra- und extrazellulären Raum durch Kanäle und Pumpen. Als **Ion** bezeichnet man ein elektrisch geladenes Atom oder Molekül.<br />
+<sup>[15.1]</sup> Membrandicke ca. 5 nm ([BLS19], Seite 66, letzter Absatz linke Spalte) <br />
+<sup>[15.2]</sup> hier: der Austausch von Ionen zwischen dem intra- und extrazellulären Raum durch Kanäle und Pumpen. Als **Ion** bezeichnet man ein elektrisch geladenes Atom oder Molekül.<br />
 <sup>[16]</sup> [BCP18, p.43, Abs. 1] führt das Axon metaphorisch mit einer Telefonleitung zusammen <br />
 <sup>[17]</sup> Depolarisation bezeichnet die Verringerung des Membranpotenzials  [vgl. RHN+16, S. 812 "Neurotransmitter und ihre Rezeptoren"], bspw. von einem negativen Wert auf einen weniger negativen oder gar einen positiven Wert<br />
 <sup>[18]</sup> der formale Begriff für das Signal, das zu den Axonterminalen gesendet wird <br />
@@ -73,9 +74,8 @@ Wenn auf das Neuron kein _postsynaptisches Potenzial_ (**PSP**) wirkt und das Ne
 ![](./img/membranladung.png)
 Abbildung 1.2: Die Verteilung von Ionen im Zytosol und der EZF. Aufgrund der elektrostatischen Anziehungskraft ziehen sich Anionen und Kationen<sup>[23.1]</sup> in der Nähe der Membran gegenseitig an, es kommt zu einer negativen Spannung in Membrannähe (zwischen -70 mV -90 mV in Ruhe).
 
-In Ruhe ist die Leitfähigkeit der Membran für $Na^{+}$ gering, für $K^{+}$ hingegen hoch (vgl. [SD07] S.44 f.). $K^{+}$-Ionen folgen ihrem Konzentrationsgradienten und gelangen über die Ionenkanäle in den EZF, bis die Potenzialdifferenz entlang der Neuronenmembran ausströmende $K^{+}$-Ionen zurückhält: Wenn diese Differenz den Konzentrationsgradienten für $K^{+}$ kompensiert, erhält man das **Gleichgewichtspotenzial** (vgl. [BCP18], S.72 f., [SD07], S. 44 f.).
-
-Das Membranpotenzial nähert sich dem Gleichgewichtspotenzial des Ions an, für den die Membran besonders permeabel ist (vgl. [KSJ+13], S. 145, Ende) <sup>**(S1.1)**</sup>. Überprüfen lässt sich das für individuelle Ionen mit der Nernst-Gleichung<sup>[24]</sup> (vgl. [BLS19], S. 67, "Nernst-Gleichung"):
+In Ruhe ist die Leitfähigkeit der Membran für $Na^{+}$ gering, für $K^{+}$ hingegen hoch (vgl. [SD07] S.44 f.). $K^{+}$-Ionen folgen ihrem Konzentrationsgradienten<sup>[19.2]</sup> und gelangen über die Ionenkanäle in den EZF, bis die Potenzialdifferenz entlang der Neuronenmembran ausströmende $K^{+}$-Ionen zurückhält: Wenn diese Differenz den Konzentrationsgradienten für $K^{+}$ kompensiert, erhält man das **Gleichgewichtspotenzial**<sup>[19.3]</sup> (vgl. [BCP18], S.72 f., [SD07], S. 44 f.). Das Wert des Membranpotenzial nähert sich dem Wert des Gleichgewichtspotenzial desjenigen Ions an, für den die Membran besonders permeabel ist (vgl. [KSJ+13], S. 145, Ende) <sup>**(S1.1)**</sup>.<br />
+Das Gleichgewichtspotenzial lässt sich das für individuelle Ionen mit der Nernst-Gleichung<sup>[24]</sup> ermitteln (vgl. [BLS19], S. 67, "Nernst-Gleichung"):
 
 $E_{Ion} = 2,303\begin RT \\ \hline  zF\end log_{10} \begin [Ion]_{EZF} \\ \hline [Ion]_{IZF} \end$
 
@@ -86,7 +86,7 @@ Wobei (vgl. [BCP18], S. 74, Exkurs 3.2):
 | $E_{ion}$<sup>[25]</sup>          | Gleichgewichtspotenzial für das jeweilige Ion                                              | 
 | $R$  | Gaskonstante                                                                               | 
 | $T$ | absolute Temperatur                                                                        | 
-| $z$       | Ladung des Ions                                                                            | 
+| $z$       | Ladungszahl des Ions                                                                       | 
 | $F$       | Faraday-Konstante (elektrische Ladung eines Mols einfach geladener Ionen<sup>[24.1]</sup>) | 
 | $Ion_{EZF}$       | Ionenkonzentration außerhalb der Zelle                                                     |
 | $Ion_{IZF}$       | Ionenkonzentration innerhalb der Zelle                                                     | 
@@ -97,8 +97,10 @@ $E_K = 61,54 mV * log_{10} \begin [K^+]_{EZF} \\ \hline [K^+]_{IZF} \end$
 
 Mit den Werten aus Tabelle 1.1 ergibt sich somit $E_K = 61,54 mV * log_{10} \begin 1 \\ \hline 20 \end = -80 mV$
 
-Wie wir oben gesehen haben, liegt $V_r$ zwischen -70 mV und - 90mV. Wie können wir jetzt auf **(S1.1)** schließen, also dass das Ruhepotenzial durch die Membranpermeabilität von $K^{+}$ bestimmt wird, wenn $V_r = -70 mV$, aber $E_K = -80 mV$, und die Membran auch noch für andere Ionen wie bspw. $Na^{+}$ selektiv permeabel ist? Wäre die Membran nur für $K^{+}$ permeable, so läge $V_r$ sicher bei $E_k$ (vgl. [SD07] S.32 Abs. 4).<br />
-Hierzu dient die Goldmangleichung, die zusätzlich für die Berechnung des Membranpotenzials $V_m$  die Permeabilität der MEmbran für einzelne Ionen berücksichtigt. Allerdings ist zu beachten, "dass die Permeabilitäten in komplizierter Weise von der Membranspannung und den Ionenkonzentrationen [...] abhängen und sich meist nur näherungsweise bestimmen lassen." ([BLS19], S.67, Goldman Gleichung).
+Wie wir oben gesehen haben, liegt $V_r$ zwischen -70 mV und - 90mV. Wie können wir jetzt auf **(S1.1)** schließen, also dass das Ruhepotenzial durch die Membranpermeabilität von $K^{+}$ bestimmt wird, wenn $V_r = -70 mV$, aber $E_K = -80 mV$, und die Membran auch noch für andere Ionen wie bspw. $Na^{+}$ selektiv permeabel ist (vgl. [BCP18], S. 77 f. sowie [SD07] S. 44 "Warum ist $E_m$ weniger negativ als $E_K$?")? Wäre die Membran nur für $K^{+}$ permeable, so läge $V_r$ sicher bei $E_k$ (vgl. [SD07] S.32 Abs. 4).<br />
+Wir wir gesehen haben, besitzt die Membran Ionenkanäle und Ionenpumpen. Ionenkanäle unterstützen einen _passiven Transport_ der Ionen zwischen EZF und IZF entlang des Konzentrationsgefälles (vgl. [BLS19] S.30, "Aktive und passive Transportmechanismen"), während Ionenpumpen, die entgegen des Konzentrationsgefälles arbeiten, _aktiven transportieren_<sup>[26]</sup>. Die Ionenpumpen sind für die Ionenkonzentrationsgradienten verantwortlich (vgl. [BCP18], S.76 F.) und es wird ein nicht unwesentlicher Teil von Energie zur Aufrechterhaltung dieser Gradienten verbraucht<sup>[27]</sup>.
+Um $V_r$ zu berechnen müssen also die Ionen mitberücksichtigt werden, für die die Membran durchlässig ist. <br />
+Dies erfolgt durch die **Goldmangleichung**<sup>[28]</sup>, die zusätzlich für die Berechnung des Membranpotenzials $V_m$  die Permeabilität der MEmbran für einzelne Ionen berücksichtigt. Allerdings ist zu beachten, "dass die Permeabilitäten in komplizierter Weise von der Membranspannung und den Ionenkonzentrationen [...] abhängen und sich meist nur näherungsweise bestimmen lassen." ([BLS19], S.67, Goldman Gleichung).
 [SD07] nutzt für die Bestimmung von $V_{m} die fraktionelle Leitfähgkeiten der involvierten Ionen und rechnet
 
 $E_{m} = E_{k} * f_{K} + E_{Na} * f_{Na} + E_{Cl} * f_{cl}$
@@ -110,18 +112,21 @@ $E_{m} = E_{k} * f_{K} + E_{Na} * f_{Na} + E_{Cl} * f_{cl}$
 
 -------------------
 <sup>[19]</sup> vgl. **Mempranpotenzial**: "die Spannung an der Nervenzellmembran zu einem beliebigen Zeitpunkt" [BCP18, S.70, "Ionen als Grundlage des Ruhepotenzials"]; **Ruhepotenzial**: "the electrical potential across the membrane in the absence of signaling" [KSJ+13, S. 126] <br />
-<sup>[19.1]</sup> 
+<sup>[19.2]</sup> unter der Diffusion ("_diffundere_" (lat.): zerstreuen, ausbreiten) von Molekülen versteht man den Prozess, wenn Moleküle entlang eines Konzentrationsgradienten (auch: Konzentrationsgefälles) ein Ausgleich der Konzentrationsunterschiede anstreben. Moleküle in hoher Konzentration diffundieren dann in die Bereiche mit niedriger Konzentration: In den hier betrachteten Beispielen diffundieren bspw. $K^+$-Ionen, bis das Gleichgewichtspotenzial erreicht ist<br />
+<sup>[19.3]</sup> "the equilibrium potential of any ion that is present on both sides of a membrane permeable to that ion " ([KSJ+13], S.130, letzter Abs., linke Spalte)
 <sup>[20]</sup> [BCP18, S.70, "Ionen als Grundlage des Ruhepotenzials"] gibt -65 mV an (1 mV = 0,001 V). Die Autoren gehen hierbei von einer 40-mal so hohen Ionenpermeabilität für $K^{+}$ gegenüber $Na^{+}$ aus berücksichtigen Cl- nicht in der Goldman-Gleichung (vgl. [BCP18], S. 74, Exkurs 3.2). <br />
-<sup>[20.1]</sup>Das Membranpotenzial $V_m$ ergibt sich als die Differenz der Spannungen $V_{IZF}$ und $V_{EZF}$, wobei $V_{IZF}$ die Spannung im IZF und $V_{EZF}$ die Spannung im EZF ist. $V_r$ ist dann gleich zu $V_{IZF}$, da nach Konvention<sup>[21]</sup> die Spannung im EZF als $0$ definiert ist (vgl. [KSJ+13] S. 127, rechte Spalte, 2. Abs.).
+<sup>[20.1]</sup>Das Membranpotenzial $V_m$ ergibt sich als die Differenz der Spannungen $V_{IZF}$ und $V_{EZF}$, wobei $V_{IZF}$ die Spannung im IZF und $V_{EZF}$ die Spannung im EZF ist. $V_r$ ist dann gleich zu $V_{IZF}$, da nach Konvention<sup>[21]</sup> die Spannung im EZF als $0$ definiert ist (vgl. [KSJ+13] S. 127, rechte Spalte, 2. Abs.).<br />
 <sup>[21]</sup> vorausgesetzt, die Zelle ist in Ruhe <br />
 <sup>[21.1]</sup> "_permeare_" (lat.) durchwandern <br />
 <sup>[22]</sup> Kaliumkanäle sind durchlässig für $K^{+}$ Ionen, Natriumkanäle durchlässig für $Na^{+}$ Ionen usw. <br />
 <sup>[23]</sup> Adenosintriphosphasen - Enzyme, die ATP in ADP und Phosphat aufspalten [QUELLE] <br />
 <sup>[23.1]</sup>Anion: negativ geladenes Ion; Kation: positiv geladenes Ion  <br />
 <sup>[24]</sup> Walther Nernst (1864 - 1941), dt. Physiker und Chemiker, gehört zu den Begründern der physikalischen Chemie [Wern] <br />
-<sup>[24.1]</sup>  1 Mol = $6.02214076e10^{23}$ Teilchen
+<sup>[24.1]</sup>  1 Mol = $6.02214076e10^{23}$ Teilchen<br />
 <sup>[25]</sup> $E$ steht für _Equilibrium_: "Gleichgewicht" (lat. aequus "gleich", libra lat. "Waage/Gewicht")<br />
-
+<sup>[26]</sup> hierfür wird metabolische Energie verbraucht (vgl [BLS19], S. 31, "Primär aktiver Transport")<br />
+<sup>[27]</sup> Die Natrium-Kalium-Pumpe verbraucht laut [BCP18], S. 76, 1. Abs., etwa 70 % der ATP-Menge (siehe auch <sup>[23]</sup>), die das Gehirn benötigt.<br />
+<sup>[28]</sup> auch: **Goldman-Hodgkin-Katz-Gleichung** (GHK-Gleichung) nach David Eliot Goldman (1910–1998), Alan Lloyd Hodgkin(1914 - 1998) und Bernard Katz (1911 - 2003). Hodgkin erhielt 1963 zusammen mit Andrew Fielding Huxley (1917 - 2012) und John Carew Eccles (1903–1997) den Medizin-Nobelpreis für ihre Erforschungen der Ionen-Mechanismen, die bei der Erregung und Hemmung von Nervenzellmembranen beteiligt sind [DMW63]
 ---------------------
 
 ### Das Axon: Axonhügel, Axon  und Axonterminal
