@@ -21,6 +21,10 @@ Quotation style: IEEE
 
 - [KSJ+13]  E. R. Kandel, J. H. Schwartz, T. M. Jessell, S. A. Siegelbaum und A. J. Hudspeth eds. _Principles of Neural Science_, ed. Fifth Edition. New York: McGraw-Hill Education, 2013.
 
+- [DMW63] P. Glees, „Nobelpreis für Physiologie und Medizin 1963“, Deutsche medizinische Wochenschrift, Bd. 88, Nr. 52, S. 2523–2526, Dez. 1963, https://doi.org/10.1055/s-0028-1112385.
+
+-
+ - 
 
 #### Sonstige Quellen
  - [Wemb] „Größenordnungen in der Mikrowelt“. https://homepage.univie.ac.at/franz.embacher/groessenordnungenNano.html (zugegriffen 20. Juli 2023).
