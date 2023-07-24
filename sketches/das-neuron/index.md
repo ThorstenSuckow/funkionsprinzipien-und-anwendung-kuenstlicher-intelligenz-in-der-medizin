@@ -1,10 +1,10 @@
 
 
 # Das Neuron
-
+ 
 ## Einleitung 
-Um ein Verständnis für das Modell der im weiteren Verlauf dieser Arbeit beschriebenen _künstlichen neuronalen Netze_ zu erlangen, wollen wir uns zunächst mit dem menschlichen Neuron als "strukturelle und funktionelle Einheit des Nervensystems" [SD07, S.42] beschäftigen.<br /> 
-Von Interesse ist für uns die Funktionsweise dieser Zellen im Kontext von Informationsverarbeitung und -weiterleitung, weshalb wir die molekulare und die zelluläre Ebene des einzelnen Neurons betrachten wollen, sowie den Verbund von Neuronen, also dem neuronalen Netz [vgl. Lyr17, S. 2, Abs. 5]. 
+Um ein Verständnis für das Modell der im weiteren Verlauf dieser Arbeit beschriebenen _künstlichen neuronalen Netze_ zu erlangen, wollen wir uns zunächst mit dem menschlichen Neuron als "strukturelle und funktionelle Einheit des Nervensystems" ([SD07], S.42) beschäftigen.<br /> 
+Von Interesse ist für uns die Funktionsweise dieser Zellen im Kontext von Informationsverarbeitung und -weiterleitung, weshalb wir die molekulare und die zelluläre Ebene des einzelnen Neurons betrachten wollen, sowie den Verbund von Neuronen, also dem neuronalen Netz (vgl. [Lyr17], S. 2, Abs. 5). 
 
 Hierzu skizzieren wir zunächst den Aufbau eines Neurons und verschaffen uns im Anschluss einen Überblick über die komplexen biochemischen Vorgänge, die nötig sind, damit Neuronen Signale senden und empfangen können. Wir werden sehen, dass Änderungen der Zellmembran-Eigenschaften (hier: das _Membranpotenzial_) eines Neurons mitverantwortlich sind für die _Exozytose_<sup>[1]</sup> von hemmenden oder erregenden Neurotransmittern in den synaptischen Spalt (s. Abb. X); Rezeptoren postsynaptischer Zellen verarbeiten diese Substanzen dann gemäß ihren _inhibitorischen_<sup>[2]</sup> oder _exzitatorischen_<sup>[3]</sup> Eigenschaften zu inhibitorischen oder exzitatorischen Signalen. 
 
@@ -98,16 +98,16 @@ $E_K = 61,54 mV * log_{10} \begin [K^+]_{EZF} \\ \hline [K^+]_{IZF} \end$
 Mit den Werten aus Tabelle 1.1 ergibt sich somit $E_K = 61,54 mV * log_{10} \begin 1 \\ \hline 20 \end = -80 mV$
 
 Wie wir oben gesehen haben, liegt $V_r$ zwischen -70 mV und - 90mV. Wie können wir jetzt auf **(S1.1)** schließen, also dass das Ruhepotenzial durch die Membranpermeabilität von $K^{+}$ bestimmt wird, wenn $V_r = -70 mV$, aber $E_K = -80 mV$, und die Membran auch noch für andere Ionen wie bspw. $Na^{+}$ selektiv permeabel ist (vgl. [BCP18], S. 77 f. sowie [SD07] S. 44 "Warum ist $E_m$ weniger negativ als $E_K$?")? Wäre die Membran nur für $K^{+}$ permeable, so läge $V_r$ sicher bei $E_k$ (vgl. [SD07] S.32 Abs. 4).<br />
-Wir wir gesehen haben, besitzt die Membran Ionenkanäle und Ionenpumpen. Ionenkanäle unterstützen einen _passiven Transport_ der Ionen zwischen EZF und IZF entlang des Konzentrationsgefälles (vgl. [BLS19] S.30, "Aktive und passive Transportmechanismen"), während Ionenpumpen, die entgegen des Konzentrationsgefälles arbeiten, _aktiv transportieren_<sup>[26]</sup>. Die Ionenpumpen sind für die Ionenkonzentrationsgradienten verantwortlich (vgl. [BCP18], S.76 F.) und es wird ein nicht unwesentlicher Teil von Energie zur Aufrechterhaltung dieser Gradienten verbraucht<sup>[27]</sup>.
-Um $V_r$ zu berechnen müssen also die Ionen mitberücksichtigt werden, für die die Membran durchlässig ist. <br />
-Dies erfolgt durch die **Goldmangleichung**<sup>[28]</sup>, die zusätzlich für die Berechnung des Membranpotenzials $V_m$  die Permeabilität der MEmbran für einzelne Ionen berücksichtigt. Allerdings ist zu beachten, "dass die Permeabilitäten in komplizierter Weise von der Membranspannung und den Ionenkonzentrationen [...] abhängen und sich meist nur näherungsweise bestimmen lassen." ([BLS19], S.67, Goldman Gleichung).
-[SD07] nutzt für die Bestimmung von $V_{m} die fraktionelle Leitfähgkeiten der involvierten Ionen und rechnet
+Ionenkanäle unterstützen einen _passiven Transport_ der Ionen zwischen EZF und IZF _entlang_ ihres Konzentrationsgefälles (vgl. [BLS19] S.30, "Aktive und passive Transportmechanismen"), während Ionenpumpen, die _entgegen_ des Konzentrationsgefälles arbeiten, _aktiv transportieren_<sup>[26]</sup>. Ionenpumpen sind für die Ionenkonzentrationsgradienten und deren Aufrechterhaltung verantwortlich (vgl. [BCP18], S.76 F.)<sup>[27]</sup>.
+Um $V_r$ zu berechnen müssen die Ionen mitberücksichtigt werden, für die die Membran durchlässig ist. Dies erfolgt durch die **Goldman-Gleichung**<sup>[28]</sup>, die zusätzlich für die Berechnung des Membranpotenzials $V_m$  die Permeabilität der Membran für einzelne Ionen berücksichtigt <sup>[29]</sup>:
 
-$E_{m} = E_{k} * f_{K} + E_{Na} * f_{Na} + E_{Cl} * f_{cl}$
+$V_{r} = \begin RT \\ \hline  F\end * ln \begin P_{Na} * [Na^+]_{EZF} + P_{K} * [K^+]_{EZF} + P_{Cl} * [Cl^-]_{IZF}   \\ \hline
+P_{Na} * [Na^+]_{IZF} + P_{K} * [K^+]_{IZF} + P_{Cl} * [Cl^-]_{EZF}
+\end$
 
-(vgl. [SD07] S. 32 Gl. 1.21)
-
-
+Wie man leicht sieht, beeinflusst eine hohe Permeabilität eines einzelnen Ions auch den Wert $V_m$, und man darf folgern: "[...] when permeability to one ion
+is exceptionally high, the Goldman equation reduces to the Nernst equation for that ion." ([KSJ+13], S. 135).<br />
+Zu beachten ist, "dass die Permeabilitäten in komplizierter Weise von der Membranspannung und den Ionenkonzentrationen [...] abhängen und sich meist nur näherungsweise bestimmen lassen." ([BLS19], S.67, Goldman Gleichung).
 
 
 -------------------
@@ -125,8 +125,10 @@ $E_{m} = E_{k} * f_{K} + E_{Na} * f_{Na} + E_{Cl} * f_{cl}$
 <sup>[24.1]</sup>  1 Mol = $6.02214076e10^{23}$ Teilchen<br />
 <sup>[25]</sup> $E$ steht für _Equilibrium_: "Gleichgewicht" (lat. aequus "gleich", libra lat. "Waage/Gewicht")<br />
 <sup>[26]</sup> hierfür wird metabolische Energie verbraucht (vgl [BLS19], S. 31, "Primär aktiver Transport")<br />
-<sup>[27]</sup> Die Natrium-Kalium-Pumpe verbraucht laut [BCP18], S. 76, 1. Abs., etwa 70 % der ATP-Menge (siehe auch <sup>[23]</sup>), die das Gehirn benötigt.<br />
+<sup>[27]</sup> es wird ein nicht unwesentlicher Teil von Energie zur Aufrechterhaltung dieser Gradienten verbraucht. Die Natrium-Kalium-Pumpe verbraucht laut [BCP18], S. 76, 1. Abs., etwa 70 % der ATP-Menge (siehe auch <sup>[23]</sup>), die das Gehirn benötigt.<br />
 <sup>[28]</sup> auch: **Goldman-Hodgkin-Katz-Gleichung** (GHK-Gleichung) nach David Eliot Goldman (1910–1998), Alan Lloyd Hodgkin(1914 - 1998) und Bernard Katz (1911 - 2003). Hodgkin erhielt 1963 zusammen mit Andrew Fielding Huxley (1917 - 2012) und John Carew Eccles (1903–1997) den Medizin-Nobelpreis für ihre Erforschungen der Ionen-Mechanismen, die bei der Erregung und Hemmung von Nervenzellmembranen beteiligt sind [DMW63]
+<sup>[29]</sup> [SD07] nutzt für die Bestimmung von $V_{m} die fraktionelle Leitfähgkeit der involvierten Ionen und rechnet
+$V_{r} = E_{k} * f_{K} + E_{Na} * f_{Na} + E_{Cl} * f_{cl}$ (vgl. [SD07] S. 32 Gl. 1.21)
 ---------------------
 
 ### Das Axon: Axonhügel, Axon  und Axonterminal
@@ -169,22 +171,22 @@ Das RuhePotenzial wird später bei der Betrachtung des AktionsPotenzials eine be
 ### SchwellenPotenzial und AktionsPotenzial
 
 > Der Aufstrich des Aktionspotenzials lässt sich durch einen Natriumeinstrom erklären, die
-fallende Phase durch einen Kaliumausstrom. Das Aktionspotenzial ist also einfach auf die
-Bewegung von Ionen durch Kanäle zurückzuführen, die durch Veränderungen des Membranpotenzials gesteuert werden. [BCP18, p.96]
+> fallende Phase durch einen Kaliumausstrom. Das Aktionspotenzial ist also einfach auf die
+> Bewegung von Ionen durch Kanäle zurückzuführen, die durch Veränderungen des Membranpotenzials gesteuert werden. [BCP18, p.96]
 
 > Schwellenwert. Der Schwellenwert ist das Membranpotenzial, bei dem sich genügend
-spannungsabhängige Natriumkanäle öffnen, sodass die relative Ionenpermeabilität der
-Membran für Natrium- größer als für Kaliumionen ist [BCP18, p.103] 
+> spannungsabhängige Natriumkanäle öffnen, sodass die relative Ionenpermeabilität der
+> Membran für Natrium- größer als für Kaliumionen ist [BCP18, p.103] 
 
 > Aufstrich. [Depolarisationsphase SD07, p.46] Wenn die Innenseite der Membran ein negatives elektrisches Potenzial aufweist, gibt es eine starke elektrochemische Triebkraft für NaC-Ionen. Deshalb strömen
-NaC-Ionen durch die geöffneten Natriumkanäle schnell in die Zelle und verursachen
-dort eine rasche Depolarisation.  [BCP18, p.103]
+> NaC-Ionen durch die geöffneten Natriumkanäle schnell in die Zelle und verursachen
+> dort eine rasche Depolarisation.  [BCP18, p.103]
 
 > Außerdem sorgt die $Na^{+}$
--$K^{+}$
--ATPase
+> -$K^{+}$
+> -ATPase
 ( S. 26) dauernd für die Wiederherstellung
-der ursprünglichen Ionenkonzentrationen
+> der ursprünglichen Ionenkonzentrationen
 ( S. 46) [SD07, p.46]
 
  
@@ -207,10 +209,10 @@ Die Änderung des MembranPotenzials geschieht, wenn die Membran ihre Durchlässi
 ## Synapsen
 
 > 1011 neurons. Thus 1014
-to 1015 synaptic connections are formed in the brain. There are 1,000-fold
-more synapses in one brain than the 100 billion stars in our galaxy! Fortunately,
-only a few basic mechanisms underlie synaptic transmission at these many
-connections. [KSJ+13, S. 175]
+> to 1015 synaptic connections are formed in the brain. There are 1,000-fold
+> more synapses in one brain than the 100 billion stars in our galaxy! Fortunately,
+> only a few basic mechanisms underlie synaptic transmission at these many
+> connections. [KSJ+13, S. 175]
 
 ### Präsynaptische Endigung
 
@@ -225,15 +227,15 @@ connections. [KSJ+13, S. 175]
 ### Neurotransmitter
 
 > Sie sollten sich jedenfalls darüber im Klaren sein, dass derselbe
-Neurotransmitter verschiedene postsynaptische Aktivitäten auslösen kann, abhängig davon, an welche Rezeptoren er bindet. [BCP18, S. 148, Abs. 2]
+> Neurotransmitter verschiedene postsynaptische Aktivitäten auslösen kann, abhängig davon, an welche Rezeptoren er bindet. [BCP18, S. 148, Abs. 2]
 
 #### Erregende TRansmitter 
 
 #### Hemmende TRansmitter
 
 > Neuronen als hilfreich erwiesen. Inhibitorische Synapsen sind nicht nur über die Dendriten verteilt, sondern kommen bei vielen Neuronen auch gehäuft auf dem Soma und dem
-Axonhügel vor. Dort sind sie in einer besonders wirksamen Position, um die Aktivität des
-postsynaptischen Neurons zu beeinflussen [BCP18, p.148]
+> Axonhügel vor. Dort sind sie in einer besonders wirksamen Position, um die Aktivität des
+> postsynaptischen Neurons zu beeinflussen [BCP18, p.148]
 
 ### Transmitterfreisetzeung
 
@@ -280,25 +282,25 @@ Als RuhemembranPotenzial oder auch knapp RuhePotenzial (abgekürzt RMP bzw. RP) 
 
 ## Das Aktionspotenzial
 > lan Hodgkin und Andrew Huxley um 1950 durchführten. Die Spannungsklemme
-ermöglichte es Hodgkin und Huxley, das Membranpotenzial eines Axons bei jedem beliebigen Wert abgreifen zu können. So konnten sie die Ströme messen, die durch die
-Membran flossen, und auf die Veränderungen der Membranleitfähigkeit rückschließen,
-die bei verschiedenen Membranpotenzialen auftraten. In einer ausgeklügelten Reihe von
-Experimenten konnten Hodgkin und Huxley zeigen, dass der Aufstrich des Aktionspotenzials tatsächlich von einem vorübergehenden Anstieg von gNa und einem Einstrom von
-NaC-Ionen herrührt und dass die fallende Phase mit einer Zunahme von gK und einem
-Ausstrom von KC-Ionen einhergeht. Ihre Ergebnisse wurden 1963 mit dem Nobelpreis
-gewürdigt []
+> ermöglichte es Hodgkin und Huxley, das Membranpotenzial eines Axons bei jedem beliebigen Wert abgreifen zu können. So konnten sie die Ströme messen, die durch die
+> Membran flossen, und auf die Veränderungen der Membranleitfähigkeit rückschließen,
+> die bei verschiedenen Membranpotenzialen auftraten. In einer ausgeklügelten Reihe von
+> Experimenten konnten Hodgkin und Huxley zeigen, dass der Aufstrich des Aktionspotenzials tatsächlich von einem vorübergehenden Anstieg von gNa und einem Einstrom von
+> NaC-Ionen herrührt und dass die fallende Phase mit einer Zunahme von gK und einem
+> Ausstrom von KC-Ionen einhergeht. Ihre Ergebnisse wurden 1963 mit dem Nobelpreis
+> gewürdigt []
 
 > Das Aktionspotenzial ist das im Axon weitergeleitete Signal und löst am Muskel die Kontraktion aus.  [SD07, p.46]
 
->  Ursache der Erregung kann z. B. die Öffnung postsynaptischer Kationenkanäle durch Neurotransmitter (S. 50 ff.) oder eine aus der Umgebung weitergeleitete (elektrotonische) Erregung sein (S. 48).
+> Ursache der Erregung kann z. B. die Öffnung postsynaptischer Kationenkanäle durch Neurotransmitter (S. 50 ff.) oder eine aus der Umgebung weitergeleitete (elektrotonische) Erregung sein (S. 48).
 > Nähert sich das Em während der Erregung einem kritischen Wert, dem Schwellenpotenzial (A1), so werden (sog.
-schnelle) potenzialgesteuerte $Na^{+}$ -Kanäle aktiviert (B4 und B1⇒B2), d. h. die $Na^{+}$-Leitfähigkeit gNa (S. 32) steigt an (A2) und $Na^{+}$ strömt ein. Wird das Schwellenpotenzial nicht  erreicht, so bleibt es bei dieser „lokalen Antwort“  [SD07, p.46]
+> schnelle) potenzialgesteuerte $Na^{+}$ -Kanäle aktiviert (B4 und B1⇒B2), d. h. die $Na^{+}$-Leitfähigkeit gNa (S. 32) steigt an (A2) und $Na^{+}$ strömt ein. Wird das Schwellenpotenzial nicht erreicht, so bleibt es bei dieser „lokalen Antwort“  [SD07, p.46]
 
 > Überschreitet Em das Schwellenpotenzial, so startet ein Aktionspotenzial (AP, A1), das normalerweise als „Alles-oder-Nichts-Antwort“ abläuft, d. h. in der für diese Zellart typischen Weise ohne Rücksicht darauf, wie groß
-der auslösende Reiz war [SD07, p.46]
+> der auslösende Reiz war [SD07, p.46]
 
 > Die Entladungsrate nimmt zwar mit der Stärke des depolarisierenden Stroms zu, aber die
-Frequenz, mit der ein Neuron Aktionspotenziale erzeugen kann, ist begrenzt. Die maximale Entladungsrate liegt bei etwa 1000Hz. [BCP18, p.98]
+> Frequenz, mit der ein Neuron Aktionspotenziale erzeugen kann, ist begrenzt. Die maximale Entladungsrate liegt bei etwa 1000Hz. [BCP18, p.98]
 
 ## Synapse
 > Die Synapse (A3) ist die Kontaktstelle des Axons einer Nervenzelle mit den Effektoren oder einem anderen Neuron (s. a. S. 50 ff.). [SD07, p.42]
@@ -316,7 +318,7 @@ Frequenz, mit der ein Neuron Aktionspotenziale erzeugen kann, ist begrenzt. Die 
 
 ## Neurotransmitter 
 > Synapsen werden zwar nach ihrem Haupttransmitter benannt, jedoch sind präsynaptisch in der Regel mehrere Transmitter (Kotransmitter) vorhanden, die die Synapsenfunktion zusätzlich beeinflussen. Entsprechend den in ihnen hauptsächlich wirksamen Transmittern sind unterschiedliche funktionelle neuronale Systeme bekannt. Diese Neurotransmittersysteme (s. ▶Tab. 6.20) üben inhibitorische, exzitatorische und/oder neuromodulatorische Funktionen aus. Sie besitzen weitverzweigte
-Projektionen in unterschiedlichen Abschnitten von Gehirn und Rückenmark. Störungen von Neurotransmittersystemen sind bei vielen neurologischen Krankheitsbildern vorhanden.Klinisch bedeutsam ist dabei u. a. die Möglichkeit, Transmittersysteme pharmakologisch zu beeinflussen. [ROH17, p.134]
+> Projektionen in unterschiedlichen Abschnitten von Gehirn und Rückenmark. Störungen von Neurotransmittersystemen sind bei vielen neurologischen Krankheitsbildern vorhanden.Klinisch bedeutsam ist dabei u. a. die Möglichkeit, Transmittersysteme pharmakologisch zu beeinflussen. [ROH17, p.134]
 
 > Die werden innerhalb von Neuronen synthetisiert, sind präsynaptisch in erhöhter Konzentration vorhanden, bewirken (endogen freigesetzt oder exogen zugeführt) einen postsynaptischen Effekt und werden durch ein auf sie abgestimmtes System im synaptischen Spalt inaktiviert. Die von einem Neurotransmitter entfaltete Wirkung ist eine Funktion des postsynaptischen Rezeptors. Deshalb kann ein Neurotransmitter abhängig vom jeweiligen (postsynaptischen) Zellrezeptor inhibitorische und/oder exzitatorische Reaktionen hervorrufen. [ROH17, p.134]
 
@@ -324,18 +326,18 @@ Projektionen in unterschiedlichen Abschnitten von Gehirn und Rückenmark. Störu
 > Der Kationeneinstrom führt zur Depolarisation: exzitatorisches postsynaptisches Potenzial (EPSP) (max. ca. 20 mV; B). [SD07, p.52]
 
 > Ein einzelnes EPSP vermag gewöhnlich kein axonales AP (APA) auszulösen, sondern es bedarf dazu vieler gleichzeitig an den Dendriten ausgelöster lokaler Depolarisationen, die über das Soma elektrotonisch weitergeleitet (S. 48) und am Axonhügel aufsummiert werden: Räumliche Summation (B). Treffen die Einzelreize zeitlich getrennt (innerhalb von ca.
-50 ms) ein, so ist die vorausgegangene Depolarisation noch nicht abgeklungen und die nächste propft sich darauf auf, so dass das
-Schwellenpotenzial leichter erreicht wird, d. h. die Erregbarkeit des postsynaptischen Neurons wird durch diese zeitliche Summation erhöht (C) [SD07, p. 52]
+> 50 ms) ein, so ist die vorausgegangene Depolarisation noch nicht abgeklungen und die nächste propft sich darauf auf, so dass das
+> Schwellenpotenzial leichter erreicht wird, d. h. die Erregbarkeit des postsynaptischen Neurons wird durch diese zeitliche Summation erhöht (C) [SD07, p. 52]
 
 ### Hemmende Transmitter
 > Hemmende Transmitter sind z. B. Glycin und GABA sowie Acetylcholin (M2- und M3- Rezeptor an M-cholinergen Synapsen;  S. 82). Sie erhöhen an der subsynaptische Membran nur die Leitfähigkeit (g) für $K^{+}$ (z. B. der metabotrope GABAB-Rezeptor) oder für Cl–
 (z. B. die ionotropen Glycin- und GABAA-Rezeptoren;  F). Die Membran wird dadurch meist etwas hyperpolarisiert, bei erhöhter gK
-deswegen, weil sich das Em dem EK nähert ( S. 44). Dieses inhibitorische postsynaptische Potenzial (IPSP) (max. ca. 4 mV;  D) wirkt aber weniger durch seine – der Depolarisation des EPSP entgegenlaufende – Hyperpolarisation (das IPSP kann sogar selbst leicht depolarisierend sein), sondern dadurch, dass die während des IPSPs erhöhte Membranleitfähigkeit die elektrotonischen Ströme der EPSPs kurzschließt (gK oder gCl hoch!). Da sowohl EK als auch ECl nahe dem Ruhepotenzial liegen
-( S. 44), wird dieses stabilisiert, d. h. die EPSPs werden durch hohe $K^{+}$ - und Cl–-Kurzschluss-Ströme unwirksam gemacht. Die Depolarisation der EPSPs ist daher kleiner und   die Erregung des postsynaptischen Neurons somit gehemmt [SD07, p.52]
+> deswegen, weil sich das Em dem EK nähert ( S. 44). Dieses inhibitorische postsynaptische Potenzial (IPSP) (max. ca. 4 mV;  D) wirkt aber weniger durch seine – der Depolarisation des EPSP entgegenlaufende – Hyperpolarisation (das IPSP kann sogar selbst leicht depolarisierend sein), sondern dadurch, dass die während des IPSPs erhöhte Membranleitfähigkeit die elektrotonischen Ströme der EPSPs kurzschließt (gK oder gCl hoch!). Da sowohl EK als auch ECl nahe dem Ruhepotenzial liegen
+( S. 44), wird dieses stabilisiert, d. h. die EPSPs werden durch hohe $K^{+}$ - und Cl–-Kurzschluss-Ströme unwirksam gemacht. Die Depolarisation der EPSPs ist daher kleiner und die Erregung des postsynaptischen Neurons somit gehemmt [SD07, p.52]
 
 ### Transmitterfreisetzung
 > Die Transmitterfreisetzung (A1) erfolgt durch regulierte Exozytose sog. synaptischer Vesikel. Jedes davon enthält ein sog. TransmitterQuantum; im Falle der motorischen Endplatte (S. 56) sind dies ca. 7000 Moleküle Acetylcholin. Ein Teil der Vesikel ist bereits an der Membran angedockt („aktive Zone“) und steht zur Exozytose ihres Inhalts bereit. Signal für
-die Freisetzung ist ein eintreffendes AP (A1,2), und je höher die AP-Frequenz im Axon ist, desto mehr Vesikel setzen ihren Inhalt frei. [SD07, p.50]
+> die Freisetzung ist ein eintreffendes AP (A1,2), und je höher die AP-Frequenz im Axon ist, desto mehr Vesikel setzen ihren Inhalt frei. [SD07, p.50]
 
 
 
