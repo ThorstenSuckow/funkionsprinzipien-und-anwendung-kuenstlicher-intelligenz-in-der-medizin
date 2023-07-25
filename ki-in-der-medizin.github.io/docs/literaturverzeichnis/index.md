@@ -27,3 +27,22 @@ Quotation style: IEEE
 - **[KSJ+13]**  E. R. Kandel, J. H. Schwartz, T. M. Jessell, S. A. Siegelbaum und A. J. Hudspeth eds. _Principles of Neural Science_, ed. Fifth Edition. New York: McGraw-Hill Education, 2013.
 
 - **[DMW63]** P. Glees, „Nobelpreis für Physiologie und Medizin 1963“, Deutsche medizinische Wochenschrift, Bd. 88, Nr. 52, S. 2523–2526, Dez. 1963, https://doi.org/10.1055/s-0028-1112385.
+
+- **[Ber02]** J. Bernstein, „Untersuchungen zur Thermodynamik der bioelektrischen Ströme“, Archiv für die gesamte Physiologie des Menschen und der Tiere, Bd. 92, Nr. 10, S. 521–562, Nov. 1902, doi: 10.1007/BF01790181.
+
+- **[Ber12]** J. Bernstein, „Die Membrantheorie“, in _Elektrobiologie: Die Lehre von den Elektrischen Vorgängen im Organismus auf Moderner Grundlage Dargestellt_, Wiesbaden: Vieweg+Teubner Verlag, 1912, S. 87–107. https://10.1007/978-3-663-01627-4_5.
+
+- **[Sey06]** E.-A. Seyfarth, „Julius Bernstein (1839–1917): pioneer neurobiologist and biophysicist“, _Biological Cybernetics_, Bd. 94, Nr. 1, S. 2–8, Jan. 2006, https://10.1007/s00422-005-0031-y.
+
+- **[Ber68]** J. Bernstein, „Ueber den zeitlichen Verlauf der negativen Schwankung des Nervenstroms“, _Archiv für die gesamte Physiologie des Menschen und der Tiere_, Bd. 1, Nr. 1, S. 173–207, Dez. 1868, https://10.1007/BF01640316.
+
+- **[Sch83]** S. M. Schuetze, „The discovery of the action potential“, _Trends in Neurosciences_, Bd. 6, S. 164–168, Jan. 1983, https://10.1016/0166-2236(83)90078-4.
+
+-----------
+
+
+
+
+
+
+- **[HH52]** A. L. Hodgkin und A. F. Huxley, „A quantitative description of membrane current and its application to conduction and excitation in nerve“, _The Journal of Physiology_, Bd. 117, Nr. 4, S. 500–544, Aug. 1952, https://10.1113/jphysiol.1952.sp004764.
