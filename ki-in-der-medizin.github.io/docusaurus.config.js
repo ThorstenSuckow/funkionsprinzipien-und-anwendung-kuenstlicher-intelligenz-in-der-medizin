@@ -109,6 +109,7 @@ const config = {
         respectPrefersColorScheme: false,
       },
       navbar: {
+        hideOnScroll: true,
         logo: {
           alt: 'Home',
           src: 'img/home.svg',
