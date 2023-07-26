@@ -4,3 +4,6 @@
 - räumliche-zeitliche-summation-erreger.png[SD07, p.53]
 - einfluss-ipsp.png [SD07, p.54]
 - membranladung.png [BCP18], S.72
+- negative-variation.png [Ber68, Fig. D] 
+- natriumkanal [BCP18, S 101]
+- hh-aktionspotenzial [HH52, S, 530]
