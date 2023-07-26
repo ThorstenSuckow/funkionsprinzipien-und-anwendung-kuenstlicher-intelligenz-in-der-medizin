@@ -59,12 +59,18 @@ Die Dendriten leiten Signale weiter an das **Soma** (oder _Perikaryon_ <R>RK18, 
 
 ## 1.3 Membranpotenziale des Neurons
 
+### 1.3.1 Einleitung
+
 Im Jahr 1912 veröffentlichte der deutsche Physiologe Julius Bernstein (1839-1917) Erkenntnisse seiner elektrophysiologischen Studien in dem Buch "Elektrobiologie - Die Lehre von den elektrischen Vorgängen im Organismus auf moderner Grundlage dargestellt". In dem Kapitel "Membrantheorie" <R>Ber12, S. 87</R> greift er das Postulat  seiner Arbeit "Untersuchungen zur Thermodynamik der bioelektrischen Ströme" <R>Ber02</R> auf; bereits 1902 von ihm veröffentlicht, lieferte die Theorie die erste plausible physikalisch-chemische Erklärung bioelektrischer Phänomene <R>Sey06, S 5. "4 Membrane Theory (1902)"</R>: In Zellen befindet sich eine elektrolytische Flüssigkeit, die von einer für bestimmte Ionen permeablen Membran umgeben ist, und diese Membran besitzt eine Potenzialdifferenz <R>Ber12, S. 92 f.</R>.
 
 > "Denken wir uns, dass diese Elektrolyte aus dem Querschnitt der Fibrillen ungehindert in die umgebende Flüssigkeit diffundieren, wahrend sie am Längsschnitt
-  durch die lebende Sarkoplasmahaut daran gehindert werden, well sie für ein Ion derselben, z. B. für das Anion ($PO^-_4$ u. s. w.), mehr oder weniger impermeabel ist, so entstünde auf der Oberfläche der Fibrille eine elektrische Doppelschicht, welche nach innen negative, nach aussen positive Spannung besitzen würde."" <R>Ber02, S. 542</R>
+  durch die lebende Sarkoplasmahaut daran gehindert werden, well sie für ein Ion derselben, z. B. für das Anion ($PO^-_4$ u. s. w.), mehr oder weniger impermeabel ist, so entstünde auf der Oberfläche der Fibrille eine elektrische Doppelschicht, welche nach innen negative, nach aussen positive Spannung besitzen würde." <R>Ber02, S. 542</R>
 
-Mittlerweile haben zahlreiche Forschungen die Theorie bestätigt. Wir wissen heute, dass ein Neuron in Ruhe[^22] eine ungleiche Ionenverteilung zwischen der durch die Zellmembran getrennten intrazellulären Flüssigkeit (_IZF_: Zytosol) und der extrazellulären Flüssigkeit (EZF) aufweist. In der IZF befinden sich mehr positiv geladene Natrium-Ionen ($Na^+$), und im EZF mehr positiv geladene Kalium- und Calcium-Ionen ($Ka^+$ und $Ca^{2+}$) sowie mehr negativ geladene Chlorid-Ionen ($Cl^-$).
+In den darauffolgenden Jahren und Jahrzehnten haben zahlreiche Forschungen die Theorie bestätigt: Wir wissen heute, dass die ungleiche Ionenverteilung in der intrazellulären und extrazellulären Flüssigkeit zusammen mit der Permeabilität der Membran für die Entstehung eines Membranpontenzials verantwortlich ist. Im folgenden wollen wir diese Zusammenhänge betrachten, um ein besseres Verständnis für die Signalweiterleitung von Neuronen zu erlangen, was wir im nachfolgenden Kapitel untersuchen.
+
+### 1.3.2 Das Ruhepotenzial
+
+ Ein Neuron weist in Ruhe[^22] eine ungleiche Ionenverteilung zwischen der durch die Zellmembran getrennten intrazellulären Flüssigkeit (_IZF_: Zytosol) und der extrazellulären Flüssigkeit (EZF) auf. In der IZF befinden sich mehr positiv geladene Natrium-Ionen ($Na^+$), und im EZF mehr positiv geladene Kalium- und Calcium-Ionen ($Ka^+$ und $Ca^{2+}$) sowie mehr negativ geladene Chlorid-Ionen ($Cl^-$).
 
 [^22]: vgl. **Mempranpotenzial**: "die Spannung an der Nervenzellmembran zu einem beliebigen Zeitpunkt" <R>BCP18, S.70, "Ionen als Grundlage des Ruhepotenzials"</R>; **Ruhepotenzial**: "the electrical potential across the membrane in the absence of signaling" <R>KSJ+13, S. 126</R>
 
@@ -149,9 +155,11 @@ Mit den Werten aus Tabelle 1.1 ergibt sich somit
 
 </EQ>
 
-Wie wir oben gesehen haben, liegt $V_r$ zwischen -70 mV und - 90mV. Wie können wir jetzt auf $(S1.3.1)$ schließen, also dass das Ruhepotenzial durch die Membranpermeabilität von $K^+$ bestimmt wird, wenn $V_r = -70 mV$, aber $E_K = -80 mV$, und die Membran auch noch für andere Ionen wie bspw. $Na^+$ selektiv permeabel ist (<R>BCP18, S. 77 f.</R> sowie <R>SD07S. 44 "Warum ist $E_m$ weniger negativ als $E_K$?"</R>)? Wäre die Membran nur für $K^+$ permeable, so läge $V_r$ sicher bei $E_k$ <R>SD07, S.32 Abs. 4</R>.<br />
+Wie wir oben gesehen haben, liegt $V_r$ zwischen -70 mV und - 90mV. Wie können wir jetzt auf $(S1.3.1)$ schließen, also dass das Ruhepotenzial durch die Membranpermeabilität von $K^+$ bestimmt wird, wenn $V_r = -70 mV$, aber $E_K = -80 mV$, und die Membran auch noch für andere Ionen wie bspw. $Na^+$ selektiv permeabel ist (<R>BCP18, S. 77 f.</R> sowie <R>SD07S. 44 "Warum ist $E_m$ weniger negativ als $E_K$?"</R>)? Wäre die Membran nur für $K^+$ permeable, so läge $V_r$ sicher bei $E_k$ <R>SD07, S.32 Abs. 4</R>: Die Nernst-Gleichung kann deshalb nur zur Bestimmung des Membranpotenzials genutzt werden, wenn die Membran nur für ein Ion permeabel ist. Ansonsten ist der erhaltene Wert nur näherungsweise zu verstehen <R>BLS19, S. 98, linke Spalte, letzter Absatz</R>
+
+#### Berücksichtigung mehrerer Ionen bei der Bestimmung des Membranpotenzials
 Ionenkanäle unterstützen einen _passiven Transport_ der Ionen zwischen EZF und IZF _entlang_ ihres Konzentrationsgefälles <R>BLS19, S.30, "Aktive und passive Transportmechanismen"</R>, während Ionenpumpen, die _entgegen_ des Konzentrationsgefälles arbeiten, _aktiv transportieren_[^34]. Ionenpumpen sind für die Ionenkonzentrationsgradienten und deren Aufrechterhaltung verantwortlich <R>BCP18, S.76 f.</R>[^35].
-Um $V_r$ zu berechnen müssen die Ionen mitberücksichtigt werden, für die die Membran durchlässig ist. Dies erfolgt durch die **Goldman-Gleichung** [^36], die zusätzlich für die Berechnung des Membranpotenzials $V_m$ [WAS IST MIT V_R? NACHWEIS RUHE?] die Permeabilität der Membran für einzelne Ionen berücksichtigt [^37]:
+Um $V_m$ zu berechnen müssen die Ionen mitberücksichtigt werden, für die die Membran durchlässig ist. Dies kann mit der **Goldman-Gleichung** [^36] geschehen, die zusätzlich für die Berechnung des Membranpotenzials $V_m$ [WAS IST MIT V_R? NACHWEIS RUHE?] die Permeabilität der Membran für einzelne Ionen berücksichtigt [^37]:
 
 [^34]: hierfür wird metabolische Energie verbraucht <R>BLS19, S. 31, "Primär aktiver Transport"</R>
 [^35]: es wird ein nicht unwesentlicher Teil von Energie zur Aufrechterhaltung dieser Gradienten verbraucht. Die Natrium-Kalium-Pumpe verbraucht laut <R>BCP18</R>, S. 76, 1. Abs., etwa 70 % der ATP-Menge (siehe auch [^25]:), die das Gehirn benötigt.
@@ -178,15 +186,56 @@ Beitrag für $V_r$ leistet <R>KSJ+13, S. 135, "Goldman Equation"</R>, weshalb ma
 
 > "dass die Permeabilitäten in komplizierter Weise von der Membranspannung und den Ionenkonzentrationen [...] abhängen und sich meist nur näherungsweise bestimmen lassen." <R>BLS19, S.67, Goldman Gleichung</R>.
 
-## 1.4 Das Aktionspotenzial
+Die elektrische Leitfähigkeit $g_{Ion}$ der Membran ist proportional zu der Anzahl der offenen Ionenkanäle $N_{Ion}$. <R>BCP18, S. 93, "Ströme und Leitfähigkeiten in der Membran"</R>
+
+### 1.3.2 Das Aktionspotenzial
 
 Julius Bernstein (s. 1.3) hat nicht nur für Erforschung der Zellmembran wertvolle Arbeit geleistet: Auch die Existenz eines Aktionspotenzials <R>Sch83, S.168</R> hatte er bereits 1868 in seinem Papier "Ueber den zeitlichen Verlauf der negativen Schwankung des Nervenstroms" <R>Ber68</R> formuliert, in der er elektrische Muskel-Nerven-Aktivitäten untersucht. Er schließt ab mit:
 
 > "Ich werde im Folgenden diese Welle mit dem Namen 'Reizwelle' bezeichnen, well derjenige Reiz, durch den die Nervenfaser im Centrum Empfindung, im Muskel Zuckung erzeugt, auf das  Innigste mit dieser Welle verknüpft ist. [...] Da wir nachgewiesen haben, dass die Reizwelle mit derselben Geschwindigkeit sich fortpflanzt als die Erregung, so können wir die wohlberechtigte Annahme machen, dass die Reizwelle Nichts anderes ist als das Bild des im Nerven ablaufenden Erregungsvorganges." <R>Ber68, S. 198 f.</R>
 
+Hodkin und Huxley zeigten dann in einer Reihe von Expiremten, deren Ergebnisse sie in [HH52] zussamemenfasste,  dass der Aufstrich des AP mit einer Zunahme von $g_{Na}$ und dem Einstrom von $Na^+$ zusammenhing, und das die Repolarisation mit einer Zunahme von $g_K$ und einem Ausstrom von $K^+$ zusammenhing. (Nobelpreis 1963)  ;
+
 [^38]: bekannt als die _Julius-Bernstein-Hypothese_
 
+Das Aktionspotenzial ist also einfach auf die Bewegung von Ionen durch Kanäle zurückzuführen, die durch Verändeeung des Membranpotenzials gesteuert werden. [BCP18, S.96, Abs.4]
 
+Das AP pflanzt sich nur in eine Richtung fort, da Membran dahinter in Refaktärphase (orthodrome Fortleitung) [BCP18, 106]
+
+### Auslösung eines Aktionspotenzials
+
+Ort der Aktionspotenzialinitiation: physiologischen Situation: gehen als EPSP am Dendritenbaum ein, AP initiert dann  in 20-50 mikro meter vom Soma entfernt [BLS19, S. 77]; hier ist die NNa+ Kanaldichte  im Axon Initialsegment als am Soma, diese hohe Kanaldichte bgünstogt deie Aktionspotenzialinitiation; Schaltverhalten der Na+ Kanäle am Axon-Initialsegments unterscheidet sich von denen des benachbarten Soma: axonale Na+ Kanäle  ist die Aktiviwerungskurve um ca. 10 mv zu den negativen Mebranpotenzialen verschobenm
+
+Na+: Spannungsabhängige Natriumkanäle: Pore i der Membran, die für Na+ hochselektiv ist, öffnet und schließt bei Veränderung Membranpotenzial (Gating):
+Axonmembran auf -80 zu -65 depolarisierenb ändert kaum etwas, aber MP auf -65 zu -40, öffnen sich die Na+ Kanäle. Sie besitzen folgenden Charakterisika: 1) lffnen mit geringer Verzögerung, 1 ms offen und schließen sich dann (inaktivirert) sie können nicht wieder geöffnet werden,  durch depolarisation, bis MP wieder neg nahe Schwellenwert [BCP18, S. 99]
+Membran kann pro Quadratmikrometer (µm²)  viele tausend Natriumkanäle enthalten [BCP18, S99]
+
+### Weiterleitung über das Axon
+
+Erregungsleitung saltatorisch mit myelinisierten Axonen (Signal springt, saltatore (lat.) tanzen, hüpfen [BLS19, S. 79]; wenn myelinister, dann hihe Geschwindigkeit
+
+### Phasen des Aktionspotenzials
+
+Wenn über Mikroelektrode ständig strom neuron zugeführt wird, ensttehen ständig neue AP (sieghe Refräktärzeit) [BCP18, S. 89]
+
+Frequenz der APs ist ein Maß für die Stärke des depolarisierenden Strom s [BCP18, S. 89]
+
+Aufstrich, Overhsooot, Repolarisation [BLS19, S. 75]
+
+Aufstrich: Rückkoppelung: weitere Zunahme Na+ Leitfähigkeit durch Aktivierung zusätzlicher Na+ Kanäle beschleunigt Depolarisation [BLS19, S76, "Rückkoppelung"]
+
+Aufstrich: Einstrom NA+ [BCP18, S. 93]; Repolarisation: K+ Ausstrom [BCP18, S. 93]; BLS19 S.77]
+
+Overshoot: Natriumionen bei der Permeabilität der Menran bevorzugt, MP erreicht Wert nahe bei $E_{Na}$, dadurch größer als 0 mV [BCP18, S. 105]
+
+Undershoot: spannungsabhängige Kaliumkanäle erhöhen Membrandurchlässigkeit des Ruhezustands. Wegen geringerer Natriumpermeabilität nähert sich MP wiedeer $E_{K}$ and und führt zur Hyperpolarisation, bis spannungsabhängige K+ Kanäle wieder schließen  [BCP18, S. 105]
+
+Refräkltärzeit: Erneute Auslösung eines Aktionspotenzial erschwert , da Na+ Leitfähigkeit während AP inaktiviert und sich nur langsam erholt [hier abbildung natriumkanal mit erklärung globuläre Region Pore verschluss]; Dauer Refräkterzeit eng verbunden mmit Dauer AP: Kures AP, kurze RZ, lange AP, lange RZ. Kurze dauer axonales AP ermöglicht hochfrequente Aktionspotenzialsalven [BLS19, S. 76]
+Es kann kein weiteres Ap ausgelöst werden, bevor die Kanäle deinaktiviert worden sind. [BCP18, S. 105]
+ - Absolute Refraktärzeit: MP Na+ Kanäle werden inaktiviert, wenn Membran stark depolarisiert wird. Könne nicht wieder aktivieet werden und es kann kein weiteres AP  ausgelöst werden, bis MP negativ genug, Kanäle zu deinaktivieren [BCP18, S. 105]
+ - Relative Refraktärzeit: MP bleibt so lange hyperpolarister, bis sich spannungsabhängige K+ Kanäle schließen: hier ist störkerer depolarisierender Stromgluss erforderlich als gewöhnlich, um MP an den Schwellenwert zu bringen.[BCP18, S. 105]
+
+Währenddessen: Na+ Ka+ ATPase hält den Ionenkonzentrationsgradienten aufrecht, die für den Fluss na+ ka+ durch die Kanäle während AP erforderlich sind [BCP18, S. 105]
 
 <!--
 > At present the thickness and composition of the ecitable mebrane are unknown [HH52, S.501, "The nature of permeability changes"]
@@ -207,4 +256,9 @@ near to the equilibrium value for potassium ions. [HH52, S.532, "Refractory Peri
   two respects: in the first place, they cover only the short-term responses of the
   membrane, and in the second, they apply in their present form only to the
   isolated squid giant axon. [HH52, S. 541, "Range of applicability of the equations"]
+
+Neurone empfangen eingangssignale. konvertieren diese in Aktionspotenziale und generieren schlißlich Ausgangssignale auf ihren Zielzellen [BLS19, S. 72]
+
+Alles-oder-Nichts: Amplitude und Zeitverlauf im Axon sind relativ unabhängig von Reizintensität und Reizdauer. [BLS19, S. 75,  "Aktionspotenzial bei überschwelligger Reizung"]
+Diese Konstanz wird aus histroischen Gründen auch als Alles-oder-nichts-Gesetz bezeichnet. Im Computerzeitalter bezeichnet man das axonale Aktionspotenzial auch als "digitales" Signal. [BLS19, S. 75, "Aktionspotenzial bei überschwelligger Reizung"]
   -->
