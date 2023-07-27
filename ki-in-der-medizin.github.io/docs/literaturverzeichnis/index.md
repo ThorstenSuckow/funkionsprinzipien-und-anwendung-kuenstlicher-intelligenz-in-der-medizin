@@ -38,11 +38,9 @@ Quotation style: IEEE
 
 - **[Sch83]** S. M. Schuetze, „The discovery of the action potential“, _Trends in Neurosciences_, Bd. 6, S. 164–168, Jan. 1983, https://10.1016/0166-2236(83)90078-4.
 
------------
-
-
-
-
-
+- **[CC39]** K. S. Cole und H. J. Curtis, „ELECTRIC IMPEDANCE OF THE SQUID GIANT AXON DURING ACTIVITY“, _Journal of General Physiology_, Bd. 22, Nr. 5, S. 649–670, Mai 1939, https://doi.org/10.1085/jgp.22.5.649.
 
 - **[HH52]** A. L. Hodgkin und A. F. Huxley, „A quantitative description of membrane current and its application to conduction and excitation in nerve“, _The Journal of Physiology_, Bd. 117, Nr. 4, S. 500–544, Aug. 1952, https://10.1113/jphysiol.1952.sp004764.
+
+- **[Koc99]** C. Koch, _Biophysics of Computation: Information Processing in Single Neurons._ Oxford University Press, 1998. https://10.1093/oso/9780195104912.001.0001.
+
