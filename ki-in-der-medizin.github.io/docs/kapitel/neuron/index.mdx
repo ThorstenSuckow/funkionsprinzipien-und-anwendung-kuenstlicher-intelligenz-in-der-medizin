@@ -209,7 +209,7 @@ Knapp 80 Jahre nach Bernsteins Beschreibung der "negativen Schwankungen" und 50 
 
 > "More than a half-century later the Hodgkin-Huxley model stands as the most successful quantitative model in neural science if not in all of biology." <R>KSJ+13, S. 156, Abs. 2</R>
 
-[^38]: die Experimente wurden an Riesenaxomen von Tintenfischen durchgeführt, die sich damals aufgrund ihrer Dicke von ca. 1mm besser eigneten als die im direkten Vergleich geradezu unfassbar winzigen Axone von menschlichen Nervenzellen "The large diameter of the axon, 0.5 mm. or more, makes it particularly favorable material [...]" <R>CC39, S. 650, Abs. 2</R> &nbsp;
+[^38]: die Experimente wurden an Riesenaxomen von Tintenfischen durchgeführt, die sich damals aufgrund ihrer Dicke von ca. 1mm besser eigneten als die im direkten Vergleich geradezu unfassbar winzigen Axone von menschlichen Nervenzellen (Durchmesser ca 1µm <R>BLS19, S. 79, Abs. 1</R>) "The large diameter of the axon, 0.5 mm. or more, makes it particularly favorable material [...]" <R>CC39, S. 650, Abs. 2</R> &nbsp;
 [^39]: Zum Schwellenwert: "The curves in Figs. 12 and 21 show that the theoretical 'membrane' has a definite threshold when stimulated by a sudden displacement of membrane potential." <R>HH52, S.535, "Threshold"</R>; zur Refraktärzeit: "Acording to our theory, there are two changes resulting from the depolarization during a spike which make the membrane unable to respond to another stimulus until a certain time has elapsed. These are 'inactivation', which reduces the level to which the sodium conductance can be raised by a depolarization, and the delayed rise in potassium conductance, which tends to hold the membrane potential near to the equilibrium value for potassium ions." <R>HH52, S.532, "Refractory Period"</R>
 [^40]: Medizin-Nobelpreis für die Erforschungen der Ionen-Mechanismen, die bei der Erregung und Hemmung von Nervenzellmembranen beteiligt sind <R>DMW63</R>, zusammen mit John Carew Eccles (1903–1997)
 
@@ -245,26 +245,13 @@ Die Stärke des Signals selber ist unabhängig von dem Wert, zur überschwellige
 
 Die Generierung von Aktionspotenzialen kann in folgende Phasen eingeteilt werden, entsprechend ihrer zeitlichen Reihenfolge:
 
-##### 1. Aufstrich
-$Na^+$ gelangt in die Zelle,  $g_{Ka}$  wird erhöht, mehr $Na+$ strömt ein (positiven Rückkoppellung). Es kommt zu einer Depolarisation, $V_m$ wächst exponentiell. <R>SD07, S. 46, Abs. 3</R>
-
-##### 2. Overshoot
-$V_m$ wird positiv ($> 0 mV$) und nähert sich insgesamt $E_{Na} \sim 60 mV$ an <R>BCP18, S. 105, "Overshoot"</R> (s. $S1.1$)[^45].
-
-##### 3. Repolarisationsphase[^46]
-Natriumkanäle werden **inaktiviert**. Spannungsabhängige Kaliumkanäle öffnen sich <R>BCP18 S. 105, "Fallende Phase"</R> ca. 1 ms nach Depolarisation <R>SD07, S. 47, Tafel 2.3 (A.2)</R>, $K^+$-IOnen strömen aufgrund der elektrochemischen Triebkraft in den EZF, das Membranpotential wird wieder negativ[^47].
-
-##### 4. Undershoot[^48]
-Es kommt zu einem $V_m$, der unter $V_r$ liegt, da $g_{K}$ noch erhöht ist. $V_m$ nähert sich $E_k$ (-80 mV). Ein erhöhte Pumnprate der $Na^+$-$K^+$-ATPase[^49] kann auch dazu beitragen <R>SD07, S.46, Abs. 1</R>.
-
-##### 5. Refraktärphase
-Nach Auslösen des Aktionspotenzials und bevor $V_r$ wieder erreicht wird, befindet sich die Zelle ind er Refraktärphase. Diese ist unterteilt in die _absolute_ und _relative_ Refrakträphase.
-
-##### 5.1 Absolute Refraktärphase
-Ca. 2 ms. nach Auslösen des Aktionspotenzials <R>BSJ19, S. 70, "Refraktärzeit" f.</R> sind die $Na^+$ Kanäle _inaktiviert_ und dadurch nicht aktivierbar. Es ist keine Aktionspotenzialbildung möglich <R>SD07, S. 47, rechte Spalte, Abs. 3</R>.
-
-##### 5.2 Relative Refraktärphase
-$V_m$ nähert sich weiter $V_r$ an. Nachdem einige $Na^+$-Kanäle _deinaktiviert_ wurden, ist eine Auslösung des Aktionspotenzials wieder möglich. Allerdings ist die Reizschwelle erhöht (da $V_m < V_r < V_t$) und und "die Amplitude des auslösbaren Aktionspotenzials ist reduziert" <R>BLS19, S. 70  "Refraktärzeit" f.</R>
+| Phase       | Bedeutung                                                                                  |
+|-----------|--------------------------------------------------------------------------------------------|
+| 1. Aufstrich         | $Na^+$ gelangt in die Zelle,  $g_{Ka}$  wird erhöht, mehr $Na+$ strömt ein (positiven Rückkoppellung). Es kommt zu einer Depolarisation, $V_m$ wächst exponentiell. <R>SD07, S. 46, Abs. 3</R>                                             |
+| 2. Overshoot  | $V_m$ wird positiv ($> 0 mV$) und nähert sich insgesamt $E_{Na} \sim 60 mV$ an <R>BCP18, S. 105, "Overshoot"</R> (s. $S1.1$)[^45]. |
+| 3. Repolarisationsphase[^46] | Natriumkanäle werden **inaktiviert**. Spannungsabhängige Kaliumkanäle öffnen sich <R>BCP18 S. 105, "Fallende Phase"</R> ca. 1 ms nach Depolarisation <R>SD07, S. 47, Tafel 2.3 (A.2)</R>, $K^+$-IOnen strömen aufgrund der elektrochemischen Triebkraft in den EZF, das Membranpotential wird wieder negativ[^47].                                                                        |
+| 4. Undershoot[^48]       | Es kommt zu einem $V_m$, der unter $V_r$ liegt, da $g_{K}$ noch erhöht ist. $V_m$ nähert sich $E_k$ (-80 mV). Ein erhöhte Pumnprate der $Na^+$-$K^+$-ATPase[^49] kann auch dazu beitragen <R>SD07, S.46, Abs. 1</R>.                                                                       |
+| 5 Refraktärphase       | _absolute_: Ca. 2 ms. nach Auslösen des Aktionspotenzials <R>BSJ19, S. 70, "Refraktärzeit" f.</R> sind die $Na^+$ Kanäle _inaktiviert_ und dadurch nicht aktivierbar. Es ist keine Aktionspotenzialbildung möglich <R>SD07, S. 47, rechte Spalte, Abs. 3</R>.  <br />_relative_: $V_m$ nähert sich weiter $V_r$ an. Nachdem einige $Na^+$-Kanäle _deinaktiviert_ wurden, ist eine Auslösung des Aktionspotenzials wieder möglich. Allerdings ist die Reizschwelle erhöht (da $V_m < V_r < V_t$) und und "die Amplitude des auslösbaren Aktionspotenzials ist reduziert" <R>BLS19, S. 70  "Refraktärzeit" f.</R>                                                     |
 
 Die Refraktärphase dient u.a. dazu, die Membran vor einer vorzeitigen Neuerregung zu schützen<R>BLS19, S.76, "Refraktärzeit"</R>. Hochfrequenten Aktionspotenzialsalven von max. 1000/s sind aufgrund dieser Eigenschaft möglich (vgl. <R>SD07, S. 46, Abs. 2</R> u. <R>BCP18, S. 89, letzter Absatz</R>). <R>BCP18</R> stellt fest: "Die Frequenz der Aktionspotenziale ist ein Maß für die Stärke des depolarisierenden Stroms"  <R>BCP18, S. 89, Abs. 2</R> - je stärker der Reiz, desto mehr Aktionspotenziale werden nacheinander abgefeuert (vgl. <R>BCP18, S. 90, Abb. 4.3</R>).
 
@@ -277,14 +264,67 @@ Die Refraktärphase dient u.a. dazu, die Membran vor einer vorzeitigen Neuerregu
 
 #### Weiterleitung über das Axon
 
+Kurz nach der Aktionspotenzialbildung befinden sich daran beteiligte Membrane in der Refraktärphase, ihre $Na^+$-Kanäle sind inaktiviert. Somit pflanzt sich das Aktionspotenzial nur in eine Richtung fort[^50] (_orthodrome_ Fortleitung) <R>BCP18, S. 106, Abs. 3</R>. Die Fortleitung geschieht in Richtung der Axonterminal, wo sich die präsynaptischen Endigungen befinden und das elektrische Signal in chemische Signale umgewandelt werden.
 
-Das AP pflanzt sich nur in eine Richtung fort, da Membran dahinter in Refaktärphase (orthodrome Fortleitung) [BCP18, 106]
+##### Übertragungsgeschwindigkeit
+Ist das Axon - die Nervenfaser - **marklos**, wird das Signal kontinuierlich weitergeleitet, und die Leitunsggeschwindigkeit ist eher gering ( ca. 1m/s <R>BLS19, S.  80, Tab.7.1</R>. Die Leitunsggeschwindigkeit hängt hier direkt von dem Durchmesser der Nervenfaser ab und ist proportional zur Wurzel des Fasseradius. Die marklosen Riesenaxone des Tintenfisches erreichen deshalb aufgrund ihrer Größe Leitungsgeschwindigkeiten von bis zu 20 m / s <R>BLS19, S. 79, "Aktive Leitungsgeschwindigkeit"</R>.
 
-Erregungsleitung saltatorisch mit myelinisierten Axonen (Signal springt, saltatore (lat.) tanzen, hüpfen [BLS19, S. 79]; wenn myelinister, dann hihe Geschwindigkeit
+Im Gegensatz zu marklosen Nervenfasern erreichen **myelinisierte Axone** eine höhere Leitungsgeschwindigkeit. Sie sind gegenüber ihrer Umgebung durch **Myelinscheiden** (Membranschichten, die sich bis zu 100 mal <R>BLS19, S. 79, 7.3.3 Abs. 1</R> um das Axon wickeln) besser isoliert <R>SD07, S. 48, rechte Spalte, Abs. 2</R>. Dadurch wird der Stromfluss verstärkt und die Erregungsleitung erhöht sich <R>BCP18, S. 109, Abs. 2</R>. Diese Isolierschicht ist "segmentiert": Myelinscheiden sind in Abständen von 0,2 - 2mm durch sog. _Ranvier-Schnürringe_ unterbrochem. Deren Membran besitzt spannungsabhängige $Na^+$-Kanäle <R>BCP18, S. 109, Abs. 2</R>, die das ankommende elektrische Signal durch die wie oben beschrieben Depolarisierung der einzelnen Segmentabschnitte kontinuierlich weiterleiten - es wird an den Membranabschnitten jeweils ein neues Aktionspotenzial gebildet <R>SD07, S.48, rechte Spalte, Abs.2</R>. Die Weiterleitung in myeliniserten Axonen bezeichnet man deshalb als **saltatorische**[^51] (sprunghafte) Erregungsleitung <R>BCP18, S. 110, Abs. 1</R>.
 
 
-Na+: Spannungsabhängige Natriumkanäle: Pore i der Membran, die für Na+ hochselektiv ist, öffnet und schließt bei Veränderung Membranpotenzial (Gating):
-Axonmembran auf -80 zu -65 depolarisierenb ändert kaum etwas, aber MP auf -65 zu -40, öffnen sich die Na+ Kanäle. Sie besitzen folgenden Charakterisika: 1) lffnen mit geringer Verzögerung, 1 ms offen und schließen sich dann (inaktivirert) sie können nicht wieder geöffnet werden,  durch depolarisation, bis MP wieder neg nahe Schwellenwert [BCP18, S. 99]
+[^50]: <R>BCP18, S. 106, Abs. 3</R> verweist auf _antidrome_ Fortleitung, die in Experimenten ausgelöst werden kann
+[^51]: _saltare_ (lat.): tanzen, springen
+
+## 1.4 Synaptische Übertragung
+
+Die meisten Synapsen im Gehirn sind chemische Synapsen. [BCP18, S.118, Abs. 3]
+Die synaptische Übertragung erfolgt im reifen menschlichen Gehirn überwiegend auf chemische Weise [BCP18, S.121, "Chemische Synapsen", Abs.1]
+
+Die aktive Substanz, die Loewi als Vagusstoff bezeichnete, stellte sich als Acetylcholin heraus. Wie wir in diesem Kapitel noch erfahren werden, ist Acetylcholin auch der Transmitter an der Synapse zwischen Nerv und Skelettmuskel. Hier verursacht es, anders als beim Herzen, eine
+Erregung und Kontraktion des Muskels. [BCP18, S.119, Abs. Exkurs 5.1, letzter Abs.]
+
+Die präsynaptischen und postsynaptischen Membranen an chemischen Synapsen sind durch den synaptischen Spalt voneinander getrennt, der 20–50 nm breit ist, zehnmal breiter als die Lücke bei gap junctions. Der Spalt ist angefüllt mit einer Matrix aus faserförmigen extrazellulären Proteinen. Eine Funktion der Matrix besteht darin, prä- und postsynaptische Membran miteinander zu verbinden. Die präsynaptische Seite der
+Synapse, die man auch als präsynaptisches Element bezeichnet, ist normalerweise eine Axonterminale. Die Terminale enthält im Allgemeinen Dutzende kleiner Bläschen, die von Membranen umgeben sind und jeweils etwa 50 nm Durchmesser haben, die sogenannten synaptischen Vesikel (Abb. 5.5a). Diese Vesikel speichern einen Neurotransmitter, den chemischen Stoff, der zur Kommunikation mit dem postsynaptischen Neuron dient [BCP18, S. 122, Abs.2 f.]
+
+Auf der präsynaptischen Seite ragen entlang der intrazellulären Membranseite Proteine in das Cytoplasma der Terminale, was manchmal wie ein Feld winziger Pyramiden aussieht. Diese Pyramiden und die mit ihnen assoziierte Membran sind die Stellen, an denen die Neurotransmitter freigesetzt werden, und man bezeichnet sie als aktive Zonen [BCP18, S. 123, Abs. 1]
+
+Die Proteine, die sich in einer dicken Schicht in der postsynaptischen Membran und direkt darunter ansammeln, bezeichnet man als postsynaptische Verdichtung. Diese Struktur enthält die Neurotransmitterrezeptoren, die das interzelluläre chemische Signal (also den
+Neurotransmitter) in ein intrazelluläres Signal (eine Änderung des Membranpotenzials oder eine chemische Veränderung) in der postsynaptischen Zelle umwandeln.[BCP18, S. 123, Abs. 2]
+
+Im ZNS lassen sich verschiedene Typen von Synapsen danach unterscheiden, mit welchem Teil des postsynaptischen Neurons die Synapse Kontakt aufnimmt. Bei den sehr zahlreichen axodendritischen Synapsen ist die postsynaptische Membran Teil eines Dendriten [BCP18, S. 123, "ZNS Synapsen"] (es gibt noch axosomatisch (Synapse auf Zellkörper), axoaxonischen Synapsen (Axon Axon), dendrodendritische (Dendriten untereinander) Synapsen)
+
+Erregende Synapsen befinden sich typischerweise auf winzigen pilzförmigen Azsstülpungen der dendritischen Membran (dendritische Dornfortsätze oder Spines) [BCP18, S. 125, Abs. 1]
+
+Synapsen, bei denen die Membrandifferenzierung auf der postsynaptischen Seite dicker ist als auf der präsynaptischen, bezeichnet man als asymmetrische Synapsen oder Gray-Typ-I-Synapsen. Wenn die Membrandifferenzierungen dieselbe Dicke aufweisen, spricht man von symmetrischen
+oder Gray-Typ-II-Synapsen (Abb. 5.8). Wie wir in diesem Kapitel noch erfahren werden, deuten diese strukturellen Unterschiede auf unterschiedliche Funktionen hin. Die GrayTyp-I-Synapsen sind im Allgemeinen exzitatorisch, Gray-Typ-II-Synapsen hingegen inhibitorisch.  [BCP18, S. 127, Abs. 1]
+
+Es muss einen Mechanismus geben, die Neurotransmitter zu synthetisieren und in synaptische Vesikel zu verpacken, einen Mechanismus, der die Vesikel veranlasst, ihren Inhalt als Reaktion auf ein präsynaptisches Aktionspotenzial in den synaptischen Spalt
+abzugeben, einen Mechanismus für die Erzeugung einer elektrischen oder chemischen Reaktion auf Neurotransmitter im synaptischen Spalt und einen Mechanismus für das Entfernen der Neurotransmitter aus dem synaptischen Spalt. [BCP18, S. 129, Abs. 1]
+
+. Unsere gegenwärtige Vorstellung ist, dass die meisten Neurotransmitter zu einer von drei chemischen Klassen gehören: (1) Aminosäuren (Anm. GABA, Glutamat), (2) Amine und (3) Peptide [...] Die Aminosäure- und Aminneurotransmitter sind kleine organische Moleküle, die mindestens ein Stickstoffatom enthalten. Sie werden in synaptischen Vesikeln gespeichert und daraus freigesetzt.  [BCP18, S. 129, Abs. 3, f.]
+
+Verschiedene Neuronen im Gehirn setzen unterschiedliche Neurotransmitter frei. Die Geschwindigkeit der synaptischen Übertragung variiert stark. Schnelle Formen der synaptischen Übertragung dauern etwa 2–100 ms und werden an den meisten Synapsen im ZNS durch die Aminosäuren Glutamat (Glu), Gamma-Aminobuttersäure (GABA) und Glycin (Gly) vermittelt. Das Amin Acetylcholin (ACh) vermittelt die schnelle synaptische Übertragung an neuromuskulären Endplatten. Langsamere Formen der synaptischen Übertragung können von einigen 100 Millisekunden bis Minuten dauern [BCP18, S. 129, Abs. 4 ff.]
+
+Sobald die Aminosäure- und Aminneurotransmitter im Cytosol der Axonterminale synthetisiert worden sind, müssen sie in synaptische Vesikel aufgenommen werden. Transporter, spezielle Proteine, die in die Vesikelmembran integriert sind, erhöhen die Konzentration dieser Neurotransmitter im Inneren der Vesikel. [BCP18, S.131, Abs. 2]
+
+Die Freisetzung von Neurotransmittern wird durch ein in der Axonterminale ankommendes Aktionspotenzial ausgelöst. Die Depolarisation der Terminalmembran führt dazu, dass sich in den aktiven Zonen spannungsabhängige Calciumkanäle öffnen. Diese Membrankanäle sind den Natriumkanälen sehr ähnlich, die wir in Kap. 4 besprochen haben, außer dass sie nicht für NaC-, sondern für Ca2C-Ionen permeabel sind. Es besteht eine starke elektrochemische Triebkraft für die Ca2C-Ionen. Wie bereits bekannt, ist die Calciumionenkonzentration im Zellinneren ŒCa2Ci im Ruhezustand sehr niedrig (nur 0,0002mM). Deshalb fließt Ca2C in das Cytoplasma der Axonterminale, solange die Ca2C-Kanäle ge-
+öffnet sind. Die resultierende Zunahme von ŒCa2Ci ist das Signal, das die Freisetzung der Neurotransmitter aus den synaptischen Vesikeln bewirkt. Die Vesikel geben ihren Inhalt über einen Vorgang frei, den man als Exocytose bezeichnet. Die Membran des synaptischen Vesikels fusioniert mit der präsynaptischen Membran der aktiven Zone, sodass der Inhalt des Vesikels in den synaptischen Spalt ausgeschüttet
+wird (Abb. 5.12). Untersuchungen an Riesensynapsen des Nervensystems von Tintenfischen zeigten, dass die Exocytose sehr schnell stattfinden kann – innerhalb von 0,2 ms des Ca2C-Einstroms in die Terminale. Synapsen von Säugern, die allgemein bei höheren
+Temperaturen arbeiten, sind sogar noch schneller [BCP18, S. 132, "Freisetzung von Neurotransmittern" f.]
+
+Bei diesem Andocken kommt es wahrscheinlich zu einer Wechselwirkung zwischen Proteinen der Membran der synaptischen Vesikel und der aktiven Zone (Exkurs 5.3). Beim Vorliegen einer hohen $CA^{2+}$ verändern diese Proteine ihre Konformation, sodass die Lipiddoppelschichten des Vesikels und der präsynaptischen Membran fusionieren. Dadurch entsteht eine Pore, die die Freisetzung der Neurotransmitter in den Spalt ermöglicht. [BCP18, S. 132, Abs. 4 ff.]
+
+Die Vesikelmembran wird später durch den Vorgang der Endocytose zurückgewonnen, und das wiederhergestellte Vesikel füllt sich erneut mit Neurotransmitter (Abb. 5.12).  [BCP18, S. 133, Abs. 1 ]
+
+Transmitterabhängige Ionenkanäle erklärt die Wirkung von Transmitter auf Ionenkanäle und die Membranreaktion als EPS oder IPSP [BCP18, S. 135 f.]
+
+Recycling von Transmittern wird in [BCP18, S.139] beschrieben
+
+Grundlagen der synaptischen intregation [BCP18 S.141 ff.], Quantelungsanalyse EPSP sowie shunting inhibition IPSPs
+Auf Seite 146 ist die Lage der synapsen (proxymaler Abschnitt Dendrit Nähe Soma: hemmend; distaler Abschnitt Dendrit: exzitatorisch) abgebildet
+
+
+
 <!--
 
 > At present the thickness and composition of the ecitable mebrane are unknown [HH52, S.501, "The nature of permeability changes"]
