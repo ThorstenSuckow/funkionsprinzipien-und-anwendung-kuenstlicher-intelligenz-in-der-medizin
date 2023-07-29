@@ -9,3 +9,4 @@
 - hh-aktionspotenzial [HH52, S, 530]
 - inactive-channel [KSJ+13, S. 108-109] Axonmembran auf -80 zu -65 depolarisierenb ändert kaum etwas, aber MP auf -65 zu -40, öffnen sich die Na+ Kanäle. Sie besitzen folgenden Charakterisika: 1) lffnen mit geringer Verzögerung, 1 ms offen und schließen sich dann (inaktivirert) sie können nicht wieder geöffnet werden,  durch depolarisation, bis MP wieder neg nahe Schwellenwert [BCP18, S. 99]
 - lokale-antwort.png [BLS19, S. 76, Abb. c] Als hinweis zu lokale Antwort, daß das in die Grafik übernommen werden sollte, da im Text Bezug darauf genommen wird.
+- exozytose.png ähnlich synaptische-uebertraguung.png
