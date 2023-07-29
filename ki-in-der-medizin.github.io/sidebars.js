@@ -9,6 +9,7 @@ const sidebars = {
             label: 'Kapitel',
             link: {type: 'doc', id: 'kapitel/index'},
             items: [
+                "kapitel/einleitung/index",
                 "kapitel/neuron/index"
             ]
         },
