@@ -44,3 +44,6 @@ Quotation style: IEEE
 
 - **[Koc99]** C. Koch, _Biophysics of Computation: Information Processing in Single Neurons._ Oxford University Press, 1998. https://10.1093/oso/9780195104912.001.0001.
 
+- **[AHH+98]** S. Ayad, R. Boot-Handford, M. J. Humphries, K. E. Kadler, C. A. Shuttleworth: _The Extracellular Matrix. FactsBook._, ed. 2nd edition, London: Academic Press, 1998, ISBN 0-12-068911-1
+
+ - **[HFZ06]** J. W. Hurst, W. B. Fye, und H.-G. Zimmer, „Otto loewi and the chemical transmission of vagus stimulation in the heart“, _Clin Cardiol_, Bd. 29, Nr. 3, S. 135–136, März 2006, https://10.1002/clc.4960290313.
