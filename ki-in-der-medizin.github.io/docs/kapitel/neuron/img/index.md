@@ -1,6 +1,6 @@
 - bau-und-funktion-nervenzelle.png [SD07, p43]
 - aktionspotenzial.png [SD07, p47]
-- synaptische-uebertragung.png [SD07, p51]
+- synaptische-uebertragung[1/2].png 1 ist [SD07, p51], 2 ist [BLS19, S. 96, Abb. 9.3]
 - räumliche-zeitliche-summation-erreger.png[SD07, p.53]
 - einfluss-ipsp.png [SD07, p.54]
 - membranladung.png [BCP18], S.72
@@ -10,3 +10,4 @@
 - inactive-channel [KSJ+13, S. 108-109] Axonmembran auf -80 zu -65 depolarisierenb ändert kaum etwas, aber MP auf -65 zu -40, öffnen sich die Na+ Kanäle. Sie besitzen folgenden Charakterisika: 1) lffnen mit geringer Verzögerung, 1 ms offen und schließen sich dann (inaktivirert) sie können nicht wieder geöffnet werden,  durch depolarisation, bis MP wieder neg nahe Schwellenwert [BCP18, S. 99]
 - lokale-antwort.png [BLS19, S. 76, Abb. c] Als hinweis zu lokale Antwort, daß das in die Grafik übernommen werden sollte, da im Text Bezug darauf genommen wird.
 - exozytose.png ähnlich synaptische-uebertraguung.png
+- depolarization-cycle[1/2].png 1 ist [KLJS+13, S.150], 2 ist [BLS19, S. 76, Abb. 7.3e]
