@@ -1,7 +1,7 @@
 - bau-und-funktion-nervenzelle.png [SD07, p43]
 - aktionspotenzial.png [SD07, p47]
 - synaptische-uebertragung[1/2].png 1 ist [SD07, p51], 2 ist [BLS19, S. 96, Abb. 9.3]
-- räumliche-zeitliche-summation-erreger.png[SD07, p.53]
+- räumliche-zeitliche-summation-erreger[1/2].png 1: [SD07, p.53]; 2: [BCP18, S. 143]
 - einfluss-ipsp.png [SD07, p.54]
 - membranladung.png [BCP18], S.72
 - negative-variation.png [Ber68, Fig. D] 
