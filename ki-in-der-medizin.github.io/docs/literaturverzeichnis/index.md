@@ -46,4 +46,6 @@ Quotation style: IEEE
 
 - **[AHH+98]** S. Ayad, R. Boot-Handford, M. J. Humphries, K. E. Kadler, C. A. Shuttleworth: _The Extracellular Matrix. FactsBook._, ed. 2nd edition, London: Academic Press, 1998, ISBN 0-12-068911-1
 
- - **[HFZ06]** J. W. Hurst, W. B. Fye, und H.-G. Zimmer, „Otto loewi and the chemical transmission of vagus stimulation in the heart“, _Clin Cardiol_, Bd. 29, Nr. 3, S. 135–136, März 2006, https://10.1002/clc.4960290313.
+- **[HFZ06]** J. W. Hurst, W. B. Fye, und H.-G. Zimmer, „Otto loewi and the chemical transmission of vagus stimulation in the heart“, _Clin Cardiol_, Bd. 29, Nr. 3, S. 135–136, März 2006, https://10.1002/clc.4960290313.
+
+- **[Sil03]** R. A. Silver, „Neuronal arithmetic“, _Nature Reviews Neuroscience_, Bd. 11, Nr. 7, S. 474–489, Juli 2010, https://doi.org/10.1038/nrn2864.
