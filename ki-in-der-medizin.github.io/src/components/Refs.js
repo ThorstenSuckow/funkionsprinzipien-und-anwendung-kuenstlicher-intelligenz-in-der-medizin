@@ -1,6 +1,6 @@
 
 
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 function Bibliography ({children}) {
     const href = `/docs/literaturverzeichnis#${name.toLowerCase()}`;
@@ -9,9 +9,31 @@ function Bibliography ({children}) {
     );
 }
 
-function Equation ({children}) {
+let gIdEq = 1;
+let eqMain = 1;
+
+function initEq({main}) {
+    eqMain = main;
+    gIdEq = 1;
+}
+
+function Equation ({children, part}) {
+
+    const [initial, setInitial] = useState(true);
+    const [count, setCount] = useState(gIdEq)
+
+    React.useEffect(() => {
+        setCount(gIdEq++)
+    }, [initial]);
+
+
     return (
-        <p class={"mathEq"}>{children}</p>
+        <div style={{display:"flex"}}>
+            <div class={"mathEq"} style={{flex:1}}>
+                {children}
+            </div>
+            <div class={"idEq"}>{`(Gl. ${eqMain}.${count}${part ? part : ""})`}</div>
+        </div>
     );
 }
 
@@ -30,4 +52,6 @@ function Subnote ({children}) {
 export {Bibliography as R};
 export {Subnote as S};
 export {Footnote as F};
-export {Equation as EQ}
+export {Equation as EQ};
+export {initEq};
+
