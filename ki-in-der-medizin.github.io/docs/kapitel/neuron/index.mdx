@@ -8,27 +8,26 @@ import {R, F, S, EQ, initEq} from "../../../src/components/Refs.js";
 
 <initEq main={1} />
 
-## 1.1 Einleitung
-Um ein Verständnis für das Modell der im weiteren Verlauf dieser Arbeit beschriebenen _künstlichen neuronalen Netze_ zu erlangen, wollen wir uns zunächst mit dem menschlichen Neuron als "strukturelle und funktionelle Einheit des Nervensystems" <R>SD07, S.42</R> beschäftigen.<br />
-Von Interesse ist für uns die Funktionsweise dieser Zellen im Kontext von Informationsverarbeitung und -weiterleitung, weshalb wir die molekulare und die zelluläre Ebene des einzelnen Neurons betrachten wollen, sowie den Verbund von Neuronen, also dem neuronalen Netz <R>Lyr17, S. 2, Abs. 5</R>.
+## 0 ToDos
+- Abbildungen
+- Literaturverzeichnis BLS19 muss aufgesplittet werden, da Einzelautoren
+ - Quantenaussage mEPSC verifizieren
+- Konvergenz / Divergenz noch in Text unterbringen (ist bereits in Zusammenfassung)
 
-Hierzu skizzieren wir zunächst den Aufbau eines Neurons und verschaffen uns im Anschluss einen Überblick über die komplexen biochemischen Vorgänge, die nötig sind, damit Neuronen Signale senden und empfangen können. Wir werden sehen, dass Änderungen der Zellmembran-Eigenschaften (hier: das _Membranpotenzial_) eines Neurons mitverantwortlich sind für die _Exozytose_[^1] von hemmenden oder erregenden Neurotransmittern in den synaptischen Spalt (s. Abb. X); Rezeptoren postsynaptischer Zellen verarbeiten diese Substanzen dann gemäß ihren _inhibitorischen_[^2] oder _exzitatorischen_[^3] Eigenschaften zu inhibitorischen oder exzitatorischen Signalen.
+## 1.1 Einführung
+Um ein Verständnis für die Strukturen zue erhalten, die ein _künstliches neuronales Netz_ modelliert, wollen wir uns zunächst mit dem Neuron als "strukturelle und funktionelle Einheit des Nervensystems" <R>SD07, S.42</R> beschäftigen.<br />
+Von Interesse ist für uns die Funktionsweise dieser Zellen im Kontext von Informationsverarbeitung und -weiterleitung, weshalb wir die molekulare und die zelluläre Ebene des einzelnen Neurons betrachten wollen, sowie den Verbund von Neuronen.
 
-Da sich diese Arbeit auf die Funktionsweise _künstlicher neuronaler Netze_ konzentriert, verstehen wir im Folgenden unter _neuronales Netz_ ein eben solches. Reden wir von _biologischem neuronalen Netz_, wollen wir darunter ein Netzwerk von Nervenzellen verstehen, in dem ein Informationsaustausch stattfindet - so, wie es im menschlichen Gehirn existiert <R>BCP18, S. 113, Abs. 2</R>.
+Hierzu skizzieren wir zunächst den Aufbau eines Neurons und verschaffen uns im Anschluss einen Überblick über die komplexen biochemischen Vorgänge, die nötig sind, damit Neuronen Signale senden und empfangen können. Wir werden sehen, dass  Änderungen der Zellmembran-Eigenschaften (hier: das _Membranpotenzial_) eines Neurons mitverantwortlich sind für die _Exozytose_[^1] von hemmenden oder erregenden Neurotransmittern, und wie Rezeptoren postsynaptischer Zellen chemische Signale gemäß ihren Eigenschaften zu inhibitorischen[^2] oder exzitatorischen[^3] Signalen verarbeiten.
 
-Wir werden im folgenden öfter von präsynaptisch und postsynaptisch lesen. Im KIOntext der Informationsverarbeitung bedeutet präsynaptisch Ursprung der Informationen, postsynaptisch Ziel der Informationen.
-
-Die Betrachtungen berücksichtigen  ausschließlich den menschlichen Organismus.
-Wir betrachten chemischen Synapsen.
-
-Der begrenzte Umfang dieser Arebeit hat den Nachteil, das einige Begrifflichkeiten, deren voller Hinterggrund und Bedeutung, im Verborgenen bleibeb. Fußnoten und ausführliche Quellenzitate sollen dem interessierten Leser zur Recherche ermutigen.
+Einige Begrifflichkeiten dieses hochkomplexen Themas, deren voller Hintergrund und Bedeutung, muss im Verborgenen. Das ist dem begrenzten Umfang dieser Arbeit geschuldet. Fußnoten und ausführliche Quellenzitate sollen den interessierten Leser zur eigenständigen Recherche ermutigen.
 
 [^1]: _Exozytose_ beschreibt den Vorgang, bei dem zellinnere Substanzen nach Außen weitergegeben werden <R>Rhn+16, S.368, "Exozytose" f</R>.
 [^2]: "_inhibere_" (lat.): anhalten
 [^3]: "_excitare_" (lat.): erregen, anregen
 
 
-## 1.2 Aufbau
+## 1.2 Struktur einer Nervenzelle
 
 **Abbildung 1.2.1** In der folgenden Abbildung haben wir das Neuron in drei Bereiche eingeteilt. Ihre Rolle innerhalb des Neurons ist wie folgt: 1) _Dendrite_[^4] leiten _afferente_[^5] Signale zum 2) _Soma_[^6], dem Zellkörper, weiter. Unter bestimmten Bedingungen, die in einem späteren Abschnitt erläutert werden, lösen diese Signale ein "feuern" des Neurons aus, und das 3) _Axon_[^7] leitet ein _efferentes_[^8] Nervensignal über _präsynaptische Endigungen_ (_Axonterminale_) an (häufig weit entfernte[^9]) _Effektoren_[^10] wie Muskeln und Drüsen oder nachgeschaltete Neuronen weiter[^11] [^12]<R>SD07, S. 42, Abs. 2</R>.
 
@@ -58,18 +57,18 @@ Die Dendriten leiten Signale weiter an das **Soma** (oder _Perikaryon_ <R>RK18, 
 [^20]: Depolarisation bezeichnet die Verringerung des Membranpotenzials von einem negativen Wert auf einen weniger negativen oder gar einen positiven Wert <R>RHN+16, S. 812 "Neurotransmitter und ihre Rezeptoren"</R>
 [^21]: der formale Begriff für das Signal, das zu den Axonterminalen gesendet wird
 
-## 1.3 Membranpotenziale des Neurons
+## 1.3 Das Ruhepotenzial
 
-### 1.3.1 Einleitung
+### 1.3.1 Die Entdeckung bioelektrischer Ströme
 
-Im Jahr 1912 veröffentlichte der deutsche Physiologe Julius Bernstein (1839-1917) Erkenntnisse seiner elektrophysiologischen Studien in dem Buch "Elektrobiologie - Die Lehre von den elektrischen Vorgängen im Organismus auf moderner Grundlage dargestellt". In dem Kapitel "Membrantheorie" <R>Ber12, S. 87</R> greift er das Postulat  seiner Arbeit "Untersuchungen zur Thermodynamik der bioelektrischen Ströme" <R>Ber02</R> auf; bereits 1902 von ihm veröffentlicht, lieferte die Theorie die erste plausible physikalisch-chemische Erklärung bioelektrischer Phänomene <R>Sey06, S 5. "4 Membrane Theory (1902)"</R>: In Zellen befindet sich eine elektrolytische Flüssigkeit, die von einer für bestimmte Ionen permeablen Membran umgeben ist, und diese Membran besitzt eine Potenzialdifferenz <R>Ber12, S. 92 f.</R>.
+Im Jahr 1912 veröffentlichte der deutsche Physiologe Julius Bernstein (1839-1917) Erkenntnisse seiner elektrophysiologischen Studien in dem Buch "Elektrobiologie - Die Lehre von den elektrischen Vorgängen im Organismus auf moderner Grundlage dargestellt". In dem Kapitel "Membrantheorie" <R>Ber12, S. 87</R> greift er das Postulat seiner Arbeit "Untersuchungen zur Thermodynamik der bioelektrischen Ströme" <R>Ber02</R> auf; bereits 1902 von ihm veröffentlicht, lieferte die Theorie die erste plausible physikalisch-chemische Erklärung bioelektrischer Phänomene <R>Sey06, S 5. "4 Membrane Theory (1902)"</R>: In Zellen befindet sich eine elektrolytische Flüssigkeit, die von einer für bestimmte Ionen permeablen Membran umgeben ist, und diese Membran besitzt eine Potenzialdifferenz <R>Ber12, S. 92 f.</R>.
 
 > "Denken wir uns, dass diese Elektrolyte aus dem Querschnitt der Fibrillen ungehindert in die umgebende Flüssigkeit diffundieren, wahrend sie am Längsschnitt
   durch die lebende Sarkoplasmahaut daran gehindert werden, well sie für ein Ion derselben, z. B. für das Anion ($PO^-_4$ u. s. w.), mehr oder weniger impermeabel ist, so entstünde auf der Oberfläche der Fibrille eine elektrische Doppelschicht, welche nach innen negative, nach aussen positive Spannung besitzen würde." <R>Ber02, S. 542</R>
 
 In den darauffolgenden Jahren und Jahrzehnten haben zahlreiche Forschungen die Theorie bestätigt: Wir wissen heute, dass die ungleiche Ionenverteilung in der intrazellulären und extrazellulären Flüssigkeit zusammen mit der Permeabilität der Membran für die Entstehung eines Membranpontenzials verantwortlich ist. Im folgenden wollen wir diese Zusammenhänge betrachten, um ein besseres Verständnis für die Signalweiterleitung von Neuronen zu erlangen, was wir im nachfolgenden Kapitel untersuchen.
 
-### 1.3.2 Das Ruhepotenzial
+### 1.3.2 Ionenkonzentrationen und Membranspannungen
 
  Ein Neuron weist in Ruhe[^22] eine ungleiche Ionenverteilung zwischen der durch die Zellmembran getrennten intrazellulären Flüssigkeit (_IZF_: Zytosol) und der extrazellulären Flüssigkeit (EZF) auf. In der IZF befinden sich mehr positiv geladene Natrium-Ionen ($Na^+$), und im EZF mehr positiv geladene Kalium- und Calcium-Ionen ($Ka^+$ und $Ca^{2+}$) sowie mehr negativ geladene Chlorid-Ionen ($Cl^-$).
 
@@ -103,7 +102,7 @@ Wenn auf das Neuron kein _postsynaptisches Potenzial_ (**PSP**) wirkt und das Ne
 > "Die negativen Ladungen im Inneren des Neurons und die positiven Ladungen außerhalb des Neurons ziehen sich in Richtung Zellmembran gegenseitig an, [...] Dementsprechend ist die negative Nettoladung im Inneren der Zelle nicht gleichmäßig im Cytosol verteilt, sondern an der Innenseite der Membran lokalisiert." <R>BCP18, S. 72, Punkt 2</R>
 
 
-**Abbildung 1.3.1**: Die Verteilung von Ionen im Zytosol und der EZF. Aufgrund der elektrostatischen Anziehungskraft ziehen sich Anionen und Kationen[^28] in der Nähe der Membran gegenseitig an, es kommt zu einer negativen Spannung in Membrannähe (zwischen -70 mV -90 mV in Ruhe).
+**Abbildung 1.1**: Die Verteilung von Ionen im Zytosol und der EZF. Aufgrund der elektrostatischen Anziehungskraft ziehen sich Anionen und Kationen[^28] in der Nähe der Membran gegenseitig an, es kommt zu einer negativen Spannung in Membrannähe (zwischen -70 mV -90 mV in Ruhe).
 
 [^28]:Anion: negativ geladenes Ion; Kation: positiv geladenes Ion
 
@@ -144,14 +143,13 @@ Wobei:
 Für eine Körpertemperatur von 37° lässt sich die Nernst-Gleichung für das Gleichgewichtspotenzial $E_K$ wie folgt vereinfachen:
 
 
-<EQ idEq={"Gl. 1.1"}>
+<EQ>
 
 $E_{K} = 61,54 mV  * log_{10} \begin{matrix} [K^+]_{EZF} \\ \hline [K^+]_{IZF} \end{matrix}$
 
 </EQ>
 
 Mit den Werten aus **Tabelle 1.1** ergibt sich somit
-
 <EQ>
 
  $E_{K} = 61,54 mV  * log_{10} \begin{matrix} 1 \\ \hline 20 \end{matrix} = -80 mV$
@@ -190,19 +188,9 @@ Ein weiteres Merkmal der Membran, auf das wir später zurückgreifen werden, ist
 [^37]: [SD07] nutzt für die Bestimmung von $V_m$ die fraktionelle Leitfähgkeit der involvierten Ionen und rechnet
 $V_r = E_K * f_K + E_{Na} * f_{Na} + E_{Cl} * f_{Cl}$ <R>SD07, S. 32 Gl. 1.21</R>
 
-### 1.3.3 Das Aktionspotenzial
+## 1.4 Das Aktionspotenzial
 
-In Ruhe ist die Ladung in der IZF negativ, in der EZF positiv. Durch eine schnelle Umkehrung dieser Verhältnisse ist eine Nervenzelle dazu in der Lage, ein _Signal_ zu auszulösen <R>BCP18, S. 86, "Einführung"</R>. Dieses Signal, das innerhalb einer Nervenzelle erzeugt, über Nervenbahnen weitergeleitet und in anderen Nervenzellen wieder Impulse auslösen kann, nennt man **Aktionspotenzial**. Wir wir im folgenden sehen werden, ist die Entstehung eines Aktionspotenzials auf Ionenbewegungen durch Kanäle zurückzuführen, die durch die Veränderung des Membranpotenzials geöffnet oder geschlossen werden <R>BCP18, S.96, Abs.4</R>.
-
-_Kandel et al._ führen 4 wichtige Eigenschaften des Aktionspotenzials auf <R>KSJ+13, S. 148, Abs. 2 f.</R>:
-  1. Es gibt einen **Schwellenwert** für die Auslösung des Potenzials.
-  2. Das Aktionspotenzial ist ein **Alles-oder-nichts** Ereignis.
-  3. Das Aktionspotenzial wird ohne Verlust weitergeleitet.
-  4. Nach dem auslösen des Aktionspotenzial kommt es zu einer **Refraktärzeit**, in der zunächst kein weiteres Aktionspotenzial ausgelöst werden kann (**absolute Refraktärzeit**), und dann ein stärkeres Signal benötigt wird, um das Aktionspotenzial auszulösen (**relative Refraktärzeit**)
-
-Ursache und Wirkung dieser Eigenschaften wollen wir in diesem Abschnitt betrachten.
-
-#### Geschichte
+### 1.4.1 Die Entdeckung von Reizwellen
 Bereits 1868 hatte Julius Bernstein - knapp 34 Jahre vor seiner Membrantheorie - die Existenz eines Aktionspotenzials vermutet <R>Sch83, S.168</R>. Seine Forschungsarbeit über elektrische Muskel-Nerven-Aktivitäten <R>Ber68</R> schließt er mit den Worten:
 
 > "Ich werde im Folgenden diese Welle mit dem Namen 'Reizwelle' bezeichnen, well derjenige Reiz, durch den die Nervenfaser im Centrum Empfindung, im Muskel Zuckung erzeugt, auf das  Innigste mit dieser Welle verknüpft ist. [...] Da wir nachgewiesen haben, dass die Reizwelle mit derselben Geschwindigkeit sich fortpflanzt als die Erregung, so können wir die wohlberechtigte Annahme machen, dass die Reizwelle Nichts anderes ist als das Bild des im Nerven ablaufenden Erregungsvorganges." <R>Ber68, S. 198 f.</R>
@@ -215,8 +203,16 @@ Knapp 80 Jahre nach Bernsteins Beschreibung der "negativen Schwankungen" und 50 
 [^39]: Zum Schwellenwert: "The curves in Figs. 12 and 21 show that the theoretical 'membrane' has a definite threshold when stimulated by a sudden displacement of membrane potential." <R>HH52, S.535, "Threshold"</R>; zur Refraktärzeit: "Acording to our theory, there are two changes resulting from the depolarization during a spike which make the membrane unable to respond to another stimulus until a certain time has elapsed. These are 'inactivation', which reduces the level to which the sodium conductance can be raised by a depolarization, and the delayed rise in potassium conductance, which tends to hold the membrane potential near to the equilibrium value for potassium ions." <R>HH52, S.532, "Refractory Period"</R>
 [^40]: Medizin-Nobelpreis für die Erforschungen der Ionen-Mechanismen, die bei der Erregung und Hemmung von Nervenzellmembranen beteiligt sind <R>DMW63</R>, zusammen mit John Carew Eccles (1903–1997)
 
+### 1.4.2 Eigenschaften des Aktionspotenzials
+In Ruhe ist die Ladung in der IZF negativ, in der EZF positiv. Durch eine schnelle Umkehrung dieser Verhältnisse ist eine Nervenzelle dazu in der Lage, ein _Signal_ zu auszulösen <R>BCP18, S. 86, "Einführung"</R>. Dieses Signal, das innerhalb einer Nervenzelle erzeugt, über Nervenbahnen weitergeleitet und in anderen Nervenzellen wieder Impulse auslösen kann, nennt man **Aktionspotenzial**. Wir wir im folgenden sehen werden, ist die Entstehung eines Aktionspotenzials auf Ionenbewegungen durch Kanäle zurückzuführen, die durch die Veränderung des Membranpotenzials geöffnet oder geschlossen werden <R>BCP18, S.96, Abs.4</R>.
 
-#### Auslösung eines Aktionspotenzials
+_Kandel et al._ führen 4 wichtige Eigenschaften des Aktionspotenzials auf <R>KSJ+13, S. 148, Abs. 2 f.</R>:
+  1. Es gibt einen **Schwellenwert** für die Auslösung des Potenzials.
+  2. Das Aktionspotenzial ist ein **Alles-oder-nichts** Ereignis.
+  3. Das Aktionspotenzial wird ohne Verlust weitergeleitet.
+  4. Nach dem auslösen des Aktionspotenzial kommt es zu einer **Refraktärzeit**, in der zunächst kein weiteres Aktionspotenzial ausgelöst werden kann (**absolute Refraktärzeit**), und dann ein stärkeres Signal benötigt wird, um das Aktionspotenzial auszulösen (**relative Refraktärzeit**)
+
+### 1.4.3 Auslösung eines Aktionspotenzials
 
 Das Aktionspotenzial wird über das Axon weitergeleitet. Das Axon - die Nervenfaser - besteht aus einem zylindrischen Zytoplasmaschlaucch und ist von einer Plasmamembran umgeben <R>BLS19, S. 73, "Elektrischer Signalfluss im biologischen Kabel"</R>. 
 
@@ -245,7 +241,7 @@ Die Stärke des Signals selber ist unabhängig von dem Wert, zur überschwellige
 [^43]: "Im Computerzeitalter bezeichnet man das axonale Aktionspotenzial auch als 'digitales' Signal." <R>BLS19, S. 75, "Aktionspotenzial bei überschwelligger Reizung"</R>
 
 
-#### Phasen des Aktionspotenzials
+### 1.4.4 Phasen eines Aktionspotenzials
 
 Die Generierung von Aktionspotenzialen kann in folgende Phasen eingeteilt werden, entsprechend ihrer zeitlichen Reihenfolge:
 
@@ -274,7 +270,7 @@ Die Refraktärphase dient u.a. dazu, die Membran vor einer vorzeitigen Neuerregu
 [^48]: Die $Na^+$-$K^+$-ATPase "erhält die Ionenkonzentrationsgradienten aufrecht, die für den Fluss von $Na^+$ und $K^+$ durch die Kanäle während des Aktionspotenzials erforderlich sind" <R>BCP18, S. 105, Abs. 2</R>
 
 
-#### Weiterleitung über das Axon
+### 1.4.5 Signalweiterleitung über das Axon
 
 Kurz nach der Aktionspotenzialbildung befinden sich daran beteiligte Membrane in der Refraktärphase, ihre $Na^+$-Kanäle sind inaktiviert. Somit pflanzt sich das Aktionspotenzial nur in eine Richtung fort[^49] (_orthodrome_ Fortleitung) <R>BCP18, S. 106, Abs. 3</R>. Die Fortleitung geschieht in Richtung der Axonterminal, wo sich die präsynaptischen Endigungen befinden und das elektrische Signal in chemische Signale umgewandelt werden.
 
@@ -289,12 +285,12 @@ Im Gegensatz zu marklosen Nervenfasern erreichen **myelinisierte Axone** eine h�
 
 
 
-## 1.4 Synaptische Übertragung
+## 1.5 Synaptische Übertragung und Integration
 
-### 1.4.1 Die Entdeckung des Vagusstoff
-Otto Loewi erhielt 1936 den Nobelpreis für Medizin für seine Forschungen an der chemischen Übertragung von Nervenimpulsen. 1921 konnte er bei einem Experiment mit Froschpräparaten zeigen, daß die Infusionslösung, die für vorher am Vagusnerv bewusst stimulierte Froschherzen genutzt wurde, den Vagusnerv von nachträglich mit dieser Lösung behandelte Froschherzen stimulieren konnte. Loewi vermutete in der Lösung eine Substanz, die er "Vagusstoff" nannte. Henry Dale - mit dem sich Loewi den Nobelpreis teilte - konnte diesen Stoff später als _Acetylcholin_ identifizieren, ein exzitatorischer Neurotransmitter[^51], der bei chemischen Synapsen als Botenstoff zur Signalünbertragung beteiligt ist (vgl. <R>AHH+98</R> u. <R>BCP18, S. 119, Exkurs 5.1</R>).
+### 1.5.1 Die Entdeckung des Vagusstoff
+Otto Loewi erhielt 1936 den Nobelpreis für Medizin für seine Forschungen an der chemischen Übertragung von Nervenimpulsen. 1921 konnte er bei einem Experiment mit Froschpräparaten zeigen, daß die Infusionslösung, die für vorher am Vagusnerv bewusst stimulierte Froschherzen genutzt wurde, den Vagusnerv von nachträglich mit dieser Lösung behandelte Froschherzen stimulieren konnte. Loewi vermutete in der Lösung eine Substanz, die er "Vagusstoff" nannte. Henry Dale - mit dem sich Loewi den Nobelpreis teilte - konnte diesen Stoff später als _Acetylcholin_ identifizieren, ein exzitatorischer Neurotransmitter[^51], der bei chemischen Synapsen als Botenstoff zur Signalübertragung beteiligt ist (vgl. <R>AHH+98</R> u. <R>BCP18, S. 119, Exkurs 5.1</R>).
 
-### 1.4.2 Synaptische Übertragung
+### 1.5.2 Synaptische Übertragung
 Neben elektrischen Synapsen, bei denen der Signalaustausch durch einen direkten Stromfluss über sog. _gap junctions_ und deren ionenleitfähige Verbindungen[^52] passiert <R>BCP18, S. 103</R>, existieren im Gehirn vor allem _chemische Synapsen_<R>BCP18, S.118, Abs. 3</R>: Die Signalweiterleitung im Gehirn erfolgt überwiegend auf chemische Weise <R>BCP18, S.121, "Chemische Synapsen", Abs.1</R>.
 
 Chemische Synapsen sind nicht direkt miteinander verbunden. Zwischen ihnen existiert ein Spalt, der ca. 20-40 nM breit ist <R>KSJ+13, S. 184, rechte Spalte, Abs. 1</R>, in der sich eine "Matrix aus extrazellulären Proteinen"[^53]  <R>BCP18, S. 122, Abs.2 f.</R> befindet, die den Synapsenspalt überbrückt. Die Übertragung von Signalen erfolgt über Exozytose: Botenstoffe (_Neurotransmittern_) diffundieren  aus den präsynaptischen Endigungen in diesen Spalt <R>BCP18, S. 122, Abs.2 f.</R>, und verschiedene Typen von Rezeptoren an den postsynaptischen Endigungen wandeln die Botenstoffe in hemmende oder erregende Signale um, die dann von der postsynaptischen Zelle nach dem Alles-oder-Nichts-Prinzip integriert werden.
@@ -323,7 +319,7 @@ Die Calcium-Ionen strömen in das Innere der Zelle und lösen die Exozytose von 
 
 Der Calciumeinstrom in die präsynaptische Endigung löst die Verschmelzung dieser Bläschen mit der Zellmembran des Endknöpfchens an der sogenannten **aktiven Zonen**[^54] aus: Ein spezialisierter Abschnitt der Membran, der direkt gegenüber der **postsynaptischen Dichte**[^55] liegt, der Abschnitt der postsynaptischen Endigung, in der sich die Rezeptoren <R>BLS19, S. 95, "Die Struktur chemischer Synapsen" ff.</R> befinden. Kurz nach Beginn der Transmitterübertragung über den synaptischen Spalt findet die **Endozytose** statt, ein Recyclingprozess, in dem die individuellen Vesikelmembranen wiederhergestellt und mit Neurotransmitter erneut aufgefüllt werden <R>BCP18, S. 133, Abs. 1</R>.
 
-### 1.4.3 Neurotransmitter und ihre Rezeptoren
+### 1.5.3 Neurotransmitter und ihre Rezeptoren
 
 Die Diffusion der Vesikel in den synaptischen Spalt dauert ca. 10–100 µs, danach binden sich die Transmitter an die Rezeptoren der postsynaptischen Zelle <R>BLS19, S. 98, rechte Spalte, Punkt. 4</R>, die das "interzellulläre chemische Signal [...] in ein intrazelluläres Signal (eine Änderung des Membranpotenzials oder eine chemische Veränderung) in der postsynaptischen Zelle umwandeln" <R>BCP18, S. 123, Abs. 2</R>.
 
@@ -334,7 +330,7 @@ Als Neurotransmitter spielen im zentralen Nervensystem vor allem  die Aminosäur
 Die Art der Rezeptoren spielt eine wesentliche Rolle, welche Wirkung der Neurotransmitter hat: Ob ein exzitatorischer oder inhibitorischer Transmitter auch dieselbe Wirkung in der postsynaptische Zelle hervorruft, entscheidet sich bei den Rezeptoren <R>BLS19, S. 109, "Wirkung der postsynaptischen Rezeptoren"</R>. Als Beispiel sei hier noch einmal der "Vagusstoff" ACh erwähnt, der die Kontraktion des Herzens verlangsamt, bei der Skelettmuskulatur jedoch eine schnelle Depolarisation der Muskelfasern bewirkt <R>BCP18, S. 137, Abs. 2</R>.
 Erregende und hemmende Synapsen kann man auch an ihrer Struktur erkennen: Asymmetrische oder _Gray-Typ-I-Synapsen_ sind auf der postsynaptischen Seite dicker als auf der präsynaptischen, bei gleicher Dimension der Membrandifferenzierungen spricht man von _Gray-Typ-II-Synapsen_. Typ-I sind in der Regel exzitatorisch, Typ-II inhibitorische  <R>BCP18, S. 127, Abs. 1 u. S. 147 "Struktur und Position von exzitatorischen und inhibitorischen Synapsen"</R>.
 
-### 1.4.4 Synaptische Integration
+### 1.5.4 Synaptische Integration
 
 Die Neurotransmitter eines einzelnen Vesikels lösen einen minimalen exzitatorischen oder inhibitorischen postsynaptischen Strom aus (**mEPSC** bzw. **mIPSC**, _miniature excitatory / inhibitory postsynaptic current_) . EPSCs und IPSCs setzen sich aus einzelnen dieser mEPSC bzw. mIPSC zusammen und bilden die kleinste Einheit der postsynaptischen Ströme, weshalb man sie als _Quanten_ bezeichnet <R>BLS19, S. 97, "Quantale Transmitterfreisetzung" ff.</R>. Da EPSPs ein Vielfaches des Quantums sind, "das die Menge an Transmitter in einem einzigen Vesikel und die Anzahl der postsynaptischen Rezeptoren an der Synapse widerspiegelt", nennt man sie "gequantelt"[^58]<R>PCB18, S. 142, Abs. 1</R>.
 
@@ -417,36 +413,19 @@ Die Verrechnung von EPSP und IPSP erfolgt nicht ausschließlich linear durch Sum
 [^64]: "häufig bei für Chloridleitfähigen GABA Rezeptoren" <R>BLS19, S. 100, "Kurzschlusshemmung"</R>
 
 
+## 1.6 Zusammenfassung und Bemerkungen
 
+Ein biologisches neuronales Netz ist ein hochkomplexer Kommunikationsverbund, in dem verschiedene biochemische Prozesse ineinandergreifen. Aus einiger Entfernung betrachtet bilden all diese Prozesse ein Fundament für eine wesentliche Funktion: Der Informationsverarbeitung. Denn charakteristisch für eine einzelne Nervenzelle ist anscheinend:
 
+ 1. Der Empfang von Signalen
+ 2. Die Verrechnung von Signalen
+ 3. Die Ausgabe eines Signals
 
+Diese drei Punkte haben wir in diesem einführenden Kapitel auf einer feingranularen Ebene kennengelernt: Die postsynaptischen Rezeptoren, an denen Transmitter binden, empfangen die Signale und leiten sie weiter zum Soma, wo über zeitliche oder räumliche Summation entschieden wird, ob ein Aktionspotenzial folgt - oder ob das Signal an dieser Stelle "verstummt". Löst ein Aktionspotenzial aus, erfolgt das Ausgabesignal in Form der Neurotransmitter, die in den synaptischen Spalt diffundieren, und so setzt sich die Kette fort, bis tausende von Neuronen dieses Signal an das Ende der Kommunikationskette weitergeleitet haben. So können wir also die Ausgabeberechnung nicht nur für einzelne Neuronen betrachten - aufschlussreich wird es vor allem, wenn wir das Ausgabesignal in dem Verbund betrachten, in dem es übertragen wurde. Denn ob ein Vesikel ein mEPSC versursacht, mag auf analytischer Ebene interessant sein; es sagt aber nichts daraus aus, ob ein Schmerzimpuls über 10tausende vor ihm verschaltete Synapsen eine muskuläre Reaktion ausgelöst hat.
 
+Es muß verschiedene Schaltungsmuster im Gehirn geben, und diese können nicht alle zufällig ablaufen (auch, wenn dieses einführende Kapitel nicht näher auf die "Stochastik" bei der Signalübertragung eingehen konnte [QUELLE]). Wir wissen bereits, dass ein Neuron mit den Dendriten mehrerer Neurone verbunden sein kann (**Divergenz**); dass ein Neuron die Signale mehrerer vorgeschalteter Neurone empfängt (**Konvergenz**). Darüber hinaus gibt es aber noch komplexere Formen der Verschaltung, wie die **rekurrente Hemmung** und die **laterale Hemmung** <R>Eil19, S. 58, "Verschaltungsmuster" ff.</R>, deren Muster zuerst an Boolesche Algebra denken lassen als an den Graph aus einem neuronalen Netz.
 
+Diese Verschaltung von verrechnenden Einheiten fasziniert die Wissenschaft, die versucht ist, diese hochkomplexe Eleganz in mathematische Formeln zu gießen, um ein einheitliches Modell zu schaffen, das die Funktionsweise des Gehirns erklärt. Immer wieder gelangen ihr auch kleine und große Erfolge: So zählt das Hodgkin-Huxley-Modell aus **1.4.1** sicher zu den bedeutsameren Entdeckungen, von der Jahrzehnte später noch die Forschungsabteilungen und Fachbereiche zehren. Manches gelingt ihr aber bis heute nicht. Spannend ist weiterhin die Frage, wie und ob Neuronen an unserem Bewusstsein beteiligt sind, oder wie "Inutition" entsteht.
 
+Die Neurowissenschaft bedient jedenfalls Wissenschaften interdisziplinär - und so verwundert es nicht, das frühe Erklärungsversuche der Funktionsweise in abstrahierte Modelle auf Maschinen übertragen wurden - mit dem Ziel, ihnen das Denken beizubringen. Mit einigen davon dürfen wir uns in dem zweiten Teil dieser Arbeit befassen.
 
-<!--
-
-> At present the thickness and composition of the ecitable mebrane are unknown [HH52, S.501, "The nature of permeability changes"]
-
-> Details of the mechanism will probably not be settled for some time, but it seems difficult to escape the conclusion that the changes in ionic permeability depend on the movement of some component of the membrane which behaves as though it had a large charge or dipole moment [HH52, S.504]
-
-> Acording to our theory,
-  there are two changes resulting from the depolarization during a spike which
-  make the membrane unable to respond to another stimulus until a certain
-  time has elapsed. These are 'inactivation', which reduces the level to which the sodium conductance can be raised by a depolarization, and the delayed
-rise in potassium conductance, which tends to hold the membrane potential
-near to the equilibrium value for potassium ions. [HH52, S.532, "Refractory Period"]
-
-> Threshold. The curves in Figs. 12 and 21 show that the theoretical
-  'membrane' has a definite threshold when stimulated by a sudden displacement of membrane potential. [HH52, S.535, "Threshold"]
-
-> The range of phenomena to which our equations are relevant is limited in
-  two respects: in the first place, they cover only the short-term responses of the
-  membrane, and in the second, they apply in their present form only to the
-  isolated squid giant axon. [HH52, S. 541, "Range of applicability of the equations"]
-
-Neurone empfangen eingangssignale. konvertieren diese in Aktionspotenziale und generieren schlißlich Ausgangssignale auf ihren Zielzellen [BLS19, S. 72]
-Siehe hierzu auch KSJ+13 S.30 Figure 2.9
-
-
-  -->
