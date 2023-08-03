@@ -4,8 +4,9 @@ title: "1. Das Neuron"
 description: Aufbau und Funktionsweise einer Nervenzelle
 ---
 
-import {R, F, S, EQ} from "../../../src/components/Refs.js";
+import {R, F, S, EQ, initEq} from "../../../src/components/Refs.js";
 
+<initEq main={1} />
 
 ## 1.1 Einleitung
 Um ein Verständnis für das Modell der im weiteren Verlauf dieser Arbeit beschriebenen _künstlichen neuronalen Netze_ zu erlangen, wollen wir uns zunächst mit dem menschlichen Neuron als "strukturelle und funktionelle Einheit des Nervensystems" <R>SD07, S.42</R> beschäftigen.<br />
@@ -48,7 +49,7 @@ Die eingehende Schnittstelle eines Neurons sind seine **Dendriten**: Baumförmig
 [^14]: aufgrund der signalempfangenden Eigenschaften und der dünnen Spitzen der Dendriten liegt der Vergleich mit "Antennen" nahe <R>BCP18, S. 28, Abs. 2</R>
 [^15]: das menschliche Gehirn besitzt mindestens $10^11$ Neuronen <R>KSJ+13, S. 175, Abs. 2</R>
 
-Die Dendriten leiten Signale weiter an das **Soma** (oder _Perikaryon_ <R>RK18, S. 58, "Aufbau"</R>, den Zellkörper und das Stoffwechselzentrum des Neurons, der eine Größe von ca. 20 μm[^16] <R>BCP18, S. 29</R> besitzt. In der Zelle befindet sich - durch die _Neuronenmembran_[^17] von der Umgebung getrennt - _Zytosol_, eine salzige, wässrige Flüssigkeit mit einem hohen Anteil von Kalium <R>BCP18,  S.29, "Das Soma"</R> (s. Tab. 1.1). In dem Zytosol eingebettet sind weitere subzelluläre Strukturen mit eigener Membranbegrenzung, die _Zellorganellen_ <R>SD07 S.8, Abs. 2</R>. Für die nachfolgenden Untersuchungen interessieren uns bei dem Zellkörper aber vor allem die Zellmembran und der _transmembranale Transport_ von Ionen[^18] zur Änderung des Membranpotenzials, insbesondere in der Nähe des **Axonhügels** (ca. 20-50 µm vom Soma <R>BLS19, S. 77, "Ort der Aktionspotenzialinitiation"</R>): Dort entspringt das **Axon**, welches in einer "salzigen extrazellulären Flüssigkeit mit hoher Leitfähigkeit" <R>PCB18, S. 61, Abs. 1</R>[^19] liegt. Hier entscheidet sich, ob das Neuron Informationen weiterleitet: Die Summation der durch die postsynaptischen Endigungen einhergehenden Signale kann eine Depolarisation[^20] der Membran an dieser Stelle <R>Eil19, S. 61, "Soma"</R> über einen gewissen **Schwellenwert** bewirken, so das ein **Aktionspotenzial**[^21] ausgelöst wird <R>BCP18, p.142 f.</R>. Dadurch wird in den präsynaptischen Endigungen die Exozytose ausgelöst.
+Die Dendriten leiten Signale weiter an das **Soma** (oder _Perikaryon_ <R>RK18, S. 58, "Aufbau"</R>, den Zellkörper und das Stoffwechselzentrum des Neurons, der eine Größe von ca. 20 μm[^16] <R>BCP18, S. 29</R> besitzt. In der Zelle befindet sich - durch die _Neuronenmembran_[^17] von der Umgebung getrennt - _Zytosol_, eine salzige, wässrige Flüssigkeit mit einem hohen Anteil von Kalium <R>BCP18,  S.29, "Das Soma"</R> (vgl. auch Ionenkonzentration in **Tabelle 1.1**). In dem Zytosol eingebettet sind weitere subzelluläre Strukturen mit eigener Membranbegrenzung, die _Zellorganellen_ <R>SD07 S.8, Abs. 2</R>. Für die nachfolgenden Untersuchungen interessieren uns bei dem Zellkörper aber vor allem die Zellmembran und der _transmembranale Transport_ von Ionen[^18] zur Änderung des Membranpotenzials, insbesondere in der Nähe des **Axonhügels** (ca. 20-50 µm vom Soma <R>BLS19, S. 77, "Ort der Aktionspotenzialinitiation"</R>): Dort entspringt das **Axon**, welches in einer "salzigen extrazellulären Flüssigkeit mit hoher Leitfähigkeit" <R>PCB18, S. 61, Abs. 1</R>[^19] liegt. Hier entscheidet sich, ob das Neuron Informationen weiterleitet: Die Summation der durch die postsynaptischen Endigungen einhergehenden Signale kann eine Depolarisation[^20] der Membran an dieser Stelle <R>Eil19, S. 61, "Soma"</R> über einen gewissen **Schwellenwert** bewirken, so das ein **Aktionspotenzial**[^21] ausgelöst wird <R>BCP18, p.142 f.</R>. Dadurch wird in den präsynaptischen Endigungen die Exozytose ausgelöst.
 
 [^16]: ein menschliches Haar hat einen Durchmesser von ca. 70 μm, kleine Bakterien bis zu 20 μm [WEmb]
 [^17]: Membrandicke ca. 5 nm (<R>BLS19</R>, Seite 66, letzter Absatz linke Spalte)
@@ -82,12 +83,12 @@ In den darauffolgenden Jahren und Jahrzehnten haben zahlreiche Forschungen die T
 | $Na^+$  | 150                        | 15                | 10:1       |
 | $Ca^{2+}$ | 2                          | 0,0002            | 10000 : 1  |
 | $Cl^-$  | 150                        | 13                | 11,5 : 1   |
-**Tabelle 1.3.1**: Ionenkonzentration eines Neurons in Ruhe (nach <R>BCP18, S.75, Abb.3.15</R>)
+**Tabelle 1.1**: Ionenkonzentration eines Neurons in Ruhe (nach <R>BCP18, S.75, Abb.3.15</R>)
 
 <br /><br />
 
 Das Membranpotenzial des Neurons wird durch die Verteilung von Ionen in der IZF und EZF bestimmt: In der Membran befinden sich **Ionenkanäle**, von denen viele _selektiv permeable_[^23] sind, d.h., sie lassen nur bestimmte Ionen durch (_Ionenselektivität_)[^24]<R>BCP18, S 66., Abs. 3</R>. Viele dieser Kanäle können über Änderungen in der Umgebung des Neurons geöffnet oder geschlossen werden (**Gating**, <R>KSJ+13, S.108, 2. Abs. rechte Spalte</R>). <br />
-Neben den Ionenkanälen existieren auch **Ionenpumpen** ("**ATPasen**"[^25]<R>SD07, S. 26, 2. Abs</R>), die für die Aufrechterhaltung der Ionenverteilung zuständig sind: die $Ca^{2+}$- und $Na^+$-$K^+$-ATPasen sorgen dafür, daß im Neuron laufend  $Ca^{2+}$ und $Na^+$ aus und $K^+$ in die Zelle gepumpt wird <R>SD07, S. 44</R>). Zusammen mit den selektiv permeablen Ionenkanälen entstehen so die Ionenkonzentrationen in **Tabelle 1.3.1**.
+Neben den Ionenkanälen existieren auch **Ionenpumpen** ("**ATPasen**"[^25]<R>SD07, S. 26, 2. Abs</R>), die für die Aufrechterhaltung der Ionenverteilung zuständig sind: die $Ca^{2+}$- und $Na^+$-$K^+$-ATPasen sorgen dafür, daß im Neuron laufend  $Ca^{2+}$ und $Na^+$ aus und $K^+$ in die Zelle gepumpt wird <R>SD07, S. 44</R>). Zusammen mit den selektiv permeablen Ionenkanälen entstehen so die Ionenkonzentrationen in **Tabelle 1.1**.
 
 [^23]: "_permeare_" (lat.) durchwandern
 [^24]: Kaliumkanäle sind durchlässig für $K^+$ Ionen, Natriumkanäle durchlässig für $Na^+$ Ionen usw.
@@ -141,13 +142,15 @@ Wobei:
 <br /><br />
 
 Für eine Körpertemperatur von 37° lässt sich die Nernst-Gleichung für das Gleichgewichtspotenzial $E_K$ wie folgt vereinfachen:
-<EQ>
 
- $E_{K} = 61,54 mV  * log_{10} \begin{matrix} [K^+]_{EZF} \\ \hline [K^+]_{IZF} \end{matrix}$
+
+<EQ idEq={"Gl. 1.1"}>
+
+$E_{K} = 61,54 mV  * log_{10} \begin{matrix} [K^+]_{EZF} \\ \hline [K^+]_{IZF} \end{matrix}$
 
 </EQ>
 
-Mit den Werten aus Tabelle 1.1 ergibt sich somit
+Mit den Werten aus **Tabelle 1.1** ergibt sich somit
 
 <EQ>
 
@@ -159,13 +162,7 @@ Wie wir oben gesehen haben, liegt $V_r$ zwischen -70 mV und - 90mV. Wie können 
 
 #### Berücksichtigung mehrerer Ionen bei der Bestimmung des Membranpotenzials
 Ionenkanäle unterstützen einen _passiven Transport_ der Ionen zwischen EZF und IZF _entlang_ ihres Konzentrationsgefälles <R>BLS19, S.30, "Aktive und passive Transportmechanismen"</R>, während Ionenpumpen, die _entgegen_ des Konzentrationsgefälles arbeiten, _aktiv transportieren_[^34]. Ionenpumpen sind für die Ionenkonzentrationsgradienten und deren Aufrechterhaltung verantwortlich <R>BCP18, S.76 f.</R>[^35].
-Um $V_m$ zu berechnen müssen die Ionen mitberücksichtigt werden, für die die Membran durchlässig ist. Dies kann mit der **Goldman-Gleichung** [^36] geschehen, die zusätzlich für die Berechnung des Membranpotenzials $V_m$ [WAS IST MIT V_R? NACHWEIS RUHE?] die Permeabilität der Membran für einzelne Ionen berücksichtigt [^37]:
-
-[^34]: hierfür wird metabolische Energie verbraucht <R>BLS19, S. 31, "Primär aktiver Transport"</R>
-[^35]: es wird ein nicht unwesentlicher Teil von Energie zur Aufrechterhaltung dieser Gradienten verbraucht. Die Natrium-Kalium-Pumpe verbraucht laut <R>BCP18</R>, S. 76, 1. Abs., etwa 70 % der ATP-Menge (siehe auch [^25]:), die das Gehirn benötigt.
-[^36]: auch: **Goldman-Hodgkin-Katz-Gleichung** (GHK-Gleichung) nach David Eliot Goldman (1910–1998), Alan Lloyd Hodgkin(1914 - 1998) und Bernard Katz (1911 - 2003).
-[^37]: [SD07] nutzt für die Bestimmung von $V_m$ die fraktionelle Leitfähgkeit der involvierten Ionen und rechnet
- $V_r = E_K * f_K + E_{Na} * f_{Na} + E_{Cl} * f_{Cl}$ <R>SD07, S. 32 Gl. 1.21</R>
+Um $V_m$ zu berechnen müssen die Ionen mitberücksichtigt werden, für die die Membran permeabel ist. Dies kann mit der **Goldman-Gleichung**[^36] geschehen[^37]:
 
 <EQ>
 
@@ -179,14 +176,19 @@ $V_{r} = \begin{matrix} RT \\ \hline F \end{matrix} * ln \begin{matrix}
 &nbsp;<R>KSJ+13</R> stellt hierzu fest, daß eine hohe Konzentration eines einzelnen Ions zusammen mit einer hohen Membranpermeabilität für dieses Ion auch einen größeren
 Beitrag für $V_r$ leistet <R>KSJ+13, S. 135, "Goldman Equation"</R>, weshalb man folgern darf:
 
-
 > "[...] when permeability to one ion is exceptionally high, the Goldman equation reduces to the Nernst equation for that ion." <R>KSJ+13, S. 135, "Goldman Equation"</R>.
 
 &nbsp;<R>BLS19</R> weist darauf hin,
 
 > "dass die Permeabilitäten in komplizierter Weise von der Membranspannung und den Ionenkonzentrationen [...] abhängen und sich meist nur näherungsweise bestimmen lassen." <R>BLS19, S.67, Goldman Gleichung</R>.
 
-Die elektrische Leitfähigkeit $g_{Ion}$ der Membran ist proportional zu der Anzahl der offenen Ionenkanäle $N_{Ion}$. <R>BCP18, S. 93, "Ströme und Leitfähigkeiten in der Membran"</R>
+Ein weiteres Merkmal der Membran, auf das wir später zurückgreifen werden, ist die _elektrische Leitfähigkeit_ $g_{Ion}$; für sie gilt, dass sie proportional zu der Anzahl der offenen Ionenkanäle $N_{Ion}$ ist. <R>BCP18, S. 93, "Ströme und Leitfähigkeiten in der Membran"</R>
+
+[^34]: hierfür wird metabolische Energie verbraucht <R>BLS19, S. 31, "Primär aktiver Transport"</R>
+[^35]: es wird ein nicht unwesentlicher Teil von Energie zur Aufrechterhaltung dieser Gradienten verbraucht. Die Natrium-Kalium-Pumpe verbraucht laut <R>BCP18</R>, S. 76, 1. Abs., etwa 70 % der ATP-Menge (siehe auch [^25]:), die das Gehirn benötigt.
+[^36]: auch: **Goldman-Hodgkin-Katz-Gleichung** (GHK-Gleichung) nach David Eliot Goldman (1910–1998), Alan Lloyd Hodgkin(1914 - 1998) und Bernard Katz (1911 - 2003).
+[^37]: [SD07] nutzt für die Bestimmung von $V_m$ die fraktionelle Leitfähgkeit der involvierten Ionen und rechnet
+$V_r = E_K * f_K + E_{Na} * f_{Na} + E_{Cl} * f_{Cl}$ <R>SD07, S. 32 Gl. 1.21</R>
 
 ### 1.3.3 Das Aktionspotenzial
 
@@ -301,7 +303,7 @@ Chemische Synapsen sind nicht direkt miteinander verbunden. Zwischen ihnen exist
 [^52]: _Konnexone_ sind Zell-Zell-Verbindungen <R>SD07, S. 50, "Synaptische Übertragung", Abs. 2</R>
 [^53]: lies: _extrazelluläre Matrix_. Hierbei handelt sich um den Gewebeanteil im _Interzellularraum_, also der Raum ausserhalb der Zellen: "The extracellular matrix [...] surrounds all connective tissue cells providing mechanical support and physical strength to tissues, organs and the organism as a whole" <R>AHH+98, S. 3, Abs. 2</R>
 
-Die durch das Aktionspotenzial ausgelöste Depolarisation der Membran an den Axonterminalen bewirkt eine Öffnung spannungsgeladener Calcium-Canäle <R>KSJ+13, S. 184, rechte Spalte, Abs. 2</R>. Durch die ungleiche $Ca^{2+}$ Ionenkonzentration zwischen der EZF und IZF (10.000 : 1, s. Tab. 1.1) entsteht eine hohe Triebkraft für $Ca^{2+}$: Nach Gl. 1.1 ergibt sich für das Gleichgewichtspotenzial für $Ca^2+$
+Die durch das Aktionspotenzial ausgelöste Depolarisation der Membran an den Axonterminalen bewirkt eine Öffnung spannungsgeladener Calcium-Canäle <R>KSJ+13, S. 184, rechte Spalte, Abs. 2</R>. Durch die ungleiche $Ca^{2+}$ Ionenkonzentration zwischen der EZF und IZF (10.000 : 1, s. **Tabelle 1.1**) entsteht eine hohe Triebkraft für $Ca^{2+}$: Nach Gl. 1.1 ergibt sich für das Gleichgewichtspotenzial für $Ca^2+$
 
 <EQ>
 
@@ -356,16 +358,48 @@ $V_m = E_{Ion}$
 
 In diesem Fall entspricht die Membranspannung dem Gleichgewichtspotenzial des Ions - es findet keine Nettoionenbewegung statt.  <br />
 
-Der Wert für $V_m$, bei dem die Differenz zwischen $V_m$ und $E_{Ion}$ bei $0$ liegt, wird das _Umkehrpotenzial_ $V_{rev}$ genannt, weil hier ein Vorzeichenwechsel stattfindet: Je nachdem, in welche Richtung sich $V_m$ ändert, ändert sich auch die Richtung des Stroms. Man darf hier folgern, das für ein einzelnes Ion das _Umkehrpotenzial_ gleich seinem _Gleichgewichtspotenzial_ ist[^61] <R>BLS19, S. 39, "Das elektrochemische Potenzial" f.</R>.<br />
+Der Wert für $V_m$, bei dem die Differenz zwischen $V_m$ und $E_{Ion}$ bei $0$ liegt, wird das _Umkehrpotenzial_ $V_{rev}$ genannt, weil hier ein Vorzeichenwechsel stattfindet: Je nachdem, in welche Richtung sich $V_m$ ändert, ändert sich auch die Richtung des Stroms. Für ionenspezifische Kanäle entspricht das _Umkehrpotenzial_ ihrem _Gleichgewichtspotenzial_ <R>SBB+12, S. 95, "Hyperpolarization or Depolarization" f.</R>.<br />
 
-<R>BCP18, S. 136, "Exkurs 5.4" f.</R> verdeutlicht die Rolle des Umkehrpotentials:
+Sobald eine Membran permeabel für mehr als ein spezifisches Ion ist, muss nach <R>KSJ+13</R> die relative Leitfähigkeit der Membran für diese Ionen sowie deren Gleichgewichtspotenziale zur Bestimmung des Umkehrpotenzials berücksichtigt werden. Für die ACh-Rezeptoren an der motorischen Endplatte[^62], die für $Na^+$ und $K^+$ permeabel sind, folgt damit, dass die Summe ihrer Ströme am Umkehrpotenzial $V_{rev} = 0$ sein muss:
 
-Sei das Membranpotenzial einer Zelle $V_m < 0mV$, und ein Transmitter aktiviert postsynaptische Rezeptorkanäle, die für $Na^+$ und $K^+$ gleich permeable sind. Die Goldmangleichung ergibt für $V_m$ dann einen Wert zwischen $E_{Na}$ und $E_{K}$ (etwa $0mV$) [NACHWEIS], also fließen die Ströme einwärts, um $V_m < 0mV$ auf $0mV$ zu bringen. Verschiebt sich das Membranpotenzial zu einem Wert, der größer als der Schwellenwert des Aktionspotenzials $V_t$ ist, ist die Wirkung des Neurotransmitters exzitatorisch. <br/>
-Sei nun $V_m > 0mV$: Die Ionen strömen auswärts, es findet eine Hyperpolarisierung statt, das Membranpotenzial wird weniger positiv. Die Wirkung des Transmitters ist inhibitorisch, wenn $V_m$ zu einem Wert $< V_t$ verschoben wird.
+<EQ>
 
-Im Allgemeinen gilt, das an erregenden Synapsen unspezifische Kationenkanäle öffnen, deren Umkehrpotential im Bereich von $0mV$ liegt: Hier kommt es zu einer Depolarisation (EPSP). An hemmenden Synapsen öffnen $Cl^-$- oder $K^+$-Kanäle - deren Umkehrpotential ist $\leq V_r$, wozu es meist zu einer leichten Hyperpolarisation kommt <R>BLS19, S. 100, "9.3.2 Umkehrpotenzial" ff.</R>.
+$I_{Ka} + I_{Na} = 0$
 
-Die Verrechnung von EPSP und IPSP erfolgt nicht ausschließlich linear durch Summation - inhibitorische Synapsen können auch für einen "Kurzschluss" sorgen und somit ein EPSP um ein Vielfaches verkleinern <R>Sil03, S. 477, "Shunting inhibitory conductances" f.</R>. Man spricht dann von einer _Kurzschlusshemmung_ (**shunting inhibition**). Wenn ein Transmitter einer inhibitorischen Synapse $Cl^-$-Kanäle aktiviert, verschiebt sich das Membranpotenzial in Richtung $E_{Cl} \sim -65 mV$. Ist das Membranpotential der Zelle $> -65 mV$, kann ein hyperpolarisierendes IPSP ausgelöst werden. Wenn allerdings bereits $V_m = E_{Cl}$ ist[^62], wird kein "sichtbares" IPSP ausgelöst <R>BCP18, S. 145, letzter Absatz ff.</R> - die $Cl^-$-Kanäle sind offen, aber es findet keine Nettoionenbewegung statt. Eine Hemmung der Zelle kann aber trotzdem noch stattfinden, wenn bspw. ein distal liegende exzitatorische Synapse positive Ladungsströme verursacht, und die inhibitorische Synapse proximal zum Soma liegt, in Stromrichtung ausgehend von der exzitatorischen Synapse. Der positive Ladungsstrom kommt an der inhibitorischen Synapse mit den geöffnet $Cl^-$-Kanälen an, und die Depolarisation durch das EPSP wird durch den Einfluss von $Cl^-$-Ionen (die $V_m$ wieder auf $V_{rev} = E_{Cl}$ bringen wollen) mitigiert. Aus diesem Grund sind inhibitorische Synapsen oft proximal zum Soma zu finden <R>KSJ+13, S. 231, rechte Spalte, Abs. 2 f.</R>
+</EQ>
+
+Da der Membranstrom $I_{Ion}$ gleich dem Produkt der Membranleitfähigkeit und der elektrochemischen Triebkraft für dieses Ion ist <R>BCP18, S. 93 "Ströme und Leitfähigkeiten in der Membran" f.</R>, also
+
+<EQ>
+
+$I_{Ion} = g_{Ion} * (V_m - E_{Ion})$
+
+</EQ>
+
+liefert Ersetzen die Gleichung
+
+<EQ>
+
+$g_{Na} * (V_m - E_{Na}) = g_{K} * (V_m - E_{K})$
+
+</EQ>
+
+Da am Umkehrpotential $V_{rev} = V_m$ gilt, können wir $V_m$ durch $E_{rev}$ ersetzen und danach auflösen, was zur folgenden Gleichung führt (vgl. <R>KSJ+13, S. 196, Box 9-1 f.</R>):
+
+<EQ>
+
+$E_{rev} = \begin{matrix}
+E_{Na} \space * \space (g_{Na} \space / \space g_{K}) \space + \space E_{K}  \\ \hline
+(g_{Na} \space / \space g_{K}) \space + 1
+\end{matrix}$
+
+</EQ>
+
+Die ACh-Rezeptoren haben an der Endplatte[^63] eine relative Leitfähigkeit für $Na^+:$K^+$ von $1,8$, für die Gleichgewichtspotenziale gilt $E_{Na} = +55 mV$ und $E_{K} = -100 mV$; somit folgt nach Einsetzen $E_{rev} = 0mV$ <R>BLS19, S. 100, "Acetylcholnrezeptoren"</R>. Wenn nun das Membranpotenzial vor der Einwirkung von ACh $< 0mV$ ist, bewirkt ein Öffnen der Ionenkanäle einen Strom einwärts IZF, um $V_m$ auf $0$ zu bringen (Depolarisation); im umgekehrten Fall $V_m > 0$ fließen Ionen auswärts zu EZF, und es findet eine Hyperpolarisation statt <R>BCP18, S. 136, "Exkurs 5.4" f.</R>.
+
+Im Allgemeinen gilt, das an erregenden Synapsen unspezifische Kationenkanäle öffnen, deren Umkehrpotential im Bereich von $0mV$ liegt: Hier kommt es zu einer Depolarisation (EPSP). An hemmenden Synapsen öffnen $Cl^-$- oder $K^+$-Kanäle und es gilt dort $V_{rev} \leq V_r$, wonach es meist zu einer leichten Hyperpolarisation kommt <R>BLS19, S. 100, "9.3.2 Umkehrpotenzial" ff.</R>.
+
+Die Verrechnung von EPSP und IPSP erfolgt nicht ausschließlich linear durch Summation - inhibitorische Synapsen können auch für einen "Kurzschluss" sorgen und somit ein EPSP um ein Vielfaches verkleinern <R>Sil03, S. 477, "Shunting inhibitory conductances" f.</R>. Man spricht dann von einer _Kurzschlusshemmung_ (**shunting inhibition**). Wenn ein Transmitter einer inhibitorischen Synapse $Cl^-$-Kanäle aktiviert, verschiebt sich das Membranpotenzial in Richtung $E_{Cl} \sim -65 mV$. Ist das Membranpotential der Zelle $> -65 mV$, kann ein hyperpolarisierendes IPSP ausgelöst werden. Wenn allerdings bereits $V_m = E_{Cl}$ ist[^64], wird kein "sichtbares" IPSP ausgelöst <R>BCP18, S. 145, letzter Absatz ff.</R> - die $Cl^-$-Kanäle sind offen, aber es findet keine Nettoionenbewegung statt. Eine Hemmung der Zelle kann aber trotzdem noch stattfinden, wenn bspw. ein distal liegende exzitatorische Synapse positive Ladungsströme verursacht, und die inhibitorische Synapse proximal zum Soma liegt, in Stromrichtung ausgehend von der exzitatorischen Synapse. Der positive Ladungsstrom kommt an der inhibitorischen Synapse mit den geöffnet $Cl^-$-Kanälen an, und die Depolarisation durch das EPSP wird durch den Einfluss von $Cl^-$-Ionen (die $V_m$ wieder auf $V_{rev} = E_{Cl}$ bringen wollen) mitigiert. Aus diesem Grund sind inhibitorische Synapsen oft proximal zum Soma zu finden <R>KSJ+13, S. 231, rechte Spalte, Abs. 2 f.</R>
 
 
 
@@ -378,7 +412,9 @@ Die Verrechnung von EPSP und IPSP erfolgt nicht ausschließlich linear durch Sum
 [^59]: <R>BCP18</R> vergleicht die Dendriten mit einem löchrigen Gartenschlauch <R>BCP18, S. 143, "Kabeleigenschaften der Dendriten" ff.</R>
 [^60]: <R>BCP18, S. 146, Exkurs 5.6 f.</R> stellt die Bedeutung inhibitorischer Synapsen anschaulich dar.
 [^61]: ist die Membran für mehrere Ionen permeabel, wird $V_{rev}$ gemittelt (vgl. <R>BLS19, S. 100, "Acetylcholinrezeptoren"</R>)
-[^62]: "häufig bei für Chloridleitfähigen GABA Rezeptoren" <R>BLS19, S. 100, "Kurzschlusshemmung"</R>
+[^62]: chemische Synapse, die Erregungen an eine Muskelfaser weiterleitet <R>SD07, S. 56, "Motorische Endplatte"</R>
+[^63]: <R>KSJ+13</R> verweits an der Stelle auf Kapitel 10, in der eine ähnliche Herangehensweise an die Berechnung von Umkehpotenzialen für Nervenzellen im zentralen Nervensystem vorgestellt wird
+[^64]: "häufig bei für Chloridleitfähigen GABA Rezeptoren" <R>BLS19, S. 100, "Kurzschlusshemmung"</R>
 
 
 
