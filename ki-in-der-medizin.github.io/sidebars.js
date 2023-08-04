@@ -10,7 +10,10 @@ const sidebars = {
             link: {type: 'doc', id: 'kapitel/index'},
             items: [
                 "kapitel/einleitung/index",
-                "kapitel/neuron/index"
+                "kapitel/neuron/index",
+                "kapitel/neuron_als_mathematisches_modell/index",
+             //   "kapitel/neuronale_netze_und_deep_learning/index",
+             //   "kapitel/anwendung_in_der_medizin/index",
             ]
         },
         "literaturverzeichnis/index"
