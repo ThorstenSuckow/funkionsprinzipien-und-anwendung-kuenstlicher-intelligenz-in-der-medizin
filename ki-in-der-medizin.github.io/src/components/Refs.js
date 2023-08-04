@@ -23,7 +23,7 @@ function Equation ({children, part}) {
     const [count, setCount] = useState(gIdEq)
 
     React.useEffect(() => {
-        setCount(gIdEq++)
+        setCount(gIdEq++);
     }, [initial]);
 
 
