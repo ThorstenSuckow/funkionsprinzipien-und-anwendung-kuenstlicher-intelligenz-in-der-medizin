@@ -10,6 +10,10 @@ Quotation style: IEEE
 ### Das Neuron
 
 #### Zitierte Literatur
+
+- **[AR88]** J. A. Anderson und E. Rosenfeld, Hrsg., Neurocomputing: Foundations of Research. Cambridge, MA, USA: MIT Press, 1988. ISBN:978-0-262-01097-9
+
+
 - **[BCP18]** M. F. Bear, B. W. Connors und M. A. Paradiso, _Neurowissenschaften: Ein grundlegendes Lehrbuch für Biologie, Medizin und Psychologie_, A. K. Engel, Hrsg., Berlin, Heidelberg: Springer Berlin Heidelberg, 2018. https://doi.org/10.1007/978-3-662-57263-4.
 
 - **[Lyr17]** H. Lyre, "Philosophie der Neurowissenschaften". In: S. Lohse und T. Reydon (Hg.): _Grundriss Wissenschaftsphilosophie: Die Philosophien der Einzelwissenschaften_. S. 319-353, Hamburg: Meiner, 2017. (Zitate aus http://philpapers.org/archive/LYRCFV.pdf)
@@ -52,3 +56,26 @@ Quotation style: IEEE
   
 - **[SBB+12]** R. Squire, Hrsg., Fundamental neuroscience, 4th ed. Amsterdam; Boston: Elsevier/Academic Press, 2013.
 
+## Das Neuron als mathematisches Modell
+
+ - **[GBC18]** I. Goodfellow, Y. Bengio, und A. Courville, Deep Learning. MIT Press, 2018. ISBN: 3958457002.
+
+
+### Review
+ - **[OF05]** B. A. Olshausen und D. J. Field, „How Close Are We to Understanding V1?“, Neural Computation, Bd. 17, Nr. 8, S. 1665–1699, Aug. 2005, https://10.1162/0899766054026639.
+
+ - **[BJ90]** R. Beale und T. Jackson, Neural computing: an introduction, First issued in hardback. in A Taylor & Francis book. Boca Raton London New York: CRC Press, 2017.
+
+
+ - **[LBH15]** Y. LeCun, Y. Bengio, und G. Hinton, „Deep learning“, Nature, Bd. 521, Nr. 7553, S. 436–444, Mai 2015, https://10.1038/nature14539.
+
+ - **[MM96]** R. Moreno-Díaz, J. Mira, und W. S. McCulloch, Hrsg., Brain processes, theories, and models: an international conference in honor of W.S. McCulloch 25 years after his death. Cambridge, Mass: MIT Press, 1996.
+
+ - **[HI97]** F. C. Hoppensteadt und E. M. Izhikevich, „Introduction“, in Weakly Connected Neural Networks, New York, NY: Springer New York, 1997, S. 3–24. https://10.1007/978-1-4612-1828-9_1.
+
+ - **[Roj93]** R. Rojas, „Das Modell von McCulloch und Pitts“, in Theorie der neuronalen Netze: Eine systematische Einführung, Berlin, Heidelberg: Springer Berlin Heidelberg, 1993, S. 29–50. https://doi.org/10.1007/978-3-642-61231-2_2.
+
+ - siehe [Roj93] **[Roj96]** H. K. London, „A Systematic Introduction“, Neural Networks, 1996.
+
+
+ - **[Hay99]** Neural Networks A Comprehensive Foundation (2nd Edition)
