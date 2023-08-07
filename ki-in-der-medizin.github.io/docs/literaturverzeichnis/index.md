@@ -56,12 +56,18 @@ Quotation style: IEEE
   
 - **[SBB+12]** R. Squire, Hrsg., Fundamental neuroscience, 4th ed. Amsterdam; Boston: Elsevier/Academic Press, 2013.
 
+- **[FAU94]** L. Fausett, Fundamentals of Neural Networks: Architectures, Algorithms, and Applications. USA: Prentice-Hall, Inc., 1994. ISBN 0-13-334186-0
+
+
 ## Das Neuron als mathematisches Modell
 
  - **[GBC18]** I. Goodfellow, Y. Bengio, und A. Courville, Deep Learning. MIT Press, 2018. ISBN: 3958457002.
 
 
 ### Review
+
+- **[AB16]** M. A. Arbib und J. J. Bonaiuto, From Neuron to Cognition via Computational Neuroscience. The MIT Press, 2016. ISBN 0-262-03496-4
+
 
 - **[MMA+19]** A. R. Mehta, P. R. Mehta, S. P. Anderson, B. L. H. MacKinnon, und A. Compston, „Etymology and the neuron(e)“, Brain, Bd. 143, Nr. 1, S. 374–379, Dez. 2019, https://doi.org/10.1093/brain/awz367.
 
@@ -77,6 +83,8 @@ Quotation style: IEEE
 
 
 - **[Neu93]** J. von Neumann, „First draft of a report on the EDVAC“, IEEE Annals of the History of Computing, Bd. 15, Nr. 4, S. 27–75, 1993,  https://doi.org/10.1109/85.238389.
+
+ - **[Neu56]** J. von Neumann, „Probabilistic Logics and the Synthesis of Reliable Organisms From Unreliable Components“, in Automata Studies. (AM-34), Volume 34, C. E. Shannon und J. McCarthy, Hrsg., Princeton: Princeton University Press, 1956, S. 43–98. doi: doi:10.1515/9781400882618-003.
 
 
  - **[Neu51]** J. von Neumann, „The general and logical theory of automata.“, in Cerebral mechanisms in behavior; the Hixon Symposium., Oxford,  England: Wiley, 1951, S. 1–41.
