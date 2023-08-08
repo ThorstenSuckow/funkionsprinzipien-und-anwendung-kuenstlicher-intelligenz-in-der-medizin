@@ -1,6 +1,6 @@
 ---
 id: index
-title: "2. Das Neuron als mathematisches Modell"
+title: "2. Künstliche Neuronen"
 description: Die Abstrahierung von Neuronenfunktionalitäten
 ---
 
@@ -20,7 +20,26 @@ Hopfield's network (1982). Although amenable to mathematical analysis, these mod
  - Bezug zu Biologie / Neuron als Vorbild
  - Rolle Turing . Roj93, S. 47, Satz 2.4 Jeder endliche Automat kann mit einem Netz von McCulloch-Pitts-Zellen simuliert werden
 
-## 2.1 Einführung
+## 2.1 Das McCulloch-Pitts-Neuron
+
+Im Jahr 1943 veröffentlichen Warren McCulloch (1898 - 1969) und Walter Pitts (1923 - 1969) ihre Arbeit "A logical calculus of the ideas immanent in nervous activity" <R>MP43</R>, ein auf **Aussagenlogik** gestütztes formales System für die mathematische Modellierung von Signalverarbeitung und -weiterleitung im Nervensystem.
+
+McCulloch war studierter Pyschologe, Philosoph und Mediziner. Schon früh (1917) treiben ihn grundlegende philosophische Fragen um <R>Arb19, "Introduction", S. 1</R>:
+
+> What is a number, that a man may know it, and a man that he may know a number? <R>Mcc61, S.7, Abs.3</R>
+
+"What is a number" beantwortet ihm die Mathematik. Der zweite Teil der Frage soll ihn Zeit seines Lebens beschäftigen und Fundament seiner Arbeit werden <R>Abr02, S. 4 letzter Abs. ff</R>.
+
+Die Suche nach nach Antworten auf diese philosophische Fragen drängt ihn in die Neurowissenschaften <R>Mcc67, S. iii</R>. Er formuliert das "psychon", um psychische Ereignisse logisch zu erklären: Hierbei ist ein "psychon" ein einzelnes psychisches Ereignis, das entweder auftritt oder nicht, und das nur auftritt, wenn ein vorhergehendes Ereignis es auslöst, und es soll ein nachgehendes "psychon" auslösen können <R>Mcc61, S. 5</R>. Charakteristika boolescher Funktionen sind hier bereits erkennbar <R>Abr02, S. 7</R>, und im Jahre 1929 beginnt er die Ähnlichkeiten mit dem Alles-oder-Nichts-Prinzip von Nervenzellen zur Formalisierung seines Kalküls zu berücksichtigen <R>Mcc61, S. 6</R>:
+
+> "[...] it dawned on me that these events might be regarded as the all-or-none-impulses of neurons [...]. I began to try to formulate a proper calculus for these events by subscribting symbols for propositions in some sort of caclculus of propositions [...]" <R>Mcc61, S. 6</R>
+
+Doch seine Arbeit hierdran stagniert, und es soll bis zu seiner Berufung an das Neuropsychiatrischen Institut der Universität von Illinios im Jahr 1941 dauern, bevor er Walter Pitts vorgestellt wird, mit dem er gemeinsam das Kalkül erarbeitet.
+
+In Chicago assistiert der Autodidakt und Mathematiker Walter Pitts dem Biologen Nicolas Rashevsky (1899 - 1972). Rashevsyk selberbeeinflusst mit seiner Arbeit das Verständnis und die Anwendung mathematischer Beschreibungen hinsichtlich Funktionen von Nerven beeinflusst <R>Abr02, S. 13</R>
+
+> "In these works, formal logic and mathematics played a strong role, and thus biology as a discipline was reaching a more mature stage, as it began to incorporate the scientific method of physics, that is, using theoretical analysis and mathematical formulations." <R>Abr02, S. 7</R>
+
 
 ## Persona
 ### McCulloch
@@ -29,11 +48,33 @@ Hopfield's network (1982). Although amenable to mathematical analysis, these mod
  - 1929-1931 Studium Mathematik
  - 1941 - 1952  Neuropsychiatric Institute of the University of Illinois in Chicago, trifft dort Pitts
  - 1952 - 1968 MIT
+ - Pitts stößt 1040 zu Rshevsky
+ >  Early in 1942, Jerome Lettvin
+introduced Pitts to McCulloch, Lettvin having come into contact with McCulloch as a medical
+student. Pitts was about 17 at the time, and McCulloch was in his mid-forties. Lettvin reports 19
+that McCulloch was “enchanted” with Pitts, and McCulloch invited both him and Lettvin to
+stay at his house with his family. Abr02, S.18
 
 ### Zitate
 
-### McC16
-> What is a number that a man may know it, and a man that he may know a number [McC61, S.7, Abs.3 ]
+### Tur36
+> Let us imagine the operations performed by the computer to be split up
+into "simple operations" which are so elementary that it is not easy to
+imagine them further divided. S-. 250
+
+### McCulloch Zitate
+
+
+>
+
+ - Mcc61 Erwähnt Auswirkungen auf Neumann, Zustandekommen von dem MP43 Paper und das von Rashevsky veröffentlicht wurde.
+
+
+
+> As McCulloch recalled, it dawned on me that these events migjht be regarded as the all-or-none-impulses of neurons, combined by convergence upon the next neuron to yield complexes of propositional events. [...]  “began to try to
+formulate a proper calculus for these events by subscripting symbols for propositions in some
+sort of calculus of propositions . . .” (McCulloch, 1965a, p. 9).
+
 
 #### Arb 19
 > Among the key players in these developments was the neurologist Warren Sturgis McCulloch (1898-
@@ -149,9 +190,27 @@ to the biological reality. [Per88, "Nerve cells and brains", S. 10]
 and long dormancy of Perceptron models of largescale neuronal circuits, which were the most direct
 descendants of the McCulloch-Pitts neural networks, also reinforced such disillusion with theory [Per88, "Theoretical models in neurobiology", S. 11]
 
+### Min67
+
+ - MCP "two state machines" - baut aus ihnen  andere endliche automaten [Min67, S. 32]
+ - MCP "designed for the representaion and analysis of the logic of situations that arise in any discrete process, be it in brain, computer, or anywhere else." [Min67, S. 32]
+ - den Automaten, den man hiermit nachbaut, wird  "neuronales Netz genannt [Min67, S. 33]
+ - nimmt bezug auf sperrige Notation auf S. 36
+ - "The reader will note that our exposition here is an expansion of von Neumann" Bezug auf Neu56, in Min67, S. 61
+
+### [Cow90]
+
+> Thus McCulloch-Pitts nets, as they are sometimes called, are finite state
+automata in which the present state, i.e. the pattern of activation of all neurons
+in the net, together with the afferent stimulus, determines the next state. S.76
+
 
 
 ### 2.2 Das MCP-Neuron
+
+> Mind” no longer “goes more ghostly than a ghost.”
+S. 114 - Formalismus erlaubt eine Analyse: Cow90, S. 76: "that neural nets with feedback loops can exhibit
+purposive behavior,"
 
 Die Autoren beginnen das Paper mit der Aussage, daß, basierend auf dem "Alles-oder-nichts Gesetz" - Ereignisse von Nervenzellen und ihrer Beziehungen untereinander wie Aussagenlogik verstanden werden können.
 
