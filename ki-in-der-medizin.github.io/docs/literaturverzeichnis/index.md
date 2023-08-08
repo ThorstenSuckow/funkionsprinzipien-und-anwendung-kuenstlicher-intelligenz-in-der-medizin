@@ -58,13 +58,26 @@ Quotation style: IEEE
 
 - **[FAU94]** L. Fausett, Fundamentals of Neural Networks: Architectures, Algorithms, and Applications. USA: Prentice-Hall, Inc., 1994. ISBN 0-13-334186-0
 
+ - **[Fra94]** Frank RG. Instruments, nerve action, and the all-or-none principle. Osiris. 1994;9:208-35. doi: 10.1086/368737. PMID: 11613429.
+
+ - **[Luc05]** Lucas K. On the gradation of activity in a skeletal muscle-fibre. J Physiol. 1905 Nov 9;33(2):125-37. doi: 10.1113/jphysiol.1905.sp001115. PMID: 16992800; PMCID: PMC1465742.
 
 ## Das Neuron als mathematisches Modell
+
+- **[Mcc67]** „McCulloch, W. S. (1967a). Lekton, being a belated introduction to the thesis of Eilhard von Domarus. In L. Thayer (Ed.). _Communication: Theory and research. Proceedings of the first symposium_ (pp. 348–350). Springfield IL: Charles C. Thomas.“
 
  - **[GBC18]** I. Goodfellow, Y. Bengio, und A. Courville, Deep Learning. MIT Press, 2018. ISBN: 3958457002.
 
 
 ### Review
+
+
+
+
+- **[Abr02]** T. H. Abraham, „(Physio)logical circuits: The intellectual origins of the McCulloch-Pitts neural networks“, J. Hist. Behav. Sci., Bd. 38, Nr. 1, S. 3–25, 2002, doi: 10.1002/jhbs.1094.
+
+
+ - **[Min67]** Minsky, M. (1967). "Computation: Finite and Infinite Machines", Prentice Hall, 1967
 
 - **[AB16]** M. A. Arbib und J. J. Bonaiuto, From Neuron to Cognition via Computational Neuroscience. The MIT Press, 2016. ISBN 0-262-03496-4
 
