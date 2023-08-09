@@ -63,6 +63,9 @@ Quotation style: IEEE
 
 ## Das Neuron als mathematisches Modell
 
+ - **[Abl10]** C. Ableitinger, Biomathematische Modelle im Unterricht: Fachwissenschaftliche und didaktische Grundlagen mit Unterrichtsmaterialien, Wiesbaden: Vieweg+Teubner, 2011, https://doi.org/10.1007/978-3-8348-9770-1.
+
+
  - **[AR98]**  A. Anderson & E. Rosenfeld (Eds.), _Talking nets: An oral history of neural networks_. Cambridge MA: MIT Press, 1998.
 
  - **[OV00]** W. Oberschelp und G. Vossen, Rechneraufbau und Rechnerstrukturen. ed. 8. Auflage, Oldenbourg Wissenschaftsverlag, 2000.
