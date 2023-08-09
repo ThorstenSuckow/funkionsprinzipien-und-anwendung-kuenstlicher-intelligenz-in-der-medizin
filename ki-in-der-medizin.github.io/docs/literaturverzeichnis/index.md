@@ -13,7 +13,6 @@ Quotation style: IEEE
 
 - **[AR88]** J. A. Anderson und E. Rosenfeld, Hrsg., Neurocomputing: Foundations of Research. Cambridge, MA, USA: MIT Press, 1988. ISBN:978-0-262-01097-9
 
-
 - **[BCP18]** M. F. Bear, B. W. Connors und M. A. Paradiso, _Neurowissenschaften: Ein grundlegendes Lehrbuch für Biologie, Medizin und Psychologie_, A. K. Engel, Hrsg., Berlin, Heidelberg: Springer Berlin Heidelberg, 2018. https://doi.org/10.1007/978-3-662-57263-4.
 
 - **[Lyr17]** H. Lyre, "Philosophie der Neurowissenschaften". In: S. Lohse und T. Reydon (Hg.): _Grundriss Wissenschaftsphilosophie: Die Philosophien der Einzelwissenschaften_. S. 319-353, Hamburg: Meiner, 2017. (Zitate aus http://philpapers.org/archive/LYRCFV.pdf)
@@ -64,9 +63,26 @@ Quotation style: IEEE
 
 ## Das Neuron als mathematisches Modell
 
+ - **[AR98]**  A. Anderson & E. Rosenfeld (Eds.), _Talking nets: An oral history of neural networks_. Cambridge MA: MIT Press, 1998.
+
+ - **[OV00]** W. Oberschelp und G. Vossen, Rechneraufbau und Rechnerstrukturen. ed. 8. Auflage, Oldenbourg Wissenschaftsverlag, 2000.
+
+- **[Lev94]** Lettvin, J. Y. (1998). Interview with J.A. Anderson and E. Rosenfeld. In J. A. Anderson & E. Rosenfeld (Eds.), Talking nets: An oral history of neural networks (pp. 2–21). Cambridge MA: MIT Press.
+
+ - **[Cow98]** Cowan, J. D. (1998). Interview with J.A. Anderson and E. Rosenfeld. In J. A. Anderson & E. Rosenfeld (Eds.), Talking nets: An oral history of neural networks (pp. 97–124). Cambridge MA: MIT Press.
+
+ - **[Wie48]** N. Wiener, _Cybernetics of control and communication in the animal and the machine_. New York: The M.I.T. Press And John Wiley, 1961.
+   ‌
+
+ - **[Mas90]** R. Masani, „McCulloch, Pitts and the Evolution of Wiener’s Neurophysiological Ideas“, in _Norbert Wiener 1894–1964_, Basel: Birkhäuser Basel, 1990, S. 218–238. https://doi.org/10.1007/978-3-0348-9252-0_16.
+
+- **[Kue19]** E. W. U. Küppers, „Einleitung und Lernziele“, in Eine transdisziplinäre Einführung in die Welt der Kybernetik: Grundlagen, Modelle, Theorien und Praxisbeispiele, Wiesbaden: Springer Fachmedien Wiesbaden, 2019, S. 1–3. https://doi.org/10.1007/978-3-658-23725-7_1.
+
 - **[Mcc67]** „McCulloch, W. S. (1967a). Lekton, being a belated introduction to the thesis of Eilhard von Domarus. In L. Thayer (Ed.). _Communication: Theory and research. Proceedings of the first symposium_ (pp. 348–350). Springfield IL: Charles C. Thomas.“
 
  - **[GBC18]** I. Goodfellow, Y. Bengio, und A. Courville, Deep Learning. MIT Press, 2018. ISBN: 3958457002.
+
+ - **[Rau88]** W. Rautenberg, _Einführung in die Mathematische Logik_. Wiesbaden: Vieweg+Teubner Verlag, 2008. https://doi.org/10.1007/978-3-8348-9530-1.
 
 
 ### Review
