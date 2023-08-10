@@ -19,6 +19,7 @@ Hopfield's network (1982). Although amenable to mathematical analysis, these mod
  - Rolle von Neumann (s. auch Roj93, S. 35 Abs.1), außerdem Neu56, Roj93 nimmt auf S. 40 darauf BEzug, sowie auf S.50, außerdem AR88, S. 17 und S. 81
  - Bezug zu Biologie / Neuron als Vorbild
  - Rolle Turing . Roj93, S. 47, Satz 2.4 Jeder endliche Automat kann mit einem Netz von McCulloch-Pitts-Zellen simuliert werden
+ - über die aktivierungsfunktion geht die eingabe verloren, da 0 oder 1 ist ursüpung nicht da und es kann nur auf binaären neuronen gearbeitet werden
 
 ## 2.1 Das McCulloch-Pitts-Neuron
 
@@ -55,7 +56,7 @@ Die **Principia Mathematica** (PM) <R>PW25</R><R>PW27a</R><R>PW27b</R> der Philo
 
 > The "all-or-none law" of nervous activity is sufficient to insure that the activity of any neuron may be represented as a proposition <R>MP43, S. 100</R>
 
-Für ihren Kalkül gehen sie von folgenden Eigenschaften von Nervenzellen:
+Für ihren Kalkül gehen sie von folgenden physischen Eigenschaften von Nervenzellen aus <R>MP43, S. 101</R>:
 
 1. Ein Neuron arbeitet auf Basis des Alles-oder-Nichts-Prinzip
 2. Eine gewisse Anzahl von Synapsen muss innerhalb einer bestimmten Zeit angeregt werden, um ein Neuron zu erregen
@@ -63,12 +64,64 @@ Für ihren Kalkül gehen sie von folgenden Eigenschaften von Nervenzellen:
 4. Eine einzige hemmende Synapse verhindert die Erregung des betreffenden Neurons
 5. Die Struktur des neuronalen Netzes ändert sich nicht
 
-Die Modellierung der o.g. Eigenschaften erfolgt mittels aussagenlogischer Notationen, die aus der PM übernommen worden, und als sperrig gilt [^9]. Im folgenden <R>AR88, S. 16, Abs. 3</R>
+### 2.1.3 Das Modell
+Dies und den weiteren Inhalt der Arbeit von McCulloch und Pitts nehmen wir uns nun zum Vorbild zur Modellierung eines künstlichen Neurons. Hierbei verzichten wir auf eine vollständige Erklärung der Theoreme, die die Arbeit begleiten und die formalen Bausteine liefern. Im Sinne einer besseren Lesbarkeit überführen wir die aus der PM übernommene Notation für Aussagenlogik [^9] in die geläufigere Form, also "$\land$" für die _Konjunktion_, "$\lor$" für die _Disjunktion_ sowie "$\neg$" für die _Negation_
 
+Insgesamt ergeben sich folgende Anforderungen an unser Modell (vgl. <R>Fau94, S. 26 ff.</R>):
 
+a. Das Verhalten des künstlichen Neurons ist zweiwertig, also _binär_. Das Neuron feuert, oder es feuert nicht. Im Sinne der Beziehung zwischen Eingabe und Ausgabe verstehen wir im unter "feuern" den Wert $1$. Wenn ein Neuron nicht feuert, wird dies durch den Wert $0$ repräsentiert, der ebenfalls aus Ausgabe vorliegt. In diesem Sinne produziert unser Modell also immer ein "Signal", im Gegensatz zu denen in chemischen Synapsen ausgelösten Exoztyose, die entweder stattfindet, oder nicht. S. auch 1.5.2 "Synaptische Übertragung".
+
+b. Ein Neuron empfängt (beliebig viele) Eingabesignale (im Sinne von a.)
+
+c. Ein Schwellenwert ist jedem Neuron zu eigen und wird für das Neuron festgelegt. Der Schwellenwert muß übertroffen werden, damit das Neuron feuert.
+
+c. Hemmung ist "absolut": Liegt ein hemmendes Signal zusammen mit nicht-hemmenden Signalen an dem Ziel-Neuron an, feuert das Neuron nicht[^10]
+
+d. Für die Signalübertragung wird ein diskreter Zweitwert $t \in \Z$ vereinbart: Die Übertragung eines Signals dauert eine Zeiteinheit. Für die weitere Betrachtung folgen wir <R>Roj93 S. 33 letzter Abs. ff.</R> und ignorieren zunächst die Zeitwerte
+
+**Abbildung 2.1** Schematische Darstellug eines MCP-Neurons, nach <R>MP43</R> schwarze Kreise sind erregende Signale, offene Kreise sind hemmende Signale. In der Original-Arbeit benötigt ein Neuron zwei erregende Eingaben, um aktiviert zu werden. a) Zeigt damit ein Netz von zwei Neuronen, bei denen $N_2$ feuert, wenn $N_1$ feuert. Mit der Berücksichtigung der Zeiteinheit folgt die formale Darstellung $N_2(t) \equiv N(t - 1)$. Gleicherwiese ergibt sich aus b), das $N_3$ nur feuert, wenn $N_1$ **und** $N_2$ feuern: $N3(t) \equiv N(t - 1) \land N(t - 2)$. Analog folgt für c) $N3(t) \equiv N(t - 1) \lor N(t - 2)$ und für d) $N3(t) \equiv \neg N(t - 1)$
 
 [^8]: Nach <R>Lev94, S. 2</R> liest Pitts die Principia Mathematica mit 12 Jahren
-[^9]: Eine ausführliche Übersicht findet sich unter https://plato.stanford.edu/entries/pm-notation/ (abgerufen 10.8.2023)
+[^9]: Die Notation aus der PM gilt als sperrig <R>AR88, S. 16, Abs. 3</R>. Eine ausführliche Übersicht der in der PM gebräuchlichen Notation findet sich unter https://plato.stanford.edu/entries/pm-notation/ (abgerufen 10.8.2023)
+[^10]: Für eine formale Beschreibung von absoluter und relativer Hemmung siehe <R>Roj03, S. 42 ff.</R>
+
+#### 2.1.2.1 Die Aktivierungsfunktion
+
+Für die Schwellenwertfunktionen eines Neurons ergeben sich informell folgende Anforderungen: Die Summe der Eingabesignale $x_i, ..., x_n$ muss den für das Neuron festgelegten Schwellenwert $\Theta \in \N_0$ überschreiten, damit als Ausgabe eine $1$ erzeugt wird, ansonsten liefert die Funktion eine $0$ zurück. Wir benötigen hierzu eine **Eingabefunktion** zur Verarbeitung der eingehenden Signale, sowie eine Funktion, die entscheidet, ob das Neuron feuert.
+
+Für die Eingabesignale $X$
+
+<EQ>
+
+$X \in \{1, 0\}^n := (x_1, ..., x_n)$
+
+</EQ>
+
+
+(mit $1$ erregend, $0$ hemmend) liefert die **Eingabefunktion** $g$ (vgl. _b._)
+
+<EQ>
+
+$g: \{1, 0\}^n \to \N_0, X \mapsto \sum^n_{i=1} x_i$
+
+</EQ>
+
+die Summe der Eingabesignale zurück.
+
+Die Schwellenwertfunktion realisieren wir als **Treppenfunktion**, die $1$ zurückliefert, falls $g(X) >= \Theta$, und $0$ sonst  (vgl. _a._):
+
+<EQ>
+
+$f: \N_0 \to \{0, 1\}, f(x) = f(g(X)) = \begin{cases}
+1 &\text{if} &x >= \Theta \\
+0 &\text{if} &x >= \Theta
+\end{cases}$
+
+</EQ>
+
+Dies nennt man im Kontext von neuronalen Netzen auch die **Aktivierungsfunktion**: Sie entscheidet, ob einzelne Neurone aktiviert werden oder nicht.
+
+**Abbildung 2.1** Schematische Darstellung eines MCP-Neurons
 
 ### Zitate
 
