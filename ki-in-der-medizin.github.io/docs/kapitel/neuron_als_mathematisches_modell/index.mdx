@@ -22,25 +22,25 @@ Hopfield's network (1982). Although amenable to mathematical analysis, these mod
 
 ## 2.1 Das McCulloch-Pitts-Neuron
 
+### 2.1.1 Von der Philosophie zur Neurowissenschaft
+
 Im Jahr 1943 veröffentlichen Warren McCulloch (1898 - 1969) und Walter Pitts (1923 - 1969) ihre Arbeit "A logical calculus of the ideas immanent in nervous activity" <R>MP43</R>, ein auf **Aussagenlogik**[^1] gestütztes formales System für die mathematische Modellierung von Signalverarbeitung und -weiterleitung im Nervensystem. Ihre Arbeit gilt als wegweisend für die Kybernetik[^2] und Von-Neumann-Computerarchitektur[^3] <R>Arb19, S. 1, "Introduction"</R>[^4].
 
 McCulloch war studierter Pyschologe, Philosoph und Neurophysiologe. Schon früh (1917) treiben ihn grundlegende philosophische Fragen um <R>Arb19, "Introduction", S. 1</R>:
 
 > What is a number, that a man may know it, and a man that he may know a number? <R>Mcc61, S.7, Abs.3</R>
 
-"What is a number" beantwortet ihm die Mathematik. Der zweite Teil der Frage soll ihn Zeit seines Lebens beschäftigen und Fundament seiner Arbeit werden <R>Abr02, S. 4 letzter Abs. ff</R>: Die Suche nach Antworten auf diese und andere philosophische Fragen[^5] drängt ihn in die Neurowissenschaften <R>Mcc67, S. iii</R>. Er formuliert das "psychon", um psychische Ereignisse logisch zu erklären: Hierbei ist ein "psychon" ein einzelnes psychisches Ereignis, das entweder auftritt oder nicht, und das nur auftritt, wenn ein vorhergehendes Ereignis es auslöst, und es soll ein nachgehendes "psychon" auslösen können <R>Mcc61, S. 5</R>. Charakteristika boolescher Funktionen sind hier bereits erkennbar <R>Abr02, S. 7</R>, und im Jahre 1929 beginnt er die Ähnlichkeiten mit dem Alles-oder-Nichts-Prinzip von Nervenzellen zur Formalisierung seines Kalküls zu berücksichtigen <R>Mcc61, S. 6</R>:
+"What is a number" beantwortet ihm die Mathematik. Der zweite Teil der Frage soll ihn Zeit seines Lebens beschäftigen und Fundament seiner Arbeit werden <R>Abr02, S. 4 letzter Abs. ff</R>: Die Suche nach Antworten auf diese und andere philosophische Fragen[^5] drängt ihn in die Neurowissenschaften <R>Mcc67, S. iii</R>. Er formuliert das "psychon", um psychische Ereignisse auf das wesentlichste zu reduzieren und somit logisch erklären zu können: Hierbei ist ein "psychon" ein einzelnes psychisches Ereignis, das entweder auftritt oder nicht, und das nur auftritt, wenn ein vorhergehendes Ereignis es auslöst, und es soll ein nachgehendes "psychon" auslösen können <R>Mcc61, S. 5</R>. Charakteristika der zweiwertigen Aussagenlogik sind hier bereits erkennbar <R>Abr02, S. 7</R>; im Jahr 1929 beginnt er die Ähnlichkeiten zu dem Alles-oder-Nichts-Prinzip von Nervenzellen zur Formalisierung seines Kalküls zu berücksichtigen <R>Mcc61, S. 6</R>:
 
 > "[...] it dawned on me that these events might be regarded as the all-or-none-impulses of neurons [...]. I began to try to formulate a proper calculus for these events by subscribting symbols for propositions in some sort of caclculus of propositions [...]" <R>Mcc61, S. 6</R>
 
-Doch seine Arbeit hierdran stagniert, und es soll bis zu seiner Berufung an das Neuropsychiatrische Institut der Universität von Illinios im Jahr 1941 dauern, bis er Walter Pitts kennenlernt, mit dem er gemeinsam das Kalkül erarbeitet.
+Doch seine Arbeit stagniert, und es soll bis zu seiner Berufung an das Neuropsychiatrische Institut der Universität von Illinios im Jahr 1941 dauern, bis er Walter Pitts kennenlernt, mit dem er gemeinsam den Kalkül erarbeitet.
 
 In Chicago besucht der Autodidakt <R>Lev98, S.2</R> Walter Pitts Kurse bei dem Philosophen und Logiker Rudolf Carnap (1891- 1970) sowie bei dem Biomathematiker[^6] Nicolas Rashevsky (1899 - 1972) <R>Pic04, S.183 letzter Abs. ff.</R>, der mit seiner Arbeit das Verständnis und die Anwendung mathematischer Beschreibungen hinsichtlich Funktionen von Nerven beeinflusst <R>Abr02, S. 13</R>[^7] sowie ab 1939 die Zeitschrift "Bulletin of Mathematical Biophysics" veröffentlicht <R>Abr02, S. 16, Abs. 4</R>.
-Pitts selber gilt als brillianter Mathematiker <R>Arb19, S. 4, Abs. 3</R> und wird später als "the intelligence behind [...] McCulloch" bezeichnet: Mit der Hilfe des knapp 19 jährigen Pitts verfaßt der mittlerweile über 40jährige McCulloch in nur wenigen Monaten nach ihrem Kennenlernen das berühmte Papier <R>Cow98, S. 104, Abs. 3 f.</R>
+Pitts selber gilt als brillianter Mathematiker <R>Arb19, S. 4, Abs. 3</R> und wird später als "the intelligence behind [...] McCulloch" bezeichnet: Mit der Hilfe des knapp 19-jährigen Pitts veröfffentlichen die beiden nur wenigen Monaten nach ihrem Kennenlernen das "logical calculus"-Papier <R>Cow98, S. 104, Abs. 3 f.</R>
 
 
-
-
-[^1]: Die Aussagenlogik beschäftigt sich mit der Verknüpfung von Aussagen und deren Wertigkeit unter der Berücksichtigung der Wahrheitswerte "wahr" und "falsch" <R>Rau88</R>
+[^1]: Die (zweiwertige) Aussagenlogik beschäftigt sich mit der Verknüpfung von Aussagen und deren Wertigkeit unter der Berücksichtigung der Wahrheitswerte "wahr" und "falsch" <R>Rau88</R>
 [^2]: Norber Wiener (1894 - 1964) gilt als Begründer der Kybernetik, die <R>Kue19</R> beschreibt als: "wirkungsvolle Kommunikation bzw. verlustarmer Daten- und Informationsaustausch, der in der Natur die Überlebensfähigkeit und in der Technik die maschinelle, prozessuale Funktionalität stärkt und dadurch Fehler vermeiden hilft." Wiener und McCulloch lernen sich im Winter 1942 kennen <R>Mas90, S. 218</R>. Unter dem Vorsitz von McCulloch wird auf den sog. "Macy-Konferenzen" zwischen 1946 (https://www.asc-cybernetics.org/foundations/history/MacySummary.htm, abgerufen 09.08.2023) und 1953 Biologie und Technologie diskutiert <R>Arb19, S. 5, Abs. 2</R>. In Folge dessen veröffentlicht Wiener 1948 seine Arbeit "Cybernetics: Or Control and Communication in the Animal and the Machine" <R>Wie48</R>
 [^3]: Die Architektur zeichnet sich durch eine Zentraleinheit, der Speichereinheit und Ein-/Ausgabeinheit aus, die über Busse verbunden sind <R>OV08, S. 230</R>
 [^4]: s. auch <R>AR88, S. 17</R>: "The immense theoretical influence of this paper was not among neuroscientists but among computer scientists."
@@ -48,19 +48,27 @@ Pitts selber gilt als brillianter Mathematiker <R>Arb19, S. 4, Abs. 3</R> und wi
 [^6]: "Biomathematik" ist ein Teilgebiet der angewandten Mathematik und die mathematische Ausrichtung der theoretischen Biologie, die sich mit Modell- und Theoriebildung zur Beschreibung biologischer Zusammenhänge beschäftigt. (https://de.wikipedia.org/wiki/Theoretische_Biologie, abgerufen 09.08.2023). Teilgebiete der Biomathematik sind u.a. Demographie, Mathematische Ökologie, Epidemologie, Populationsgenetik <R>Abl10, S. 1-28</R>
 [^7]: "In these works, formal logic and mathematics played a strong role, and thus biology as a discipline was reaching a more mature stage, as it began to incorporate the scientific method of physics, that is, using theoretical analysis and mathematical formulations." <R>Abr02, S. 7</R>
 
-## Persona
-### McCulloch
- - 1923 Master psychologie,
- - 1927 MD
- - 1929-1931 Studium Mathematik
- - 1941 - 1952  Neuropsychiatric Institute of the University of Illinois in Chicago, trifft dort Pitts
- - 1952 - 1968 MIT
- - Pitts stößt 1040 zu Rshevsky
- >  Early in 1942, Jerome Lettvin
-introduced Pitts to McCulloch, Lettvin having come into contact with McCulloch as a medical
-student. Pitts was about 17 at the time, and McCulloch was in his mid-forties. Lettvin reports 19
-that McCulloch was “enchanted” with Pitts, and McCulloch invited both him and Lettvin to
-stay at his house with his family. Abr02, S.18
+
+### 2.1.2 Der Kalkül
+
+Die **Principia Mathematica** (PM) <R>PW25</R><R>PW27a</R><R>PW27b</R> der Philosophen und Mathematiker Bertrand Russell (1872 - 1970) und Alfred Whitehead (1861 - 1947) ist ein Werk über die Grundlagen der Mathematik und erschien in drei Bänden zwischen 1910 und 1913. In ihr versuchen Russel und Bertrand den Beweis der These, dass die Mathematik eine Erweiterung der formalen Logik ist[^8] <R>She26, S. 226, Abs. 2</R>. McCulloch stellt sich die Frage, ob, wenn die PM den Versuch unternimmt, die mathematische Komplexität über ein Fundament von Aussagenlogik zu erklären, es nicht möglich sei, Aussagenlogik auch auf die Vorgänge im Gehirn anzuwenden <R>Arb19, S.4, Abs. 1</R>. Basierend auf der Zweiwertigkeit des Alles-oder-nichts-Gesetz (entweder findet etwas statt, oder es findet nicht statt) finden Pitts und McCulloch ihren Kalkül: Ereignisse von Nervenzellen und ihre Beziehungen untereinander sollen auf Basis der Aussagenlogik erklärt werden können.
+
+> The "all-or-none law" of nervous activity is sufficient to insure that the activity of any neuron may be represented as a proposition <R>MP43, S. 100</R>
+
+Für ihren Kalkül gehen sie von folgenden Eigenschaften von Nervenzellen:
+
+1. Ein Neuron arbeitet auf Basis des Alles-oder-Nichts-Prinzip
+2. Eine gewisse Anzahl von Synapsen muss innerhalb einer bestimmten Zeit angeregt werden, um ein Neuron zu erregen
+3. Die einzige signifikante Verzögerung bei der Signalübertragung innerhalb des Nervensystems ist bedingt durch synaptische Verzögerungen
+4. Eine einzige hemmende Synapse verhindert die Erregung des betreffenden Neurons
+5. Die Struktur des neuronalen Netzes ändert sich nicht
+
+Die Modellierung der o.g. Eigenschaften erfolgt mittels aussagenlogischer Notationen, die aus der PM übernommen worden, und als sperrig gilt [^9]. Im folgenden <R>AR88, S. 16, Abs. 3</R>
+
+
+
+[^8]: Nach <R>Lev94, S. 2</R> liest Pitts die Principia Mathematica mit 12 Jahren
+[^9]: Eine ausführliche Übersicht findet sich unter https://plato.stanford.edu/entries/pm-notation/ (abgerufen 10.8.2023)
 
 ### Zitate
 
