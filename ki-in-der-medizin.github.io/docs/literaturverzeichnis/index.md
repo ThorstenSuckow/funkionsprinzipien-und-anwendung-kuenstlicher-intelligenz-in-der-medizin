@@ -63,6 +63,9 @@ Quotation style: IEEE
 
 ## Das Neuron als mathematisches Modell
 
+ - **[RN09]** S. J. Russell und P. Norvig, Künstliche Intelligenz: Ein moderner Ansatz, 3., Aktualisierte Auflage. München: Pearson, Higher Education, 2012.
+
+
  - **[She26]** H. M. Sheffer, “Principia Mathematica. Whitehead, Alfred North , Russell, Bertrand,” Isis, vol. 8, no. 1, pp. 226–231, Feb. 1926, doi: https://doi.org/10.1086/358383.
 
 - **[PW25]** Whitehead, Alfred North; Russell, Bertrand (1925), Principia mathematica, vol. 1 (2 ed.), Cambridge: Cambridge University Press, ISBN 978-0521067911, JFM 51.0046.06
