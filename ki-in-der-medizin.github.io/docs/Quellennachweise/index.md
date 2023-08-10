@@ -10,3 +10,6 @@ https://www.asc-cybernetics.org/foundations/history/MacySummary.htm, abgerufen 0
 
 - **https%3A%2F%2Fde.wikipedia.org%2Fwiki%2FTheoretische_Biologie.png**
 https://de.wikipedia.org/wiki/Theoretische_Biologie, abgerufen 09.08.2023
+
+- **https%3A%2F%2Fplato.stanford.edu%2Fentries%2Fpm-notation%2F.png**
+  https://plato.stanford.edu/entries/pm-notation/, abgerufen 10.08.2023
