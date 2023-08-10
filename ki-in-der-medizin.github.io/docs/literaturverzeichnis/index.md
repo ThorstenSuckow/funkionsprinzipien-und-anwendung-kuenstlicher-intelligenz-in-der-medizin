@@ -63,6 +63,14 @@ Quotation style: IEEE
 
 ## Das Neuron als mathematisches Modell
 
+ - **[She26]** H. M. Sheffer, “Principia Mathematica. Whitehead, Alfred North , Russell, Bertrand,” Isis, vol. 8, no. 1, pp. 226–231, Feb. 1926, doi: https://doi.org/10.1086/358383.
+
+- **[PW25]** Whitehead, Alfred North; Russell, Bertrand (1925), Principia mathematica, vol. 1 (2 ed.), Cambridge: Cambridge University Press, ISBN 978-0521067911, JFM 51.0046.06
+- 
+- **[PW27a]** Whitehead, Alfred North; Russell, Bertrand (1927), Principia mathematica, vol. 2 (2 ed.), Cambridge: Cambridge University Press, ISBN 978-0521067911, JFM 53.0038.02
+- 
+- **[PW27b]** Whitehead, Alfred North; Russell, Bertrand (1927), Principia mathematica, vol. 3 (2 ed.), Cambridge: Cambridge University Press, ISBN 978-0521067911, JFM 53.0038.02
+
  - **[Abl10]** C. Ableitinger, Biomathematische Modelle im Unterricht: Fachwissenschaftliche und didaktische Grundlagen mit Unterrichtsmaterialien, Wiesbaden: Vieweg+Teubner, 2011, https://doi.org/10.1007/978-3-8348-9770-1.
 
 
