@@ -17,7 +17,7 @@ function initEq({main}) {
     gIdEq = 1;
 }
 
-function Equation ({children, part}) {
+function Equation ({children, id}) {
 
     const [initial, setInitial] = useState(true);
     const [count, setCount] = useState(gIdEq)
@@ -32,7 +32,7 @@ function Equation ({children, part}) {
             <div class={"mathEq"} style={{flex:1}}>
                 {children}
             </div>
-            <div class={"idEq"}>{`(Gl. ${eqMain}.${count}${part ? part : ""})`}</div>
+            <div class={"idEq"}>{`(Gl. ${id ? id : eqMain + (count ? "." + count : "")})`}</div>
         </div>
     );
 }
