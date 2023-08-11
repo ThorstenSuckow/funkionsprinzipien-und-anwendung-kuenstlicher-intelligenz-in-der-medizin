@@ -115,7 +115,7 @@ Die Schwellenwertfunktion wird im Kontext von künstlichen neuronalen Netzen auc
 
 <EQ id={"2.3"}>
 
-$f: \N_0 \to \{0, 1\}, f(x) = f(g(X)) = \begin{cases}
+$f: \Z \to \{0, 1\}, f(x) = f(g(X)) = \begin{cases}
 1 &\text{falls} &x >= \Theta \\
 0 &\text{falls} &x >= \Theta
 \end{cases}$
@@ -186,7 +186,7 @@ In der zweiwertigen Aussagenlogik liefert die **AND**-Funktion ($\land$) die Aus
 
 Für "wahr" = $1$ und "falsch"= 0 sieht die Wahrheitstabelle für zwei Aussagen folgendermaßen aus
 
-<Tbl>
+<Tbl id={"2.1"} txt={"Die Wahrheitstabelle für AND"}>
 
 | $A$ | $B$ | $A \land B$ |
 |-----|-----|-------------|
@@ -201,7 +201,7 @@ Mit Hilfe eines MCP-Neurons können wir nun die **AND**-Funktion modellieren. Hi
 
 Mit den oben eingeführten Definition verhält sich unser MCP-Neuron wie folgt:
 
-<Tbl>
+<Tbl id={"2.2"} txt={"Werte der Aktivierungs- und Eingabefunktion für eine AND-MCP-Zelle"}>
 
 | $x_1$ | $x_2$ | $g_{and}(X)$ | $f_{and}(x)$ |
 |-------|-------|--------|-------|
@@ -214,7 +214,7 @@ Mit den oben eingeführten Definition verhält sich unser MCP-Neuron wie folgt:
 
 Analog hierzu können wir die **OR**-Funktion ($\lor$, $\Theta = 2$, zwei erregende Eingaben)
 
-<Tbl>
+<Tbl id={"2.3"} txt={"Werte der Aktivierungs- und Eingabefunktion für eine OR-MCP-Zelle"}>
 
 | $A$ | $B$ | $A \lor B$ | $x_1$ | $x_2$ | $g_{or}(X)$ | $f_{or}(x)$ |
 |-----|-----|------------|-------|-------|-------------|-------------|
@@ -229,7 +229,7 @@ Analog hierzu können wir die **OR**-Funktion ($\lor$, $\Theta = 2$, zwei errege
 
 sowie die **Negation** ($\neg$, $\Theta = 0$, eine hemmende Eingabe) modellieren:
 
-<Tbl>
+<Tbl id={"2.4"} txt={"Werte der Aktivierungs- und Eingabefunktion für eine NEG-MCP-Zelle"}>
 
 | $A$ | $\neg A$ | $x_1$ | $g_{\neg}(X)$ | $f_{\neg}(x)$ |
 |-----|----------|-------|---------------|---------------|
@@ -244,7 +244,7 @@ $Y_1$ ist eine **AND**-Zelle und wird aktiviert, wenn sowohl $x_1$ als auch $x_2
 
 Eine weitere boolesche-Funktion, die als MCP-Netz modelliert werden kann, ist die **XOR**-Funktion ("exclusive or"). DIe Wahrheitstabelle sieht wie folgt aus:
 
-<Tbl>
+<Tbl id={"2.5"} txt={"Die Wahrheitstabelle für XOR"}>
 
 | $A$ | $B$ | $A \oplus B$ |
 |-----|-----|-------------|
@@ -277,29 +277,103 @@ $A \oplus B \equiv (A \lor B) \land (\neg A \lor \neg B)$
 
 #### 2.1.3.3 Modellierung von MCP-Netzen unter Berücksichtigung von Zeiteinheiten
 
-Bislang haben wir nur MCP-Netze betrachtet, bei denen wir die Zeiteinheiten nicht berücksichtigt haben. In Anlehnung an die Original-Arbeit wollen wir jetzt ein Netz Modellieren, das die **paradoxe Hitzeempfindung** <R>RHVK+82</R> simuliert: Das Phänomen, das bei kurzzeitiger Kühlung der Haut Hitzze empfunden wird.
+Bislang haben wir nur MCP-Netze betrachtet, bei denen wir die Zeiteinheiten nicht berücksichtigt haben. In Anlehnung an die Original-Arbeit wollen wir jetzt ein Netz Modellieren, das die **paradoxe Hitzeempfindung** <R>HVK+82</R> simuliert: Das Phänomen, das bei kurzzeitiger Kühlung der Haut Hitze empfunden wird.
 
 > If a cold object is held to the skin for a moment and removed, a sensation of
 heat will be felt; if it is applied for a longer time, the sensation will be only of
 cold, with no preliminary warmth, however transient. <R>MP43, S. 106</R>
 
-Das nach <R>MP43, S. 105 Figure 1 (e)</R> aufgestellte Modell stellen wir folgendermaßen dar (vgl. <R>Fau94, S. 31 ff.</R>):
-
+Das nach <R>MP43, S. 105 Figure 1 (e)</R> aufgestellte Modell und die dazugehörige Formel übertragen wir nun in die von uns verwendete Notation (vgl. <R>Fau94, S. 31 ff.</R>).
 
 **Abbildung 2.4:** MCP-Netz zur Modellierung der paradoxen Hitzeempfindung.
 
 In der Abbildung 2.4 sind zwei Temperaturrezeptoren $H_i$ (Hitze) und $K_i$ (Kälte) dargestellt. Das Netz hat außerdem zwei Ausgänge:
 $H_o$ wird zum Zeitpunkt $t$ aktiviert, wenn Hitze empfunden wird, $K_o$ entsprechend bei Kälte.
 
-Es finden nun zwei Versuche statt: Im ersten wird versucht das paradoxe Hitzeempfinden zu simulieren. Hierzu wird zum Zeitpunkt $t-3$ der Kälterezeptor stimuliert, und kurz darauf unterbrochen zum Zeitpunkt $t - 2$. Die folgende Tabelle verdeutlicht die Signale, die an den jeweiligen Zellen zum Zeitpunkt $[t- 3, t]$ vorliegen:
+Die Bedingungen für eine Aktivierung von $H_o$ lauten informell: Hitze wird signalisiert, wenn der Wäremerezeptor durch Wärme stimuliert wird, **oder** wenn kurzzeitig ein Kälteimpuls von den Kälterezeptoren registriert wird. Formal lauten die Formeln hierzu (vgl. <R>MP43 S. 106</R>):
 
-| $t$ | $H_i$ | $K_i$ | $Z_1$ | $Z_2$ | $H_o$ | $K_o$ |
+
+<EQ id={"2.8"}>
+
+$H_o(t) \equiv H_i(t-1) \lor (K_i(t-3) \land \neg K_i(t - 2))$
+
+</EQ>
+
+Die Bedingungen für eine Aktivierung der Zelle $K_o$, damit Kälte signalisiert wird, kann in folgender Formel beschrieben werden:
+
+
+<EQ id={"2.9"}>
+
+$K_o(t) \equiv K_i(t-2) \land K_i(t-1)$
+
+</EQ>
+
+Nach **Abbildung 2.4** können wir die Werte von den in dem MCP-Netz befindlichen Zellen zu den verschiedenen Zeitwerten in Formeln repräsentieren.
+Wir beginnen hierzu mit dem Zeitpunkt $t$, für die sich **_Gl. 2.8_** sowie **_Gl. 2.9_** ergeben.
+
+Für $H_o(t)$ folgt weiterhin
+
+<EQ id={"2.10"}>
+
+$H_o(t) \equiv Z_1(t-1) \lor H_i(t-1)$
+
+</EQ>
+
+Wir folgen dem "Zeitstrahl" in die Vergangenheit und bestimmen nun die Werte für $Z_1(t-1)$:
+
+<EQ id={"2.11"}>
+
+$Z_1(t - 1) \equiv Z_2(t-2) \land \neg K_i(t-2)$
+
+</EQ>
+
+Da $K_i$ über das Eingabesignal bestimmt wird, benötigen wir nur noch $Z_2(t-2)$, was einfach das efferente Signal von $K_i(t-3)$ entgegennimmt:
+
+<EQ id={"2.12"}>
+
+$Z_2(t-2) \equiv K_i(t-3)$
+
+</EQ>
+
+Die Abfolge der Aktivierung von $K_o$ bzw. $H_o$ kann nun tabellarisch leicht mit Hilfe der **_Gleichungen 2.8 - 2.11_** dargestellt werden. Tabellenspalten, die eine Zelle repräsentieren, enthalten in der Überschrift in Klammern den Schwellenwert $\Theta$ö Die Spalten, die eine Zelle zum Zeitpunkt $t$ repräsentieren, enthalten $f(x)$  (siehe **Gl. 2.3**), sofern der Wert zu dem entsprechenden Zeitpunkt bekannt ist (vgl. <R>Fau94, S. 32-33</R>).
+
+Wir beginnen mit der Stimulierung von $K_i$ durch zwei aufeinanderfolgende Kälteimpulse. Es wird erwartet, das $K_o$ feuert:
+
+<Tbl id={"2.6"} txt={"Tabellarische Darstellung von zwei Kälteimpulsen"}>
+
+| $t$   | $H_i$ | $K_i$ | $Z_1$ | $Z_2$ | $H_o$ | $K_o$ |
+|-------|-------|-------|----------|----------|----------|----------|
+| $t-2$ | 0     | 1     |          |          |          |          |
+| $t-1$ | 0     | 1     | 0        | 1        |          |          |
+| $t$   |       |       | 0         | 1         | 0        | 1        |
+
+</Tbl>
+
+
+Nun stellen wir die Signalisierung von "Wärme" dar. In Tabellenform erhalten wir für einen Stimulus von $H_i$:
+
+<Tbl id={"2.7"} txt={"Tabellarische Darstellung von einem Wärmeimpuls"}>
+
+| $t$   | $H_i$ | $K_i$ | $Z_1$ | $Z_2$ | $H_o$ | $K_o$ |
+|-------|-------|-------|----------|----------|----------|----------|
+| $t-1$ | 1     | 0     |          |          |          |          |
+| $t$   |       |       |          | 0         | 1        | 0        |
+
+</Tbl>
+
+
+Die Simulation der paradoxen Hitzeempfindung erfolgt nun nur eine einmalige Aktivierung von $K_i$ zum Zeitpunkt $t-3$. Danach wird der Stimulus entfernt: formal wird das durch $\neg K_i (t-2)$ ausgedrückt (s. **_Gl. 2.8_**)
+
+<Tbl id={"2.8"} txt={"Tabellarische Darstellung der paradoxen Hitzeempfindung"}>
+
+| $t$   | $H_i$ | $K_i$ | $Z_1$ | $Z_2$ | $H_o$ | $K_o$ |
 |-----|-------|-------|-------|-------|-------|-------|
-|   -3   |  0  |    |    |    |    |  |
-|   -2   |  1  |    |    |    |    |  |
-|   -1   |    |    |    |    |    |  |
-|   0   |    |    |    |    |    |  |
+|   $t-3$   |  0  |  1  |    |    |    |  |
+|   $t-2$   |  0  |  0  |  0  | 1   |    |  |
+|   $t-1$   |    |    |   1 | 0   |  0  | 0 |
+|  $t$   |    |    |    |    |  1  | 0 |
 
+</Tbl>
 
 
 ### Zitate
