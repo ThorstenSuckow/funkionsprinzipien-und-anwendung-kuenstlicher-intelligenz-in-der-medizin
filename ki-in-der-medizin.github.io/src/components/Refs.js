@@ -17,6 +17,34 @@ function initEq({main}) {
     gIdEq = 1;
 }
 
+function Table ({children, id}) {
+
+    return (
+        <div class={"tbl"}>
+            {children}
+       </div>
+    );
+}
+function Definition ({children, id}) {
+
+    const [initial, setInitial] = useState(true);
+    const [count, setCount] = useState(gIdEq)
+
+    React.useEffect(() => {
+        setCount(gIdEq++);
+    }, [initial]);
+
+
+    return (
+        <div class={"defParent"}>
+            <div class={"def"} style={{flex:1}}>
+                {children}
+            </div>
+            <div class={"idEq"}>{id !== undefined ? `(Def. ${id ? id : eqMain + (count ? "." + count : "")})` : ""}</div>
+        </div>
+    );
+}
+
 function Equation ({children, id}) {
 
     const [initial, setInitial] = useState(true);
@@ -28,11 +56,12 @@ function Equation ({children, id}) {
 
 
     return (
-        <div style={{display:"flex"}}>
+        <div class={"mathParent"}>
             <div class={"mathEq"} style={{flex:1}}>
                 {children}
             </div>
-            <div class={"idEq"}>{`(Gl. ${id ? id : eqMain + (count ? "." + count : "")})`}</div>
+            <div
+                className={"idEq"}>{id === "" ? "" : `(Gl. ${id ? id : eqMain + (count ? "." + count : "")})`}</div>
         </div>
     );
 }
@@ -53,5 +82,7 @@ export {Bibliography as R};
 export {Subnote as S};
 export {Footnote as F};
 export {Equation as EQ};
+export {Table as Tbl};
+export {Definition as Def};
 export {initEq};
 
