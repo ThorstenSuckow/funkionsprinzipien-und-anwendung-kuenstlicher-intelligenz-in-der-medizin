@@ -17,12 +17,15 @@ function initEq({main}) {
     gIdEq = 1;
 }
 
-function Table ({children, id}) {
+function Table ({children, id, txt}) {
 
     return (
+        <>
         <div class={"tbl"}>
             {children}
-       </div>
+        </div>
+            <div class={"tblFooter"}><span style={{fontWeight:"bold"}}>{`Tabelle ${id ? id : ""}: `}</span>{txt ? txt : "nT"}</div>
+        </>
     );
 }
 function Definition ({children, id}) {

@@ -67,9 +67,17 @@ div.tbl {
 }
 
 div.tbl > table {
-  margin:60px auto 60px auto;
+  margin:60px auto 0px auto;
   text-align:center;
 }
+
+
+div.tblFooter {
+  margin:12px auto 60px auto;
+  text-align:center;
+}
+
+
 
 
 div.mathEq > p {
