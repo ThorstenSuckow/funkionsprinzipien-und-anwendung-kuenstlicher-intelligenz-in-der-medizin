@@ -11,6 +11,11 @@ Quotation style: IEEE
 
 #### Zitierte Literatur
 
+- **[Heb49]** D. O. Hebb, „The Organization of Behavior“, in Neurocomputing: Foundations of Research, Cambridge, MA, USA: MIT Press, 1988, S. 43–54.
+
+- **[Kub30]** L. S. Kubie, „A theoretical application to some neurological problems of the properties of excitation waves which move in closed circuits“, Brain, Bd. 53, Nr. 2, S. 166–177, Juli 1930, https://doi.org/10.1093/brain/53.2.166.
+
+
 - **[AR88]** J. A. Anderson und E. Rosenfeld, Hrsg., Neurocomputing: Foundations of Research. Cambridge, MA, USA: MIT Press, 1988. ISBN:978-0-262-01097-9
 
 - **[BCP18]** M. F. Bear, B. W. Connors und M. A. Paradiso, _Neurowissenschaften: Ein grundlegendes Lehrbuch für Biologie, Medizin und Psychologie_, A. K. Engel, Hrsg., Berlin, Heidelberg: Springer Berlin Heidelberg, 2018. https://doi.org/10.1007/978-3-662-57263-4.
@@ -63,6 +68,9 @@ Quotation style: IEEE
 
 ## Das Neuron als mathematisches Modell
 
+- **[Sha38]** C. E. Shannon, „A symbolic analysis of relay and switching circuits“, Transactions of the American Institute of Electrical Engineers, Bd. 57, Nr. 12, S. 713–723, 1938, https://doi.org/10.1109/T-AIEE.1938.5057767.
+
+
 - **[HVK+82]** H. Hämäläinen, M. Vartiainen, L. Karvanen, und T. Järvilehto, „Paradoxical heat sensations during moderate cooling of the skin“, Brain Research, Bd. 251, Nr. 1, S. 77–81, 1982, doi: https://doi.org/10.1016/0006-8993(82)91275-6.
 
 
@@ -109,7 +117,18 @@ Quotation style: IEEE
 
 ### Review
 
+- **[Dor91]** G. Dorffner, „Konnektionismus — eine Einführung“, in Konnektionismus: Von neuronalen Netzwerken zu einer „natürlichen“ KI, Wiesbaden: Vieweg+Teubner Verlag, 1991, S. 15–83. https://doi.org/10.1007/978-3-322-94665-2_2.
 
+
+- **[Mcc51]** W. S. McCulloch, „Why the mind is in the head.“, in Cerebral mechanisms in behavior; the Hixon Symposium., Oxford,  England: Wiley, 1951, S. 42–111. Reprinted  in [Mcc65], S. 79-148.
+
+
+- **[Mcc55]** W. S. McCulloch, „Mysterium iniquitatis of sinful man aspiring into the place of God“, The Scientific monthly, Bd. 80, S. 35–39, 1955. Reprinted  in [Mcc65], pp. 163–170.
+
+- **[Mcc65]** W. McCulloch, Embodiments of mind. Cambridge,  MA,  US: The MIT Press, 1965.
+
+
+- **[Tur36]** A. M. Turing, „On Computable Numbers, with an Application to the Entscheidungsproblem“, Proceedings of the London Mathematical Society, Bd. s2-42, Nr. 1, S. 230–265, 1937, https://doi.org/10.1112/plms/s2-42.1.230.
 
 
 - **[Abr02]** T. H. Abraham, „(Physio)logical circuits: The intellectual origins of the McCulloch-Pitts neural networks“, J. Hist. Behav. Sci., Bd. 38, Nr. 1, S. 3–25, 2002, doi: 10.1002/jhbs.1094.
@@ -127,13 +146,14 @@ Quotation style: IEEE
 
  - **[MP47]** W. Pitts und W. S. McCulloch, „How we know universals the perception of auditory and visual forms“, The bulletin of mathematical biophysics, Bd. 9, Nr. 3, S. 127–147, Sep. 1947, https://doi.org/10.1007/BF02478291.
 
+ 
 
  - **[Mcc61]** McCulloch, W. S.: 1961, ‘What Is a Number, that a Man May Know It, and a Man,
    that He May Know a Number?’ General Semantics Bulletin 26/27, 7–18. Reprinted
-   in McCulloch 1965, pp. 1–18.
+   in [Mcc65], pp. 1–18.
 
 
-- **[Neu93]** J. von Neumann, „First draft of a report on the EDVAC“, IEEE Annals of the History of Computing, Bd. 15, Nr. 4, S. 27–75, 1993,  https://doi.org/10.1109/85.238389.
+- **[Neu45]** J. von Neumann, „First draft of a report on the EDVAC“, IEEE Annals of the History of Computing, Bd. 15, Nr. 4, S. 27–75, 1993,  https://doi.org/10.1109/85.238389.
 
  - **[Neu56]** J. von Neumann, „Probabilistic Logics and the Synthesis of Reliable Organisms From Unreliable Components“, in Automata Studies. (AM-34), Volume 34, C. E. Shannon und J. McCarthy, Hrsg., Princeton: Princeton University Press, 1956, S. 43–98. doi: doi:10.1515/9781400882618-003.
 
@@ -149,7 +169,7 @@ Quotation style: IEEE
  - **[Per88]** D. H. Perkel, „Logical neurons: the enigmatic legacy of Warren McCulloch“, Trends in Neurosciences, Bd. 11, Nr. 1, S. 9–12, 1988, doi: https://doi.org/10.1016/0166-2236(88)90041-0.
 
 
- - **[PIC04]** G. Piccinini, „The First Computational Theory of Mind and Brain: A Close Look at Mcculloch and Pitts’s “Logical Calculus of Ideas Immanent in Nervous Activity”“, Synthese, Bd. 141, Nr. 2, S. 175–215, Aug. 2004, https://doi.org/10.1023/B:SYNT.0000043018.52445.3e.
+ - **[Pic04]** G. Piccinini, „The First Computational Theory of Mind and Brain: A Close Look at Mcculloch and Pitts’s “Logical Calculus of Ideas Immanent in Nervous Activity”“, Synthese, Bd. 141, Nr. 2, S. 175–215, Aug. 2004, https://doi.org/10.1023/B:SYNT.0000043018.52445.3e.
 
 
  - **[OF05]** B. A. Olshausen und D. J. Field, „How Close Are We to Understanding V1?“, Neural Computation, Bd. 17, Nr. 8, S. 1665–1699, Aug. 2005, https://doi.org/10.1162/0899766054026639.
