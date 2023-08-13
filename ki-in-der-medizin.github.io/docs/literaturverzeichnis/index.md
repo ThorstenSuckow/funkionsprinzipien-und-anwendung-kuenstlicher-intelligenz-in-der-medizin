@@ -66,7 +66,12 @@ Quotation style: IEEE
 
  - **[Luc05]** Lucas K. On the gradation of activity in a skeletal muscle-fibre. J Physiol. 1905 Nov 9;33(2):125-37. doi: 10.1113/jphysiol.1905.sp001115. PMID: 16992800; PMCID: PMC1465742.
 
-## Das Neuron als mathematisches Modell
+## Künstliche Neuronen
+
+### 2.1 Das McCulloch-Pitts-Neuron
+
+- **[Lyd10]** L. H. Liu, „The Cybernetic Unconscious: Rethinking Lacan, Poe, and French Theory“, Critical Inquiry, Bd. 36, Nr. 2, S. 288–320, 2010, https://doi.org/10.1086/648527.
+
 
 - **[Sha38]** C. E. Shannon, „A symbolic analysis of relay and switching circuits“, Transactions of the American Institute of Electrical Engineers, Bd. 57, Nr. 12, S. 713–723, 1938, https://doi.org/10.1109/T-AIEE.1938.5057767.
 
