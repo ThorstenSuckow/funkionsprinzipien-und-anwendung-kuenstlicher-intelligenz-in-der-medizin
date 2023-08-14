@@ -119,7 +119,7 @@ const config = {
             type: "doc",
             docId: "kapitel/index",
             position: "left",
-            label: "Inhalt"
+            label: "Inhaltsverzeichnis"
           },
 
           /*{to: '/blog', label: 'Blog', position: 'left'},*/
