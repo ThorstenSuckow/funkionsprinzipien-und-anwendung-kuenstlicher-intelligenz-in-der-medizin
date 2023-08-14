@@ -90,13 +90,12 @@ Quotation style: IEEE
  - **[She26]** H. M. Sheffer, “Principia Mathematica. Whitehead, Alfred North , Russell, Bertrand,” Isis, vol. 8, no. 1, pp. 226–231, Feb. 1926, doi: https://doi.org/10.1086/358383.
 
 - **[PW25]** Whitehead, Alfred North; Russell, Bertrand (1925), Principia mathematica, vol. 1 (2 ed.), Cambridge: Cambridge University Press, ISBN 978-0521067911, JFM 51.0046.06
-- 
+
 - **[PW27a]** Whitehead, Alfred North; Russell, Bertrand (1927), Principia mathematica, vol. 2 (2 ed.), Cambridge: Cambridge University Press, ISBN 978-0521067911, JFM 53.0038.02
-- 
+
 - **[PW27b]** Whitehead, Alfred North; Russell, Bertrand (1927), Principia mathematica, vol. 3 (2 ed.), Cambridge: Cambridge University Press, ISBN 978-0521067911, JFM 53.0038.02
 
  - **[Abl10]** C. Ableitinger, Biomathematische Modelle im Unterricht: Fachwissenschaftliche und didaktische Grundlagen mit Unterrichtsmaterialien, Wiesbaden: Vieweg+Teubner, 2011, https://doi.org/10.1007/978-3-8348-9770-1.
-
 
  - **[AR98]**  A. Anderson & E. Rosenfeld (Eds.), _Talking nets: An oral history of neural networks_. Cambridge MA: MIT Press, 1998.
 
@@ -115,80 +114,69 @@ Quotation style: IEEE
 
 - **[Mcc67]** „McCulloch, W. S. (1967a). Lekton, being a belated introduction to the thesis of Eilhard von Domarus. In L. Thayer (Ed.). _Communication: Theory and research. Proceedings of the first symposium_ (pp. 348–350). Springfield IL: Charles C. Thomas.“
 
- - **[GBC18]** I. Goodfellow, Y. Bengio, und A. Courville, Deep Learning. MIT Press, 2018. ISBN: 3958457002.
+
 
  - **[Rau88]** W. Rautenberg, _Einführung in die Mathematische Logik_. Wiesbaden: Vieweg+Teubner Verlag, 2008. https://doi.org/10.1007/978-3-8348-9530-1.
-
-
-### Review
-
-- **[Dor91]** G. Dorffner, „Konnektionismus — eine Einführung“, in Konnektionismus: Von neuronalen Netzwerken zu einer „natürlichen“ KI, Wiesbaden: Vieweg+Teubner Verlag, 1991, S. 15–83. https://doi.org/10.1007/978-3-322-94665-2_2.
-
 
 - **[Mcc51]** W. S. McCulloch, „Why the mind is in the head.“, in Cerebral mechanisms in behavior; the Hixon Symposium., Oxford,  England: Wiley, 1951, S. 42–111. Reprinted  in [Mcc65], S. 79-148.
 
 
 - **[Mcc55]** W. S. McCulloch, „Mysterium iniquitatis of sinful man aspiring into the place of God“, The Scientific monthly, Bd. 80, S. 35–39, 1955. Reprinted  in [Mcc65], pp. 163–170.
 
+- **[Mcc61]** McCulloch, W. S.: 1961, ‘What Is a Number, that a Man May Know It, and a Man,
+  that He May Know a Number?’ General Semantics Bulletin 26/27, 7–18. Reprinted
+  in [Mcc65], pp. 1–18.
+
 - **[Mcc65]** W. McCulloch, Embodiments of mind. Cambridge,  MA,  US: The MIT Press, 1965.
 
+- **[Dor91]** G. Dorffner, „Konnektionismus — eine Einführung“, in Konnektionismus: Von neuronalen Netzwerken zu einer „natürlichen“ KI, Wiesbaden: Vieweg+Teubner Verlag, 1991, S. 15–83. https://doi.org/10.1007/978-3-322-94665-2_2.
 
 - **[Tur36]** A. M. Turing, „On Computable Numbers, with an Application to the Entscheidungsproblem“, Proceedings of the London Mathematical Society, Bd. s2-42, Nr. 1, S. 230–265, 1937, https://doi.org/10.1112/plms/s2-42.1.230.
 
-
 - **[Abr02]** T. H. Abraham, „(Physio)logical circuits: The intellectual origins of the McCulloch-Pitts neural networks“, J. Hist. Behav. Sci., Bd. 38, Nr. 1, S. 3–25, 2002, doi: 10.1002/jhbs.1094.
 
+- **[Min67]** Minsky, M. (1967). "Computation: Finite and Infinite Machines", Prentice Hall, 1967
 
- - **[Min67]** Minsky, M. (1967). "Computation: Finite and Infinite Machines", Prentice Hall, 1967
+- **[Neu45]** J. von Neumann, „First draft of a report on the EDVAC“, IEEE Annals of the History of Computing, Bd. 15, Nr. 4, S. 27–75, 1993,  https://doi.org/10.1109/85.238389.
 
-- **[AB16]** M. A. Arbib und J. J. Bonaiuto, From Neuron to Cognition via Computational Neuroscience. The MIT Press, 2016. ISBN 0-262-03496-4
 
+- **[Cow90]** J. D. Cowan, „Discussion: McCulloch-Pitts and related neural nets from 1943 to 1989“, Bulletin of Mathematical Biology, Bd. 52, Nr. 1, S. 73–97, Jan. 1990, https://doi.org/10.1007/BF02459569.
+
+- **[Arb19]** M. Arbib, „Warren McCulloch’s Search for the Logic of the Nervous System“, Perspectives in biology and medicine, Bd. 43, S. 193–216, Feb. 2000, https://10.1353/pbm.2000.0001.
+
+- **[Per88]** D. H. Perkel, „Logical neurons: the enigmatic legacy of Warren McCulloch“, Trends in Neurosciences, Bd. 11, Nr. 1, S. 9–12, 1988, doi: https://doi.org/10.1016/0166-2236(88)90041-0.
+
+- **[Pic04]** G. Piccinini, „The First Computational Theory of Mind and Brain: A Close Look at Mcculloch and Pitts’s “Logical Calculus of Ideas Immanent in Nervous Activity”“, Synthese, Bd. 141, Nr. 2, S. 175–215, Aug. 2004, https://doi.org/10.1023/B:SYNT.0000043018.52445.3e.
+
+- **[HI97]** F. C. Hoppensteadt und E. M. Izhikevich, „Introduction“, in Weakly Connected Neural Networks, New York, NY: Springer New York, 1997, S. 3–24. https://doi.org/10.1007/978-1-4612-1828-9_1.
+
+- **[Roj93]** R. Rojas, „Das Modell von McCulloch und Pitts“, in Theorie der neuronalen Netze: Eine systematische Einführung, Berlin, Heidelberg: Springer Berlin Heidelberg, 1993, S. 29–50. https://doi.org/10.1007/978-3-642-61231-2_2.
+
+- **[BJ90]** R. Beale und T. Jackson, Neural computing: an introduction, First issued in hardback. in A Taylor & Francis book. Boca Raton London New York: CRC Press, 2017.
+
+- **[HS19]** S. Hallermann und R. F. Schmidt, „Synaptische Plastizität“, in _Physiologie des Menschen: mit Pathophysiologie_, R. Brandes, F. Lang, und R. F. Schmidt, Hrsg., Berlin, Heidelberg: Springer Berlin Heidelberg, 2019, S. 115–120. https://doi.org/10.1007/978-3-662-56468-4_11.
+
+ - **[SSH95]** P. Sander, W. Stucky, und R. Herschel, „Automaten“, in _Automaten Sprachen Berechenbarkeit: Grundkurs Angewandte Informatik IV_, W. Stucky, Hrsg., Wiesbaden: Vieweg+Teubner Verlag, 1995, S. 26–97. https://doi.org/10.1007/978-3-322-84873-4_2.
+
+
+
+## 6. Zusammenfassung und Bemerkung
+
+- **[GBC18]** I. Goodfellow, Y. Bengio, und A. Courville, Deep Learning. MIT Press, 2018. ISBN: 3958457002.
 
 - **[MMA+19]** A. R. Mehta, P. R. Mehta, S. P. Anderson, B. L. H. MacKinnon, und A. Compston, „Etymology and the neuron(e)“, Brain, Bd. 143, Nr. 1, S. 374–379, Dez. 2019, https://doi.org/10.1093/brain/awz367.
 
 
- - **[Edw99]** [1] E. G. Jones, „Golgi, Cajal and the Neuron Doctrine“, Journal of the History of the Neurosciences, Bd. 8, Nr. 2, S. 170–178, 1999, https://doi.org/jhin.8.2.170.1838.
+- **[Edw99]** [1] E. G. Jones, „Golgi, Cajal and the Neuron Doctrine“, Journal of the History of the Neurosciences, Bd. 8, Nr. 2, S. 170–178, 1999, https://doi.org/jhin.8.2.170.1838.
 
- - **[MP47]** W. Pitts und W. S. McCulloch, „How we know universals the perception of auditory and visual forms“, The bulletin of mathematical biophysics, Bd. 9, Nr. 3, S. 127–147, Sep. 1947, https://doi.org/10.1007/BF02478291.
-
- 
-
- - **[Mcc61]** McCulloch, W. S.: 1961, ‘What Is a Number, that a Man May Know It, and a Man,
-   that He May Know a Number?’ General Semantics Bulletin 26/27, 7–18. Reprinted
-   in [Mcc65], pp. 1–18.
-
-
-- **[Neu45]** J. von Neumann, „First draft of a report on the EDVAC“, IEEE Annals of the History of Computing, Bd. 15, Nr. 4, S. 27–75, 1993,  https://doi.org/10.1109/85.238389.
-
- - **[Neu56]** J. von Neumann, „Probabilistic Logics and the Synthesis of Reliable Organisms From Unreliable Components“, in Automata Studies. (AM-34), Volume 34, C. E. Shannon und J. McCarthy, Hrsg., Princeton: Princeton University Press, 1956, S. 43–98. doi: doi:10.1515/9781400882618-003.
-
-
- - **[Neu51]** J. von Neumann, „The general and logical theory of automata.“, in Cerebral mechanisms in behavior; the Hixon Symposium., Oxford,  England: Wiley, 1951, S. 1–41.
-
-
- - **[Cow90]** J. D. Cowan, „Discussion: McCulloch-Pitts and related neural nets from 1943 to 1989“, Bulletin of Mathematical Biology, Bd. 52, Nr. 1, S. 73–97, Jan. 1990, https://doi.org/10.1007/BF02459569.
-
- - **[Arb19]** M. Arbib, „Warren McCulloch’s Search for the Logic of the Nervous System“, Perspectives in biology and medicine, Bd. 43, S. 193–216, Feb. 2000, https://10.1353/pbm.2000.0001.
-
-
- - **[Per88]** D. H. Perkel, „Logical neurons: the enigmatic legacy of Warren McCulloch“, Trends in Neurosciences, Bd. 11, Nr. 1, S. 9–12, 1988, doi: https://doi.org/10.1016/0166-2236(88)90041-0.
-
-
- - **[Pic04]** G. Piccinini, „The First Computational Theory of Mind and Brain: A Close Look at Mcculloch and Pitts’s “Logical Calculus of Ideas Immanent in Nervous Activity”“, Synthese, Bd. 141, Nr. 2, S. 175–215, Aug. 2004, https://doi.org/10.1023/B:SYNT.0000043018.52445.3e.
-
-
- - **[OF05]** B. A. Olshausen und D. J. Field, „How Close Are We to Understanding V1?“, Neural Computation, Bd. 17, Nr. 8, S. 1665–1699, Aug. 2005, https://doi.org/10.1162/0899766054026639.
-
- - **[BJ90]** R. Beale und T. Jackson, Neural computing: an introduction, First issued in hardback. in A Taylor & Francis book. Boca Raton London New York: CRC Press, 2017.
+### Review
 
 
  - **[LBH15]** Y. LeCun, Y. Bengio, und G. Hinton, „Deep learning“, Nature, Bd. 521, Nr. 7553, S. 436–444, Mai 2015, https://doi.org/10.1038/nature14539.
 
  - **[MM96]** R. Moreno-Díaz, J. Mira, und W. S. McCulloch, Hrsg., Brain processes, theories, and models: an international conference in honor of W.S. McCulloch 25 years after his death. Cambridge, Mass: MIT Press, 1996.
 
- - **[HI97]** F. C. Hoppensteadt und E. M. Izhikevich, „Introduction“, in Weakly Connected Neural Networks, New York, NY: Springer New York, 1997, S. 3–24. https://doi.org/10.1007/978-1-4612-1828-9_1.
 
- - **[Roj93]** R. Rojas, „Das Modell von McCulloch und Pitts“, in Theorie der neuronalen Netze: Eine systematische Einführung, Berlin, Heidelberg: Springer Berlin Heidelberg, 1993, S. 29–50. https://doi.org/10.1007/978-3-642-61231-2_2.
 
  - siehe [Roj93] **[Roj96]** H. K. London, „A Systematic Introduction“, Neural Networks, 1996.
 
