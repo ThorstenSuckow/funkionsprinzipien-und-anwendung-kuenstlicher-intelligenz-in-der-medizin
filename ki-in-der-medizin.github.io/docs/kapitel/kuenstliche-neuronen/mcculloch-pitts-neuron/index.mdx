@@ -8,13 +8,8 @@ import {R, F, S, EQ, Def, Tbl, initEq} from "../../../../src/components/Refs.js"
 
 <initEq main={2} />
 
-## 0 ToDos
+###### 0 ToDos
  - Grafiken
- - endlicher Automat
- - über die aktivierungsfunktion geht die eingabe verloren, da 0 oder 1 ist ursüpung nicht da und es kann nur auf binaären neuronen gearbeitet werden
- - "no less than the activity of a single neuron." PSYCHON MP43
- - Dualismus? (is dead)
- -  darüber hinaus berücksichtigen sie auch nicht eine mögliche Veränderung des Netzes, z.B. durch "Lernen" (Hinweis auf syn Plastizität und Hebb)
 
 Im Jahr 1943 veröffentlichen Warren McCulloch (1898 - 1969) und Walter Pitts (1923 - 1969) die Arbeit "A logical calculus of the ideas immanent in nervous activity" <R>MP43</R>, in der sie ein auf **Aussagenlogik**[^1] basierendes mathematisches Modell zur Erklärung von Signalverarbeitung und  -weiterleitung im Nervensystem präsentieren. Ihre Arbeit liefert grundlegende Ideen für die Kybernetik[^2] und die Von-Neumann-Rechnerarchitektur[^3] <R>Arb19, S. 1, "Introduction"</R> und ebnet der Erforschung der _Künstlichen Intelligenz_ den Weg.
 
@@ -30,22 +25,20 @@ Warren McCulloch ist studierter Pyschologe, Philosoph und Neurophysiologe gewese
  2. Wenn es auftritt, dann nur, weil es von einem vorhergehenden Ereignis augelöst wurde
  3. Es soll ein nachgehendes "psychon" auslösen können[^6]
 
-Die Ähnlichkeiten zu dem **Alles-oder-Nichts-Prinzip** von Nervenzellen zur Formalisierung seines Kalküls berücksichtigt er ab 1929 <R>Mcc61, S. 6</R>:
+Die Ähnlichkeiten zu dem **Alles-oder-Nichts-Prinzip** von Nervenzellen zur Formalisierung seines Kalküls berücksichtigt er ab 1929[^7], und knapp 14 Jahre später wird McCulloch in seinem Papier das "psychon" mit der Aktivität eines einzelnen Neurons gleichsetzen[^8].
 
-> "[...] it dawned on me that these events might be regarded as the all-or-none-impulses of neurons [...]. I began to try to formulate a proper calculus for these events by subscripting symbols for propositions in some sort of calculus of propositions [...]" <R>Mcc61, S. 6</R>
+Doch vorerst stagniert seine Arbeit, und erst, als er nach seiner Berufung an das Neuropsychiatrische Institut der Universität von Illinois (Chicago) im Jahr 1941 Walter Pitts kennenlernt, ist er in der Lage, den Kalkül zu vervollständigen.
 
-Seine Arbeit hierdran stagniert, und es soll bis zu seiner Berufung an das Neuropsychiatrische Institut der Universität von Illinois (Chicago) im Jahr 1941 dauern, bis er Walter Pitts kennenlernt, mit dem er gemeinsam den Kalkül erarbeitet.
-
-Pitts besucht dort als Autodidakt <R>Lev98, S.2</R> Kurse bei dem Philosophen und Logiker Rudolf Carnap (1891 - 1970), außerdem bei dem Biomathematiker[^7] Nicolas Rashevsky (1899 - 1972) <R>Pic04, S.183 letzter Abs. ff.</R>, der in seiner Arbeit mathematische Beschreibungen für die Modellierung von Funktionen von Nerven und Nervennetzen verwendet <R>Abr02, S. 13</R>[^8] sowie ab 1939 die Zeitschrift "Bulletin of Mathematical Biophysics" veröffentlicht <R>Abr02, S. 16, Abs. 4</R> (in dieser wird später <R>MP43</R> erstmalig publiziert).
-Der knapp 19-jährige Pitts gilt als brillianter Mathematiker[^9] und später als "the intelligence behind [...] McCulloch": Gemeinsam mit ihm veröffentlicht McCulloch nur wenigen Monaten nach ihrem Kennenlernen das "logical calculus"-Papier <R>Cow98, S. 104, Abs. 3 f.</R>
+Pitts besucht dort als Autodidakt <R>Lev98, S.2</R> Kurse bei dem Philosophen und Logiker Rudolf Carnap (1891 - 1970), außerdem bei dem Biomathematiker[^9] Nicolas Rashevsky (1899 - 1972) <R>Pic04, S.183 letzter Abs. ff.</R>, der in seiner Arbeit mathematische Beschreibungen für die Modellierung von Funktionen von Nerven und Nervennetzen verwendet <R>Abr02, S. 13</R>[^10] sowie ab 1939 die Zeitschrift "Bulletin of Mathematical Biophysics" veröffentlicht <R>Abr02, S. 16, Abs. 4</R> (in dieser wird später <R>MP43</R> erstmalig publiziert).
+Der knapp 19-jährige Pitts gilt als brillianter Mathematiker[^11] und später als "the intelligence behind [...] McCulloch": Gemeinsam mit ihm veröffentlicht McCulloch nur wenigen Monaten nach ihrem Kennenlernen das "logical calculus"-Papier <R>Cow98, S. 104, Abs. 3 f.</R>
 
 ## 2.1.2 Der Kalkül
 
-Die **Principia Mathematica**[^10] (im folgenden einfach PM) der Philosophen und Mathematiker Bertrand Russell (1872 - 1970) und Alfred Whitehead (1861 - 1947) ist ein Werk über die Grundlagen der Mathematik und erschien in drei Bänden zwischen 1910 und 1913. In ihr versuchen Russel und Bertrand die Mathematik auf ein Fundament logischer Grundprinzipien zu stellen[^11] <R>She26, S. 226, Abs. 2</R>. McCulloch beschäftigt die Frage, ob es nicht gleichsam möglich sei, die Vorgänge im Gehirn durch ein ähnliches Fundament logischer Prinzipien erklärbar zu machen <R>Arb19, S.4, Abs. 1</R>. Basierend auf der Zweiwertigkeit des Alles-oder-nichts-Gesetz (Aktionspotenzial findet statt/ findet nicht statt) finden Pitts und McCulloch ihren Kalkül mit Hilfe der Aussagenlogik.
+Die **Principia Mathematica**[^12] (im folgenden einfach PM) der Philosophen und Mathematiker Bertrand Russell (1872 - 1970) und Alfred Whitehead (1861 - 1947) ist ein Werk über die Grundlagen der Mathematik und erschien in drei Bänden zwischen 1910 und 1913. In ihr versuchen Russel und Bertrand die Mathematik auf ein Fundament logischer Grundprinzipien zu stellen[^13] <R>She26, S. 226, Abs. 2</R>. McCulloch beschäftigt die Frage, ob es nicht gleichsam möglich sei, die Vorgänge im Gehirn durch ein ähnliches Fundament logischer Prinzipien erklärbar zu machen <R>Arb19, S.4, Abs. 1</R>. Basierend auf der Zweiwertigkeit des Alles-oder-nichts-Gesetz (Aktionspotenzial findet statt/ findet nicht statt) finden Pitts und McCulloch ihren Kalkül mit Hilfe der Aussagenlogik.
 
 > The "all-or-none law" of nervous activity is sufficient to insure that the activity of any neuron may be represented as a proposition. <R>MP43, S. 100</R>
 
-Für ihren Kalkül entwerfen sie zwei Netze: Ein zyklenfreies Netz <R>MP43, S. 101, "2. The Theory: Nets without Circles"</R> sowie ein Netz, in dem Zyklen vorhanden sind[^12] <R>MP43, S. 108, "3. The Theory: Nets with Circles"</R>. Insgesamt gehen sie von folgenden physischen Eigenschaften von Nervenzellen aus <R>MP43, S. 101</R>:
+Für ihren Kalkül entwerfen sie zwei Netze: Ein zyklenfreies Netz <R>MP43, S. 101, "2. The Theory: Nets without Circles"</R> sowie ein Netz, in dem Zyklen vorhanden sind[^14] <R>MP43, S. 108, "3. The Theory: Nets with Circles"</R>. Insgesamt gehen sie von folgenden physischen Eigenschaften von Nervenzellen aus <R>MP43, S. 101</R>:
 
 1. Ein Neuron arbeitet auf Basis des Alles-oder-Nichts-Prinzip
 2. Eine gewisse Anzahl von Synapsen muss innerhalb einer bestimmten Zeit angeregt werden, um ein Neuron zu erregen
@@ -54,17 +47,17 @@ Für ihren Kalkül entwerfen sie zwei Netze: Ein zyklenfreies Netz <R>MP43, S. 1
 5. Die Struktur des neuronalen Netzes ändert sich nicht
 
 ## 2.1.3 Das Modell
-Einen Teil der Arbeit von McCulloch und Pitts nehmen wir uns als Vorbild zur Modellierung eines künstlichen Neurons. Wir werden auf eine vollständige Erklärung der Theoreme verzichten, die die Arbeit begleiten und die formalen Bausteine liefern. Im Sinne einer besseren Lesbarkeit überführen wir ausserdem die für die Original-Arbeit aus der PM entnommene Notation für Aussagenlogik[^13] in die heutzutage geläufigere Form: "$\land$" für _Konjunktion_, "$\lor$" für _Disjunktion_ sowie "$\neg$" für die _Negation_. $\equiv$ verwenden wir im Sinne der Äquivalenz. Für McCulloch-Pitts-Neuron verwenden wir im Folgenden auch abkürzend **MCP-Zelle**, für ein Netz, das aus solchen besteht, einfach **MCP-Netz**.
+Einen Teil der Arbeit von McCulloch und Pitts nehmen wir uns als Vorbild zur Modellierung eines künstlichen Neurons. Wir werden auf eine vollständige Erklärung der Theoreme verzichten, die die Arbeit begleiten und die formalen Bausteine liefern. Im Sinne einer besseren Lesbarkeit überführen wir ausserdem die für die Original-Arbeit aus der PM entnommene Notation für Aussagenlogik[^15] in die heutzutage geläufigere Form: "$\land$" für _Konjunktion_, "$\lor$" für _Disjunktion_ sowie "$\neg$" für die _Negation_. $\equiv$ verwenden wir im Sinne der Äquivalenz. Für McCulloch-Pitts-Neuron verwenden wir im Folgenden auch abkürzend **MCP-Zelle**, für ein Netz, das aus solchen besteht, einfach **MCP-Netz**.
 
 Insgesamt ergeben sich folgende Anforderungen an unser Modell (vgl. <R>Fau94, S. 26 ff.</R>):
 
-a. Das Verhalten des künstlichen Neurons ist zweiwertig, also _binär_. Das Neuron feuert, oder es feuert nicht. Im Sinne der Beziehung zwischen Eingabe und Ausgabe verstehen wir im unter "feuern" den Wert $1$. Wenn ein Neuron nicht feuert, wird dies durch den Wert $0$ repräsentiert, der ebenfalls als Ausgabe vorliegt. In diesem Sinne produziert unser Modell also immer ein "Signal"[^14].
+a. Das Verhalten des künstlichen Neurons ist zweiwertig, also _binär_. Das Neuron feuert, oder es feuert nicht. Im Sinne der Beziehung zwischen Eingabe und Ausgabe verstehen wir im unter "feuern" den Wert $1$. Wenn ein Neuron nicht feuert, wird dies durch den Wert $0$ repräsentiert, der ebenfalls als Ausgabe vorliegt. In diesem Sinne produziert unser Modell also immer ein "Signal"[^16].
 
 b. An einem Neuron liegen (beliebig viele) Eingaben an (im Sinne von a.)
 
 c. Ein Schwellenwert ist jedem Neuron zu eigen und wird für das Neuron festgelegt. Der Schwellenwert muss getroffen oder übertroffen werden, damit das Neuron feuert.
 
-d. Hemmung ist "absolut": Liegt ein hemmendes Signal zusammen mit nicht-hemmenden Signalen an, feuert das Neuron nicht[^15]
+d. Hemmung ist "absolut": Liegt ein hemmendes Signal zusammen mit nicht-hemmenden Signalen an, feuert das Neuron nicht[^17]
 
 e. Für die Signalübertragung wird ein diskreter Zeitwert $t \in \Z$ vereinbart: Die Übertragung eines Signals dauert eine Zeiteinheit, also $t + 1$. Für eine einführende Betrachtung folgen wir <R>Roj93 S. 33 letzter Abs. ff.</R> und ignorieren zunächst die Zeitwerte.
 
@@ -92,7 +85,7 @@ $X \in \{1, 0\}^{n+m} := (x_1, x_2 ..., x_n, y_1, y_2, ... y_m)$
 
 </EQ>
 
-definieren wir die _Gewichte_ $w_+ \in \{2, 1\}$[^16] mit $w^1_+ =1, w^2_+ = 2$ für erregende Signale, $w_- = -1$ für hemmende Signale (vgl. <R>Fau94, S. 27-28</R>).
+definieren wir die _Gewichte_ $w_+ \in \{2, 1\}$[^18] mit $w^1_+ =1, w^2_+ = 2$ für erregende Signale, $w_- = -1$ für hemmende Signale (vgl. <R>Fau94, S. 27-28</R>).
 
 
 Die **Eingabefunktion** $g$ (vgl. 2.1.3 b.)
@@ -117,6 +110,8 @@ $f: \Z \to \{0, 1\}, f(u) = f(g(X)) = \begin{cases}
 \end{cases}$
 
 </EQ>
+
+Die **Treppenfunktion** ähnelt der **Heaviside**-Funktion, die für beliebige negative Zahlen $0$ zurückliefert, ansonsten $1$. Wir werden später sehen, wie wir einen Schwellenwert wie in **_Gl.2.1.3_** in die Berechnung der Summe einfliessen lassen können, um von der Funktion Gebrauch zu machen.
 
 Da die Erregung absolut ist, muß $\Theta$ die Ungleichung
 
@@ -175,7 +170,7 @@ w_+  &\text{ sonst}
 
 </Def>
 
-Gerichtete Kanten eine MCP-Netzes nehmen eigentlich keine Gewichtung der Information vor <R>Roj93, S. 40, "2.4.1 Gewichtete und ungewichtete Netze"</R>. Sowohl <R>Min67, S. 34</R> als auch <R>Roj93, S.32</R> nutzen unter Berücksichtigung der _absoluten Hemmung_ nur die Summe der erregenden Signale und vergleichen diese mit $\Theta$ - dieser Vergleich findet nur statt, wenn _kein_ hemmendes Signal ankommt: Die Zelle liefert sonst direkt $0$ als Ausgabe zurück. <R>Fau94</R> nutzt[^17] unter Berücksichtigung von **_Gl. 2.3_** gewichtete Kanten. Wie wir später sehen werden, wird die Gewichtung von Kanten ein essentieller Bestandteil der Funktionsweise neuronaler Netze. Wir entfernen uns mit dem o.g. Modell ein Stück von der ursprünglichen Modellierung.
+Gerichtete Kanten eine MCP-Netzes nehmen eigentlich keine Gewichtung der Information vor <R>Roj93, S. 40, "2.4.1 Gewichtete und ungewichtete Netze"</R>. Sowohl <R>Min67, S. 34</R> als auch <R>Roj93, S.32</R> nutzen unter Berücksichtigung der _absoluten Hemmung_ nur die Summe der erregenden Signale und vergleichen diese mit $\Theta$ - dieser Vergleich findet nur statt, wenn _kein_ hemmendes Signal ankommt: Die Zelle liefert sonst direkt $0$ als Ausgabe zurück. <R>Fau94</R> nutzt[^19] unter Berücksichtigung von **_Gl. 2.3_** gewichtete Kanten, in ähnlicher Weise auch <R>BJ90, S. 39 ff.</R>. Wie wir später sehen werden, wird die Gewichtung von Kanten ein wichtiger Bestandteil der Funktionsweise neuronaler Netze. Wir entfernen uns mit dem o.g. Modell ein Stück von der ursprünglichen Modellierung.
 
 ### 2.1.3.3 Implementierung von Booleschen Funktionen
 
@@ -415,9 +410,9 @@ Die Simulation der paradoxen Hitzeempfindung (**Abbildung 2.5c**) erfolgt nun nu
 
 ## 2.1.4 Zusammenfassung
 
-Das MCP-Modell ist ein **empirisches Modell**[^18] <R>HI97, S. 4</R> und basiert auf Analyse und einfacher Schwellenwertlogik <R>AR88, S. 16, Abs. 2</R>. In ihrem Papier weisen McCulloch und Pitts darauf hin, dass das Alles-Oder-Nichts-Prinzip als Vorbild für ihre Abstraktion durch Aussagenlogik dient. Von allem, was wir in Kapitel 1 über Nervenzellen erfahren haben, dürfen wir den Schluss ziehen, dass das von ihnen erstellte Modell eine starke Vereinfachung ist. Aktionspotenzialen lassen sich gewiss nicht auf zweiwertige Logik reduzieren, darüber hinaus berücksichtigen sie auch nicht eine mögliche Veränderung des Netzes, z.B. durch "Lernen". McCulloch und Pitts sind sich dessen durchaus bewußt[^19]. Es bleibt ein statisches Modell, es muß "konstruiert" werden <R>Fau94, S. 28, "1.6.2 Algorithm"</R>, es nur durch Änderung der Netztopologie anpassungsfähig. Selbständig zu lernen vermag es nicht.
+Das MCP-Modell ist ein **empirisches Modell**[^20] <R>HI97, S. 4</R> und basiert auf Analyse und einfacher Schwellenwertlogik <R>AR88, S. 16, Abs. 2</R>. In ihrem Papier weisen McCulloch und Pitts darauf hin, dass das Alles-Oder-Nichts-Prinzip als Vorbild für ihre Abstraktion durch Aussagenlogik dient. Von allem, was wir in Kapitel 1 über Nervenzellen erfahren haben, dürfen wir den Schluss ziehen, dass das von ihnen erstellte Modell eine starke Vereinfachung ist[^21]. Aktionspotenzialen lassen sich gewiss nicht auf zweiwertige Logik reduzieren, darüber hinaus berücksichtigen sie auch nicht eine mögliche Veränderung des Netzes, z.B. durch Lernen[^22]. McCulloch und Pitts sind sich dessen durchaus bewußt[^23]. Es bleibt ein statisches Modell, es muß "konstruiert" werden <R>Fau94, S. 28, "1.6.2 Algorithm"</R>, es nur durch Änderung der Netztopologie anpassungsfähig. Selbständig zu lernen vermag es nicht.
 
-Tatsächlich ist die McCulloch-Pitts-Zelle von eher geringer Bedeutung für die Neurowissenschaft gewesen[^20]<R>AR88, S. 17, Abs. 2</R>. Umso größer war ihr Einfluss auf die Computerwissenschaften[^21]. McCulloch und Pitts nahmen für ihr Modell das menschliche Gehirn als Grundlage und ermöglichten so einen neuen Blickwinkel auf Ursache und Wirkung. "'Mind' no longer 'goes more ghostly than a ghost'<R>MP43, S. 114</R>:
+Tatsächlich ist die McCulloch-Pitts-Zelle von eher geringer Bedeutung für die Neurowissenschaft gewesen[^24]<R>AR88, S. 17, Abs. 2</R>. Umso größer war ihr Einfluss auf die Computerwissenschaften[^25]. McCulloch und Pitts nahmen für ihr Modell das menschliche Gehirn als Grundlage und ermöglichten so einen neuen Blickwinkel auf Ursache und Wirkung. "'Mind' no longer 'goes more ghostly than a ghost'<R>MP43, S. 114</R>:
 
 > If nerve cells were equivalent to the formal neurons of McCulloch and Pitts and if circuits of such elements could be made arbitrarily complicated, then any kind of animal behavior, however marvelously complicated or however intricately linked to sensory input, could be reproduced, and hence understood, in terms of these circuits. <R>Per88, S. 9, "Logical Neurons and immanent ideas"</R>
 
@@ -445,7 +440,7 @@ McCulloch schreibt dazu später
 
 und stellt fest, dass das Nervensystem eine ausgezeichnete logische Maschine repräsentiert <R>Mcc51, S. 80</R>.
 
-Konsequenterweise nutzt <R>Min67</R> die MCP-Zelle als endlichen Automaten[^22] mit zwei Zuständen, aus denen andere endliche Automaten gebaut werden, und nennt diese, im Jahr 1967 schon geläufig: **Neuronale Netze** <R>Min67, S. 33</R>.
+Konsequenterweise nutzt <R>Min67</R> die MCP-Zelle als endlichen Automaten[^26][^27] mit zwei Zuständen, aus denen andere endliche Automaten gebaut werden, und nennt diese, im Jahr 1967 schon geläufig: **Neuronale Netze** <R>Min67, S. 33</R>.
 
 [^1]: Die (zweiwertige) Aussagenlogik beschäftigt sich mit der Verknüpfung von Aussagen und deren Wertigkeit unter der Berücksichtigung der Wahrheitswerte "wahr" und "falsch" <R>Rau88</R>
 [^2]: Norber Wiener (1894 - 1964) gilt als Begründer der Kybernetik, die <R>Kue19</R> beschreibt als: "wirkungsvolle Kommunikation bzw. verlustarmer Daten- und Informationsaustausch, der in der Natur die Überlebensfähigkeit und in der Technik die maschinelle, prozessuale Funktionalität stärkt und dadurch Fehler vermeiden hilft." Wiener und McCulloch lernen sich im Winter 1942 kennen <R>Mas90, S. 218</R>. Unter dem Vorsitz von McCulloch wird auf den sog. "Macy-Konferenzen" zwischen 1946 (https://www.asc-cybernetics.org/foundations/history/MacySummary.htm, abgerufen 09.08.2023) und 1953 Biologie und Technologie diskutiert <R>Arb19, S. 5, Abs. 2</R>. In Folge dessen veröffentlicht Wiener 1948 seine Arbeit "Cybernetics: Or Control and Communication in the Animal and the Machine" <R>Wie48</R>
@@ -453,24 +448,29 @@ Konsequenterweise nutzt <R>Min67</R> die MCP-Zelle als endlichen Automaten[^22] 
 [^4]: die im folgenden zitierte Frage wird von der Quelle auf das Jahr 1917 datiert, McCullochs erstem College-Jahr in Haverford, Pennsylvania
 [^5]: "In addition to the work in functional neuroanatomy, McCulloch was continuing to pursue philosophical questions, such as 'What could be the logic of the brain?'" <R>Arb19, S. 3, letzter Absatz</R>
 [^6]: Charakteristika der zweiwertigen Aussagenlogik sind hier bereits erkennbar vgl. <R>Abr02, S. 7, vorletzter Abs.</R>. Eine Form dieser zweiwertigen Logik wird später von dem französischen Psychoanalytiker Jacques Lacan (1901 - 1981) in seine Theorien einbezogen <R>Lyd10, S. 317, Abs. 2</R>
-[^7]: "Biomathematik" ist ein Teilgebiet der angewandten Mathematik und die mathematische Ausrichtung der theoretischen Biologie, die sich mit Modell- und Theoriebildung zur Beschreibung biologischer Zusammenhänge beschäftigt. (https://de.wikipedia.org/wiki/Theoretische_Biologie, abgerufen 09.08.2023). Teilgebiete der Biomathematik sind u.a. Demographie, Mathematische Ökologie, Epidemologie, Populationsgenetik <R>Abl10, S. 1-28</R>
-[^8]: "In these works, formal logic and mathematics played a strong role, and thus biology as a discipline was reaching a more mature stage, as it began to incorporate the scientific method of physics, that is, using theoretical analysis and mathematical formulations." <R>Abr02, S. 7</R>
-[^9]: Siehe <R>Arb19, S. 4, Abs. 3</R>, außerdem <R>Abr02, S.22, Abs. 2</R>: "Pitts, a mathematical prodigy"
-[^10]: <R>PW25</R>, <R>PW27a</R>, <R>PW27b</R>
-[^11]: Nach <R>Lev94, S. 2</R> liest Pitts die Principia Mathematica mit 12 Jahren
-[^12]: Die Frage nach Ursprung und Bedeutung von "loops" in einem Netz von Nervenzellen beschäftigte McCulloch bereits 1928: "The tremors of Parkinson’s disease, McCulloch thought, could be explained by closed loops of activity connecting the spinal cord and the contracting muscles."<R>Pic04, S. 178, Abs. 3</R>. <R>Arb19, S. 3, Abs. 2</R> vermerkt:  "As another stage in McCulloch's search for the logic of the nervous system, he began thinking about loops in the nervous system. [...] which made explicit the possibility of loops in the nervous system, an idea that today we take for granted." Lawrence Kubie veröffentlicht im Jahr 1930 eine Arbeit, in der er zur Erklärung des Erinenrungsvermögens Schleifen im Nervensystem nutzt <R>Kub30</R>
+[^7]: "[...] it dawned on me that these events might be regarded as the all-or-none-impulses of neurons [...]. I began to try to formulate a proper calculus for these events by subscripting symbols for propositions in some sort of calculus of propositions [...]" <R>Mcc61, S. 6</R>
+[^8]: "[...] a psychon can be no less than the activity of a single neuron." <R>MP43, S. 114</R>
+[^9]: "Biomathematik" ist ein Teilgebiet der angewandten Mathematik und die mathematische Ausrichtung der theoretischen Biologie, die sich mit Modell- und Theoriebildung zur Beschreibung biologischer Zusammenhänge beschäftigt. (https://de.wikipedia.org/wiki/Theoretische_Biologie, abgerufen 09.08.2023). Teilgebiete der Biomathematik sind u.a. Demographie, Mathematische Ökologie, Epidemologie, Populationsgenetik <R>Abl10, S. 1-28</R>
+[^10]: "In these works, formal logic and mathematics played a strong role, and thus biology as a discipline was reaching a more mature stage, as it began to incorporate the scientific method of physics, that is, using theoretical analysis and mathematical formulations." <R>Abr02, S. 7</R>
+[^11]: Siehe <R>Arb19, S. 4, Abs. 3</R>, außerdem <R>Abr02, S.22, Abs. 2</R>: "Pitts, a mathematical prodigy"
+[^12]: <R>PW25</R>, <R>PW27a</R>, <R>PW27b</R>
+[^13]: Nach <R>Lev94, S. 2</R> liest Pitts die Principia Mathematica mit 12 Jahren
+[^14]: Die Frage nach Ursprung und Bedeutung von "loops" in einem Netz von Nervenzellen beschäftigte McCulloch bereits 1928: "The tremors of Parkinson’s disease, McCulloch thought, could be explained by closed loops of activity connecting the spinal cord and the contracting muscles."<R>Pic04, S. 178, Abs. 3</R>. <R>Arb19, S. 3, Abs. 2</R> vermerkt:  "As another stage in McCulloch's search for the logic of the nervous system, he began thinking about loops in the nervous system. [...] which made explicit the possibility of loops in the nervous system, an idea that today we take for granted." Lawrence Kubie veröffentlicht im Jahr 1930 eine Arbeit, in der er zur Erklärung des Erinenrungsvermögens Schleifen im Nervensystem nutzt <R>Kub30</R>
 paper postulating closed loops in the central nervous system to explain memory (Kubie 1930).12
-[^13]: Die Notation aus der PM gilt als sperrig <R>AR88, S. 16, Abs. 3</R>. Eine ausführliche Übersicht der in der PM gebräuchlichen Notation findet sich unter https://plato.stanford.edu/entries/pm-notation/ (abgerufen 10.8.2023)
-[^14]: Die ausbleibende Exoztyose in chemischen Synapsen kann in dem Sinne einer Modellierung als "0"-Signal verstanden werden. auch 1.5.2 "Synaptische Übertragung"
-[^15]: Für eine formale Beschreibung von absoluter und relativer Hemmung siehe <R>Roj03, S. 42 ff.</R>
-[^16]: In der Original-Arbeit stehen zwei "erregende Synapsen" auch für einen Schwellenwert von $2$ (siehe **Abbildung 2.1**)
-[^17]: "Wir haben oben nichts uber Gewichte bei hemmenden Verbindungen gesagt, da Gewichte in absolut hemmenden Leitungen unsinnig sind."<R>Roj93, S. 42, Abs. 1</R>
-[^18]: auch "caricature model" <R>HI97, S. 4</R>
-[^19]: "McCulloch and Pitts acknowledged in their paper that their definition of a neuron was idealized, and that they made
+[^15]: Die Notation aus der PM gilt als sperrig <R>AR88, S. 16, Abs. 3</R>. Eine ausführliche Übersicht der in der PM gebräuchlichen Notation findet sich unter https://plato.stanford.edu/entries/pm-notation/ (abgerufen 10.8.2023)
+[^16]: Die ausbleibende Exoztyose in chemischen Synapsen kann in dem Sinne einer Modellierung als "0"-Signal verstanden werden. auch 1.5.2 "Synaptische Übertragung"
+[^17]: Für eine formale Beschreibung von absoluter und relativer Hemmung siehe <R>Roj03, S. 42 ff.</R>
+[^18]: In der Original-Arbeit stehen zwei "erregende Synapsen" auch für einen Schwellenwert von $2$ (siehe **Abbildung 2.1**)
+[^19]: Gewichte sind in absolut hemmenden Leitungen unsinnig nach <R>Roj93, S. 42, Abs. 1</R>
+[^20]: auch "caricature model" <R>HI97, S. 4</R>
+[^21]: "This ensures its status as a _model_, and not a _copy_, of a real neuron, and makes it possible to implement on a digital computer." <R>BJ90, S. 43, Hervorhebungen i. O.</R>
+[^22]: "Lernen" geschieht auf physiologischer Ebene durch die Modulierung von Synapsen, s. <R>HS19, S. 115 ff.</R>
+[^23]: "McCulloch and Pitts acknowledged in their paper that their definition of a neuron was idealized, and that they made
 physical assumptions that were 'most convenient for the calculus'" <R>Abr02, S. 21, "Conclusion"</R>. Siehe auch <R>MP43, S.101</R>: "[...]we regard facilitation and extinction as dependent upon continuous changes in threshold related to electrical and chemical variables, [...]", sowie "He \[McCulloch\] never claimed that the 1943 model exhausted the richness of individual neurons" <R>Arb19, S. 11, "Does the Brain Have a Logic?", Abs. 4</R>
-[^20]: <R>AR88, S. 17</R>: "The immense theoretical influence of this paper was not among neuroscientists but among computer scientists."
-[^21]: Die Arbeit war ebenso wichtig für die Entwicklung des "Konnektionismus" <R>Arb19, S. 11, "Does the Brain Have a Logic?", Abs. 4</R>, einer Forschungsrichtung der künstlichen Intelligenz, in der Modelle (neuronale Netze) untersucht werden, mit deren Hilfe sich intelligente und kognitive Handlungen auf Maschinen übertragen lassen <R>Dor91, S. v</R>
-[^22]: dass MCP-Netze endliche Automaten sind: Auch in <R>Cow90, S. 76</R> sowie <R>Roj93, S. 47, "Satz 2.4"</R>.  <R>Arb19</R> weist darauf hin, dass die Arbeit von McCulloch und Pitts grundlegend für Automatentheorie gewesen ist <R>Arb19, S. 8, "A Selection of Key Papers", Abs. 3</R>
+[^24]: <R>AR88, S. 17</R>: "The immense theoretical influence of this paper was not among neuroscientists but among computer scientists."
+[^25]: Die Arbeit war ebenso wichtig für die Entwicklung des "Konnektionismus" <R>Arb19, S. 11, "Does the Brain Have a Logic?", Abs. 4</R>, einer Forschungsrichtung der künstlichen Intelligenz, in der Modelle (neuronale Netze) untersucht werden, mit deren Hilfe sich intelligente und kognitive Handlungen auf Maschinen übertragen lassen <R>Dor91, S. v</R>
+[^26]: Ein endlicher Automat ist eine informationsverarbeitende Maschine. Basierend auf Eingaben lassen sich mit einer solchen Maschine Zustände, Zustandsübergänge und Ausgaben modellieren. Bei einem _endlichen_ Automaten sind die genannten Eingaben, Zustände, und Ausgaben endlich. <R>SSH95, S. 29, "2.1 Endliche Automaten" ff.</R>
+[^27]: dass MCP-Netze endliche Automaten sind: Auch in <R>Cow90, S. 76</R> sowie <R>Roj93, S. 47, "Satz 2.4"</R>.  <R>Arb19</R> weist darauf hin, dass die Arbeit von McCulloch und Pitts grundlegend für Automatentheorie gewesen ist <R>Arb19, S. 8, "A Selection of Key Papers", Abs. 3</R>
 
 
 
