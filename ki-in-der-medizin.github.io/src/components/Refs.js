@@ -64,7 +64,7 @@ function Equation ({children, id}) {
                 {children}
             </div>
             <div
-                className={"idEq"}>{id === "" ? "" : `(Gl. ${id ? id : eqMain + (count ? "." + count : "")})`}</div>
+                className={"idEq"}>{id === "" ? "" : `(${id ? id : eqMain + (count ? "." + count : "")})`}</div>
         </div>
     );
 }
