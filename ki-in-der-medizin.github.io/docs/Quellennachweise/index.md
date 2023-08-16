@@ -13,3 +13,9 @@ https://de.wikipedia.org/wiki/Theoretische_Biologie, abgerufen 09.08.2023
 
 - **https%3A%2F%2Fplato.stanford.edu%2Fentries%2Fpm-notation%2F.png**
   https://plato.stanford.edu/entries/pm-notation/, abgerufen 10.08.2023
+
+- **https%3A%2F%2Fwww.mcgill.ca%2Fneuro%2Fabout%2Fdonald-hebb-phd**
+ https://www.mcgill.ca/neuro/about/donald-hebb-phd, abgerufen 16.08.2023
+
+- **https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FHebbian_theory%23cite_ref-2.png**
+ https://en.wikipedia.org/wiki/Hebbian_theory#cite_ref-2, abgerufen 16.08.2023
