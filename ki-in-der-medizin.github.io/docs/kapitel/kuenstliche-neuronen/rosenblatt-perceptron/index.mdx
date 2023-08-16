@@ -4,85 +4,49 @@ title: "2.2 Das Rosenblatt-Perzeptron"
 description: Neuronenmodell nach Frank Rosenblatt
 ---
 
-Donald O. Hebb, 1904 - 1985, Kandischer Psychologe der die Effekte von Gehirnschäden auf Intelligenz unetrsuche,
- - war fasziniert vond er Art und Weise wie Menschen lernen und Informationen speichern
- - Hauptforscuhungsgebiet war wie junge und ältere Gehirne Informationen berarbeiten
- - einer der einflusreichsten behavioristen der Psychologie im 20 Jahrhundert
- - geboren in Cheser, Nova Scotia, 22 Julie 1904, starb 1985 ebenda. [Str01, S. 298 ff.]
+import {R, F, S, EQ, Def, Tbl, initEq} from "../../../../src/components/Refs.js";
 
-His view of psychology as a biological science and his
-neuropsychological cell-assembly proposal rejuvenated
-interest in physiological psychology. [Ray99, S. 1]
+## 2.2.1 Cells that fire together, wire together: Synaptische Plastizität
 
-The
-writings of James, Freud, and Watson stimulated his interest
-in psychology, and as a part-time graduate student at McGill
-University, Hebb was exposed to Pavlov's program. [Ray99, S. 1]
+Der Kanadier Donald Hebb (1904 - 1985) folgt 1947 einem Ruf der McGill Universität[^1] auf eine Professur für Psychologie. Dort hatte er bereits 15 Jahre vorher seinen Master erhalten, zu einer Zeit, in der er parallel als Lehrer und Direktor an einer Schule tätig gewesen ist [^2]. Vielleicht hatte diese Tätigkeit bereits mit seiner Faszination darüber zu tun, wie Menschen lernen, Informationen verarbeiten und speichern <R>Str01, S. 298 ff.</R>: Die Forschung daran wird jedenfalls später wichtiger Bestandteil seines beruflichen Schaffens. In seinem 1949 veröffentlichten Buch "**The organization of Behavior: A Neuropsychological Theory**" <R>Heb49</R> liefert er grundlegende Theorien[^3] für die Art und Weise, wie das Gehirn lernt. Hebb posutliert[^4] <R>Klei99, S.2 f.</R>:
 
-where he explored the
-impact of brain injury and surgery, particularly lesions of
-the frontal lobes, on human intelligence and behaviour [Ray99, S. 1]
+1. > _When an axion of cell_ A _is near enough to excite a cell_ B _and repeatedly or persistently takes part in firing it, some
+growth process or metabolic change takes place in one or both cells such that_ A_'s efficiency, as one of the cells firing_ B_, is increased._ <R>Heb88, S.50, Hervorhebung i.O.</R>
 
-Hebb's studies of intelligence
-led him to the conclusion that experience played a much
-greater role in determining intelligence than was typically
-assumed (Hebb, 1942).[Ray99, S. 1]
+2. > [...] any two cells or systems of cells that are repeatedly active at the same time will tend to become “associated,” so that activity
+in one facilitates activity in the other. <R>Heb88, S. 52, "Mode of perceptual Integration: The Cell-Assembly"</R>
 
-His book, The Organization of Behavior: A
-Neuropsychological Theory, wielded a kind of magic in the
-years after its appearance (Hebb, 1949). It attracted many
-brilliant scientists into psychology, made McGill University
-a North American mecca for scientists interested in brain
-mechanisms of behaviour, led to many important discoveries, and steered contemporary psychology onto a more
-fruitful path.
-For Hebb "the problem of understanding behavior is the
-problem of understanding the total action of the nervous
-system, and vice versa," (1949, p. xiv) and his advocacy of an
-interdisciplinary effort to solve this neuropsychological
-problem was his most general theme.  [Ray99, S. 1]
+3. > A series of such events \[Aktivierung von "cell-assemblies"\] constitutes a “phase sequence”—the thought process. <R>Heb88, S. 48, "Mode of perceptual Integration: The Cell-Assembly</R>[^5]
 
-and
-the computer metaphor of information processing psychology were all fruitful to a point, but then limited and misleading. Hebb's appealingly simple alternative was to explain
-human and animal behaviour and thought in terms of the
-actual device which produces them — the brain — and in
-The Organization of Behavior, Hebb presented just such a neuropsychological theory.
-There were three pivotal postulates: [Ray99, S. 1, ff.]
-
-
-1. Connections between neurons increase in efficacy in
-proportion to the degree of correlation between pre- and postsynaptic activity. [...]
-In Neuroscience this proposal corresponds to the "Hebb
-synapse," the first instances of which were later discovered in
-long-term potentiation (Bliss & L0mo, 1973) and kindling
-(Goddard, Mclntyre, & Leech, 1969), whereas in Cognitive
-Science this postulate, often called the "Hebb rule," provides the
-most basic learning algorithm for adjusting connection weights
-in artificial neural network models. [Ray99, S. 2]
-
-2.  Groups of neurons which tend to fire together form a cellassembly whose activity can persist after the triggering event and
-serves to represent it. [Ray99, S. 2]
-
-3. Thinking is the sequential activation of sets of cellassemblies [Ray99, S. 2]
-
-
-A precis of Hebb's theory is presented in the Introduction
-to The Organization of Behavior: "Any frequently repeated,
-particular stimulation will lead to the slow development of
-a "cell-assembly," [Ray99, S. 2]
-
-Hebb
-fulfilled this promise and laid the foundation for
-neoconnectionism which seeks to explain cognitive processes in terms of connections between assemblies of real or
-artificial neurons. [Ray99, S. 2]
-
-Hebb's ideas within psychology and behavioural neuroscience will grow to match the stature of
-Darwin's ideas within biology.  [Ray99, S. 2]
+Cells that fire together, wire together[^6]
 
 In the scientific literature references to Hebb, the
 Hebbian cell-assembly, the Hebb synapse and the Hebb
 rule, increase each year. These forceful ideas of 1949 are now
 applied in engineering, robotics, and computer science as
 well as neurophysiology, neuroscience and psychology [Ray99, S. 3]
+
+
+
+Hebb
+fulfilled this promise and laid the foundation for
+neoconnectionism which seeks to explain cognitive processes in terms of connections between assemblies of real or
+artificial neurons. [Ray99, S. 2]
+
+
+[^1]: McGillUniversität, Montreal, Quebec (Kanada): https://www.mcgill.ca/neuro/about/donald-hebb-phd (abgerufen 16.08.2023)
+[^2]: zu der Zeit studierte er in Teilzeit an der McGill Universität: "as a part time graduate student" <R>Kle99, S. 1</R>
+[^3]: als hätte sein Buch eine Art Golgräberstimmung in der der Psychologie ausgelöst, schreibt <R>Klei99</R>: "It attracted many
+brilliant scientists into psychology, made McGill University a North American mecca for scientists interested in brain mechanisms of behaviour, led to many important discoveries, and steered contemporary psychology onto a more fruitful path." <R>Klei99, S.1</R>
+[^4]: "three pivotal postulates" <R>Klei99, S.2 f.</R>
+[^5]: Die Aussage findet sich im Original <R>Heb49</R> bereits in "Introduction", S. xi-xix
+[^6]: Zumindest in <R>Heb49</R> findet sich kein solches Zitat. <R>KG14, S. 2</R> behauptet: "This mnemonic phrase was first introduced by Carla Shatz \[12\] in an article for the Scientific American aimed at lay public" und meint damit den Satz "In a sense, then, cells that fire together wire together." in <R>Sha92, S. 94</R>. https://en.wikipedia.org/wiki/Hebbian_theory#cite_ref-2 (abgerufen 16.08.2023) hingegen schreibt den Ursprung <R>LS92</R> zu: "neurons wire together if they fire together." <R>LS92, S.211</R>
+
+
+
+
+
+
 
 dAMIT GILT hEBB ALS eNTDECKER DER SYNAPTISCHEN pLATIZITÄT:
 
