@@ -158,6 +158,27 @@ Quotation style: IEEE
 
  - **[SSH95]** P. Sander, W. Stucky, und R. Herschel, „Automaten“, in _Automaten Sprachen Berechenbarkeit: Grundkurs Angewandte Informatik IV_, W. Stucky, Hrsg., Wiesbaden: Vieweg+Teubner Verlag, 1995, S. 26–97. https://doi.org/10.1007/978-3-322-84873-4_2.
 
+## 2.2 Das Rosenblatt-Perzeptron
+
+- **[Sha92]** C. J. Shatz, „The Developing Brain“, SCIENTIFIC AMERICAN, 1992.
+
+
+- **[KG14]** C. Keysers und V. Gazzola, „Hebbian learning and predictive mirror neurons for actions, sensations and emotions“, Philosophical Transactions of the Royal Society B: Biological Sciences, Bd. 369, Nr. 1644, S. 20130175, 2014, https://doi.org/10.1098/rstb.2013.0175.
+
+
+- **[LS92]** S. Löwel und W. Singer, „Selection of Intrinsic Horizontal Connections in the Visual Cortex by Correlated Neuronal Activity“, Science, Bd. 255, Nr. 5041, S. 209–212, 1992, https://doi.org/10.1126/science.1372754.
+
+
+- **[Heb88]** D. O. Hebb, „The Organization of Behavior“, in Neurocomputing: Foundations of Research, Cambridge, MA, USA: MIT Press, 1988, S. 43–54.
+
+
+- **[Heb49]** D. O. Hebb, The organization of behavior. New York: Wiley, 1949.
+
+- **[Kle99]** R. M. Klein, „The Hebb legacy.“, Canadian Journal of Experimental Psychology / Revue canadienne de psychologie expérimentale, Bd. 53, Nr. 1, S. 1–3, 1999, https://doi.org/10.1037/h0087295.
+
+- **[Str01]** B. B. Strickland, Hrsg., The Gale encyclopedia of psychology, 2nd ed. Detroit, MI: Gale Group, 2001.
+
+
 
 
 ## 6. Zusammenfassung und Bemerkung
