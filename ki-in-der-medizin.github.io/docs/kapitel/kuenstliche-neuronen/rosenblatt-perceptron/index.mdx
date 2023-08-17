@@ -6,88 +6,42 @@ description: Neuronenmodell nach Frank Rosenblatt
 
 import {R, F, S, EQ, Def, Tbl, initEq} from "../../../../src/components/Refs.js";
 
+#### 0 Todos
+ - Heaviside (Treppenfunktion) mit Bezug auf 2.1.3.1 Aktivierungs- und Eingabefunktion, Gl. 2.1.3
+
+
 ## 2.2.1 Cells that fire together, wire together: Synaptische Plastizität
 
-Der Kanadier Donald Hebb (1904 - 1985) folgt 1947 einem Ruf der McGill Universität[^1] auf eine Professur für Psychologie. Dort hatte er bereits 15 Jahre vorher seinen Master erhalten, zu einer Zeit, in der er parallel als Lehrer und Direktor an einer Schule tätig gewesen ist [^2]. Vielleicht hatte diese Tätigkeit bereits mit seiner Faszination darüber zu tun, wie Menschen lernen, Informationen verarbeiten und speichern <R>Str01, S. 298 ff.</R>: Die Forschung daran wird jedenfalls später wichtiger Bestandteil seines beruflichen Schaffens. In seinem 1949 veröffentlichten Buch "**The organization of Behavior: A Neuropsychological Theory**" <R>Heb49</R> liefert er grundlegende Theorien[^3] für die Art und Weise, wie das Gehirn lernt. Hebb posutliert[^4] <R>Klei99, S.2 f.</R>:
+Donald Hebb (1904 - 1985), gebürtiger Kanadier, Sohn eines Ärzte-Elternpaares und 1965 nominiert für den Nobelpreis <R>BM03, S. 1014</R>, geht als junger Mann einer Karriere als Schriftsteller nach. Er studiert Englisch als Hauptfach und macht 1924 seinen Bachelor[^1] <R>Coo05, S.852</R>, doch die Schriften Freuds, mit denen er sich nach seinem Abschluss beschäftigt, wecken in ihm den Wunsch, sich tiefer mit Psychologie zu beschäftigen <R>BM03 S. 1013</R>: An der McGill Universität in Montreal[^2] macht er 1932 seinen Master darin[^3], und leitet dort 16 Jahre später als Professor die Fakultät für Psychologie <R>Coo05, S. 853</R>.
 
-1. > _When an axion of cell_ A _is near enough to excite a cell_ B _and repeatedly or persistently takes part in firing it, some
+Seine Faszination darüber, wie das Gehirn lernt, Informationen verarbeitet und speichert <R>Str01, S. 298 ff.</R> wird Bestandteil seiner Forschungsarbeit: 1949 veröffentlicht er das Buch "**The organization of Behavior: A Neuropsychological Theory**" <R>Heb49</R>; seine darin formulierten Postulate[^4] <R>Kle99, S.2 f.</R> liefern einen wichtigen Beitrag für die Neurowissenschaften[^5]. Oft zitiert wird seine Idee bzgl. synaptischer Verstärkung, was heute als **Hebbsche Synapse** bekannt ist <R>AR88, S. 4, Abs. 5</R>[^6]:
+
+> _When an axion of cell_ A _is near enough to excite a cell_ B _and repeatedly or persistently takes part in firing it, some
 growth process or metabolic change takes place in one or both cells such that_ A_'s efficiency, as one of the cells firing_ B_, is increased._ <R>Heb88, S.50, Hervorhebung i.O.</R>
 
-2. > [...] any two cells or systems of cells that are repeatedly active at the same time will tend to become “associated,” so that activity
-in one facilitates activity in the other. <R>Heb88, S. 52, "Mode of perceptual Integration: The Cell-Assembly"</R>
+Derartige Veränderungen synaptischer Verbindungen wird als **Hebbsche Lernregel** <R>BCP18, S.985, "Hebb'sches Lernen"</R> bezeichnet. Das damit verbundene geflügelte Wort _Cells that fire together, wire together_[^7] beschreibt die Hypothese bildhaft. Seine Idee der "**Cell Assembly**" (siehe [^6], Zitat _b_) schließt daran an: Damit sind Verbände von Neuronen gemeint, die miteinander verschaltet sind, und deren Verbindungen durch das Hebbsche Lernen so sehr verstärkt sind, das die Aktivierung einzelner Zellen in diesen Verbänden ausreicht, das alle Zellen aktiviert werden <R>BCP18, S. 907-908, "Hebb und der Neuronenverband"</R>.
 
-3. > A series of such events \[Aktivierung von "cell-assemblies"\] constitutes a “phase sequence”—the thought process. <R>Heb88, S. 48, "Mode of perceptual Integration: The Cell-Assembly</R>[^5]
-
-Cells that fire together, wire together[^6]
-
-In the scientific literature references to Hebb, the
-Hebbian cell-assembly, the Hebb synapse and the Hebb
-rule, increase each year. These forceful ideas of 1949 are now
-applied in engineering, robotics, and computer science as
-well as neurophysiology, neuroscience and psychology [Ray99, S. 3]
+Hebbs Theorien gelten durch die Forschung als bestätigt[^8], und mit der von Hebb formulierten synaptische Plastizität wurde auch eine Idee für lernende künstliche neuronale Netze geliefert[^9]. In **Abschnitt 2.1.4** haben wir geschlossen, dass ein MCP-Netz nur durch vorhergehende Analyse der Aufgabe und Anpassung der Topologie von Außen zur Lösung einer Aufgabe imstande ist. Hebbs Erkenntnis führt 8 Jahre später zu einem Modell, das in der Lage ist, sich selbst anzupassen.
 
 
-
-Hebb
-fulfilled this promise and laid the foundation for
-neoconnectionism which seeks to explain cognitive processes in terms of connections between assemblies of real or
-artificial neurons. [Ray99, S. 2]
-
-
-[^1]: McGillUniversität, Montreal, Quebec (Kanada): https://www.mcgill.ca/neuro/about/donald-hebb-phd (abgerufen 16.08.2023)
-[^2]: zu der Zeit studierte er in Teilzeit an der McGill Universität: "as a part time graduate student" <R>Kle99, S. 1</R>
-[^3]: als hätte sein Buch eine Art Golgräberstimmung in der der Psychologie ausgelöst, schreibt <R>Klei99</R>: "It attracted many
-brilliant scientists into psychology, made McGill University a North American mecca for scientists interested in brain mechanisms of behaviour, led to many important discoveries, and steered contemporary psychology onto a more fruitful path." <R>Klei99, S.1</R>
-[^4]: "three pivotal postulates" <R>Klei99, S.2 f.</R>
-[^5]: Die Aussage findet sich im Original <R>Heb49</R> bereits in "Introduction", S. xi-xix
-[^6]: Zumindest in <R>Heb49</R> findet sich kein solches Zitat. <R>KG14, S. 2</R> behauptet: "This mnemonic phrase was first introduced by Carla Shatz \[12\] in an article for the Scientific American aimed at lay public" und meint damit den Satz "In a sense, then, cells that fire together wire together." in <R>Sha92, S. 94</R>. https://en.wikipedia.org/wiki/Hebbian_theory#cite_ref-2 (abgerufen 16.08.2023) hingegen schreibt den Ursprung <R>LS92</R> zu: "neurons wire together if they fire together." <R>LS92, S.211</R>
+[^1]: an der Dalhousie Universität: https://dal.ca (abgerufen 17.08.2023)
+[^2]: McGillUniversität, Montreal, Quebec (Kanada): https://www.mcgill.ca/neuro/about/donald-hebb-phd (abgerufen 16.08.2023)
+[^3]: zu der Zeit studierte er in Teilzeit an der McGill Universität: "as a part time graduate student" <R>Kle99, S. 1</R>. Seine Master-Arbeit schrieb er aufgrund einer Erkrankung im Bett <R>BM03, S. 1014</R>
+[^4]: es sind "three pivotal postulates" <R>Kle99, S.2 f.</R>
+[^5]: als hätte sein Buch eine Art Golgräberstimmung in der der Psychologie ausgelöst, schreibt <R>Kle99</R>: "It attracted many
+brilliant scientists into psychology, made McGill University a North American mecca for scientists interested in brain mechanisms of behaviour, led to many important discoveries, and steered contemporary psychology onto a more fruitful path." <R>Kle99, S.1</R>
+[^6]: sowie als Zitat: _a:_ "[...] any two cells or systems of cells that are repeatedly active at the same time will tend to become “associated,” so that activity in one facilitates activity in the other." <R>Heb88, S. 52, "Mode of perceptual Integration: The Cell-Assembly"</R> sowie _b:_ "A series of such events \[Aktivierung von "cell-assemblies"\] constitutes a “phase sequence”—the thought process. <R>Heb88, S. 48, "Mode of perceptual Integration: The Cell-Assembly</R>; die Aussage findet sich im Original <R>Heb49</R> bereits in "Introduction", S. xi-xix
+[^7]: Zumindest in <R>Heb49</R> findet sich kein solches Zitat. <R>KG14, S. 2</R> behauptet: "This mnemonic phrase was first introduced by Carla Shatz \[12\] in an article for the Scientific American aimed at lay public" und meint damit den Satz "In a sense, then, cells that fire together wire together." in <R>Sha92, S. 94</R>. https://en.wikipedia.org/wiki/Hebbian_theory#cite_ref-2 (abgerufen 16.08.2023) hingegen schreibt den Ursprung <R>LS92</R> zu: "neurons wire together if they fire together." <R>LS92, S.211</R>
+[^8]:  vgl. <R>BLS19, S.833, Abs. 2 f.</R>, außerdem <R>YLC+14</R> und <R>BL73</R>. <R>BPC18, S. 875, Exkurs 23.5</R> verweist auf <R>Cop78</R>
+[^9]: \[Hebb\] laid the foundation for neoconnectionism which seeks to explain cognitive processes in terms of connections between assemblies of real or
+artificial neurons. <R>Kle99, S. 2</R>
 
 
+## 2.2.2 Das Perzeptron - ein linearer Klassifizierer
+
+Bei der MCP-Zelle hatten wir eine Kantengewichtsfunktion eingeführt, die je nach hemmender oder erregender afferenter Verbindung einen positiven oder negativen Wert zurückliefert (s. **Definition 2.1**). Für eine solche Kantengewichtsfunktion müßte nun
 
 
-
-
-
-dAMIT GILT hEBB ALS eNTDECKER DER SYNAPTISCHEN pLATIZITÄT:
-
-Daher bezeichnet man Synapsen, die auf diese Weise modifiziert werden können, als Hebb-Synapsen und derartige Veränderungen als Hebb’sches
-Lernen. [BCP18, S. 876 Abs. 2]
-
-"Grundlegende Mechanismen der cortikalen Plastizität" [BCP, S. 882]
-1. Wenn das präsynaptische Axon aktiv ist und gleichzeitig das postsynaptische Neuron
-unter dem Einfluss weiterer Eingänge stark aktiviert wird, wird die vom präsynaptischen Axon gebildete Synapse gestärkt. Dies ist nur eine andere Formulierung der
-bereits erwähnten Hypothese von Hebb. Mit anderen Worten: Synchrone neuronale
-Aktivität verstärkt die Kopplung.
-
--> Hebb’sches Lernen Die Effizienz einer Synapse erhöht sich, [BCP Glossar, S. 985 & 986]
-wenn prä- und postsynaptische Neuronen gleichzeitig aktiviert
-werden.
--> Eine Synapse, die Hebb’sches Lernen zeigt.
-
-2. Wenn das präsynaptische Axon aktiv ist und gleichzeitig das postsynaptische Neuron
-unter dem Einfluss weiterer Eingänge nur schwach aktiviert wird, wird die vom prä-
-synaptischen Axon gebildete Synapse geschwächt. Mit anderen Worten: Asynchrone
-neuronale Aktivität vermindert die Kopplung
-
- Cell Assembly [BCP18, "Hebb und der Neuronenverband"S. 907-908]
- -  Hebb stellte sich vor, dass all diese Zellen reziprok miteinander verschaltet seien.
-Die interne Repräsentation des Objekts würde so lange im Kurzzeitgedächtnis behalten,
-wie die Aktivität durch die Verschaltungen in dem Neuronenverband zirkuliert. Weiterhin
-stellte er die Hypothese auf, dass es, sofern die Aktivierung des Neuronenverbands nur
-lange genug andauere, zu einer Konsolidierung durch einen „Wachstumsprozess“ käme,
-durch den die reziproken Verschaltungen effektiver werden; Neuronen, die gemeinsam
-feuern, würden auch gemeinsam verschaltet (Abb. 24.11b). Folglich würden, wenn nur
-ein Bruchteil der Zellen des Verbands durch einen späteren Reiz aktiviert wird, die nun
-verstärkten reziproken Verschaltungen bewirken, dass der gesamte Verband wieder aktiviert wird
-
-Paper [CPL1978, Siehe KSJ+13, S. 1269 Figure. 56-8]
-
-- Hebb Synapse [BLS19, S. 831]
-- Arbeitsweise von Hebb Synapsen, Blinzeln, Ton, Luftstoß (Konditionierung),  [BLS19, S. 832]
-
-# 0 Todos
- - Heaviside (Treppenfunktion) mit Bezug auf 2.1.3.1 Aktivierungs- und Eingabefunktion, Gl. 2.1.3
- - Auf Plastizität zurückkommen (angemerkt in 2.1)
 
 Einführung: Hebb 1949, Organization of Behavior, Lernregel, synaptische PLastizität, "fire togteher, wire together".
 Auf dieser Grundlage dann Modell Rosenblatt, Synapsen gewichte
