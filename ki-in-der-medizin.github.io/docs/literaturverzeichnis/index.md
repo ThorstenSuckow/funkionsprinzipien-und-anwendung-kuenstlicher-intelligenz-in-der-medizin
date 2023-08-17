@@ -160,6 +160,20 @@ Quotation style: IEEE
 
 ## 2.2 Das Rosenblatt-Perzeptron
 
+- **[Cop78]** M. Constantine-Paton und M. I. Law, „Eye-Specific Termination Bands in Tecta of Three-Eyed Frogs“, Science, Bd. 202, Nr. 4368, S. 639–641, 1978, https://doi.org/10.1126/science.309179.
+
+
+- **[BL73]** T. V. P. Bliss und T. Lømo, „Long-lasting potentiation of synaptic transmission in the dentate area of the anaesthetized rabbit following stimulation of the perforant path“, The Journal of Physiology, Bd. 232, Nr. 2, S. 331–356, 1973, https://doi.org/10.1113/jphysiol.1973.sp010273.
+
+- **[YLC+14]** G. Yang, C. S. W. Lai, J. Cichon, L. Ma, W. Li, und W.-B. Gan, „Sleep promotes branch-specific formation of dendritic spines after learning“, Science, Bd. 344, Nr. 6188, S. 1173–1178, 2014, https://10.1126/science.1249098.
+
+
+- **[Coo05]** S. J. Cooper, „Donald O. Hebb’s synapse and learning rule: a history and commentary“, Neuroscience & Biobehavioral Reviews, Bd. 28, Nr. 8, S. 851–874, 2005, https://doi.org/10.1016/j.neubiorev.2004.09.009.
+
+
+- **[BM03]** R. E. Brown und P. M. Milner, „The legacy of Donald O. Hebb: more than the Hebb Synapse“, Nature Reviews Neuroscience, Bd. 4, Nr. 12, S. 1013–1019, Dez. 2003, https://doi.org/10.1038/nrn1257.
+
+
 - **[Sha92]** C. J. Shatz, „The Developing Brain“, SCIENTIFIC AMERICAN, 1992.
 
 
