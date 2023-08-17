@@ -19,3 +19,6 @@ https://de.wikipedia.org/wiki/Theoretische_Biologie, abgerufen 09.08.2023
 
 - **https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FHebbian_theory%23cite_ref-2.png**
  https://en.wikipedia.org/wiki/Hebbian_theory#cite_ref-2, abgerufen 16.08.2023
+
+- **https%3A%2F%dal.ca.png
+ https://www.dal.ca/, abgerufen 17.08.2023
