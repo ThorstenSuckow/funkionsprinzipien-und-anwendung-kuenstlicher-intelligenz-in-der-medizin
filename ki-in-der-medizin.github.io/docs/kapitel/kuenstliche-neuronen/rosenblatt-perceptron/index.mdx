@@ -21,7 +21,7 @@ growth process or metabolic change takes place in one or both cells such that_ A
 
 Derartige Veränderungen synaptischer Verbindungen wird als **Hebbsche Lernregel** <R>BCP18, S.985, "Hebb'sches Lernen"</R> bezeichnet. Das damit verbundene geflügelte Wort _Cells that fire together, wire together_[^7] beschreibt die Hypothese bildhaft. Seine Idee der "**Cell Assembly**" (siehe [^6], Zitat _b_) schließt daran an: Damit sind Verbände von Neuronen gemeint, die miteinander verschaltet sind, und deren Verbindungen durch das Hebbsche Lernen so sehr verstärkt sind, das die Aktivierung einzelner Zellen in diesen Verbänden ausreicht, das alle Zellen aktiviert werden <R>BCP18, S. 907-908, "Hebb und der Neuronenverband"</R>.
 
-Hebbs Theorien gelten durch die Forschung als bestätigt[^8], und mit der von Hebb formulierten synaptische Plastizität wurde auch eine Idee für lernende künstliche neuronale Netze geliefert[^9]. In **Abschnitt 2.1.4** haben wir geschlossen, dass ein MCP-Netz nur durch vorhergehende Analyse der Aufgabe und Anpassung der Topologie von Außen zur Lösung einer Aufgabe imstande ist. Hebbs Erkenntnis führt 8 Jahre später zu einem Modell, das in der Lage ist, sich selbst anzupassen.
+Hebbs Theorien gelten durch die Forschung als bestätigt[^8], und mit der von Hebb formulierten synaptische Plastizität wurde auch eine Idee für lernende künstliche neuronale Netze geliefert[^9]. In **Abschnitt 2.1.4** haben wir geschlossen, dass ein MCP-Netz nur durch vorhergehende Analyse der Aufgabe und Anpassung der Topologie von Außen zur Lösung einer Aufgabe imstande ist. Hebbs Erkenntnis führt kurz vor Beginn der 60er Jahre zu einem Modell, das in der Lage ist, sich selbst anzupassen.
 
 
 [^1]: an der Dalhousie Universität: https://dal.ca (abgerufen 17.08.2023)
@@ -38,6 +38,56 @@ artificial neurons. <R>Kle99, S. 2</R>
 
 
 ## 2.2.2 Das Perzeptron - ein linearer Klassifizierer
+
+Bereits 1954 wurden Versuche unternommen, lernfähige neuronale Netze zu modellieren <R>Ros62, S. 24, Abs. 2</R>[^10]. Erst 1958 schafft es ein Modell, eine Sensation auszulösen <R>AR88, S.90</R>: Das Perzeptron. Bereits 1957 beschreibt es sein Schöpfer Frank Rosenblatt (1928 - 1971)[^12] als Teil eines internen Forschungsprojektes des Cornell Aeronautical Labors: Die Forschungseinrichtung gehörte von 1946 bis 1972[^13] zu der Cornell Universität[^14], an der Rosenblatt 1950 seinen A.B und 1956 seinen Ph.D. gemacht hatte, und an der er bis zu seinem Lebensende[^15] als Psychologe und Neurobiologe forschen und lehren wird <R>Ehb71</R>.
+
+In dem Forschungsprojekt "_Perceiving and Recognizing Automaton_" ging es um einen Apparat, der mittels einer Kamera und entsprechender Schaltkreise dazu in der Lage war, Muster zu erkennen. Die Maschine wurde bereits 1957 in <R>Ros57</R> beschrieben zunächst auf einem IBM 704 Rechner simuliert<R>Ros60, </R>, bevor sie Anfang der 60er Jahre als _Mark 1 Perceptron_ gebaut wurde: 400 Cadmiumsulfid-Photozellen, die ein 20x20 Pixel großes Bild repräsentieren, wurden entsprechend der erkannten Muster angesteuert aktiviert <R>Bis06, S. 193 "Frank Rosenblatt" sowie S. 196 Figure 4.8</R>.
+
+
+[^10]: Rosenblatt verweist hier auf <R>CF54</R>
+[^11]: <R>Ros62</R>
+[^12]: <R>Ros57</R>
+[^13]: Seit 1972 Calspan Corporation <R>BB06</R>, https://calspan.com/ (abgerufen 18.08.2023)
+[^14]:  https://www.cornell.edu/, abgerufen 18.08.2023
+[^15]: 1971 durch einen Bootsunfall <R>Car71</R>
+
+## Notes
+> The perceptron is a relative newcomer to this
+field,having first been described by this writer in 1957 (Ref . 78). Perceptrons
+are of interest because their study appears to throw light upon the biophysics of
+cognitive systems: they illustrate, in rudimentary form, some of the processes
+by which organisms, or other suitably organized entitites, may come to
+possess "knowledge" of the physical world in which they exist, and by which
+the knowledge that they possess can be represented or reported when occasion
+demands. [Ros62, S. 3]
+
+> The writer makes no claim to uniqueness in this respect. In particular, the neuron model employed is a
+direct descendant of that originally proposed by McCulloch and Pitts; the
+basic philosophical approach has been heavily influenced by the theories of
+Hebb and Hayek and the experimental findings of Lashley; moreover, the
+writer's predilection for a probabilistic approach is shared with such theorists as Ashby, Uttley, Minsky, MacKay, and von Neumann, among others. [Ros61, S. 5]
+
+> Simulation of a statistically
+connected network to investigate possible learning capabilities was first
+carried out. successfully by Farley and Clark in 1954 (Ref. 10). [Ros61, S.24]
+
+> * The term "cell assembly" seems appropriate here, as the sets which are
+formed in the terminal state of a cross -coupled perceptron bear a close
+resemblence in organization and functional properties to the cell assembly
+concept proposed by Hebb, in Ref. 33. [Ros62 S. 450]
+
+> In a value -conserving cross -coupled perceptron, where there is
+the possibility of developing pronounced inhibitory interaction between A-seti,
+there is a tendency to develop "cell assemblies" (in Hebb's sense), and these
+cell -assemblies tend to rival one another for dominance at all times. [Ros62, S. 464]
+
+> In the recognition of a complex structured object, such as a
+man (regardless of posture, angle of view, etc.) a program of observations
+might note significant parts and the transitions between them. There should,
+for example, be a head joined to the shoulders, and by following a path from
+one of the hands, the system should successively come to a forearm, shoulder,
+and torso. The reader may recognize a similarity between this suggestion
+and Hebb's concept of a "phase sequence" (Ref . 33). [Ros62, S. 506]
 
 Bei der MCP-Zelle hatten wir eine Kantengewichtsfunktion eingeführt, die je nach hemmender oder erregender afferenter Verbindung einen positiven oder negativen Wert zurückliefert (s. **Definition 2.1**). Für eine solche Kantengewichtsfunktion müßte nun
 
