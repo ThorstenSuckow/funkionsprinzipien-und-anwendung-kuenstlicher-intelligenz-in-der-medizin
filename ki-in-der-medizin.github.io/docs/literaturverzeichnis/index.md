@@ -18,7 +18,7 @@ Quotation style: IEEE
 
 - **[AR88]** J. A. Anderson und E. Rosenfeld, Hrsg., Neurocomputing: Foundations of Research. Cambridge, MA, USA: MIT Press, 1988. ISBN:978-0-262-01097-9
 
-- **[BCP18]** M. F. Bear, B. W. Connors und M. A. Paradiso, _Neurowissenschaften: Ein grundlegendes Lehrbuch für Biologie, Medizin und Psychologie_, A. K. Engel, Hrsg., Berlin, Heidelberg: Springer Berlin Heidelberg, 2018. https://doi.org/10.1007/978-3-662-57263-4.
+- **[BCP18]** M. F. Bear, B.ss transforssssto book W. Connors und M. A. Paradiso, _Neurowissenschaften: Ein grundlegendes Lehrbuch für Biologie, Medizin und Psychologie_, A. K. Engel, Hrsg., Berlin, Heidelberg: Springer Berlin Heidelberg, 2018. https://doi.org/10.1007/978-3-662-57263-4.
 
 - **[Lyr17]** H. Lyre, "Philosophie der Neurowissenschaften". In: S. Lohse und T. Reydon (Hg.): _Grundriss Wissenschaftsphilosophie: Die Philosophien der Einzelwissenschaften_. S. 319-353, Hamburg: Meiner, 2017. (Zitate aus http://philpapers.org/archive/LYRCFV.pdf)
 
@@ -106,15 +106,13 @@ Quotation style: IEEE
  - **[Cow98]** Cowan, J. D. (1998). Interview with J.A. Anderson and E. Rosenfeld. In J. A. Anderson & E. Rosenfeld (Eds.), Talking nets: An oral history of neural networks (pp. 97–124). Cambridge MA: MIT Press.
 
  - **[Wie48]** N. Wiener, _Cybernetics of control and communication in the animal and the machine_. New York: The M.I.T. Press And John Wiley, 1961.
-   ‌
+   
 
  - **[Mas90]** R. Masani, „McCulloch, Pitts and the Evolution of Wiener’s Neurophysiological Ideas“, in _Norbert Wiener 1894–1964_, Basel: Birkhäuser Basel, 1990, S. 218–238. https://doi.org/10.1007/978-3-0348-9252-0_16.
 
 - **[Kue19]** E. W. U. Küppers, „Einleitung und Lernziele“, in Eine transdisziplinäre Einführung in die Welt der Kybernetik: Grundlagen, Modelle, Theorien und Praxisbeispiele, Wiesbaden: Springer Fachmedien Wiesbaden, 2019, S. 1–3. https://doi.org/10.1007/978-3-658-23725-7_1.
 
 - **[Mcc67]** „McCulloch, W. S. (1967a). Lekton, being a belated introduction to the thesis of Eilhard von Domarus. In L. Thayer (Ed.). _Communication: Theory and research. Proceedings of the first symposium_ (pp. 348–350). Springfield IL: Charles C. Thomas.“
-
-
 
  - **[Rau88]** W. Rautenberg, _Einführung in die Mathematische Logik_. Wiesbaden: Vieweg+Teubner Verlag, 2008. https://doi.org/10.1007/978-3-8348-9530-1.
 
@@ -159,6 +157,30 @@ Quotation style: IEEE
  - **[SSH95]** P. Sander, W. Stucky, und R. Herschel, „Automaten“, in _Automaten Sprachen Berechenbarkeit: Grundkurs Angewandte Informatik IV_, W. Stucky, Hrsg., Wiesbaden: Vieweg+Teubner Verlag, 1995, S. 26–97. https://doi.org/10.1007/978-3-322-84873-4_2.
 
 ## 2.2 Das Rosenblatt-Perzeptron
+
+- **[Ros60]** F. Rosenblatt, „Perceptron Simulation Experiments“, Proceedings of the IRE, Bd. 48, Nr. 3, S. 301–309, 1960, https://doi.org/10.1109/JRPROC.1960.287598.
+
+
+- **[Bis06]** C. M. Bishop, (2006) Pattern Recognition and Machine Learning. 1st ed. New York, NY: Springer, 2006
+
+
+
+- **[BB06]** K. Burns und A. Bruckner, „The History of Aerospace Research at Cornell Aeronautical Laboratory and Calspan“, in 44th AIAA Aerospace Sciences Meeting and Exhibit, doi: 10.2514/6.2006-335.
+
+- **[Bur04]** K. Burns, „The History of Aerospace Research at Cornell Aeronautical Laboratory and Calspan - 1946 to 1996“, in Space 2004 Conference and Exhibit, doi: 10.2514/6.2004-5884.
+
+
+- **[Ros57]** F. Rosenblatt, „The perceptron - A perceiving and recognizing automaton“, Cornell Aeronautical Laboratory, Ithaca, New York, 85-460–1, Jan. 1957.
+
+
+- **[EHB71]** (VERSCHIEBEN QN) Emlen, Stephen T.; Howland, Howard C.; O’Brien, Richard D. "Frank Rosenblatt, July 11, 1928 — July 11, 1971" (PDF). Cornell University. (https://ecommons.cornell.edu/bitstream/handle/1813/18965/Rosenblatt_Frank_1971.pdf, abgerufen 18.08.2023)
+
+ - **[Car71]** (VERSCHIEBEN QN)   Carey, Hugh L. (1971). "Tribute to Dr. Frank Rosenblatt" (PDF). Congressional Record: Proceedings and Debates of the 92d Congress, First Session. US Government Printing Office. pp. 1–7. (http://csis.pace.edu/~ctappert/srd2011/rosenblatt-congress.pdf, abgerufen 18.08.2023)
+
+ - **[Ros62]** F. Rosenblatt, _Principles of Neurodynamics: Perceptrons and the Theory of Brain Mechanisms._ Spartan Books, Washington DC., 1962
+
+
+#### Hebb
 
 - **[Cop78]** M. Constantine-Paton und M. I. Law, „Eye-Specific Termination Bands in Tecta of Three-Eyed Frogs“, Science, Bd. 202, Nr. 4368, S. 639–641, 1978, https://doi.org/10.1126/science.309179.
 
