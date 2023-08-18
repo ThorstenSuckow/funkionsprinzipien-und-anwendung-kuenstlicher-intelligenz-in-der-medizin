@@ -22,3 +22,9 @@ https://de.wikipedia.org/wiki/Theoretische_Biologie, abgerufen 09.08.2023
 
 - **https%3A%2F%dal.ca.png
  https://www.dal.ca/, abgerufen 17.08.2023
+
+- https%3A%2F%2Fwww.cornell.edu%2F
+  https://www.cornell.edu/, abgerufen 18.08.2023
+
+- https%3A%2F%2Fcalspan.com%2F
+ https://calspan.com/, abgerufen 18.08.2023
