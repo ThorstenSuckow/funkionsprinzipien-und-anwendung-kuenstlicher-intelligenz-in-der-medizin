@@ -158,6 +158,10 @@ Quotation style: IEEE
 
 ## 2.2 Das Rosenblatt-Perzeptron
 
+ - **[MP17]** M. Minsky & S. A. Papert. _Perceptrons_: An introduction to computational geometry. MIT Press, 2017 ISBN:  9780262534772
+
+
+
 - **[Ros60]** F. Rosenblatt, „Perceptron Simulation Experiments“, Proceedings of the IRE, Bd. 48, Nr. 3, S. 301–309, 1960, https://doi.org/10.1109/JRPROC.1960.287598.
 
 
