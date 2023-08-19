@@ -39,17 +39,43 @@ artificial neurons. <R>Kle99, S. 2</R>
 
 ## 2.2.2 Das Perzeptron - ein linearer Klassifizierer
 
-Bereits 1954 wurden Versuche unternommen, lernfähige neuronale Netze zu modellieren <R>Ros62, S. 24, Abs. 2</R>[^10]. Erst 1958 schafft es ein Modell, eine Sensation auszulösen <R>AR88, S.90</R>: Das Perzeptron. Bereits 1957 beschreibt es sein Schöpfer Frank Rosenblatt (1928 - 1971)[^12] als Teil eines internen Forschungsprojektes des Cornell Aeronautical Labors: Die Forschungseinrichtung gehörte von 1946 bis 1972[^13] zu der Cornell Universität[^14], an der Rosenblatt 1950 seinen A.B und 1956 seinen Ph.D. gemacht hatte, und an der er bis zu seinem Lebensende[^15] als Psychologe und Neurobiologe forschen und lehren wird <R>Ehb71</R>.
+Bereits 1954 wurden Versuche unternommen, lernfähige neuronale Netze zu modellieren <R>Ros62, S. 24, Abs. 2</R>[^10]. Erst 1958 schafft es ein Modell, eine Sensation auszulösen: Das Perzeptron  <R>AR88, S.90</R>[^11]. 1957 beschreibt es sein Schöpfer Frank Rosenblatt (1928 - 1971) in <R>Ros57</R> als Teil eines internen Forschungsprojektes des _Cornell Aeronautical Labors_: Die Forschungseinrichtung gehörte von 1946 bis 1972[^12] zu der Cornell Universität[^13], an der Rosenblatt 1950 seinen A.B und 1956 seinen Ph.D. gemacht hatte, und an der er bis zu seinem Lebensende[^14] als Psychologe und Neurobiologe forschen und lehren wird <R>Ehb71</R>.
 
-In dem Forschungsprojekt "_Perceiving and Recognizing Automaton_" ging es um einen Apparat, der mittels einer Kamera und entsprechender Schaltkreise dazu in der Lage war, Muster zu erkennen. Die Maschine wurde bereits 1957 in <R>Ros57</R> beschrieben zunächst auf einem IBM 704 Rechner simuliert<R>Ros60, </R>, bevor sie Anfang der 60er Jahre als _Mark 1 Perceptron_ gebaut wurde: 400 Cadmiumsulfid-Photozellen, die ein 20x20 Pixel großes Bild repräsentieren, wurden entsprechend der erkannten Muster angesteuert aktiviert <R>Bis06, S. 193 "Frank Rosenblatt" sowie S. 196 Figure 4.8</R>.
+In dem Forschungsprojekt "_Perceiving and Recognizing Automaton_" ging es um einen Apparat, der mittels einer Kamera geometrische Figuren erkennen und zuordnen kann. Ihr Verhalten hatte Rosenblatt zunächst auf einem IBM 704 Rechner simuliert<R>Ros60</R>, bevor sie Anfang der 60er Jahre als _Mark 1 Perceptron_ gebaut wurde: 400 Cadmiumsulfid-Photozellen auf einem 20x20 großen Raster angeordnet - dem **S-System** (**S** = _Sensory_) - speisten Signale in das **A-System** (**A** = _Association_) ein; dort wurden sie registriert und ausgewertet, und schlussendlich über das **R-System** (**R** = _Response_) ausgegeben (vgl. <R>Ros57, S. 4, f.</R>, <R>Ros58 S. 389 ff.</R> sowie <R>Bis06, S. 193 "Frank Rosenblatt" sowie S. 196 Figure 4.8</R>). Die  Maschine lernte im ersten Schritt durch die Unterstützung der Ingenieure, wie welche Formen zu interpretieren sind: Die Photozellen wurden aktiviert, und die erwartete Ausgabe wurde manuell festgelegt. Die Verbindungen zwischen den **S**-, **A**- und **R**-Units erinnert nicht nur von der Namensgebung her an biologische Neuronen, auch deren Struktur und Verschaltung wurde hier als Vorbild genommen[^15] <R>Ros62, s. 4, Abs. 2</R>.
+
+**Abbildung 2.2.1:** Schematische Darstellung der S, A, R Units
 
 
 [^10]: Rosenblatt verweist hier auf <R>CF54</R>
-[^11]: <R>Ros62</R>
-[^12]: <R>Ros57</R>
-[^13]: Seit 1972 Calspan Corporation <R>BB06</R>, https://calspan.com/ (abgerufen 18.08.2023)
-[^14]:  https://www.cornell.edu/, abgerufen 18.08.2023
-[^15]: 1971 durch einen Bootsunfall <R>Car71</R>
+[^11]: vgl. auch <R>MP69, S. xix</R>: "Interest in connectionist networks revivied dramatically in 1962 with the publication of Frank Rosenblatt's book _Principles of Neurodynamics_, [...]" (Hervorhebung i.O.)
+[^12]: Seit 1972 Calspan Corporation <R>BB06</R>, https://calspan.com/ (abgerufen 18.08.2023)
+[^13]:  https://www.cornell.edu/, abgerufen 18.08.2023
+[^14]: 1971 durch einen Bootsunfall <R>Car71</R>
+[^15]: Die **S**-Units konnten sowohl hemmende als auch erregende Signale in das **A**-System einspeisen-. Darüber hinaus war das **R**-System in der Lage, über Rückkoppelungen hemmende Signale an das **A**-System zu senden: Damit sollte verhindert werden, dass weitere **R**-Units aktiviert werden, die sich mit den bereits aktivierten Units gegenseitig ausschließen. <R>Ros57, S. 4, Punkt (3)</R>
+
+
+## 2.2.3 Das Modell
+
+
+DEFINITION 17: A perceptron is a network of S, A, and R units with a
+variable interaction matrix V which depends on the
+sequence of past activity states of the network. <R>Ros62, S. 83</R> (Definition, a, r, s S. 79 ff.)
+
+DEFINITION 9: A simple A-unit is a logical decision element, which
+generates an output signal if the algebraic sum of its
+input signals, ocI , is equal or greater than a threshold
+quantity, G > 0 . The output signal a * is equal to ¥- I
+if ait > Q and 0 otherwise. If a * = + I , the unit
+is said to be active. <R>Ros62, S. 81, "Definition 9"</R>
+
+Bzgl. Def 9.
+> The writer makes no claim to uniqueness in this respect. In particular, the neuron model employed is a
+direct descendant of that originally proposed by McCulloch and Pitts; the
+basic philosophical approach has been heavily influenced by the theories of
+Hebb and Hayek and the experimental findings of Lashley; moreover, the
+writer's predilection for a probabilistic approach is shared with such theorists as Ashby, Uttley, Minsky, MacKay, and von Neumann, among others. [Ros61, S. 5]
+
+## 2.2.3 Das Perzepton als Python-Programm
 
 ## Notes
 > The perceptron is a relative newcomer to this
@@ -61,11 +87,7 @@ possess "knowledge" of the physical world in which they exist, and by which
 the knowledge that they possess can be represented or reported when occasion
 demands. [Ros62, S. 3]
 
-> The writer makes no claim to uniqueness in this respect. In particular, the neuron model employed is a
-direct descendant of that originally proposed by McCulloch and Pitts; the
-basic philosophical approach has been heavily influenced by the theories of
-Hebb and Hayek and the experimental findings of Lashley; moreover, the
-writer's predilection for a probabilistic approach is shared with such theorists as Ashby, Uttley, Minsky, MacKay, and von Neumann, among others. [Ros61, S. 5]
+
 
 > Simulation of a statistically
 connected network to investigate possible learning capabilities was first
