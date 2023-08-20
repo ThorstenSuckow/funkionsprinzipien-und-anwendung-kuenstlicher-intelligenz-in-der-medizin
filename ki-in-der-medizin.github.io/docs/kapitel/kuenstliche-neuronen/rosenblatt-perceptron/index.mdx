@@ -82,7 +82,7 @@ Prädikate sind hier Verbindungen zu den Eingabesignalen, die einen Wahrheitswer
 **Abbildung 2.2.2:** Schematische Darstellung der Eingabesignale, Prädikate, Gewichte und Schwellenwertzelle [Ro93, S. 53]
 
 
-Die Eingabefunktion setzt sich dann wie **_2-1-2_** aus der Summe der Produkte der Prädikate $P_i \in \Phi$ (wobei $P_i \in \{0, 1\}$) und den Gewichten $w_i \in \R$ der Verbindungen zusammen (**_2-2-1_**), und die Aktivierungsfunktion (**_2-2-1_**) ist wieder eine Treppenfunktion mit dem reellen Schwellenwert $\Theta$:
+Die Eingabefunktion setzt sich dann wie **_2-1-2_** aus der Summe der Produkte der Prädikate $P_i \in \Phi$ (wobei $P_i(X) \in \{0, 1\}$) und den Gewichten $w_i \in \R$ der Verbindungen zusammen (**_2-2-1_**), und die Aktivierungsfunktion (**_2-2-1_**) ist wieder eine Treppenfunktion mit dem reellen Schwellenwert $\Theta$:
 
 <EQ id={"2-2-1"}>
 
@@ -99,30 +99,34 @@ $f:= f(x) = f(g(X)) = \begin{cases}
 
 </EQ>
 
-Für eine Eingabe folgt, das sie entweder zu $0$ oder zu $1$ evaluiert. Wir haben es hier also wieder mit einem binären Wertebereich zu tun, den wir mit Hilfe der Eingabe- und Aktivierungsfunktion geometrisch darstellen können. Als Beispiel schauen wir uns die _1. Winkelhalbierende_ im 2-dimensionale kartesischen Koordinatensystem an. Die Funktion der 1. Winkelhalbierende lautet
+Für eine Eingabe folgt, das sie entweder zu $0$ oder zu $1$ evaluiert. Wir haben es hier also wieder mit einem binären Wertebereich zu tun, den wir mit Hilfe der Eingabe- und Aktivierungsfunktion geometrisch darstellen können. Zur Veranschaulichung schauen wir uns die _1. Winkelhalbierende_ im 2-dimensionale kartesischen Koordinatensystem an.
+Die zugehörige _Gerade_ $L$ <R>Fis19, S. 18</R> ist
 
-<EQ id={"{2-2-3"}>
+<EQ id={"2-2-3"}>
 
-$h:\R \to \R, x \mapsto x$
-
-</EQ>
-
-Die zugehörige _Geradengleichung_ lautet
-
-<EQ id={"{2-2-4"}>
-
-    x_1 - x_2 = 0
+$L = \{(x_1, x_2) \in \R^2: x_1 - x_2 = 0\}$
 
 </EQ>
 
 
 **Abbildung 2.2.3:** Winkelhalbierende im kartesischen Koordinatensystem
 
+Für beliebige Punkte $(x_1, x_2) \notin L$ gilt unter Anwendung der Geradengleichung aus **_2-2-3_** offensichtlich
+
+<EQ id={"2-2-4"}>
+
+$x_1 - x_2 \begin{cases}
+\gt 0 &\text{falls} &x_1 > x_2 \\
+\lt 0 &\text{falls} &x_1 < x_2
+\end{cases}$
+
+</EQ>
+
+$L$ repräsentiert eine _Hyperebene_ in $\R^2$. Punkte, die nicht zu dieser Hyperebene gehören, liegen in dem Fall $\R^2$ in zwei unterschiedlichen Halbräumen. Die Halbräume und deren Trennung wird greifbarer durch die geometrische Darstellung in **Abbildung 2.2.4**. Informell können wir feststellen, das alle Punkte, die $x_1 - x_2 > 0$ erfüllen in dem Halbrum **unter** der durch $L$ beschriebenen Gerade liegen; Punkte, für die  $x_1 - x_2 < 0$ gilt, liegen darüber.
+
+**Abbildung 2.2.4:** Die zwei durch die 1. Winkelhalbierende entstandenen Halbräume
 
 
-
-
-Die beschriebene Aktivierungsfunktion wird nun Gegenstand der formalen Modellierung des Perzeptrons sein, bevor wir uns anhand eines Beispiels die Funktionsweise in der Praxis anschauen.  nehmen wir
 
 
 [^16]: Definitionen aller Zustände, Signale und Funktionen in <R>Ros62, S. 79 - 94</R>
