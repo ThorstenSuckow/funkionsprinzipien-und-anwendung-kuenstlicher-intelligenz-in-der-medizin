@@ -106,7 +106,7 @@ Die Schwellenwertfunktion wird im Kontext von künstlichen neuronalen Netzen auc
 
 $f: \Z \to \{0, 1\}, f(u) = f(g(X)) = \begin{cases}
 1 &\text{falls} &u >= \Theta \\
-0 &\text{falls} &u >= \Theta
+0 &\text{falls} &u < \Theta
 \end{cases}$
 
 </EQ>
@@ -410,7 +410,7 @@ Die Simulation der paradoxen Hitzeempfindung (**Abbildung 2.5c**) erfolgt nun nu
 
 ## 2.1.4 Zusammenfassung
 
-Das MCP-Modell ist ein **empirisches Modell**[^20] <R>HI97, S. 4</R> und basiert auf Analyse und einfacher Schwellenwertlogik <R>AR88, S. 16, Abs. 2</R>. In ihrem Papier weisen McCulloch und Pitts darauf hin, dass das Alles-Oder-Nichts-Prinzip als Vorbild für ihre Abstraktion durch Aussagenlogik dient. Von allem, was wir in Kapitel 1 über Nervenzellen erfahren haben, dürfen wir den Schluss ziehen, dass das von ihnen erstellte Modell eine starke Vereinfachung ist[^21]. Aktionspotenzialen lassen sich gewiss nicht auf zweiwertige Logik reduzieren, darüber hinaus berücksichtigen sie auch nicht eine mögliche Veränderung des Netzes, z.B. durch Lernen[^22]. McCulloch und Pitts sind sich dessen durchaus bewußt[^23]. Es bleibt ein statisches Modell, es muß "konstruiert" werden <R>Fau94, S. 28, "1.6.2 Algorithm"</R>, es nur durch Änderung der Netztopologie anpassungsfähig. Selbständig zu lernen vermag es nicht.
+Das MCP-Modell ist ein **empirisches Modell**[^20] <R>HI97, S. 4</R> und basiert auf Analyse und einfacher Schwellenwertlogik <R>AR88, S. 16, Abs. 2</R>. In ihrem Papier weisen McCulloch und Pitts darauf hin, dass das Alles-Oder-Nichts-Prinzip als Vorbild für ihre Abstraktion durch Aussagenlogik dient. Von allem, was wir in Kapitel 1 über Nervenzellen erfahren haben, dürfen wir den Schluss ziehen, dass das von ihnen erstellte Modell eine starke Vereinfachung ist[^21]. Aktionspotenzialen lassen sich gewiss nicht auf zweiwertige Logik reduzieren, darüber hinaus berücksichtigen sie auch nicht eine mögliche Veränderung des Netzes, z.B. durch Lernen[^22]. McCulloch und Pitts sind sich dessen durchaus bewußt[^23]. Es bleibt ein statisches Modell, es muß "konstruiert" werden <R>Fau94, S. 28, "1.6.2 Algorithm"</R>. Es ist nur durch Änderung der Netztopologie bzw. der Schwellenwerte anpassungsfähig <R>Roj93, S. 51, Abs. 2</R> Selbständig zu lernen vermag es nicht.
 
 Tatsächlich ist die McCulloch-Pitts-Zelle von eher geringer Bedeutung für die Neurowissenschaft gewesen[^24]<R>AR88, S. 17, Abs. 2</R>. Umso größer war ihr Einfluss auf die Computerwissenschaften[^25]. McCulloch und Pitts nahmen für ihr Modell das menschliche Gehirn als Grundlage und ermöglichten so einen neuen Blickwinkel auf Ursache und Wirkung. "'Mind' no longer 'goes more ghostly than a ghost'<R>MP43, S. 114</R>:
 
@@ -467,7 +467,8 @@ paper postulating closed loops in the central nervous system to explain memory (
 [^22]: "Lernen" geschieht auf physiologischer Ebene durch die Modulierung von Synapsen, s. <R>HS19, S. 115 ff.</R>
 [^23]: "McCulloch and Pitts acknowledged in their paper that their definition of a neuron was idealized, and that they made
 physical assumptions that were 'most convenient for the calculus'" <R>Abr02, S. 21, "Conclusion"</R>. Siehe auch <R>MP43, S.101</R>: "[...]we regard facilitation and extinction as dependent upon continuous changes in threshold related to electrical and chemical variables, [...]", sowie "He \[McCulloch\] never claimed that the 1943 model exhausted the richness of individual neurons" <R>Arb19, S. 11, "Does the Brain Have a Logic?", Abs. 4</R>
-[^24]: <R>AR88, S. 17</R>: "The immense theoretical influence of this paper was not among neuroscientists but among computer scientists."
+[^24]: <R>AR88, S. 17</R>: "The immense theoretical influence of this paper was not among neuroscientists but among computer scientists."; <R>Roj93, S.51</R> kommt zu einem ähnlichen Schluss: "Die Art der Schaltungen, die mit
+diesen Zellen gebaut werden, ist aber biologisch gesehen nicht so relevant."
 [^25]: Die Arbeit war ebenso wichtig für die Entwicklung des "Konnektionismus" <R>Arb19, S. 11, "Does the Brain Have a Logic?", Abs. 4</R>, einer Forschungsrichtung der künstlichen Intelligenz, in der Modelle (neuronale Netze) untersucht werden, mit deren Hilfe sich intelligente und kognitive Handlungen auf Maschinen übertragen lassen <R>Dor91, S. v</R>
 [^26]: Ein endlicher Automat ist eine informationsverarbeitende Maschine. Basierend auf Eingaben lassen sich mit einer solchen Maschine Zustände, Zustandsübergänge und Ausgaben modellieren. Bei einem _endlichen_ Automaten sind die genannten Eingaben, Zustände, und Ausgaben endlich. <R>SSH95, S. 29, "2.1 Endliche Automaten" ff.</R>
 [^27]: dass MCP-Netze endliche Automaten sind: Auch in <R>Cow90, S. 76</R> sowie <R>Roj93, S. 47, "Satz 2.4"</R>.  <R>Arb19</R> weist darauf hin, dass die Arbeit von McCulloch und Pitts grundlegend für Automatentheorie gewesen ist <R>Arb19, S. 8, "A Selection of Key Papers", Abs. 3</R>
