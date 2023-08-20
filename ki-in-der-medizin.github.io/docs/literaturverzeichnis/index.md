@@ -158,6 +158,10 @@ Quotation style: IEEE
 
 ## 2.2 Das Rosenblatt-Perzeptron
 
+ - **[RM87]** D. E. Rumelhart und J. L. McClelland, „PDP Models and General Issues in Cognitive Science“, in _Parallel Distributed Processing: Explorations in the Microstructure of Cognition: Foundations_, 1987, S. 110–146.
+
+
+
  - **[MP17]** M. Minsky & S. A. Papert. _Perceptrons_: An introduction to computational geometry. MIT Press, 2017 ISBN:  9780262534772
 
 
