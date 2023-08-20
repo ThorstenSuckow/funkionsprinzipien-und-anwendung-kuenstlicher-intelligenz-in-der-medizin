@@ -8,7 +8,7 @@ import {R, F, S, EQ, Def, Tbl, initEq} from "../../../../src/components/Refs.js"
 
 #### 0 Todos
  - Heaviside (Treppenfunktion) mit Bezug auf 2.1.3.1 Aktivierungs- und Eingabefunktion, Gl. 2.1.3
-
+ - Normalenvektor steht orthogonal auf der Gerade
 
 ## 2.2.1 Cells that fire together, wire together: Synaptische Plastizität
 
@@ -39,9 +39,10 @@ artificial neurons. <R>Kle99, S. 2</R>
 
 ## 2.2.2 Das Perzeptron - ein linearer Klassifizierer
 
-Bereits 1954 wurden Versuche unternommen, lernfähige neuronale Netze zu modellieren <R>Ros62, S. 24, Abs. 2</R>[^10]. Erst 1958 schafft es ein Modell, eine Sensation auszulösen: Das Perzeptron  <R>AR88, S.90</R>[^11]. 1957 beschreibt es sein Schöpfer Frank Rosenblatt (1928 - 1971) in <R>Ros57</R> als Teil eines internen Forschungsprojektes des _Cornell Aeronautical Labors_: Die Forschungseinrichtung gehörte von 1946 bis 1972[^12] zu der Cornell Universität[^13], an der Rosenblatt 1950 seinen A.B und 1956 seinen Ph.D. gemacht hatte, und an der er bis zu seinem Lebensende[^14] als Psychologe und Neurobiologe forschen und lehren wird <R>Ehb71</R>.
+Bereits 1954 wurden Versuche unternommen, lernfähige neuronale Netze zu modellieren <R>Ros62, S. 24, Abs. 2</R>[^10]. Erst 1958 schafft es ein Modell, eine Sensation auszulösen: Das **Perceptron** (im folgenden "Perzeptron") <R>AR88, S.90</R>[^11]. 1957 beschreibt es sein Schöpfer Frank Rosenblatt (1928 - 1971) in <R>Ros57</R> als Teil eines internen Forschungsprojektes des _Cornell Aeronautical Labors_: Die Forschungseinrichtung gehörte von 1946 bis 1972[^12] zu der Cornell Universität[^13], an der Rosenblatt 1950 seinen A.B und 1956 seinen Ph.D. gemacht hatte, und an der er bis zu seinem Lebensende[^14] als Psychologe und Neurobiologe forschen und lehren wird <R>Ehb71</R>.
 
-In dem Forschungsprojekt "_Perceiving and Recognizing Automaton_" ging es um einen Apparat, der mittels einer Kamera geometrische Figuren erkennen und zuordnen kann. Ihr Verhalten hatte Rosenblatt zunächst auf einem IBM 704 Rechner simuliert<R>Ros60</R>, bevor sie Anfang der 60er Jahre als _Mark 1 Perceptron_ gebaut wurde: 400 Cadmiumsulfid-Photozellen auf einem 20x20 großen Raster angeordnet - dem **S-System** (**S** = _Sensory_) - speisten Signale in das **A-System** (**A** = _Association_) ein; dort wurden sie registriert und ausgewertet, und schlussendlich über das **R-System** (**R** = _Response_) ausgegeben (vgl. <R>Ros57, S. 4, f.</R>, <R>Ros58 S. 389 ff.</R> sowie <R>Bis06, S. 193 "Frank Rosenblatt" sowie S. 196 Figure 4.8</R>). Die  Maschine lernte im ersten Schritt durch die Unterstützung der Ingenieure, wie welche Formen zu interpretieren sind: Die Photozellen wurden aktiviert, und die erwartete Ausgabe wurde manuell festgelegt. Die Verbindungen zwischen den **S**-, **A**- und **R**-Units erinnert nicht nur von der Namensgebung her an biologische Neuronen, auch deren Struktur und Verschaltung wurde hier als Vorbild genommen[^15] <R>Ros62, s. 4, Abs. 2</R>.
+#### "The Perceptron - A perceiving and recognizing automaton"
+Das Forschungsprojekt "_Perceiving and Recognizing Automaton_" beschreibt einen Apparat, der mittels einer Kamera geometrische Figuren erkennen und zuordnen kann. Die Funktionen simuliert Rosenblatt zunächst auf einem IBM 704 Rechner <R>Ros60</R>, bevor  die Hardware Anfang der 60er Jahre als _Mark 1 Perceptron_ gebaut wird: 400 Cadmiumsulfid-Photozellen auf einem 20x20 großen Raster angeordnet - dem **S-System** (**S** = _Sensory_) - leiten Signale an das **A-System** (**A** = _Association_); dort werden sie registriert und ausgewertet, und schlussendlich über das **R-System** (**R** = _Response_) ausgegeben (vgl. <R>Ros57, S. 4, f.</R>, <R>Ros58 S. 389 ff.</R> sowie <R>Bis06, S. 193 "Frank Rosenblatt" sowie S. 196 Figure 4.8</R>). Dabei lernt die Maschine im ersten Schritt durch die Unterstützung der Ingenieure, wie gegebene Formen zu interpretieren sind: Für aktivierte Photozellen wird die erwartete Ausgabe manuell festgelegt. Die Verbindungen zwischen den **S**-, **A**- und **R**-Units erinnert nicht nur von der Namensgebung her an biologische Neuronen, auch deren Struktur und Verschaltung wird hier als Vorbild genommen[^15] <R>Ros62, s. 4, Abs. 2</R>.
 
 **Abbildung 2.2.1:** Schematische Darstellung der S, A, R Units
 
@@ -56,24 +57,77 @@ In dem Forschungsprojekt "_Perceiving and Recognizing Automaton_" ging es um ein
 
 ## 2.2.3 Das Modell
 
+Rosenblatt definiert das Perzeptron wie folgt[^16]:
 
-DEFINITION 17: A perceptron is a network of S, A, and R units with a
-variable interaction matrix V which depends on the
-sequence of past activity states of the network. <R>Ros62, S. 83</R> (Definition, a, r, s S. 79 ff.)
+> A <u>perceptron</u> is a network of S, A, and R units with a variable interaction matrix _V_ which depends on the
+sequence of past activity states of the network. <R>Ros62, S. 83, "DEFINITION 17" (Hervorhebung i.O.)</R>
 
-DEFINITION 9: A simple A-unit is a logical decision element, which
+Für die **A**-Units wird definiert:
+
+> A <u>simple A-unit</u> is a logical decision element, which
 generates an output signal if the algebraic sum of its
-input signals, ocI , is equal or greater than a threshold
-quantity, G > 0 . The output signal a * is equal to ¥- I
-if ait > Q and 0 otherwise. If a * = + I , the unit
-is said to be active. <R>Ros62, S. 81, "Definition 9"</R>
+input signals, $\alpha_i$ , is equal or greater than a threshold
+quantity, $\Theta > 0$. The output signal $a^*_i$ is equal to $+1$ if $\alpha_i \geq \Theta$ and $0$ otherwise. If $a^*_i = +1$,
+the unit is said to be <u>active</u>. <R>Ros62, S. 81, "DEFINITION 9" (Hervorhebung i.O.)</R>
 
-Bzgl. Def 9.
-> The writer makes no claim to uniqueness in this respect. In particular, the neuron model employed is a
-direct descendant of that originally proposed by McCulloch and Pitts; the
-basic philosophical approach has been heavily influenced by the theories of
-Hebb and Hayek and the experimental findings of Lashley; moreover, the
-writer's predilection for a probabilistic approach is shared with such theorists as Ashby, Uttley, Minsky, MacKay, and von Neumann, among others. [Ros61, S. 5]
+Die Ähnlichkeiten zu der in **Kapitel 2.1.3** beschriebenen Aktivierungsfunktion sind ersichtlich. Rosenblatt selber weist darauf hin, dass er sein Modell direkt von dem von McCulloch und Pitts eingeführten Modell ableitet. Darüber hinaus weist er auch auf Einflüsse von Hebb und von Neumann hin <R>Ros62, S.5</R>.
+
+Das klassische Rosenblatt-Perzeptron verwendet in einem Netz von Eingabe- und Ausgabe-Knoten gewichtete Verbindungen - die Knoten selber sind Schwellenwertelemente, Verbindungen werden stochastisch ermittelt <R>Roj93, S. 51, Abs. 3</R>. Nach Rosenblatts Veröffentlichung wurde sein Modell analysiert und verfeinert <R>Roj93, S. 51, Abs. 3</R> u. a. von Minsky und Papert in <R>MP17</R>, die wie folgt definieren:
+
+> A <u>perceptron</u> is a device capable of computing all predicates which are linear in some given set $\Phi$ of partial predicates. <R>MP17, S. 12 (Herorhebung i.O.)</R>
+
+Prädikate sind hier Verbindungen zu den Eingabesignalen, die einen Wahrheitswert $0$ oder $1$ basierend auf der Eingabe $X$ berechnen. Die Ausgabe der Prädikate werden individuell gewichtet und an die Zelle weitergeleitet, die die Aktivierungsfunktion implementiert (vgl. <R>Roj93, S. 52</R> und <R>MP17, S. 8-12</R>).
+
+
+**Abbildung 2.2.2:** Schematische Darstellung der Eingabesignale, Prädikate, Gewichte und Schwellenwertzelle [Ro93, S. 53]
+
+
+Die Eingabefunktion setzt sich dann wie **_2-1-2_** aus der Summe der Produkte der Prädikate $P_i \in \Phi$ (wobei $P_i \in \{0, 1\}$) und den Gewichten $w_i \in \R$ der Verbindungen zusammen (**_2-2-1_**), und die Aktivierungsfunktion (**_2-2-1_**) ist wieder eine Treppenfunktion mit dem reellen Schwellenwert $\Theta$:
+
+<EQ id={"2-2-1"}>
+
+g:= g(X) = $\sum^n_{i=1} P_i(X) w_i$
+
+</EQ>
+
+<EQ id={"2-2-2"}>
+
+$f:= f(x) = f(g(X)) = \begin{cases}
+1 &\text{falls} &x >= \Theta \\
+0 &\text{falls} &x < \Theta
+\end{cases}$
+
+</EQ>
+
+Für eine Eingabe folgt, das sie entweder zu $0$ oder zu $1$ evaluiert. Wir haben es hier also wieder mit einem binären Wertebereich zu tun, den wir mit Hilfe der Eingabe- und Aktivierungsfunktion geometrisch darstellen können. Als Beispiel schauen wir uns die _1. Winkelhalbierende_ im 2-dimensionale kartesischen Koordinatensystem an. Die Funktion der 1. Winkelhalbierende lautet
+
+<EQ id={"{2-2-3"}>
+
+$h:\R \to \R, x \mapsto x$
+
+</EQ>
+
+Die zugehörige _Geradengleichung_ lautet
+
+<EQ id={"{2-2-4"}>
+
+    x_1 - x_2 = 0
+
+</EQ>
+
+
+**Abbildung 2.2.3:** Winkelhalbierende im kartesischen Koordinatensystem
+
+
+
+
+
+Die beschriebene Aktivierungsfunktion wird nun Gegenstand der formalen Modellierung des Perzeptrons sein, bevor wir uns anhand eines Beispiels die Funktionsweise in der Praxis anschauen.  nehmen wir
+
+
+[^16]: Definitionen aller Zustände, Signale und Funktionen in <R>Ros62, S. 79 - 94</R>
+
+
 
 ## 2.2.3 Das Perzepton als Python-Programm
 
