@@ -28,3 +28,6 @@ https://de.wikipedia.org/wiki/Theoretische_Biologie, abgerufen 09.08.2023
 
 - https%3A%2F%2Fcalspan.com%2F
  https://calspan.com/, abgerufen 18.08.2023
+
+- https%3A%2F%2Fmathworld.wolfram.com%2FHalf-Plane.html
+  https://mathworld.wolfram.com/Half-Plane.html, abgerufen 21.08.2023
