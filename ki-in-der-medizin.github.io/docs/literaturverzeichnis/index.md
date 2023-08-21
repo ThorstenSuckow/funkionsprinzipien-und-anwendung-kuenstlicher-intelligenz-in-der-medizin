@@ -158,7 +158,9 @@ Quotation style: IEEE
 
 ## 2.2 Das Rosenblatt-Perzeptron
 
- - **[Fis19]** G. Fischer, „Lineare Geometrie im n-dimensionalen reellen Raum“, in Lernbuch Lineare Algebra und Analytische Geometrie: Das Wichtigste ausführlich für das Lehramts- und Bachelorstudium, Wiesbaden: Springer Fachmedien Wiesbaden, 2019, S. 1–82. https://doi.org/10.1007/978-3-658-27343-9_1.
+- **[BHW+12]** K. Burg, H. Haf, F. Wille, und A. Meister, „Vektorräume beliebiger Dimensionen“, in _Höhere Mathematik für Ingenieure Band II: Lineare Algebra_, Wiesbaden: Vieweg+Teubner Verlag, 2012, S. 75–146. https://doi.org/10.1007/978-3-8348-2267-3_2.
+
+ - **[Fis19]** G. Fischer, „Lineare Geometrie im n-dimensionalen reellen Raum“, in _Lernbuch Lineare Algebra und Analytische Geometrie: Das Wichtigste ausführlich für das Lehramts- und Bachelorstudium_, Wiesbaden: Springer Fachmedien Wiesbaden, 2019, S. 1–82. https://doi.org/10.1007/978-3-658-27343-9_1.
 
 
  - **[RM87]** D. E. Rumelhart und J. L. McClelland, „PDP Models and General Issues in Cognitive Science“, in _Parallel Distributed Processing: Explorations in the Microstructure of Cognition: Foundations_, 1987, S. 110–146.
