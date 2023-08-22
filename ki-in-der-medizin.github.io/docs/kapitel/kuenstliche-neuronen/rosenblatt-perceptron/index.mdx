@@ -70,7 +70,7 @@ input signals, $\alpha_i$ , is equal or greater than a threshold
 quantity, $\Theta > 0$. The output signal $a^*_i$ is equal to $+1$ if $\alpha_i \geq \Theta$ and $0$ otherwise. If $a^*_i = +1$,
 the unit is said to be <u>active</u>. <R>Ros62, S. 81, "DEFINITION 9" (Hervorhebung i.O.)</R>
 
-Die Ähnlichkeiten zu der in **Kapitel 2.1.3** beschriebenen Aktivierungsfunktion sind ersichtlich. Rosenblatt selber weist darauf hin, dass er sein Modell direkt von dem von McCulloch und Pitts eingeführten Modell ableitet. Darüber hinaus weist er auch auf Einflüsse von Hebb und von Neumann hin <R>Ros62, S.5</R>.
+Ähnlichkeiten zu der in **Kapitel 2.1.3** beschriebenen Aktivierungsfunktion sind durchaus erkennbar. Rosenblatt selber weist darauf hin, dass er sein Modell direkt von dem von McCulloch und Pitts eingeführten Modell ableitet[^17]. Darüber hinaus weist er auch auf Einflüsse von Hebb und von Neumann hin <R>Ros62, S.5</R>.
 
 Das klassische Rosenblatt-Perzeptron verwendet in einem Netz von Eingabe- und Ausgabe-Knoten gewichtete Verbindungen - die Knoten selber sind Schwellenwertelemente, Verbindungen werden stochastisch ermittelt <R>Roj93, S. 51, Abs. 3</R>. Nach Rosenblatts Veröffentlichung wurde sein Modell analysiert und verfeinert <R>Roj93, S. 51, Abs. 3</R> u. a. von Minsky und Papert in <R>MP17</R>, die wie folgt definieren:
 
@@ -86,7 +86,7 @@ Die Eingabefunktion setzt sich dann wie **_2-1-2_** aus der Summe der Produkte d
 
 <EQ id={"2-2-1"}>
 
-g:= g(X) = $\sum^n_{i=1} P_i(X) w_i$
+$g:= g(X) = \sum^n_{i=1} P_i(X) w_i$
 
 </EQ>
 
@@ -99,8 +99,10 @@ $f:= f(x) = f(g(X)) = \begin{cases}
 
 </EQ>
 
-Für eine Eingabe folgt, das sie entweder zu $0$ oder zu $1$ evaluiert. Wir haben es hier also wieder mit einem binären Wertebereich zu tun, den wir mit Hilfe der Eingabe- und Aktivierungsfunktion geometrisch darstellen können. Zur Veranschaulichung schauen wir uns die _1. Winkelhalbierende_ im 2-dimensionale kartesischen Koordinatensystem an.
-Die zugehörige _Gerade_ $L$ <R>Fis19, S. 18</R> ist
+_Minsky_ und _Papert_ weisen in ihrer Definition des Perzeptrons auf eine besondere Voraussetzung hin, die wir uns in dem nächsten Abschnitt genauer anschauen werden.
+
+### 2.2.3.1 Lineare Trennbarkeit
+Mit **_2-2-2_** folgt für eine Eingabe, dass sie entweder zu $0$ oder zu $1$ evaluiert. Wir haben es hier also wieder mit einem binären Wertebereich zu tun, den wir auch als zwei unterschiedliche Klassen verstehen können. Eingabedaten, die zu $0$ oder zu $1$ konvergieren, sind also einer der beiden Klassen zuzuordnen. Im Folgenden wollen wir die Zusammenhänge geometrisch darstellen. Der Einfachheit halber beschränken wir uns hierzu auf den zweidimensionalen Raum $\R^2$ und betrachten hier die _1. Winkelhalbierende_ im kartesischen Koordinatensystem. Die zugehörige _Gerade_ $L$ <R>Fis19, S. 18</R> ist
 
 <EQ id={"2-2-3"}>
 
@@ -122,13 +124,61 @@ $x_1 - x_2 \begin{cases}
 
 </EQ>
 
-$L$ repräsentiert eine _Hyperebene_ <R>BHW+12 S. 81, "Definition 2.3"</R> in $\R^2$. Punkte, die nicht zu dieser Hyperebene gehören, liegen in dem Fall $\R^2$ in zwei unterschiedlichen _Halbräumen_[^17][QUELLE?]. Die Halbräume und deren Trennung wird greifbarer durch die geometrische Darstellung in **Abbildung 2.2.4**. Wir können feststellen, dass alle Punkte, die $x_1 - x_2 > 0$ erfüllen in dem Halbrum **unter** der durch $L$ beschriebenen Gerade liegen; Punkte, für die  $x_1 - x_2 < 0$ gilt, liegen darüber.
+$L$ repräsentiert eine _Hyperebene_ <R>BHW+12 S. 81, "Definition 2.3"</R> in $\R^2$. Punkte, die nicht zu dieser Hyperebene gehören, liegen in dem Fall $\R^2$ in zwei unterschiedlichen _Halbräumen_[^18]. Die Halbräume und deren Trennung wird greifbarer durch die geometrische Darstellung in **Abbildung 2.2.4**. Wir können feststellen, dass alle Punkte, die $x_1 - x_2 > 0$ erfüllen (im folgenden $M_-$), in dem Halbrum _unter_ der durch $L$ beschriebenen Gerade liegen; Punkte, für die  $x_1 - x_2 < 0$ gilt, liegen _darüber_ (im folgenden $M_+$), und Punkte mit $x_1 - x_2 = 0$ _auf_ der Geraden (im folgenden als Teilmenge von $M_-$[^19]).
 
-**Abbildung 2.2.4:** Die zwei durch die 1. Winkelhalbierende entstandenen Halbräume
+**Abbildung 2.2.4:** Skizzierung der durch die 1. Winkelhalbierende entstandenen Halbräume. Die Mengen $M_-$ und $M_+$ sind linear separierbar, die Gleichung für die _Trenngerade_ hierzu lautet $x_1 - x_2 = 0$
+
+Formal ausgedrückt bedeutet das, dass $M_+$ und $M_-$ _linear separabel_ sind. Nach <R>Roj93</R> lautet die Definition für _Lineare Trennbarkeit_:
+
+<Def>
+
+**Definition 2.2.1**: [^20]Zwei Mengen _A_ und _B_ von Punkten in einem _n_-dimensionalen Raum sind _linear trennbar_, falls _n_+1 reelle Zahlen $w_1, ... , w_{n+1}$ existieren, so daß für jeden Punkt $x_1, ... , x_n \in A$ gilt
+
+<EQ id="2-2-5">
+
+$\sum^n_{i=1} w_ix_i \geq w_{n+1}$
+
+</EQ>
+
+und für jeden Punkt $x_1, ... , x_n \in B$
+
+<EQ id="2-2-6">
+
+$\sum^n_{i=1} w_ix_i < w_{n+1}$
+
+</EQ>
+
+</Def>
+
+Für unser Beispiel mit den oben eingeführten Mengen $M_- = \{(x_1, x_2) \in \R^2: x_1 \geq x_2\}$ und $M_+=\{(x_1, x_2) \in \R^2: x_1 < x_2\}$ in $\R^2$ wählen wir $w_1 = -1, w_2 = 1, w_3 = 0$.
+Dass diese Mengen nach **Definition 2.2.1** linear separabel sind, lässt sich leicht anhand einer Fallunterscheidung nachweisen:
+
+1. Fall $x_1 = x_2$:
+Es gilt $w_1x_1 + w_2x_2 = w_1x_1 + w_2x_1 = -x_1 + x_1 = 0$. Mit $0 \geq 0$ ist somit **_2-2-5_** erfüllt.
+
+2. Fall $x_1 < x_2$:
+    - Fall $x_1 < 0$: Es gilt $w_1x_1 = -x_1 = |x_1| > 0$.
+        - Fall $x_2 > 0$: Es folgt $|x_1| + w_2x_2 > 0$.
+        - Fall $x_2 < 0$: Wegen $x_1 < x_2$ gilt $-x_1 > -x_2$. Addition von $x_2$ auf beiden Seiten liefert $-x_1 + x_2 > -x_2 + x_2 = 0$.
+
+3. Fall $x_1 > x_2$: Der Nachweis für $x_1 > x_2 \implies w_1x_1 + w_2x_2 < 0$ und damit **_2-2-6_** erfolgt analog zu _Fall 2_.
+
+### 2.2.3.2 Die Lernregel
+
+Die Eigenschaft linearer Trennbarkeit von Daten ist eine wesentliche Voraussetzung dafür, dass ein Perzeptron _konvergiert_: Die _Lernregel_ des Perzeptrons ändert während der Laufzeit die Gewichte $w_1 ... w_n$ an, bis eine Gleichung gefunden ist, die $n$-dimensionale Daten entsprechend **Definition 2.2.1** _klassifiziert_, sofern sie linear separabel sind. Aus diesem Grund wird das Perzeptron auch **linearer Klassifizierer** genannt <R>Ert21, S. 210 - 216</R>.
+
+
+
+
+
+
 
 
 [^16]: Definitionen aller Zustände, Signale und Funktionen in <R>Ros62, S. 79 - 94</R>
-[^17]: Renze, John; Uznanski, Dan; and Weisstein, Eric W. "Half-Plane." From MathWorld--A Wolfram Web Resource. https://mathworld.wolfram.com/Half-Plane.html (abgerufen 21.08.2023)
+[^17]: vgl. auch "Ein _einfaches Perzeptron_ ist eine McCulloch-Pitts-Zelle, die ihre Eingabe gewichtet berechnet." in <R>Roj93, S. 57, "Definition 3.1", Hervorhebungen i.O.</R>
+[^18]: Renze, John; Uznanski, Dan; and Weisstein, Eric W. "Half-Plane." From MathWorld--A Wolfram Web Resource. https://mathworld.wolfram.com/Half-Plane.html (abgerufen 21.08.2023)
+[^19]: Wenn die Hyperebene selbst im Halbraum enthalten ist, spricht man von einem _abgeschlossenen Halbraum_. (https://de.wikipedia.org/wiki/Halbraum, abgerufen 22.08.2023)
+[^20]: <R>Roj93, S. 61, "Definition 3.2", Hervorhebungen i.O., Nummerierung eigene</R>
 
 
 ## 2.2.3 Das Perzepton als Python-Programm
