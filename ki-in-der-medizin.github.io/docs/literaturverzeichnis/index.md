@@ -11,6 +11,9 @@ Quotation style: IEEE
 
 #### Zitierte Literatur
 
+ - **[Ert21]** W. Ertel, „Maschinelles Lernen und Data Mining“, in _Grundkurs Künstliche Intelligenz: Eine praxisorientierte Einführung_, Wiesbaden: Springer Fachmedien Wiesbaden, 2021, S. 201–283. https://doi.org/10.1007/978-3-658-32075-1_8.
+
+
 - **[Heb49]** D. O. Hebb, „The Organization of Behavior“, in Neurocomputing: Foundations of Research, Cambridge, MA, USA: MIT Press, 1988, S. 43–54.
 
 - **[Kub30]** L. S. Kubie, „A theoretical application to some neurological problems of the properties of excitation waves which move in closed circuits“, Brain, Bd. 53, Nr. 2, S. 166–177, Juli 1930, https://doi.org/10.1093/brain/53.2.166.
