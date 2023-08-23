@@ -63,7 +63,7 @@ Quotation style: IEEE
   
 - **[SBB+12]** R. Squire, Hrsg., Fundamental neuroscience, 4th ed. Amsterdam; Boston: Elsevier/Academic Press, 2013.
 
-- **[FAU94]** L. Fausett, Fundamentals of Neural Networks: Architectures, Algorithms, and Applications. USA: Prentice-Hall, Inc., 1994. ISBN 0-13-334186-0
+- **[Fau94]** L. Fausett, Fundamentals of Neural Networks: Architectures, Algorithms, and Applications. USA: Prentice-Hall, Inc., 1994. ISBN 0-13-334186-0
 
  - **[Fra94]** Frank RG. Instruments, nerve action, and the all-or-none principle. Osiris. 1994;9:208-35. doi: 10.1086/368737. PMID: 11613429.
 
@@ -160,6 +160,8 @@ Quotation style: IEEE
  - **[SSH95]** P. Sander, W. Stucky, und R. Herschel, „Automaten“, in _Automaten Sprachen Berechenbarkeit: Grundkurs Angewandte Informatik IV_, W. Stucky, Hrsg., Wiesbaden: Vieweg+Teubner Verlag, 1995, S. 26–97. https://doi.org/10.1007/978-3-322-84873-4_2.
 
 ## 2.2 Das Rosenblatt-Perzeptron
+
+- **[Nov62]** A.B.J. Novikoff. On convergence proofs on perceptrons. In _Proceedings of the Symposium on the Mathematical Theory of Automata, Vol. XII_, Seiten 615–622, 1962.
 
 - **[BHW+12]** K. Burg, H. Haf, F. Wille, und A. Meister, „Vektorräume beliebiger Dimensionen“, in _Höhere Mathematik für Ingenieure Band II: Lineare Algebra_, Wiesbaden: Vieweg+Teubner Verlag, 2012, S. 75–146. https://doi.org/10.1007/978-3-8348-2267-3_2.
 
