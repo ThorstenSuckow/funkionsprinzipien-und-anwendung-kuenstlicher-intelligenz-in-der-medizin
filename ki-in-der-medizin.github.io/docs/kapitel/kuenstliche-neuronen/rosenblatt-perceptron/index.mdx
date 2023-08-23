@@ -165,13 +165,16 @@ Es gilt $w_1x_1 + w_2x_2 = w_1x_1 + w_2x_1 = -x_1 + x_1 = 0$. Mit $0 \geq 0$ ist
 
 ### 2.2.3.2 Die Lernregel
 
-Die Eigenschaft linearer Trennbarkeit von Daten ist eine wesentliche Voraussetzung dafür, dass ein Perzeptron _konvergiert_: Die _Lernregel_ des Perzeptrons ändert während der Laufzeit die Gewichte $w_1 ... w_n$ an, bis eine Gleichung gefunden ist, die $n$-dimensionale Daten entsprechend **Definition 2.2.1** _klassifiziert_, sofern sie linear separabel sind. Aus diesem Grund wird das Perzeptron auch **linearer Klassifizierer** genannt <R>Ert21, S. 210 - 216</R>.
+Die Eigenschaft linearer Trennbarkeit von Daten ist eine wesentliche Voraussetzung dafür, dass ein Perzeptron _konvergiert_: Die _Lernregel_ des Perzeptrons passt während der Laufzeit die Gewichte $w_1 ... w_n$ an, bis eine Gleichung gefunden ist, die $n$-dimensionale Daten entsprechend **Definition 2.2.1** _klassifiziert_. Aus diesem Grund wird das Perzeptron auch **linearer Klassifizierer** genannt <R>Ert21, S. 210 - 216</R>: Das Perzeptron **lernt** durch _Traningsdaten_[^21] und kann mittels der gefundenen _Hypothese_ Voraussagen für Daten treffen. Jeder Eintrag aus den Trainingsdaten wird einer erwarteten Ausgabe zugeordnet.
 
+Das Perzeptron lernt durch folgende Schritte (vgl. <R>RM87 S. 65</R> sowie <R>RN09 S. 842</R>):
 
+1. Wähle einen Datensatz und berechne die Ausgabe
+2. Wenn die Ausgabe $1$ ist, obwohl sie $0$ sein sollte (Fehler[^22] $=-1$), verringere die Gewichte
+3. Wenn die Ausgabe $0$ ist, obwohl sie $1$ sein sollte  (Fehler $=1$), erhöhe die Gewichte
+4. Wenn die Ausgabe korrekt ist, passe die Gewichte nicht an
 
-
-
-
+Die Schritte werden so lange durchlaufen, bis für alle Trainingsdaten die Ausgabe korrekt ist, oder eine maximale Anzahl von Trainingsläufen erreicht wurde. Einen Trainingslauf nennt man dabei _Epoche_ <R>Fau94, S. 436, "Training epoch"</R>. Sind die Trainingsdaten linear separabel, _konvergiert_[^23] das Perzeptron nach einer endlichen Zahl von Epochen <R>MP17, S. 164</R>[^24], und ist danach in der Lage zu _generalisieren_ <R>Ert21, S. 202</R>.
 
 
 [^16]: Definitionen aller Zustände, Signale und Funktionen in <R>Ros62, S. 79 - 94</R>
@@ -179,7 +182,10 @@ Die Eigenschaft linearer Trennbarkeit von Daten ist eine wesentliche Voraussetzu
 [^18]: Renze, John; Uznanski, Dan; and Weisstein, Eric W. "Half-Plane." From MathWorld--A Wolfram Web Resource. https://mathworld.wolfram.com/Half-Plane.html (abgerufen 21.08.2023)
 [^19]: Wenn die Hyperebene selbst im Halbraum enthalten ist, spricht man von einem _abgeschlossenen Halbraum_. (https://de.wikipedia.org/wiki/Halbraum, abgerufen 22.08.2023)
 [^20]: <R>Roj93, S. 61, "Definition 3.2", Hervorhebungen i.O., Nummerierung eigene</R>
-
+[^21]: "supervised learning": überwachtes lernen; vgl. <R>RN09, S. 811, "18.2 Überwachtes Lernen"</R> sowie <R>Fau94, S. 15</R>
+[^22]: Der **Fehler** ist hierbei die Differenz von $\text{erwartete Ausgabe}$ und $\text{tatsächliche Ausgabe}$.
+[^23]: "iterative training processes converge if the weight updates reach equilibrium (stop changing)" <R>Fau94, S. 425, "Convergence"</R>
+[^24]: Beweise hierzu in <R>Ros62, S. 111 ff.</R>, <R>MP17, S. 167 ff.</R> sowie in <R>Nov62</R>
 
 ## 2.2.3 Das Perzepton als Python-Programm
 
