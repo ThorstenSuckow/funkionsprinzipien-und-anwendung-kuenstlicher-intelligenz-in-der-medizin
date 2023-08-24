@@ -102,29 +102,34 @@ $f:= f(x) = f(g(X)) = \begin{cases}
 _Minsky_ und _Papert_ weisen in ihrer Definition des Perzeptrons auf eine besondere Voraussetzung hin, die wir uns in dem nächsten Abschnitt genauer anschauen werden.
 
 ### 2.2.3.1 Lineare Trennbarkeit
-Mit **_2-2-2_** folgt für eine Eingabe, dass sie entweder zu $0$ oder zu $1$ evaluiert. Wir haben es hier also wieder mit einem binären Wertebereich zu tun, den wir auch als zwei unterschiedliche Klassen <R>RN09, S. 812, Abs. 2</R> verstehen können. Eingabedaten, die zu $0$ oder zu $1$ konvergieren, sind also einer der beiden Klassen zuzuordnen. Im Folgenden wollen wir die Zusammenhänge geometrisch darstellen. Der Einfachheit halber beschränken wir uns hierzu auf den zweidimensionalen Raum $\R^2$ und betrachten hier die _1. Winkelhalbierende_ im kartesischen Koordinatensystem. Die zugehörige _Gerade_ $L$ <R>Fis19, S. 18</R> ist
+Mit **_2-2-2_** folgt für eine Eingabe, dass sie entweder zu $0$ oder zu $1$ evaluiert. Wir haben es hier also wieder mit einem binären Wertebereich zu tun, den wir auch als zwei unterschiedliche Klassen <R>RN09, S. 812, Abs. 2</R> verstehen können. Eingabedaten, die zu $0$ oder zu $1$ konvergieren, sind also einer der beiden Klassen zuzuordnen. Im Folgenden wollen wir die Zusammenhänge geometrisch darstellen. Der Einfachheit halber beschränken wir uns hierzu auf den zweidimensionalen Raum $\R_+^2$ und betrachten hier die _1. Winkelhalbierende_ im 1. Quadrant des kartesischen Koordinatensystems. Die zugehörige _Gerade_ $L$ <R>Fis19, S. 18</R> ist
 
 <EQ id={"2-2-3"}>
 
-$L = \{(x_1, x_2) \in \R^2: x_2 - x_2 = 0\}$
+$L = \{(x_1, x_2) \in \R_+^2: x_1 = x_2\}$
 
 </EQ>
 
 
 **Abbildung 2.2.3:** Winkelhalbierende im kartesischen Koordinatensystem
 
-Für beliebige Punkte $(x_1, x_2) \notin L$ gilt unter Anwendung der Geradengleichung aus **_2-2-3_** offensichtlich
+Für beliebige Punkte $(x_1, x_2) \in \R_+^2$ gilt  offensichtlich
 
 <EQ id={"2-2-4"}>
 
 $x_1 - x_2 \begin{cases}
 \gt 0 &\text{falls} &x_1 > x_2 \\
+= 0 &\text{falls} &x_1 = x_2 \\
 \lt 0 &\text{falls} &x_1 < x_2
 \end{cases}$
 
 </EQ>
 
-$L$ repräsentiert eine _Hyperebene_ <R>BHW+12 S. 81, "Definition 2.3"</R> in $\R^2$. Punkte, die nicht zu dieser Hyperebene gehören, liegen in dem Fall $\R^2$ in zwei unterschiedlichen _Halbräumen_[^18]. Die Halbräume und deren Trennung wird greifbarer durch die geometrische Darstellung in **Abbildung 2.2.4**. Wir können feststellen, dass alle Punkte, die $x_1 - x_2 > 0$ erfüllen (im folgenden $M_-$), in dem Halbrum _unter_ der durch $L$ beschriebenen Gerade liegen; Punkte, für die  $x_1 - x_2 < 0$ gilt, liegen _darüber_ (im folgenden $M_+$), und Punkte mit $x_1 - x_2 = 0$ _auf_ der Geraden (im folgenden als Teilmenge von $M_-$[^19]).
+Die _Gerade_ $L$ repräsentiert eine _Hyperebene_ <R>BHW+12 S. 81, "Definition 2.3"</R> in $\R_+^2$. Punkte, die nicht zu dieser Hyperebene gehören, liegen in dem Fall $\R_+^2$ in zwei unterschiedlichen _Halbräumen_[^18]. Die Halbräume und deren Trennung wird greifbarer durch die geometrische Darstellung in **Abbildung 2.2.4**. Wir können feststellen, dass
+
+ - Punkte, die $x_1 - x_2 > 0$ erfüllen (im folgenden $M_-$) in dem Halbrum _unter_ der durch $L$ beschriebenen Gerade liegen
+ - Punkte, für die  $x_1 - x_2 < 0$ gilt (im folgenden $M_+$) _über_ der durch $L$ beschriebenen Gerade liegen
+ - Punkte mit $x_1 - x_2 = 0$ _auf_ der Geraden liegen (im folgenden $\subset M_-$[^19])
 
 **Abbildung 2.2.4:** Skizzierung der durch die 1. Winkelhalbierende entstandenen Halbräume. Die Mengen $M_-$ und $M_+$ sind linear separierbar, die Gleichung für die _Trenngerade_ hierzu lautet $x_1 - x_2 = 0$
 
@@ -132,7 +137,7 @@ Formal ausgedrückt bedeutet das, dass $M_+$ und $M_-$ _linear separabel_ sind. 
 
 <Def>
 
-**Definition 2.2.1**: [^20]Zwei Mengen _A_ und _B_ von Punkten in einem _n_-dimensionalen Raum sind _linear trennbar_, falls _n_+1 reelle Zahlen $w_1, ... , w_{n+1}$ existieren, so daß für jeden Punkt $x_1, ... , x_n \in A$ gilt
+**Definition 2.2.1[^20]**: Zwei Mengen _A_ und _B_ von Punkten in einem _n_-dimensionalen Raum sind _linear trennbar_, falls _n_+1 reelle Zahlen $w_1, ... , w_{n+1}$ existieren, so daß für jeden Punkt $x_1, ... , x_n \in A$ gilt
 
 <EQ id="2-2-5">
 
@@ -150,31 +155,70 @@ $\sum^n_{i=1} w_ix_i < w_{n+1}$
 
 </Def>
 
-Für unser Beispiel mit den oben eingeführten Mengen $M_- = \{(x_1, x_2) \in \R^2: x_1 \geq x_2\}$ und $M_+=\{(x_1, x_2) \in \R^2: x_1 < x_2\}$ in $\R^2$ wählen wir $w_1 = -1, w_2 = 1, w_3 = 0$.
+Für unser Beispiel mit den oben eingeführten Mengen $M_- = \{(x_1, x_2) \in \R_+^2: x_1 \geq x_2\}$ und $M_+=\{(x_1, x_2) \in \R_+^2: x_1 < x_2\}$ in $\R_+^2$ wählen wir $w_1 = -1, w_2 = 1, w_3 = 0$.
 Dass diese Mengen nach **Definition 2.2.1** linear separabel sind, lässt sich leicht anhand einer Fallunterscheidung nachweisen:
 
 1. Fall $x_1 = x_2$:
-Es gilt $w_1x_1 + w_2x_2 = w_1x_1 + w_2x_1 = -x_1 + x_1 = 0$. Mit $0 \geq 0$ ist somit **_2-2-5_** erfüllt.
+Es gilt $w_1x_1 + w_2x_2 = w_1x_1 + w_2x_1 = -x_1 + x_1 = w_3 = 0$. Mit $0 \geq 0$ ist somit **_2-2-5_** erfüllt.
 
 2. Fall $x_1 < x_2$:
-    - Fall $x_1 < 0$: Es gilt $w_1x_1 = -x_1 = |x_1| > 0$.
-        - Fall $x_2 > 0$: Es folgt $|x_1| + w_2x_2 > 0$.
-        - Fall $x_2 < 0$: Wegen $x_1 < x_2$ gilt $-x_1 > -x_2$. Addition von $x_2$ auf beiden Seiten liefert $-x_1 + x_2 > -x_2 + x_2 = 0$.
+Es gilt $w_1x_1 = -x_1$. Addition von $w_1x_1$ auf beiden Seiten von $x_2 > x_1$ liefert $x_2 + (-x_1) = w_2x_2 + w_1x_1 > 0 = w_3$ und erfüllt **_2-2-5_**.
 
-3. Fall $x_1 > x_2$: Der Nachweis für $x_1 > x_2 \implies w_1x_1 + w_2x_2 < 0$ und damit **_2-2-6_** erfolgt analog zu _Fall 2_.
+3. Fall $x_1 > x_2$:
+Es gilt wieder $w_1x_1 = -x_1$. Addition auf beiden Seiten von $x_1 > x_2$ liefert $w_3 = 0 > x_2 + (-x_1) = w_2x_2 + w_1x_1$ und erfüllt **_2-2-6_**.
+
+Die von <R>Ert21</R> formulierte Definition für ein Perzeptron wollen wir für die weiteren Beobachtungen übernehmen:
+
+<Def>
+
+**Definition 2.2.2**[^21]: Sei $w = (w_1, ..., w_n) \in \R^n$ ein Gewichtsvektor und $x \in \R^n$ ein Eingabevektor. Ein **Perzeptron** stellt eine Funktion $P: \R^n \to \{0, 1\}$ mit
+
+<EQ id="">
+
+$P(x) = \begin{cases}
+1 &\text{falls} &wx = \sum^n_{i=1} w_ix_i >0 \\
+0 &\text{sonst}
+\end{cases}$
+
+</EQ>
+
+dar.
+
+</Def>
+
 
 ### 2.2.3.2 Die Lernregel
 
-Die Eigenschaft linearer Trennbarkeit von Daten ist eine wesentliche Voraussetzung dafür, dass ein Perzeptron _konvergiert_: Die _Lernregel_ des Perzeptrons passt während der Laufzeit die Gewichte $w_1 ... w_n$ an, bis eine Gleichung gefunden ist, die $n$-dimensionale Daten entsprechend **Definition 2.2.1** _klassifiziert_. Aus diesem Grund wird das Perzeptron auch **linearer Klassifizierer** genannt <R>Ert21, S. 210 - 216</R>: Das Perzeptron **lernt** durch _Traningsdaten_[^21] und kann mittels der gefundenen _Hypothese_ Voraussagen für Daten treffen. Jeder Eintrag aus den Trainingsdaten wird einer erwarteten Ausgabe zugeordnet.
+Die Eigenschaft linearer Trennbarkeit von Daten ist eine wesentliche Voraussetzung dafür, dass ein Perzeptron _konvergiert_: Die _Lernregel_ des Perzeptrons passt während der Laufzeit die Gewichte $w_1 ... w_n$ solange an, bis sie - eingesetzt in eine lineare Gleichung - die $n$-dimensionalen Daten entsprechend **Definition 2.2.1** _klassifizieren_ kann. Aus diesem Grund wird das Perzeptron auch **linearer Klassifizierer** genannt <R>Ert21, S. 210 - 216</R>.
+
+Das Perzeptron **lernt** diese Gewichte zunächst durch _Traningsdaten_[^22]. Jeder Eintrag dieser Trainingsdaten ist einer erwarteten Ausgabe zugeordnet.
 
 Das Perzeptron lernt durch folgende Schritte (vgl. <R>RM87 S. 65</R> sowie <R>RN09 S. 842</R>):
 
 1. Wähle einen Datensatz und berechne die Ausgabe
-2. Wenn die Ausgabe $1$ ist, obwohl sie $0$ sein sollte (Fehler[^22] $=-1$), verringere die Gewichte
+2. Wenn die Ausgabe $1$ ist, obwohl sie $0$ sein sollte (Fehler[^23] $=-1$), verringere die Gewichte
 3. Wenn die Ausgabe $0$ ist, obwohl sie $1$ sein sollte  (Fehler $=1$), erhöhe die Gewichte
 4. Wenn die Ausgabe korrekt ist, passe die Gewichte nicht an
 
-Die Schritte werden so lange durchlaufen, bis für alle Trainingsdaten die Ausgabe korrekt ist, oder eine maximale Anzahl von Trainingsläufen erreicht wurde. Einen Trainingslauf nennt man dabei _Epoche_ <R>Fau94, S. 436, "Training epoch"</R>. Sind die Trainingsdaten linear separabel, _konvergiert_[^23] das Perzeptron nach einer endlichen Zahl von Epochen <R>MP17, S. 164</R>[^24], und ist danach in der Lage zu _generalisieren_ <R>Ert21, S. 202</R>.
+Die Schritte werden so lange durchlaufen, bis für alle Trainingsdaten die Ausgabe korrekt ist, oder eine maximale Anzahl von Trainingsläufen erreicht wurde. Einen Trainingslauf nennt man dabei _Epoche_ <R>Fau94, S. 436, "Training epoch"</R>. Sind die Trainingsdaten linear separabel, _konvergiert_[^24] das Perzeptron nach einer endlichen Zahl von Epochen <R>MP17, S. 164</R>[^24], und ist danach in der Lage zu _generalisieren_ <R>Ert21, S. 202</R>.
+
+Da wir in unserem Beispiel nur Daten betrachtet haben, die durch eine Gerade durch den Ursprung ($(0,0)$) getrennt sind, brauchen wir noch eine Möglichkeit, die $x_2$-Koordinate der Trenngerade anzupassen.
+
+**Abbildung 2.2.5:** Daten, die nicht durch eine Ursprungsgerade separabel sind.
+
+Dies erreicht man mit einer sogenannten **bias unit**. Das Bias-Gewicht[^26] ist ein Wert, der zu der Gleichung aus **Definition 2.2.2** hinzuaddiert wird, und für eine Verschiebung der Ursprungsgeraden[^27]
+sorgt <R>Ert21, S.215</R>. Im $R^2$ bedeutet das eine Verschiebung der Trenngerade entlang der $y$-Achse.
+
+Dies erreicht man, indem man den Eingabedaten einen fixen Eingabewert $x_{n+1} = 1$ hinzufügt: Der Eingabevektor $x \in \R^n$ wird _erweitert_: $(x_1, ..., x_n, 1)$ <R>Roj93, S. 58, "3.2.2 Gewichtete Netze mit einem kanonischen Baustein"</R>. $w_{n+1}$ wird dann in als Schwellenwert (vgl. **Definition 2.2.1**) von der Ungleichung subtrahiert, so dasss der neue Schwellenwert $0$ wird. $w_{n+1}$ wird dann von der Lernregel angepasst.
+
+<EQ id="2-2-7">
+
+$\sum^n_{i=1} w_ix_i = w_{n+1} * 1 \iff \sum^n_{i=1} w_ix_i - w_{n+1} = 0$
+
+</EQ>
+
+
+
 
 
 [^16]: Definitionen aller Zustände, Signale und Funktionen in <R>Ros62, S. 79 - 94</R>
@@ -182,10 +226,13 @@ Die Schritte werden so lange durchlaufen, bis für alle Trainingsdaten die Ausga
 [^18]: Renze, John; Uznanski, Dan; and Weisstein, Eric W. "Half-Plane." From MathWorld--A Wolfram Web Resource. https://mathworld.wolfram.com/Half-Plane.html (abgerufen 21.08.2023)
 [^19]: Wenn die Hyperebene selbst im Halbraum enthalten ist, spricht man von einem _abgeschlossenen Halbraum_. (https://de.wikipedia.org/wiki/Halbraum, abgerufen 22.08.2023)
 [^20]: <R>Roj93, S. 61, "Definition 3.2", Hervorhebungen i.O., Nummerierung eigene</R>
-[^21]: "supervised learning": überwachtes lernen; vgl. <R>RN09, S. 811, "18.2 Überwachtes Lernen"</R> sowie <R>Fau94, S. 15</R>
-[^22]: Der **Fehler** ist hierbei die Differenz von $\text{erwartete Ausgabe}$ und $\text{tatsächliche Ausgabe}$.
-[^23]: "iterative training processes converge if the weight updates reach equilibrium (stop changing)" <R>Fau94, S. 425, "Convergence"</R>
-[^24]: Beweise hierzu in <R>Ros62, S. 111 ff.</R>, <R>MP17, S. 167 ff.</R> sowie in <R>Nov62</R>
+[^21]: <R>Ert21, S. 212, "Definition 8.3", Hervorhebungen i.O.</R>
+[^22]: "supervised learning": überwachtes lernen; vgl. <R>RN09, S. 811, "18.2 Überwachtes Lernen"</R> sowie <R>Fau94, S. 15</R>
+[^23]: Der **Fehler** ist hierbei die Differenz von $\text{erwartete Ausgabe}$ und $\text{tatsächliche Ausgabe}$.
+[^24]: "iterative training processes converge if the weight updates reach equilibrium (stop changing)" <R>Fau94, S. 425, "Convergence"</R>
+[^25]: Beweise hierzu in <R>Ros62, S. 111 ff.</R>, <R>MP17, S. 167 ff.</R> sowie in <R>Nov62</R>
+[^26]: vgl. <R>RN09, S. 839</R>
+[^27]: im $\R^n$ durch eine Hyperebene im Ursprung <R>Ert21, S.215</R>
 
 ## 2.2.3 Das Perzepton als Python-Programm
 
