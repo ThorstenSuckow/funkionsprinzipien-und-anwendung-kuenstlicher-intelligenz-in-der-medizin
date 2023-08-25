@@ -189,7 +189,7 @@ dar.
 
 ### 2.2.3.2 Die Lernregel
 
-Die Eigenschaft linearer Trennbarkeit von Daten ist eine wesentliche Voraussetzung dafür, dass ein Perzeptron _konvergiert_: Die _Lernregel_ des Perzeptrons passt während der Laufzeit die Gewichte $w_1 ... w_n$ solange an, bis sie - eingesetzt in eine lineare Gleichung - die $n$-dimensionalen Daten entsprechend **Definition 2.2.1** _klassifizieren_ kann. Aus diesem Grund wird das Perzeptron auch **linearer Klassifizierer** genannt <R>Ert21, S. 210 - 216</R>.
+Die Eigenschaft linearer Trennbarkeit von Daten ist eine wesentliche Voraussetzung dafür, dass ein Perzeptron _konvergiert_: Die _Lernregel_ des Perzeptrons passt während der Laufzeit die Gewichte $w_1 ... w_n$ solange an, bis sie - eingesetzt in eine lineare Gleichung <R>Ert1, S. 311</R> - die $n$-dimensionalen Daten entsprechend **Definition 2.2.1** _klassifizieren_ kann. Aus diesem Grund wird das Perzeptron auch **linearer Klassifizierer** genannt <R>Ert21, S. 210 - 216</R>.
 
 Das Perzeptron **lernt** diese Gewichte zunächst durch _Traningsdaten_[^22]. Jeder Eintrag dieser Trainingsdaten ist einer erwarteten Ausgabe zugeordnet.
 
@@ -206,19 +206,54 @@ Da wir in unserem Beispiel nur Daten betrachtet haben, die durch eine Gerade dur
 
 **Abbildung 2.2.5:** Daten, die nicht durch eine Ursprungsgerade separabel sind.
 
-Dies erreicht man mit einer sogenannten **bias unit**. Das Bias-Gewicht[^26] ist ein Wert, der zu der Gleichung aus **Definition 2.2.2** hinzuaddiert wird, und für eine Verschiebung der Ursprungsgeraden[^27]
-sorgt <R>Ert21, S.215</R>. Im $R^2$ bedeutet das eine Verschiebung der Trenngerade entlang der $y$-Achse.
+Dies erreicht man mit einer sogenannten **bias unit**. Das Bias-Gewicht[^26] ist ein Wert, der zu der Gleichung aus **Definition 2.2.2** hinzuaddiert wird, und für eine Verschiebung der Ursprungsgeraden[^27] sorgt.
 
-Dies erreicht man, indem man den Eingabedaten einen fixen Eingabewert $x_{n+1} = 1$ hinzufügt: Der Eingabevektor $x \in \R^n$ wird _erweitert_: $(x_1, ..., x_n, 1)$ <R>Roj93, S. 58, "3.2.2 Gewichtete Netze mit einem kanonischen Baustein"</R>. $w_{n+1}$ wird dann in als Schwellenwert (vgl. **Definition 2.2.1**) von der Ungleichung subtrahiert, so dasss der neue Schwellenwert $0$ wird. $w_{n+1}$ wird dann von der Lernregel angepasst.
+Den Eingabedaten wird ein fester Eingabewert $x_{n+1} = 1$ hinzufügt: Der Eingabevektor $x \in \R^n$ wird _erweitert_: $(x_1, ..., x_n, 1)$ <R>Roj93, S. 58, "3.2.2 Gewichtete Netze mit einem kanonischen Baustein"</R>.
+
+Der bias $b$ wird für unser Beispiel im $\R^2$ mit **Definition 2.2.2** in die Berechnung Schwellenwerts miteinbezogen:
 
 <EQ id="2-2-7">
 
-$\sum^n_{i=1} w_ix_i = w_{n+1} * 1 \iff \sum^n_{i=1} w_ix_i - w_{n+1} = 0$
+$P(x) = \begin{cases}
+1 &\text{falls} &wx > 0 \\
+0 &\text{sonst}
+\end{cases}$
+
+
+wobei $wx = b + \sum^n_{i=1} w_ix_i$
 
 </EQ>
 
+Die Gleichung für die Trenngerade für unser Beispiel im $\R^2$ lautet somit
 
+<EQ id="2-2-8">
 
+$b + w_1x_1 + w_2x_2 = 0$
+
+</EQ>
+
+Wenn wir $b$ auf die rechte Seite der Gleichung bringen, kann $b$ auch als Schwellenwert $\Theta = -b$  betrachtet werden:
+
+<EQ id="2-2-9">
+
+$w_1x_1 + w_2x_2 = \Theta$
+
+</EQ>
+
+Für unser $x_2$ im $\R^2$ folgt dann insgesamt mit $w_2 = 1$ und $x_1 = 0$:
+
+<EQ id="2-2-10">
+
+$x_2 = \Theta/w_2 -(w_1/w_2)x_1  = \Theta$
+
+</EQ>
+
+was der Abstand $x_2$ von der $y$-Achse ist.
+
+Mit $b$ als Teil der Eingabe folgt auch dessen Gewichtung $bw_{n+1} = w_{n+1}$. Mit $0$ als Schwellenwert wird dadurch eine Verschiebung der Trenngeraden entlang der $y$-Achse im $\R^2$ bzw. eine Verschiebung der Hyperebene im $\R^n$ ermöglicht<R>Ert21, S.215</R>.
+
+#### Lernrate
+Bevor wir uns eine Implementierung in Python anschauen, wollen wir noch kurz die **Lernrate** $\alpha$ erklären. Wie wir in diesem Abschnitt erfahren haben, berechnet die Lernregel die Gewichte auf Basis des _Fehlers_, also der Differenz von $\text{erwartete Ausgabe}$ und $\text{tatsächliche Ausgabe}$: Ist der Fehler $-1$, werden die Gewichte verringert, ist der Fehler 1, werden die Gewichte erhöht. Die Lernrate $\alpha$ ist der Koeffizient für die Gewichtsanpassung [^28]. Üblicherweise liegt $\alpha$ zwischen $0$ und $1$[^29] <R>Fau94, S. 61</R>.
 
 
 [^16]: Definitionen aller Zustände, Signale und Funktionen in <R>Ros62, S. 79 - 94</R>
@@ -233,8 +268,118 @@ $\sum^n_{i=1} w_ix_i = w_{n+1} * 1 \iff \sum^n_{i=1} w_ix_i - w_{n+1} = 0$
 [^25]: Beweise hierzu in <R>Ros62, S. 111 ff.</R>, <R>MP17, S. 167 ff.</R> sowie in <R>Nov62</R>
 [^26]: vgl. <R>RN09, S. 839</R>
 [^27]: im $\R^n$ durch eine Hyperebene im Ursprung <R>Ert21, S.215</R>
+[^28]: Auch _Schrittweite_: vgl <R>GBC18, S. 93</R> und <R>RN09, S. 172</R>
+[^29]: "$\alpha$ ist eine kleine Konstante" <R>RN09, S. 172, Abs. 2</R>. Gleiche Stelle beleuchtet das Für und Wider kleiner und großer Werte von $\alpha$
 
-## 2.2.3 Das Perzepton als Python-Programm
+
+## 2.2.3 Implementierung in Python
+
+Wie bereits in Kapitel **2.1**, Abschnitt **2.1.3.3** wollen wir auch mit dem Rosenblatt Perzeptron boolesche Funktionen nachbilden. Hierzu benutzen wir folgende Python-Implementierung der Lernregel des Rosenblatt-Perzeptrons[^30] Hierzu beginnen wir mit **AND** und
+
+Wir legen fest:
+
+<EQ id ="2-2-11">
+
+$\alpha := 1 \space \space (\text{Lernrate})$
+
+$b := 0 \space \space (\text{Bias})$
+
+$w := \begin{pmatrix}
+1 \\
+1
+\end{pmatrix}\space \space (\text{Gewichtsvektor})$
+
+$M_+ := \{(1, 1)\}$
+
+$M_- := \{(0, 0), (0,1), (1,0)\}$
+
+$net = w_1x_1 + w_2x_2 + b$
+
+$exp = \begin{cases}
+1 &\text{falls} &(x_1, x_2) \in M_+ \\
+0 &\text{sonst}
+\end{cases}  \space \space (\text{erwartete Ausgabe})$
+
+$res =  \begin{cases}
+0 &\text{falls} &net < 0 \\
+1 &\text{sonst}
+\end{cases}  \space \space (\text{berechnete Ausgabe})$
+
+$e = exp - res  \space \space (\text{Fehler})$
+
+$w^u = w + (x_1, x_2) * \alpha * e  \space \space (\text{aktualisierter Gewichtsvektor})$
+
+$b^u = b + \alpha * e \space \space (\text{aktualisierter Bias})$
+
+</EQ>
+
+In jeder Epoche  werden die Fehler für die Eingaben aus $M_+$ und $M_-$ berechnet, und ggf. die Gewichte angepaßt. Für Eingaben aus $M_+$ ist das erwartete Ergebnis jeweils $1$, für $M_-$ ist es $0$ (vgl. **Tabelle 2.1.1**).
+Der Algorithmus stoppt, sobald eine Epoche keine Fehler beinhaltet.
+
+Der Folgende Source-Code zeigt ausschnittsweise die Implementierung des Trainingsalgorithmus eines Rosenblatt-Perzeptrons in Python[^30]:
+
+````python
+for epoch in range(epochs):
+
+    errors = 0
+
+    for i in range(n):
+        expected = y[i]
+        net = X[i] @ self.w + self.bias
+        result = self.heaviside(net)
+        error = 0
+
+        if result != expected:
+            error = expected - result
+
+            self.w += (X[i] * learning_rate * error)
+            self.bias += learning_rate * error
+````
+
+
+| $x_1$ | $x_2$ | $w_1$ | $w_2$ | $b$ | $net$ | $exp$ | $res$ | $e$ | $w^u_1$ | $w^u_2$ | $b^u$ |
+|-------|-------|-------|-------|-----|-------|-------|-------|-----|---------|---------|-------|
+| 0     | 0     | 1     | 1     | 0   | 0     | 0     | 1     | -1  | 1       | 1       | -1    |
+| 1     | 0     | 1     | 1     | -1  | 0     | 0     | 1     | -1  | 0       | 1       | -2    |
+| 0     | 1     | 0     | 1     | -2  | -1    | 0     | 0     | 0   | 0       | 1       | -2    |
+| 1     | 1     | 0     | 1     | -2  | -1    | 1     | 0     | 1   | 1       | 2       | -1    |
+
+| $x_1$ | $x_2$ | $w_1$ | $w_2$ | $b$ | $net$ | $exp$ | $res$ | $e$ | $w^u_1$ | $w^u_2$ | $b^u$ |
+|-------|-------|-------|-------|-----|-------|-------|-------|-----|---------|---------|-------|
+| 0     | 0     | 1     | 2     | -1  | -1    | 0     | 0     | 0   | 1       | 2       | -1    |
+| 1     | 0     | 1     | 2     | -1  | 0     | 0     | 1     | -1  | 0       | 2       | -2    |
+| 0     | 1     | 0     | 2     | -2  | 0     | 0     | 1     | -1  | 0       | 1       | -3    |
+| 1     | 1     | 0     | 1     | -3  | -2    | 1     | 0     | 1   | 1       | 2       | -2    |
+
+
+| $x_1$ | $x_2$ | $w_1$ | $w_2$ | $b$ | $net$ | $exp$ | $res$ | $e$ | $w^u_1$ | $w^u_2$ | $b^u$ |
+|-------|-------|-------|-------|-----|-------|-------|-------|-----|----|---------|-------|
+| 0     | 0     | 1     | 2     | -2  | -2    | 0     | 0     | 0 |1       | 2       | -2    |
+| 1     | 0     | 1     | 2     | -2  | -1    | 0     | 0     | 0 | 1       | 2       | -2    |
+| 0     | 1     | 1     | 2     | -2  | 0     | 0     | 1     | -1 |1       | 1       | -3    |
+| 1     | 1     | 1     | 1     | -3  | -1    | 1     | 0     | 1| 2       | 2       | -2    |
+
+| $x_1$ | $x_2$ | $w_1$ | $w_2$ | $b$ | $net$ | $exp$ | $res$ | $e$ | $w^u_1$ | $w^u_2$ | $b^u$ |
+|-------|-------|-------|-------|-----|-------|-------|-------|-----|---------|---------|-------|
+| 0     | 0     | 2     | 2     | -2  | -2    | 0     | 0     | 0   | 2       | 2       | -2    |
+| 1     | 0     | 2     | 2     | -2  | 0     | 0     | 1     | -1  | 1       | 2       | -3    |
+| 0     | 1     | 1     | 2     | -3  | -1    | 0     | 0     | 0   | 1       | 2       | -3    |
+| 1     | 1     | 1     | 2     | -3  | 0     | 1     | 1     | 0   | 1       | 2       | -3    |
+
+| $x_1$ | $x_2$ | $w_1$ | $w_2$ | $b$ | $net$ | $exp$ | $res$ | $e$ | $w^u_1$ | $w^u_2$ | $b^u$ |
+|-------|-------|-------|-------|-----|-------|-------|-------|-----|---------|---------|-------|
+| 0     | 0     | 1     | 2     | -3  | -3    | 0     | 0     | 0   | 1       | 2       | -3    |
+| 1     | 0     | 1     | 2     | -3  | -2    | 0     | 0     | 0   | 1       | 2       | -3    |
+| 0     | 1     | 1     | 2     | -3  | -1    | 0     | 0     | 0   | 1       | 2       | -3    |
+| 1     | 1     | 1     | 2     | -3  | 0     | 1     | 1     | 0   | 1       | 2       | -3    |
+
+
+
+[^30]: vollständiger Quellcode unter https://github.com/ThorstenSuckow/pylabs (abgerufen 25.08.2023)
+
+
+
+
 
 ## Notes
 > The perceptron is a relative newcomer to this
