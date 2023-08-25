@@ -161,6 +161,8 @@ Quotation style: IEEE
 
 ## 2.2 Das Rosenblatt-Perzeptron
 
+- **[GBC18]** I. Goodfellow, Y. Bengio, und A. Courville, Deep Learning. MIT Press, 2018. ISBN: 3958457002.
+
 - **[Nov62]** A.B.J. Novikoff. On convergence proofs on perceptrons. In _Proceedings of the Symposium on the Mathematical Theory of Automata, Vol. XII_, Seiten 615–622, 1962.
 
 - **[BHW+12]** K. Burg, H. Haf, F. Wille, und A. Meister, „Vektorräume beliebiger Dimensionen“, in _Höhere Mathematik für Ingenieure Band II: Lineare Algebra_, Wiesbaden: Vieweg+Teubner Verlag, 2012, S. 75–146. https://doi.org/10.1007/978-3-8348-2267-3_2.
@@ -237,7 +239,7 @@ Quotation style: IEEE
 
 ## 6. Zusammenfassung und Bemerkung
 
-- **[GBC18]** I. Goodfellow, Y. Bengio, und A. Courville, Deep Learning. MIT Press, 2018. ISBN: 3958457002.
+
 
 - **[MMA+19]** A. R. Mehta, P. R. Mehta, S. P. Anderson, B. L. H. MacKinnon, und A. Compston, „Etymology and the neuron(e)“, Brain, Bd. 143, Nr. 1, S. 374–379, Dez. 2019, https://doi.org/10.1093/brain/awz367.
 
