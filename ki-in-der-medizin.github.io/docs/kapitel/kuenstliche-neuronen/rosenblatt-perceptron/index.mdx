@@ -5,6 +5,7 @@ description: Neuronenmodell nach Frank Rosenblatt
 ---
 
 import {R, F, S, EQ, Def, Tbl, initEq} from "../../../../src/components/Refs.js";
+import {Embed} from "../../../../src/components/Embed.js";
 
 #### 0 Todos
  - Heaviside (Treppenfunktion) mit Bezug auf 2.1.3.1 Aktivierungs- und Eingabefunktion, Gl. 2.1.3
@@ -219,14 +220,20 @@ $P(x) = \begin{cases}
 0 &\text{sonst}
 \end{cases}$
 
+</EQ>
 
-wobei $wx = b + \sum^n_{i=1} w_ix_i$
+wobei
+
+<EQ id="2-2-8">
+
+$wx = b + \sum^n_{i=1} w_ix_i$
 
 </EQ>
 
+
 Die Gleichung für die Trenngerade für unser Beispiel im $\R^2$ lautet somit
 
-<EQ id="2-2-8">
+<EQ id="2-2-9">
 
 $b + w_1x_1 + w_2x_2 = 0$
 
@@ -234,7 +241,7 @@ $b + w_1x_1 + w_2x_2 = 0$
 
 Wenn wir $b$ auf die rechte Seite der Gleichung bringen, kann $b$ auch als Schwellenwert $\Theta = -b$  betrachtet werden:
 
-<EQ id="2-2-9">
+<EQ id="2-2-10">
 
 $w_1x_1 + w_2x_2 = \Theta$
 
@@ -242,7 +249,7 @@ $w_1x_1 + w_2x_2 = \Theta$
 
 Für unser $x_2$ im $\R^2$ folgt dann insgesamt mit $w_2 = 1$ und $x_1 = 0$:
 
-<EQ id="2-2-10">
+<EQ id="2-2-11">
 
 $x_2 = \Theta/w_2 -(w_1/w_2)x_1  = \Theta$
 
@@ -274,11 +281,54 @@ Bevor wir uns eine Implementierung in Python anschauen, wollen wir noch kurz die
 
 ## 2.2.3 Implementierung in Python
 
-Wie bereits in Kapitel **2.1**, Abschnitt **2.1.3.3** wollen wir auch mit dem Rosenblatt Perzeptron boolesche Funktionen nachbilden. Hierzu benutzen wir folgende Python-Implementierung der Lernregel des Rosenblatt-Perzeptrons[^30] Hierzu beginnen wir mit **AND** und
+Wie bereits in Kapitel **2.1**, Abschnitt **2.1.3.3** wollen wir auch mit dem Rosenblatt Perzeptron boolesche Funktionen nachbilden. Das folgende Beispiel bezieht sich auf die **AND**-Funktion (vgl. **Tabelle 2.1.1** in Abschnitt **2.1.3.2**). Zunächst definieren wir zwei Mengen $M_+$ und $M_-$: Für Elemente in $M_+$ ist die erwartete Ausgabe $1$, für Elemente in $M_-$ ist sie $0$:
 
-Wir legen fest:
+<EQ id ="2-2-12">
 
-<EQ id ="2-2-11">
+$M_+ := \{(1, 1)\}$
+
+$M_- := \{(0, 0), (0,1), (1,0)\}$
+
+</EQ>
+
+Für unsere Perzeptron-Implementierung in Python[^30] implementieren wir die Lernregel wie folgt:
+
+````python
+for epoch in range(epochs):
+
+    errors = 0
+
+    for i in range(n):
+        expected = y[i]
+        net = X[i] @ self.w + self.bias
+        result = self.heaviside(net)
+        error = 0
+
+        if result != expected:
+            error = expected - result
+
+            self.w += (X[i] * learning_rate * error)
+            self.bias += learning_rate * error
+````
+
+
+Der Algorithmus erhält eine vorgegebene Zahl von Epochen, in denen wir eine vollständige Konvergenz erwarten. Innerhalb einer Epoche werden alle `n` Trainingsdaten (enthalten in `X`) durchgegangen. In `y` finden wir die erwartete Klassifizierung der Trainingsdaten: Ist `X[i] = [1,1]`, entspricht `y[i] = 1` (vgl. **_2-1-12_**). `net` entspricht dem Ergebnis von **_2-2-8_**, und das Ergebnis `result` der **Heaviside**-Funktion mit
+
+<EQ id ="2-2-12">
+
+$exp = \begin{cases}
+1 &\text{falls} &\text{net} \geq 0 \\
+0 &\text{sonst}
+\end{cases}$
+
+</EQ>
+
+Die Lernregel wird so lange durchlaufen, bis für alle Trainingsdaten kein Fehler `error` mehr auftritt oder alle Epochen ausgeschöpft sind.
+
+Der Algorithmus nutzt folgende Daten und Funktionen zur Berechnung:
+
+
+<EQ id ="2-2-13">
 
 $\alpha := 1 \space \space (\text{Lernrate})$
 
@@ -305,80 +355,89 @@ $res =  \begin{cases}
 1 &\text{sonst}
 \end{cases}  \space \space (\text{berechnete Ausgabe})$
 
-$e = exp - res  \space \space (\text{Fehler})$
+$err = exp - res  \space \space (\text{Fehler})$
 
-$w^u = w + (x_1, x_2) * \alpha * e  \space \space (\text{aktualisierter Gewichtsvektor})$
+$w^u = w + (x_1, x_2) * \alpha * err  \space \space (\text{aktualisierter Gewichtsvektor})$
 
-$b^u = b + \alpha * e \space \space (\text{aktualisierter Bias})$
+$b^u = b + \alpha * err \space \space (\text{aktualisierter Bias})$
 
 </EQ>
 
-In jeder Epoche  werden die Fehler für die Eingaben aus $M_+$ und $M_-$ berechnet, und ggf. die Gewichte angepaßt. Für Eingaben aus $M_+$ ist das erwartete Ergebnis jeweils $1$, für $M_-$ ist es $0$ (vgl. **Tabelle 2.1.1**).
-Der Algorithmus stoppt, sobald eine Epoche keine Fehler beinhaltet.
+Mit der o.a. Implementierung konvergiert das Perzeptron innerhalb von 5 Epochen. In jeder Epoche werden 4 einzelne Daten trainiert, was insgesamt einer Anzahl von 20 Trainingsschritten entspricht. Die folgenden Tabellen stellen die Anpassungen dar (zugehörige Funktionsplots in **Abbildung 2.2.6**).
 
-Der Folgende Source-Code zeigt ausschnittsweise die Implementierung des Trainingsalgorithmus eines Rosenblatt-Perzeptrons in Python[^30]:
+<Tbl id={"2.2.1"} txt={"Epoche 1 für AND"}>
 
-````python
-for epoch in range(epochs):
+Epoche | $x_1$ | $x_2$ | $w_1$ | $w_2$ | $b$ | $net$ | $exp$ | $res$ | $err$ | $w^u_1$ | $w^u_2$ | $b^u$ |
+-------|-------|-------|-------|-------|-----|-------|-------|-------|-----|---------|---------|-------|
+1.1| 0     | 0     | 1     | 1     | 0   | 0     | 0     | 1     | -1  | 1       | 1       | -1    |
+    1.2| 1     | 0     | 1     | 1     | -1  | 0     | 0     | 1     | -1  | 0       | 1       | -2    |
+    1.3| 0     | 1     | 0     | 1     | -2  | -1    | 0     | 0     | 0   | 0       | 1       | -2    |
+    1.4| 1     | 1     | 0     | 1     | -2  | -1    | 1     | 0     | 1   | 1       | 2       | -1    |
 
-    errors = 0
-
-    for i in range(n):
-        expected = y[i]
-        net = X[i] @ self.w + self.bias
-        result = self.heaviside(net)
-        error = 0
-
-        if result != expected:
-            error = expected - result
-
-            self.w += (X[i] * learning_rate * error)
-            self.bias += learning_rate * error
-````
+</Tbl>
 
 
-| $x_1$ | $x_2$ | $w_1$ | $w_2$ | $b$ | $net$ | $exp$ | $res$ | $e$ | $w^u_1$ | $w^u_2$ | $b^u$ |
-|-------|-------|-------|-------|-----|-------|-------|-------|-----|---------|---------|-------|
-| 0     | 0     | 1     | 1     | 0   | 0     | 0     | 1     | -1  | 1       | 1       | -1    |
-| 1     | 0     | 1     | 1     | -1  | 0     | 0     | 1     | -1  | 0       | 1       | -2    |
-| 0     | 1     | 0     | 1     | -2  | -1    | 0     | 0     | 0   | 0       | 1       | -2    |
-| 1     | 1     | 0     | 1     | -2  | -1    | 1     | 0     | 1   | 1       | 2       | -1    |
+<Tbl id={"2.2.2"} txt={"Epoche 2 für AND"}>
 
-| $x_1$ | $x_2$ | $w_1$ | $w_2$ | $b$ | $net$ | $exp$ | $res$ | $e$ | $w^u_1$ | $w^u_2$ | $b^u$ |
-|-------|-------|-------|-------|-----|-------|-------|-------|-----|---------|---------|-------|
-| 0     | 0     | 1     | 2     | -1  | -1    | 0     | 0     | 0   | 1       | 2       | -1    |
-| 1     | 0     | 1     | 2     | -1  | 0     | 0     | 1     | -1  | 0       | 2       | -2    |
-| 0     | 1     | 0     | 2     | -2  | 0     | 0     | 1     | -1  | 0       | 1       | -3    |
-| 1     | 1     | 0     | 1     | -3  | -2    | 1     | 0     | 1   | 1       | 2       | -2    |
+Epoche | $x_1$ | $x_2$ | $w_1$ | $w_2$ | $b$ | $net$ | $exp$ | $res$ | $err$ | $w^u_1$ | $w^u_2$ | $b^u$ |
+--|-------|-------|-------|-------|-----|-------|-------|-------|-----|---------|---------|-------|
+2.1| 0     | 0     | 1     | 2     | -1  | -1    | 0     | 0     | 0   | 1       | 2       | -1    |
+2.2| 1     | 0     | 1     | 2     | -1  | 0     | 0     | 1     | -1  | 0       | 2       | -2    |
+2.3| 0     | 1     | 0     | 2     | -2  | 0     | 0     | 1     | -1  | 0       | 1       | -3    |
+2.4| 1     | 1     | 0     | 1     | -3  | -2    | 1     | 0     | 1   | 1       | 2       | -2    |
 
+</Tbl>
 
-| $x_1$ | $x_2$ | $w_1$ | $w_2$ | $b$ | $net$ | $exp$ | $res$ | $e$ | $w^u_1$ | $w^u_2$ | $b^u$ |
-|-------|-------|-------|-------|-----|-------|-------|-------|-----|----|---------|-------|
-| 0     | 0     | 1     | 2     | -2  | -2    | 0     | 0     | 0 |1       | 2       | -2    |
-| 1     | 0     | 1     | 2     | -2  | -1    | 0     | 0     | 0 | 1       | 2       | -2    |
-| 0     | 1     | 1     | 2     | -2  | 0     | 0     | 1     | -1 |1       | 1       | -3    |
-| 1     | 1     | 1     | 1     | -3  | -1    | 1     | 0     | 1| 2       | 2       | -2    |
+<Tbl id={"2.2.3"} txt={"Epoche 3 für AND"}>
 
-| $x_1$ | $x_2$ | $w_1$ | $w_2$ | $b$ | $net$ | $exp$ | $res$ | $e$ | $w^u_1$ | $w^u_2$ | $b^u$ |
-|-------|-------|-------|-------|-----|-------|-------|-------|-----|---------|---------|-------|
-| 0     | 0     | 2     | 2     | -2  | -2    | 0     | 0     | 0   | 2       | 2       | -2    |
-| 1     | 0     | 2     | 2     | -2  | 0     | 0     | 1     | -1  | 1       | 2       | -3    |
-| 0     | 1     | 1     | 2     | -3  | -1    | 0     | 0     | 0   | 1       | 2       | -3    |
-| 1     | 1     | 1     | 2     | -3  | 0     | 1     | 1     | 0   | 1       | 2       | -3    |
+Epoche | $x_1$ | $x_2$ | $w_1$ | $w_2$ | $b$ | $net$ | $exp$ | $res$ | $err$ | $w^u_1$ | $w^u_2$ | $b^u$ |
+---|-------|-------|-------|-------|-----|-------|-------|-------|-----|---------|---------|-------|
+3.1| 0     | 0     | 1     | 2     | -2  | -2    | 0     | 0     | 0   | 1       | 2       | -2    |
+3.2| 1     | 0     | 1     | 2     | -2  | -1    | 0     | 0     | 0   | 1       | 2       | -2    |
+3.3| 0     | 1     | 1     | 2     | -2  | 0     | 0     | 1     | -1  | 1       | 1       | -3    |
+3.4| 1     | 1     | 1     | 1     | -3  | -1    | 1     | 0     | 1   | 2       | 2       | -2    |
 
-| $x_1$ | $x_2$ | $w_1$ | $w_2$ | $b$ | $net$ | $exp$ | $res$ | $e$ | $w^u_1$ | $w^u_2$ | $b^u$ |
-|-------|-------|-------|-------|-----|-------|-------|-------|-----|---------|---------|-------|
-| 0     | 0     | 1     | 2     | -3  | -3    | 0     | 0     | 0   | 1       | 2       | -3    |
-| 1     | 0     | 1     | 2     | -3  | -2    | 0     | 0     | 0   | 1       | 2       | -3    |
-| 0     | 1     | 1     | 2     | -3  | -1    | 0     | 0     | 0   | 1       | 2       | -3    |
-| 1     | 1     | 1     | 2     | -3  | 0     | 1     | 1     | 0   | 1       | 2       | -3    |
+</Tbl>
 
+<Tbl id={"2.2.4"} txt={"Epoche 4 für AND"}>
+
+Epoche| $x_1$ | $x_2$ | $w_1$ | $w_2$ | $b$ | $net$ | $exp$ | $res$ | $err$ | $w^u_1$ | $w^u_2$ | $b^u$ |
+---|-------|-------|-------|-------|-----|-------|-------|-------|-----|---------|---------|-------|
+4.1| 0     | 0     | 2     | 2     | -2  | -2    | 0     | 0     | 0   | 2       | 2       | -2    |
+4.2| 1     | 0     | 2     | 2     | -2  | 0     | 0     | 1     | -1  | 1       | 2       | -3    |
+4.3| 0     | 1     | 1     | 2     | -3  | -1    | 0     | 0     | 0   | 1       | 2       | -3    |
+4.4| 1     | 1     | 1     | 2     | -3  | 0     | 1     | 1     | 0   | 1       | 2       | -3    |
+
+</Tbl>
+
+<Tbl id={"2.2.5"} txt={"Epoche 5 für AND. In jedem Schritt finden keine Anpassungen mehr statt, das Perzeptron ist konvergiert."}>
+
+Epoche| $x_1$ | $x_2$ | $w_1$ | $w_2$ | $b$ | $net$ | $exp$ | $res$ | $err$ | $w^u_1$ | $w^u_2$ | $b^u$ |
+--|-------|-------|-------|-------|-----|-------|-------|-------|-----|---------|---------|-------|
+5.1| 0     | 0     | 1     | 2     | -3  | -3    | 0     | 0     | 0   | 1       | 2       | -3    |
+5.2| 1     | 0     | 1     | 2     | -3  | -2    | 0     | 0     | 0   | 1       | 2       | -3    |
+5.3| 0     | 1     | 1     | 2     | -3  | -1    | 0     | 0     | 0   | 1       | 2       | -3    |
+5.4| 1     | 1     | 1     | 2     | -3  | 0     | 1     | 1     | 0   | 1       | 2       | -3    |
+
+</Tbl>
+
+import epoch1_1 from "./img/AND/epochs.png";
+
+<Embed
+    figure={"Abbildung 2.2.6"}
+    title={"Ein vollständiger Lauf über 5 Epochen für die AND-Funktion. Blaue und gestrichelt ist die Trenngerade, auf der senkrecht der Gewichtsvektor (orange) steht. Grün umrandete Punkte bedingen den Änderungsvektor (schwarz). (Quelle: eigene)"}
+    modeAware={false}
+>
+    <img src={epoch1_1} />
+</Embed>
 
 
 [^30]: vollständiger Quellcode unter https://github.com/ThorstenSuckow/pylabs (abgerufen 25.08.2023)
 
 
+## 2.2.4 Die XOR-Funktion
 
+Bei großen Datenmengen kann eine Anpassung der Epochen nach oben manchmal ausreichen (BILD BLOBS), damit ein Perzeptron sich anpasst
 
 
 ## Notes
