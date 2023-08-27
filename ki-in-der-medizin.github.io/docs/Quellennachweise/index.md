@@ -37,3 +37,9 @@ https://de.wikipedia.org/wiki/Theoretische_Biologie, abgerufen 09.08.2023
 
 - https%3A%2F%2Fgithub.com%2FThorstenSuckow%2Fpylabs
    https://github.com/ThorstenSuckow/pylabs, abgerufen 25.08.2023
+
+- https%3A%2F%2Fwww.bild.de%2Fnews%2Fausland%2Fnews-ausland.bild.html.png
+  https://www.bild.de/news/ausland/news-ausland/experten-warnen-ki-so-gefaehrlich-wie-pandemien-und-atomkrieg-84130180.bild.html, abgerufen 27.08.2023
+
+- https%3A%2F%2Fwww.safe.ai%2Fstatement-on-ai-risk
+  https://www.safe.ai/statement-on-ai-risk, abgerufen 27.08.2023
