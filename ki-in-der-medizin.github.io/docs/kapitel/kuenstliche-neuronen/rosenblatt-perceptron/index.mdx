@@ -5,7 +5,7 @@ description: Neuronenmodell nach Frank Rosenblatt
 ---
 
 import {R, F, S, EQ, Def, Tbl, initEq} from "../../../../src/components/Refs.js";
-import {Embed} from "../../../../src/components/Embed.js";
+import {Embed, Plot} from "../../../../src/components/Embed.js";
 
 #### 0 Todos
  - Heaviside (Treppenfunktion) mit Bezug auf 2.1.3.1 Aktivierungs- und Eingabefunktion, Gl. 2.1.3
@@ -201,7 +201,7 @@ Das Perzeptron lernt durch folgende Schritte (vgl. <R>RM87 S. 65</R> sowie <R>RN
 3. Wenn die Ausgabe $0$ ist, obwohl sie $1$ sein sollte  (Fehler $=1$), erhöhe die Gewichte
 4. Wenn die Ausgabe korrekt ist, passe die Gewichte nicht an
 
-Die Schritte werden so lange durchlaufen, bis für alle Trainingsdaten die Ausgabe korrekt ist, oder eine maximale Anzahl von Trainingsläufen erreicht wurde. Einen Trainingslauf nennt man dabei _Epoche_ <R>Fau94, S. 436, "Training epoch"</R>. Sind die Trainingsdaten linear separabel, _konvergiert_[^24] das Perzeptron nach einer endlichen Zahl von Epochen <R>MP17, S. 164</R>[^24], und ist danach in der Lage zu _generalisieren_ <R>Ert21, S. 202</R>.
+Die Schritte werden so lange durchlaufen, bis für alle Trainingsdaten die Ausgabe korrekt ist, oder eine maximale Anzahl von Trainingsläufen erreicht wurde. Einen Trainingslauf nennt man dabei _Epoche_ <R>Fau94, S. 436, "Training epoch"</R>. Sind die Trainingsdaten linear separabel, _konvergiert_[^24] das Perzeptron nach einer endlichen Zahl von Epochen <R>MP17, S. 164</R>[^25], und ist danach in der Lage zu _generalisieren_ <R>Ert21, S. 202</R>.
 
 Da wir in unserem Beispiel nur Daten betrachtet haben, die durch eine Gerade durch den Ursprung ($(0,0)$) getrennt sind, brauchen wir noch eine Möglichkeit, die $x_2$-Koordinate der Trenngerade anzupassen.
 
@@ -257,10 +257,13 @@ $x_2 = \Theta/w_2 -(w_1/w_2)x_1  = \Theta$
 
 was der Abstand $x_2$ von der $y$-Achse ist.
 
-Mit $b$ als Teil der Eingabe folgt auch dessen Gewichtung $bw_{n+1} = w_{n+1}$. Mit $0$ als Schwellenwert wird dadurch eine Verschiebung der Trenngeraden entlang der $y$-Achse im $\R^2$ bzw. eine Verschiebung der Hyperebene im $\R^n$ ermöglicht<R>Ert21, S.215</R>.
+Mit $b$ als Teil der Eingabe folgt auch dessen Gewichtung $bw_{n+1} = w_{n+1}$. Mit $0$ als Schwellenwert wird dadurch eine Verschiebung der Trenngeraden entlang der $y$-Achse im $\R^2$ bzw. eine Verschiebung der Hyperebene im $\R^n$ ermöglicht<R>Ert21, S.215</R> [^28].
+
+**Abbildung 2.2.6** Geometrische Interpretation der Perzeptron-Funktion im $\R^2$
+
 
 #### Lernrate
-Bevor wir uns eine Implementierung in Python anschauen, wollen wir noch kurz die **Lernrate** $\alpha$ erklären. Wie wir in diesem Abschnitt erfahren haben, berechnet die Lernregel die Gewichte auf Basis des _Fehlers_, also der Differenz von $\text{erwartete Ausgabe}$ und $\text{tatsächliche Ausgabe}$: Ist der Fehler $-1$, werden die Gewichte verringert, ist der Fehler 1, werden die Gewichte erhöht. Die Lernrate $\alpha$ ist der Koeffizient für die Gewichtsanpassung [^28]. Üblicherweise liegt $\alpha$ zwischen $0$ und $1$[^29] <R>Fau94, S. 61</R>.
+Bevor wir uns eine Implementierung in Python anschauen, wollen wir noch kurz die **Lernrate** $\alpha$ erklären. Wie wir in diesem Abschnitt erfahren haben, berechnet die Lernregel die Gewichte auf Basis des _Fehlers_, also der Differenz von $\text{erwartete Ausgabe}$ und $\text{tatsächliche Ausgabe}$: Ist der Fehler $-1$, werden die Gewichte verringert, ist der Fehler 1, werden die Gewichte erhöht. Die Lernrate $\alpha$ ist der Koeffizient für die Gewichtsanpassung [^29]. Üblicherweise liegt $\alpha$ zwischen $0$ und $1$[^30] <R>Fau94, S. 61</R>.
 
 
 [^16]: Definitionen aller Zustände, Signale und Funktionen in <R>Ros62, S. 79 - 94</R>
@@ -275,13 +278,16 @@ Bevor wir uns eine Implementierung in Python anschauen, wollen wir noch kurz die
 [^25]: Beweise hierzu in <R>Ros62, S. 111 ff.</R>, <R>MP17, S. 167 ff.</R> sowie in <R>Nov62</R>
 [^26]: vgl. <R>RN09, S. 839</R>
 [^27]: im $\R^n$ durch eine Hyperebene im Ursprung <R>Ert21, S.215</R>
-[^28]: Auch _Schrittweite_: vgl <R>GBC18, S. 93</R> und <R>RN09, S. 172</R>
-[^29]: "$\alpha$ ist eine kleine Konstante" <R>RN09, S. 172, Abs. 2</R>. Gleiche Stelle beleuchtet das Für und Wider kleiner und großer Werte von $\alpha$
+[^28]: ein hilfreicher Überblick über die geometrischen Zusammenhänge ist in "Einführung in die Neuroinformatik" von Prof. Dr. G. Sommer https://www.informatik.uni-kiel.de/inf/Sommer/doc/Downloads/Skripte/neuroskript.pdf, S. 33 ff. zu finden (abgerufen 27.08.2023)
+[^29]: Auch _Schrittweite_: vgl <R>GBC18, S. 93</R> und <R>RN09, S. 172</R>
+[^30]: "$\alpha$ ist eine kleine Konstante" <R>RN09, S. 172, Abs. 2</R>. Gleiche Stelle beleuchtet das Für und Wider kleiner und großer Werte von $\alpha$
 
 
 ## 2.2.3 Implementierung in Python
 
-Wie bereits in Kapitel **2.1**, Abschnitt **2.1.3.3** wollen wir auch mit dem Rosenblatt Perzeptron boolesche Funktionen nachbilden. Das folgende Beispiel bezieht sich auf die **AND**-Funktion (vgl. **Tabelle 2.1.1** in Abschnitt **2.1.3.2**). Zunächst definieren wir zwei Mengen $M_+$ und $M_-$: Für Elemente in $M_+$ ist die erwartete Ausgabe $1$, für Elemente in $M_-$ ist sie $0$:
+Wie bereits in Kapitel **2.1**, Abschnitt **2.1.3.3** wollen wir auch mit dem Rosenblatt Perzeptron boolesche Funktionen nachbilden. Das folgende Beispiel bezieht sich auf die **AND**-Funktion (vgl. **Tabelle 2.1.1** in Abschnitt **2.1.3.2**).
+
+Zunächst definieren wir zwei Mengen $M_+$ und $M_-$: Für Elemente in $M_+$ ist die erwartete Ausgabe $1$, für Elemente in $M_-$ ist sie $0$:
 
 <EQ id ="2-2-12">
 
@@ -290,6 +296,9 @@ $M_+ := \{(1, 1)\}$
 $M_- := \{(0, 0), (0,1), (1,0)\}$
 
 </EQ>
+
+
+**Abbildung 2.2.6**: Die Abbildung zeigt alle möglichen zweiwertigem Interpretation von $A \land B$ in einem kartesischen Koordinatensystem. Offensichtlich ist die Anzahl der möglichen Trenngeraden mit $L \subset \R^2$ unendlich.
 
 Für unsere Perzeptron-Implementierung in Python[^30] implementieren wir die Lernregel wie folgt:
 
@@ -363,7 +372,22 @@ $b^u = b + \alpha * err \space \space (\text{aktualisierter Bias})$
 
 </EQ>
 
-Mit der o.a. Implementierung konvergiert das Perzeptron innerhalb von 5 Epochen. In jeder Epoche werden 4 einzelne Daten trainiert, was insgesamt einer Anzahl von 20 Trainingsschritten entspricht. Die folgenden Tabellen stellen die Anpassungen dar (zugehörige Funktionsplots in **Abbildung 2.2.6**).
+Mit der o.a. Implementierung konvergiert das Perzeptron innerhalb von 5 Epochen. In jeder Epoche werden 4 einzelne Daten trainiert, was insgesamt einer Anzahl von 20 Trainingsschritten entspricht. Das Perzeptron hat also für $w_1$, $w_2$ Werte gefunden, so dasss die folgenden 4 Ungleichungen gleichzeitig erfüllt sind:
+
+<EQ id ="2.2.14">
+
+$w_10 + w_20 < \Theta$
+
+$w_11 + w_20 < \Theta$
+
+$w_10 + w_21 < \Theta$
+
+$w_11 + w_21 \geq \Theta$
+
+</EQ>
+
+
+Die folgenden Tabellen zeigen die Anpassungen im Detail. Die geometrische Darstellung hierzu findet sich in **Abbildung 2.2.6**).
 
 <Tbl id={"2.2.1"} txt={"Epoche 1 für AND"}>
 
@@ -421,23 +445,43 @@ Epoche| $x_1$ | $x_2$ | $w_1$ | $w_2$ | $b$ | $net$ | $exp$ | $res$ | $err$ | $w
 
 </Tbl>
 
-import epoch1_1 from "./img/AND/epochs.png";
+<Plot type={"AND"}/>
 
-<Embed
-    figure={"Abbildung 2.2.6"}
-    title={"Ein vollständiger Lauf über 5 Epochen für die AND-Funktion. Blaue und gestrichelt ist die Trenngerade, auf der senkrecht der Gewichtsvektor (orange) steht. Grün umrandete Punkte bedingen den Änderungsvektor (schwarz). (Quelle: eigene)"}
-    modeAware={false}
->
-    <img src={epoch1_1} />
-</Embed>
-
+**Abbildung 2.2.7:** Ein vollständiger Lauf über 5 Epochen für die AND-Funktion. Blaue gestrichelt ist die Trenngerade, auf der senkrecht der Gewichtsvektor (orange) steht. Grün umrandete Punkte sind Ziel des Trainingsschrittes und bedingen den "Änderungsvektor" (schwarz), der die Anpassung von $w$ im nächsten Schritt angibt. (Quelle: eigene)
 
 [^30]: vollständiger Quellcode unter https://github.com/ThorstenSuckow/pylabs (abgerufen 25.08.2023)
 
 
 ## 2.2.4 Die XOR-Funktion
 
-Bei großen Datenmengen kann eine Anpassung der Epochen nach oben manchmal ausreichen (BILD BLOBS), damit ein Perzeptron sich anpasst
+Wenn ein Perzeptron nicht konvergiert, kann es ausreichen, die Anzahl der Epochen zu erhöhen, damit passende Gewichtsvektoren gefunden werden.
+
+import blob_success from "./img/blob_success.png";
+
+<Embed figure={"2.2.8"} modeAware={false} title={"Ein Perzeptron mit großen Datenmengen (50 Einträg). Nach knapp 300 Trainingsschritten (in der 6ten Epoche) wird die Trenngerade gefunden. (Quelle: eigene)"}>
+    <img src={blob_success} />
+</Embed>
+
+Allerdings kann es bereits bei wenigen Daten und beliebig großer Epochenzahl passieren, dass ein Perzeptron nicht konvergiert, nämlich wenn die Daten nicht linear separabel sind (vgl. auch Definition in Abschnitt **2.2.3**).
+
+Als Beispiel betrachten wir die boolesche Funktion **XOR** (vgl. **Tabelle 2.1.6**). In **Abbildung 2.2.8** ist die geometrische Repräsentation der möglichen Interpretationen für $A \oplus B$ dargestellt. Zwar lassen sich die Elemente separieren, aber nicht linear. Es müßte sonst ein $w_1, w_2$ existieren, das folgende Ungleichungen erfüllt:
+
+<EQ id ="2.2.15">
+
+$w_10 + w_20 < \Theta$
+
+$w_11 + w_20 \geq \Theta \implies w_1 \geq \Theta$
+
+$w_10 + w_21 \geq \Theta \implies w_2 \geq \Theta$
+
+$w_11 + w_21 < \Theta$
+
+</EQ>
+
+Offensichtlich kann $w_1 + w_2 < \Theta$ nicht erfüllt werden, wenn gleichzeitig $w_1 \geq \Theta$ und $w_2 \geq \Theta$ gilt.
+
+**Abbildung 2.2.8:** Interpretationen der XOR-Funktion im kartesischen Koordinatensystem. Eine lineare Trenngerade existiert für die Werte nicht.
+
 
 
 ## Notes
