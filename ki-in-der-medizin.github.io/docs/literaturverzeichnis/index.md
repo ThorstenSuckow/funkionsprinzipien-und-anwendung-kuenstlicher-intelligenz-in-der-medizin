@@ -161,6 +161,9 @@ Quotation style: IEEE
 
 ## 2.2 Das Rosenblatt-Perzeptron
 
+- **[Arb03]** M. A. Arbib, Hrsg., The handbook of brain theory and neural networks, 2nd ed. Cambridge, Mass: MIT Press, 2003.
+
+
 - **[GBC18]** I. Goodfellow, Y. Bengio, und A. Courville, Deep Learning. MIT Press, 2018. ISBN: 3958457002.
 
 - **[Nov62]** A.B.J. Novikoff. On convergence proofs on perceptrons. In _Proceedings of the Symposium on the Mathematical Theory of Automata, Vol. XII_, Seiten 615–622, 1962.
