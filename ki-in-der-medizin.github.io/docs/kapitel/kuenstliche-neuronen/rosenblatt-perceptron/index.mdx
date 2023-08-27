@@ -40,25 +40,26 @@ artificial neurons. <R>Kle99, S. 2</R>
 
 ## 2.2.2 Das Perzeptron - ein linearer Klassifizierer
 
-Bereits 1954 wurden Versuche unternommen, lernfähige neuronale Netze zu modellieren <R>Ros62, S. 24, Abs. 2</R>[^10]. Erst 1958 schafft es ein Modell, eine Sensation auszulösen: Das **Perceptron** (im folgenden "Perzeptron") <R>AR88, S.90</R>[^11]. 1957 beschreibt es sein Schöpfer Frank Rosenblatt (1928 - 1971) in <R>Ros57</R> als Teil eines internen Forschungsprojektes des _Cornell Aeronautical Labors_: Die Forschungseinrichtung gehörte von 1946 bis 1972[^12] zu der Cornell Universität[^13], an der Rosenblatt 1950 seinen A.B und 1956 seinen Ph.D. gemacht hatte, und an der er bis zu seinem Lebensende[^14] als Psychologe und Neurobiologe forschen und lehren wird <R>Ehb71</R>.
+Bereits 1954 wurden Versuche unternommen, lernfähige neuronale Netze zu modellieren <R>Ros62, S. 24, Abs. 2</R>[^10]. Erst 1958 schafft es ein Modell, eine Sensation[^11] auszulösen: Das **Perceptron** (im folgenden "Perzeptron") <R>AR88, S.90</R>[^12]. 1957 beschreibt es sein Schöpfer Frank Rosenblatt (1928 - 1971) in <R>Ros57</R> als Teil eines internen Forschungsprojektes des _Cornell Aeronautical Labors_: Die Forschungseinrichtung gehörte von 1946 bis 1972[^13] zu der Cornell Universität[^14], an der Rosenblatt 1950 seinen A.B und 1956 seinen Ph.D. gemacht hatte, und an der er bis zu seinem Lebensende[^15] als Psychologe und Neurobiologe forschen und lehren wird <R>Ehb71</R>.
 
 #### "The Perceptron - A perceiving and recognizing automaton"
-Das Forschungsprojekt "_Perceiving and Recognizing Automaton_" beschreibt einen Apparat, der mittels einer Kamera geometrische Figuren erkennen und zuordnen kann. Die Funktionen simuliert Rosenblatt zunächst auf einem IBM 704 Rechner <R>Ros60</R>, bevor  die Hardware Anfang der 60er Jahre als _Mark 1 Perceptron_ gebaut wird: 400 Cadmiumsulfid-Photozellen auf einem 20x20 großen Raster angeordnet - dem **S-System** (**S** = _Sensory_) - leiten Signale an das **A-System** (**A** = _Association_); dort werden sie registriert und ausgewertet, und schlussendlich über das **R-System** (**R** = _Response_) ausgegeben (vgl. <R>Ros57, S. 4, f.</R>, <R>Ros58 S. 389 ff.</R> sowie <R>Bis06, S. 193 "Frank Rosenblatt" sowie S. 196 Figure 4.8</R>). Dabei lernt die Maschine im ersten Schritt durch die Unterstützung der Ingenieure, wie gegebene Formen zu interpretieren sind: Für aktivierte Photozellen wird die erwartete Ausgabe manuell festgelegt. Die Verbindungen zwischen den **S**-, **A**- und **R**-Units erinnert nicht nur von der Namensgebung her an biologische Neuronen, auch deren Struktur und Verschaltung wird hier als Vorbild genommen[^15] <R>Ros62, s. 4, Abs. 2</R>.
+Das Forschungsprojekt "_Perceiving and Recognizing Automaton_" beschreibt einen Apparat, der mittels einer Kamera geometrische Figuren erkennen und zuordnen kann. Die Funktionen simuliert Rosenblatt zunächst auf einem IBM 704 Rechner <R>Ros60</R>, bevor  die Hardware Anfang der 60er Jahre als _Mark 1 Perceptron_ gebaut wird: 400 Cadmiumsulfid-Photozellen auf einem 20x20 großen Raster angeordnet - dem **S-System** (**S** = _Sensory_) - leiten Signale an das **A-System** (**A** = _Association_); dort werden sie registriert und ausgewertet, und schlussendlich über das **R-System** (**R** = _Response_) ausgegeben (vgl. <R>Ros57, S. 4, f.</R>, <R>Ros58 S. 389 ff.</R> sowie <R>Bis06, S. 193 "Frank Rosenblatt" sowie S. 196 Figure 4.8</R>). Dabei lernt die Maschine im ersten Schritt durch die Unterstützung der Ingenieure, wie gegebene Formen zu interpretieren sind: Für aktivierte Photozellen wird die erwartete Ausgabe manuell festgelegt. Die Verbindungen zwischen den **S**-, **A**- und **R**-Units erinnert nicht nur von der Namensgebung her an biologische Neuronen, auch deren Struktur und Verschaltung wird hier als Vorbild genommen[^16] <R>Ros62, s. 4, Abs. 2</R>.
 
 **Abbildung 2.2.1:** Schematische Darstellung der S, A, R Units
 
 
 [^10]: Rosenblatt verweist hier auf <R>CF54</R>
-[^11]: vgl. auch <R>MP69, S. xix</R>: "Interest in connectionist networks revivied dramatically in 1962 with the publication of Frank Rosenblatt's book _Principles of Neurodynamics_, [...]" (Hervorhebung i.O.)
-[^12]: Seit 1972 Calspan Corporation <R>BB06</R>, https://calspan.com/ (abgerufen 18.08.2023)
-[^13]:  https://www.cornell.edu/, abgerufen 18.08.2023
-[^14]: 1971 durch einen Bootsunfall <R>Car71</R>
-[^15]: Die **S**-Units konnten sowohl hemmende als auch erregende Signale in das **A**-System einspeisen-. Darüber hinaus war das **R**-System in der Lage, über Rückkoppelungen hemmende Signale an das **A**-System zu senden: Damit sollte verhindert werden, dass weitere **R**-Units aktiviert werden, die sich mit den bereits aktivierten Units gegenseitig ausschließen. <R>Ros57, S. 4, Punkt (3)</R>
+[^11]: In der Presse publikumswirksam, aber wenig vertrauenserweckend: "Frankenstein Monster Designed by Navy Robot That Thinks" <R>Ros62, S. v</R>. Vgl. dazu Schlagzeilen der hiesigen Boulevardpresse. bild.de titelt: "Übernehmen Computer die Weltherrschaft?" (https://www.bild.de/news/ausland/news-ausland/experten-warnen-ki-so-gefaehrlich-wie-pandemien-und-atomkrieg-84130180.bild.html, abgerufem 27.08.2023) als Reaktion auf "Statement on AI Risk" des _Center for AI Safety_, einem, Statement zahlreicher Wissenschaftler, die zur Vorsicht beim Umgang, Einsatz udn Forschung von KI mahnen: "Mitigating the risk of extinction from AI should be a global priority alongside other societal-scale risks such as pandemics and nuclear war." (https://www.safe.ai/statement-on-ai-risk, abgerufen 27.08.2023)
+[^12]: vgl. auch <R>MP69, S. xix</R>: "Interest in connectionist networks revivied dramatically in 1962 with the publication of Frank Rosenblatt's book _Principles of Neurodynamics_, [...]" (Hervorhebung i.O.)
+[^13]: Seit 1972 Calspan Corporation <R>BB06</R>, https://calspan.com/ (abgerufen 18.08.2023)
+[^14]:  https://www.cornell.edu/, abgerufen 18.08.2023
+[^15]: 1971 durch einen Bootsunfall <R>Car71</R>
+[^16]: Die **S**-Units konnten sowohl hemmende als auch erregende Signale in das **A**-System einspeisen-. Darüber hinaus war das **R**-System in der Lage, über Rückkoppelungen hemmende Signale an das **A**-System zu senden: Damit sollte verhindert werden, dass weitere **R**-Units aktiviert werden, die sich mit den bereits aktivierten Units gegenseitig ausschließen. <R>Ros57, S. 4, Punkt (3)</R>
 
 
 ## 2.2.3 Das Modell
 
-Rosenblatt definiert das Perzeptron wie folgt[^16]:
+Rosenblatt definiert das Perzeptron wie folgt[^17]:
 
 > A <u>perceptron</u> is a network of S, A, and R units with a variable interaction matrix _V_ which depends on the
 sequence of past activity states of the network. <R>Ros62, S. 83, "DEFINITION 17" (Hervorhebung i.O.)</R>
@@ -71,7 +72,7 @@ input signals, $\alpha_i$ , is equal or greater than a threshold
 quantity, $\Theta > 0$. The output signal $a^*_i$ is equal to $+1$ if $\alpha_i \geq \Theta$ and $0$ otherwise. If $a^*_i = +1$,
 the unit is said to be <u>active</u>. <R>Ros62, S. 81, "DEFINITION 9" (Hervorhebung i.O.)</R>
 
-Ähnlichkeiten zu der in **Kapitel 2.1.3** beschriebenen Aktivierungsfunktion sind durchaus erkennbar. Rosenblatt selber weist darauf hin, dass er sein Modell direkt von dem von McCulloch und Pitts eingeführten Modell ableitet[^17]. Darüber hinaus weist er auch auf Einflüsse von Hebb und von Neumann hin <R>Ros62, S.5</R>.
+Ähnlichkeiten zu der in **Kapitel 2.1.3** beschriebenen Aktivierungsfunktion sind durchaus erkennbar. Rosenblatt selber weist darauf hin, dass er sein Modell direkt von dem von McCulloch und Pitts eingeführten Modell ableitet[^18]. Darüber hinaus weist er auch auf Einflüsse von Hebb und von Neumann hin <R>Ros62, S.5</R>.
 
 Das klassische Rosenblatt-Perzeptron verwendet in einem Netz von Eingabe- und Ausgabe-Knoten gewichtete Verbindungen - die Knoten selber sind Schwellenwertelemente, Verbindungen werden stochastisch ermittelt <R>Roj93, S. 51, Abs. 3</R>. Nach Rosenblatts Veröffentlichung wurde sein Modell analysiert und verfeinert <R>Roj93, S. 51, Abs. 3</R> u. a. von Minsky und Papert in <R>MP17</R>, die wie folgt definieren:
 
@@ -126,11 +127,11 @@ $x_1 - x_2 \begin{cases}
 
 </EQ>
 
-Die _Gerade_ $L$ repräsentiert eine _Hyperebene_ <R>BHW+12 S. 81, "Definition 2.3"</R> in $\R_+^2$. Punkte, die nicht zu dieser Hyperebene gehören, liegen in dem Fall $\R_+^2$ in zwei unterschiedlichen _Halbräumen_[^18]. Die Halbräume und deren Trennung wird greifbarer durch die geometrische Darstellung in **Abbildung 2.2.4**. Wir können feststellen, dass
+Die _Gerade_ $L$ repräsentiert eine _Hyperebene_ <R>BHW+12 S. 81, "Definition 2.3"</R> in $\R_+^2$. Punkte, die nicht zu dieser Hyperebene gehören, liegen in dem Fall $\R_+^2$ in zwei unterschiedlichen _Halbräumen_[^19]. Die Halbräume und deren Trennung wird greifbarer durch die geometrische Darstellung in **Abbildung 2.2.4**. Wir können feststellen, dass
 
  - Punkte, die $x_1 - x_2 > 0$ erfüllen (im folgenden $M_-$) in dem Halbrum _unter_ der durch $L$ beschriebenen Gerade liegen
  - Punkte, für die  $x_1 - x_2 < 0$ gilt (im folgenden $M_+$) _über_ der durch $L$ beschriebenen Gerade liegen
- - Punkte mit $x_1 - x_2 = 0$ _auf_ der Geraden liegen (im folgenden $\subset M_-$[^19])
+ - Punkte mit $x_1 - x_2 = 0$ _auf_ der Geraden liegen (im folgenden $\subset M_-$[^20])
 
 **Abbildung 2.2.4:** Skizzierung der durch die 1. Winkelhalbierende entstandenen Halbräume. Die Mengen $M_-$ und $M_+$ sind linear separierbar, die Gleichung für die _Trenngerade_ hierzu lautet $x_1 - x_2 = 0$
 
@@ -138,7 +139,7 @@ Formal ausgedrückt bedeutet das, dass $M_+$ und $M_-$ _linear separabel_ sind. 
 
 <Def>
 
-**Definition 2.2.1[^20]**: Zwei Mengen _A_ und _B_ von Punkten in einem _n_-dimensionalen Raum sind _linear trennbar_, falls _n_+1 reelle Zahlen $w_1, ... , w_{n+1}$ existieren, so daß für jeden Punkt $x_1, ... , x_n \in A$ gilt
+**Definition 2.2.1[^21]**: Zwei Mengen _A_ und _B_ von Punkten in einem _n_-dimensionalen Raum sind _linear trennbar_, falls _n_+1 reelle Zahlen $w_1, ... , w_{n+1}$ existieren, so daß für jeden Punkt $x_1, ... , x_n \in A$ gilt
 
 <EQ id="2-2-5">
 
@@ -172,7 +173,7 @@ Die von <R>Ert21</R> formulierte Definition für ein Perzeptron wollen wir für 
 
 <Def>
 
-**Definition 2.2.2**[^21]: Sei $w = (w_1, ..., w_n) \in \R^n$ ein Gewichtsvektor und $x \in \R^n$ ein Eingabevektor. Ein **Perzeptron** stellt eine Funktion $P: \R^n \to \{0, 1\}$ mit
+**Definition 2.2.2**[^22]: Sei $w = (w_1, ..., w_n) \in \R^n$ ein Gewichtsvektor und $x \in \R^n$ ein Eingabevektor. Ein **Perzeptron** stellt eine Funktion $P: \R^n \to \{0, 1\}$ mit
 
 <EQ id="">
 
@@ -192,22 +193,26 @@ dar.
 
 Die Eigenschaft linearer Trennbarkeit von Daten ist eine wesentliche Voraussetzung dafür, dass ein Perzeptron _konvergiert_: Die _Lernregel_ des Perzeptrons passt während der Laufzeit die Gewichte $w_1 ... w_n$ solange an, bis sie - eingesetzt in eine lineare Gleichung <R>Ert1, S. 311</R> - die $n$-dimensionalen Daten entsprechend **Definition 2.2.1** _klassifizieren_ kann. Aus diesem Grund wird das Perzeptron auch **linearer Klassifizierer** genannt <R>Ert21, S. 210 - 216</R>.
 
-Das Perzeptron **lernt** diese Gewichte zunächst durch _Traningsdaten_[^22]. Jeder Eintrag dieser Trainingsdaten ist einer erwarteten Ausgabe zugeordnet.
+Das Perzeptron **lernt** diese Gewichte zunächst durch _Traningsdaten_[^23]. Jeder Eintrag dieser Trainingsdaten ist einer erwarteten Ausgabe zugeordnet.
 
 Das Perzeptron lernt durch folgende Schritte (vgl. <R>RM87 S. 65</R> sowie <R>RN09 S. 842</R>):
 
 1. Wähle einen Datensatz und berechne die Ausgabe
-2. Wenn die Ausgabe $1$ ist, obwohl sie $0$ sein sollte (Fehler[^23] $=-1$), verringere die Gewichte
+2. Wenn die Ausgabe $1$ ist, obwohl sie $0$ sein sollte (Fehler[^24] $=-1$), verringere die Gewichte
 3. Wenn die Ausgabe $0$ ist, obwohl sie $1$ sein sollte  (Fehler $=1$), erhöhe die Gewichte
 4. Wenn die Ausgabe korrekt ist, passe die Gewichte nicht an
 
-Die Schritte werden so lange durchlaufen, bis für alle Trainingsdaten die Ausgabe korrekt ist, oder eine maximale Anzahl von Trainingsläufen erreicht wurde. Einen Trainingslauf nennt man dabei _Epoche_ <R>Fau94, S. 436, "Training epoch"</R>. Sind die Trainingsdaten linear separabel, _konvergiert_[^24] das Perzeptron nach einer endlichen Zahl von Epochen <R>MP17, S. 164</R>[^25], und ist danach in der Lage zu _generalisieren_ <R>Ert21, S. 202</R>.
+Die Beziehung zu der Hebbschen Lernregel formulieren _Arbib et al._[^25]:
+
+>  The best-known perceptron learning rule strengthens an active synapse if the efferent neuron fails to fire when it should have fired, and weakens an active synapse if the neuron fires when it should not have done so." <R>Arb03, S. 20, rechte Spalte, Abs.1</R>
+
+Die Schritte werden so lange durchlaufen, bis für alle Trainingsdaten die Ausgabe korrekt ist, oder eine maximale Anzahl von Trainingsläufen erreicht wurde. Einen Trainingslauf nennt man dabei _Epoche_ <R>Fau94, S. 436, "Training epoch"</R>. Sind die Trainingsdaten linear separabel, _konvergiert_[^26] das Perzeptron nach einer endlichen Zahl von Epochen <R>MP17, S. 164</R>[^27], und ist danach in der Lage zu _generalisieren_ <R>Ert21, S. 202</R>.
 
 Da wir in unserem Beispiel nur Daten betrachtet haben, die durch eine Gerade durch den Ursprung ($(0,0)$) getrennt sind, brauchen wir noch eine Möglichkeit, die $x_2$-Koordinate der Trenngerade anzupassen.
 
 **Abbildung 2.2.5:** Daten, die nicht durch eine Ursprungsgerade separabel sind.
 
-Dies erreicht man mit einer sogenannten **bias unit**. Das Bias-Gewicht[^26] ist ein Wert, der zu der Gleichung aus **Definition 2.2.2** hinzuaddiert wird, und für eine Verschiebung der Ursprungsgeraden[^27] sorgt.
+Dies erreicht man mit einer sogenannten **bias unit**. Das Bias-Gewicht[^28] ist ein Wert, der zu der Gleichung aus **Definition 2.2.2** hinzuaddiert wird, und für eine Verschiebung der Ursprungsgeraden[^29] sorgt.
 
 Den Eingabedaten wird ein fester Eingabewert $x_{n+1} = 1$ hinzufügt: Der Eingabevektor $x \in \R^n$ wird _erweitert_: $(x_1, ..., x_n, 1)$ <R>Roj93, S. 58, "3.2.2 Gewichtete Netze mit einem kanonischen Baustein"</R>.
 
@@ -257,30 +262,32 @@ $x_2 = \Theta/w_2 -(w_1/w_2)x_1  = \Theta$
 
 was der Abstand $x_2$ von der $y$-Achse ist.
 
-Mit $b$ als Teil der Eingabe folgt auch dessen Gewichtung $bw_{n+1} = w_{n+1}$. Mit $0$ als Schwellenwert wird dadurch eine Verschiebung der Trenngeraden entlang der $y$-Achse im $\R^2$ bzw. eine Verschiebung der Hyperebene im $\R^n$ ermöglicht<R>Ert21, S.215</R> [^28].
+Mit $b$ als Teil der Eingabe folgt auch dessen Gewichtung $bw_{n+1} = w_{n+1}$. Mit $0$ als Schwellenwert wird dadurch eine Verschiebung der Trenngeraden entlang der $y$-Achse im $\R^2$ bzw. eine Verschiebung der Hyperebene im $\R^n$ ermöglicht<R>Ert21, S.215</R> [^30].
 
 **Abbildung 2.2.6** Geometrische Interpretation der Perzeptron-Funktion im $\R^2$
 
 
 #### Lernrate
-Bevor wir uns eine Implementierung in Python anschauen, wollen wir noch kurz die **Lernrate** $\alpha$ erklären. Wie wir in diesem Abschnitt erfahren haben, berechnet die Lernregel die Gewichte auf Basis des _Fehlers_, also der Differenz von $\text{erwartete Ausgabe}$ und $\text{tatsächliche Ausgabe}$: Ist der Fehler $-1$, werden die Gewichte verringert, ist der Fehler 1, werden die Gewichte erhöht. Die Lernrate $\alpha$ ist der Koeffizient für die Gewichtsanpassung [^29]. Üblicherweise liegt $\alpha$ zwischen $0$ und $1$[^30] <R>Fau94, S. 61</R>.
+Bevor wir uns eine Implementierung in Python anschauen, wollen wir noch kurz die **Lernrate** $\alpha$ erklären. Wie wir in diesem Abschnitt erfahren haben, berechnet die Lernregel die Gewichte auf Basis des _Fehlers_, also der Differenz von $\text{erwartete Ausgabe}$ und $\text{tatsächliche Ausgabe}$: Ist der Fehler $-1$, werden die Gewichte verringert, ist der Fehler 1, werden die Gewichte erhöht. Die Lernrate $\alpha$ ist der Koeffizient für die Gewichtsanpassung [^31]. Üblicherweise liegt $\alpha$ zwischen $0$ und $1$[^32] <R>Fau94, S. 61</R>.
 
 
-[^16]: Definitionen aller Zustände, Signale und Funktionen in <R>Ros62, S. 79 - 94</R>
-[^17]: vgl. auch "Ein _einfaches Perzeptron_ ist eine McCulloch-Pitts-Zelle, die ihre Eingabe gewichtet berechnet." in <R>Roj93, S. 57, "Definition 3.1", Hervorhebungen i.O.</R>
-[^18]: Renze, John; Uznanski, Dan; and Weisstein, Eric W. "Half-Plane." From MathWorld--A Wolfram Web Resource. https://mathworld.wolfram.com/Half-Plane.html (abgerufen 21.08.2023)
-[^19]: Wenn die Hyperebene selbst im Halbraum enthalten ist, spricht man von einem _abgeschlossenen Halbraum_. (https://de.wikipedia.org/wiki/Halbraum, abgerufen 22.08.2023)
-[^20]: <R>Roj93, S. 61, "Definition 3.2", Hervorhebungen i.O., Nummerierung eigene</R>
-[^21]: <R>Ert21, S. 212, "Definition 8.3", Hervorhebungen i.O.</R>
-[^22]: "supervised learning": überwachtes lernen; vgl. <R>RN09, S. 811, "18.2 Überwachtes Lernen"</R> sowie <R>Fau94, S. 15</R>
-[^23]: Der **Fehler** ist hierbei die Differenz von $\text{erwartete Ausgabe}$ und $\text{tatsächliche Ausgabe}$.
-[^24]: "iterative training processes converge if the weight updates reach equilibrium (stop changing)" <R>Fau94, S. 425, "Convergence"</R>
-[^25]: Beweise hierzu in <R>Ros62, S. 111 ff.</R>, <R>MP17, S. 167 ff.</R> sowie in <R>Nov62</R>
-[^26]: vgl. <R>RN09, S. 839</R>
-[^27]: im $\R^n$ durch eine Hyperebene im Ursprung <R>Ert21, S.215</R>
-[^28]: ein hilfreicher Überblick über die geometrischen Zusammenhänge ist in "Einführung in die Neuroinformatik" von Prof. Dr. G. Sommer https://www.informatik.uni-kiel.de/inf/Sommer/doc/Downloads/Skripte/neuroskript.pdf, S. 33 ff. zu finden (abgerufen 27.08.2023)
-[^29]: Auch _Schrittweite_: vgl <R>GBC18, S. 93</R> und <R>RN09, S. 172</R>
-[^30]: "$\alpha$ ist eine kleine Konstante" <R>RN09, S. 172, Abs. 2</R>. Gleiche Stelle beleuchtet das Für und Wider kleiner und großer Werte von $\alpha$
+[^17]: Definitionen aller Zustände, Signale und Funktionen in <R>Ros62, S. 79 - 94</R>
+[^18]: vgl. auch "Ein _einfaches Perzeptron_ ist eine McCulloch-Pitts-Zelle, die ihre Eingabe gewichtet berechnet." in <R>Roj93, S. 57, "Definition 3.1", Hervorhebungen i.O.</R>
+[^19]: Renze, John; Uznanski, Dan; and Weisstein, Eric W. "Half-Plane." From MathWorld--A Wolfram Web Resource. https://mathworld.wolfram.com/Half-Plane.html (abgerufen 21.08.2023)
+[^20]: Wenn die Hyperebene selbst im Halbraum enthalten ist, spricht man von einem _abgeschlossenen Halbraum_. (https://de.wikipedia.org/wiki/Halbraum, abgerufen 22.08.2023)
+[^21]: <R>Roj93, S. 61, "Definition 3.2", Hervorhebungen i.O., Nummerierung eigene</R>
+[^22]: <R>Ert21, S. 212, "Definition 8.3", Hervorhebungen i.O.</R>
+[^23]: "supervised learning": überwachtes lernen; vgl. <R>RN09, S. 811, "18.2 Überwachtes Lernen"</R> sowie <R>Fau94, S. 15</R>. _Arbib et al._ weisen darauf hin, dass _überwachtes Lernen_ mit dem Perzeptron eingeführt wurde: "Supervised learning adjusts the weights in an attempt to respond to explicit error signals provided by a “teacher,” which
+may be external, or another network in the same “brain.” This model was introduced in the perceptron model, [...]."  <R>Arb02, S. 30, rechte Spalte unten</R>
+[^24]: Der **Fehler** ist hierbei die Differenz von $\text{erwartete Ausgabe}$ und $\text{tatsächliche Ausgabe}$.
+[^25]: vgl. hierzu auch _Rosenblatt_ : "[ein Perzeptron hat] a tendency to develop 'cell assemblies' (in Hebb's sense), and these cell-assemblies tend to rival one another for dominance at all times. <R>Ros62, S. 464, Abs. 2, Anführungszeichen doppelt i.O.</R>
+[^26]: "iterative training processes converge if the weight updates reach equilibrium (stop changing)" <R>Fau94, S. 425, "Convergence"</R>
+[^27]: Das Konvergenz-Theorem besagt: "if a linear separation exists, the perceptron error-correction scheme will find it." <R>Arb03, S. 20, "Network Complexity"</R> Beweise führen <R>Ros62, S. 111 ff.</R>, <R>MP17, S. 167 ff.</R> sowie <R>Nov62</R>.
+[^28]: vgl. <R>RN09, S. 839</R>
+[^29]: im $\R^n$ durch eine Hyperebene im Ursprung <R>Ert21, S.215</R>
+[^30]: ein hilfreicher Überblick über die geometrischen Zusammenhänge ist in "Einführung in die Neuroinformatik" von Prof. Dr. G. Sommer https://www.informatik.uni-kiel.de/inf/Sommer/doc/Downloads/Skripte/neuroskript.pdf, S. 33 ff. zu finden (abgerufen 27.08.2023)
+[^31]: Auch _Schrittweite_: vgl <R>GBC18, S. 93</R> und <R>RN09, S. 172</R>
+[^32]: "$\alpha$ ist eine kleine Konstante" <R>RN09, S. 172, Abs. 2</R>. Gleiche Stelle beleuchtet das Für und Wider kleiner und großer Werte von $\alpha$
 
 
 ## 2.2.3 Implementierung in Python
@@ -300,7 +307,7 @@ $M_- := \{(0, 0), (0,1), (1,0)\}$
 
 **Abbildung 2.2.6**: Die Abbildung zeigt alle möglichen zweiwertigem Interpretation von $A \land B$ in einem kartesischen Koordinatensystem. Offensichtlich ist die Anzahl der möglichen Trenngeraden mit $L \subset \R^2$ unendlich.
 
-Für unsere Perzeptron-Implementierung in Python[^30] implementieren wir die Lernregel wie folgt:
+Für unsere Perzeptron-Implementierung in Python[^33] implementieren wir die Lernregel wie folgt:
 
 ````python
 for epoch in range(epochs):
@@ -449,20 +456,20 @@ Epoche| $x_1$ | $x_2$ | $w_1$ | $w_2$ | $b$ | $net$ | $exp$ | $res$ | $err$ | $w
 
 **Abbildung 2.2.7:** Ein vollständiger Lauf über 5 Epochen für die AND-Funktion. Blaue gestrichelt ist die Trenngerade, auf der senkrecht der Gewichtsvektor (orange) steht. Grün umrandete Punkte sind Ziel des Trainingsschrittes und bedingen den "Änderungsvektor" (schwarz), der die Anpassung von $w$ im nächsten Schritt angibt. (Quelle: eigene)
 
-[^30]: vollständiger Quellcode unter https://github.com/ThorstenSuckow/pylabs (abgerufen 25.08.2023)
+[^33]: vollständiger Quellcode unter https://github.com/ThorstenSuckow/pylabs (abgerufen 25.08.2023)
 
 
-## 2.2.4 Die XOR-Funktion
+### 2.2.3.1 Die XOR-Funktion
 
-Wenn ein Perzeptron nicht konvergiert, kann es ausreichen, die Anzahl der Epochen zu erhöhen, damit passende Gewichtsvektoren gefunden werden.
+Wenn ein Perzeptron nicht konvergiert, kann es ausreichen, die Anzahl der Epochen zu erhöhen, damit ein passender Gewichtsvektor gefunden wird[^34].
 
 import blob_success from "./img/blob_success.png";
 
-<Embed figure={"2.2.8"} modeAware={false} title={"Ein Perzeptron mit großen Datenmengen (50 Einträg). Nach knapp 300 Trainingsschritten (in der 6ten Epoche) wird die Trenngerade gefunden. (Quelle: eigene)"}>
+<Embed figure={"2.2.8"} modeAware={false} title={"Ein Perzeptron wird mit einer großen Datenmengen (50 Einträg) trainiert. Nach knapp 300 Trainingsschritten (in der 6ten Epoche) wird die Trenngerade gefunden. (Quelle: eigene)"}>
     <img src={blob_success} />
 </Embed>
 
-Allerdings kann es bereits bei wenigen Daten und beliebig großer Epochenzahl passieren, dass ein Perzeptron nicht konvergiert, nämlich wenn die Daten nicht linear separabel sind (vgl. auch Definition in Abschnitt **2.2.3**).
+Allerdings kann es bereits bei wenigen Daten und beliebig großer Epochenzahl passieren, dass ein Perzeptron nicht konvergiert, nämlich wenn die Daten nicht linear separabel sind <R>Arb03, S. 2, rechte Spalte, Abs. 1</R> (vgl. auch Definitionen in Abschnitt **2.2.3**).
 
 Als Beispiel betrachten wir die boolesche Funktion **XOR** (vgl. **Tabelle 2.1.6**). In **Abbildung 2.2.8** ist die geometrische Repräsentation der möglichen Interpretationen für $A \oplus B$ dargestellt. Zwar lassen sich die Elemente separieren, aber nicht linear. Es müßte sonst ein $w_1, w_2$ existieren, das folgende Ungleichungen erfüllt:
 
@@ -482,95 +489,23 @@ Offensichtlich kann $w_1 + w_2 < \Theta$ nicht erfüllt werden, wenn gleichzeiti
 
 **Abbildung 2.2.8:** Interpretationen der XOR-Funktion im kartesischen Koordinatensystem. Eine lineare Trenngerade existiert für die Werte nicht.
 
+[^34]: _Arbib et al_ berufen sich auf das Konvergenz-Theorem und führen an, dass "[das Rosenblatt Perzeptron] does not yield an endless seesaw, but will eventually converge to a correct set of weights if one exists, albeit perhaps after many iterations through the set of trial patterns." <R>Arb03, S. 20, rechte Spalte, Abs. 1</R>: _Minsky und Papert_ stellen fest: "Usually, when a failure occurred, neither prolonging the training experiments nor building larger machines helped." <R>MP17, S. xix, Abs. 3</R>
+
+## 2.2.4 Der AI-Winter
+
+_Minsky_ und _Papert_ führen in <R>MP17</R> weitere Limitationen des Rosenblatt-Perzeptrons auf, u.a. die _connectedness_, in dem sie zeigen, dass eine Perzeptron nicht in der Lage ist, zu entscheiden, ob eine geometrische Figure zusammenhängend ist <R>MP17, S. 12, "Theorem 08"</R>. In dem Kapitel "introduction" führen sie ein, dass
+
+> "hundreds of projects and experiments [bzgl. Perzeptrons] were generally disappointing, and the explanations inconclusive. The machines usually work quite well  on very simple problems but detoriate very rapidly as the tasks assigned to the get harder." <R>MP17, S. 19. Abs. 3</R>
+
+Bereits früher standen Wissenschaftler dem Perzeptron und den damit einhergehenden Versprechen <R>MP17, Konvergenz-Theorem . S. 164</R> skeptisch egegenüber:
+
+> "Here was a machine that could do pattern recognition in a humanlike way; it could recognize all kinds of things. Almost
+everyone at MIT was very skeptical" <R>Cow98, S. 99</R>
+
+und <R>AR88, S. 159</R> führt aus, dass bereits vor erscheinen von <R>MP17</R> im Jahr 1969 das Interesse an Perzeptronen zurückging, bevor _Minsky und Papert_ auf Seite 232 feststellen, dass "we [Minsky und Papert] consider it to be an important research problem to elucidate (or reject) our intuitive judgement that the extension is sterile.", dem <R>AR88, S. 159</R> eine generelle Irritation und Enttäuschung mit dem Perzeptron Modell beimessen. Diesem "Pessimismus" betrachten _Minsky und Papert_ 1988 rückblickend in <R>MP17. S xxi</R> und sind sich dessen bewusst, das behauptet wird, ihr Buch hätte mit dem Aufzeigen der Limitierungen des Rosenblatt-Modells Forscherdrang an ebendiesem gebremst.
+
+> "One popular version is  that the publication of our book so discouraged research on learning in network machines that a promising line of reasearch was interrupted." <R>MP17, S. xx</R>
+
+_Anderson und Rosenfeld_ verweisen auf <R>Cow90</R>. In dem Interview geht Cowan auf "the influence of Marvin Minsky and Seymour Papert on the loss of interest in neural networks during the 1970s" <R>AR98, S. X</R> ein.
 
 
-## Notes
-> The perceptron is a relative newcomer to this
-field,having first been described by this writer in 1957 (Ref . 78). Perceptrons
-are of interest because their study appears to throw light upon the biophysics of
-cognitive systems: they illustrate, in rudimentary form, some of the processes
-by which organisms, or other suitably organized entitites, may come to
-possess "knowledge" of the physical world in which they exist, and by which
-the knowledge that they possess can be represented or reported when occasion
-demands. [Ros62, S. 3]
-
-
-
-> Simulation of a statistically
-connected network to investigate possible learning capabilities was first
-carried out. successfully by Farley and Clark in 1954 (Ref. 10). [Ros61, S.24]
-
-> * The term "cell assembly" seems appropriate here, as the sets which are
-formed in the terminal state of a cross -coupled perceptron bear a close
-resemblence in organization and functional properties to the cell assembly
-concept proposed by Hebb, in Ref. 33. [Ros62 S. 450]
-
-> In a value -conserving cross -coupled perceptron, where there is
-the possibility of developing pronounced inhibitory interaction between A-seti,
-there is a tendency to develop "cell assemblies" (in Hebb's sense), and these
-cell -assemblies tend to rival one another for dominance at all times. [Ros62, S. 464]
-
-> In the recognition of a complex structured object, such as a
-man (regardless of posture, angle of view, etc.) a program of observations
-might note significant parts and the transitions between them. There should,
-for example, be a head joined to the shoulders, and by following a path from
-one of the hands, the system should successively come to a forearm, shoulder,
-and torso. The reader may recognize a similarity between this suggestion
-and Hebb's concept of a "phase sequence" (Ref . 33). [Ros62, S. 506]
-
-Bei der MCP-Zelle hatten wir eine Kantengewichtsfunktion eingeführt, die je nach hemmender oder erregender afferenter Verbindung einen positiven oder negativen Wert zurückliefert (s. **Definition 2.1**). Für eine solche Kantengewichtsfunktion müßte nun
-
-
-
-Einführung: Hebb 1949, Organization of Behavior, Lernregel, synaptische PLastizität, "fire togteher, wire together".
-Auf dieser Grundlage dann Modell Rosenblatt, Synapsen gewichte
-
-Heb ostuliert "cell assemblies" in dem Buch, selbstverstärkende cluster von neuronen die informstionen repräsentieren im Nervensystem, einzelne Zellen können zu mehreren Clustern gehören AR88, S. 44
-
-> Perceptrons are neural nets that change with “experience,” using
-an error-correction rule designed to change the weights of each
-response unit when it makes erroneous responses to stimuli that
-are presented to the network. [ARB02, S.20]
-
-> In
-other words, the simple perceptron can only compute a linearly
-separable function of the pattern as provided by the associator
-units.  [ARB02, S.20]
-
-> The answer was “Yes: if the patterns are
-linearly separable, then there is a learning scheme which will eventually yield a satisfactory setting of the weights.” The best-known
-perceptron learning rule strengthens an active synapse if the efferent neuron fails to fire when it should have fired, and weakens an
-active synapse if the neuron fires when it should not have done so:  [ARB02, S.20]
-
-> Supervised learning adjusts the weights in an attempt
-to respond to explicit error signals provided by a “teacher,” which
-may be external, or another network in the same “brain.” This
-model was introduced in the perceptron model, which is reviewed
-in PERCEPTRONS, ADALINES, AND BACKPROPAGATION (of which
-more details in the next road map, Grounding Models of Networks).  [ARB02, S. 30]
-
-Evtl. interessant: Perceptrons, Adalines, and Backpropagation Arb02, S. 871
-
-#### Convergence Proof
-
-> It appearedin two later papersin the Reviewsof ModernPhysics . Those
-paperscontained an attempt at a formal proof of the convergence. In 1961-
-62 AI Novikoff recognizedthe essentialsimilarity between linear threshold
-elementsand the algorithm, and linear programming, and produced a very
-elementary but neat proof by contradiction that it converged in a finite
-numberof trials. Novikoff 's proof madeclearwhat wasgoing on and should
-have
-, actually, triggered a lot of work. [AR98, S. 100]
-
-### AI Winter
-> These talks also mention the controversies that surrounded the rise and
-fall of public and scientificinterest in Rosenblatt 's perceptron, as well as the
-influence of Marvin Minsky and Seymour Papert on the loss of interest
-in neural networks during the 1970s [AR98, S X]
-
-### Notes
-> Here was a machinethat could do pattern recognition
-in a humanlike way; it could recognize all kinds of things. Almost
-everyoneat MIT was very skeptical . [AR98, S.99]
-
-> Bernard Widrow (born December 24, 1929) is a U.S. professor of electrical engineering at Stanford University.[1] He is the co-inventor of the Widrow–Hoff least mean squares filter (LMS) adaptive algorithm with his then doctoral student Ted Hoff.[2] The LMS algorithm led to the ADALINE and MADALINE artificial neural networks and to the backpropagation technique. He made other fundamental contributions to the development of signal processing in the fields of geophysics, adaptive antennas, and adaptive filtering.
