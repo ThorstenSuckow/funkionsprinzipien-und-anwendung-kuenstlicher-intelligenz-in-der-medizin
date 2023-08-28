@@ -43,3 +43,6 @@ https://de.wikipedia.org/wiki/Theoretische_Biologie, abgerufen 09.08.2023
 
 - https%3A%2F%2Fwww.safe.ai%2Fstatement-on-ai-risk
   https://www.safe.ai/statement-on-ai-risk, abgerufen 27.08.2023
+
+- https%3A%2F%2Fwww.chilton-computing.org.uk%2Finf%2Fliterature%2Freports%2Flighthill_report%2Fp001.htm
+  https://www.chilton-computing.org.uk/inf/literature/reports/lighthill_report/p001.htm, abgerufen 28.08.2023
