@@ -290,7 +290,7 @@ may be external, or another network in the same “brain.” This model was intr
 [^32]: "$\alpha$ ist eine kleine Konstante" <R>RN09, S. 172, Abs. 2</R>. Gleiche Stelle beleuchtet das Für und Wider kleiner und großer Werte von $\alpha$
 
 
-## 2.2.3 Implementierung in Python
+### 2.2.3.3 Implementierung in Python
 
 Wie bereits in Kapitel **2.1**, Abschnitt **2.1.3.3** wollen wir auch mit dem Rosenblatt Perzeptron boolesche Funktionen nachbilden. Das folgende Beispiel bezieht sich auf die **AND**-Funktion (vgl. **Tabelle 2.1.1** in Abschnitt **2.1.3.2**).
 
@@ -459,7 +459,7 @@ Epoche| $x_1$ | $x_2$ | $w_1$ | $w_2$ | $b$ | $net$ | $exp$ | $res$ | $err$ | $w
 [^33]: vollständiger Quellcode unter https://github.com/ThorstenSuckow/pylabs (abgerufen 25.08.2023)
 
 
-### 2.2.3.1 Die XOR-Funktion
+### 2.2.3.4 Die XOR-Funktion
 
 Wenn ein Perzeptron nicht konvergiert, kann es ausreichen, die Anzahl der Epochen zu erhöhen, damit ein passender Gewichtsvektor gefunden wird[^34].
 
@@ -489,23 +489,33 @@ Offensichtlich kann $w_1 + w_2 < \Theta$ nicht erfüllt werden, wenn gleichzeiti
 
 **Abbildung 2.2.8:** Interpretationen der XOR-Funktion im kartesischen Koordinatensystem. Eine lineare Trenngerade existiert für die Werte nicht.
 
-[^34]: _Arbib et al_ berufen sich auf das Konvergenz-Theorem und führen an, dass "[das Rosenblatt Perzeptron] does not yield an endless seesaw, but will eventually converge to a correct set of weights if one exists, albeit perhaps after many iterations through the set of trial patterns." <R>Arb03, S. 20, rechte Spalte, Abs. 1</R>: _Minsky und Papert_ stellen fest: "Usually, when a failure occurred, neither prolonging the training experiments nor building larger machines helped." <R>MP17, S. xix, Abs. 3</R>
+[^34]: _Arbib et al_ berufen sich auf das Konvergenz-Theorem und führen an, dass "[das Rosenblatt Perzeptron] does not yield an endless seesaw, but will eventually converge to a correct set of weights if one exists, albeit perhaps after many iterations through the set of trial patterns." <R>Arb03, S. 20, rechte Spalte, Abs. 1</R>: _Minsky und Papert_ formulieren lose: "if the sets are separable [...], then the program will separate them" <R>MP17, S.165, Abs. 1</R> und stellen im Hinblick auf Parameteranpassungen fest: "Usually, when a failure occurred, neither prolonging the training experiments nor building larger machines helped." <R>MP17, S. xix, Abs. 3</R>
 
-## 2.2.4 Der AI-Winter
+## 2.2.4 Der KI-Winter
 
-_Minsky_ und _Papert_ führen in <R>MP17</R> weitere Limitationen des Rosenblatt-Perzeptrons auf, u.a. die _connectedness_, in dem sie zeigen, dass eine Perzeptron nicht in der Lage ist, zu entscheiden, ob eine geometrische Figure zusammenhängend ist <R>MP17, S. 12, "Theorem 08"</R>. In dem Kapitel "introduction" führen sie ein, dass
+In _Perceptrons - An introduction to Computational Geometry (1969)_ <R>MP17</R> behandeln _Minsky_ und _Papert_ u.a. das Verhalten des Perzeptrons im Fall nicht-separabler Daten[^35] (siehe **Abschnitt 2.2.3.4**), sowie das Problem bzgl. _recognition of connectedness_[^36], bei dem es um die Erkennung zusammenhängender geometrischer Figuren geht. Ihr Anliegen mit dem Buch ist es, die (mathematischen) Grenzen des Rosenblatt-Perzeptrons auf ein formales Gerüst zu stellen <R>MP17, S. 249, "What Perceptrons Can't Do"</R>. Ihre Ausführungen verstärken aber die ohnehin schon skeptische Haltung[^37] gegenüber der Fähigkeiten des Perzeptrons[^38] und künstlicher neuronaler Netze allgemein, was <R>AR88, S. 159</R> rückblickend auch auf Aussagen in der Einleitung des Buches[^39]  wie
 
-> "hundreds of projects and experiments [bzgl. Perzeptrons] were generally disappointing, and the explanations inconclusive. The machines usually work quite well  on very simple problems but detoriate very rapidly as the tasks assigned to the get harder." <R>MP17, S. 19. Abs. 3</R>
+> "hundreds of projects and experiments [bzgl. des Perzeptrons] were generally disappointing, and the explanations inconclusive. The machines usually work quite well on very simple problems but detoriate very rapidly as the tasks assigned to the get harder." <R>MP17, S. 19. Abs. 3</R>
 
-Bereits früher standen Wissenschaftler dem Perzeptron und den damit einhergehenden Versprechen <R>MP17, Konvergenz-Theorem . S. 164</R> skeptisch egegenüber:
+zurückführen. In
 
-> "Here was a machine that could do pattern recognition in a humanlike way; it could recognize all kinds of things. Almost
-everyone at MIT was very skeptical" <R>Cow98, S. 99</R>
+> "we [Minsky und Papert] consider it to be an important research problem to elucidate (or reject) our intuitive judgement that the extension is sterile." <R>MP17, S. 232 fest</R>
 
-und <R>AR88, S. 159</R> führt aus, dass bereits vor erscheinen von <R>MP17</R> im Jahr 1969 das Interesse an Perzeptronen zurückging, bevor _Minsky und Papert_ auf Seite 232 feststellen, dass "we [Minsky und Papert] consider it to be an important research problem to elucidate (or reject) our intuitive judgement that the extension is sterile.", dem <R>AR88, S. 159</R> eine generelle Irritation und Enttäuschung mit dem Perzeptron Modell beimessen. Diesem "Pessimismus" betrachten _Minsky und Papert_ 1988 rückblickend in <R>MP17. S xxi</R> und sind sich dessen bewusst, das behauptet wird, ihr Buch hätte mit dem Aufzeigen der Limitierungen des Rosenblatt-Modells Forscherdrang an ebendiesem gebremst.
+meinen _Anderson und Rosenfeld_ eine generelle Irritation und Enttäuschung über das Perzeptron-Modell zu erkennen. Diesen "Pessimismus" betrachten _Minsky und Papert_ 1988 in Retrospektive <R>MP17. S xxi</R> und sind sich der Behauptung bewusst, ihr Buch hätte mit dem Aufzeigen der Limitierungen des Rosenblatt-Modells den Forscherdrang an ebendiesem gebremst.
 
-> "One popular version is  that the publication of our book so discouraged research on learning in network machines that a promising line of reasearch was interrupted." <R>MP17, S. xx</R>
+> "One popular version is  that the publication of our book so discouraged research on learning in network machines that a promising line of research was interrupted." <R>MP17, S. xx</R>
 
-_Anderson und Rosenfeld_ verweisen auf <R>Cow90</R>. In dem Interview geht Cowan auf "the influence of Marvin Minsky and Seymour Papert on the loss of interest in neural networks during the 1970s" <R>AR98, S. X</R> ein.
+In  <R>AR98, S. X</R> verweisen _Anderson und Rosenfeld_ auf <R>Cow90</R>, in dem auch über "the influence of Marvin Minsky and Seymour Papert on the loss of interest in neural networks during the 1970s" <R>AR98, S. X</R> gesprochen wird.
+
+_Russell und Norvig_ fassen zusammen, dass _Minsky und Papert_ in ihrem Buch bewiesen haben, dass ein Perzeptron alles lernen kann, was es auch darstellen kann, aber es könnte halt nur sehr wenig darstellen<R>RN09, S. 45</R>[^40]. Auf gleicher Seite verweisen sie auf die zunehmende Komplexität der zu berechnenden Modelle, die nicht alleine durch schnellere und bessere Hardware kompensiert werden konnte.
+
+Der Lighthill Report[^41] sollte dann 1973 eine Grundlage für die Entscheidung der britischen Regierung darstellen, das Budget für die Forschung an KI zu kürzen <R>RN09, S. 45</R>. Neuronale Netze wurden als Grundlage künstlicher Intelligenz zunächst verworfen <R>Ola96, S. 641, letzter Abs.</R>, und die Forschung daran ging zurück, bis sie Anfang/Mitte der 1980er Jahre wieder aufgenommen wurde: Diese Periode ist gemeinhin als "KI-Winter" bekannt <R>Jon08, S. 8 f.</R>
 
 
+[^35]: in <R>MP17, S. 181, "11.8 The nonseparable case" ff.</R>
+[^36]: <R>MP17, S. 12, "Theorem 0.8"</R>,  _recognition of connectedness_ <R>MP17, S. 249, letzter Abs. ff.</R>. In dem Epilog, der 19 Jahre später in einer Neuausgabe von _Minsky und Papert_ veröffentlicht wird, machen sie deutlich, dass sie damit nicht nachweisen wollten, dass ein Perzeptron nicht in der Lage zu der Erkennung zusammenhängender geometrischer Figuren sei, sondern dass die Komplexität von verschiedenen Aufgaben Anforderungen an ein Perzeptron stellt, die zu der damaligen Zeit (Ende 1950er / Anfang 1960er) schwierig umzusetzen gewesen sind <R>MP17, S. 250, Abs. 2</R> &nbsp;
+[^37]: "Here was a machine that could do pattern recognition in a humanlike way; it could recognize all kinds of things. Almost everyone at MIT was very skeptical" <R>Cow98, S. 99</R>
+[^38]: auch wegen schlechter Skalierbarkeit des Modells in der Praxis <R>AR88, S. 159, Abs. 2</R>
+[^39]: <R>MP17,S. 1-20</R>
+[^40]: vgl. hierzu <R>MP17, S. xxi, Abs. 1</R>
+[^41]: https://www.chilton-computing.org.uk/inf/literature/reports/lighthill_report/p001.htm, abgerufen 28.08.2023
