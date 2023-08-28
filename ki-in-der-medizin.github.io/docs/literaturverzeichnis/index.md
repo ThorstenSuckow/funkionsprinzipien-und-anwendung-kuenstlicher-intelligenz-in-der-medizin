@@ -73,6 +73,9 @@ Quotation style: IEEE
 
 ### 2.1 Das McCulloch-Pitts-Neuron
 
+- **[Jon08]** M. T. Jones, Artificial Intelligence: A Systems Approach, 1. Aufl. Infinity Science Press, 2007.
+
+
 - **[Lyd10]** L. H. Liu, „The Cybernetic Unconscious: Rethinking Lacan, Poe, and French Theory“, Critical Inquiry, Bd. 36, Nr. 2, S. 288–320, 2010, https://doi.org/10.1086/648527.
 
 
