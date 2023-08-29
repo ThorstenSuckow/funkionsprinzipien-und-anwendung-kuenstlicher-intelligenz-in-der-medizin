@@ -24,20 +24,6 @@ Derartige Veränderungen synaptischer Verbindungen wird als **Hebbsche Lernregel
 
 Hebbs Theorien gelten durch die Forschung als bestätigt[^8], und mit der von Hebb formulierten synaptische Plastizität wurde auch eine Idee für lernende künstliche neuronale Netze geliefert[^9]. In **Abschnitt 2.1.4** haben wir geschlossen, dass ein MCP-Netz nur durch vorhergehende Analyse der Aufgabe und Anpassung der Topologie von Außen zur Lösung einer Aufgabe imstande ist. Hebbs Erkenntnis führt kurz vor Beginn der 60er Jahre zu einem Modell, das in der Lage ist, sich selbst anzupassen.
 
-
-[^1]: an der Dalhousie Universität: https://dal.ca (abgerufen 17.08.2023)
-[^2]: McGillUniversität, Montreal, Quebec (Kanada): https://www.mcgill.ca/neuro/about/donald-hebb-phd (abgerufen 16.08.2023)
-[^3]: zu der Zeit studierte er in Teilzeit an der McGill Universität: "as a part time graduate student" <R>Kle99, S. 1</R>. Seine Master-Arbeit schrieb er aufgrund einer Erkrankung im Bett <R>BM03, S. 1014</R>
-[^4]: es sind "three pivotal postulates" <R>Kle99, S.2 f.</R>
-[^5]: als hätte sein Buch eine Art Golgräberstimmung in der der Psychologie ausgelöst, schreibt <R>Kle99</R>: "It attracted many
-brilliant scientists into psychology, made McGill University a North American mecca for scientists interested in brain mechanisms of behaviour, led to many important discoveries, and steered contemporary psychology onto a more fruitful path." <R>Kle99, S.1</R>
-[^6]: sowie als Zitat: _a:_ "[...] any two cells or systems of cells that are repeatedly active at the same time will tend to become “associated,” so that activity in one facilitates activity in the other." <R>Heb88, S. 52, "Mode of perceptual Integration: The Cell-Assembly"</R> sowie _b:_ "A series of such events \[Aktivierung von "cell-assemblies"\] constitutes a “phase sequence”—the thought process. <R>Heb88, S. 48, "Mode of perceptual Integration: The Cell-Assembly</R>; die Aussage findet sich im Original <R>Heb49</R> bereits in "Introduction", S. xi-xix
-[^7]: Zumindest in <R>Heb49</R> findet sich kein solches Zitat. <R>KG14, S. 2</R> behauptet: "This mnemonic phrase was first introduced by Carla Shatz \[12\] in an article for the Scientific American aimed at lay public" und meint damit den Satz "In a sense, then, cells that fire together wire together." in <R>Sha92, S. 94</R>. https://en.wikipedia.org/wiki/Hebbian_theory#cite_ref-2 (abgerufen 16.08.2023) hingegen schreibt den Ursprung <R>LS92</R> zu: "neurons wire together if they fire together." <R>LS92, S.211</R>
-[^8]:  vgl. <R>BLS19, S.833, Abs. 2 f.</R>, außerdem <R>YLC+14</R> und <R>BL73</R>. <R>BPC18, S. 875, Exkurs 23.5</R> verweist auf <R>Cop78</R>
-[^9]: \[Hebb\] laid the foundation for neoconnectionism which seeks to explain cognitive processes in terms of connections between assemblies of real or
-artificial neurons. <R>Kle99, S. 2</R>
-
-
 ## 2.2.2 Das Perzeptron - ein linearer Klassifizierer
 
 Bereits 1954 wurden Versuche unternommen, lernfähige neuronale Netze zu modellieren <R>Ros62, S. 24, Abs. 2</R>[^10]. Erst 1958 schafft es ein Modell, eine Sensation[^11] auszulösen: Das **Perceptron** (im folgenden "Perzeptron") <R>AR88, S.90</R>[^12]. 1957 beschreibt es sein Schöpfer Frank Rosenblatt (1928 - 1971) in <R>Ros57</R> als Teil eines internen Forschungsprojektes des _Cornell Aeronautical Labors_: Die Forschungseinrichtung gehörte von 1946 bis 1972[^13] zu der Cornell Universität[^14], an der Rosenblatt 1950 seinen A.B und 1956 seinen Ph.D. gemacht hatte, und an der er bis zu seinem Lebensende[^15] als Psychologe und Neurobiologe forschen und lehren wird <R>Ehb71</R>.
@@ -46,15 +32,6 @@ Bereits 1954 wurden Versuche unternommen, lernfähige neuronale Netze zu modelli
 Das Forschungsprojekt "_Perceiving and Recognizing Automaton_" beschreibt einen Apparat, der mittels einer Kamera geometrische Figuren erkennen und zuordnen kann. Die Funktionen simuliert Rosenblatt zunächst auf einem IBM 704 Rechner <R>Ros60</R>, bevor  die Hardware Anfang der 60er Jahre als _Mark 1 Perceptron_ gebaut wird: 400 Cadmiumsulfid-Photozellen auf einem 20x20 großen Raster angeordnet - dem **S-System** (**S** = _Sensory_) - leiten Signale an das **A-System** (**A** = _Association_); dort werden sie registriert und ausgewertet, und schlussendlich über das **R-System** (**R** = _Response_) ausgegeben (vgl. <R>Ros57, S. 4, f.</R>, <R>Ros58 S. 389 ff.</R> sowie <R>Bis06, S. 193 "Frank Rosenblatt" sowie S. 196 Figure 4.8</R>). Dabei lernt die Maschine im ersten Schritt durch die Unterstützung der Ingenieure, wie gegebene Formen zu interpretieren sind: Für aktivierte Photozellen wird die erwartete Ausgabe manuell festgelegt. Die Verbindungen zwischen den **S**-, **A**- und **R**-Units erinnert nicht nur von der Namensgebung her an biologische Neuronen, auch deren Struktur und Verschaltung wird hier als Vorbild genommen[^16] <R>Ros62, s. 4, Abs. 2</R>.
 
 **Abbildung 2.2.1:** Schematische Darstellung der S, A, R Units
-
-
-[^10]: Rosenblatt verweist hier auf <R>CF54</R>
-[^11]: In der Presse publikumswirksam, aber wenig vertrauenserweckend: "Frankenstein Monster Designed by Navy Robot That Thinks" <R>Ros62, S. v</R>. Vgl. dazu Schlagzeilen der hiesigen Boulevardpresse. bild.de titelt: "Übernehmen Computer die Weltherrschaft?" (https://www.bild.de/news/ausland/news-ausland/experten-warnen-ki-so-gefaehrlich-wie-pandemien-und-atomkrieg-84130180.bild.html, abgerufem 27.08.2023) als Reaktion auf "Statement on AI Risk" des _Center for AI Safety_, einem, Statement zahlreicher Wissenschaftler, die zur Vorsicht beim Umgang, Einsatz udn Forschung von KI mahnen: "Mitigating the risk of extinction from AI should be a global priority alongside other societal-scale risks such as pandemics and nuclear war." (https://www.safe.ai/statement-on-ai-risk, abgerufen 27.08.2023)
-[^12]: vgl. auch <R>MP69, S. xix</R>: "Interest in connectionist networks revivied dramatically in 1962 with the publication of Frank Rosenblatt's book _Principles of Neurodynamics_, [...]" (Hervorhebung i.O.)
-[^13]: Seit 1972 Calspan Corporation <R>BB06</R>, https://calspan.com/ (abgerufen 18.08.2023)
-[^14]:  https://www.cornell.edu/, abgerufen 18.08.2023
-[^15]: 1971 durch einen Bootsunfall <R>Car71</R>
-[^16]: Die **S**-Units konnten sowohl hemmende als auch erregende Signale in das **A**-System einspeisen-. Darüber hinaus war das **R**-System in der Lage, über Rückkoppelungen hemmende Signale an das **A**-System zu senden: Damit sollte verhindert werden, dass weitere **R**-Units aktiviert werden, die sich mit den bereits aktivierten Units gegenseitig ausschließen. <R>Ros57, S. 4, Punkt (3)</R>
 
 
 ## 2.2.3 Das Modell
@@ -191,7 +168,7 @@ dar.
 
 ### 2.2.3.2 Die Lernregel
 
-Die Eigenschaft linearer Trennbarkeit von Daten ist eine wesentliche Voraussetzung dafür, dass ein Perzeptron _konvergiert_: Die _Lernregel_ des Perzeptrons passt während der Laufzeit die Gewichte $w_1 ... w_n$ solange an, bis sie - eingesetzt in eine lineare Gleichung <R>Ert1, S. 311</R> - die $n$-dimensionalen Daten entsprechend **Definition 2.2.1** _klassifizieren_ kann. Aus diesem Grund wird das Perzeptron auch **linearer Klassifizierer** genannt <R>Ert21, S. 210 - 216</R>.
+Die Eigenschaft linearer Trennbarkeit von Daten ist eine wesentliche Voraussetzung dafür, dass ein Perzeptron _konvergiert_: Die _Lernregel_ des Perzeptrons passt während der Laufzeit die Gewichte $w_1 ... w_n$ solange an, bis sie - eingesetzt in eine lineare Gleichung <R>Ert21, S. 311</R> - die $n$-dimensionalen Daten entsprechend **Definition 2.2.1** _klassifizieren_ kann. Aus diesem Grund wird das Perzeptron auch **linearer Klassifizierer** genannt <R>Ert21, S. 210 - 216</R>.
 
 Das Perzeptron **lernt** diese Gewichte zunächst durch _Traningsdaten_[^23]. Jeder Eintrag dieser Trainingsdaten ist einer erwarteten Ausgabe zugeordnet.
 
@@ -270,24 +247,6 @@ Mit $b$ als Teil der Eingabe folgt auch dessen Gewichtung $bw_{n+1} = w_{n+1}$. 
 #### Lernrate
 Bevor wir uns eine Implementierung in Python anschauen, wollen wir noch kurz die **Lernrate** $\alpha$ erklären. Wie wir in diesem Abschnitt erfahren haben, berechnet die Lernregel die Gewichte auf Basis des _Fehlers_, also der Differenz von $\text{erwartete Ausgabe}$ und $\text{tatsächliche Ausgabe}$: Ist der Fehler $-1$, werden die Gewichte verringert, ist der Fehler 1, werden die Gewichte erhöht. Die Lernrate $\alpha$ ist der Koeffizient für die Gewichtsanpassung [^31]. Üblicherweise liegt $\alpha$ zwischen $0$ und $1$[^32] <R>Fau94, S. 61</R>.
 
-
-[^17]: Definitionen aller Zustände, Signale und Funktionen in <R>Ros62, S. 79 - 94</R>
-[^18]: vgl. auch "Ein _einfaches Perzeptron_ ist eine McCulloch-Pitts-Zelle, die ihre Eingabe gewichtet berechnet." in <R>Roj93, S. 57, "Definition 3.1", Hervorhebungen i.O.</R>
-[^19]: Renze, John; Uznanski, Dan; and Weisstein, Eric W. "Half-Plane." From MathWorld--A Wolfram Web Resource. https://mathworld.wolfram.com/Half-Plane.html (abgerufen 21.08.2023)
-[^20]: Wenn die Hyperebene selbst im Halbraum enthalten ist, spricht man von einem _abgeschlossenen Halbraum_. (https://de.wikipedia.org/wiki/Halbraum, abgerufen 22.08.2023)
-[^21]: <R>Roj93, S. 61, "Definition 3.2", Hervorhebungen i.O., Nummerierung eigene</R>
-[^22]: <R>Ert21, S. 212, "Definition 8.3", Hervorhebungen i.O.</R>
-[^23]: "supervised learning": überwachtes lernen; vgl. <R>RN09, S. 811, "18.2 Überwachtes Lernen"</R> sowie <R>Fau94, S. 15</R>. _Arbib et al._ weisen darauf hin, dass _überwachtes Lernen_ mit dem Perzeptron eingeführt wurde: "Supervised learning adjusts the weights in an attempt to respond to explicit error signals provided by a “teacher,” which
-may be external, or another network in the same “brain.” This model was introduced in the perceptron model, [...]."  <R>Arb02, S. 30, rechte Spalte unten</R>
-[^24]: Der **Fehler** ist hierbei die Differenz von $\text{erwartete Ausgabe}$ und $\text{tatsächliche Ausgabe}$.
-[^25]: vgl. hierzu auch _Rosenblatt_ : "[ein Perzeptron hat] a tendency to develop 'cell assemblies' (in Hebb's sense), and these cell-assemblies tend to rival one another for dominance at all times. <R>Ros62, S. 464, Abs. 2, Anführungszeichen doppelt i.O.</R>
-[^26]: "iterative training processes converge if the weight updates reach equilibrium (stop changing)" <R>Fau94, S. 425, "Convergence"</R>
-[^27]: Das Konvergenz-Theorem besagt: "if a linear separation exists, the perceptron error-correction scheme will find it." <R>Arb03, S. 20, "Network Complexity"</R> Beweise führen <R>Ros62, S. 111 ff.</R>, <R>MP17, S. 167 ff.</R> sowie <R>Nov62</R>.
-[^28]: vgl. <R>RN09, S. 839</R>
-[^29]: im $\R^n$ durch eine Hyperebene im Ursprung <R>Ert21, S.215</R>
-[^30]: ein hilfreicher Überblick über die geometrischen Zusammenhänge ist in "Einführung in die Neuroinformatik" von Prof. Dr. G. Sommer https://www.informatik.uni-kiel.de/inf/Sommer/doc/Downloads/Skripte/neuroskript.pdf, S. 33 ff. zu finden (abgerufen 27.08.2023)
-[^31]: Auch _Schrittweite_: vgl <R>GBC18, S. 93</R> und <R>RN09, S. 172</R>
-[^32]: "$\alpha$ ist eine kleine Konstante" <R>RN09, S. 172, Abs. 2</R>. Gleiche Stelle beleuchtet das Für und Wider kleiner und großer Werte von $\alpha$
 
 
 ### 2.2.3.3 Implementierung in Python
@@ -456,7 +415,7 @@ Epoche| $x_1$ | $x_2$ | $w_1$ | $w_2$ | $b$ | $net$ | $exp$ | $res$ | $err$ | $w
 
 **Abbildung 2.2.7:** Ein vollständiger Lauf über 5 Epochen für die AND-Funktion. Blaue gestrichelt ist die Trenngerade, auf der senkrecht der Gewichtsvektor (orange) steht. Grün umrandete Punkte sind Ziel des Trainingsschrittes und bedingen den "Änderungsvektor" (schwarz), der die Anpassung von $w$ im nächsten Schritt angibt. (Quelle: eigene)
 
-[^33]: vollständiger Quellcode unter https://github.com/ThorstenSuckow/pylabs (abgerufen 25.08.2023)
+
 
 
 ### 2.2.3.4 Die XOR-Funktion
@@ -493,15 +452,15 @@ Offensichtlich kann $w_1 + w_2 < \Theta$ nicht erfüllt werden, wenn gleichzeiti
 
 ## 2.2.4 Der KI-Winter
 
-In _Perceptrons - An introduction to Computational Geometry (1969)_ <R>MP17</R> behandeln _Minsky_ und _Papert_ u.a. das Verhalten des Perzeptrons im Fall nicht-separabler Daten[^35] (siehe **Abschnitt 2.2.3.4**), sowie das Problem bzgl. _recognition of connectedness_[^36], bei dem es um die Erkennung zusammenhängender geometrischer Figuren geht. Ihr Anliegen mit dem Buch ist es, die (mathematischen) Grenzen des Rosenblatt-Perzeptrons auf ein formales Gerüst zu stellen <R>MP17, S. 249, "What Perceptrons Can't Do"</R>. Ihre Ausführungen verstärken aber die ohnehin schon skeptische Haltung[^37] gegenüber der Fähigkeiten des Perzeptrons[^38] und künstlicher neuronaler Netze allgemein, was <R>AR88, S. 159</R> rückblickend auch auf Aussagen in der Einleitung des Buches[^39]  wie
+In _Perceptrons - An introduction to Computational Geometry (1969)_ <R>MP17</R> behandeln _Minsky_ und _Papert_ u.a. das Verhalten des Perzeptrons im Fall nicht-separabler Daten[^35] (siehe **Abschnitt 2.2.3.4**), sowie das Problem bzgl. _recognition of connectedness_[^36], bei dem es um die Erkennung zusammenhängender geometrischer Figuren geht. Ihr Anliegen mit dem Buch ist es, die (mathematischen) Grenzen des Rosenblatt-Perzeptrons auf ein formales Gerüst zu stellen <R>MP17, S. 249, "What Perceptrons Can't Do"</R>. Ihre Ausführungen verstärken aber die ohnehin schon skeptische Haltung[^37] gegenüber der Fähigkeiten des Perzeptrons[^38] und künstlicher neuronaler Netze allgemein, was <R>AR88, S. 159</R> rückblickend auch auf Aussagen in der Einleitung des Buches[^39] zurückführen wie
 
 > "hundreds of projects and experiments [bzgl. des Perzeptrons] were generally disappointing, and the explanations inconclusive. The machines usually work quite well on very simple problems but detoriate very rapidly as the tasks assigned to the get harder." <R>MP17, S. 19. Abs. 3</R>
 
-zurückführen. In
+Auch eine generelle Irritation und Enttäuschung über das Perzeptron-Modell meinen _Anderson und Rosenfeld_ zu erkennen:
 
 > "we [Minsky und Papert] consider it to be an important research problem to elucidate (or reject) our intuitive judgement that the extension is sterile." <R>MP17, S. 232 fest</R>
 
-meinen _Anderson und Rosenfeld_ eine generelle Irritation und Enttäuschung über das Perzeptron-Modell zu erkennen. Diesen "Pessimismus" betrachten _Minsky und Papert_ 1988 in Retrospektive <R>MP17. S xxi</R> und sind sich der Behauptung bewusst, ihr Buch hätte mit dem Aufzeigen der Limitierungen des Rosenblatt-Modells den Forscherdrang an ebendiesem gebremst.
+Diesen "Pessimismus" betrachten _Minsky und Papert_ im Jahr 1988 in Retrospektive <R>MP17. S xxi</R>. Sie sind sich der Behauptung bewusst, ihr Buch hätte mit dem Aufzeigen der Grenzen des Rosenblatt-Modells den Forscherdrang an maschinellem Lernen gebremst:
 
 > "One popular version is  that the publication of our book so discouraged research on learning in network machines that a promising line of research was interrupted." <R>MP17, S. xx</R>
 
@@ -511,11 +470,45 @@ _Russell und Norvig_ fassen zusammen, dass _Minsky und Papert_ in ihrem Buch bew
 
 Der Lighthill Report[^41] sollte dann 1973 eine Grundlage für die Entscheidung der britischen Regierung darstellen, das Budget für die Forschung an KI zu kürzen <R>RN09, S. 45</R>. Neuronale Netze wurden als Grundlage künstlicher Intelligenz zunächst verworfen <R>Ola96, S. 641, letzter Abs.</R>, und die Forschung daran ging zurück, bis sie Anfang/Mitte der 1980er Jahre wieder aufgenommen wurde: Diese Periode ist gemeinhin als "KI-Winter" bekannt <R>Jon08, S. 8 f.</R>
 
-
+[^1]: an der Dalhousie Universität: https://dal.ca (abgerufen 17.08.2023)
+[^2]: McGillUniversität, Montreal, Quebec (Kanada): https://www.mcgill.ca/neuro/about/donald-hebb-phd (abgerufen 16.08.2023)
+[^3]: zu der Zeit studierte er in Teilzeit an der McGill Universität: "as a part time graduate student" <R>Kle99, S. 1</R>. Seine Master-Arbeit schrieb er aufgrund einer Erkrankung im Bett <R>BM03, S. 1014</R>
+[^4]: es sind "three pivotal postulates" <R>Kle99, S.2 f.</R>
+[^5]: als hätte sein Buch eine Art Golgräberstimmung in der der Psychologie ausgelöst, schreibt <R>Kle99</R>: "It attracted many
+brilliant scientists into psychology, made McGill University a North American mecca for scientists interested in brain mechanisms of behaviour, led to many important discoveries, and steered contemporary psychology onto a more fruitful path." <R>Kle99, S.1</R>
+[^6]: sowie als Zitat: _a:_ "[...] any two cells or systems of cells that are repeatedly active at the same time will tend to become “associated,” so that activity in one facilitates activity in the other." <R>Heb88, S. 52, "Mode of perceptual Integration: The Cell-Assembly"</R> sowie _b:_ "A series of such events \[Aktivierung von "cell-assemblies"\] constitutes a “phase sequence”—the thought process. <R>Heb88, S. 48, "Mode of perceptual Integration: The Cell-Assembly</R>; die Aussage findet sich im Original <R>Heb49</R> bereits in "Introduction", S. xi-xix
+[^7]: Zumindest in <R>Heb49</R> findet sich kein solches Zitat. <R>KG14, S. 2</R> behauptet: "This mnemonic phrase was first introduced by Carla Shatz \[12\] in an article for the Scientific American aimed at lay public" und meint damit den Satz "In a sense, then, cells that fire together wire together." in <R>Sha92, S. 94</R>. https://en.wikipedia.org/wiki/Hebbian_theory#cite_ref-2 (abgerufen 16.08.2023) hingegen schreibt den Ursprung <R>LS92</R> zu: "neurons wire together if they fire together." <R>LS92, S.211</R>
+[^8]:  vgl. <R>BLS19, S.833, Abs. 2 f.</R>, außerdem <R>YLC+14</R> und <R>BL73</R>. <R>BPC18, S. 875, Exkurs 23.5</R> verweist auf <R>Cop78</R>
+[^9]: "\[Hebb\] laid the foundation for neoconnectionism which seeks to explain cognitive processes in terms of connections between assemblies of real or artificial neurons." <R>Kle99, S. 2</R>
+[^10]: Rosenblatt verweist hier auf <R>CF54</R>
+[^11]: In der Presse publikumswirksam, aber wenig vertrauenserweckend: "Frankenstein Monster Designed by Navy Robot That Thinks" <R>Ros62, S. v</R>. Vgl. dazu aktuelle Schlagzeilen der hiesigen Boulevardpresse zum Thema KI. bild.de titelt: "Übernehmen Computer die Weltherrschaft?" (https://www.bild.de/news/ausland/news-ausland/experten-warnen-ki-so-gefaehrlich-wie-pandemien-und-atomkrieg-84130180.bild.html, abgerufen 27.08.2023) als Reaktion auf "Statement on AI Risk" des _Center for AI Safety_, in dem zahlreiche Wissenschaftler zur Vorsicht beim Umgang, Einsatz und Forschung von KI mahnen. Im Wortlaut: "Mitigating the risk of extinction from AI should be a global priority alongside other societal-scale risks such as pandemics and nuclear war." (https://www.safe.ai/statement-on-ai-risk, abgerufen 27.08.2023)
+[^12]: vgl. auch <R>MP69, S. xix</R>: "Interest in connectionist networks revivied dramatically in 1962 with the publication of Frank Rosenblatt's book _Principles of Neurodynamics_, [...]" (Hervorhebung i.O.)
+[^13]: Seit 1972 Calspan Corporation <R>BB06</R>, https://calspan.com/ (abgerufen 18.08.2023)
+[^14]:  https://www.cornell.edu/, abgerufen 18.08.2023
+[^15]: 1971 durch einen Bootsunfall <R>Car71</R>
+[^16]: Die **S**-Units konnten sowohl hemmende als auch erregende Signale in das **A**-System einspeisen. Darüber hinaus war das **R**-System in der Lage, über Rückkoppelungen hemmende Signale an das **A**-System zu senden: Damit sollte verhindert werden, dass weitere **R**-Units aktiviert werden, die sich mit den bereits aktivierten Units gegenseitig ausschließen. <R>Ros57, S. 4, Punkt (3)</R>
+[^17]: Definitionen aller Zustände, Signale und Funktionen in <R>Ros62, S. 79 - 94</R>
+[^18]: vgl. auch "Ein _einfaches Perzeptron_ ist eine McCulloch-Pitts-Zelle, die ihre Eingabe gewichtet berechnet." in <R>Roj93, S. 57, "Definition 3.1", Hervorhebungen i.O.</R>
+[^19]: Renze, John; Uznanski, Dan; and Weisstein, Eric W. "Half-Plane." From MathWorld--A Wolfram Web Resource. https://mathworld.wolfram.com/Half-Plane.html (abgerufen 21.08.2023)
+[^20]: Wenn die Hyperebene selbst im Halbraum enthalten ist, spricht man von einem _abgeschlossenen Halbraum_. (https://de.wikipedia.org/wiki/Halbraum, abgerufen 22.08.2023)
+[^21]: &nbsp; <R>Roj93, S. 61, "Definition 3.2", Hervorhebungen i.O., Nummerierung eigene</R>
+[^22]: &nbsp; <R>Ert21, S. 212, "Definition 8.3", Hervorhebungen i.O.</R>
+[^23]: "supervised learning": überwachtes lernen; vgl. <R>RN09, S. 811, "18.2 Überwachtes Lernen"</R> sowie <R>Fau94, S. 15</R>. _Arbib et al._ weisen darauf hin, dass _überwachtes Lernen_ mit dem Perzeptron eingeführt wurde: "Supervised learning adjusts the weights in an attempt to respond to explicit error signals provided by a “teacher,” which
+may be external, or another network in the same “brain.” This model was introduced in the perceptron model, [...]."  <R>Arb02, S. 30, rechte Spalte unten</R>
+[^24]: Der **Fehler** ist hierbei die Differenz von $\text{erwartete Ausgabe}$ und $\text{tatsächliche Ausgabe}$.
+[^25]: vgl. hierzu auch _Rosenblatt_ : "[ein Perzeptron hat] a tendency to develop 'cell assemblies' (in Hebb's sense), and these cell-assemblies tend to rival one another for dominance at all times. <R>Ros62, S. 464, Abs. 2, Anführungszeichen doppelt i.O.</R>
+[^26]: "iterative training processes converge if the weight updates reach equilibrium (stop changing)" <R>Fau94, S. 425, "Convergence"</R>
+[^27]: Das Konvergenz-Theorem besagt: "if a linear separation exists, the perceptron error-correction scheme will find it." <R>Arb03, S. 20, "Network Complexity"</R> Beweise führen <R>Ros62, S. 111 ff.</R>, <R>MP17, S. 167 ff.</R> sowie <R>Nov62</R>.
+[^28]: vgl. <R>RN09, S. 839</R>
+[^29]: im $\R^n$ durch eine Hyperebene im Ursprung <R>Ert21, S.215</R>
+[^30]: ein hilfreicher Überblick über die geometrischen Zusammenhänge ist in "Einführung in die Neuroinformatik" von Prof. Dr. G. Sommer https://www.informatik.uni-kiel.de/inf/Sommer/doc/Downloads/Skripte/neuroskript.pdf, S. 33 ff. zu finden (abgerufen 27.08.2023)
+[^31]: Auch _Schrittweite_: vgl <R>GBC18, S. 93</R> und <R>RN09, S. 172</R>
+[^32]: "$\alpha$ ist eine kleine Konstante" <R>RN09, S. 172, Abs. 2</R>. Gleiche Stelle beleuchtet das Für und Wider kleiner und großer Werte von $\alpha$
+[^33]: vollständiger Quellcode unter https://github.com/ThorstenSuckow/pylabs (abgerufen 25.08.2023)
 [^35]: in <R>MP17, S. 181, "11.8 The nonseparable case" ff.</R>
-[^36]: <R>MP17, S. 12, "Theorem 0.8"</R>,  _recognition of connectedness_ <R>MP17, S. 249, letzter Abs. ff.</R>. In dem Epilog, der 19 Jahre später in einer Neuausgabe von _Minsky und Papert_ veröffentlicht wird, machen sie deutlich, dass sie damit nicht nachweisen wollten, dass ein Perzeptron nicht in der Lage zu der Erkennung zusammenhängender geometrischer Figuren sei, sondern dass die Komplexität von verschiedenen Aufgaben Anforderungen an ein Perzeptron stellt, die zu der damaligen Zeit (Ende 1950er / Anfang 1960er) schwierig umzusetzen gewesen sind <R>MP17, S. 250, Abs. 2</R> &nbsp;
+[^36]: &nbsp; <R>MP17, S. 12, "Theorem 0.8"</R>,  _recognition of connectedness_ <R>MP17, S. 249, letzter Abs. ff.</R>. In dem Epilog, der 19 Jahre später in einer Neuausgabe von _Minsky und Papert_ veröffentlicht wird, machen sie deutlich, dass sie damit nicht nachweisen wollten, dass ein Perzeptron nicht in der Lage zu der Erkennung zusammenhängender geometrischer Figuren sei, sondern dass die Komplexität von verschiedenen Aufgaben Anforderungen an ein Perzeptron stellt, die zu der damaligen Zeit (Ende 1950er / Anfang 1960er) schwierig umzusetzen gewesen sind <R>MP17, S. 250, Abs. 2</R> &nbsp;
 [^37]: "Here was a machine that could do pattern recognition in a humanlike way; it could recognize all kinds of things. Almost everyone at MIT was very skeptical" <R>Cow98, S. 99</R>
 [^38]: auch wegen schlechter Skalierbarkeit des Modells in der Praxis <R>AR88, S. 159, Abs. 2</R>
-[^39]: <R>MP17,S. 1-20</R>
+[^39]: &nbsp; <R>MP17,S. 1-20</R>
 [^40]: vgl. hierzu <R>MP17, S. xxi, Abs. 1</R>
 [^41]: https://www.chilton-computing.org.uk/inf/literature/reports/lighthill_report/p001.htm, abgerufen 28.08.2023
