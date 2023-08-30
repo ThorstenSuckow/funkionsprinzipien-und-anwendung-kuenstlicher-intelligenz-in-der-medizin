@@ -240,6 +240,12 @@ Quotation style: IEEE
 
 - **[Str01]** B. B. Strickland, Hrsg., The Gale encyclopedia of psychology, 2nd ed. Detroit, MI: Gale Group, 2001.
 
+- **[Dor90]** R. Salomon, „Beschleunigtes Lernen durch adaptive Regelung der Lernrate bei back-propagation in feed-forward Netzen“, in _Konnektionismus in Artificial Intelligence und Kognitionsforschung_, G. Dorffner, Hrsg., Berlin, Heidelberg: Springer Berlin Heidelberg, 1990, S. 173–178.
+
+### 3 Neuronale Netze 
+
+
+
 
 
 
