@@ -10,6 +10,7 @@ import {Embed, Plot} from "../../../../src/components/Embed.js";
 #### 0 Todos
  - Heaviside (Treppenfunktion) mit Bezug auf 2.1.3.1 Aktivierungs- und Eingabefunktion, Gl. 2.1.3
  - Normalenvektor steht orthogonal auf der Gerade
+ - Hebb LErnregel, siehe [Son2, S. 47]
 
 ## 2.2.1 Cells that fire together, wire together: Synaptische Plastizität
 
@@ -245,7 +246,7 @@ Mit $b$ als Teil der Eingabe folgt auch dessen Gewichtung $bw_{n+1} = w_{n+1}$. 
 
 
 #### Lernrate
-Bevor wir uns eine Implementierung in Python anschauen, wollen wir noch kurz die **Lernrate** $\alpha$ erklären. Wie wir in diesem Abschnitt erfahren haben, berechnet die Lernregel die Gewichte auf Basis des _Fehlers_, also der Differenz von $\text{erwartete Ausgabe}$ und $\text{tatsächliche Ausgabe}$: Ist der Fehler $-1$, werden die Gewichte verringert, ist der Fehler 1, werden die Gewichte erhöht. Die Lernrate $\alpha$ ist der Koeffizient für die Gewichtsanpassung [^31]. Üblicherweise liegt $\alpha$ zwischen $0$ und $1$[^32] <R>Fau94, S. 61</R>.
+Bevor wir uns eine Implementierung in Python anschauen, wollen wir noch kurz die **Lernrate** $\eta$ (in der Literatur auch $\alpha$) erklären. Wie wir in diesem Abschnitt erfahren haben, berechnet die Lernregel die Gewichte auf Basis des _Fehlers_, also der Differenz von $\text{erwartete Ausgabe}$ und $\text{tatsächliche Ausgabe}$: Ist der Fehler $-1$, werden die Gewichte verringert, ist der Fehler 1, werden die Gewichte erhöht. Die Lernrate $\eta$ ist der Koeffizient für die Gewichtsanpassung [^31]. Üblicherweise liegt $\eta$ zwischen $0$ und $1$[^32] <R>Fau94, S. 61</R>.
 
 
 
@@ -305,7 +306,7 @@ Der Algorithmus nutzt folgende Daten und Funktionen zur Berechnung:
 
 <EQ id ="2-2-13">
 
-$\alpha := 1 \space \space (\text{Lernrate})$
+$\eta := 1 \space \space (\text{Lernrate})$
 
 $b := 0 \space \space (\text{Bias})$
 
@@ -332,9 +333,9 @@ $res =  \begin{cases}
 
 $err = exp - res  \space \space (\text{Fehler})$
 
-$w^u = w + (x_1, x_2) * \alpha * err  \space \space (\text{aktualisierter Gewichtsvektor})$
+$w^u = w + (x_1, x_2) * \eta * err  \space \space (\text{aktualisierter Gewichtsvektor})$
 
-$b^u = b + \alpha * err \space \space (\text{aktualisierter Bias})$
+$b^u = b + \eta * err \space \space (\text{aktualisierter Bias})$
 
 </EQ>
 
@@ -503,7 +504,7 @@ may be external, or another network in the same “brain.” This model was intr
 [^29]: im $\R^n$ durch eine Hyperebene im Ursprung <R>Ert21, S.215</R>
 [^30]: ein hilfreicher Überblick über die geometrischen Zusammenhänge ist in "Einführung in die Neuroinformatik" von Prof. Dr. G. Sommer https://www.informatik.uni-kiel.de/inf/Sommer/doc/Downloads/Skripte/neuroskript.pdf, S. 33 ff. zu finden (abgerufen 27.08.2023)
 [^31]: Auch _Schrittweite_: vgl <R>GBC18, S. 93</R> und <R>RN09, S. 172</R>
-[^32]: "$\alpha$ ist eine kleine Konstante" <R>RN09, S. 172, Abs. 2</R>. Gleiche Stelle beleuchtet das Für und Wider kleiner und großer Werte von $\alpha$
+[^32]: "$\alpha$ [$\eta$] ist eine kleine Konstante" <R>RN09, S. 172, Abs. 2</R>. Gleiche Stelle beleuchtet das Für und Wider kleiner und großer Werte von $\eta$; _Salomon_ weist in <R>Dor90, S. 173</R> darauf hin, dass eine geeignete Lernrate auch von der Aufgabenstellung abhängt.
 [^33]: vollständiger Quellcode unter https://github.com/ThorstenSuckow/pylabs (abgerufen 25.08.2023)
 [^35]: in <R>MP17, S. 181, "11.8 The nonseparable case" ff.</R>
 [^36]: &nbsp; <R>MP17, S. 12, "Theorem 0.8"</R>,  _recognition of connectedness_ <R>MP17, S. 249, letzter Abs. ff.</R>. In dem Epilog, der 19 Jahre später in einer Neuausgabe von _Minsky und Papert_ veröffentlicht wird, machen sie deutlich, dass sie damit nicht nachweisen wollten, dass ein Perzeptron nicht in der Lage zu der Erkennung zusammenhängender geometrischer Figuren sei, sondern dass die Komplexität von verschiedenen Aufgaben Anforderungen an ein Perzeptron stellt, die zu der damaligen Zeit (Ende 1950er / Anfang 1960er) schwierig umzusetzen gewesen sind <R>MP17, S. 250, Abs. 2</R> &nbsp;
