@@ -4,7 +4,32 @@ title: "3. Neuronale Netze in der Medizin"
 description: tbd
 ---
 
-## 3.1 Das Ende des Ki Winters
+import {R, F, S, EQ, Def, Tbl, initEq} from "../../../src/components/Refs.js";
+import {Embed, Plot} from "../../../src/components/Embed.js";
+
+
+## 3.1 Das Ende des KI Winters
+
+Der Begriff "KI Winter" wird in der Literatur mit unterschiedlichen Perioden während der Forschung und Förderung von KI in Zusammenhang gebracht. In dem Kontext des im vorherigen Kapitel erwähnten Lighthill Reports bezieht sich der Begriff einerseits auf die Periode nach 1973[^1] <R>Jon08, S. 8 f.</R>; _Russell und Norvig_ beziehen sich hingegen auf einen Zeitraum um/ nach 1988, in dem nach einer Phase von Investitionen in Milliardenhöhe in den Forschungszweig "viele Unternehmen verschwanden, weil sie ihre außergewöhnlichen Versprechungen nicht halten konnten." <R>RN09, S. 48, 1.3.6 letzter Abs.</R>[^2].
+
+In den 80er Jahren sahen die großen Industrienationen in der Erforschung von KI einen Wettbewerbsvorteil, nachdem die Technologie durch den Einsatz von Expertensystemen[^3] Einzug in die Wirtschaft gefunden hatte: So ermöglichte das Expertensystem[^4] R1/XCON bei dem einsetzenden Unternehmen DEC (Digital Equipment Corporation) Einsparungen in Millionenhöhe[^5] <R>RN, S. 48</R>: Die Domäne von R1 war die regelbasierte Konfiguration von VAX-11/780 Systemen nach Kundenanforderungen[^6]. Japan kündigte 1981 das 5th Generation Projekt <R>Gar19</R> an, einen Zehnjahresplan für den Aufbau "intelligenter Computer" <R>RN09, S. 48, Abs. 2</R>[^7], und in Großbritannien sorgte der Alvey-Report[^8] für eine Wiederaufnahme finanzieller Unterstützung, die durch den Lighthill-Report aufgehoben worden war <R>RN09, S. 48, Abs. 2</R>[^9].
+
+Auch der technologische Fortschritt begünstigte das Wiederaufleben des Interesses an neuronalen Netzen, wie _Olazaran_ in  in Bezug auf die Modellierung paralleler Prozesse mit Hilfe von neuronalen Netzen anmerkt: "[...] increases in computer power and speed due to parallelism will undoubtedly favour neural net research." <R>Ola96, S. 644</R>. Mit den in den 80er Jahren verfügbaren Supercomputern und Parallelrechner erhält auch der Konnektionismus Auftrieb, der **neuronale Netze** als Grundlage hat <R>Dor91, S. 15</R>, und mit dem sich Modelle wieder mehr an den biologischen Vorbildern orientieren sollten (vgl. <R>RM87, S. 43, Abs. 3</R>).
+
+
+[^1]: sowie "Lighthill's report provoked a massive loss of confidence in AI by the academic establishment in the UK (and to a lesser extent in the US). It persisted for a decade - the so-called 'AI Winter'." (aus: Jim Howe, ARTIFICIAL INTELLIGENCE AT EDINBURGH UNIVERSITY : A PERSPECTIVE, https://www.inf.ed.ac.uk/about/AIhistory.html, abgerufen 31.08.2023).
+[^2]: auf gleichen Zeitraum bezieht sich <R>Mcc04, S. 432 ff.</R>; vgl. hierzu auch <R>Gar19, S. 656</R>: "Dozens of expert systems companies and AI-focused hardware manufacturers failed _en masse_ as hype turned to disillusionment." (Hervorhebungen i.O.)
+[^3]: 1990 in <R>FS90, S. 14, "1.4 Expertensysteme"</R> als "kommerziell erfolgreichste Teildisziplin der Artificial intelligence" bezeichnet, und ebenda beschrieben als: "Ziel der Expertensysteme ist es, dem Anwender Wissen und Fertigkeiten zur Verfügung zu stellen, über die normalerweise nur speziell ausgebildete oder erfahrene Personen (Experten) verfügen."
+[^4]: "erste erfolgreiche kommerzielle Expertensystem" <R>RN09, S. 48, Abs. 1</R>
+[^5]: Die Domäne von R1 war die Konfiguration von DECs VAX-11/780 basierend auf Kundenanforderungen <R>Mcd80</R>
+[^6]: siehe hierzu insb. <R>Mcd80</R> sowie <R>Hor90, S. 63, Punkt 2</R>
+[^7]: Zusammenfassend war das Ziel des 5th Generation Computer Systems (FGCS)-Projekt: "Its ultimate goal is to develop integrated systems, both hardware and software, suitable for the major computer application in the nextdecade, identified by the Japanese as 'knowledge information processing'." in <R>Sha83, S. 637, Anführungszeichen i.O. doppelt</R>
+[^8]: https://www.chilton-computing.org.uk/inf/literature/reports/alvey_report/overview.htm - empfohlene Massnahmen: https://www.chilton-computing.org.uk/inf/literature/reports/alvey_report/p008.htm (beide abgerufen 31.08.2023)
+[^9]: In Deutschland wird 1988 die DFKI GmbH (Deutsches Forschungszentrum für Künstliche Intelligenz) gegründet, eine "wirtschaftsnahe Forschungseinrichtung" auf "dem Gebiet innovativer Softwaretechnologien auf der Basis von Methoden der Künstlichen Intelligenz" (https://www.dfki.de/fileadmin/user_upload/DFKI/Medien/Ueber_uns/DFKI_im_UEberblick/Unternehmensprofil/20210120_DFKI_Unternehmensprofil_DE.pdf, abgerufen 31.08.2023)
+
+Bryson und Ho
+Rumelhuart 1969
+
 
 ### 3.2 Das XOR-Problem gelöst
 
