@@ -242,9 +242,23 @@ Quotation style: IEEE
 
 - **[Dor90]** R. Salomon, „Beschleunigtes Lernen durch adaptive Regelung der Lernrate bei back-propagation in feed-forward Netzen“, in _Konnektionismus in Artificial Intelligence und Kognitionsforschung_, G. Dorffner, Hrsg., Berlin, Heidelberg: Springer Berlin Heidelberg, 1990, S. 173–178.
 
-### 3 Neuronale Netze 
+### 3 Neuronale Netz
+
+ - **[FS90]** G. Friedrich und M. Stumptner, „Einführung“, in _Expertensysteme_, G. Gottlob, T. Frühwirth, und W. Horn, Hrsg., Vienna: Springer Vienna, 1990, S. 1–19. https://doi.org/10.1007/978-3-7091-9094-4_1.
 
 
+ - **[Hor90]** W. Horn, „Anwendungen von Expertensystemen“, in _Expertensysteme_, G. Gottlob, T. Frühwirth, und W. Horn, Hrsg., Vienna: Springer Vienna, 1990, S. 61–72. https://doi.org/10.1007/978-3-7091-9094-4_3.
+
+
+ - **[Mcd80]**- J. McDermott, „RI: an Expert in the Computer Systems Domain’“, 980
+
+
+ - **[Sha83]** E. Y. Shapiro, „The Fifth Generation Project — a Trip Report“, Commun. ACM, Bd. 26, Nr. 9, S. 637–641, Sep. 1983, https://doi.org/10.1145/358172.358179.
+
+
+ - **[Mcc04]** P. McCorduck, Machines Who Think: A Personal Inquiry into the History and Prospects of Artificial Intelligence. AK Peters Ltd, 2004.
+
+- **[Gar19]** C. Garvey, „Artificial Intelligence and Japan’s Fifth Generation: The Information Society, Neoliberalism, and Alternative Modernities“, Pacific Historical Review, Bd. 88, Nr. 4, S. 619–658, Nov. 2019, https://doi.org/10.1525/phr.2019.88.4.619.
 
 
 
