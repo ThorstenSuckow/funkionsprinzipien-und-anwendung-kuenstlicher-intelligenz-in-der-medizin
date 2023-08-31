@@ -46,3 +46,15 @@ https://de.wikipedia.org/wiki/Theoretische_Biologie, abgerufen 09.08.2023
 
 - https%3A%2F%2Fwww.chilton-computing.org.uk%2Finf%2Fliterature%2Freports%2Flighthill_report%2Fp001.htm
   https://www.chilton-computing.org.uk/inf/literature/reports/lighthill_report/p001.htm, abgerufen 28.08.2023
+
+- https%3A%2F%2Fwww.inf.ed.ac.uk%2Fabout%2FAIhistory.html
+  https://www.inf.ed.ac.uk/about/AIhistory.html, abgerufen 31.08.2023
+
+- https%3A%2F%2Fwww.chilton-computing.org.uk%2Finf%2Fliterature%2Freports%2Falvey_report%2Foverview.htm
+  https://www.chilton-computing.org.uk/inf/literature/reports/alvey_report/overview.htm, abgerufen 31.08.2023
+
+- https%3A%2F%2Fwww.chilton-computing.org.uk%2Finf%2Fliterature%2Freports%2Falvey_report%2Fp008.htm,
+  https://www.chilton-computing.org.uk/inf/literature/reports/alvey_report/p008.htm (abgerufen 31.08.2023)
+
+ - https%3A%2F%2Fwww.dfki.de%2FUnternehmensprofil%2F20210120_DFKI_Unternehmensprofil_DE.pdf.png
+  https://www.dfki.de/fileadmin/user_upload/DFKI/Medien/Ueber_uns/DFKI_im_UEberblick/Unternehmensprofil/20210120_DFKI_Unternehmensprofil_DE.pdf, abgerufen 31.08.2023
