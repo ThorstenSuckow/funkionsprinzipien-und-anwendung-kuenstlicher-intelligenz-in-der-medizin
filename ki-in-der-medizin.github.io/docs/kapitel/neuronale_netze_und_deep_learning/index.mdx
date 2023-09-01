@@ -14,12 +14,12 @@ Der Begriff "KI Winter" wird in der Literatur mit unterschiedlichen Perioden wä
 
 In den 80er Jahren sahen die großen Industrienationen in der Erforschung von KI einen Wettbewerbsvorteil, nachdem die Technologie durch den Einsatz von Expertensystemen[^3] Einzug in die Wirtschaft gefunden hatte: So ermöglichte das Expertensystem[^4] R1/XCON bei dem einsetzenden Unternehmen DEC (Digital Equipment Corporation) Einsparungen in Millionenhöhe[^5] <R>RN, S. 48</R>: Die Domäne von R1 war die regelbasierte Konfiguration von VAX-11/780 Systemen nach Kundenanforderungen[^6]. Japan kündigte 1981 das 5th Generation Projekt <R>Gar19</R> an, einen Zehnjahresplan für den Aufbau "intelligenter Computer" <R>RN09, S. 48, Abs. 2</R>[^7], und in Großbritannien sorgte der Alvey-Report[^8] für eine Wiederaufnahme finanzieller Unterstützung, die durch den Lighthill-Report aufgehoben worden war <R>RN09, S. 48, Abs. 2</R>[^9].
 
-Auch der technologische Fortschritt begünstigte das Wiederaufleben des Interesses an neuronalen Netzen, wie _Olazaran_ in  in Bezug auf die Modellierung paralleler Prozesse mit Hilfe von neuronalen Netzen anmerkt: "[...] increases in computer power and speed due to parallelism will undoubtedly favour neural net research." <R>Ola96, S. 644</R>. Mit den in den 80er Jahren verfügbaren Supercomputern und Parallelrechner erhält auch der Konnektionismus Auftrieb, der **neuronale Netze** als Grundlage hat <R>Dor91, S. 15</R>, und mit dem sich Modelle wieder mehr an den biologischen Vorbildern orientieren sollten (vgl. <R>RM87, S. 43, Abs. 3</R>).
+Auch der technologische Fortschritt begünstigte das Wiederaufleben des Interesses an neuronalen Netzen, wie _Olazaran_ in  in Bezug auf die Modellierung paralleler Prozesse mit Hilfe von neuronalen Netzen anmerkt: "[...] increases in computer power and speed due to parallelism will undoubtedly favour neural net research.", denn mit den in den 80er Jahren verfügbaren Supercomputern und Parallelrechner erhält auch der Konnektionismus Auftrieb, der **neuronale Netze** als Grundlage hat <R>Dor91, S. 15</R>, und mit dem sich Modelle wieder mehr an den biologischen Vorbildern orientieren sollten (vgl. <R>RM87, S. 43, Abs. 3</R>).
 
 
-[^1]: sowie "Lighthill's report provoked a massive loss of confidence in AI by the academic establishment in the UK (and to a lesser extent in the US). It persisted for a decade - the so-called 'AI Winter'." (aus: Jim Howe, ARTIFICIAL INTELLIGENCE AT EDINBURGH UNIVERSITY : A PERSPECTIVE, https://www.inf.ed.ac.uk/about/AIhistory.html, abgerufen 31.08.2023).
+[^1]: sowie "Lighthill's report provoked a massive loss of confidence in AI by the academic establishment in the UK (and to a lesser extent in the US). It persisted for a decade - the so-called 'AI Winter'." (aus: Jim Howe, Artificial intelligence at edinburgh university: A perspective, https://www.inf.ed.ac.uk/about/AIhistory.html, abgerufen 31.08.2023).
 [^2]: auf gleichen Zeitraum bezieht sich <R>Mcc04, S. 432 ff.</R>; vgl. hierzu auch <R>Gar19, S. 656</R>: "Dozens of expert systems companies and AI-focused hardware manufacturers failed _en masse_ as hype turned to disillusionment." (Hervorhebungen i.O.)
-[^3]: 1990 in <R>FS90, S. 14, "1.4 Expertensysteme"</R> als "kommerziell erfolgreichste Teildisziplin der Artificial intelligence" bezeichnet, und ebenda beschrieben als: "Ziel der Expertensysteme ist es, dem Anwender Wissen und Fertigkeiten zur Verfügung zu stellen, über die normalerweise nur speziell ausgebildete oder erfahrene Personen (Experten) verfügen."
+[^3]: 1990 in <R>FS90, S. 14, "1.4 Expertensysteme"</R> als "kommerziell erfolgreichste Teildisziplin der Artificial intelligence" bezeichnet, und ebenda beschrieben als: "Ziel der Expertensysteme ist es, dem Anwender Wissen und Fertigkeiten zur Verfügung zu stellen, über die normalerweise nur speziell ausgebildete oder erfahrene Personen (Experten) verfügen." Im groben besteht ein Expertensystem aus einer domänenspezifischen _Wissensbasis_, auf der ein _Inferenzmotor_ zur Findung von Antworten und Schlussfolgerungen operiert. <R>RN09, S. 737</R> erklärt, dass Expertensysteme "optimale Entscheidungen empfehlen und dabei die Prioritäten des Benutzers sowie die verfügbaren Evidenzen berücksichtigen".
 [^4]: "erste erfolgreiche kommerzielle Expertensystem" <R>RN09, S. 48, Abs. 1</R>
 [^5]: Die Domäne von R1 war die Konfiguration von DECs VAX-11/780 basierend auf Kundenanforderungen <R>Mcd80</R>
 [^6]: siehe hierzu insb. <R>Mcd80</R> sowie <R>Hor90, S. 63, Punkt 2</R>
@@ -27,9 +27,27 @@ Auch der technologische Fortschritt begünstigte das Wiederaufleben des Interess
 [^8]: https://www.chilton-computing.org.uk/inf/literature/reports/alvey_report/overview.htm - empfohlene Massnahmen: https://www.chilton-computing.org.uk/inf/literature/reports/alvey_report/p008.htm (beide abgerufen 31.08.2023)
 [^9]: In Deutschland wird 1988 die DFKI GmbH (Deutsches Forschungszentrum für Künstliche Intelligenz) gegründet, eine "wirtschaftsnahe Forschungseinrichtung" auf "dem Gebiet innovativer Softwaretechnologien auf der Basis von Methoden der Künstlichen Intelligenz" (https://www.dfki.de/fileadmin/user_upload/DFKI/Medien/Ueber_uns/DFKI_im_UEberblick/Unternehmensprofil/20210120_DFKI_Unternehmensprofil_DE.pdf, abgerufen 31.08.2023)
 
-Bryson und Ho
-Rumelhuart 1969
+### 3.2 Mehrschichtige neuronale Netze
 
+Bislang haben wir überwiegend künstliche Neuronen betrachtet, bei denen die Eingabe direkt mit der Ausgabe verbunden ist. Allerdings haben wir bereits für komplexe Boolesche Funktionen in Kapitel 2.1.3.3 gezeigt, dass ein Verbund von mehreren MCP-Zellen in der Lage ist, auch Funktionen für nicht linear separable Daten zu modellieren. Hierzu hatten wir das MCP-Netz in zwei Schichten aufgeteilt, in denen die erste Schicht $X_1 := (\neg A \lor B)$ sowie $X_2 := (\neg B \lor A)$ und die zweite Schicht $X_1 \lor X_2$ formt, was nichts anderes als die disjunktive Normalform von XOR ist (**_2-1-6_**).
+
+Bei dem Rosenblatt-Perzeptron, das alleine nicht in der Lage ist, XOR zu erlernen, handelt es sich um ein **Einschichtiges neuronales Feedforward-Netz**. Das bedeutet, dass die Eingabe- direkt mit der Ausgebeschicht verbunden ist und die Informationen in eine Richtung fliessen, nämlich von den Eingängen zu den Ausgängen <R>RN09, S. 848 ff.</R>.
+Allerdings ist auch ein **mehrschichtiges Perzeptron** (MLP) <R>GBC18, S. 6</R> in der Lage, XOR darzustellen wie <R>Mur91, S. 185</R> zeigt. Ein MLP repräsentiert ein tiefes Feedforward-Netz, in dem die Eingabeschicht (**Input Layer**) und die Ausgabeschicht (**Output Layer**) über weitere Schichten von Neuronen (**hidden layer**) verbunden ist, die jeweils  Eingabefunktion und Aktivierungsfunktion implementieren und ihre Werte an die nächsten Zellen weiterleiten, bis die jeweils gewichtete Summe bei der Ausgabeschicht ankommt.
+
+**Abb. 3.1**: Skizze eines mehrschichtigen neuronalen Feedforward-Netzwerks.
+
+_Murtagh_ zeigt auch ein Netz, das mittels **Backpropagation**[^10] in der Lage ist, XOR zu repräsentieren. Hierbei bezieht er sich auf _Rumelhart, Hinton und Williams_ die in <R>RHW86</R> eine Methode[^11] vorstellen, um berechnete Werte _rückwärts_ in das Netz einzuspeisen. Hierbei wird für die Netzausgabe ("forward pass") ein Approximationsfehler berechnet, der als Basis für die Gewichtsänderungen beim rückwärtigen Lauf ("backward pass") bis zur ersten verborgenen Schicht genutzt wird. Der Vorgang (forward pass, backward pass, forward pass...) wird so lange für alle Trainingsbeispiele wiederholt, bis die Gewichte sich nicht mehr ändern, oder eine andere Schranke (Epochen, Zeit) erreicht ist <R>Ert21, S. 315</R>[^12]. In <R>RM87, S. 318 ff.</R> zeigen _Rumelhart et al_ die Architektur eines mehrschichtigen neuronalen Netzes, das XOR über Back-Propagation repräsentiert[^13].
+
+Als Aktivierungsfunktion nutzen die Zellen hier die [FERMI/SIGMOID] Funktion, die nicht-linear ist -
+
+**Abb. 3.2** Ein Plot der Sigmoid-Funktion
+
+[HINWEIS UNTERSCHIED LINEAR APPROXIMATIV, GRADIENTENVERFAHREN]
+
+[^10]: "das meist genutzte neuronale Modell" <R>Ert21, S. 313, "9.5 Der Backpropagation Algorithmus"</R>
+[^11]: "The ability to create useful new features distinguishes back-propagation from earlier, simpler methods such as the perceptron-convergence procedure." <R>RHW86, S. 533</R>
+[^12]: ausführlicher Algorithmus in <R>RN09, S. 853, Abbildung 18.24</R>
+[^13]: In <R>RHW86, S. 536</R> grenzen sie ihr Modell vom biologischen Lernen ab: "The learning procedure, in its current form, is not a plausible model of learning in brains".
 
 ### 3.2 Das XOR-Problem gelöst
 
