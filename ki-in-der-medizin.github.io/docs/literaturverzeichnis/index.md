@@ -208,6 +208,8 @@ Quotation style: IEEE
 
 #### Hebb
 
+
+
 - **[Cop78]** M. Constantine-Paton und M. I. Law, „Eye-Specific Termination Bands in Tecta of Three-Eyed Frogs“, Science, Bd. 202, Nr. 4368, S. 639–641, 1978, https://doi.org/10.1126/science.309179.
 
 
@@ -243,6 +245,12 @@ Quotation style: IEEE
 - **[Dor90]** R. Salomon, „Beschleunigtes Lernen durch adaptive Regelung der Lernrate bei back-propagation in feed-forward Netzen“, in _Konnektionismus in Artificial Intelligence und Kognitionsforschung_, G. Dorffner, Hrsg., Berlin, Heidelberg: Springer Berlin Heidelberg, 1990, S. 173–178.
 
 ### 3 Neuronale Netz
+
+ - **[RHW86]** D. E. Rumelhart, G. E. Hinton, und R. J. Williams, „Learning representations by back-propagating errors“, _Nature_, Bd. 323, Nr. 6088, S. 533–536, Okt. 1986, https://doi.org/10.1038/323533a0.
+
+
+ - **[Mur91]** F. Murtagh, „Multilayer perceptrons for classification and regression“, _Neurocomputing_, Bd. 2, Nr. 5, S. 183–197, 1991, doi: https://doi.org/10.1016/0925-2312(91)90023-5.
+
 
  - **[FS90]** G. Friedrich und M. Stumptner, „Einführung“, in _Expertensysteme_, G. Gottlob, T. Frühwirth, und W. Horn, Hrsg., Vienna: Springer Vienna, 1990, S. 1–19. https://doi.org/10.1007/978-3-7091-9094-4_1.
 
