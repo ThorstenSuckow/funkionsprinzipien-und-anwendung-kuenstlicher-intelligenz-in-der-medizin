@@ -246,7 +246,14 @@ Quotation style: IEEE
 
 ### 3 Neuronale Netz
 
- - **[RHW86]** D. E. Rumelhart, G. E. Hinton, und R. J. Williams, „Learning representations by back-propagating errors“, _Nature_, Bd. 323, Nr. 6088, S. 533–536, Okt. 1986, https://doi.org/10.1038/323533a0.
+ - **[Hop82]** J. Hopfield, „Neural Networks and Physical Systems with Emergent Collective Computational Abilities“, _Proceedings of the National Academy of Sciences of the United States of America_, Bd. 79, S. 2554–8, Mai 1982, doi: 10.1073/pnas.79.8.2554.
+
+  - **[Son22]** D. Sonnet, „Neuronale Netze“, in Neuronale Netze kompakt: Vom Perceptron zum Deep Learning, Wiesbaden: Springer Fachmedien Wiesbaden, 2022, S. 17–70. https://doi.org/10.1007/978-3-658-29081-8_2.
+
+- **[RHW86a]** D. E. Rumelhart, G. E. Hinton, und R. J. Williams, „Learning Internal Representations by Error Propagation“, in _Parallel Distributed Processing: Explorations in the Microstructure of Cognition, Vol. 1: Foundations, Cambridge, MA, USA: MIT Press, 1986, S. 318–362.
+
+
+ - **[RHW86b]** D. E. Rumelhart, G. E. Hinton, und R. J. Williams, „Learning representations by back-propagating errors“, _Nature_, Bd. 323, Nr. 6088, S. 533–536, Okt. 1986, https://doi.org/10.1038/323533a0.
 
 
  - **[Mur91]** F. Murtagh, „Multilayer perceptrons for classification and regression“, _Neurocomputing_, Bd. 2, Nr. 5, S. 183–197, 1991, doi: https://doi.org/10.1016/0925-2312(91)90023-5.
