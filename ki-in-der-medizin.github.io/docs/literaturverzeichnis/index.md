@@ -11,6 +11,8 @@ Quotation style: IEEE
 
 #### Zitierte Literatur
 
+ 
+
  - **[Ert21]** W. Ertel, „Maschinelles Lernen und Data Mining“, in _Grundkurs Künstliche Intelligenz: Eine praxisorientierte Einführung_, Wiesbaden: Springer Fachmedien Wiesbaden, 2021, S. 201–283. https://doi.org/10.1007/978-3-658-32075-1_8.
 
 
@@ -245,6 +247,11 @@ Quotation style: IEEE
 - **[Dor90]** R. Salomon, „Beschleunigtes Lernen durch adaptive Regelung der Lernrate bei back-propagation in feed-forward Netzen“, in _Konnektionismus in Artificial Intelligence und Kognitionsforschung_, G. Dorffner, Hrsg., Berlin, Heidelberg: Springer Berlin Heidelberg, 1990, S. 173–178.
 
 ### 3 Neuronale Netz
+
+ - **[Lan09]** A. Lansner, „Associative memory models: from the cell-assembly theory to biophysically detailed cortex simulations“, Trends in Neurosciences, Bd. 32, Nr. 3, S. 178–186, 2009, doi: https://doi.org/10.1016/j.tins.2008.12.002.
+
+
+ - **[Die17]** Diestel, R. (2017). Graphentheorie. Springer-Verlag, Heidelberg. ISBN: 9783961340040
 
  - **[Hop82]** J. Hopfield, „Neural Networks and Physical Systems with Emergent Collective Computational Abilities“, _Proceedings of the National Academy of Sciences of the United States of America_, Bd. 79, S. 2554–8, Mai 1982, doi: 10.1073/pnas.79.8.2554.
 
