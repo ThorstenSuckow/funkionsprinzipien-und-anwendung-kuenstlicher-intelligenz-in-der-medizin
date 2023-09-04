@@ -64,3 +64,6 @@ https://de.wikipedia.org/wiki/Theoretische_Biologie, abgerufen 09.08.2023
 
  - https%3A%2F%2Ftechmonitor.ai%2Ftechnology%2Fatt_creates_parallel_neural_net_chip_to_solve_routing_problems
    https://techmonitor.ai/technology/att_creates_parallel_neural_net_chip_to_solve_routing_problems, abgerufen 03.09.2023
+
+ - https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DQil4kmvm2Sw
+   https://www.youtube.com/watch?v=Qil4kmvm2Sw, abgerufen 04.09.2023
