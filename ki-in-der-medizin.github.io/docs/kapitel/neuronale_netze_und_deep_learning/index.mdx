@@ -14,7 +14,7 @@ Der Begriff "KI Winter" wird in der Literatur mit unterschiedlichen Perioden wä
 
 In den 80er Jahren sahen die großen Industrienationen in der Erforschung von KI einen Wettbewerbsvorteil, nachdem die Technologie durch den Einsatz von Expertensystemen[^3] Einzug in die Wirtschaft gefunden hatte: So ermöglichte das Expertensystem[^4] R1/XCON bei dem einsetzenden Unternehmen DEC (Digital Equipment Corporation) Einsparungen in Millionenhöhe[^5] <R>RN, S. 48</R>: Die Domäne von R1 war die regelbasierte Konfiguration von VAX-11/780 Systemen nach Kundenanforderungen[^6]. Japan kündigte 1981 das 5th Generation Projekt <R>Gar19</R> an, einen Zehnjahresplan für den Aufbau "intelligenter Computer" <R>RN09, S. 48, Abs. 2</R>[^7], und in Großbritannien sorgte der Alvey-Report[^8] für eine Wiederaufnahme finanzieller Unterstützung, die durch den Lighthill-Report aufgehoben worden war <R>RN09, S. 48, Abs. 2</R>[^9].
 
-Auch der technologische Fortschritt begünstigte das Wiederaufleben des Interesses an neuronalen Netzen, wie _Olazaran_ in  in Bezug auf die Modellierung paralleler Prozesse mit Hilfe von neuronalen Netzen anmerkt: "[...] increases in computer power and speed due to parallelism will undoubtedly favour neural net research.", denn mit den in den 80er Jahren verfügbaren Supercomputern und Parallelrechner[^10] erhält auch der Konnektionismus Auftrieb, der **neuronale Netze** als Grundlage hat <R>Dor91, S. 15</R>, und mit dem sich Modelle wieder mehr an den biologischen Vorbildern orientieren sollten (vgl. <R>RM87, S. 43, Abs. 3</R>).
+Auch der technologische Fortschritt begünstigte das Wiederaufleben des Interesses an neuronalen Netzen, wie _Olazaran_ in  in Bezug auf die Modellierung paralleler Prozesse mit Hilfe von neuronalen Netzen anmerkt: "[...] increases in computer power and speed due to parallelism will undoubtedly favour neural net research.", denn mit den in den 80er Jahren verfügbaren Supercomputern und Parallelrechner[^10] erhält auch der Konnektionismus Auftrieb, der **neuronale Netze** als Grundlage hat <R>Dor91, S. 15</R>, und mit dem sich Modelle wieder mehr an den biologischen Vorbildern orientieren sollten (vgl. <R>RM87, S. 43, Abs. 3</R> sowie <R>GBC18, S.18-19</R>).
 
 
 [^1]: sowie "Lighthill's report provoked a massive loss of confidence in AI by the academic establishment in the UK (and to a lesser extent in the US). It persisted for a decade - the so-called 'AI Winter'." (aus: Jim Howe, Artificial intelligence at edinburgh university: A perspective, https://www.inf.ed.ac.uk/about/AIhistory.html, abgerufen 31.08.2023).
@@ -26,7 +26,7 @@ Auch der technologische Fortschritt begünstigte das Wiederaufleben des Interess
 [^7]: Zusammenfassend war das Ziel des 5th Generation Computer Systems (FGCS)-Projekt: "Its ultimate goal is to develop integrated systems, both hardware and software, suitable for the major computer application in the nextdecade, identified by the Japanese as 'knowledge information processing'." in <R>Sha83, S. 637, Anführungszeichen i.O. doppelt</R>
 [^8]: https://www.chilton-computing.org.uk/inf/literature/reports/alvey_report/overview.htm - empfohlene Massnahmen: https://www.chilton-computing.org.uk/inf/literature/reports/alvey_report/p008.htm (beide abgerufen 31.08.2023)
 [^9]: In Deutschland wird 1988 die DFKI GmbH (Deutsches Forschungszentrum für Künstliche Intelligenz) gegründet, eine "wirtschaftsnahe Forschungseinrichtung" auf "dem Gebiet innovativer Softwaretechnologien auf der Basis von Methoden der Künstlichen Intelligenz" (https://www.dfki.de/fileadmin/user_upload/DFKI/Medien/Ueber_uns/DFKI_im_UEberblick/Unternehmensprofil/20210120_DFKI_Unternehmensprofil_DE.pdf, abgerufen 31.08.2023)
-[^10]: Auch _Fausett_ nennt bessere Rechenleistung als einen Grund für den erneuerten Enthusiasmus <R>Fau94, S. 26</R>
+[^10]: Auch _Fausett_ nennt bessere Rechenleistung als einen Grund für den erneuerten Enthusiasmus <R>Fau94, S. 26</R>. Im Kontext der in diesem Kapitel vorgestellten mehrschichtigen Netzen und ihrem Konzept der versteckten Schichten ist nachvollziehbar, das mehr Rechenleistung den komplexen Verfahren entgegenkommt. _Goodfellow, Bengio und Courville_ gehen auf die Korrelation Modellgrösse und Anzahl der Nervenzellen in einem menschlichen Gehirn (vgl. Fussnote 15 in **Kapitel 1.2**) in <R>GBC18, S. 24 ff.</R> ein
 
 ## 3.2 Mehrschichtige neuronale Netze
 
@@ -52,7 +52,7 @@ Die mathematische Basis für Backpropagation ist das **Gradientenabstiegsverfahr
 [^12]: "The ability to create useful new features distinguishes back-propagation from earlier, simpler methods such as the perceptron-convergence procedure." <R>RHW86b, S. 533</R>
 [^13]: ausführlicher Algorithmus in <R>RN09, S. 853, Abbildung 18.24</R>
 [^14]: _sigmoid_: "Sigma", griechischer Buchstabe $\Sigma$, entspricht dem lateinischen "S"; "_eidos_" (griechisch) Form, Gestalt
-[^15]: "Historisch wurde Backpropagation mit der Sigmoidfunktion implementiert." <R>Ert21, S. 314, Fussnote 4</R> In Kapitel 9.5.3 (vgl. <R>RHW86a, S. 329, (15)</R>). _Ertel_ fügt hinzu: "Mittlerweile haben sich jedoch andere Funktionen als besser bewährt." In <R>Ert21, S. 319</R> geht der Autor auf "Probleme und Verbesserungen" des mittlerweile über 30 Jahre alten Verfahrens ein.
+[^15]: "Historisch wurde Backpropagation mit der Sigmoidfunktion implementiert." <R>Ert21, S. 314, Fussnote 4</R> In Kapitel 9.5.3 (vgl. <R>RHW86a, S. 329, (15)</R>). _Ertel_ fügt hinzu: "Mittlerweile haben sich jedoch andere Funktionen als besser bewährt." In <R>Ert21, S. 319</R> geht der Autor auf "Probleme und Verbesserungen" des mittlerweile über 30 Jahre alten Verfahrens ein. <R>GBC18, S. 19</R>  stellt fest, dass Backpropagation der "vorherrschende Ansatz für das Training tiefer Modelle" (im Jahr 2018) ist.
 [^16]: In <R>RM86a</R> zeigen _Rumelhart, Hinton und Williams_ die Architektur eines mehrschichtigen neuronalen Netzes, das XOR über Backpropagation repräsentiert. Gleichzeitig grenzen sie in <R>RHW86b, S. 536</R> ihr Modell vom biologischen Lernen ab: "The learning procedure, in its current form, is not a plausible model of learning in brains".
 [^17]: _Ertel_ weist darauf hin, dass die Klasse der darstellbaren Funktionen erhöht wird, wenn man für ein Perzeptron eine variable Sigmoid-Funktion verwendet <R>Ert21, S. 316, Abs. 2</R>. Siehe hierzu auch "Sigmoid-Perzeptron" in <R>RN09, S. 847</R>
 
@@ -64,20 +64,30 @@ Der Physiker John J. Hopfield (1933 -) stellt 1982 in <R>Hop82</R> ein Modell f�
 
 [^18]: ehemalige Forschungsabteilung der Telefongesellschaft AT & T;  gehört seit 2016 zu Nokia (https://www.bell-labs.com/, abgerufen 03.09.2023)
 [^19]: https://techmonitor.ai/technology/att_creates_parallel_neural_net_chip_to_solve_routing_problems
-[^20]:  Ein rekurrentes neuronales Netz "speist seine Ausgaben wieder in seine eigenen Eingaben ein" <R>RN09, S. 847</R>
-[^21]: Eine _Schlinge_ (engl. _loop_) in einem Graphen ist ein Kantenzug, der einen Knoten mit sich selbst verbindet <R>Die17 S. 30</R>
+[^20]:  Ein rekurrentes neuronales Netz "speist seine Ausgaben wieder in seine eigenen Eingaben ein" <R>RN09, S. 847</R>: Im Gegensatz zu Feedforward-Netzen sind rekurrente Netze also _rückgekoppelt_
+[^21]: Eine _Schlinge_ (engl. _loop_) in einem Graphen ist ein Kantenzug, der einen Knoten mit sich selbst verbindet <R>Die17 S. 30</R>. Ein Beispiel für ein Netz mit Schlingen ist das **MAXNET** <R>Lip87</R>, das zu der Gruppe der **competitive nets** gehört: Es kann als Subnetz zur Ermittlung der Zelle mit dem größten Aktivierungswert ermittelt werden <R>Fau94, S. 158 ff.</R>
 [^22]: was an die "Cell Assemblies" von Hebb erinnert (Kapitel 2.2.1). _Lansner_ verweist in <R>Lan09, S. 179</R> darauf, merkt aber gleichfalls an, dass das Modell aufgrund der Rekurrenz und Symmetrie nicht seinem biologischen Vorbild entspricht <R>Lan09, S.180</R>
 [^23]: das Modell ist "formal äquivalent zu einem physikalischen Modell des Magnetismus" <R>Ert21, S. 293</R>. Vgl. auch <R>AR98, S.417</R> sowie <R>Hop82, S.2556, "Studies of the collective behaviors of the model" f.</R>
 
 
 ### 3.2.3 Necognitron
 
+Unter dem Namen "Cognitron" 1975 beschreibt _Fukushima_ in <R>Fuk83</R> ein mehrschichtiges Netz mit selbst-organisierenden Eigenschaften zur Mustererkennung, in dem die Zellen selektiv auf häufig präsentierte Merkmale reagieren. 1983 veröffentlichen _Fukushima, Miyake und Ito_ eine Modifikation dieser Architektur in <R>FMI83</R>[^24] unter dem Namen **Neocognitron**[^25], dass die Eigenschaft hat, handschriftlich geschriebene Ziffern zu erkennen. Hierbei haben Zellen in tiefer liegenden Schichten die Eigenschaft, selektiv komplexere Merkmale der Eingaben zu extrahieren und weniger anfällig auf Rauschen[^26] in den Eingaben zu sein. In <R>Fuk80</R> war der Training-Prozess des Modells gegeben durch wiederholte Einspeisung von Mustern ohne weitere Information [^27] bzgl. dieser Muster <R>Fuk80, S.197</R>: Die Erweiterung des Modells beinhaltet nun die Verstärkung der modifizierten Synapsen durch überwachtes Lernen[^28].
+
+In der Arbeit werden
 "Multilayer networks are ahrd to analyze" <R>AR88, S.31</R> verweis auf blackbox
 
 credit assignment problem [AR88, S. 524]
 layered feature extraction [AR88, S. 524]
 they have made a videotape demonstrating the neocognitron[AR88, S. 524]
 the paper gives rise to a number of interesting procedural points, which will become more and more important as the field of neural networks mature [AR88, S. 524]
+
+[^24]: Mit Bezug auf <R>Fuk80</R> ("Neocognitron: A self-organizing neural network model for a mechanism of pattern recognition unaffected by shift in position")
+[^25]: Video mit Demonstration des Netzes unter https://www.youtube.com/watch?v=Qil4kmvm2Sw, abgerufen 04.09.2023
+[^26]: Rauschen bzw. Störungen in den Eingaben kann bsp. durch zufällig hinzugefügte oder entfernte Pixel erreicht werden, oder durch Rotation der Bilder vor dem Einspeisen in das Netz. Beispiele für verrauschte Daten in <R>Ert21, S 294 ff.</R>
+[^27]: "learning without a teacher", also unüberwachtes Lernen (unsupervised learning).
+[^28]: "We use a learning-with-a-teacher process for the reinforcement of the modifiable synapses in the new large-scale
+model, instead of the learning-without-a-teacher process applied to the previous model." <R>FMI83, S. 827</R>
 
 #### Boltzmann Maschine
 
