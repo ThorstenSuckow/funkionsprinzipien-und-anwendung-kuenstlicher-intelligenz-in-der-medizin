@@ -166,6 +166,7 @@ Quotation style: IEEE
 
 ## 2.2 Das Rosenblatt-Perzeptron
 
+
 - **[Arb03]** M. A. Arbib, Hrsg., The handbook of brain theory and neural networks, 2nd ed. Cambridge, Mass: MIT Press, 2003.
 
 
@@ -248,6 +249,19 @@ Quotation style: IEEE
 
 ### 3 Neuronale Netz
 
+ - **[Fuk80]** K. Fukushima, „Neocognitron: A self-organizing neural network model for a mechanism of pattern recognition unaffected by shift in position“, _Biological Cybernetics_, Bd. 36, Nr. 4, S. 193–202, Apr. 1980, https://doi.org/10.1007/BF00344251.
+
+
+ - **[FMI83]** K. Fukushima, S. Miyake, und T. Ito, „Neocognitron: A neural network model for a mechanism of visual pattern recognition“, _IEEE Transactions on Systems, Man, and Cybernetics_, Bd. SMC-13, Nr. 5, S. 826–834, 1983, https://doi.org/10.1109/TSMC.1983.6313076.
+
+
+
+ - **[Fuk75]** K. Fukushima, „Cognitron: A self-organizing multilayered neural network“, _Biological Cybernetics_, Bd. 20, Nr. 3, S. 121–136, Sep. 1975, https://doi.org/10.1007/BF00342633.
+
+
+ - **[Lip87]** R. Lippmann, „An introduction to computing with neural nets“, _IEEE ASSP Magazine_, Bd. 4, Nr. 2, S. 4–22, 1987, https://doi.org/10.1109/MASSP.1987.1165576.
+
+
  - **[Lan09]** A. Lansner, „Associative memory models: from the cell-assembly theory to biophysically detailed cortex simulations“, Trends in Neurosciences, Bd. 32, Nr. 3, S. 178–186, 2009, doi: https://doi.org/10.1016/j.tins.2008.12.002.
 
 
@@ -296,6 +310,9 @@ Quotation style: IEEE
 
 ### Review
 
+
+
+- **[Ras16]** T. Rashid, _Make Your Own Neural Network: A Gentle Journey Through the Mathematics of Neural Networks, and Making Your Own Using the Python Computer Language_. CreateSpace Independent Publishing Platform, 2016. [Online]. Verfügbar unter: https://books.google.de/books?id=Zli_jwEACAAJ
 
  - **[LBH15]** Y. LeCun, Y. Bengio, und G. Hinton, „Deep learning“, Nature, Bd. 521, Nr. 7553, S. 436–444, Mai 2015, https://doi.org/10.1038/nature14539.
 
