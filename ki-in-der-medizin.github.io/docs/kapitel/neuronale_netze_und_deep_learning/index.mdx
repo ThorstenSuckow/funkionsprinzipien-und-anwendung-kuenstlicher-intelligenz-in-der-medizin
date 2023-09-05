@@ -43,6 +43,13 @@ An gleicher Stelle demonstriert _Murtagh_ ein MLP, das mittels **Backpropagation
 
 Die mathematische Basis für Backpropagation ist das **Gradientenabstiegsverfahren**, das hilft, in einem neuronalen Netz Parameter für möglichst optimale Verlust-Werte (also geringe Fehler-Werte) zu finden <R>RN09, S.837</R> (Abb. 3.3).  Ausserdem unterstützt die **Sigmoid**[^14]-Funktion als Aktivierungsfunktion[^15] (Abb. 3.2) aufgrund ihres nicht-linearen Charakters eine größere Klasse darstellbarer Funktionen und damit Lösungen für Probleme, die ein klassisches Perzeptron nicht lösen kann (vgl. <R>Ert 21, S.316</R>)[^16] [^17].
 
+<EQ id ="3-2-1">
+
+Sigmoidfunktion
+
+</EQ>
+
+
 **Abb. 3.2** Ein Plot der Sigmoid-Funktion
 
 
@@ -58,38 +65,53 @@ Die mathematische Basis für Backpropagation ist das **Gradientenabstiegsverfahr
 
 In den 80er Jahren werden neben dem Backpropagation-Algorithmus weitere Entwürfe für neuronale Netze erstellt, die für ein Wiederaufleben des Interesses an der transdisziplinären Wissenschaft sorgen vgl(<R>Fau94, S. 25 ff.</R>).
 
-### 3.2.2 Hopfield Netze
+### 3.2.2 Hopfield-Netz
 
-Der Physiker John J. Hopfield (1933 -) stellt 1982 in <R>Hop82</R> ein Modell für ein neuronales Netz vor, das auf neurobiologischen Aspekten <R>Hop82, S. 2554</R> beruht und 5 Jahre später in Zusammenarbeit mit At & T Bell Laboratories[^18] in Form eines "neural network chip"[^19] <R>AR88, S. 457</R> als Hardware umgesetzt wird: Das Modell ist ein **rekurrentes Netz**[^20] ohne Schlingen ($w_{ij} = 0$)[^21] <R>Ert21, S. 291</R> mit bidirektionalen symmetrischen Kanten ($w_{ij} = w_{ji}$) und fungiert als **Assoziativspeicher**[^22]. Nach dem Training ist das Netz dazu in der Lage, basierend auf Eingaben ein Aktualisierungsmuster einzunehmen, dass dem Reiz am ähnlichsten ist <R>RN09, S. 882</R>. _Ertel_ führt die Begeisterung für neuronale Netze und den Aufschwung der Neuroinformatik in den 80er Jahren wesentlich auf die "biologische Plausibilität, das gut verstandene mathematische Modell" und "die beeindruckende Simulation zur Mustererkennung" auf das Hopfield Modell zurück <R>Ert21, S. 297</R>. _Anderson und Rosenfeld_ bemerken, dass der Einfluss physikalischer Systeme auf das Hopfield Netz auch das Interesse der Physiker[^23] an neuronalen Netzen geweckt hat, und dadurch das Forschungsfeld erweitert wurde (vgl. <R>AR88, S. 458</R>).
+Der Physiker John J. Hopfield (1933 -) stellt 1982 in <R>Hop82</R> ein Modell für ein _asynchrones_[^18] neuronales Netz vor, das auf neurobiologischen Aspekten <R>Hop82, S. 2554</R> beruht und 5 Jahre später in Zusammenarbeit mit At & T Bell Laboratories[^19] in Form eines "neural network chip"[^20] <R>AR88, S. 457</R> als Hardware umgesetzt wird: Das Modell ist ein **rekurrentes Netz**[^21] ohne Schlingen ($w_{ij} = 0$)[^22] <R>Ert21, S. 291</R> mit bidirektionalen symmetrischen Kanten ($w_{ij} = w_{ji}$) und fungiert als **Assoziativspeicher**, also als Netz, das, wenn es für eine Eingabe $x$ die Ausgabe $y$ liefert, $y$ auch für $x'$ berechnet, sofern $x'$ nahe genug bei $x$ liegt[^23] <R>Roj93, S. 251</R>, was das Netz gegenüber _Rauschen_ und _Störungen_[^24] resistenter macht.<br />
+_Ertel_ führt die Begeisterung für neuronale Netze und den Aufschwung der Neuroinformatik in den 80er Jahren wesentlich auf die "biologische Plausibilität, das gut verstandene mathematische Modell" und "die beeindruckende Simulation zur Mustererkennung" auf das Hopfield Modell zurück <R>Ert21, S. 297</R>. _Anderson und Rosenfeld_ bemerken, dass der Einfluss physikalischer Systeme auf das Hopfield Netz auch das Interesse der Physiker an neuronalen Netzen geweckt hat, und dadurch das Forschungsfeld erweitert wurde (vgl. <R>AR88, S. 458</R>). Dies ist darauf zurückzuführen, dass sich die Summe aller Terme in einem Hopfield-Netz wie folgt berechnet (vgl. <R>Roj93, S.287</R>[^25])
 
-[^18]: ehemalige Forschungsabteilung der Telefongesellschaft AT & T;  gehört seit 2016 zu Nokia (https://www.bell-labs.com/, abgerufen 03.09.2023)
-[^19]: https://techmonitor.ai/technology/att_creates_parallel_neural_net_chip_to_solve_routing_problems
-[^20]:  Ein rekurrentes neuronales Netz "speist seine Ausgaben wieder in seine eigenen Eingaben ein" <R>RN09, S. 847</R>: Im Gegensatz zu Feedforward-Netzen sind rekurrente Netze also _rückgekoppelt_
-[^21]: Eine _Schlinge_ (engl. _loop_) in einem Graphen ist ein Kantenzug, der einen Knoten mit sich selbst verbindet <R>Die17 S. 30</R>. Ein Beispiel für ein Netz mit Schlingen ist das **MAXNET** <R>Lip87</R>, das zu der Gruppe der **competitive nets** gehört: Es kann als Subnetz zur Ermittlung der Zelle mit dem größten Aktivierungswert ermittelt werden <R>Fau94, S. 158 ff.</R>
-[^22]: was an die "Cell Assemblies" von Hebb erinnert (Kapitel 2.2.1). _Lansner_ verweist in <R>Lan09, S. 179</R> darauf, merkt aber gleichfalls an, dass das Modell aufgrund der Rekurrenz und Symmetrie nicht seinem biologischen Vorbild entspricht <R>Lan09, S.180</R>
-[^23]: das Modell ist "formal äquivalent zu einem physikalischen Modell des Magnetismus" <R>Ert21, S. 293</R>. Vgl. auch <R>AR98, S.417</R> sowie <R>Hop82, S.2556, "Studies of the collective behaviors of the model" f.</R>
+<EQ id ="3-2-2">
+
+$E = -1/2 * \sum^n_{i=1}\sum^n_{j=1} w_{ij}x_ix_j + \sum^n_{i=1}\Theta_ix_i$
+
+</EQ>
+
+Dies wird auch als die **Energiefunktion** des Netzes bezeichnet, wobei $E$ entweder konstant bleibt oder kleiner wird - aber nicht größer: Ist in einem Netz eine solche Energiefunktion vorhanden, kann gezeigt werden, das das Netz konvergiert <R>Fau94, S. 139</R>, und zwar hin zu einem Zustand _minimaler Energie_: _Ertel_ erklärt hierzu, dass gelernte Muster in dem Netz "Minima der Energiefunktion im Zustandsraum" darstellen; werden zuviele Muster gelernt, "konvergiert das System gegen Minima, die keinen gelernten Muster entsprechen". Damit ist das Modell "formal äquivalent zu einem physikalischen Modell des Magnetismus" <R>Ert21, S. 293</R>[^26], wo ebenfalls solche _Phasenübergänge_ von einem geordneten hin zu einem chaotischen System beobachtet werden können[^27].
+
+_Ackley, Hinton und Sejnowski_ stellen 1985 in <R>AHS85</R> die **Boltzmann-Maschine**[^28] vor, eine Modifikation eines Hopfield-Netzes, in dem sich die Zellen _stochastisch_ <R>AR88, S. 635</R> und globale Zustände des Netzes nach der _Boltzmann-Verteilung_[^29] verhalten. Das Netz versucht lokale Minima zu überwinden (vgl. "Gradientenabstiegsverfahren" in **Kapitel 3.2.1 Backpropagation**), indem ihm erlaubt wird, zu größeren $E$ (**_3-2-2_**) zu springen, um so zu einem globalen Minimum zu konvergieren (<R>AHS85, S. 151</R> sowie <R>Koe90, S. 107</R>). Das Verfahren wird auch _simulated annealing_[^30] bezeichnet <R>Ert21, S. 297</R>.
 
 
-### 3.2.3 Necognitron
+[^18]: in asynchronen Modellen werden die Aktivierungen der Neuronen unabhängig voneinander und zu unterschiedlichen Zeitpunkten berechnet (vgl. <R>Roj02, S. 49</R> sowie ebenda S. 282)
+[^19]: ehemalige Forschungsabteilung der Telefongesellschaft AT & T;  gehört seit 2016 zu Nokia (https://www.bell-labs.com/, abgerufen 03.09.2023)
+[^20]: https://techmonitor.ai/technology/att_creates_parallel_neural_net_chip_to_solve_routing_problems
+[^21]:  Ein rekurrentes neuronales Netz "speist seine Ausgaben wieder in seine eigenen Eingaben ein" <R>RN09, S. 847</R>: Im Gegensatz zu Feedforward-Netzen sind rekurrente Netze also _rückgekoppelt_
+[^22]: Eine _Schlinge_ (engl. _loop_) in einem Graphen ist ein Kantenzug, der einen Knoten mit sich selbst verbindet <R>Die17 S. 30</R>. Ein Beispiel für ein Netz mit Schlingen ist das **MAXNET** <R>Lip87</R>, das zu der Gruppe der **competitive nets** gehört: Es kann als Subnetz zur Ermittlung der Zelle mit dem größten Aktivierungswert genutzt werden <R>Fau94, S. 158 ff.</R>
+[^23]: Nach dem Training ist das Netz dazu in der Lage, für einen Stimulus ein Aktualisierungsmuster einzunehmen, dass diesem am ähnlichsten ist <R>RN09, S. 882</R>, was an die "Cell Assemblies" von Hebb erinnert (Kapitel 2.2.1). _Lansner_ verweist in <R>Lan09, S. 179</R> genau darauf, merkt aber gleichfalls an, dass das Modell aufgrund der Rekurrenz und Symmetrie nicht seinem biologischen Vorbild entspricht <R>Lan09, S.180</R>
+[^24]: Rauschen bzw. Störungen bei Stimuli in Form von Bildern ($n * m$ Pixeln) können durch zufällig hinzugefügte oder entfernte Pixel entstehen, oder durch Rotation (axiale Verschiebung) der Daten vor dem Einspeisen in das Netz. Beispiele für verrauschte Daten in <R>Ert21, S 294 ff.</R>
+[^25]: mit dem Faktor $1/2$, damit aufgrund der Symmetrie in dem Netz $w_{ij}x_ix_j$ und $w_{ji}x_jx_i$ nur einmal berechnet wird <R>Roj93, S.287</R>
+[^26]: vgl. auch <R>AR98, S.417</R> sowie <R>Hop82, S.2556, "Studies of the collective behaviors of the model" f.</R>
+[^27]: dem so genannten _Spinglass_ (auch: _spin glass_); vgl.<R>BY86, S. 900 mit Bezug auf Hopfield-Netze</R>
+[^28]: eine Beschreibung des Verhalten findet sich 1983 bereits in <R>HS83</R>
+[^29]: die _Boltzmann-Verteilung_ gibt die Wahrscheinlichkeit an, ein geg. physik. System in einem bestimmten Zustand anzutreffen (https://de.wikipedia.org/wiki/Boltzmann-Statistik, abgerufen  05.09.2023)
+[^30]: "Gelingt es, die Temperatur nach dem richtigen Plan auf null zu verringern, wird sich das Netz mit großer Wahrscheinlichkeit in einem globalen Minimum stabilisieren." <R>Roj93, S. 322</R> Der Begriff _Annealing_ ist hier aus der Werkstoffkunde entlehnt: Eine entsprechende Wärmebehandlung von Materialien unterstützt die Erzeugung gewünschter Werkstoffeigenschaften wie Festigkeit, z.B.  bei der Verarbeitung von Glas <R>Jeb11, S. 3</R> oder Schweißverbindungen von Metallen <R>FJO+19</R>
 
-Unter dem Namen "Cognitron" 1975 beschreibt _Fukushima_ in <R>Fuk83</R> ein mehrschichtiges Netz mit selbst-organisierenden Eigenschaften zur Mustererkennung, in dem die Zellen selektiv auf häufig präsentierte Merkmale reagieren. 1983 veröffentlichen _Fukushima, Miyake und Ito_ eine Modifikation dieser Architektur in <R>FMI83</R>[^24] unter dem Namen **Neocognitron**[^25], dass die Eigenschaft hat, handschriftlich geschriebene Ziffern zu erkennen. Hierbei haben Zellen in tiefer liegenden Schichten die Eigenschaft, selektiv komplexere Merkmale der Eingaben zu extrahieren und weniger anfällig auf Rauschen[^26] in den Eingaben zu sein. In <R>Fuk80</R> war der Training-Prozess des Modells gegeben durch wiederholte Einspeisung von Mustern ohne weitere Information [^27] bzgl. dieser Muster <R>Fuk80, S.197</R>: Die Erweiterung des Modells beinhaltet nun die Verstärkung der modifizierten Synapsen durch überwachtes Lernen[^28].
 
-In der Arbeit werden
-"Multilayer networks are ahrd to analyze" <R>AR88, S.31</R> verweis auf blackbox
+### 3.2.3 Neocognitron
 
-credit assignment problem [AR88, S. 524]
-layered feature extraction [AR88, S. 524]
-they have made a videotape demonstrating the neocognitron[AR88, S. 524]
-the paper gives rise to a number of interesting procedural points, which will become more and more important as the field of neural networks mature [AR88, S. 524]
+Unter dem Namen "Cognitron" 1975 beschreibt _Fukushima_ (1936 - ) in <R>Fuk75</R> ein mehrschichtiges Netz mit selbst-organisierenden Eigenschaften zur Mustererkennung, in dem Zellen selektiv auf häufig präsentierte Merkmale reagieren. 1983 veröffentlichen _Fukushima, Miyake und Ito_ eine Modifikation dieser Architektur in <R>FMI83</R>[^31] unter dem Namen **Neocognitron**[^32]; sein biologisches Vorbild ist das durch _Hubel und Wiesel_[^33] in <R>HU62</R> beschriebene hierarchische Modell des Wahrnehmungssystems <R>FMI83, S. 827</R>.<br /> In dem künstlichen neuronalen Netz haben Zellen in tiefer liegenden Schichten die Eigenschaft, selektiv komplexere Merkmale der Stimuli zu extrahieren, womit sie weniger anfällig auf Rauschen in den Eingabedaten sind. In <R>Fuk80</R> war der Training-Prozess des Modells gegeben durch wiederholte Einspeisung von Mustern ohne weitere Information[^34] <R>Fuk80, S.197</R>: Die Erweiterung des Modells beinhaltet nun die Verstärkung der modifizierten Synapsen durch überwachtes Lernen[^35], um bessere Resultate bei handgeschriebenen Zeichen zu erzielen <R>FMI83, S. 829</R>.<br />
+_Anderson und Rosenfeld_ attestieren dem Netz von _Fukushima, Miyake und Ito_ Aspekte, die bei der Entwicklung neuronaler Netze eine wesentliche Rolle spielen werden <R>AR88, S. 524</R>:  Tatsächlich inspiriert das Neocognitron die Convolutional Neural Networks (CNN) <R>LBH15, S.439</R>, die LeCun in seiner Arbeit von 1989[^36] vorstellt.
 
-[^24]: Mit Bezug auf <R>Fuk80</R> ("Neocognitron: A self-organizing neural network model for a mechanism of pattern recognition unaffected by shift in position")
-[^25]: Video mit Demonstration des Netzes unter https://www.youtube.com/watch?v=Qil4kmvm2Sw, abgerufen 04.09.2023
-[^26]: Rauschen bzw. Störungen in den Eingaben kann bsp. durch zufällig hinzugefügte oder entfernte Pixel erreicht werden, oder durch Rotation der Bilder vor dem Einspeisen in das Netz. Beispiele für verrauschte Daten in <R>Ert21, S 294 ff.</R>
-[^27]: "learning without a teacher", also unüberwachtes Lernen (unsupervised learning).
-[^28]: "We use a learning-with-a-teacher process for the reinforcement of the modifiable synapses in the new large-scale
-model, instead of the learning-without-a-teacher process applied to the previous model." <R>FMI83, S. 827</R>
 
-#### Boltzmann Maschine
+
+[^31]: Mit Bezug auf <R>Fuk80</R> ("Neocognitron: A self-organizing neural network model for a mechanism of pattern recognition unaffected by shift in position")
+[^32]: Video mit Demonstration des Netzes unter https://www.youtube.com/watch?v=Qil4kmvm2Sw, abgerufen 04.09.2023
+[^33]: David H. Hubel (1926 - 2013) und Torsten N. Wiesel (1924 - ) erhalten 1981 den Nobelpreis für Physiologie oder Medizin  für ihre Entdeckungen bzgl. Informationsverarbeitung im Seewahrnehmungssystem (https://www.nobelprize.org/prizes/medicine/1981/summary/, abgerufen 05.09.2023). In der im folgenden zitierten Arbeit von 1962 zeigen sie, dass im Wahrnehmungssystem "einfache" und "komplexe" Neuronen existieren, die visuelle Informationen unterschiedlich verarbeiten <R>Wur09, S. 2819</R>
+[^34]: "learning without a teacher", also unüberwachtes Lernen (unsupervised learning).
+[^35]: "We use a learning-with-a-teacher process for the reinforcement of the modifiable synapses in the new large-scale
+model, instead of the learning-without-a-teacher process applied to the previous model." <R>FMI83, S. 827</R>; _Anderson und Rosenfeld_ vermerken dies als "some handcrafted fine tuning" <R>AR88, S. 524 ff.</R>
+[^36]: ein Jahr nach Erscheinen von <R>AR88</R>
+
+
 
 #### Faltendes Netz
 [Son22, S. 61]
