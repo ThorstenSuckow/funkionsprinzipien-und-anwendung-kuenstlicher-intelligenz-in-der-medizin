@@ -249,6 +249,28 @@ Quotation style: IEEE
 
 ### 3 Neuronale Netz
 
+ - **[AHS85]** D. H. Ackley, G. E. Hinton, und T. J. Sejnowski, „A learning algorithm for boltzmann machines“, _Cognitive Science_, Bd. 9, Nr. 1, S. 147–169, 1985, doi: https://doi.org/10.1016/S0364-0213(85)80012-4.
+
+  - **[FJO+19]** O. S. I. Fayomi, T. O. Joshua, F. H. Olatuja, und O. Agboola, „Effect of annealing on the mechanical characteristics of steel welded joint“, _Procedia Manufacturing_, Bd. 35, S. 1387–1394, 2019, https://doi.org/10.1016/j.promfg.2019.09.008.
+
+
+ - **[Jeb11]** H. Von Jebsen-Marwedel, „Einführung“, in _Glastechnische Fabrikationsfehler: “Pathologische” Ausnahmezustände des Werkstoffes Glas und ihre Behebung; Eine Brücke zwischen Wissenschaft, Technologie und Praxis_, H. Jebsen-Marwedel und R. Brückner, Hrsg., Berlin, Heidelberg: Springer Berlin Heidelberg, 2011, S. 3–15. https://doi.org/10.1007/978-3-642-16433-0_1.
+
+  - **[HS83]** G. Hinton und T. Sejnowski, „Optimal perceptual inference“, in _Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition_, Jan. 1983, S. 448–453.
+
+
+ - **[BY86]** K. Binder und A. P. Young, „Spin glasses: Experimental facts, theoretical concepts, and open questions“, Rev. Mod. Phys., Bd. 58, Nr. 4, S. 801–976, Okt. 1986, doi: 10.1103/RevModPhys.58.801.
+
+
+- **[LBH15]** Y. LeCun, Y. Bengio, und G. Hinton, „Deep learning“, Nature, Bd. 521, Nr. 7553, S. 436–444, Mai 2015, https://doi.org/10.1038/nature14539.
+
+
+ - **[Wur09]** R. H. Wurtz, „Recounting the impact of Hubel and Wiesel: Recounting the impact of Hubel and Wiesel“, _The Journal of Physiology_, Bd. 587, Nr. 12, S. 2817–2823, Juni 2009, doi: 10.1113/jphysiol.2009.170209.
+
+
+ - **[HW62]** D. H. Hubel und T. N. Wiesel, „Receptive fields, binocular interaction and functional architecture in the cat’s visual cortex“, _The Journal of Physiology_, Bd. 160, Nr. 1, S. 106–154, Jan. 1962, https://doi.org/10.1113/jphysiol.1962.sp006837.
+
+
  - **[Fuk80]** K. Fukushima, „Neocognitron: A self-organizing neural network model for a mechanism of pattern recognition unaffected by shift in position“, _Biological Cybernetics_, Bd. 36, Nr. 4, S. 193–202, Apr. 1980, https://doi.org/10.1007/BF00344251.
 
 
@@ -314,7 +336,6 @@ Quotation style: IEEE
 
 - **[Ras16]** T. Rashid, _Make Your Own Neural Network: A Gentle Journey Through the Mathematics of Neural Networks, and Making Your Own Using the Python Computer Language_. CreateSpace Independent Publishing Platform, 2016. [Online]. Verfügbar unter: https://books.google.de/books?id=Zli_jwEACAAJ
 
- - **[LBH15]** Y. LeCun, Y. Bengio, und G. Hinton, „Deep learning“, Nature, Bd. 521, Nr. 7553, S. 436–444, Mai 2015, https://doi.org/10.1038/nature14539.
 
  - **[MM96]** R. Moreno-Díaz, J. Mira, und W. S. McCulloch, Hrsg., Brain processes, theories, and models: an international conference in honor of W.S. McCulloch 25 years after his death. Cambridge, Mass: MIT Press, 1996.
 
