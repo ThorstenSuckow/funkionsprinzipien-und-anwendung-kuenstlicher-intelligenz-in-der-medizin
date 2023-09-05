@@ -67,3 +67,9 @@ https://de.wikipedia.org/wiki/Theoretische_Biologie, abgerufen 09.08.2023
 
  - https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DQil4kmvm2Sw
    https://www.youtube.com/watch?v=Qil4kmvm2Sw, abgerufen 04.09.2023
+
+ - https%3A%2F%2Fwww.nobelprize.org%2Fprizes%2Fmedicine%2F1981%2Fsummary%2F
+   https://www.nobelprize.org/prizes/medicine/1981/summary/, abgerufen 05.09.2023
+
+ - https%3A%2F%2Fde.wikipedia.org%2Fwiki%2FBoltzmann-Statistik
+   https://de.wikipedia.org/wiki/Boltzmann-Statistik, abgerufen 05.09.2023
