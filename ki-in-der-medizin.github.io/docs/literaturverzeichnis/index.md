@@ -249,6 +249,15 @@ Quotation style: IEEE
 
 ### 3 Neuronale Netz
 
+ - **[CBB+98]** Y. Lecun, L. Bottou, Y. Bengio, und P. Haffner, „Gradient-based learning applied to document recognition“, _Proceedings of the IEEE_, Bd. 86, Nr. 11, S. 2278–2324, 1998, doi: 10.1109/5.726791.
+
+
+ - **[CBD+89]** Y. LeCun et al, „Backpropagation Applied to Handwritten Zip Code Recognition“, Neural Computation, Bd. 1, Nr. 4, S. 541–551, Dez. 1989, https://doi.org/10.1162/neco.1989.1.4.541.
+
+
+- **[KB15]** D. P. Kingma und J. Ba, „Adam: A Method for Stochastic Optimization“. arXiv, 29. Januar 2017. Zugegriffen: 6. September 2023. [Online]. Verfügbar unter: http://arxiv.org/abs/1412.6980
+
+
  - **[AHS85]** D. H. Ackley, G. E. Hinton, und T. J. Sejnowski, „A learning algorithm for boltzmann machines“, _Cognitive Science_, Bd. 9, Nr. 1, S. 147–169, 1985, doi: https://doi.org/10.1016/S0364-0213(85)80012-4.
 
   - **[FJO+19]** O. S. I. Fayomi, T. O. Joshua, F. H. Olatuja, und O. Agboola, „Effect of annealing on the mechanical characteristics of steel welded joint“, _Procedia Manufacturing_, Bd. 35, S. 1387–1394, 2019, https://doi.org/10.1016/j.promfg.2019.09.008.
