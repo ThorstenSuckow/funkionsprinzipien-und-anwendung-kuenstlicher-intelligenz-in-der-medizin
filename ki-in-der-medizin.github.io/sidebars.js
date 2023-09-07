@@ -22,8 +22,8 @@ const sidebars = {
                         "kapitel/kuenstliche-neuronen/rosenblatt-perceptron/index"
                     ]
                 },
-                "kapitel/neuronale_netze_und_deep_learning/index",
-             //   "kapitel/anwendung_in_der_medizin/index",
+                "kapitel/neuronale_netze/index",
+                "kapitel/neuronale_netze_im_gesundheitswesen/index",
                 "kapitel/zusammenfassung_und_bemerkungen/index",
             ]
         },
