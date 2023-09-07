@@ -249,6 +249,9 @@ Quotation style: IEEE
 
 ### 3 Neuronale Netz
 
+ - **[ZSQ+17]** H. Zhao, J. Shi, X. Qi, X. Wang, und J. Jia, „Pyramid Scene Parsing Network“, in _2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)_, Los Alamitos, CA, USA: IEEE Computer Society, Juli 2017, S. 6230–6239. https://doi.org/10.1109/CVPR.2017.660.
+
+
  - **[CBB+98]** Y. Lecun, L. Bottou, Y. Bengio, und P. Haffner, „Gradient-based learning applied to document recognition“, _Proceedings of the IEEE_, Bd. 86, Nr. 11, S. 2278–2324, 1998, doi: 10.1109/5.726791.
 
 
