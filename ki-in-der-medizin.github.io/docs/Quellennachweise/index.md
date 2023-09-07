@@ -73,3 +73,6 @@ https://de.wikipedia.org/wiki/Theoretische_Biologie, abgerufen 09.08.2023
 
  - https%3A%2F%2Fde.wikipedia.org%2Fwiki%2FBoltzmann-Statistik
    https://de.wikipedia.org/wiki/Boltzmann-Statistik, abgerufen 05.09.2023
+
+ - https%3A%2F%2Fnvidianews.nvidia.com%2Fnews%2Fmachines.png
+   https://nvidianews.nvidia.com/news/nvidia-introduces-drive-agx-orin-advanced-software-defined-platform-for-autonomous-machines, abgerufen 07.09.2023
