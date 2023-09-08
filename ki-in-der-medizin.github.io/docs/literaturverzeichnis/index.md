@@ -330,11 +330,30 @@ Quotation style: IEEE
 
 - **[Gar19]** C. Garvey, „Artificial Intelligence and Japan’s Fifth Generation: The Information Society, Neoliberalism, and Alternative Modernities“, Pacific Historical Review, Bd. 88, Nr. 4, S. 619–658, Nov. 2019, https://doi.org/10.1525/phr.2019.88.4.619.
 
+### 4. Neuronale Netze im Gewundheitswesen
+
+ - **[SKM10]** Stromgaard, K., Krogsgaard-Larsen, P., & Madsen, U. (Eds.). (2010). Textbook of Drug Design and Discovery (4th ed.). CRC Press. ISBN:  978-1-4200-6322-6
+
+ - **[Cal20]** E. Callaway, „‘It will change everything’: DeepMind’s AI makes gigantic leap in solving protein structures“, Nature, Bd. 588, S. 203–204, Dez. 2020, https://doi.org/10.1038/d41586-020-03348-4.
+
+
+ - **[Anf72]** C. B. Anfinsen, Studies on the principles that govern the foldnig of protein Chains, Nobel Lecturem 1972
+
+ - **[DOSW08]** K. A. Dill, S. B. Ozkan, M. S. Shell, und T. R. Weikl, „The Protein Folding Problem“, Annual Review of Biophysics, Bd. 37, Nr. 1, S. 289–316, 2008, doi: 10.1146/annurev.biophys.37.092707.153558.
+
+
+  - **[JEP+21]** J. Jumper et al., „Highly accurate protein structure prediction with AlphaFold“, Nature, Bd. 596, Nr. 7873, S. 583–589, Aug. 2021, doi: 10.1038/s41586-021-03819-2.
+
+
+- **[BHU+18]** T. J. Brinker et al., „Skin Cancer Classification Using Convolutional Neural Networks: Systematic Review“, J Med Internet Res, Bd. 20, Nr. 10, S. e11936, Okt. 2018, doi: 10.2196/11936.
+
+- **[SCJ+19]** J. Shen at al., „Artificial Intelligence Versus Clinicians in Disease Diagnosis: Systematic Review“, JMIR Med Inform, Bd. 7, Nr. 3, S. e10010, Aug. 2019, https://doi.org/10.2196/10010.
 
 
 
 ## 6. Zusammenfassung und Bemerkung
 
+- **[SHM+16]** D. Silver u. a., „Mastering the game of Go with deep neural networks and tree search“, Nature, Bd. 529, Nr. 7587, S. 484–489, Jan. 2016, doi: 10.1038/nature16961.
 
 
 - **[MMA+19]** A. R. Mehta, P. R. Mehta, S. P. Anderson, B. L. H. MacKinnon, und A. Compston, „Etymology and the neuron(e)“, Brain, Bd. 143, Nr. 1, S. 374–379, Dez. 2019, https://doi.org/10.1093/brain/awz367.
