@@ -76,3 +76,21 @@ https://de.wikipedia.org/wiki/Theoretische_Biologie, abgerufen 09.08.2023
 
  - https%3A%2F%2Fnvidianews.nvidia.com%2Fnews%2Fmachines.png
    https://nvidianews.nvidia.com/news/nvidia-introduces-drive-agx-orin-advanced-software-defined-platform-for-autonomous-machines, abgerufen 07.09.2023
+
+- https%3A%2F%2Fwww.spiegel.de%2Fnetzwelt%2Fgadgets%2Fgo-duell-software-alphago-siegt-gegen-lee-sedol-a-1081975.html
+  https://www.spiegel.de/netzwelt/gadgets/go-duell-software-alphago-siegt-gegen-lee-sedol-a-1081975.html, abgerufen 08.09.2023
+
+ - https%3A%2F%2Ftromp.github.io%2Fgo%2Flegal.html
+   https://tromp.github.io/go/legal.html, abgerufen 08.09.2023
+
+ - https%3A%2F%2Fwww.deepmind.com%2Fresearch%2Fhighlighted-research%2Falphafold%2Ftimeline-of-a-breakthrough
+   https://www.deepmind.com/research/highlighted-research/alphafold/timeline-of-a-breakthrough, abgerufen 08.09.2023
+
+ - http%3A%2F%2Fwww-miller.ch.cam.ac.uk%2Flevinthal%2Flevinthal.html.png
+   https://web.archive.org/web/20110523080407/http://www-miller.ch.cam.ac.uk/levinthal/levinthal.html, abgerufen 08.09.2023
+
+ - https%3A%2F%2Fpredictioncenter.org%2F
+   https://predictioncenter.org/, abgerufen 08.09.2023
+ 
+ - https%3A%2F%2Fwww.deepmind.com%2Fblog%2Falphafold-a-solution-to-a-50-year-old-grand-challenge-in-biology
+   https://www.deepmind.com/blog/alphafold-a-solution-to-a-50-year-old-grand-challenge-in-biology, abgerufen 08.09.2023
