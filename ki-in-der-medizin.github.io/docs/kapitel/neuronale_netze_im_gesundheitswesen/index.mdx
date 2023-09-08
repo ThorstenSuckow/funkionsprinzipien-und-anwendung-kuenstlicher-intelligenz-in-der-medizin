@@ -1,8 +1,33 @@
 ---
 id: index
 title: "4. Neuronale Netze im Gesundheitswesen"
-description: tbd
+description: Neuronale Netze im Gesundheitswesen
 ---
+
+import {R, F, S, EQ, Def, Tbl, initEq} from "../../../src/components/Refs.js";
+import {Embed, Plot} from "../../../src/components/Embed.js";
+
+
+Die in **Kapitel 3** vorgestellten CNNs können vor allem bei der Objektklassifikation grosse Erfolge[^1] vorweisen  <R>Ert21, S. 330</R>[^2]. Aus diesem Grund werden solche Netze u.a. auch in der Medizin bei Mustererkennung<R>BHU+18</R> und Bildverarbeitung eingesetzt: Es hat sich gezeigt, dass solche Netze mindestens genauso gute Diagnosen erstellen wie erfahrene Ärzte, und bessere als wenig erfahrene Ärzte <R>SCJ+19</R>. Doch nicht nur in der Diagnostik werden Neuronale Netze eingesetzt, auch bei der Therapie von Krankheiten und Prognose ihrer Verläufe kommen Sie zum Tragen. In diesem Kapitel werden wir einige Anwendungen vorstellen.
+
+
+[^1]: _Goodfellow, Bengio und Courville_ stellen etwas allegemeiner fest, dass CNNs "gewaltige Erfolge in der Praxis gebracht" haben <R>GBC18, S. 369</R>
+[^2]: Als Beispiel sei PSPNet genannt, ein CNN zur semantischen Segmentierung von Bilddaten ("_scene parsing_"), das _Zhao et al_ in <R>ZSQ+17</R> vorstellen. Heutzutage betreiben Unternehmen wie Google, Facebook, Microsoft und IBM Forschung und Entwicklung im Bereich der Bildverarbeitung mit CNNs, und im Bereich Hardware entwickeln bspw. NVIDIA (https://nvidianews.nvidia.com/news/nvidia-introduces-drive-agx-orin-advanced-software-defined-platform-for-autonomous-machines, abgerufen 07.09.2023) und Samsung Chips zur Echtzeiterkennung der Umgebung  <R>LBH15, S. 440</R>.
+
+## 4.1 Pharmaforschung
+Im Jahr 2016 gelingt es der von _Google DeepMind_ entwickelten Software _AlphaGo_, den Südkoreaner Lee Sedol als einen der weltbesten _Go_-Spieler in ebendiesem Spiel zu schlagen[^3]. _Go_ verfügt über $2,08 \times 10^{170}$ gültige Spielpositionen und gehört damit zu den komplexesten Brettspielen der Welt[^4]. Kurz nach diesem beachtlichen Erfolg entscheidet _Google DeepMind_, dass das in der Software verwendete 13-lagige CNN-Netz mit seiner $19 \times 19$ Eingabe- und Ausgabematrix sowie trainiert mit über 30 Millionen Spielzügen<R>Ert21, S. 371</R>, reif sei für den Einsatz in der Wissenschaft. Im selben Jahr beginnt das Unternehmen mit der Forschung an _AlphaFold_<R>JEP+21</R>[^5]: Die Software soll helfen, das Problem der **Proteinfaltung** zu vereinfachen: Darunter versteht man die Vorhersage der Struktur eines Proteins auf Basis seiner Aminosäuresequenz  <R>DOSW08</R>[^6]; mit $10^{300}$ verschiedenen Konstellationen[^7] gilt die Struktur als schwer berechenbar.<br />
+Grossen Erfolg hat die Software 2020 bei dem CASP14-protein-folding-contest[^8]. Mit 170.000 Proteinstrukturen trainiert und von ~ 200 GPUs unterstützt erreicht AlphaFold2 Bestwerte[^9], was als Durchbruch für die Medizin bewertet wird <R>Cal20, S. 204</R>: Die Pharmaforschung kann mit dem Wissen über die Struktur von Proteinen Medikamente entwickeln, deren Wirkstoffe Proteinfunktionen aktivieren oder hemmen[^10].
+
+[^3]: https://www.spiegel.de/netzwelt/gadgets/go-duell-software-alphago-siegt-gegen-lee-sedol-a-1081975.html, abgerufen 08.09.2023
+[^4]: https://tromp.github.io/go/legal.html, abgerufen 08.09.2023
+[^5]: https://www.deepmind.com/research/highlighted-research/alphafold/timeline-of-a-breakthrough, abgerufen 08.09.2023
+[^6]: postuliert 1972 von _Anfinsen_ in seiner Nobelpreislaudatio  <R>Anf72, S. 56 Abs. 2</R>
+[^7]: https://web.archive.org/web/20110523080407/http://www-miller.ch.cam.ac.uk/levinthal/levinthal.html, abgerufen 08.09.2023
+[^8]: CASP (Critical Assessment of Techniques for Protein Structure Prediction), ein seit 1994 alle zwei Jahre stattfindender Wettbewerb zur Vorhersage von Proteinstrukturen (https://predictioncenter.org/ , abgerufen 08.09.2023)
+[^9]: mit einem Score von 92.4 GDT. In den Jahren vor AlphaFold lag der Score bei ca. ~ 30-40 GDT. GDT bedeutet _global distance test_ mit einem Wertebereich zwischen 1 und 100.
+[^10]: Wirkstoffe müssen eine Bindungsfähigkeit besitzen, sodass Moleküle des Wirkstoffs an bestimmten Stellen des Proteins andocken <R>SKM10, S. 29 ff.</R>[^10].
+
+
 
 #### Notes
 - Deep Learning erstellt bessere Diagnosen als Ärzte [ERT21, p. 343]: ESTEVA, KUPREL, NOVOA: Dermatologist-level classificarion of skin cancer with deep neural networks, Nature 542 (2017); LITJENS, SANCHES, TIMOFEEVA: Deep Learning as a toll for increased accuracy and efficiency of histopathological diagnosis, Nature Scientific Reports 6 (2016)

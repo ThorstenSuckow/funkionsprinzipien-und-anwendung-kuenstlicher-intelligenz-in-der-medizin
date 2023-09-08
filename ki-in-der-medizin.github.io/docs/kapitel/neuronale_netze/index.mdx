@@ -82,7 +82,7 @@ CNNs nutzen neben den Convolution Schichten auch Pooling Schichten <R>Ert21, S. 
 
 **Abb. 3.5:** Ein Plot der ReLU
 
-CNNs haben "gewaltige Erfolge in der Praxis gebracht" <R>GBC18, S. 369</R>, vor allem bei der Objektklassifikation auf Fotos <R>Ert21, S. 330</R>. Als Beispiel sei PSPNet genannt, ein CNN zur semantischen Segmentierung von Bilddaten ("_scene parsing_"), das _Zhao et al_ in <R>ZSQ+17</R> vorstellen. Heutzutage betreiben Unternehmen wie Google, Facebook, Microsoft und IBM Forschung und Entwicklung im Bereich der Bildverarbeitung mit CNNs, und im Bereich Hardware entwickeln bspw. NVIDIA[^46] und Samsung Chips zur Echtzeiterkennung der Umgebung  <R>LBH15, S. 440</R>.
+
 
 
 [^1]: sowie "Lighthill's report provoked a massive loss of confidence in AI by the academic establishment in the UK (and to a lesser extent in the US). It persisted for a decade - the so-called 'AI Winter'." (aus: Jim Howe, Artificial intelligence at edinburgh university: A perspective, https://www.inf.ed.ac.uk/about/AIhistory.html, abgerufen 31.08.2023).
@@ -131,4 +131,3 @@ model, instead of the learning-without-a-teacher process applied to the previous
 [^43]: "einige Dutzend oder hundert Pixeln" <R>GBC18, S. 374</R>
 [^44]: bereits erwähnt wurde die _shift invariance_: Wird bspw. ein Bild $X$ in das Netz $f$ eingespeist, das in einer Ausgabe $f(X) = Y$ resultiert, dann bedeutet _shift invariance_, das eine Verschiebung der Eingabedaten $g(X) = X+\Gamma$ in dem gleichen $Y$ resultiert: $f(X) = f(g(X))$.  _Äquivarianz_ (engl. "equivariance") bedeutet, das eine Änderung der Eingabedaten auch zu einer "gleichartigen Änderung der Ausgabe" führt: $f(g(x)) = g(f(x))$ <R>GBC18, S. 377 f.</R>
 [^45]: _LeCun, Bengio und Hinton_ weisen in <R>LBH15, S. 439</R> darauf hin, dass die Pooling Schicht auch die Aufgabe hat, semantisch ähnliche Merkmale zusammenzufassen: "the role of the pooling layer is to merge semantically similar features into one."
-[^46]: https://nvidianews.nvidia.com/news/nvidia-introduces-drive-agx-orin-advanced-software-defined-platform-for-autonomous-machines, abgerufen 07.09.2023
