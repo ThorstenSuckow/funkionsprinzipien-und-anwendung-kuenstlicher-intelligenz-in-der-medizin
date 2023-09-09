@@ -94,3 +94,9 @@ https://de.wikipedia.org/wiki/Theoretische_Biologie, abgerufen 09.08.2023
  
  - https%3A%2F%2Fwww.deepmind.com%2Fblog%2Falphafold-a-solution-to-a-50-year-old-grand-challenge-in-biology
    https://www.deepmind.com/blog/alphafold-a-solution-to-a-50-year-old-grand-challenge-in-biology, abgerufen 08.09.2023
+
+ - https%3A%2F%2Fproteopedia.org%2Fwiki%2Findex.php%2FCalculating_GDT_TS
+   https://proteopedia.org/wiki/index.php/Calculating_GDT_TS, abgerufen 09.09.2023 
+
+ - https%3A%2F%2Fspectrum.ieee.org%2Fai-failures
+   https://spectrum.ieee.org/ai-failures, abgerufen 09.09.2023
