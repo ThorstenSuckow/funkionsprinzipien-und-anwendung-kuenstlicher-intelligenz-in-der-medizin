@@ -332,6 +332,27 @@ Quotation style: IEEE
 
 ### 4. Neuronale Netze im Gewundheitswesen
 
+- **[SVI+15]** C. Szegedy, V. Vanhoucke, S. Ioffe, J. Shlens, und Z. Wojna, „Rethinking the Inception Architecture for Computer Vision“. 2015.  https://doi.org/10.48550/arXiv.1512.00567
+
+
+
+ - **[EKN+17]** A. Esteva et al., „Dermatologist-level classification of skin cancer with deep neural networks“, _Nature_, Bd. 542, Nr. 7639, S. 115–118, Feb. 2017, https://doi.org/10.1038/nature21056.
+
+
+ - **[ALP+13]** F. Amato, A. López, E. M. Peña-Méndez, P. Vaňhara, A. Hampl, und J. Havel, „Artificial neural networks in medical diagnosis“, J Appl Biomed, Bd. 11, Nr. 2, S. 47–58, Juli 2013, doi: 10.2478/v10136-012-0031-x.
+
+
+- **[KSH12]** A. Krizhevsky, I. Sutskever, und G. E. Hinton, „ImageNet Classification with Deep Convolutional Neural Networks“, in _Advances in Neural Information Processing Systems_, F. Pereira, C. J. Burges, L. Bottou, und K. Q. Weinberger, Hrsg., Curran Associates, Inc., 2012. [Online]. Verfügbar unter: https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf
+
+
+ - **[LBDA22]** A. Lucieri, M. N. Bajwa, A. Dengel, und S. Ahmed, „Erklärbare KI in der medizinischen Diagnose – Erfolge und Herausforderungen“, in Künstliche Intelligenz im Gesundheitswesen: Entwicklungen, Beispiele und Perspektiven, M. A. Pfannstiel, Hrsg., Wiesbaden: Springer Fachmedien Wiesbaden, 2022, S. 727–754. doi: 10.1007/978-3-658-33597-7_35.
+
+
+- **[TS81]** R. L. Teach und E. H. Shortliffe, „An analysis of physician attitudes regarding computer-based clinical consultation systems“, Computers and Biomedical Research, Bd. 14, Nr. 6, S. 542–558, 1981, doi: https://doi.org/10.1016/0010-4809(81)90012-4.
+
+
+ - **[SPS88]** Szolovits P, Patil RS, Schwartz WB. Artificial intelligence in medical diagnosis. Ann Intern Med. 1988;108(1):80-87. https://doi.org/10.7326/0003-4819-108-1-80
+
  - **[SKM10]** Stromgaard, K., Krogsgaard-Larsen, P., & Madsen, U. (Eds.). (2010). Textbook of Drug Design and Discovery (4th ed.). CRC Press. ISBN:  978-1-4200-6322-6
 
  - **[Cal20]** E. Callaway, „‘It will change everything’: DeepMind’s AI makes gigantic leap in solving protein structures“, Nature, Bd. 588, S. 203–204, Dez. 2020, https://doi.org/10.1038/d41586-020-03348-4.
