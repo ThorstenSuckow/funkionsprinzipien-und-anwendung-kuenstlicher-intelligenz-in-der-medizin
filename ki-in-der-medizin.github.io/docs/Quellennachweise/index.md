@@ -100,3 +100,9 @@ https://de.wikipedia.org/wiki/Theoretische_Biologie, abgerufen 09.08.2023
 
  - https%3A%2F%2Fspectrum.ieee.org%2Fai-failures
    https://spectrum.ieee.org/ai-failures, abgerufen 09.09.2023
+
+ -https%3A%2F%2Fstanfordmlgroup.github.io%2Fcompetitions%2Fchexpert%2F,
+  https://stanfordmlgroup.github.io/competitions/chexpert/, abgerufen 10.09.2023
+
+ - https%3A%2F%2Fintermountainhealthcare.org%2Fnews%2F2019%2F09%2Fai-system
+   https://intermountainhealthcare.org/news/2019/09/ai-system-accurately-detects-key-findings-in-chest-x-rays-of-pneumonia-patients-within-10-seconds/, abgerufen 10.09.2023  
