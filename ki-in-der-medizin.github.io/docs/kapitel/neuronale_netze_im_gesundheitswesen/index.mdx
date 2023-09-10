@@ -39,7 +39,7 @@ _Irving et al._ stellen in <R>IRK+19</R> "CheXpert"[^20] vor, einen öffentliche
 [^13]: Abkürzung für (engl.) _explainable AI_
 [^14]: **AlexNet**: 60.000.000 Parameter <R>KSH12</R>
 [^15]: https://spectrum.ieee.org/ai-failures, abgerufen 09.09.2023
-[^16]: Einige erfolgreiche Ansätze jüngster Zeit fassen _Lucieri et al._ in <R>LBDA22, S. 733 ff.</R> zusammen
+[^16]: Einige erfolgreiche Ansätze jüngster Zeit fassen _Lucieri et al._ in <R>LBDA22, S. 733 ff.</R> zusammen. _Steinwender_ geht in <R>Ste22</R> auf die Zertifizierungspflicht von Medizinprodukten in der EU ein, und das mit der damit verbundenen Datenschutzgrundverordnung auch eine Interpretierbarkeit bzw. Erklärbarkeit für die KI-Systeme einhergeht
 [^17]: Im Vergleich zu **AlexNet** nur 5.000.000 Parameter, aber erreicht bei der Bildklassifizierung bessere Werte als andere Modelle <R>SVI+15</R>. Eine interessanten Diskussionsgrundlage zu den Ausführungen in <R>Cun89</R> (s. **Kapitel 3.2.4**).
 [^18]: beim _transfer learning_ werden semantisch gleiche Ausgaben für verschiedenklassige Eingaben genutzt <R>RN09, S. 602 ff.</R>
 [^19]: "The deep learning CNN outperforms the average of the dermatologists at skin cancer classification using photographic and
@@ -47,6 +47,14 @@ dermoscopic images" <R>EKN+17, S. 3, "Figure 3"</R>
 [^20]: https://stanfordmlgroup.github.io/competitions/chexpert/, abgerufen 10.09.2023
 [^21]: DenseNet: Dense Convolutional Network. In klassischen CNNs mit $L$ Schichten existieren $L$ direkte Verbindungen, also eine Verbindung für eine obere und die darunterliegende Schicht. Durch die Architektur von _Densenet_ existieren in dem Netz $L(L +1)/2$ direkte Verbindungen.
 [^22]: https://intermountainhealthcare.org/news/2019/09/ai-system-accurately-detects-key-findings-in-chest-x-rays-of-pneumonia-patients-within-10-seconds/ (abgerufen 10.09.2023) fasst die Ergebnisse bei der Diagnose von Lungenentzündung zusammen
+
+## 4.3 Therapie und Prognose
+
+In <R>LHL+21</R> stellen _Li et al._ _G-Net_ vor, ein Deep Learning Framework für "counterfactual prediction" als Assistenzsystem für Ärzte. Es soll dabei helfen, unter Berücksichtigung von zur Verfügung stehenden Daten wie Therapie- und Krankheitsverlauf der Patienten die richtige Behandlungsstrategie auszuwählen. Unter "counterfactual prediction" ist hier das Ergebnis einer zunächst in der Theorie eingeschlagenen Therapie zu verstehen, für die von der Software das Behandlungsergebnis ermittelt wird[^23]. Als Beispiel führen _Li et al._ die Flüssigkeitszufuhr von septischen Intensivpatienten an, die zu unerwünschten Nebenwirkungen wie Ödeme führen kann: Die in _G-Net_ verwendeten Netze sollen dabei helfen, zu Zeitpunkt und Menge der Verabreichung eine Aussage über den Behandlungseffekt zu treffen[^24], um so die bestmögliche Methode für die Behandlung des Patienten auszuwählen.
+
+[^23]: "This is particularly important in clinical settings, where physicians may have to choose between multiple treatment strategies for their patients but are unable to test all of them before making a decision"  <R>LHL+21, S. 282</R>
+[^24]: unter https://news.mit.edu/2022/deep-learning-technique-predicts-clinical-treatment-outcomes-0224 (abgerufen 10.09.2023) ist eine ausführlichere Pressemitteilung mit Verweis auf das zitierte Papier
+
 
 #### Notes
 
