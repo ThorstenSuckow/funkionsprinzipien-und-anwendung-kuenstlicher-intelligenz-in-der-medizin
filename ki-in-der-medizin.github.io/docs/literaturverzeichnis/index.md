@@ -332,6 +332,15 @@ Quotation style: IEEE
 
 ### 4. Neuronale Netze im Gewundheitswesen
 
+
+
+
+ - **[LHL+21]** R. Li u. a., „G-Net: a Recurrent Network Approach to G-Computation for Counterfactual Prediction Under a Dynamic Treatment Regime“, in Proceedings of Machine Learning for Health, S. Roy, S. Pfohl, E. Rocheteau, G. A. Tadesse, L. Oala, F. Falck, Y. Zhou, L. Shen, G. Zamzmi, P. Mugambi, A. Zirikly, M. B. A. McDermott, und E. Alsentzer, Hrsg., in _Proceedings of Machine Learning Research_, vol. 158. PMLR, Dez. 2021, S. 282–299. [Online]. Verfügbar unter: https://proceedings.mlr.press/v158/li21a.html
+
+
+ - **[Ste22]** J. Steinwendner, „Explainable AI im Gesundheitswesen“, in _Künstliche Intelligenz im Gesundheitswesen: Entwicklungen, Beispiele und Perspektiven_, M. A. Pfannstiel, Hrsg., Wiesbaden: Springer Fachmedien Wiesbaden, 2022, S. 755–767. https://doi.org/10.1007/978-3-658-33597-7_36.
+
+
 - **[HMW16]** G. Huang, Z. Liu, und K. Q. Weinberger, „Densely Connected Convolutional Networks“, CoRR, Bd. abs/1608.06993, 2016, [Online]. Verfügbar unter: http://arxiv.org/abs/1608.06993
 
 - **[IRK+19]**, „CheXpert: A Large Chest Radiograph Dataset with Uncertainty Labels and Expert Comparison“. arXiv, 21. Januar 2019. Zugegriffen: 9. September 2023. [Online]. Verfügbar unter: http://arxiv.org/abs/1901.07031
