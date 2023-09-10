@@ -332,6 +332,14 @@ Quotation style: IEEE
 
 ### 4. Neuronale Netze im Gewundheitswesen
 
+- **[HMW16]** G. Huang, Z. Liu, und K. Q. Weinberger, „Densely Connected Convolutional Networks“, CoRR, Bd. abs/1608.06993, 2016, [Online]. Verfügbar unter: http://arxiv.org/abs/1608.06993
+
+- **[IRK+19]**, „CheXpert: A Large Chest Radiograph Dataset with Uncertainty Labels and Expert Comparison“. arXiv, 21. Januar 2019. Zugegriffen: 9. September 2023. [Online]. Verfügbar unter: http://arxiv.org/abs/1901.07031
+
+
+- **[Ugu12]** H. Uğuz, „A Biomedical System Based on Artificial Neural Network and Principal Component Analysis for Diagnosis of the Heart Valve Diseases“, _Journal of Medical Systems_, Bd. 36, Nr. 1, S. 61–72, Feb. 2012, https://doi.org/10.1007/s10916-010-9446-7.
+
+
 - **[SVI+15]** C. Szegedy, V. Vanhoucke, S. Ioffe, J. Shlens, und Z. Wojna, „Rethinking the Inception Architecture for Computer Vision“. 2015.  https://doi.org/10.48550/arXiv.1512.00567
 
 
