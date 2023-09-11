@@ -109,3 +109,9 @@ https://de.wikipedia.org/wiki/Theoretische_Biologie, abgerufen 09.08.2023
 
  - https%3A%2F%2Fnews.mit.edu%2F2022%2Fdeep-learning-technique-predicts-clinical-treatment-outcomes-0224
    https://news.mit.edu/2022/deep-learning-technique-predicts-clinical-treatment-outcomes-0224, abgerufen 10.09.2023  
+
+ - https%3A%2F%2Fwww.hl7.org%2F
+   https://www.hl7.org/, abgerufen 11.09.2023
+
+ - https://www.hl7.org/fhir/,
+   https%3A%2F%2Fwww.hl7.org%2Ffhir%2F, abgerufen 11.09.2023
