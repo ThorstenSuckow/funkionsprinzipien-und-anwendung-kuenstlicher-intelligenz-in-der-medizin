@@ -332,10 +332,16 @@ Quotation style: IEEE
 
 ### 4. Neuronale Netze im Gewundheitswesen
 
+ - **[CBS+16]** E. Choi, M. T. Bahadori, A. Schuetz, W. F. Stewart, und J. Sun, „Doctor AI: Predicting Clinical Events via Recurrent Neural Networks“, in Proceedings of the 1st Machine Learning for Healthcare Conference, F. Doshi-Velez, J. Fackler, D. Kale, B. Wallace, und J. Wiens, Hrsg., in Proceedings of Machine Learning Research, vol. 56. Northeastern University, Boston, MA, USA: PMLR, Aug. 2016, S. 301–318. [Online]. Verfügbar unter: https://proceedings.mlr.press/v56/Choi16.html
 
 
+ - **[RCD+18]** Alvin Rajkomar, Eyal Oren, Kai Chen, Andrew M. Dai, Nissan Hajaj, Michaela Hardt, Peter J. Liu, Xiaobing Liu, Jake Marcus, Mimi Sun, Patrik Sundberg, Hector Yee, Kun Zhang, Yi Zhang, Gerardo Flores, Gavin E. Duggan, Jamie Irvine, Quoc Le, Kurt Litsch, Alexander Mossin, Justin Tansuwan, De Wang, James Wexler, Jimbo Wilson, Dana Ludwig, Samuel L. Volchenboum, Katherine Chou, Michael Pearson, Srinivasan Madabushi, Nigam H. Shah, Atul J. Butte, Michael D. Howell, Claire Cui, Greg S. Corrado and Jeffrey Dean, „Scalable and accurate deep learning with electronic health records“, _npj Digital Medicine_, Bd. 1, Nr. 1, S. 18, Mai 2018, https://doi.org/10.1038/s41746-018-0029-1.
 
- - **[LHL+21]** R. Li u. a., „G-Net: a Recurrent Network Approach to G-Computation for Counterfactual Prediction Under a Dynamic Treatment Regime“, in Proceedings of Machine Learning for Health, S. Roy, S. Pfohl, E. Rocheteau, G. A. Tadesse, L. Oala, F. Falck, Y. Zhou, L. Shen, G. Zamzmi, P. Mugambi, A. Zirikly, M. B. A. McDermott, und E. Alsentzer, Hrsg., in _Proceedings of Machine Learning Research_, vol. 158. PMLR, Dez. 2021, S. 282–299. [Online]. Verfügbar unter: https://proceedings.mlr.press/v158/li21a.html
+
+ - **[ZST+20]** Z. Shahn, N. I. Shapiro, P. D. Tyler, D. Talmor, und L. H. Lehman, „Fluid-limiting treatment strategies among sepsis patients in the ICU: a retrospective causal analysis“, _Critical Care_, Bd. 24, Nr. 1, S. 62, Feb. 2020, https://doi.org/10.1186/s13054-020-2767-0.
+
+
+ - **[LHL+21]** R. Li e al., „G-Net: a Recurrent Network Approach to G-Computation for Counterfactual Prediction Under a Dynamic Treatment Regime“, in _Proceedings of Machine Learning for Health_, S. Roy, S. Pfohl, E. Rocheteau, G. A. Tadesse, L. Oala, F. Falck, Y. Zhou, L. Shen, G. Zamzmi, P. Mugambi, A. Zirikly, M. B. A. McDermott, und E. Alsentzer, Hrsg., in _Proceedings of Machine Learning Research_, vol. 158. PMLR, Dez. 2021, S. 282–299. [Online]. Verfügbar unter: https://proceedings.mlr.press/v158/li21a.html
 
 
  - **[Ste22]** J. Steinwendner, „Explainable AI im Gesundheitswesen“, in _Künstliche Intelligenz im Gesundheitswesen: Entwicklungen, Beispiele und Perspektiven_, M. A. Pfannstiel, Hrsg., Wiesbaden: Springer Fachmedien Wiesbaden, 2022, S. 755–767. https://doi.org/10.1007/978-3-658-33597-7_36.
