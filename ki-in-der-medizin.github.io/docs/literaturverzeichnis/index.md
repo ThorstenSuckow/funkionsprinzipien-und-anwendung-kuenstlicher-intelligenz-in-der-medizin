@@ -332,6 +332,15 @@ Quotation style: IEEE
 
 ### 4. Neuronale Netze im Gewundheitswesen
 
+ -**[Lan22]** J. Landgrebe, „Abrechnung medizinischer Leistungen mit künstlicher Intelligenz“, in _Künstliche Intelligenz im Gesundheitswesen: Entwicklungen, Beispiele und Perspektiven_, M. A. Pfannstiel, Hrsg., Wiesbaden: Springer Fachmedien Wiesbaden, 2022, S. 715–726. https://doi.org/10.1007/978-3-658-33597-7_34.
+
+
+ - **[HWN22]** T. Höfer, F. Weishäupl, und A. Nischwitz, „Neuronale Netze zur Effizienzsteigerung der Texterkennung in der Rezeptabrechnung“, in _Künstliche Intelligenz im Gesundheitswesen: Entwicklungen, Beispiele und Perspektiven_, M. A. Pfannstiel, Hrsg., Wiesbaden: Springer Fachmedien Wiesbaden, 2022, S. 697–714. https://doi.org/10.1007/978-3-658-33597-7_33.
+
+
+ - **[Pfa22]** M. A. Pfannstiel, „Einleitung ‚Künstliche Intelligenz im Gesundheitswesen‘“, in _Künstliche Intelligenz im Gesundheitswesen: Entwicklungen, Beispiele und Perspektiven_, M. A. Pfannstiel, Hrsg., Wiesbaden: Springer Fachmedien Wiesbaden, 2022, S. 1–47. https://doi.org/10.1007/978-3-658-33597-7_1.
+
+
  - **[CBS+16]** E. Choi, M. T. Bahadori, A. Schuetz, W. F. Stewart, und J. Sun, „Doctor AI: Predicting Clinical Events via Recurrent Neural Networks“, in Proceedings of the 1st Machine Learning for Healthcare Conference, F. Doshi-Velez, J. Fackler, D. Kale, B. Wallace, und J. Wiens, Hrsg., in Proceedings of Machine Learning Research, vol. 56. Northeastern University, Boston, MA, USA: PMLR, Aug. 2016, S. 301–318. [Online]. Verfügbar unter: https://proceedings.mlr.press/v56/Choi16.html
 
 
