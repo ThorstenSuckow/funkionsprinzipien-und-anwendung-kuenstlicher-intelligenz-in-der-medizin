@@ -113,5 +113,8 @@ https://de.wikipedia.org/wiki/Theoretische_Biologie, abgerufen 09.08.2023
  - https%3A%2F%2Fwww.hl7.org%2F
    https://www.hl7.org/, abgerufen 11.09.2023
 
- - https://www.hl7.org/fhir/,
-   https%3A%2F%2Fwww.hl7.org%2Ffhir%2F, abgerufen 11.09.2023
+ - https%3A%2F%2Fwww.hl7.org%2Ffhir%2F, 
+   https://www.hl7.org/fhir/ abgerufen 11.09.2023
+
+ - https%3A%2F%2Fwww.gkv-spitzenverband.de%2Fkrankenversicherung%2Fkv_grundprinzipien
+   https://www.gkv-spitzenverband.de/krankenversicherung/kv_grundprinzipien/alle_gesetzlichen_krankenkassen/alle_gesetzlichen_krankenkassen.jsp, abgerufen 12.09.2023
