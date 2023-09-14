@@ -31,6 +31,18 @@ Quotation style: IEEE
 
 - **[SD07]** S. Silbernagl und A. Despopoulos, _Taschenatlas Physiologie_, ed. 7. Auflage. Stuttgart: Thieme, 2007. https://doi.org/10.1055/b-002-89576
 
+ - **[HS19a]** S. Hallermann und R. F. Schmidt, „Arbeitsweise von Synapsen“, in Physiologie des Menschen: mit Pathophysiologie, R. Brandes, F. Lang, und R. F. Schmidt, Hrsg., Berlin, Heidelberg: Springer Berlin Heidelberg, 2019, S. 95–104. https://doi.org/10.1007/978-3-662-56468-4_9.
+
+
+
+- **[Fak19]** B. Fakler, „Grundlagen der zellulären Erregbarkeit“, in Physiologie des Menschen: mit Pathophysiologie, R. Brandes, F. Lang, und R. F. Schmidt, Hrsg., Berlin, Heidelberg: Springer Berlin Heidelberg, 2019, S. 38–54. https://doi.org/10.1007/978-3-662-56468-4_4.
+
+- **[Fro19]** M. Fromm, „Transport in Membranen und Epithelien“, in Physiologie des Menschen: mit Pathophysiologie, R. Brandes, F. Lang, und R. F. Schmidt, Hrsg., Berlin, Heidelberg: Springer Berlin Heidelberg, 2019, S. 22–37. https://doi.org/10.1007/978-3-662-56468-4_3.
+
+
+- **[Jon19]** P. Jonas, „Aktionspotenzial: Fortleitung im Axon“, in Physiologie des Menschen: mit Pathophysiologie, R. Brandes, F. Lang, und R. F. Schmidt, Hrsg., Berlin, Heidelberg: Springer Berlin Heidelberg, 2019, S. 72–82. https://doi.org/10.1007/978-3-662-56468-4_7.
+
+
 - **[Eil19]** J. Eilers, „Nervenzellen“, in _Physiologie des Menschen: mit Pathophysiologie_, R. Brandes, F. Lang, und R. F. Schmidt, Hrsg., Berlin, Heidelberg: Springer Berlin Heidelberg, 2019, S. 57–64. https://doi.org/10.1007/978-3-662-56468-4_5.
 
 - **[RK18]** R. Rohkamm, P. Kermer, und M. Güther, _Taschenatlas Neurologie_, ed. 4. Auflage. Stuttgart New York: Georg Thieme Verlag, 2018. https://10.1055/b-005-143299.
@@ -67,9 +79,9 @@ Quotation style: IEEE
 
 - **[Fau94]** L. Fausett, Fundamentals of Neural Networks: Architectures, Algorithms, and Applications. USA: Prentice-Hall, Inc., 1994. ISBN 0-13-334186-0
 
- - **[Fra94]** Frank RG. Instruments, nerve action, and the all-or-none principle. Osiris. 1994;9:208-35. doi: 10.1086/368737. PMID: 11613429.
+ - **[Fra94]** Frank RG. Instruments, nerve action, and the all-or-none principle. Osiris. 1994;9:208-35. https://doi.org/10.1086/368737. PMID: 11613429.
 
- - **[Luc05]** Lucas K. On the gradation of activity in a skeletal muscle-fibre. J Physiol. 1905 Nov 9;33(2):125-37. doi: 10.1113/jphysiol.1905.sp001115. PMID: 16992800; PMCID: PMC1465742.
+ - **[Luc05]** Lucas K. On the gradation of activity in a skeletal muscle-fibre. J Physiol. 1905 Nov 9;33(2):125-37. https://doi.org/10.1113/jphysiol.1905.sp001115. PMID: 16992800; PMCID: PMC1465742.
 
 ## Künstliche Neuronen
 
@@ -160,7 +172,10 @@ Quotation style: IEEE
 
 - **[BJ90]** R. Beale und T. Jackson, Neural computing: an introduction, First issued in hardback. in A Taylor & Francis book. Boca Raton London New York: CRC Press, 2017.
 
-- **[HS19]** S. Hallermann und R. F. Schmidt, „Synaptische Plastizität“, in _Physiologie des Menschen: mit Pathophysiologie_, R. Brandes, F. Lang, und R. F. Schmidt, Hrsg., Berlin, Heidelberg: Springer Berlin Heidelberg, 2019, S. 115–120. https://doi.org/10.1007/978-3-662-56468-4_11.
+- **[HS19c]** Hallermann und R. F. Schmidt, „Neurotransmitter und ihre Rezeptoren“, in Physiologie des Menschen: mit Pathophysiologie, R. Brandes, F. Lang, und R. F. Schmidt, Hrsg., Berlin, Heidelberg: Springer Berlin Heidelberg, 2019, S. 105–114. https://doi.org/10.1007/978-3-662-56468-4_10.
+
+
+- **[HS19b]** S. Hallermann und R. F. Schmidt, „Synaptische Plastizität“, in _Physiologie des Menschen: mit Pathophysiologie_, R. Brandes, F. Lang, und R. F. Schmidt, Hrsg., Berlin, Heidelberg: Springer Berlin Heidelberg, 2019, S. 115–120. https://doi.org/10.1007/978-3-662-56468-4_11.
 
  - **[SSH95]** P. Sander, W. Stucky, und R. Herschel, „Automaten“, in _Automaten Sprachen Berechenbarkeit: Grundkurs Angewandte Informatik IV_, W. Stucky, Hrsg., Wiesbaden: Vieweg+Teubner Verlag, 1995, S. 26–97. https://doi.org/10.1007/978-3-322-84873-4_2.
 
