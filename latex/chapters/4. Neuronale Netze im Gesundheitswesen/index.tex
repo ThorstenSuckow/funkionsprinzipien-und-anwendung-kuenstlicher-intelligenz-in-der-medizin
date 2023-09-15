@@ -1,1 +1,100 @@
 \chapter{Neuronale Netze im Gesundheitswesen}
+
+
+
+\textit{Pfannstiel} stellt in [Pfa22, S. 35, Abb. 1.14] die Künstliche Intelligenz als Kern eines Schichtenmodells dar: Die vier umgebenden Schichten, von denen jede eine Menge repräsentativer Leistungen enthält, lassen sich grob einteilen in\footnotemark[1]
+1. Versorgung des Patienten
+2. Herstellung / Zulieferung durch Pharmazie bzw. Medizintechnologie
+3. Organisation das Gesundheitswesen
+4. Selbstversorgung des Patienten
+
+In jeder dieser Schicht übernimmt die KI wichtige Rollen, z.B. in der Diagnostik (1.), der Wirkstoffentwicklung (2.), der Abrechnung von Leistungen (3.) oder als Software in embedded Systems wie Wearables (4.). Zum Beispiel werden die in **Kapitel 3** vorgestellten CNNs aufgrund ihrer Erfolge bei der Objektklassifikation\footnotemark[2] in der Diagnostik eingesetzt\footnotemark[3]. Je nach Verfahren zeigt sich, dass die Netze mindestens genauso gute Diagnosen erstellen wie erfahrene Ärzte, und bessere als wenig erfahrene Ärzte (vgl. [SCJ+19, S.7] bzw. **Kapitel 4.3**). Doch auch in anderen Bereichen des Gesundheitswesens finden neuronale Netze praktische Anwendungen. Im Folgenden werden einige vorgestellt.
+
+\footnotemark[1]: Reihenfolge analog zu dem Modell in [Pfa22] von Innen nach Aussen
+\footnotemark[2]: vgl. [Ert21, S. 330]. \textit{Goodfellow et al.} stellen etwas alle gemeiner fest, dass CNNs ``gewaltige Erfolge in der Praxis gebracht`` haben [GBC18, S. 369]. Als Beispiel sei PSPNet genannt, ein CNN zur semantischen Segmentierung von Bilddaten (``\textit{scene parsing}``), das \textit{Zhao et al} in [ZSQ+17] vorstellen. Heutzutage betreiben Unternehmen wie Google, Facebook, Microsoft und IBM Forschung und Entwicklung im Bereich der Bildverarbeitung mit CNNs, und im Bereich Hardware entwickeln bspw. NVIDIA (https://nvidianews.nvidia.com/news/nvidia-introduces-drive-agx-orin-advanced-software-defined-platform-for-autonomous-machines, abgerufen 07.09.2023) und Samsung Chips zur Echtzeiterkennung der Umgebung  [LBH15, S. 440].
+\footnotemark[3]: [BHU+18] stellt bspw. 13 Arbeiten zur Klassifikation von Hautläsionen mit der Hilfe von CNNs vor
+
+
+
+## 4.1 Automatisierung in der Gesundheitswirtschaft
+Um für die in Deutschland knapp 73 Millionen gesetzlich Krankenversicherten\footnotemark[4] Leistungen im Gesundheitswesen abzurechnen, werden durch die Leistungserbringer Finanzdienstleister beauftragt. So leiten bspw. Apotheken eingelöste Kassenrezepte an Apothekenrechenzentren weiter, die die Abrechnungen mit den Krankenkassen durchführen. Obwohl Rezepte heutzutage überwiegend maschinell erstellt werden, kommt es bei den Rechenzentren nach der Digitalisierung der Rezepte (bspw. durch Scannen) häufig zu manueller Nachkorrektur, wenn abrechnungsrelevante Daten nicht vollständig erfasst werden können, wie \textit{Höfer et al.} in [HWN22] feststellen. Um den zusätzlichen Arbeitsaufwand durch Nachkorrekturen zu reduzieren (aufgrund von Störfaktoren wie ausgedünnte Zeichen oder Textüberlagerungen), zeigen sie ein neuronales Netz, das in Auftrag für ein führenden Abrechnungs- und Finanzdienstleister erstellt wurde. Ziel des Netzes ist die Rekonstruktion\footnotemark[5] von Rezepten, die bei Plausibilitätskontrollen auffällig sind.<br />
+Ihr neuronales Netz zur Rekonstruktion von Rezepten ist ein CNN mit 7 Faltungsschichten, denen jeweils eine Poolingschicht folgt. Insgesamt werden 40.000 Datensätze für das Training genutzt, sowie 10.000 Validierungsdatensätze. Die Rezepte werden auf den für die Abrechnung relevanten Teil zugeschnitten, sodass die Eingabedaten aus $720 \times 460$ Pixeln bestehen. Sie zeigen, dass Ihr Netz bei der Rekonstruktion von Korrekturzeichen eine relative Verbesserung von 27,85% erreicht\footnotemark[6] und aufgrund dieses Erfolges in den  Workflow der zu dem Auftraggeber gehörenden Abrechnungszentren integriert wurde.
+
+\footnotemark[4]: https://www.gkv-spitzenverband.de/krankenversicherung/kv_grundprinzipien/alle_gesetzlichen_krankenkassen/alle_gesetzlichen_krankenkassen.jsp, abgerufen 12.09.2023
+\footnotemark[5]: tatsächlich liegt die Vermutung nahe, das Netz sollte eingesetzt werden, um den Hochleistungsscanner zu ersetzen. Ziel war es aber, in einem Vorverarbeitungsschritt die Bildqualität zu erhöhen [HWN22, S. 698]
+\footnotemark[6]: 5% waren ursprünglich anvisiert [HWN22, S. 711]
+
+
+## 4.2 Pharmaforschung
+Im Jahr 2016 gelingt es der von \textit{Google DeepMind} entwickelten Software \textit{AlphaGo}, den Südkoreaner Lee Sedol als einen der weltbesten \textit{Go}-Spieler in ebendiesem Spiel zu schlagen\footnotemark[6]. \textit{Go} verfügt über $2,08 \times 10^{170}$ gültige Spielpositionen und gehört damit zu den komplexesten Brettspielen der Welt\footnotemark[7]. Kurz nach diesem beachtlichen Erfolg entscheidet \textit{Google DeepMind}, dass das in der Software verwendete 13-lagige CNN-Netz mit seiner $19 \times 19$ Eingabe- und Ausgabematrix sowie trainiert mit über 30 Millionen Spielzügen[Ert21, S. 371], reif sei für den Einsatz in der Wissenschaft. Im selben Jahr beginnt das Unternehmen mit der Forschung an \textit{AlphaFold}[JEP+21]\footnotemark[8]: Die Software soll helfen, das Problem der **Proteinfaltung** zu vereinfachen: Darunter versteht man die Vorhersage der Struktur eines Proteins auf Basis seiner Aminosäuresequenz  [DOSW08]\footnotemark[9]; mit $10^{300}$ verschiedenen Konstellationen\footnotemark[10] ist die Struktur sichtlich schwer zu berechnen.<br />
+Grossen Erfolg hat die Software 2020 bei dem CASP14-protein-folding-contest\footnotemark[11]. Mit 170.000 Proteinstrukturen trainiert und von ~ 200 GPUs unterstützt erreicht AlphaFold2 Bestwerte\footnotemark[12], was als Durchbruch für die Medizin bewertet wird [Cal20, S. 204]. Der Pharmaindustrie erlaubt das Wissen über die Struktur von Proteinen die Herstellung von Medikamente, deren Wirkstoffe bspw. die Proteinfunktionen aktivieren oder hemmen\footnotemark[13].
+
+\footnotemark[6]: https://www.spiegel.de/netzwelt/gadgets/go-duell-software-alphago-siegt-gegen-lee-sedol-a-1081975.html, abgerufen 08.09.2023
+\footnotemark[7]: https://tromp.github.io/go/legal.html, abgerufen 08.09.2023
+\footnotemark[8]: https://www.deepmind.com/research/highlighted-research/alphafold/timeline-of-a-breakthrough, abgerufen 08.09.2023
+\footnotemark[9]: postuliert 1972 von \textit{Anfinsen} in seiner Nobelpreislaudatio  [Anf72, S. 56 Abs. 2]
+\footnotemark[10]: https://web.archive.org/web/20110523080407/http://www-miller.ch.cam.ac.uk/levinthal/levinthal.html, abgerufen 08.09.2023
+\footnotemark[11]: CASP (Critical Assessment of Techniques for Protein Structure Prediction), ein seit 1994 alle zwei Jahre stattfindender Wettbewerb zur Vorhersage von Proteinstrukturen (https://predictioncenter.org/ , abgerufen 08.09.2023)
+\footnotemark[12]: mit einem Score von 92.4 GDT. In den Jahren vor AlphaFold lag der Score bei ca. ~ 30-40 GDT. GDT bedeutet \textit{global distance test} mit einem Wertebereich zwischen 1 und 100 und gibt die Ähnlichkeit einer Proteinstruktur mit der Struktur eines Vergleichsmodells an (
+https://proteopedia.org/wiki/index.php/Calculating_GDT_TS, abgerufen 09.09.2023)
+\footnotemark[13]: Bei dem strukturbasierten Wirkstoffdesign hilft die Kenntnis über die Struktur des Zielproteins bei der Entwicklung von Medikamenten, deren Moleküle zur Wirkstoffentfaltung an die Proteine andocken [SKM10, S. 29 ff.]
+
+
+
+## 4.3 Diagnostik
+\textit{Szolovits et al.} argumentieren 1988 in [SPS88], dass die Abfrage von Symptomen zur Feststellung von Krankheiten\footnotemark[14] auch von Expertensystemen (siehe **Kapitel 3.1**) übernommen werden kann. Allerdings zeigt sich ebenfalls, dass Ärzte kritisch gegenüber computergestützten Assistenzsystemen stehen. \textit{Teach und Shortliffe} führen bereits 1981 aus, dass es medizinischem Fachpersonal wichtig ist, dass das System den Entscheidungsweg zur Diagnose erklären kann; dass der Computer stets die korrekten Diagnosen stellt, wird als weniger wichtig bewertet [TS81, S. 551, ``Table V``, ``D.1`` sowie ``D14``]. In dieser Studie\footnotemark[15] werden auch ethische Bedenken seitens der Mediziner aufgeführt. Dass computergestützte medizinische Assistenzsysteme dann kaum Anwendung im klinischen Umfeld fanden, führen \textit{Lucieri et al.} auch auf solche Bedenken zurück: Erst steigende Rechenleistung und die fortschreitende Leistungsfähigkeit tiefer neuronaler Netze weckte das Interesse an KI unter den Medizinern, dank der Erfolge bildbasierter CNNs auch in der Diagnostik [LBDA22, S. 728]. Dem oben erwähnten Wunsch einer **erklärbaren KI** (**xAI** \footnotemark[16]) wird seitdem nachgegangen, erweist sich aufgrund des \textit{Blackbox-Charakters}\footnotemark[17] insb. bei Architekturen mit Millionen von Parametern\footnotemark[18] in neuronalen Netzen aber als schwierig\footnotemark[19].<br />
+Trotz allem ist nicht von der Hand zu weisen, dass neuronale Netze in der Qualität der Diagnosen gleichauf sind mit denen von medizinischem Fachpersonal [SCJ+19]. \textit{Amato et al.} [ALP+13] listen unter anderem Studienergebnisse bzgl. des Einsatzes neuronaler Netze bei der Diagnostik von kardiovaskulären Krankheiten, Tumor-Erkrankungen sowie Diabetes auf, und kommen bei der Auswertung zu dem Ergebnis, das die neuronalen Netze bei einer Vielzahl verschiedener Symptomatiken die korrekte Diagnose erstellen: Zum Beispiel werden Audioaufnahmen der Pumptätigkeit des Herzens zur Klassifizierung von Herzklappenfehler genutzt, bei dem das eingesetzte Netz - ein MLP mit 3-Schichten unter Verwendung von Backpropagation - eine Erfolgsrate von knapp 95% vorweisen kann [Ugu12].<br /> In [EKN+17] trainieren \textit{Estava et al.} ein CNN basierend auf \textit{GoogleNet Inception v3}\footnotemark[20] mit über 1.000.000 Bildern aus 1000 verschiedenen Kategorien, um danach über \textit{transfer learning}\footnotemark[21] mit 129.450 gelabelten Bilddateien aus 2032 verschiedenen Krankheiten ein Netz zur Diagnose von Hautkrebs zu erstellen. Sie zeigen, dass das Netz bei der Korrektheit der gestellten Diagnosen genauere Diagnosen erstellt als ein Mediziner\footnotemark[22]. <br />
+\textit{Irving et al.} stellen in [IRK+19] ``CheXpert``\footnotemark[23] vor, einen öffentlichen Datensatz mit 224.316 Aufnahmen des Thorax von 65.240 verschiedenen Patienten zur Klassifizierung von 14 Befunden (u.a. Lungenentzündung, Fraktur, Pleuraerguss). Für das Training nutzen sie \textit{DenseNet121}, ein CNN, in dem jede Schicht mit jeder anderen verbunden ist [HLW16]\footnotemark[24]. Die Inputdaten bestehen aus $320 \times 320$ Pixeln. Bei den Tests zeigt sich, dass ihr Netz bei der Diagnostizierung von Kardiomegalie, Ödemen sowie Pleuraergüssen besser abschneidet als die in der Studie eingesetzten Radiologen\footnotemark[25].
+
+
+\footnotemark[14]: bei gleichzeitigem Ausschluss anderer Krankheiten
+\footnotemark[15]: In dem Papier findet sich auch die Befürchtung unter den Teilnehmern an der Umfrage, dass computer-gestützte Systeme den Arzt ersetzen könnte [TS81, S. 543]
+\footnotemark[16]: Abkürzung für (engl.) \textit{explainable AI}
+\footnotemark[17]: **AlexNet**: 60.000.000 Parameter [KSH12]
+\footnotemark[18]: https://spectrum.ieee.org/ai-failures, abgerufen 09.09.2023
+\footnotemark[19]: Einige erfolgreiche Ansätze jüngster Zeit fassen \textit{Lucieri et al.} in [LBDA22, S. 733 ff.] zusammen. \textit{Steinwender} geht in [Ste22] auf die Zertifizierungspflicht von Medizinprodukten in der EU ein, und das mit der damit verbundenen Datenschutzgrundverordnung auch eine Interpretierbarkeit bzw. Erklärbarkeit für die KI-Systeme einhergeht
+\footnotemark[20]: Im Vergleich zu **AlexNet** nur 5.000.000 Parameter, aber erreicht bei der Bildklassifizierung bessere Werte als andere Modelle [SVI+15]. Eine interessanten Diskussionsgrundlage zu den Ausführungen in [Cun89] (s. **Kapitel 3.2.4**).
+\footnotemark[21]: beim \textit{transfer learning} werden semantisch gleiche Ausgaben für verschiedenklassige Eingaben genutzt [RN09, S. 602 ff.]
+\footnotemark[22]: ``The deep learning CNN outperforms the average of the dermatologists at skin cancer classification using photographic and
+dermoscopic images`` [EKN+17, S. 3, ``Figure 3``]
+\footnotemark[23]: https://stanfordmlgroup.github.io/competitions/chexpert/, abgerufen 10.09.2023
+\footnotemark[24]: DenseNet: Dense Convolutional Network. In klassischen CNNs mit $L$ Schichten existieren $L$ direkte Verbindungen, also eine Verbindung für eine obere und die darunterliegende Schicht. Durch die Architektur von \textit{Densenet} existieren in dem Netz $L(L +1)/2$ direkte Verbindungen.
+\footnotemark[25]: https://intermountainhealthcare.org/news/2019/09/ai-system-accurately-detects-key-findings-in-chest-x-rays-of-pneumonia-patients-within-10-seconds/ (abgerufen 10.09.2023) fasst die Ergebnisse bei der Diagnose von Lungenentzündung zusammen
+
+## 4.4 Therapie und Prognose
+
+Die \textit{HL7}-Organisation\footnotemark[26] wurde 1987 mit dem Ziel gegründet, einen Kommunikationsstandard für den elektronischen Datenaustausch im Gesundheitswesen zu etablieren. Teil des Standards ist die \textit{FHIR}-Spezifikation\footnotemark[27], die von \textit{Rajkomar et al.} in [RCD+18] für ein neuronales Netz genutzt wird, das für einen mit diesen Daten verknüpften Patienten bei der Hospitalisierung Vorhersagen über folgende Punkte stellt:
+- Mortalität während des Krankenhausaufenthaltes (``inpatient mortality``)
+- ungeplante stationäre Wiederaufnahme (``unexpected readmissions within 30 days``)
+- Verlängerung des Aufenthaltes (``long length of stay``)
+- Befund bei Entlassung (``discharge diagnoses``)
+
+Validiert wurde das Netz über insg. 46.864.534.945 Datenpunkte: Die von verschiedenen Krankenhäusern zur Verfügung gestellten 216.221 Patietenakten wurden hierzu aufgeteilt in 194.470 Trainingsdaten und 21.751 Testdaten, allesamt im FHIR-Format. Die Autoren des Papiers konnten zeigen, das ihr Netz die traditionellen klinischen Modelle in den ersten 3 genannten Punkten übertrifft. Eine ähnliche Arbeit stellen \textit{Choi et al.} in [CBS+16] vor, in der sie untersuchen, ob elektronische Patientendaten genutzt werden können, um mit Hilfe rekurrenter neuronaler Netze Vorhersagen zu Diagnose, Medikation und Wiedervorstellung beim Arzt zu treffen. Sie zeigen, dass ihr Netz als medizinisches Assistenzsystem in den aufgeführten Punkten geeignet ist, und darüber hinaus mittels \textit{transfer learning}\footnotemark[21] in Kliniken eingesetzt werden kann, bei denen die Datenmenge nicht für ein Training des Netzes ausreicht. <br />
+Prognosemodelle werden auch auf anderer Ebene genutzt, bspw. bei der Evaluierung der korrekten Behandlungsmethode. In [LHL+21] stellen \textit{Li et al.} \textit{G-Net} vor, ein Deep Learning Framework für ``counterfactual prediction`` als Assistenzsystem für Ärzte. Es soll dabei helfen, unter Berücksichtigung von zur Verfügung stehenden Daten wie Therapie- und Krankheitsverlauf der Patienten die richtige Behandlungsstrategie auszuwählen. Unter ``counterfactual prediction`` sind hier alternative Szenarien gemeint, also das Ergebnis einer zunächst in der Theorie eingeschlagenen Therapie, für die von der Software das Behandlungsergebnis ermittelt wird\footnotemark[28]. Als Beispiel führen \textit{Li et al.} die Flüssigkeitszufuhr zur Stabilisierung von Intensivpatienten an, die einen septischen Schock erlitten haben. Anwendungszeitpunkt-, -art und -menge bestimmen den Genesungsverlauf und können unerwünschte Nebenwirkungen verhindern, allerdings auch solche begünstigen, die bis hin zum Tode führen [ZST+20]. Die in \textit{G-Net} verwendeten Netze sollen dabei helfen, in Verbindung von Parametern wie Laborwerte des Patienten sowie Zeitpunkt und Menge der Verabreichung eine Aussage über den Behandlungseffekt zu treffen\footnotemark[29], um so die bestmögliche Behandlungsmethode auszuwählen.
+
+\footnotemark[26]: ``Health Level Seven`` https://hl7.org, abgerufen 11.09.2023
+\footnotemark[27]: ``Fast Healthcare Interoperability Resources``, https://hl7.org/fhir/, abgerufen 11.09.2023
+\footnotemark[28]: ``This is particularly important in clinical settings, where physicians may have to choose between multiple treatment strategies for their patients but are unable to test all of them before making a decision``  [LHL+21, S. 282]
+\footnotemark[29]: unter https://news.mit.edu/2022/deep-learning-technique-predicts-clinical-treatment-outcomes-0224 (abgerufen 10.09.2023) ist eine ausführlichere Pressemitteilung mit Verweis auf das zitierte Papier
+
+
+#### Notes
+
+- In spite of these huge successes, ‘deep learning’ techniques have not yet made a big impact on the field of medical imaging. One of the main reasons is that for the traditional imaging based specialties (e.g. radiology) the large numbers of images that are needed to train complex ‘deep learning’ systems are not readily available. In digital
+histopathology this is easier: one WSI typically contains trillions of pixels from which hundreds of examples of
+cancerous glands (in the case of prostate or breast cancer) can be extracted. [LST+16]
+
+
+- Deep Learning erstellt bessere Diagnosen als Ärzte [ERT21, p. 343]: ESTEVA, KUPREL, NOVOA: Dermatologist-level classificarion of skin cancer with deep neural networks, Nature 542 (2017); LITJENS, SANCHES, TIMOFEEVA: Deep Learning as a toll for increased accuracy and efficiency of histopathological diagnosis, Nature Scientific Reports 6 (2016)
+
+- Russel Norvig Umgebung Bildanalyse deterministisch p. 72, medizinische Diagnose
+
+- Bildsegmentierung, bspw um Organe (Umriss) zu erkennen
+- Physikalische Simulation: Unberath: DeepDDR https://deepdrr.readthedocs.io/README.html Röntgenbildgebung
+- Wang: image reconstruction is a new frontier if machine learning IEEE transactions on medical imaging: https://ieeexplore.ieee.org/document/8359079
+- Deep Learning: Datenhungrig (PFANN, 694), deshalb: https://grand-challenge.org, Spenden medizinischer Daten (https:// medicaldatadonors.org)
+- Ronneberger: Convolutional networks for biomedical image segmentation
+
+- https://www.ki.fau.de/ki-in-der-medizin/, auch andere Universitätskliniken recherchieren: Charite Berlin, UK Aachen, UK ULM, München
+
+- Explainable AI Bezug nehmen mit Aussage [Ert21., S. 344]
