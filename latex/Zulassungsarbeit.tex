@@ -11,10 +11,13 @@
 
 \let\thempfootnote\thefootnote
 \usepackage[LGR,T1]{fontenc}
-\usepackage{csquotes}
-\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{python}
+\usepackage{graphicx}
 \usepackage{makeidx}         	% Index
-\usepackage{multicol}        	% Zweispaltiger Index
+\usepackage{multicol}% Zweispaltiger Index
+\usepackage[threshold=0]{csquotes}
+
  \newcommand{\textgreek}[1]{\begingroup\fontencoding{LGR}\selectfont#1\endgroup}
 
 %\usepackage[bottom]{footmisc}	% Erzeugung von Fu�noten
@@ -76,6 +79,7 @@
 \usepackage[a4paper]{geometry} % Andere Formatierung
 \usepackage{bibgerm}
 \usepackage{array}
+\usepackage{lstmisc}
 \hyphenation{Ele-men-tar-ob-jek-te  ab-ge-tas-tet Aus-wer-tung House-holder-Matrix Le-ast-Squa-res-Al-go-ri-th-men} 		% Weitere Silbentrennung bei Bedarf angeben
 \setlength{\textheight}{1.1\textheight}
 \pagestyle{myheadings} 			% Erzeugt selbstdefinierte Kopfzeile
@@ -113,6 +117,8 @@
 % Die Kapitel werden in separaten .tex-Dateien abgelegt und hier eingebunden.
 \input{chapters/Einführung}
 \input{chapters/Das Neuron}
+\input{chapters/Künstliche Neuronen}
+
 \input{chapters/Bausteine}
 \input{chapters/Beispiel}
 \input{chapters/ZusammenfassungAusblick}

@@ -1,0 +1,659 @@
+\section{Das McCulloch-Pitts-Neuron}
+
+Im Jahr 1943 veröffentlichen Warren McCulloch (1898 - 1969) und Walter Pitts (1923 - 1969) die Arbeit ``A logical calculus of the ideas immanent in nervous activity`` [MP43], in der sie ein auf \textbf{Aussagenlogik}\footnotemark[1] basierendes mathematisches Modell zur Erklärung von Signalverarbeitung und  -weiterleitung im Nervensystem präsentieren.
+Ihre Arbeit liefert grundlegende Ideen für die Kybernetik\footnotemark[2] und die Von-Neumann-Rechnerarchitektur\footnotemark[3] [Arb19:1, ``Introduction``] und ebnet der Erforschung der \textit{Künstlichen Intelligenz} den Weg.
+
+\footnotetext[1]{
+    Die (zweiwertige) Aussagenlogik beschäftigt sich mit der Verknüpfung von Aussagen und deren Wertigkeit unter der Berücksichtigung der Wahrheitswerte ``wahr`` und ``falsch`` [Rau88]
+}
+\footnotetext[2]{
+    Norber Wiener (1894 - 1964) gilt als Begründer der Kybernetik, die [Kue19] beschreibt als: ``wirkungsvolle Kommunikation bzw. verlustarmer Daten- und Informationsaustausch, der in der Natur die Überlebensfähigkeit und in der Technik die maschinelle, prozessuale Funktionalität stärkt und dadurch Fehler vermeiden hilft.`` Wiener und McCulloch lernen sich im Winter 1942 kennen [Mas90:218]. Unter dem Vorsitz von McCulloch wird auf den sog. ``Macy-Konferenzen`` zwischen 1946 (https://www.asc-cybernetics.org/foundations/history/MacySummary.htm, abgerufen 09.08.2023) und 1953 Biologie und Technologie diskutiert [Arb19:5, Abs. 2]. In Folge dessen veröffentlicht Wiener 1948 seine Arbeit ``Cybernetics: Or Control and Communication in the Animal and the Machine`` [Wie48]
+}
+\footnotetext[3]{
+    Die Architektur zeichnet sich durch eine Zentraleinheit, der Speichereinheit und Ein-/Ausgabeinheit aus, die über Busse verbunden sind [OV08:230]
+}
+
+
+\subsection{Von der Philosophie zur Neurowissenschaft}
+
+Warren McCulloch ist studierter Pyschologe, Philosoph und Neurophysiologe gewesen.
+Schon früh in seiner Karriere\footnotemark[4] treiben ihn grundlegende philosophische Fragen um [Arb19, ``Introduction``:1]:\\
+
+\blockquote{
+What is a number, that a man may know it, and a man that he may know a number{?}
+}[Mcc61:7, Abs.3]\\
+
+``What is a number`` beantwortet ihm die Mathematik; der zweite Teil der Frage soll ihn Zeit seines Lebens beschäftigen und Bestandteil seiner Arbeit werden [Abr02:4 letzter Abs. ff].
+Die Suche nach Antworten auf solche Fragen\footnotemark[5] drängt ihn in die Neurowissenschaften [Mcc67:iii].
+Um psychische Ereignisse auf das wesentlichste zu reduzieren und besser erklärbar zu machen, formuliert er das \textit{``psychon``}, ein einzelnes psychisches Ereignis, das u.a. folgende Eigenschaften hat [Mcc61:5]:
+
+\begin{enumerate}
+    \item Es tritt auf, oder es tritt nicht auf
+    \item Wenn es auftritt, dann nur, weil es von einem vorhergehenden Ereignis augelöst wurde
+    \item Es soll ein nachgehendes ``psychon`` auslösen können\footnotemark[6]
+\end{enumerate}
+
+
+Die Ähnlichkeiten zu dem \textbf{Alles-oder-Nichts-Prinzip} von Nervenzellen zur Formalisierung seines Kalküls berücksichtigt er ab 1929\footnotemark[7], und knapp 14 Jahre später wird McCulloch in seinem Papier das ``psychon`` mit der Aktivität eines einzelnen Neurons gleichsetzen\footnotemark[8].\\
+
+\footnotetext[4]{
+    die im folgenden zitierte Frage wird von der Quelle auf das Jahr 1917 datiert, McCullochs erstem College-Jahr in Haverford, Pennsylvania
+}
+\footnotetext[5]{
+    ``In addition to the work in functional neuroanatomy, McCulloch was continuing to pursue philosophical questions, such as 'What could be the logic of the brain?'`` [Arb19:3, letzter Absatz]
+}
+\footnotetext[6]{
+    Charakteristika der zweiwertigen Aussagenlogik sind hier bereits erkennbar vgl. [Abr02:7, vorletzter Abs.]. Eine Form dieser zweiwertigen Logik wird später von dem französischen Psychoanalytiker Jacques Lacan (1901 - 1981) in seine Theorien einbezogen [Lyd10:317, Abs. 2]
+}
+\footnotetext[7]{
+    ``[...] it dawned on me that these events might be regarded as the all-or-none-impulses of neurons [...]. I began to try to formulate a proper calculus for these events by subscripting symbols for propositions in some sort of calculus of propositions [...]`` [Mcc61:6]
+}
+\footnotetext[8]{
+    ``[...] a psychon can be no less than the activity of a single neuron.`` [MP43:114]
+}
+
+Doch vorerst stagniert seine Arbeit, und erst, als er nach seiner Berufung an das Neuropsychiatrische Institut der Universität von Illinois (Chicago) im Jahr 1941 Walter Pitts kennenlernt, ist er in der Lage, den Kalkül zu vervollständigen.\\
+
+Pitts besucht dort als Autodidakt [Lev98:2] Kurse bei dem Philosophen und Logiker Rudolf Carnap (1891 - 1970), außerdem bei dem Biomathematiker\footnotemark[9] Nicolas Rashevsky (1899 - 1972) [Pic04:183 letzter Abs. ff.], der in seiner Arbeit mathematische Beschreibungen für die Modellierung von Funktionen von Nerven und Nervennetzen verwendet [Abr02:13]\footnotemark[10] sowie ab 1939 die Zeitschrift ``Bulletin of Mathematical Biophysics`` veröffentlicht [Abr02:16, Abs. 4] (in dieser wird später [MP43] erstmalig publiziert).
+Der knapp 19-jährige Pitts gilt als brillianter Mathematiker\footnotemark[11] und später als ``the intelligence behind [...] McCulloch``: Gemeinsam mit ihm veröffentlicht McCulloch nur wenigen Monaten nach ihrem Kennenlernen das ``logical calculus``-Papier [Cow98:104, Abs. 3 f.]
+
+\subsection{Der Kalkül}
+
+Die \textbf{Principia Mathematica}\footnotemark[12] (PM) der Philosophen und Mathematiker Bertrand Russell (1872 - 1970) und Alfred Whitehead (1861 - 1947) ist ein Werk über die Grundlagen der Mathematik und erschien in drei Bänden zwischen 1910 und 1913. In ihr versuchen Russel und Bertrand die Mathematik auf ein Fundament logischer Grundprinzipien zu stellen\footnotemark[13] [She26:226, Abs. 2].
+McCulloch beschäftigt die Frage, ob es nicht gleichsam möglich sei, die Vorgänge im Gehirn durch ein ähnliches Fundament logischer Prinzipien erklärbar zu machen [Arb19:4, Abs. 1]. Basierend auf der Zweiwertigkeit des Alles-oder-nichts-Gesetz (Aktionspotenzial findet statt/ findet nicht statt) finden Pitts und McCulloch ihren Kalkül mit Hilfe der Aussagenlogik.\\
+
+\blockquote{
+    The `all-or-none law` of nervous activity is sufficient to insure that the activity of any neuron may be represented as a proposition.
+}[MP43:100]\\
+
+Für ihren Kalkül entwerfen sie zwei Netze: Ein zyklenfreies Netz [MP43:101, ``2. The Theory: Nets without Circles``] sowie ein Netz, in dem Zyklen vorhanden sind\footnotemark[14] [MP43:108, ``3. The Theory: Nets with Circles``]. Insgesamt gehen sie von folgenden physischen Eigenschaften von Nervenzellen aus [MP43:101]:
+
+
+\begin{enumerate}
+    \item Ein Neuron arbeitet auf Basis des Alles-oder-Nichts-Prinzip
+    \item Eine gewisse Anzahl von Synapsen muss innerhalb einer bestimmten Zeit angeregt werden, um ein Neuron zu erregen
+    \item Die einzige signifikante Verzögerung bei der Signalübertragung innerhalb des Nervensystems ist bedingt durch synaptische Verzögerungen
+    \item Eine einzige hemmende Synapse verhindert die Erregung des betreffenden Neurons
+    \item Die Struktur des neuronalen Netzes ändert sich nicht
+\end{enumerate}
+
+
+\subsection{Das Modell}
+
+Einen Teil der Arbeit von McCulloch und Pitts nehmen wir uns als Vorbild zur Modellierung eines künstlichen Neurons.
+Wir werden auf eine vollständige Erklärung der Theoreme verzichten, die die Arbeit begleiten und die formalen Bausteine liefern.
+
+\footnotetext[9]{
+    ``Biomathematik`` ist ein Teilgebiet der angewandten Mathematik und die mathematische Ausrichtung der theoretischen Biologie, die sich mit Modell- und Theoriebildung zur Beschreibung biologischer Zusammenhänge beschäftigt. ({https://de.wikipedia.org/wiki/Theoretische\_Biologie}, abgerufen 09.08.2023). Teilgebiete der Biomathematik sind u.a. Demographie, Mathematische Ökologie, Epidemologie, Populationsgenetik [Abl10:1-28]
+}
+\footnotetext[10]{
+    ``In these works, formal logic and mathematics played a strong role, and thus biology as a discipline was reaching a more mature stage, as it began to incorporate the scientific method of physics, that is, using theoretical analysis and mathematical formulations.`` [Abr02:7]
+}
+\footnotetext[11]{
+    Siehe [Arb19:4, Abs. 3], außerdem [Abr02:22, Abs. 2]: ``Pitts, a mathematical prodigy``
+}
+\footnotetext[12]{
+    [PW25], [PW27a], [PW27b]
+}
+\footnotetext[13]{
+    Nach [Lev94:2] liest Pitts die Principia Mathematica mit 12 Jahren
+}
+\footnotetext[14]{
+    Die Frage nach Ursprung und Bedeutung von ``loops`` in einem Netz von Nervenzellen beschäftigte McCulloch bereits 1928: ``The tremors of Parkinson’s disease, McCulloch thought, could be explained by closed loops of activity connecting the spinal cord and the contracting muscles.``[Pic04:178, Abs. 3]. [Arb19:3, Abs. 2] vermerkt:  ``As another stage in McCulloch's search for the logic of the nervous system, he began thinking about loops in the nervous system. [...] which made explicit the possibility of loops in the nervous system, an idea that today we take for granted.`` Lawrence Kubie veröffentlicht im Jahr 1930 eine Arbeit, in der er zur Erklärung des Erinenrungsvermögens Schleifen im Nervensystem nutzt [Kub30]
+    paper postulating closed loops in the central nervous system to explain memory (Kubie 1930).12
+}
+
+Im Sinne einer besseren Lesbarkeit überführen wir ausserdem die für die Original-Arbeit aus der PM entnommene Notation für Aussagenlogik\footnotemark[15] in die heutzutage geläufigere Form: ``$\land$`` für \textit{Konjunktion}, ``$\lor$`` für \textit{Disjunktion} sowie ``$\neg$`` für die \textit{Negation}. $\equiv$ verwenden wir im Sinne der Äquivalenz.
+Für McCulloch-Pitts-Neuron verwenden wir im Folgenden auch abkürzend \textbf{MCP-Zelle}, für ein Netz, das aus solchen besteht, einfach \textbf{MCP-Netz}.\\
+
+
+
+Insgesamt ergeben sich folgende Anforderungen an unser Modell (vgl. [Fau94:26 ff.]):
+
+\begin{enumerate}
+    \item Das Verhalten des künstlichen Neurons ist zweiwertig, also \textit{binär}. Das Neuron feuert, oder es feuert nicht. Im Sinne der Beziehung zwischen Eingabe und Ausgabe verstehen wir im unter ``feuern`` den Wert $1$. Wenn ein Neuron nicht feuert, wird dies durch den Wert $0$ repräsentiert, der ebenfalls als Ausgabe vorliegt. In diesem Sinne produziert unser Modell also immer ein ``Signal``\footnotemark[16].
+    \item An einem Neuron liegen (beliebig viele) Eingaben an (im Sinne von a.)
+    \item Ein Schwellenwert ist jedem Neuron zu eigen und wird für das Neuron festgelegt. Der Schwellenwert muss getroffen oder übertroffen werden, damit das Neuron feuert.
+    \item Hemmung ist ``absolut``: Liegt ein hemmendes Signal zusammen mit nicht-hemmenden Signalen an, feuert das Neuron nicht\footnotemark[17]
+    \item Für die Signalübertragung wird ein diskreter Zeitwert $t \in \mathbb{Z}$ vereinbart: Die Übertragung eines Signals dauert eine Zeiteinheit, also $t + 1$. Für eine einführende Betrachtung folgen wir [Roj93 S. 33 letzter Abs. ff.] und ignorieren zunächst die Zeitwerte.
+\end{enumerate}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{images/p1ReadSeq.pdf}
+    \caption{Schematische Darstellung einer MCP-Zelle, nach [MP43]}
+    \small
+     schwarze Kreise sind erregende Signale, offene Kreise sind hemmende Signale. In der Original-Arbeit benötigt ein Neuron zwei erregende Eingaben, um aktiviert zu werden. a) Zeigt damit ein Netz von zwei Neuronen, bei denen $N_2$ feuert, wenn $N_1$ feuert. Mit der Berücksichtigung der Zeiteinheit folgt die formale Darstellung $N_2(t) \equiv N(t - 1)$. Gleicherwiese ergibt sich aus b), das $N_3$ nur feuert, wenn $N_1$ \textbf{und} $N_2$ feuern: $N3(t) \equiv N(t - 1) \land N(t - 2)$. Analog folgt für c) $N3(t) \equiv N(t - 1) \lor N(t - 2)$ und für d) $N3(t) \equiv \neg N(t - 1)$
+\label{fig-mcpcell}
+\end{figure}
+
+\footnotetext[15]{
+    Die Notation aus der PM gilt als sperrig [AR88:16, Abs. 3]. Eine ausführliche Übersicht der in der PM gebräuchlichen Notation findet sich unter https://plato.stanford.edu/entries/pm-notation/ (abgerufen 10.8.2023)
+}
+\footnotetext[16]{
+    Die ausbleibende Exoztyose in chemischen Synapsen kann in dem Sinne einer Modellierung als ``0``-Signal verstanden werden. Siehe Kapitel~\ref{synaptischeuebertragung}
+}
+
+\footnotetext[17]{
+    Für eine formale Beschreibung von absoluter und relativer Hemmung siehe [Roj03:42 ff.]
+}
+
+\subsection{Aktivierungs- und Eingabefunktion}\label{mcp-inputactivfunc}
+
+Mit $n \in  \mathbb{N}_0$ und $m \in  \mathbb{N}_0$ legen wir fest, das ein Neuron $n + m$ Eingaben haben soll, mit $n \geq 1 \lor m \geq 1$. $n$ Ist die Anzahl der erregenden Eingaben, $m$ die der hemmenden.
+
+$x$ bezeichnet eine erregende Eingabe, $y$ eine hemmende.
+
+Ein weitergeleitetes Signal wird stets durch eine $1$ repräsentiert, ein ausbleibendes Signal durch eine $0$.
+
+Für die Schwellenwertfunktionen eines Neurons $N$ ergeben sich folgende Anforderungen: Die Summe der erregenden Eingabesignale $x_1, x_2, ..., x_n$ und der hemmenden Eingabesignale $y_1, y_2, ..., y_m$  muss den für das Neuron festgelegten Schwellenwert $\Theta \in  \mathbb{N}_0$ überschreiten, damit als Ausgabe eine $1$ erzeugt wird, ansonsten liefert die Funktion eine $0$ zurück.
+
+\subsection*{Eingabefunktion}
+Zur Summation der eingehenden Signale benötigen wir eine \textbf{Eingabefunktion}.
+Der Wert dieser Eingabefunktion wird dann auf eine Funktion angewendet, die entscheidet, ob das Neuron feuert - also eine $1$ oder $0$ produziert.\\
+
+\noindent
+Für die Eingabesignale $X$
+
+\begin{equation}
+X \in \{1, 0\}^{n+m} := (x_1, x_2 ..., x_n, y_1, y_2, ... y_m)
+\end{equation}\linebreak[2]
+
+\noindent
+definieren wir die \textit{Gewichte} $w_+ \in \{2, 1\}$\footnotemark[18] mit $w^1_+ =1, w^2_+ = 2$ für erregende Signale, $w_- = -1$ für hemmende Signale (vgl. [Fau94:27-28]).\\
+
+\footnotetext[18]{
+    In der Original-Arbeit stehen zwei ``erregende Synapsen`` auch für einen Schwellenwert von $2$ (siehe Abbildung~\ref{fig-mcpcell})
+}
+
+\noindent
+Die \textbf{Eingabefunktion} $g$ (vgl. 2.1.3 b.)
+
+\begin{equation}
+g: \{1, 0\}^m \to  \mathbb{N}_0, X \mapsto \sum^n_{j=1} x_jw_+ + \sum^m_{k=1} y_kw_-
+\label{eq:gl-mcpinpfunc}
+\end{equation}\linebreak[2]
+
+\noindent
+liefert dann die Summe der hemmenden und erregenden Eingabesignale zurück.
+
+
+\subsection*{Aktivierungsfunktion}
+Die Schwellenwertfunktion wird im Kontext von künstlichen neuronalen Netzen auch \textbf{Aktivierungsfunktion} genannt [RN09:847], da sie entscheidet, ob einzelne Neurone aktiviert werden oder nicht. In diesem Fall realisieren wir sie als \textbf{Treppenfunktion}, die $1$ zurückliefert, falls $g(X) >= \Theta$, und $0$ sonst  (vgl. (vgl. 2.1.3 a.):
+
+\begin{equation}
+f:  \mathbb{Z} \to \{0, 1\}, f(u) = f(g(X)) = \begin{cases}
+                                          1  &\text{falls } u >= \Theta \\
+                                          0 &\text{falls } u < \Theta
+\end{cases}
+\label{eq:gl-activation}
+\end{equation}\linebreak[2]
+
+
+\noindent
+Die \textbf{Treppenfunktion} ähnelt der \textbf{Heaviside}-Funktion, die für beliebige negative Zahlen $0$ zurückliefert, ansonsten $1$.
+Wir werden später sehen, wie wir einen Schwellenwert wie in Gleichung~\ref{eq:gl-activation} in die Berechnung der Summe einfliessen lassen können, um von der Funktion Gebrauch zu machen.\\
+
+\noindent
+Da die Erregung absolut ist, muss $\Theta$ die Ungleichung
+
+\begin{equation}
+\Theta > (\sum^n_{j=1} w_+) - w_-
+\end{equation}\linebreak[2]
+
+\noindent
+wobei $w_+ \in \{2, 1\}$ je nach Zielzelle. So folgt bspw. $w_+ = w^2_+$ für Zellen, die eine \textit{Disjunktion} implementieren.\\
+
+\noindent
+Is $w_+$ bekannt, können wir abkürzen zu
+
+\begin{equation}
+\Theta > n * w_+ - 1
+\end{equation}
+
+
+\subsection{McCulloch-Pitts-Netz als Graph}
+
+Ein zyklenfreies Netz aus MCP-Zellen, das aus \textbf{AND} (Konjunktion)-, \textbf{OR} (Disjunktion)- und \textbf{NOT} (Negation)-Zellen (siehe nachfolgender Abschnitt) besteht, können wir wie folgt definieren (vgl. [Roj93:32, Definition 2.1]):
+
+
+\begin{definition} Ein MCP-Netz ist ein gerichteter Graph $G = (V, E)$ mit der Knotenmenge
+
+\begin{equation}
+V(G) =\{N_1, N_2, ... N_z\}
+\end{equation}
+
+und der paarweise verschiedenen Kantenmenge
+
+\begin{equation}
+E(G) = \{ (N^1_i, N_{i+1}), ..., (N^k_i, N_{i+1}) | i <= |V(G)|, k \in \mathbb{N} \}
+\end{equation}
+
+sowie der Kantengewichtsfunktion
+
+
+
+\begin{equation}
+\gamma: N^2 \to \{2, 1, -1\}, \gamma((N^k_i, N_{i+1})) = \begin{cases}
+                                                              -1 \text{ falls } (N^k_i, N_{i+1})  \text{ hemmend } \\
+                                                              w_+  \text{ sonst}
+\end{cases}
+\end{equation}
+\label{def:mcpnetz}
+\end{definition}
+
+Gerichtete Kanten eine MCP-Netzes nehmen eigentlich keine Gewichtung der Information vor [Roj93:40, ``2.4.1 Gewichtete und ungewichtete Netze``]. Sowohl [Min67:34] als auch [Roj93:32] nutzen unter Berücksichtigung der \textit{absoluten Hemmung} nur die Summe der erregenden Signale und vergleichen diese mit $\Theta$ - dieser Vergleich findet nur statt, wenn \textit{kein} hemmendes Signal ankommt: Die Zelle liefert sonst direkt $0$ als Ausgabe zurück. [Fau94] nutzt\footnotemark[19] unter Berücksichtigung von Gleichung~\ref{eq:gl-activation} gewichtete Kanten, in ähnlicher Weise auch [BJ90:39 ff.]. Wie wir später sehen werden, wird die Gewichtung von Kanten ein wichtiger Bestandteil der Funktionsweise neuronaler Netze. Wir entfernen uns mit dem o.g. Modell ein Stück von der ursprünglichen Modellierung.
+
+
+\footnotetext[19]{
+    Gewichte sind in absolut hemmenden Leitungen unsinnig nach [Roj93:42, Abs. 1]
+}
+
+\subsection{Implementierung von Booleschen Funktionen}\label{seq-mcpbool}
+
+Mit den eingeführten Formalismen können wir nun aussagenlogische Funktionen auf Basis von MCP-Zellen modellieren.
+
+
+\subsection*{AND (Konjunktion)}
+In der zweiwertigen Aussagenlogik liefert die \textbf{AND}-Funktion ($\land$) nur dann die Ausgabe ``wahr``, wenn die darin verknüpften Aussagen jeweils den Wahrheitswert ``wahr`` besitzen.
+
+Für ``wahr`` = $1$ und ``falsch``= $0$ sieht die Wahrheitstabelle für zwei Aussagen wie folgt aus (Tabelle~\ref{tab:and}):
+
+\setlength{\tabcolsep}{1.5em}
+{\renewcommand{\arraystretch}{1.5}%
+\begin{table} %[hbtp]
+    \centering
+    \begin{tabular}{c | c | c }
+        \textbf{$A$} & \textbf{$B$} & \textbf{$A \land B$} \\
+        \hline
+        1  & 1 & 1 \\
+        1  & 0 & 0 \\
+        0  & 1 & 0 \\
+        0  & 0 & 0 \\
+    \end{tabular}
+    \caption{Wahrheitstabelle für \textbf{AND}}
+    \label{tab:and}
+\end{table}
+
+
+
+Wir legen für $N$ zwei erregende Eingabesignale $x_1, x_2$ sowie den Schwellenwert $\Theta = 2$ fest. Die Gewichte für $x_1$ und $x_2$ sind jeweils $w^1_+$ (s. Kantengewichtsfunktion in Definition~\ref{def:mcpnetz}).
+
+Mit den oben eingeführten Definition verhält sich unser MCP-Neuron wie folgt (Tabelle~\ref{tab:mcp-and}):
+
+\begin{table} %[hbtp]
+    \centering
+    \begin{tabular}{c | c | c |c }
+        $x_1*w^1_+$ & $x_2*w^1_+$ & $g_{and}(X)$ & $f_{and}(x)$ \\
+        \hline
+        1     & 1     & 2      &   1   \\
+        1     & 0     & 1      &   0   \\
+        0     & 1     & 1      &   0   \\
+        0     & 0     & 0      &   0   \\
+    \end{tabular}
+    \caption{Werte der Aktivierungs- und Eingabefunktion für eine \textbf{AND-MCP-Zelle}}
+    \label{tab:mcp-and}
+\end{table}
+
+
+\subsection*{OR (Disjunktion)}
+
+Für die \textbf{OR}-Funktion ($\lor$) legen wir $\Theta = 2$ und zwei erregende Eingabesignale $x_1, x_2$ fest. Die Gewichte für $x_1$ und $x_2$ sind jeweils $w^2_+$: Zusammen mit $\Theta = 2$ reicht also eine erregende Eingabe aus (Tabelle~\ref{tab:mcp-or}):
+
+
+\begin{table} %[hbtp]
+    \centering
+    \begin{tabular}{c | c | c |c | c | c|c}
+ $A$ & $B$ & $A \lor B$ & $x_1*w^2_+$ & $x_2*w^2_+$ & $g_{or}(X)$ & $f_{or}(x)$ \\
+\hline
+ 1   & 1   & 1          & 2     & 2     & 4           & 1            \\
+ 1   & 0   & 0          & 2     & 0     & 2           & 1            \\
+ 0   & 1   & 0          & 0     & 2     & 2           & 1            \\
+ 0   & 0   & 0          & 0     & 0     & 0           & 0            \\
+\end{tabular}
+\caption{Werte der Aktivierungs- und Eingabefunktion für eine \textbf{OR-MCP-Zelle}}
+\label{tab:mcp-or}
+\end{table}
+
+\subsection*{NOT (Negation)}
+
+Für die \textbf{NOT}-Funktion ($\neg$) legen wir $\Theta = 0$ und ein erregendes Eingabesignal $x_1$ fest. Das Gewichte für $x_1$ ist $w_-$: Zusammen mit $\Theta = 0$ würde also ein aktiv anliegendes Signal zu $1 * w_-=-1 < \Theta$. Durch die resultierende Hemmung könnte das Signal die Zelle nicht aktivieren (Tabelle~\ref{tab:mcp-neg}):
+
+
+\begin{table} %[hbtp]
+    \centering
+    \begin{tabular}{c | c | c |c | c | c}
+        $A$ & $\neg A$ & $x_1$ & $g_{\neg}(X)$ & $f_{\neg}(x)$  \\
+        \hline
+         1   & 0        & -1     &  -1             & 0             \\
+         0   & 1        & 0     &  0             &  1             \\
+    \end{tabular}
+    \caption{Werte der Aktivierungs- und Eingabefunktion für eine \textbf{NOT-MCP-Zelle}}
+    \label{tab:mcp-neg}
+\end{table}
+
+
+\subsection*{NAND (NOT AND)}
+
+$\{\neg, \lor, \land\}$ bilden ein vollständiges Operatorensystem, d.h., jede boolesche Funktion lässt sich durch einen aussagenlogischen Ausdruck  beschreiben, in dem ausschließlich Operatoren aus dieser Menge vorkommen [Hof22:89, Abs. 3].
+[She13] hat gezeigt, das bereits $\{\neg, \land\}$  ausreicht, um ein vollständiges Operatorensystem zu bilden.
+Wie wir oben gesehen haben, können wir über MCP-Zellen die Operatoren $\neg, \lor, \land$ darstellen.
+Ein MCP-Netz ist nach Definition also in der Lage, jede boolesche Funktion zu modellieren.
+Bereits $\{\neg, \land\}$ reichen aus, um dieses Ziel zu erfüllen. \textbf{NAND} (Tabelle~\ref{tab:nand}) kann in einem MCP-Netz folgendermaßen modelliert werden:
+
+\begin{table} %[hbtp]
+    \centering
+    \begin{tabular}{c | c | c}
+        $A$ & $B$ & $\neg(A \land B)$ \\
+        \hline
+        1   & 1   & 0           \\
+        1   & 0   & 1           \\
+        0   & 1   & 1           \\
+        0   & 0   & 1           \\
+    \end{tabular}
+    \caption{Die Wahrheitstabelle für \textbf{NAND}}
+    \label{tab:nand}
+\end{table}
+
+
+Wir legen $\Theta_1 = 2$ fest (s. \textbf{AND}-Zelle), an dem zwei erregende Eingaben anliegen. $\Theta_2$ ist $0$ (s. \textbf{NOT}-Zelle) und besitzt eine hemmende Eingabe.
+
+$N_1$ (\textbf{AND}) wird aktiviert, wenn sowohl $x_1$ als auch $x_2$ ein erregendes Signal weiterleiten. Das Ausgabesignal wird an $N_2$ (\textbf{NOT}) weitergeleitet und dort invertiert.
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{images/p1ReadSeq.pdf}
+    \caption{Ein MCP-Netz zur Modellierung von \textbf{NAND}}
+    \label{fig-mcpnand}
+\end{figure}
+
+
+\subsection*{XOR (exclusive or)}
+
+Eine weitere boolesche-Funktion, die aus mehreren MCP-Zellen als Netz modelliert werden kann, ist die \textbf{XOR}-Funktion (``exclusive or``). Die Wahrheitstabelle hierfür ist in Tabelle~\ref{tab:xor} zu finden.
+
+\begin{table} %[hbtp]
+    \centering
+    \begin{tabular}{c | c | c}
+        $A$ & $B$ & $\neg(A \oplus B)$ \\
+        \hline
+        1   & 1   & 0           \\
+        1   & 0   & 1           \\
+        0   & 1   & 1           \\
+        0   & 0   & 0           \\
+    \end{tabular}
+    \caption{Die Wahrheitstabelle für \textbf{XOR}}
+    \label{tab:xor}
+\end{table}
+
+
+Für die Konstruktion des Netzes können wir zunächst ein Grundgerüst definieren, das wie eine \textbf{OR}-Zelle arbeitet. $\Theta = 2$ wird übertroffen, wenn entweder $N_1$ oder $N_2$ ein erregendes Signal weiterleitet (s. Abbildung~\ref{fig-mcpxornf}). Allerdings wird $\Theta$ auch übertroffen, wenn jeweils $N_1$ und $N_2$ gleichzeitig aktiv sind, denn dann ist $f_{xor}(g(X)) = 4$.
+In diesem Fall muss also eine Hemmung zwischengeschaltet werden, was mit je zwei hemmenden Eingaben realisiert werden kann: $N_1$ hemmt $Z_2$, wenn $N_1$ aktiv ist.
+Das führt dazu, das ein von $N_2$ ausgehendes erregendes Signal gehemmt wird: $Z_2$ leitet in dem Fall $0$ an $N_3$ weiter. Die Zellen $N_2$ und $Z_1$ werden analog verbunden, wodurch dann das Netz in Abbildung~\ref{fig-mcpxorf} entsteht.
+
+Die \textbf{disjunktive Normalform} (Gleichung~\ref{eq:gl-xordis}) und die \textbf{konjunktive Normalform} (Gleichung~\ref{eq:gl-xorcon}) von \textbf{XOR} liefern anschaulich die Formel für das Netz.
+
+\begin{equation}
+A \oplus B \equiv (\neg A \land B) \lor (A \land \neg B)
+\label{eq:gl-xordis}
+\end{equation}
+
+\begin{equation}
+A \oplus B \equiv (A \lor B) \land (\neg A \lor \neg B)
+\label{eq:gl-xorcon}
+\end{equation}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{images/p1ReadSeq.pdf}
+    \caption{Entwurf für ein MCP-Netz zur Modellierung von \textbf{XOR} (nicht funktional)}
+    \label{fig-mcpxornf}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{images/p1ReadSeq.pdf}
+    \caption{Entwurf für ein MCP-Netz zur Modellierung von \textbf{XOR} (funktional)}
+    \label{fig-mcpxorf}
+\end{figure}
+
+
+
+\subsection{Modellierung von MCP-Netzen unter Berücksichtigung von Zeiteinheiten}
+
+Bislang haben wir nur MCP-Netze betrachtet, bei denen wir die Zeiteinheiten nicht berücksichtigt haben. In Anlehnung an das McCulloch und Pitts-Paper Original-Arbeit wollen wir jetzt ein Netz modellieren, das die \textbf{paradoxe Hitzeempfindung} [HVK+82] simuliert: Das Phänomen, das bei kurzzeitiger Kühlung der Haut Hitze empfunden wird.\\
+
+\blockquote{
+    If a cold object is held to the skin for a moment and removed, a sensation of heat will be felt; if it is applied for a longer time, the sensation will be only of cold, with no preliminary warmth, however transient.
+}[MP43:106]\\
+
+Das nach [MP43:105 Figure 1 (e)] aufgestellte Modell und die dazugehörige Formel übertragen wir nun in die von uns verwendete Notation (vgl. [Fau94:31 ff.]). In der Abbildung~\ref{fig-mcpheat} sind zwei Temperaturrezeptoren $H_i$ (Hitze) und $K_i$ (Kälte) dargestellt, ausserdem hat das Netz zwei Ausgänge, $H_o$ und $K_o$. $H_o$ wird zum Zeitpunkt $t$ aktiviert, wenn Hitze empfunden wird, $K_o$ entsprechend bei Kälte.
+\noindent
+Die Bedingungen für eine Aktivierung von $H_o$ lauten: Hitze wird signalisiert, wenn entweder der Wäremerezeptor durch Wärme stimuliert wird \textbf{oder} kurzzeitig ein Kälteimpuls von den Kälterezeptoren registriert wird.\\
+
+Formal dargestellt (vgl. [MP43 S. 106]):
+
+\begin{equation}
+H_o(t) \equiv H_i(t-1) \lor (K_i(t-3) \land \neg K_i(t - 2))
+\label{eq:gl-heat}
+\end{equation}
+
+Die Bedingungen für eine Aktivierung der Zelle $K_o$, um Kälte zu signalisieren, lautet
+
+
+\begin{equation}
+K_o(t) \equiv K_i(t-2) \land K_i(t-1)
+\label{eq:gl-cold}
+\end{equation}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{images/p1ReadSeq.pdf}
+    \caption{MCP-Netz zur Modellierung der paradoxen Hitzeempfindung.}
+    \label{fig-mcpheat}
+\end{figure}
+
+\noindent
+Zeitabhängige Werte der MCP-Zellen wollen wir nun durch Formeln auszudrücken.
+Die zu dem Zeitpunkt $t$ bekannten Werte sind bereits in Gleichung~\ref{eq:gl-heat} sowie Gleichung~\ref{eq:gl-cold} erfaßt.
+\noindent
+Es folgt für $H_o(t)$
+
+\begin{equation}
+H_o(t) \equiv Z_1(t-1) \lor H_i(t-1)
+\label{eq:gl-heat1}
+\end{equation}
+\noindent
+Gleichung~\ref{eq:gl-heat1} ist abhängig von $Z_1$ und $H_i$ zum Zeitpunkt $t - 1$. $Z_1(t-1)$ ist trivialerweise der Wert, mit dem der Rezeptor stimuliert wurde. Für $Z_1(t-1)$ folgt:
+
+\begin{equation}
+Z_1(t - 1) \equiv Z_2(t-2) \land \neg K_i(t-2)
+\label{eq:gl-z1}
+\end{equation}
+\noindent
+Analog zu $H_i(t - 1)$ ist $K_i(t - 2)$ einfach der Stimulus für den Rezeptor.
+Deshalb benötigen wir nur noch $Z_2(t-2)$, was einfach das efferente Signal von $K_i(t-3)$ erhält:
+
+\begin{equation}
+Z_2(t-2) \equiv K_i(t-3)
+\label{eq:gl-z2}
+\end{equation}
+\noindent
+Die Abfolge der Aktivierung von $K_o$ bzw. $H_o$ kann nun tabellarisch auf Grundlage der Gleichungen dargestellt werden.
+Hierbei ist der Inhalt der Tabellenzellen (bis auf die Spalte $t$) $f(g(X))$  (siehe Gleichung~\ref{eq:gl-activation}), sofern der Wert zu dem entsprechenden Zeitpunkt bekannt ist (vgl. [Fau94:32-33]).
+\noindent
+Wir beginnen mit der Stimulierung von $K_i$ durch zwei aufeinanderfolgende Kälteimpulse (Abbildung~\ref{fig-coldimp}). Tabelle~\ref{tab:coldimp} stellt die die jeweiligen Schritte dar: Es wird erwartet, das $K_o$ feuert. Tabelle~\ref{tab:heatimp} beschreibt im Gegenzug die Erwartung ``Wärme`` an die Ausgabe für einen Stimulus von $H_i$, dargestellt in Abbildung~\ref{fig-heatimp}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{images/p1ReadSeq.pdf}
+    \caption{Zwei Kälteimpulse werden nacheinander in das Netz gespeist.}
+    \label{fig-coldimp}
+\end{figure}
+
+
+\begin{table} %[hbtp]
+    \centering
+    \begin{tabular}{c | c | c | c | c | c | c}
+        $t$   & $H_i$ & $K_i$ & $Z_1$ & $Z_2$ & $H_o$ & $K_o$ \\
+        \hline
+         $t-2$ & 0     & 1     &          &          &          &          \\
+         $t-1$ & 0     & 1     & 0        & 1        &          &          \\
+         $t$   &       &       & 0         & 1         & 0        & 1        \\
+    \end{tabular}
+    \caption{Tabellarische Darstellung von zwei Kälteimpulsen}
+    \label{tab:coldimp}
+\end{table}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{images/p1ReadSeq.pdf}
+    \caption{Ein einzelner Wärmeimpuls aktiviert das Wärmesignal.}
+    \label{fig-heatimp}
+\end{figure}
+
+
+
+\begin{table} %[hbtp]
+    \centering
+    \begin{tabular}{c | c | c | c | c | c | c}
+        $t$   & $H_i$ & $K_i$ & $Z_1$ & $Z_2$ & $H_o$ & $K_o$ \\
+        \hline
+        $t-1$ & 1     & 0     &          &          &          &          \\
+        $t$   &       &       &          & 0         & 1        & 0        \\
+    \end{tabular}
+    \caption{Tabellarische Darstellung von einem Wärmeimpuls}
+    \label{tab:heatimp}
+\end{table}
+
+
+
+Die Simulation der paradoxen Hitzeempfindung (Abbildung~\ref{fig-heatparad}) erfolgt nun durch eine einmalige Aktivierung von $K_i$ zum Zeitpunkt $t-3$.
+Danach wird der Stimulus entfernt: formal wird das durch $\neg K_i (t-2)$ ausgedrückt (s. Gleichung~\ref{eq:gl-heat}).
+
+\begin{table} %[hbtp]
+    \centering
+    \begin{tabular}{c | c | c | c | c | c | c}
+        $t$   & $H_i$ & $K_i$ & $Z_1$ & $Z_2$ & $H_o$ & $K_o$ \\
+        \hline
+           $t-3$   &  0  &  1  &    &    &    &  \\
+           $t-2$   &  0  &  0  &  0  & 1   &    &  \\
+           $t-1$   &    &    &   1 & 0   &  0  & 0 \\
+          $t$   &    &    &    &    &  1  & 0 \\
+    \end{tabular}
+    \caption{Tabellarische Darstellung der paradoxen Hitzeempfindung}
+    \label{tab:heatparad}
+\end{table}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{images/p1ReadSeq.pdf}
+    \caption{Die paradoxen Hitzeempfindung durch einen einzelnen Kälteimpuls.}
+    \label{fig-heatparad}
+\end{figure}
+
+\clearpage
+\pagebreak
+
+
+\subsection{Zusammenfassung}\label{mcp-summary}}
+
+Das MCP-Modell ist ein \textbf{empirisches Modell}\footnotemark[20] [HI97:4] und basiert auf Analyse und einfacher Schwellenwertlogik [AR88:16, Abs. 2]. 
+In ihrem Papier weisen McCulloch und Pitts darauf hin, dass das Alles-Oder-Nichts-Prinzip als Vorbild für ihre Abstraktion durch Aussagenlogik dient. 
+Von allem, was wir in Kapitel 1 über Nervenzellen erfahren haben, dürfen wir den Schluss ziehen, dass das von ihnen erstellte Modell eine starke Vereinfachung ist\footnotemark[21].
+Aktionspotenzialen lassen sich gewiss nicht auf zweiwertige Logik reduzieren, darüber hinaus berücksichtigen sie auch nicht eine mögliche Veränderung des Netzes, z.B. durch Lernen\footnotemark[22]. 
+McCulloch und Pitts sind sich dessen durchaus bewußt\footnotemark[23]. 
+Es bleibt ein statisches Modell, es muß ``konstruiert`` werden [Fau94:28, ``1.6.2 Algorithm``]. 
+Es ist nur durch Änderung der Netztopologie bzw. der Schwellenwerte anpassungsfähig [Roj93:51, Abs. 2] Selbständig zu lernen vermag es nicht.\\
+
+\footnotetext[20]{
+    auch ``caricature model`` [HI97:4]
+}
+\footnotetext[21]{
+    ``This ensures its status as a \textit{model}, and not a \textit{copy}, of a real neuron, and makes it possible to implement on a digital computer.`` [BJ90:43, Hervorhebungen i. O.]
+}
+\footnotetext[22]{
+    ``Lernen`` geschieht auf physiologischer Ebene durch die Modulierung von Synapsen:[HS19:115 ff.]
+}
+\footnotetext[23]{
+    ``McCulloch and Pitts acknowledged in their paper that their definition of a neuron was idealized, and that they made physical assumptions that were 'most convenient for the calculus'`` [Abr02:21, ``Conclusion``]. Siehe auch [MP43:101]: ``[...]we regard facilitation and extinction as dependent upon continuous changes in threshold related to electrical and chemical variables, [...]``, sowie ``He {[McCulloch]} never claimed that the 1943 model exhausted the richness of individual neurons`` [Arb19:11, ``Does the Brain Have a Logic{?}``, Abs. 4]
+}
+
+
+
+Tatsächlich ist die McCulloch-Pitts-Zelle von eher geringer Bedeutung für die Neurowissenschaft gewesen\footnotemark[24][AR88:17, Abs. 2]. 
+Umso größer war ihr Einfluss auf die Computerwissenschaften\footnotemark[25]. 
+McCulloch und Pitts nahmen für ihr Modell das menschliche Gehirn als Grundlage und ermöglichten so einen neuen Blickwinkel auf Ursache und Wirkung. ``Mind`` no longer ``goes more ghostly than a ghost``[MP43:114]:
+
+\footnotetext[24]{
+    [AR88:17]: ``The immense theoretical influence of this paper was not among neuroscientists but among computer scientists.``; [Roj93:51] kommt zu einem ähnlichen Schluss: ``Die Art der Schaltungen, die mit
+    diesen Zellen gebaut werden, ist aber biologisch gesehen nicht so relevant.``
+}
+\footnotetext[25]{
+    Die Arbeit war ebenso wichtig für die Entwicklung des ``Konnektionismus`` [Arb19:11, ``Does the Brain Have a Logic{?}``, Abs. 4], einer Forschungsrichtung der künstlichen Intelligenz, in der Modelle (neuronale Netze) untersucht werden, mit deren Hilfe sich intelligente und kognitive Handlungen auf Maschinen übertragen lassen [Dor91:v]
+}
+
+\blockquote[{[Per88:9, ``Logical Neurons and immanent ideas``]}]{
+If nerve cells were equivalent to the formal neurons of McCulloch and Pitts and if circuits of such elements could be made arbitrarily complicated, then any kind of animal behavior, however marvelously complicated or however intricately linked to sensory input, could be reproduced, and hence understood, in terms of these circuits.
+}
+
+Logische Schaltungen, die Intelligenz und Kognition ermöglichen, brachte den Gedanken an eine ``intelligente Maschine`` hervor (vgl. [Pic04:204, Abs. 3]): So war ihre Formalisierung ein wichtiges Schlüsselelement für die von-Neumann-Rechnerarchitektur [Neu45] sowie Wieners Kybernetik\footnotemark[2], und zusammen mit den nachfolgenden Arbeiten von Hebb [Heb49] und Rosenblatt ebnete es den Weg für die Forschung an künstlicher Intelligenz [Arb19:1 ``Introduction``].
+
+\noindent
+Interessant ist ihr Vermerk, dass der Entwurf von Netzen mit Zyklen ungleich schwerer sei als der für zyklenfreie Netze, denn:
+
+\blockquote[{[MP43:108, ``3. The Theory: Nets with Circles``, Hervorhebung i.O.]}]{
+ This is largely a consequence of the possibility that activity may be set up in a circuit and continue reverberating around it for an indefinite period of time, so that the realizable \textbf{\textit{Pr}} may involve reference to past events of an indefinite degree of remoteness.
+}
+
+\noindent
+Eine wie in Gleichung~\ref{eq:gl-z1} beschriebe MCP-Zelle $Z_i(t)$ könnte also in solchen Netzen eine Aktivität $Z_k(t-n)$ referenzieren, bei der $n \in \mathbb{N}$ unbestimmt ist.
+
+\noindent
+Besondere Beachtung verdient die Bemerkung von McCulloch und Pitts bzgl. ``Berechenbarkeit``
+
+\blockquote[{[MP43:113]}]{
+This is of interest as affording a psychological justification of the Turing definition of computability and its equivalents, Church’s A-definability and Kleene’s primitive recursiveness: if any number can be computed by an organism, it is computable by these definitions, and conversely.
+}
+
+\noindent
+Sie nehmen hiermit u.a. Bezug auf die von Alan Turing (1912 - 1954) bereits 1936 veröffentlichte Arbeit ``On Computable Numbers, with an Application to the Entscheidungsproblem`` [Tur36], in der Turing die Beschreibung der Operationen seines Computers einleitet mit:
+
+\blockquote[{[Tur36:250]}]{
+Let us imagine the operations performed by the computer to be split up into 'simple operations' which are so elementary that it is not easy to imagine them further divided.
+}
+
+\noindent
+Parallelen zu der Architektur der von Turing aufgestellten Modelle und dem von McCulloch entworfenen ``psychons`` als kleinste Einheit psychischer Aktivitäten sind erkennbar. [Pic04] stellt darüber hinaus fest, dass die Aussage, MCP-Netze können Berechnungen anstellen, einen ersten wichtigen Bezug zwischen mathematischer Theorie und Neurowissenschaft herstellte [Pic04:197].
+
+\noindent
+McCulloch schreibt dazu später
+
+\blockquote[{[Mcc55:164, letzter Abs.]}]{
+Pitts and I showed that brains were Turing machines, and that any Turing machine could be made out of neurons
+}
+
+\noindent
+und stellt fest, dass das Nervensystem eine ausgezeichnete logische Maschine repräsentiert [Mcc51:80].\\
+
+\noindent
+Konsequenterweise nutzt [Min67] die MCP-Zelle als endlichen Automaten\footnotemark[26]\footnotemark[27] mit zwei Zuständen, aus denen andere endliche Automaten gebaut werden, und nennt diese, im Jahr 1967 schon geläufig: \textbf{Neuronale Netze} [Min67:33].
+
+
+\footnotetext[26]{
+    Ein endlicher Automat ist eine informationsverarbeitende Maschine. Basierend auf Eingaben lassen sich mit einer solchen Maschine Zustände, Zustandsübergänge und Ausgaben modellieren. Bei einem \textit{endlichen} Automaten sind die genannten Eingaben, Zustände, und Ausgaben endlich. [SSH95:29, ``2.1 Endliche Automaten`` ff.]
+}
+\footnotetext[27]{
+    dass MCP-Netze endliche Automaten sind: Auch in [Cow90:76] sowie [Roj93:47, ``Satz 2.4``].  [Arb19] weist darauf hin, dass die Arbeit von McCulloch und Pitts grundlegend für Automatentheorie gewesen ist [Arb19:8, ``A Selection of Key Papers``, Abs. 3]
+}
+
+
+
+
+
+
+

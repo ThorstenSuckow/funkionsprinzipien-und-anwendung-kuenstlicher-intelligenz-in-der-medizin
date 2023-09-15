@@ -411,12 +411,20 @@ Otto Loewi erhielt 1936 den Nobelpreis für Medizin für seine Forschungen an de
 Loewi vermutete in der Lösung eine Substanz, die er ``Vagusstoff`` nannte.
 Henry Dale - mit dem sich Loewi den Nobelpreis teilte - konnte diesen Stoff später als \textit{Acetylcholin} identifizieren, ein exzitatorischer Neurotransmitter\footnotemark[52], der bei chemischen Synapsen als Botenstoff zur Signalübertragung beteiligt ist\footnotemark[53].
 
-\subsection{Synaptische Übertragung}
+\subsection{Synaptische Übertragung}\label{synaptischeuebertragung}
 Neben elektrischen Synapsen, bei denen der Signalaustausch durch einen direkten Stromfluss über sog.  	extit{gap junctions} und deren ionenleitfähige Verbindungen\footnotemark[54] passiert [BCP18:103], existieren im Gehirn vor allem \textit{chemische Synapsen} [BCP18:118, Abs. 3]: Die Signalweiterleitung im Gehirn erfolgt überwiegend auf chemische Weise [BCP18:121, ``Chemische Synapsen``, Abs.1].
 
 Chemische Synapsen sind nicht direkt miteinander verbunden. 
 Zwischen ihnen existiert ein Spalt, der ca. 20-40 nM breit ist [KSJ+13:184, rechte Spalte, Abs. 1], in der sich eine ``Matrix aus extrazellulären Proteinen``\footnotemark[55]  [BCP18:122, Abs.2 f.] befindet, die den Synapsenspalt überbrückt. 
 Die Übertragung von Signalen erfolgt über Exozytose: Botenstoffe (\textit{Neurotransmittern}) diffundieren  aus den präsynaptischen Endigungen in diesen Spalt [BCP18:122, Abs.2 f.], und verschiedene Typen von Rezeptoren an den postsynaptischen Endigungen wandeln die Botenstoffe in hemmende oder erregende Signale um, die dann von der postsynaptischen Zelle nach dem Alles-oder-Nichts-Prinzip integriert werden.
+
+Die durch das Aktionspotenzial ausgelöste Depolarisation der Membran an den Axonterminalen bewirkt eine Öffnung spannungsgeladener Calcium-Canäle [KSJ+13:184, rechte Spalte, Abs. 2].
+Durch die ungleiche $Ca^{2+}$ Ionenkonzentration zwischen der EZF und IZF (10.000 : 1:Tabelle~\ref{tab:ionenkonzentration}) entsteht eine hohe Triebkraft für $Ca^{2+}$: Nach Gleichung~\ref{eq:gl-nernst} ergibt sich für das Gleichgewichtspotenzial für $Ca^2+$
+
+\begin{equation}
+ E_{Ca^{2+}} = 123,08 mV
+ \label{eq:gl-eqca2}
+\end{equation}
 
 \footnotetext[52]{
  ``[... ]Acetylcholin wirkt erregend an der motorischen Endplatte, aber hemmend an den Schrittmacherzellen des Herzens`` {[HS19c:105, ``Postsynaptische Rezeptoren vermitteln den Transmittereffekt``]}
@@ -430,6 +438,160 @@ Die Übertragung von Signalen erfolgt über Exozytose: Botenstoffe (\textit{Neur
 \footnotetext[55]{
  lies: \textit{extrazelluläre Matrix}. Hierbei handelt sich um den Gewebeanteil im \textit{Interzellularraum}, also der Raum ausserhalb der Zellen: ``The extracellular matrix {[...]} surrounds all connective tissue cells providing mechanical support and physical strength to tissues, organs and the organism as a whole`` {[AHH+98:3, Abs. 2]}
 }
+
+\pagebreak
+
+und bei einem Membranpotenzial von $V_m \sim 20 mV$ durch Depolarisation liegt die Triebkraft für $Ca^{2+}$ bei $\sim -100 mV$:
+
+\begin{equation}
+ V_m - E_{Ca^{2+}} = 20 mV - 123,08 mV = -103,08 mV
+ \label{eq:gl-triebkraftca2}
+\end{equation}
+
+
+Die Calcium-Ionen strömen in das Innere der Zelle und lösen die Exozytose von \textbf{synaptischen Vesikeln}\footnotemark[56] aus, kleine, mit einer Membran von der IZF getrennte Strukturen von etwa 50 nm Durchmesser, die mit Neurotransmittern gefüllt sind [BCP18:1000 ``Synaptisches Vesikel``].
+Im \textit{synaptischen Endknöpfchen} befinden sich 100-200 von diesen Bläschen, die jeweils tausende Moleküle eines Neurotransmitters beinhalten [KSJ+13:184, rechte Spalte, Abs. 2``].
+
+Der Calciumeinstrom in die präsynaptische Endigung löst die Verschmelzung dieser Bläschen mit der Zellmembran des Endknöpfchens an der sogenannten \textbf{aktiven Zonen}\footnotemark[57] aus: Ein spezialisierter Abschnitt der Membran, der direkt gegenüber der \textbf{postsynaptischen Dichte}\footnotemark[58] liegt, der Abschnitt der postsynaptischen Endigung, in der sich die Rezeptoren [BLS19:95, ``Die Struktur chemischer Synapsen`` ff.] befinden.
+Kurz nach Beginn der Transmitterübertragung über den synaptischen Spalt findet die \textbf{Endozytose} statt, ein Recyclingprozess, in dem die individuellen Vesikelmembranen wiederhergestellt und mit Neurotransmitter erneut aufgefüllt werden [BCP18:133, Abs. 1].
+
+
+
+\subsection{Neurotransmitter und ihre Rezeptoren}
+
+Die Diffusion der Vesikel in den synaptischen Spalt dauert ca. 10–100 µs, danach binden sich die Transmitter an die Rezeptoren der postsynaptischen Zelle [BLS19:98, rechte Spalte, Punkt. 4], die das ``interzellulläre chemische Signal [...] in ein intrazelluläres Signal (eine Änderung des Membranpotenzials oder eine chemische Veränderung) in der postsynaptischen Zelle umwandeln`` [BCP18:123, Abs. 2].
+
+Rezeptoren können hierbei \textit{ionotrop} oder \textit{metabotrop} sein: Inotrope Rezeptoren sind gleichzeitig auch Ionenkanäle und aktivieren sich, wenn ein bestimmter Transmitter an sie bindet  [BLS19:109, ``Ionotrope und metabotrope Rezeptoren``]. 
+Metabotrope Rezeptoren lösen intrazelluläre Stoffwechselvorgänge aus, und weitere Botenstoffe (sog. \textbf{second messenger}) können dann für eine Aktivierung von Ionenkanälen verantwortlich sein[RK18:134, rechte Spalte, Abs. 2``]\footnotemark[59].
+
+Als Neurotransmitter spielen im zentralen Nervensystem vor allem  die Aminosäuren \textit{Glutamat} (Glu, erregend), \textit{Gamma-Aminobuttersäure} (GABA, hemmend)\footnotemark[60] und Glycin (Gly; hemmend) eine Rolle, an neuromuskulären Endplatten vermittelt das bereits erwähnte Amin \textit{Acetylcholin} (errgend, ACh).
+
+\footnotetext[56]{
+ ``\textit{vesicula}`` (lat.): ``Bläschen``
+}
+\footnotetext[57]{
+ [BCP18] beschreibt das Aussehen der aktiven Zone als ``ein Feld winziger Pyramiden`` [BCP18:123, Abs. 1]
+}
+\footnotetext[58]{
+ [RK18] spricht von direkter Einwirkung (inotrop) und indirekter Einwirkung (metabotrop) [RK18:134, rechte Spalte, Abs. 2]
+}
+
+\footnotetext[59]{
+ ``postsynaptische Verdichtung`` bei [BCP18:123, Abs. 2]
+}
+
+Schnelle Formen der synaptischen Übertragung dauern zwischen 2 - 100ms, langsame Übertragungen einige 100 Millisekunden bis Minuten [BCP18:129, Abs. 4 ff.] Transmitter werden oft zusammen mit Co-Transmittern ausgeschüttet, die die Erregungsübertragung modulieren [SD07:52, Abs. 2].
+
+Die Art der Rezeptoren spielt eine wesentliche Rolle, welche Wirkung der Neurotransmitter hat: Ob ein exzitatorischer oder inhibitorischer Transmitter auch dieselbe Wirkung in der postsynaptische Zelle hervorruft, entscheidet sich bei den Rezeptoren [BLS19:109, ``Wirkung der postsynaptischen Rezeptoren``]. 
+Als Beispiel sei hier noch einmal der ``Vagusstoff`` ACh erwähnt, der die Kontraktion des Herzens verlangsamt, bei der Skelettmuskulatur jedoch eine schnelle Depolarisation der Muskelfasern bewirkt [BCP18:137, Abs. 2].
+Erregende und hemmende Synapsen kann man auch an ihrer Struktur erkennen: Asymmetrische oder \textit{Gray-Typ-I-Synapsen} sind auf der postsynaptischen Seite dicker als auf der präsynaptischen, bei gleicher Dimension der Membrandifferenzierungen spricht man von \textit{Gray-Typ-II-Synapsen}. Typ-I sind in der Regel exzitatorisch, Typ-II inhibitorische  [BCP18:127, Abs. 1 u. S. 147 ``Struktur und Position von exzitatorischen und inhibitorischen Synapsen``].
+
+
+\subsection{Synaptische Integration}
+
+Die Neurotransmitter eines einzelnen Vesikels lösen einen minimalen exzitatorischen oder inhibitorischen postsynaptischen Strom aus (\textbf{mEPSC} bzw. \textbf{mIPSC}, \textit{miniature excitatory / inhibitory postsynaptic current}) . 
+EPSCs und IPSCs setzen sich aus einzelnen dieser mEPSC bzw. mIPSC zusammen und bilden die kleinste Einheit der postsynaptischen Ströme, weshalb man sie als \textit{Quanten} bezeichnet [BLS19:97, ``Quantale Transmitterfreisetzung`` ff.]. 
+Da EPSPs ein Vielfaches des Quantums sind, ``das die Menge an Transmitter in einem einzigen Vesikel und die Anzahl der postsynaptischen Rezeptoren an der Synapse widerspiegelt``, nennt man sie ``gequantelt``\footnotemark[61][PCB18:142, Abs. 1].
+
+Wesentlich für die Entstehung eines neuen Aktionspotenzials in der postsynaptischen Zelle ist die Verrechnung der räumlich oder zeitlich eintreffenden Signale. 
+Hierbei ist die \textbf{räumliche Summation} die Integration von vielen fast gleichzeitig eintreffenden Signalen mehrerer präsynaptischer Zellen, die sich in der Folgezelle zu einem EPSP aufaddieren [BLS19:101, ``Räumliche Summation``]. 
+Unter der \textbf{zeitlichen Summation} versteht man die in gewissen Abständen von ein und derselben Synapse [BCP18:142, ``EPSP``-Summation, Abs. 2] hintereinander eintreffenden EPSPs, die jeweils  das Membranpotenzial für nachfolgende Signale zum Schwellenwert hin verschieben [BLS19:101, ``Zeitliche Summation``]. 
+Ob der Schwellenwert der postsynaptischen Zelle überschritten werden kann ist auch abhängig von dem Abstand der Synapsen von der Initiationszone und den Eigenschaften der dendritischen Membran.
+
+\footnotetext[60]{
+ GABA: Gamma-Aminobuttersäure. Um den GABA-Spiegel zu erhöhen, kann bspw. \textit{Gabapentin} verabreicht werden (https://www.aerzteblatt.de/archiv/20049/Neuropathien-Gabapentin-bremst-ueberaktive-Neurone, abgerufen 01.08.2023): Es ist bei der Behandlung von Anfallsleiden wie der Epilepsie sowie bei Nervenschmerzen (Neuropathien) wirksam (https://www.gelbe-liste.de/wirkstoffe/Gabapentin_21579, abgerufen 01.08.2023)
+}
+
+\footnotetext[61]{
+ Mit Hilfe der \textbf{Quantelungsanalyse} läßt sich die Anzahl der an einer synaptischen Übertragung beteiligten Vesikel bestimmen [BCP18 S.142, Abs. 3 f.]
+}
+
+So kann die EPSP-Amplitude kleiner werden, wenn Strom auf dem Weg zu dem Axonhügel durch die Membran verloren geht\footnotemark[62] [BCP18:142, ``Eigenschaften der Dendriten und synaptische Integration`` ff.].
+
+Zu berücksichtigen ist natürlich auch der Einfluss inhibitorischer Synapsen auf die Zelle: Inhibitorische ``Eingaben``, die hyperpolarisierend wirken, werden von den exzitatorischen Eingaben subtrahiert\footnotemark[63] [KSJ+13:225, rechte Spalte, Abs. 2].
+
+
+\footnotetext[62]{
+ [BCP18] vergleicht die Dendriten mit einem löchrigen Gartenschlauch [BCP18:143, ``Kabeleigenschaften der Dendriten`` ff.]
+}
+
+
+\footnotetext[63]{
+ [BCP18:146, Exkurs 5.6 f.] stellt die Bedeutung inhibitorischer Synapsen anschaulich dar.
+}
+
+
+Das Zusammenspiel zwischen exzitatorischen und inhibitorischen Synapsen wird auch durch das \textbf{Umkehrpotential} bestimmt. 
+Wie wir bei der Entstehung des Aktionspotenzials gesehen haben, transportieren spannungsgesteuerte Ionenkanäle stets entlang des elektrochemischen Gradienten [BLS19 S. 39 ``Das elektrochemische Potenzial`` f.]. 
+Die Membran sei zur Vereinfachung nur permeabel für ein Ion, es gelte weiterhin $V_m < E_{Ion}$: Die Stromrichtung für das Ion ist einwärts IZF (vgl $Gl1.1$). Ist die Triebkraft positiv wegen $V_m > E_{Ion}$, strömt das Ion auswärts EZF. Wenn allerdings
+
+\begin{equation}
+V_m - E_{Ion} = 0
+\end{equation}
+
+dann gilt:
+
+\begin{equation}
+V_m = E_{Ion}
+\end{equation}
+
+In diesem Fall entspricht die Membranspannung dem Gleichgewichtspotenzial des Ions - es findet keine Nettoionenbewegung statt.\\
+
+Der Wert für $V_m$, bei dem die Differenz zwischen $V_m$ und $E_{Ion}$ bei $0$ liegt, wird das _Umkehrpotenzial_ $V_{rev}$ genannt, weil hier ein Vorzeichenwechsel stattfindet: Je nachdem, in welche Richtung sich $V_m$ ändert, ändert sich auch die Richtung des Stroms. 
+Für ionenspezifische Kanäle entspricht das \textit{Umkehrpotenzial} ihrem \textit{Gleichgewichtspotenzial} [SBB+12:95, ``Hyperpolarization or Depolarization`` f.].\\
+
+Sobald eine Membran permeabel für mehr als ein spezifisches Ion ist, muss nach [KSJ+13] die relative Leitfähigkeit der Membran für diese Ionen sowie deren Gleichgewichtspotenziale zur Bestimmung des Umkehrpotenzials berücksichtigt werden. 
+Für die ACh-Rezeptoren an der motorischen Endplatte\footnotemark[64], die für $Na^+$ und $K^+$ permeabel sind, folgt damit, dass die Summe ihrer Ströme am Umkehrpotenzial $V_{rev} = 0$ sein muss:
+
+\begin{equation}
+I_{Ka} + I_{Na} = 0
+\end{equation}
+
+Da der Membranstrom $I_{Ion}$ gleich dem Produkt der Membranleitfähigkeit und der elektrochemischen Triebkraft für dieses Ion ist [BCP18:93 ``Ströme und Leitfähigkeiten in der Membran`` f.], also
+
+\begin{equation}
+I_{Ion} = g_{Ion} * (V_m - E_{Ion})
+\end{equation}
+
+liefert Ersetzen die Gleichung
+
+\begin{equation}
+g_{Na} * (V_m - E_{Na}) = g_{K} * (V_m - E_{K})
+\end{equation}
+
+Da am Umkehrpotential $V_{rev} = V_m$ gilt, können wir $V_m$ durch $E_{rev}$ ersetzen und danach auflösen, was zur folgenden Gleichung führt (vgl. [KSJ+13:196, Box 9-1 f.]):
+
+\begin{equation}
+E_{rev} = \begin{matrix}
+            E_{Na} \space * \space (g_{Na} \space / \space g_{K}) \space + \space E_{K}  \\ \hline
+            (g_{Na} \space / \space g_{K}) \space + 1
+\end{matrix}
+\end{equation}
+
+Die ACh-Rezeptoren haben an der Endplatte eine relative Leitfähigkeit für $Na^+:K^+$ von $1,8$, für die Gleichgewichtspotenziale gilt $E_{Na} = +55 mV$ und $E_{K} = -100 mV$; somit folgt nach Einsetzen $E_{rev} = 0mV$ [BLS19:100, ``Acetylcholnrezeptoren``].
+Wenn nun das Membranpotenzial vor der Einwirkung von ACh $< 0mV$ ist, bewirkt ein Öffnen der Ionenkanäle einen Strom einwärts IZF, um $V_m$ auf $0$ zu bringen (Depolarisation); im umgekehrten Fall $V_m > 0$ fließen Ionen auswärts zu EZF, und es findet eine Hyperpolarisation statt [BCP18:136, ``Exkurs 5.4`` f.].\\
+
+Im Allgemeinen gilt, das an erregenden Synapsen unspezifische Kationenkanäle öffnen, deren Umkehrpotential im Bereich von $0mV$ liegt: Hier kommt es zu einer Depolarisation (EPSP). An hemmenden Synapsen öffnen $Cl^-$- oder $K^+$-Kanäle und es gilt dort $V_{rev} \leq V_r$, wonach es meist zu einer leichten Hyperpolarisation kommt [BLS19:100, ``9.3.2 Umkehrpotenzial`` ff.].\\
+
+Die Verrechnung von EPSP und IPSP erfolgt nicht ausschließlich linear durch Summation - inhibitorische Synapsen können auch für einen ``Kurzschluss`` sorgen und somit ein EPSP um ein Vielfaches verkleinern [Sil03:477, ``Shunting inhibitory conductances`` f.]. Man spricht dann von einer \textit{Kurzschlusshemmung} (\textbf{shunting inhibition}). 
+Wenn ein Transmitter einer inhibitorischen Synapse $Cl^-$-Kanäle aktiviert, verschiebt sich das Membranpotenzial in Richtung $E_{Cl} \sim -65 mV$. 
+Ist das Membranpotential der Zelle $> -65 mV$, kann ein hyperpolarisierendes IPSP ausgelöst werden. 
+Wenn allerdings bereits $V_m = E_{Cl}$ ist\footnotemark[65], wird kein ``sichtbares`` IPSP ausgelöst [BCP18:145, letzter Absatz ff.] - die $Cl^-$-Kanäle sind offen, aber es findet keine Nettoionenbewegung statt.
+Eine Hemmung der Zelle kann aber trotzdem noch stattfinden, wenn bspw. ein distal liegende exzitatorische Synapse positive Ladungsströme verursacht, und die inhibitorische Synapse proximal zum Soma liegt, in Stromrichtung ausgehend von der exzitatorischen Synapse. 
+Der positive Ladungsstrom kommt an der inhibitorischen Synapse mit den geöffnet $Cl^-$-Kanälen an, und die Depolarisation durch das EPSP wird durch den Einfluss von $Cl^-$-Ionen (die $V_m$ wieder auf $V_{rev} = E_{Cl}$ bringen wollen) mitigiert.
+
+\footnotetext[64]{
+ chemische Synapse, die Erregungen an eine Muskelfaser weiterleitet [SD07:56, ``Motorische Endplatte``]
+}
+\footnotetext[65]{
+ ``häufig bei für Chloridleitfähigen GABA Rezeptoren`` [HS19a:100, ``Kurzschlusshemmung``]
+}
+
+Aus diesem Grund sind inhibitorische Synapsen oft proximal zum Soma zu finden [KSJ+13:231, rechte Spalte, Abs. 2 f.]
+
+
+
+
 
 % \[\^(.*?)\] %footnotemark regex
 %  _(.*?)_ % textit
