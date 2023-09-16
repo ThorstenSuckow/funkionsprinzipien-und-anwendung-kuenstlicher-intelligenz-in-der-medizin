@@ -13,10 +13,11 @@
 \usepackage[LGR,T1]{fontenc}
 \usepackage{float}
 \usepackage{python}
+\usepackage{comment}
 \usepackage{titlesec}
 \usepackage{xurl}
 \usepackage{appendix}
-\usepackage{graphicx}
+
 \usepackage{makeidx}         	% Index
 \usepackage{multicol}% Zweispaltiger Index
 \usepackage[threshold=0]{csquotes}
@@ -88,7 +89,14 @@
 \pagestyle{myheadings} 			% Erzeugt selbstdefinierte Kopfzeile
 \makeindex 						% Index-Erstellung
 
-
+% uncomment to hide tables, equations and figures
+%\excludecomment{confidential}
+\excludecomment{figure}
+\excludecomment{equation}
+\excludecomment{table}
+\let\endfigure\relax
+\let\endtable\relax
+\let\endequation\relax
 %--------------------------------------------------------------------------
 \begin{document}
 %------------------------- Titelblatt -------------------------------------
