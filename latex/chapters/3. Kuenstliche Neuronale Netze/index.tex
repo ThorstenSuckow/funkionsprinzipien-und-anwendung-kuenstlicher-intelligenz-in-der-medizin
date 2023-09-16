@@ -3,175 +3,213 @@
 
 \subsection{Renaissance der neuronalen Netze}
 
-Der Begriff ``KI Winter`` wird in der Literatur mit unterschiedlichen Perioden während der Forschung und Förderung von KI in Zusammenhang gebracht. In dem Kontext des im vorherigen Kapitel erwähnten Lighthill Reports bezieht sich der Begriff einerseits auf die Periode nach 1973\footnotemark[1] [Jon08, S. 8 f.]; \textit{Russell und Norvig} beziehen sich hingegen auf einen Zeitraum um/ nach 1988, in dem nach einer Phase von Investitionen in Milliardenhöhe in den Forschungszweig ``viele Unternehmen verschwanden, weil sie ihre außergewöhnlichen Versprechungen nicht halten konnten.`` [RN09, S. 48, 1.3.6 letzter Abs.]\footnotemark[2].
 
-In den 80er Jahren sahen die großen Industrienationen in der Erforschung von KI einen Wettbewerbsvorteil, nachdem die Technologie durch den Einsatz von Expertensystemen\footnotemark[3] Einzug in die Wirtschaft gefunden hatte: So ermöglichte das Expertensystem\footnotemark[4] R1/XCON bei dem einsetzenden Unternehmen DEC (Digital Equipment Corporation) Einsparungen in Millionenhöhe\footnotemark[5] [RN, S. 48]: Die Domäne von R1 war die regelbasierte Konfiguration von VAX-11/780 Systemen nach Kundenanforderungen\footnotemark[6]. Japan kündigte 1981 das 5th Generation Projekt [Gar19] an, einen Zehnjahresplan für den Aufbau ``intelligenter Computer`` [RN09, S. 48, Abs. 2]\footnotemark[7], und in Großbritannien sorgte der Alvey-Report\footnotemark[8] für eine Wiederaufnahme finanzieller Unterstützung, die durch den Lighthill-Report aufgehoben worden war [RN09, S. 48, Abs. 2]\footnotemark[9].
+In den 80er Jahren sahen die großen Industrienationen in der Erforschung von KI einen Wettbewerbsvorteil, nachdem die Technologie durch den Einsatz von Expertensystemen (vgl \ref{appendix:expertensystem}) Einzug in die Wirtschaft gefunden hatte: So ermöglichte R1/XCON\footnote{
+    das ``erste erfolgreiche kommerzielle Expertensystem`` [RN09:48, Abs. 1]
+}  bei dem einsetzenden Unternehmen DEC (Digital Equipment Corporation) Einsparungen in Millionenhöhe [RN:48]: Die Domäne von R1 war die regelbasierte Konfiguration von VAX-11/780 Systemen nach Kundenanforderungen\footnote{
+    siehe hierzu insb. [Mcd80] sowie [Hor90:63, Punkt 2]
+}. Japan kündigte 1981 das 5th Generation Projekt [Gar19] an, einen Zehnjahresplan für den Aufbau ``intelligenter Computer`` [RN09:48, Abs. 2]\footnote{
+    Zusammenfassend war das Ziel des 5th Generation Computer Systems (FGCS)-Projekt: ``Its ultimate goal is to develop integrated systems, both hardware and software, suitable for the major computer application in the nextdecade, identified by the Japanese as 'knowledge information processing'.`` in [Sha83:637, Anführungszeichen i.O. doppelt]
+}, und in Großbritannien sorgte der Alvey-Report\footnote{
+    \url{https://www.chilton-computing.org.uk/inf/literature/reports/alvey\_report/overview.htm} - empfohlene Massnahmen: \url{https://www.chilton-computing.org.uk/inf/literature/reports/alvey\_report/p008.htm} (beide abgerufen 31.08.2023)
+} für eine Wiederaufnahme finanzieller Unterstützung, die durch den Lighthill-Report aufgehoben worden war [RN09:48, Abs. 2]\footnote{
+    In Deutschland wird 1988 die DFKI GmbH (Deutsches Forschungszentrum für Künstliche Intelligenz) gegründet, eine ``wirtschaftsnahe Forschungseinrichtung`` auf ``dem Gebiet innovativer Softwaretechnologien auf der Basis von Methoden der Künstlichen Intelligenz`` (\url{https://www.dfki.de/fileadmin/user\_upload/DFKI/Medien/Ueber\_uns/DFKI\_im\_UEberblick/Unternehmensprofil/20210120\_DFKI\_Unternehmensprofil\_DE.pdf}, abgerufen 31.08.2023)
+}.
 
-Auch der technologische Fortschritt begünstigte das Wiederaufleben des Interesses an neuronalen Netzen, wie \textit{Olazaran} in  in Bezug auf die Modellierung paralleler Prozesse mit Hilfe von neuronalen Netzen anmerkt:
+Auch der technologische Fortschritt begünstigte das Wiederaufleben des Interesses an neuronalen Netzen, wie \textit{Olazaran} in Bezug auf die Modellierung paralleler Prozesse mit Hilfe von neuronalen Netzen anmerkt:
 
-\blockquote{
+\blockquote[{[Ola96:644]}]{
     [...] increases in computer power and speed due to parallelism will undoubtedly favour neural net research.
 }
 
-denn mit den in den 80er Jahren verfügbaren Supercomputern und Parallelrechner\footnotemark[10] erhält auch der Konnektionismus Auftrieb, der \textbf{neuronale Netze} als Grundlage hat [Dor91, S. 15], und mit dem sich Modelle wieder mehr an den biologischen Vorbildern orientieren sollten (vgl. [RM87, S. 43, Abs. 3] sowie [GBC18, S.18-19]).
+denn mit den in den 80er Jahren verfügbaren Supercomputern und Parallelrechner\footnote{
+    Auch \textit{Fausett} nennt bessere Rechenleistung als einen Grund für den erneuerten Enthusiasmus [Fau94:26]. Im Kontext der in diesem Kapitel vorgestellten mehrschichtigen Netzen und ihrem Konzept der versteckten Schichten ist nachvollziehbar, das mehr Rechenleistung den komplexen Verfahren entgegenkommt. \textit{Goodfellow, Bengio und Courville} gehen auf die Korrelation Modellgrösse und Anzahl der Nervenzellen in einem menschlichen Gehirn (vgl. Fussnote 15 in **Kapitel 1.2**) in [GBC18:24 ff.] ein
+} erhält auch der Konnektionismus Auftrieb, der \textbf{neuronale Netze} als Grundlage hat [Dor91:15], und mit dem sich Modelle wieder mehr an den biologischen Vorbildern orientieren sollten\footnote{
+    vgl. [RM87:43, Abs. 3] sowie [GBC18:18-19]}.
 
 
 \subsection{Mehrschichtige neuronale Netze}
 
-Bislang haben wir überwiegend künstliche Neuronen betrachtet, bei denen die Eingabe direkt mit der Ausgabe verbunden ist. Allerdings haben wir bereits für komplexe Boolesche Funktionen in Kapitel 2.1.3.3 gesehen, dass ein Verbund von mehreren MCP-Zellen in der Lage ist, auch Funktionen für nicht linear separable Daten zu modellieren. Hierzu hatten wir das MCP-Netz in zwei Schichten aufgeteilt, in denen die erste Schicht $X_1 := (\neg A \lor B)$ sowie $X_2 := (\neg B \lor A)$ und die zweite Schicht $X_1 \lor X_2$ formt, was nichts anderes als die disjunktive Normalform von XOR ist (**_2-1-6_**).
+Bislang haben wir überwiegend künstliche Neuronen betrachtet, bei denen die Eingabe direkt mit der Ausgabe verbunden ist. Allerdings haben wir bereits für komplexe Boolesche Funktionen in Abschnitt~\ref{seq-mcpbool} gesehen, dass ein Verbund von mehreren MCP-Zellen in der Lage ist, auch Funktionen für nicht linear separable Daten zu modellieren. Hierzu hatten wir das MCP-Netz in zwei Schichten aufgeteilt, in denen die erste Schicht $X_1 := (\neg A \lor B)$ sowie $X_2 := (\neg B \lor A)$ und die zweite Schicht $X_1 \lor X_2$ formt, was nichts anderes als die disjunktive Normalform von XOR (Tabelle~\ref{tab:xor})ist.
 
-Bei dem Rosenblatt-Perzeptron, das alleine nicht in der Lage ist, XOR zu erlernen, handelt es sich um ein \textbf{Einschichtiges neuronales Feedforward-Netz}. Das bedeutet, dass es nur Eingabe und Ausgabe gibt und die Informationen ausschliesslich in Richtung Ausgang fliessen [RN09, S. 848 ff.].
+Bei dem Rosenblatt-Perzeptron, das alleine nicht in der Lage ist, XOR zu erlernen, handelt es sich um ein \textbf{Einschichtiges neuronales Feedforward-Netz}.
+Das bedeutet, dass es nur Eingabe und Ausgabe gibt und die Informationen ausschliesslich in Richtung Ausgang fliessen [RN09:848 ff.].
 
-Allerdings ist auch ein \textbf{mehrschichtiges Perzeptron} (MLP, \textit{multi-layer perceptron}) [GBC18, S. 6] in der Lage, nicht linear-separable Daten zu klassifizieren. Ein MLP repräsentiert ein tiefes Feedforward-Netz, in dem die Eingabeschicht (\textbf{Input Layer}) und die Ausgabeschicht (\textbf{Output Layer}) über weitere Schichten von Neuronen (\textbf{hidden layer}) verbunden ist; die Neuronen in diesen Schichten implementieren Eingabe- und Aktivierungsfunktion und leiten ihre Berechnungen an die nächsten Zellen bis zu der Ausgabeschicht weiter. \textit{Murtagh} zeigt in [Mur91, S. 185] die Modellierung von XOR anhand eines MLPs.
+Allerdings ist auch ein \textbf{mehrschichtiges Perzeptron} (MLP, \textit{multi-layer perceptron}) [GBC18:6] in der Lage, nicht linear-separable Daten zu klassifizieren.
+Ein MLP repräsentiert ein tiefes Feedforward-Netz, in dem die Eingabeschicht (\textbf{Input Layer}) und die Ausgabeschicht (\textbf{Output Layer}) über weitere Schichten von Neuronen (\textbf{hidden layer}) verbunden ist; die Neuronen in diesen Schichten implementieren Eingabe- und Aktivierungsfunktion und leiten ihre Berechnungen an die nächsten Zellen bis zu der Ausgabeschicht weiter. \textit{Murtagh} zeigt in [Mur91:184 ff.] die Modellierung von XOR anhand eines MLPs.
 
-**Abb. 3.1**: Skizze eines mehrschichtigen neuronalen Feedforward-Netzwerks.
+\begin{figure}[h]
+    \centering
+    \includegraphics{images/p1ReadSeq.pdf}
+    \caption{Skizzzierung eines mehrschichtigen neuronalen Feedforward-Netzwerks.}
+    \label{fig-multilayerfeedforward}
+\end{figure}
+
+
 
 \subsection{Backpropagation}
-An gleicher Stelle demonstriert \textit{Murtagh} ein MLP, das mittels \textbf{Backpropagation}\footnotemark[11] Daten klassifiziert, die keinen linearen Zusammenhang besitzen. Hierbei bezieht er sich auf \textit{Rumelhart, Hinton und Williams} die in [RHW86a] eine Methode\footnotemark[12] vorstellen, um berechnete Werte \textit{rückwärts} in das Netz einzuspeisen. Hierbei wird für die Netzausgabe (``forward pass``) ein Approximationsfehler berechnet, der als Basis für die Gewichtsänderungen beim rückwärtigen Lauf (``backward pass``) bis zur ersten verborgenen Schicht genutzt wird. Der Vorgang (forward pass, backward pass, forward pass...) wird so lange für alle Trainingsbeispiele wiederholt, bis die Gewichte sich nicht mehr ändern, oder eine andere Schranke (Epochen, Zeit) erreicht ist [Ert21, S. 315]\footnotemark[13].
-
-Die mathematische Basis für Backpropagation ist das \textbf{Gradientenabstiegsverfahren}, das hilft, in einem neuronalen Netz Parameter für möglichst optimale Verlust-Werte (also geringe Fehler-Werte) zu finden [RN09, S.837] (Abb. 3.3)\footnotemark[14].  Ausserdem unterstützt die \textbf{Sigmoid}\footnotemark[15]-Funktion als Aktivierungsfunktion\footnotemark[16] (Abb. 3.2) aufgrund ihres nicht-linearen Charakters eine größere Klasse darstellbarer Funktionen und damit Lösungen für Probleme, die ein klassisches Perzeptron nicht lösen kann (vgl. [Ert 21, S.316])\footnotemark[17] \footnotemark[18].
-
-<EQ id =``3-2-1``>
-
-Sigmoidfunktion
-
-</EQ>
-
-
-**Abb. 3.2** Ein Plot der Sigmoid-Funktion
+In gleicher Arbeit ([Mur91:185 ff.]) zeigt \textit{Murtagh} ein MLP, das mittels \textbf{Backpropagation}\footnote{
+    ``das meist genutzte neuronale Modell`` [Ert21:313, ``9.5 Der Backpropagation Algorithmus``]
+} Daten klassifiziert, die keinen linearen Zusammenhang besitzen.
+Der Algorithmus geht auf \textit{Rumelhart, Hinton und Williams} zurück, die in [RHW86a] eine Methode\footnote{
+    ``The ability to create useful new features distinguishes back-propagation from earlier, simpler methods such as the perceptron-convergence procedure.`` [RHW86b:533]
+} vorstellen, um berechnete Werte \textit{rückwärts} in das Netz einzuspeisen.
+Hierbei wird für die Netzausgabe (\textit{forward pass}) ein Approximationsfehler berechnet, der als Basis für die Gewichtsänderungen beim rückwärtigen Lauf (\textit{backward pass}) bis zur ersten verborgenen Schicht genutzt wird.
+Der Vorgang (forward pass, backward pass, forward pass...) wird so lange für alle Trainingsbeispiele wiederholt, bis die Gewichte sich nicht mehr ändern, oder eine andere Schranke (Epochen, Zeit) erreicht ist [Ert21:315]\footnote{
+    ausführlicher Algorithmus in [RN09:853, Abbildung 18.24]
+}.
 
 
-**Abb. 3.3** Informelle Darstellung des Gradientenabtiegsverfahrens. Die y-Achse repräsentiert die Anzahl der Fehler, die x-Achse den berechneten Gewichtsvektor in einem neuronalen Netz. Offensichtlich exiatiert in dem Netz ein optimaler Wert für w, der mittels Gradientenabstieg gefunden werden soll (vgl. [Son22 S. 52].
 
-In den 80er Jahren werden neben dem Backpropagation-Algorithmus weitere Entwürfe für neuronale Netze erstellt, die für ein Wiederaufleben des Interesses an der transdisziplinären Wissenschaft sorgen vgl([Fau94, S. 25 ff.]).
+Die mathematische Basis für Backpropagation ist das \textbf{Gradientenabstiegsverfahren}, das hilft, in einem neuronalen Netz Parameter für möglichst optimale Verlust-Werte (also geringe Fehler-Werte) zu finden [RN09:837] (s. Abbildung~\ref{fig-gradient})\footnote{
+    ein kompakter Überblick zum Thema ``Optimierung auf Gradientenbasis`` findet sich in [GBC18:90 ff.]
+}.  Ausserdem unterstützt die \textbf{Sigmoid}\footnote{
+    \textit{sigmoid}: ``Sigma``, griechischer Buchstabe $\Sigma$, entspricht dem lateinischen ``S``; ``\textit{eidos}`` (griechisch) Form, Gestalt
+}-Funktion (Gleichung~\ref{eq:gl-sigmoid} sowie Abbildung~\ref{fig-sigmoid}) als Aktivierungsfunktion\footnote{ ``Historisch wurde Backpropagation mit der Sigmoidfunktion implementiert.`` [Ert21:314, Fussnote 4] In Kapitel 9.5.3 (vgl. [RHW86a:329, (15)]). \textit{Ertel} fügt hinzu: ``Mittlerweile haben sich jedoch andere Funktionen als besser bewährt.`` In [Ert21:319] geht der Autor auf ``Probleme und Verbesserungen`` des mittlerweile über 30 Jahre alten Verfahrens ein. [GBC18:19]  stellt fest, dass Backpropagation der ``vorherrschende Ansatz für das Training tiefer Modelle`` (im Jahr 2018) ist.
+}  aufgrund ihres nicht-linearen Charakters eine größere Klasse darstellbarer Funktionen und damit Lösungen für Probleme, die ein klassisches Perzeptron nicht lösen kann (vgl. [Ert 21:316])\footnote{
+    In [RM86a] zeigen \textit{Rumelhart, Hinton und Williams} die Architektur eines mehrschichtigen neuronalen Netzes, das XOR über Backpropagation repräsentiert. Gleichzeitig grenzen sie in [RHW86b:536] ihr Modell vom biologischen Lernen ab: ``The learning procedure, in its current form, is not a plausible model of learning in brains``.
+} \footnote{
+    \textit{Ertel} weist darauf hin, dass die Klasse der darstellbaren Funktionen erhöht wird, wenn man für ein Perzeptron eine variable Sigmoid-Funktion verwendet [Ert21:316, Abs. 2]. Siehe hierzu auch ``Sigmoid-Perzeptron`` in [RN09:847]
+}.\\
+
+Sigmoid:
+\begin{equation}
+\sigma(x) = \begin{matrix}1 \\ \hline 1 + e^{-x}\end{matrix}
+\label{eq:gl-sigmoid}
+\end{equation}
+
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{images/p1ReadSeq.pdf}
+    \caption{Ein Plot einer Sigmoid-Funktion}
+    \label{fig-sigmoid}
+\end{figure}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{images/p1ReadSeq.pdf}
+    \caption{Skizzierung des Gradientenabtiegsverfahrens.}
+    \label{fig-gradient}
+    \small
+    Informelle Darstellung des Gradientenabtiegsverfahrens. Die y-Achse repräsentiert die Anzahl der Fehler, die x-Achse den berechneten Gewichtsvektor in einem neuronalen Netz. Offensichtlich existiert in dem Netz ein optimaler Wert für w, der mittels Gradientenabstieg gefunden werden soll (vgl. [Son22 S. 52].
+\end{figure}
+
+In den 80er Jahren werden neben dem Backpropagation-Algorithmus weitere Entwürfe für neuronale Netze erstellt, die für ein Wiederaufleben des Interesses an der transdisziplinären Wissenschaft sorgen\footnote{vgl. [Fau94:25 ff.]}.
 
 \subsection{Hopfield-Netz}
 
-Der Physiker John J. Hopfield (1933 -) stellt 1982 in [Hop82] ein Modell für ein \textit{asynchrones}\footnotemark[19] neuronales Netz vor, das auf neurobiologischen Aspekten [Hop82, S. 2554] beruht und 5 Jahre später in Zusammenarbeit mit At & T Bell Laboratories\footnotemark[20] in Form eines ``neural network chip``\footnotemark[21] [AR88, S. 457] als Hardware umgesetzt wird: Das Modell ist ein \textbf{rekurrentes Netz}\footnotemark[22] ohne Schlingen ($w_{ij} = 0$)\footnotemark[23] [Ert21, S. 291] mit bidirektionalen symmetrischen Kanten ($w_{ij} = w_{ji}$) und fungiert als \textbf{Assoziativspeicher}, also als Netz, das, wenn es für eine Eingabe $x$ die Ausgabe $y$ liefert, $y$ auch für $x'$ berechnet, sofern $x'$ nahe genug bei $x$ liegt\footnotemark[24] [Roj93, S. 251], was das Netz gegenüber _Rauschen_ und _Störungen_\footnotemark[25] resistenter macht.
-_Ertel_ führt die Begeisterung für neuronale Netze und den Aufschwung der Neuroinformatik in den 80er Jahren wesentlich auf die ``biologische Plausibilität, das gut verstandene mathematische Modell`` und ``die beeindruckende Simulation zur Mustererkennung`` auf das Hopfield Modell zurück [Ert21, S. 297]. _Anderson und Rosenfeld_ bemerken, dass der Einfluss physikalischer Systeme auf das Hopfield Netz auch das Interesse der Physiker an neuronalen Netzen geweckt hat, und dadurch das Forschungsfeld erweitert wurde (vgl. [AR88, S. 458]). Dies ist darauf zurückzuführen, dass sich die Summe aller Terme in einem Hopfield-Netz wie folgt berechnet (vgl. [Roj93, S.287]\footnotemark[26])
+Der Physiker John J. Hopfield stellt 1982 in [Hop82] ein Modell für ein \textit{asynchrones} neuronales Netz\footnote{
+    in asynchronen Modellen werden die Aktivierungen der Neuronen unabhängig voneinander und zu unterschiedlichen Zeitpunkten berechnet (vgl. [Roj02:49] sowie ebenda S. 282)
+}  vor, das auf neurobiologischen Aspekten [Hop82:2554] beruht und 5 Jahre später in Zusammenarbeit mit At & T Bell Laboratories\footnote{
+    ehemalige Forschungsabteilung der Telefongesellschaft AT \& T;  gehört seit 2016 zu Nokia (https://www.bell-labs.com/, abgerufen 03.09.2023)
+} in Form eines ``neural network chip``\footnote{
+    https://techmonitor.ai/technology/att\_creates\_parallel\_neural\_net\_chip\_to\_solve\_routing\_problems
+} [AR88:457] als Hardware umgesetzt wird: Das Modell ist ein \textbf{rekurrentes Netz}\footnote{
+Ein rekurrentes neuronales Netz ``speist seine Ausgaben wieder in seine eigenen Eingaben ein``[RN09:847]. Im Gegensatz zu Feedforward-Netzen sind rekurrente Netze also \textit{rückgekoppelt}
+} ohne Schlingen ($w_{ij} = 0$)\footnote{ Eine \textit{Schlinge} (engl. \textit{loop}) in einem Graphen ist ein Kantenzug, der einen Knoten mit sich selbst verbindet [Die17 S. 30]. Ein Beispiel für ein Netz mit Schlingen ist das \textbf{MAXNET} [Lip87], das zu der Gruppe der \textbf{competitive nets} gehört: Es kann als Subnetz zur Ermittlung der Zelle mit dem größten Aktivierungswert genutzt werden [Fau94:158 ff.]
+} [Ert21:291] mit bidirektionalen symmetrischen Kanten ($w_{ij} = w_{ji}$) und fungiert als \textbf{Assoziativspeicher}, also als Netz, das, wenn es für eine Eingabe $x$ die Ausgabe $y$ liefert, $y$ auch für $x'$ berechnet, sofern $x'$ nahe genug bei $x$ liegt\footnote{ Nach dem Training ist das Netz dazu in der Lage, für einen Stimulus ein Aktualisierungsmuster einzunehmen, dass diesem am ähnlichsten ist [RN09:882], was an die ``Cell Assemblies`` von Hebb erinnert (Kapitel 2.2.1). \textit{Lansner} verweist in [Lan09:179] genau darauf, merkt aber gleichfalls an, dass das Modell aufgrund der Rekurrenz und Symmetrie nicht seinem biologischen Vorbild entspricht [Lan09:180]
+} [Roj93:251], was das Netz gegenüber \textit{Rauschen} und \textit{Störungen}\footnote{
+    Rauschen bzw. Störungen bei Stimuli in Form von Bildern ($n * m$ Pixeln) können durch zufällig hinzugefügte oder entfernte Pixel entstehen, oder durch Rotation (axiale Verschiebung) der Daten vor dem Einspeisen in das Netz. Beispiele für verrauschte Daten in [Ert21, S 294 ff.]
+} resistenter macht.
+\textit{Ertel} führt die Begeisterung für neuronale Netze und den Aufschwung der Neuroinformatik in den 80er Jahren wesentlich auf die ``biologische Plausibilität, das gut verstandene mathematische Modell`` und ``die beeindruckende Simulation zur Mustererkennung`` auf das Hopfield Modell zurück [Ert21:297]. \textit{Anderson und Rosenfeld} bemerken, dass der Einfluss physikalischer Systeme auf das Hopfield Netz auch das Interesse der Physiker an neuronalen Netzen geweckt hat, und dadurch das Forschungsfeld erweitert wurde (vgl. [AR88:458]). Dies ist darauf zurückzuführen, dass sich die Summe aller Terme in einem Hopfield-Netz wie folgt berechnet (vgl. [Roj93:287]\footnote{
+    mit dem Faktor $1/2$, damit aufgrund der Symmetrie in dem Netz $w_{ij}x_ix_j$ und $w_{ji}x_jx_i$ nur einmal berechnet wird [Roj93:287]
+})
 
-<EQ id =``3-2-2``>
+\begin{equation}
+E = -1/2 * \sum^n_{i=1}\sum^n_{j=1} w_{ij}x_ix_j + \sum^n_{i=1}\Theta_ix_i
+\label{eq:gl-energie}
+\end{equation}
 
-$E = -1/2 * \sum^n_{i=1}\sum^n_{j=1} w_{ij}x_ix_j + \sum^n_{i=1}\Theta_ix_i$
+Dies wird auch als die \textbf{Energiefunktion} des Netzes bezeichnet, wobei $E$ entweder konstant bleibt oder kleiner wird - aber nicht größer: Ist in einem Netz eine solche Energiefunktion vorhanden, kann gezeigt werden, das das Netz konvergiert [Fau94:139], und zwar hin zu einem Zustand \textit{minimaler Energie}: \textit{Ertel} erklärt hierzu, dass gelernte Muster in dem Netz ``Minima der Energiefunktion im Zustandsraum`` darstellen; werden zuviele Muster gelernt, ``konvergiert das System gegen Minima, die keinen gelernten Muster entsprechen``.
+Damit ist das Modell ``formal äquivalent zu einem physikalischen Modell des Magnetismus`` [Ert21:293]\footnote{
+    vgl. auch [AR98:417] sowie [Hop82:2556, ``Studies of the collective behaviors of the model`` f.]
+}, wo ebenfalls solche \textit{Phasenübergänge} von einem geordneten hin zu einem chaotischen System beobachtet werden können\footnote{
+    dem so genannten \textit{Spinglass} (auch: \textit{spin glass}); vgl.[BY86:900 mit Bezug auf Hopfield-Netze]
+}.\\
 
-</EQ>
-
-Dies wird auch als die \textbf{Energiefunktion} des Netzes bezeichnet, wobei $E$ entweder konstant bleibt oder kleiner wird - aber nicht größer: Ist in einem Netz eine solche Energiefunktion vorhanden, kann gezeigt werden, das das Netz konvergiert [Fau94, S. 139], und zwar hin zu einem Zustand \textit{minimaler Energie}: \textit{Ertel} erklärt hierzu, dass gelernte Muster in dem Netz ``Minima der Energiefunktion im Zustandsraum`` darstellen; werden zuviele Muster gelernt, ``konvergiert das System gegen Minima, die keinen gelernten Muster entsprechen``. Damit ist das Modell ``formal äquivalent zu einem physikalischen Modell des Magnetismus`` [Ert21, S. 293]\footnotemark[27], wo ebenfalls solche \textit{Phasenübergänge} von einem geordneten hin zu einem chaotischen System beobachtet werden können\footnotemark[28].
-
-\textit{Ackley, Hinton und Sejnowski} stellen 1985 in [AHS85] die \textbf{Boltzmann-Maschine}\footnotemark[29] vor, eine Modifikation eines Hopfield-Netzes, in dem sich die Zellen \textit{stochastisch} [AR88, S. 635] und globale Zustände des Netzes nach der \textit{Boltzmann-Verteilung}\footnotemark[30] verhalten. Das Netz versucht lokale Minima zu überwinden (vgl. ``Gradientenabstiegsverfahren`` in \textbf{Kapitel 3.2.1 Backpropagation}), indem ihm erlaubt wird, zu größeren $E$ (**_3-2-2_**) zu springen, um so zu einem globalen Minimum zu konvergieren ([AHS85, S. 151] sowie [Koe90, S. 107]). Das Verfahren wird auch \textit{simulated annealing}\footnotemark[31] bezeichnet [Ert21, S. 297].
-
+\textit{Ackley, Hinton und Sejnowski} stellen 1985 in [AHS85] die \textbf{Boltzmann-Maschine}\footnote{
+    eine Beschreibung des Verhalten findet sich 1983 bereits in [HS83]
+} vor, eine Modifikation eines Hopfield-Netzes, in dem sich die Zellen \textit{stochastisch} [AR88:635] und globale Zustände des Netzes nach der \textit{Boltzmann-Verteilung}\footnote{
+    die \textit{Boltzmann-Verteilung} gibt die Wahrscheinlichkeit an, ein geg. physik. System in einem bestimmten Zustand anzutreffen (https://de.wikipedia.org/wiki/Boltzmann-Statistik, abgerufen  05.09.2023)
+} verhalten. Das Netz versucht lokale Minima zu überwinden (vgl. ``Gradientenabstiegsverfahren`` in \textbf{Kapitel 3.2.1 Backpropagation}), indem ihm erlaubt wird, zu größeren $E$ (s. Gleichung~\ref{eq:gl-energie}) zu springen, um so zu einem globalen Minimum zu konvergieren\footnote{vgl. [AHS85:151] sowie [Koe90:107]}.
+Das Verfahren wird auch \textit{simulated annealing} bezeichnet\footnote{vgl. [Ert21:297]. \textit{Rojas} schreibt dazu
+    ``Gelingt es, die Temperatur nach dem richtigen Plan auf null zu verringern, wird sich das Netz mit großer Wahrscheinlichkeit in einem globalen Minimum stabilisieren.``[Roj93:322]. Der Begriff \textit{Annealing} ist hier aus der Werkstoffkunde entlehnt: Eine entsprechende Wärmebehandlung von Materialien unterstützt die Erzeugung gewünschter Werkstoffeigenschaften wie Festigkeit, z.B.  bei der Verarbeitung von Glas [Jeb11:3] oder Schweißverbindungen von Metallen [FJO+19]
+}.
 
 \subsection{Neocognitron}
 
-Unter dem Namen ``Cognitron`` 1975 beschreibt \textit{Fukushima} (1936 - ) in [Fuk75] ein mehrschichtiges Netz mit selbst-organisierenden Eigenschaften zur Mustererkennung, in dem Zellen selektiv auf häufig präsentierte Merkmale reagieren. 1983 veröffentlichen \textit{Fukushima, Miyake und Ito} eine Modifikation dieser Architektur in [FMI83]\footnotemark[32] unter dem Namen \textbf{Neocognitron}\footnotemark[33]; sein biologisches Vorbild ist das durch \textit{Hubel und Wiesel}\footnotemark[34] in [HU62] beschriebene hierarchische Modell des Wahrnehmungssystems [FMI83, S. 827]. In dem künstlichen neuronalen Netz haben Zellen in tiefer liegenden Schichten die Eigenschaft, selektiv komplexere Merkmale der Stimuli zu extrahieren, womit sie weniger anfällig auf Rauschen in den Eingabedaten sind. In [Fuk80] war der Training-Prozess des Modells gegeben durch wiederholte Einspeisung von Mustern ohne weitere Information\footnotemark[35] [Fuk80, S.197]: Die Erweiterung des Modells beinhaltet nun die Verstärkung der modifizierten Synapsen durch überwachtes Lernen\footnotemark[36], um bessere Resultate bei handgeschriebenen Zeichen zu erzielen [FMI83, S. 829].
-\textit{Anderson und Rosenfeld} attestieren dem Netz von \textit{Fukushima, Miyake und Ito} Aspekte, die bei der Entwicklung neuronaler Netze eine wesentliche Rolle spielen werden [AR88, S. 524]:  Tatsächlich inspiriert das Neocognitron die Convolutional Neural Networks (CNN) [LBH15, S.439], deren erster Entwurf erstmalig 1989\footnotemark[37] von \textit{LeCun} vorstellt wird [Cun89] (siehe **Kapitel 3.2.4**).
+Unter dem Namen \textit{Cognitron} 1975 beschreibt \textit{Fukushima} in [Fuk75] ein mehrschichtiges Netz mit selbst-organisierenden Eigenschaften zur Mustererkennung, in dem Zellen selektiv auf häufig präsentierte Merkmale reagieren.
+1983 veröffentlichen \textit{Fukushima, Miyake und Ito} eine Modifikation dieser Architektur in [FMI83]\footnote{
+    Mit Bezug auf [Fuk80] (``Neocognitron: A self-organizing neural network model for a mechanism of pattern recognition unaffected by shift in position``)
+} unter dem Namen \textbf{Neocognitron}\footnote{
+    Video mit Demonstration des Netzes unter https://www.youtube.com/watch?v=Qil4kmvm2Sw, abgerufen 04.09.2023
+}; sein biologisches Vorbild ist das durch \textit{Hubel und Wiesel} in [HW62] beschriebene hierarchische Modell des Wahrnehmungssystems [FMI83:827].
+In dem künstlichen neuronalen Netz haben Zellen in tiefer liegenden Schichten die Eigenschaft, selektiv komplexere Merkmale der Stimuli zu extrahieren, womit sie weniger anfällig auf Rauschen in den Eingabedaten sind.
+In [Fuk80] war der Training-Prozess des Modells gegeben durch wiederholte Einspeisung von Mustern ohne weitere Information\footnote{
+    ``learning without a teacher``, also unüberwachtes Lernen (unsupervised learning).
+} [Fuk80:197]: Die Erweiterung des Modells beinhaltet nun die Verstärkung der modifizierten Synapsen durch überwachtes Lernen\footnote{
+    ``We use a learning-with-a-teacher process for the reinforcement of the modifiable synapses in the new large-scale
+model, instead of the learning-without-a-teacher process applied to the previous model.`` [FMI83:827]; \textit{Anderson und Rosenfeld} vermerken dies als ``some handcrafted fine tuning`` [AR88:524 ff.]
+}, um bessere Resultate bei handgeschriebenen Zeichen zu erzielen [FMI83:829].
+\textit{Anderson und Rosenfeld} attestieren dem Netz von \textit{Fukushima, Miyake und Ito} Aspekte, die bei der Entwicklung neuronaler Netze eine wesentliche Rolle spielen werden [AR88:524]:  Tatsächlich inspiriert das Neocognitron die Convolutional Neural Networks (CNN) [LBH15:439], deren erster Entwurf erstmalig 1989\footnote{
+    ein Jahr nach Erscheinen von [AR88]
+} von \textit{LeCun} vorgestellt wird [Cun89].
 
 
 
 \subsection{Convolutional Neural Networks}
 
-\textit{Yann LeCun} veröffentlicht 1989 seine Arbeit [Cun89], in der er verschiedene Netzwerkarchitekturen auf Generalisierungsfähigkeit (s. **Kapitel 2.2.3.2**) und Performance untersucht. Er kommt zu dem Schluss, dass eine Reduzierung der \textit{freien Parameter}\footnotemark[38] in einem mehrschichtigen Netz zu einer hohen Generalisierungsfähigkeit führt: Bessere Ergebnisse im Vergleich zu  ein- bzw. zweischichtigen Netzen können erzielt werden, indem sog. \textit{feature maps} genutzt werden, die in den Schichten für die Merkmalsextraktion der Eingabedaten (hier: zweidimensionale Bilder) verantwortlich sind. Zusätzliche Information wie die Lage der Merkmale in den Eingabedaten werden näherungsweise gespeichert, was zu einer Reduzierung der Größe der \textit{feature maps} im Vergleich zu der Größe der Eingabedaten führt, und damit auch zu einer Reduzierung der Gewichte. Darüber hinaus können mehrere feature maps die gleichen Merkmale an unterschiedlichen Orten (\textit{shift invariance}) in den Eingabedaten extrahieren, wodurch die Gewichte unter diesen feature maps geteilt werden können [Cun89, S. 151 ff.].
-In [CBD+89] stellen \textit{LeCun et al.} diese Architektur als \textbf{Convolutional Network} \textit{LeNet-1}\footnotemark[39] vor [CBB89, S. 13], das äusserst erfolgreich durch Unterstützung von Backpropagation  handgeschriebene Postleitzahlen erkennt\footnotemark[40]. Das Netz performt mit 30 Klassifizierungen pro Sekunde, lediglich die Normalisierung der Eingabedaten stellt einen Flaschenhals bei dem Prozess dar. Wird dieser berücksichtigt, werden 10-12 Ergebnisse pro Sekunde erzielt [CBD+89, S. 549].
-
-Die mathematische Basis von CNNs ist u.a. die \textbf{Faltungsoperation}\footnotemark[41]: Hierbei wird auf Eingabedaten ein \textbf{Kernel} (die \textit{Faltungsmatrix})\footnotemark[42] angewendet, wobei das Ergebnis der Faltungsoperation die \textbf{feature map} (\textit{Merkmalskarte}) ist [CBG18, S. 370 ff.]. \textit{Goodfellow, Bengio und Courville} erläutern in [CBG18, S. 374 ff.] die Optimierungen, die durch den Einsatz von Faltung hervorgehen: Durch den Einsatz von Kerneln, die nur aus einem Bruchteil der Größe der Eingabedaten bestehen\footnotemark[43], können ``aussagekräftige Merkmale`` aufgespürt werden, was dazu führt, das weniger Parameter gespeichert werden müssen und gleichzeitig die ``statistische Effizienz`` des Netzes erhöht wird (\textbf{sparse interaction} bzw. \textbf{sparse weights}). Durch das bereits erwähnte \textbf{parameter sharing} (auch: \textbf{tied weights}) kann die Effizienz des Netzes weiter erhöht und Speicherplatzverbrauch weiter verringert werden, und Schichten weisen eine \textbf{Äquivarianz} gegenüber Verschiebung auf\footnotemark[44].
-
-**Abb. 3.4:** Exemplarische Darstellung einer Faltungsoperation. In dem Beispiel werden 4x4 grosse Daten zu 3x2 grossen feature maps ``gefaltet``.
-
-CNNs nutzen neben den Convolution Schichten auch Pooling Schichten [Ert21, S. 325], die die Ausgaben des Netzes durch eine ``statistische Größe der nahegelegenen Ausgaben`` ersetzt [GBC18, S. 379], was die Zahl der Pixel auf den feature maps reduziert\footnotemark[45], ausserdem wird als Aktivierungsfunktion meistens die nichtlineare ReLu (Rectified LInear Unit) verwendet, die die Konvergenz der Netze verbessert [Ert21, S. 327].
-
-**Abb. 3.5:** Ein Plot der ReLU
-
-
+\textit{Yann LeCun} veröffentlicht 1989 seine Arbeit [Cun89], in der er verschiedene Netzwerkarchitekturen auf Generalisierungsfähigkeit (s. Abschnitt~\ref{lernregel}) und Performance untersucht. Er kommt zu dem Schluss, dass eine Reduzierung der \textit{freien Parameter}\footnote{
+    \textit{freie Parameter} sind die Parameter des Netzes, die durch den Lernvorgang festgelegt werden, also bspw. die Gewichte, Schwellenwerte oder auch die Lernrate, wenn diese durch Verwendung bestimmter Optimierungsalgorithmen adaptiv ist, wie bspw. \textbf{Adam} (vgl. [GBC18:346] mit Verweis auf [KB15])
+} in einem mehrschichtigen Netz zu einer hohen Generalisierungsfähigkeit führt: Bessere Ergebnisse im Vergleich zu  ein- bzw. zweischichtigen Netzen können erzielt werden, indem sog. \textit{feature maps} genutzt werden, die in den Schichten für die Merkmalsextraktion der Eingabedaten (hier: zweidimensionale Bilder) verantwortlich sind.
+Zusätzliche Information wie die Lage der Merkmale in den Eingabedaten werden näherungsweise gespeichert, was zu einer Reduzierung der Größe der \textit{feature maps} im Vergleich zu der Größe der Eingabedaten führt, und damit auch zu einer Reduzierung der Gewichte.
+Darüber hinaus können mehrere feature maps die gleichen Merkmale an unterschiedlichen Orten (\textit{shift invariance}) in den Eingabedaten extrahieren, wodurch die Gewichte unter diesen feature maps geteilt werden können [Cun89:151 ff.].
+In [CBD+89] stellen \textit{LeCun et al.} diese Architektur als \textbf{Convolutional Network} \textit{LeNet-1}\footnotetext{
+    s. \ref{appendix:lenet1}
+}  vor [CBB89:13], das äusserst erfolgreich durch Unterstützung von Backpropagation  handgeschriebene Postleitzahlen erkennt\footnote{
+    Wobei die Bilder zu Matrizen der Dimension $16 \times 16$ transformiert und als Eingabedaten in das Netz eingespeist werden. Die Transformation behält das Seitenverhältnis der Zeichen bei. Die Werte der Matrix an den Positionen $a_{ij}$ entsprechen Grauwerten mit einem normalisierten Wertebereich von $[-1, 1]$ [CBD+89:542]
+}. Das Netz performt mit 30 Klassifizierungen pro Sekunde, lediglich die Normalisierung der Eingabedaten stellt einen Flaschenhals bei dem Prozess dar. Wird dieser berücksichtigt, werden 10-12 Ergebnisse pro Sekunde erzielt [CBD+89:549].\\
 
 
-\footnotetext[1]{ sowie ``Lighthill's report provoked a massive loss of confidence in AI by the academic establishment in the UK (and to a lesser extent in the US). It persisted for a decade - the so-called 'AI Winter'.`` (aus: Jim Howe, Artificial intelligence at edinburgh university: A perspective, https://www.inf.ed.ac.uk/about/AIhistory.html, abgerufen 31.08.2023).
-}
-\footnotetext[2]{ auf gleichen Zeitraum bezieht sich [Mcc04, S. 432 ff.]; vgl. hierzu auch [Gar19, S. 656]{ ``Dozens of expert systems companies and AI-focused hardware manufacturers failed \textit{en masse} as hype turned to disillusionment.`` (Hervorhebungen i.O.)
-}
-\footnotetext[3]{ 1990 in [FS90, S. 14, ``1.4 Expertensysteme``] als ``kommerziell erfolgreichste Teildisziplin der Artificial intelligence`` bezeichnet, und ebenda beschrieben als: ``Ziel der Expertensysteme ist es, dem Anwender Wissen und Fertigkeiten zur Verfügung zu stellen, über die normalerweise nur speziell ausgebildete oder erfahrene Personen (Experten) verfügen.`` Im groben besteht ein Expertensystem aus einer domänenspezifischen \textit{Wissensbasis}, auf der ein \textit{Inferenzmotor} zur Findung von Antworten und Schlussfolgerungen operiert. [RN09, S. 737] erklärt, dass Expertensysteme ``optimale Entscheidungen empfehlen und dabei die Prioritäten des Benutzers sowie die verfügbaren Evidenzen berücksichtigen``.
-}
-\footnotetext[4]{ das ``erste erfolgreiche kommerzielle Expertensystem`` [RN09, S. 48, Abs. 1]
-}
-\footnotetext[5]{ Die Domäne von R1 war die Konfiguration von DECs VAX-11/780 basierend auf Kundenanforderungen [Mcd80]
-}
-\footnotetext[6]{ siehe hierzu insb. [Mcd80] sowie [Hor90, S. 63, Punkt 2]
-}
-\footnotetext[7]{ Zusammenfassend war das Ziel des 5th Generation Computer Systems (FGCS)-Projekt: ``Its ultimate goal is to develop integrated systems, both hardware and software, suitable for the major computer application in the nextdecade, identified by the Japanese as 'knowledge information processing'.`` in [Sha83, S. 637, Anführungszeichen i.O. doppelt]
-}
-\footnotetext[8]{ https://www.chilton-computing.org.uk/inf/literature/reports/alvey_report/overview.htm - empfohlene Massnahmen: https://www.chilton-computing.org.uk/inf/literature/reports/alvey_report/p008.htm (beide abgerufen 31.08.2023)
-}
-\footnotetext[9]{ In Deutschland wird 1988 die DFKI GmbH (Deutsches Forschungszentrum für Künstliche Intelligenz) gegründet, eine ``wirtschaftsnahe Forschungseinrichtung`` auf ``dem Gebiet innovativer Softwaretechnologien auf der Basis von Methoden der Künstlichen Intelligenz`` (https://www.dfki.de/fileadmin/user_upload/DFKI/Medien/Ueber_uns/DFKI_im_UEberblick/Unternehmensprofil/20210120_DFKI_Unternehmensprofil_DE.pdf, abgerufen 31.08.2023)
-}
-\footnotetext[10]{ Auch \textit{Fausett} nennt bessere Rechenleistung als einen Grund für den erneuerten Enthusiasmus [Fau94, S. 26]. Im Kontext der in diesem Kapitel vorgestellten mehrschichtigen Netzen und ihrem Konzept der versteckten Schichten ist nachvollziehbar, das mehr Rechenleistung den komplexen Verfahren entgegenkommt. \textit{Goodfellow, Bengio und Courville} gehen auf die Korrelation Modellgrösse und Anzahl der Nervenzellen in einem menschlichen Gehirn (vgl. Fussnote 15 in **Kapitel 1.2**) in [GBC18, S. 24 ff.] ein
-}
-\footnotetext[11]{ ``das meist genutzte neuronale Modell`` [Ert21, S. 313, ``9.5 Der Backpropagation Algorithmus``]
-}
-\footnotetext[12]{ ``The ability to create useful new features distinguishes back-propagation from earlier, simpler methods such as the perceptron-convergence procedure.`` [RHW86b, S. 533]
-}
-\footnotetext[13]{ ausführlicher Algorithmus in [RN09, S. 853, Abbildung 18.24]
-}
-\footnotetext[14]{ ein kompakter Überblick zum Thema ``Optimierung auf Gradientenbasis`` findet sich in [GBC18, S. 90 ff.]
-}
-\footnotetext[15]{ \textit{sigmoid}: ``Sigma``, griechischer Buchstabe $\Sigma$, entspricht dem lateinischen ``S``; ``\textit{eidos}`` (griechisch) Form, Gestalt
-}
-\footnotetext[16]{ ``Historisch wurde Backpropagation mit der Sigmoidfunktion implementiert.`` [Ert21, S. 314, Fussnote 4] In Kapitel 9.5.3 (vgl. [RHW86a, S. 329, (15)]). \textit{Ertel} fügt hinzu: ``Mittlerweile haben sich jedoch andere Funktionen als besser bewährt.`` In [Ert21, S. 319] geht der Autor auf ``Probleme und Verbesserungen`` des mittlerweile über 30 Jahre alten Verfahrens ein. [GBC18, S. 19]  stellt fest, dass Backpropagation der ``vorherrschende Ansatz für das Training tiefer Modelle`` (im Jahr 2018) ist.
-}
-\footnotetext[17]{ In [RM86a] zeigen \textit{Rumelhart, Hinton und Williams} die Architektur eines mehrschichtigen neuronalen Netzes, das XOR über Backpropagation repräsentiert. Gleichzeitig grenzen sie in [RHW86b, S. 536] ihr Modell vom biologischen Lernen ab: ``The learning procedure, in its current form, is not a plausible model of learning in brains``.
-}
-\footnotetext[18]{ \textit{Ertel} weist darauf hin, dass die Klasse der darstellbaren Funktionen erhöht wird, wenn man für ein Perzeptron eine variable Sigmoid-Funktion verwendet [Ert21, S. 316, Abs. 2]. Siehe hierzu auch ``Sigmoid-Perzeptron`` in [RN09, S. 847]
-}
-\footnotetext[19]{ in asynchronen Modellen werden die Aktivierungen der Neuronen unabhängig voneinander und zu unterschiedlichen Zeitpunkten berechnet (vgl. [Roj02, S. 49] sowie ebenda S. 282)
-}
-\footnotetext[20]{ ehemalige Forschungsabteilung der Telefongesellschaft AT & T;  gehört seit 2016 zu Nokia (https://www.bell-labs.com/, abgerufen 03.09.2023)
-}
-\footnotetext[21]{ https://techmonitor.ai/technology/att_creates_parallel_neural_net_chip_to_solve_routing_problems
-}
-\footnotetext[22]{  Ein rekurrentes neuronales Netz ``speist seine Ausgaben wieder in seine eigenen Eingaben ein`` [RN09, S. 847]{ Im Gegensatz zu Feedforward-Netzen sind rekurrente Netze also \textit{rückgekoppelt}
-}
-\footnotetext[23]{ Eine \textit{Schlinge} (engl. \textit{loop}) in einem Graphen ist ein Kantenzug, der einen Knoten mit sich selbst verbindet [Die17 S. 30]. Ein Beispiel für ein Netz mit Schlingen ist das \textbf{MAXNET} [Lip87], das zu der Gruppe der \textbf{competitive nets} gehört: Es kann als Subnetz zur Ermittlung der Zelle mit dem größten Aktivierungswert genutzt werden [Fau94, S. 158 ff.]
-}
-\footnotetext[24]{ Nach dem Training ist das Netz dazu in der Lage, für einen Stimulus ein Aktualisierungsmuster einzunehmen, dass diesem am ähnlichsten ist [RN09, S. 882], was an die ``Cell Assemblies`` von Hebb erinnert (Kapitel 2.2.1). \textit{Lansner} verweist in [Lan09, S. 179] genau darauf, merkt aber gleichfalls an, dass das Modell aufgrund der Rekurrenz und Symmetrie nicht seinem biologischen Vorbild entspricht [Lan09, S.180]
-}
-\footnotetext[25]{ Rauschen bzw. Störungen bei Stimuli in Form von Bildern ($n * m$ Pixeln) können durch zufällig hinzugefügte oder entfernte Pixel entstehen, oder durch Rotation (axiale Verschiebung) der Daten vor dem Einspeisen in das Netz. Beispiele für verrauschte Daten in [Ert21, S 294 ff.]
-}
-\footnotetext[26]{ mit dem Faktor $1/2$, damit aufgrund der Symmetrie in dem Netz $w_{ij}x_ix_j$ und $w_{ji}x_jx_i$ nur einmal berechnet wird [Roj93, S.287]
-}
-\footnotetext[27]{ vgl. auch [AR98, S.417] sowie [Hop82, S.2556, ``Studies of the collective behaviors of the model`` f.]
-}
-\footnotetext[28]{ dem so genannten \textit{Spinglass} (auch: \textit{spin glass}); vgl.[BY86, S. 900 mit Bezug auf Hopfield-Netze]
-}
-\footnotetext[29]{ eine Beschreibung des Verhalten findet sich 1983 bereits in [HS83]
-}
-\footnotetext[30]{ die \textit{Boltzmann-Verteilung} gibt die Wahrscheinlichkeit an, ein geg. physik. System in einem bestimmten Zustand anzutreffen (https://de.wikipedia.org/wiki/Boltzmann-Statistik, abgerufen  05.09.2023)
-}
-\footnotetext[31]{ ``Gelingt es, die Temperatur nach dem richtigen Plan auf null zu verringern, wird sich das Netz mit großer Wahrscheinlichkeit in einem globalen Minimum stabilisieren.`` [Roj93, S. 322] Der Begriff \textit{Annealing} ist hier aus der Werkstoffkunde entlehnt: Eine entsprechende Wärmebehandlung von Materialien unterstützt die Erzeugung gewünschter Werkstoffeigenschaften wie Festigkeit, z.B.  bei der Verarbeitung von Glas [Jeb11, S. 3] oder Schweißverbindungen von Metallen [FJO+19]
-}
-\footnotetext[32]{ Mit Bezug auf [Fuk80] (``Neocognitron: A self-organizing neural network model for a mechanism of pattern recognition unaffected by shift in position``)
-}
-\footnotetext[33]{ Video mit Demonstration des Netzes unter https://www.youtube.com/watch?v=Qil4kmvm2Sw, abgerufen 04.09.2023
-}
-\footnotetext[34]{ David H. Hubel (1926 - 2013) und Torsten N. Wiesel (1924 - ) erhalten 1981 den Nobelpreis für Physiologie oder Medizin  für ihre Entdeckungen bzgl. Informationsverarbeitung im Seewahrnehmungssystem (https://www.nobelprize.org/prizes/medicine/1981/summary/, abgerufen 05.09.2023). In der im folgenden zitierten Arbeit von 1962 zeigen sie, dass im Wahrnehmungssystem ``einfache`` und ``komplexe`` Neuronen existieren, die visuelle Informationen unterschiedlich verarbeiten [Wur09, S. 2819]
-}
-\footnotetext[35]{ ``learning without a teacher``, also unüberwachtes Lernen (unsupervised learning).
-}
-\footnotetext[36]{ ``We use a learning-with-a-teacher process for the reinforcement of the modifiable synapses in the new large-scale
-model, instead of the learning-without-a-teacher process applied to the previous model.`` [FMI83, S. 827]; \textit{Anderson und Rosenfeld} vermerken dies als ``some handcrafted fine tuning`` [AR88, S. 524 ff.]
-}
-\footnotetext[37]{ ein Jahr nach Erscheinen von [AR88]
-}
-\footnotetext[38]{ \textit{freie Parameter} sind die Parameter des Netzes, die durch den Lernvorgang festgelegt werden, also bspw. die Gewichte, Schwellenwerte oder auch die Lernrate, wenn diese durch Verwendung bestimmter Optimierungsalgorithmen adaptiv ist, wie bspw. \textbf{Adam} (vgl. [GBC18, S. 346] mit Verweis auf [KB15])
-}
-\footnotetext[39]{ ``Its architecture is a direct extension of the one proposed in LeCun (1989).`` [CBD+89 S. 544] Iterationen von \textit{LeNet} durch \textit{LeNet-4} und \textit{LeNet-5}. Die Architektur von \textit{LeNet-5} wird später angemessen mit der in Mitte der 90er Jahre zur Verfügung stehenden Technologie skaliert: ``In 1989 a recognizer as complex as LeNet-5 would have required several weeks' of training, and more data than was available, and was therefore not even considered.`` [CBB+98, S. 15] Die Eingabedaten sind ein $32 \times 32$ Pixel grosses Bild, ausserdem besitzt das Netz 7 Schichten (ohne Eingabeschicht) (\textit{LeNet-1}: 3 verborgene Schichten [CBD+89, S. 544]). Eine vollständige Beschreibung der eindrucksvollen Architektur findet sich in [CBB+98, S. 7 ff.]
-}
-\footnotetext[40]{ Wobei die Bilder zu Matrizen der Dimension $16 \times 16$ transformiert und als Eingabedaten in das Netz eingespeist werden. Die Transformation behält das Seitenverhältnis der Zeichen bei. Die Werte der Matrix an den Positionen $a_{ij}$ entsprechen Grauwerten mit einem normalisierten Wertebereich von $[-1, 1]$ [CBD+89, S. 542]
-}
-\footnotetext[41]{ ``\textit{convolution}`` (engl.): Faltung
-}
-\footnotetext[42]{ ``das biologische Analogon zu den Filtern [Kerneln] sind die bei den Sinnesorganen vorkommenden rezeptiven Felder.`` [Ert21, S. 326]. Vgl. hierzu auch [LBH15, S. 439]
-}
-\footnotetext[43]{ ``einige Dutzend oder hundert Pixeln`` [GBC18, S. 374]
-}
-\footnotetext[44]{ bereits erwähnt wurde die \textit{shift invariance}: Wird bspw. ein Bild $X$ in das Netz $f$ eingespeist, das in einer Ausgabe $f(X) = Y$ resultiert, dann bedeutet \textit{shift invariance}, das eine Verschiebung der Eingabedaten $g(X) = X+\Gamma$ in dem gleichen $Y$ resultiert: $f(X) = f(g(X))$.  \textit{Äquivarianz} (engl. ``equivariance``) bedeutet, das eine Änderung der Eingabedaten auch zu einer ``gleichartigen Änderung der Ausgabe`` führt: $f(g(x)) = g(f(x))$ [GBC18, S. 377 f.]
-}
-\footnotetext[45]{ \textit{LeCun, Bengio und Hinton} weisen in [LBH15, S. 439] darauf hin, dass die Pooling Schicht auch die Aufgabe hat, semantisch ähnliche Merkmale zusammenzufassen: ``the role of the pooling layer is to merge semantically similar features into one.``
-}
+
+Die mathematische Basis von CNNs ist u.a. die \textbf{Faltungsoperation}\footnote{
+    ``\textit{convolution}`` (engl.): Faltung
+}: Hierbei wird auf Eingabedaten ein \textbf{Kernel} (die \textit{Faltungsmatrix})\footnote{
+    ``das biologische Analogon zu den Filtern [Kerneln] sind die bei den Sinnesorganen vorkommenden rezeptiven Felder.`` [Ert21:326]. Vgl. hierzu auch [LBH15:439].
+} angewendet, wobei das Ergebnis der Faltungsoperation die \textbf{feature map} (\textit{Merkmalskarte}) ist [CBG18:370 ff.]. \textit{Goodfellow, Bengio und Courville} erläutern in [CBG18:374 ff.] die Optimierungen, die durch den Einsatz von Faltung hervorgehen: Durch den Einsatz von Kerneln, die nur aus einem Bruchteil der Größe der Eingabedaten bestehen\footnote{ ``einige Dutzend oder hundert Pixeln`` [GBC18:374]
+}, können ``aussagekräftige Merkmale`` aufgespürt werden, was dazu führt, das weniger Parameter gespeichert werden müssen und gleichzeitig die ``statistische Effizienz`` des Netzes erhöht wird (\textbf{sparse interaction} bzw. \textbf{sparse weights}). Durch das bereits erwähnte \textbf{parameter sharing} (auch: \textbf{tied weights}) kann die Effizienz des Netzes weiter erhöht und Speicherplatzverbrauch weiter verringert werden, und Schichten weisen eine \textbf{Äquivarianz} gegenüber Verschiebung auf\footnote{ bereits erwähnt wurde die \textit{shift invariance}: Wird bspw. ein Bild $X$ in das Netz $f$ eingespeist, das in einer Ausgabe $f(X) = Y$ resultiert, dann bedeutet \textit{shift invariance}, das eine Verschiebung der Eingabedaten $g(X) = X+\Gamma$ in dem gleichen $Y$ resultiert: $f(X) = f(g(X))$.  \textit{Äquivarianz} (engl. ``equivariance``) bedeutet, das eine Änderung der Eingabedaten auch zu einer ``gleichartigen Änderung der Ausgabe`` führt: $f(g(x)) = g(f(x))$ [GBC18:377 f.]
+}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{images/p1ReadSeq.pdf}
+    \caption{Skizzierung einer Faltungsoperation.}
+    \label{fig-faltung}
+    \small
+    In dem Beispiel werden 4x4 grosse Daten zu 3x2 grossen feature maps ``gefaltet``.
+\end{figure}
+
+
+
+CNNs nutzen neben den Convolution Schichten auch Pooling Schichten [Ert21:325], die die Ausgaben des Netzes durch eine ``statistische Größe der nahegelegenen Ausgaben`` ersetzt [GBC18:379], was die Zahl der Pixel auf den feature maps reduziert\footnote{ \textit{LeCun, Bengio und Hinton} weisen in [LBH15:439] darauf hin, dass die Pooling Schicht auch die Aufgabe hat, semantisch ähnliche Merkmale zusammenzufassen: ``the role of the pooling layer is to merge semantically similar features into one.``
+}, ausserdem wird als Aktivierungsfunktion meistens die nichtlineare ReLu (Rectified Linear Unit, s. Gleichung~\ref{eq:gl-relu} und Abbildung~\ref{fig-relu}) verwendet, die die Konvergenz der Netze verbessert [Ert21:327].\\
+
+ReLU:
+\begin{equation} f(x) = max(0, x)
+    \label{eq:gl-relu}
+\end{equation}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{images/p1ReadSeq.pdf}
+    \caption{Ein Plot der ReLU}
+    \label{fig-relu}
+\end{figure}
+
+
+
+

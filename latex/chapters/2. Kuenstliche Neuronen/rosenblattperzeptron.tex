@@ -289,7 +289,7 @@ dar.
 
 \end{definition}
 
-\subsection{Die Lernregel}
+\subsection{Die Lernregel}\label{lernregel}
 
 Die Eigenschaft linearer Trennbarkeit von Daten ist eine wesentliche Voraussetzung dafür, dass ein Perzeptron \textit{konvergiert}: Die \textit{Lernregel} des Perzeptrons passt während der Laufzeit die Gewichte $w_1 ... w_n$ solange an, bis sie - eingesetzt in eine lineare Gleichung [Ert21:311] - die $n$-dimensionalen Daten entsprechend Definition~\ref{eq:gl-rpact} \textit{klassifizieren} kann.
 Aus diesem Grund wird das Perzeptron auch \textbf{linearer Klassifizierer} genannt [Ert21:210 - 216].
@@ -689,7 +689,7 @@ Offensichtlich kann $w_1 + w_2 < \Theta$ nicht erfüllt werden, wenn gleichzeiti
     \label{fig-rp-xor}
 \end{figure}
 
-\subsection{Der KI-Winter}
+\subsection{Der KI-Winter}\label{kiwinter}
 
 In \textit{Perceptrons - An introduction to Computational Geometry (1969)} [MP17] behandeln \textit{Minsky und Papert} u.a. das Verhalten des Perzeptrons im Fall nicht-separabler Daten\footnotemark[35] sowie das Problem bzgl. \textit{recognition of connectedness}\footnotemark[36], bei dem es um die Erkennung zusammenhängender geometrischer Figuren geht.
 Ihr Anliegen mit dem Buch ist es, die (mathematischen) Grenzen des Rosenblatt-Perzeptrons auf ein formales Gerüst zu stellen [MP17:249, ``What Perceptrons Can't Do``].
@@ -734,7 +734,7 @@ In  [AR98:X] verweisen \textit{Anderson und Rosenfeld} auf [Cow90], in dem auch 
 
 \textit{Russell und Norvig} fassen zusammen, dass \textit{Minsky und Papert} in ihrem Buch bewiesen haben, dass ein Perzeptron alles lernen kann, was es auch darstellen kann, aber es könnte halt nur sehr wenig darstellen[RN09:45]\footnotemark[40]. Auf gleicher Seite verweisen sie auf die zunehmende Komplexität der zu berechnenden Modelle, die nicht alleine durch schnellere und bessere Hardware kompensiert werden konnte.
 
-Der Lighthill Report\footnotemark[41] sollte dann 1973 eine Grundlage für die Entscheidung der britischen Regierung darstellen, das Budget für die Forschung an KI zu kürzen [RN09:45]. Neuronale Netze wurden als Grundlage künstlicher Intelligenz zunächst verworfen [Ola96:641, letzter Abs.], und die Forschung daran ging zurück, bis sie Anfang/Mitte der 1980er Jahre wieder aufgenommen wurde: Diese Periode ist gemeinhin als ``KI-Winter`` bekannt.
+Der Lighthill Report\footnotemark[41] sollte dann 1973 eine Grundlage für die Entscheidung der britischen Regierung darstellen, das Budget für die Forschung an KI zu kürzen [RN09:45]. Neuronale Netze wurden als Grundlage künstlicher Intelligenz zunächst verworfen [Ola96:641, letzter Abs.], und die Forschung daran ging zurück, bis sie Anfang/Mitte der 1980er Jahre wieder aufgenommen wurde: Diese Periode ist gemeinhin als ``KI-Winter`` (vgl. \ref{appendix:kiwinter}) bekannt.
 
 
 \footnotetext[40]{
