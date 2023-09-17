@@ -1,6 +1,6 @@
 \chapter{Begriffe und Ergänzungen}
 
-\subsection{Aktionspotenzial}\label{appendix:aktionspotenzial}
+\section{Aktionspotenzial}\label{appendix:aktionspotenzial}
 
 \subsubsection{Phasen des Aktionspotenzials}
 Die Generierung von Aktionspotenzialen kann entsprechend der zeitlichen Reihenfolge in folgende Phasen eingeteilt werden:
@@ -44,7 +44,7 @@ Es ist keine Aktionspotenzialbildung möglich [SD07:47, rechte Spalte, Abs. 3].\
 Nachdem einige $Na^+$-Kanäle  \textit{deinaktiviert} wurden, ist eine Auslösung des Aktionspotenzials wieder möglich.
 Allerdings ist die Reizschwelle erhöht (da $V_m < V_r < V_t$) und ``die Amplitude des auslösbaren Aktionspotenzials ist reduziert`` [BLS19:70  ``Refraktärzeit`` f.]
 
-\subsubsection{Übertragungsgeschwindigkeit}
+\subsection{Übertragungsgeschwindigkeit von Signalen in Nervenzellen}
 Ist das Axon - die Nervenfaser - \textbf{marklos} , wird das Signal kontinuierlich weitergeleitet, und die Leitunsggeschwindigkeit ist eher gering ( ca. 1m/s [BLS19:80, Tab.7.1].
 Die Leitunsggeschwindigkeit hängt hier direkt von dem Durchmesser der Nervenfaser ab und ist proportional zur Wurzel des Fasseradius.
 Die marklosen Riesenaxone des Tintenfisches erreichen deshalb aufgrund ihrer Größe Leitungsgeschwindigkeiten von bis zu 20 m / s [BLS19:79, ``Aktive Leitungsgeschwindigkeit``].
@@ -57,7 +57,7 @@ Deren Membran besitzt spannungsabhängige $Na^+$-Kanäle [BCP18:109, Abs. 2], di
 Die Weiterleitung in myeliniserten Axonen bezeichnet man deshalb als \textbf{saltatorische} (sprunghafte) Erregungsleitung [BCP18:110, Abs. 1].
 
 
-\subsection{Expertensysteme}\label{appendix:expertensystem}
+\section{Expertensysteme}\label{appendix:expertensystem}
 
 1990 in [FS90, S. 14, ``1.4 Expertensysteme``] als ``kommerziell erfolgreichste Teildisziplin der Artificial intelligence`` bezeichnet, und ebenda beschrieben als:
 
@@ -73,7 +73,7 @@ Im groben besteht ein Expertensystem aus einer domänenspezifischen \textit{Wiss
 }
 
 
-\subsection{Goldman-Gleichung}\label{appendix:goldman}
+\section{Goldman-Gleichung}\label{appendix:goldman}
 
 Auch: \textbf{Goldman-Hodgkin-Katz-Gleichung} (GHK-Gleichung) nach David Eliot Goldman (1910 – 1998), Alan Lloyd Hodgkin(1914 - 1998) und Bernard Katz (1911 - 2003).
 
@@ -108,7 +108,7 @@ Dazu kann die \textbf{Goldman-Gleichung} genutzt werden\footnote{
 
 
 
-\subsection{KI Winter}\label{appendix:kiwinter}
+\section{KI Winter}\label{appendix:kiwinter}
 
 Der Begriff ``KI Winter`` wird in der Literatur mit unterschiedlichen Perioden während der Forschung und Förderung von KI in Zusammenhang gebracht.
 In dem Kontext des im Abschnitt~\ref{kiwinter} erwähnten Lighthill Reports bezieht sich der Begriff auf die Periode nach 1973
@@ -126,7 +126,7 @@ In dem Kontext des im Abschnitt~\ref{kiwinter} erwähnten Lighthill Reports bezi
 
 
 
-\subsection{LeNet-1}\label{appendix:lenet1}
+\section{LeNet-1}\label{appendix:lenet1}
 
 \textit{LeCun et al.} weisen darauf hin, dass
 
@@ -143,10 +143,19 @@ Spätere Iterationen von \textit{LeNet} durch \textit{LeNet-4} und \textit{LeNet
 Eingabedaten für Lenet-5 sind ein $32 \times 32$ Pixel grosses Bild, ausserdem besitzt das Netz 7 Schichten (ohne Eingabeschicht) (\textit{LeNet-1}: 3 verborgene Schichten [CBD+89:544]).
 Eine vollständige Beschreibung der eindrucksvollen Architektur findet sich in [CBB+98:7 ff.]
 
+\subsection*{Lernrate}
+Die \textbf{Lernrate} ($\eta$,in der Literatur auch $\alpha$) ist der Koeffizient für die Gewichtsanpassungen in einem künstlichen Neuron.
+
+Wie in Abschnitt~\ref{sec-lernregel} gesehen, berechnet die Lernregel die Gewichte auf Basis des \textit{Fehlers}, also der Differenz von $\text{erwartete Ausgabe}$ und $\text{tatsächliche Ausgabe}$: Ist der Fehler $-1$, werden die Gewichte verringert, ist der Fehler 1, werden die Gewichte erhöht.
+Die Lernrate $\eta$ ist der Koeffizient für die Gewichtsanpassung, und wird auch \textit{Schrittweite} genannt (vgl. [GBC18:93] und [RN09:172]).
+
+Üblicherweise liegt $\eta$ zwischen $0$ und $1$\footnote{
+    ``$\alpha$ [$\eta$] ist eine kleine Konstante`` [RN09:172, Abs. 2]. Gleiche Stelle beleuchtet das Für und Wider kleiner und großer Werte von $\eta$; \textit{Salomon} weist in [Dor90:173] darauf hin, dass eine geeignete Lernrate auch von der Aufgabenstellung abhängt.
+} [Fau94:61].
 
 
 
-\subsection{Neurotransmitter und ihre Rezeptoren}
+\section{Neurotransmitter und ihre Rezeptoren}
 
 Die Diffusion der Vesikel in den synaptischen Spalt dauert ca. 10–100 µs, danach binden sich die Transmitter an die Rezeptoren der postsynaptischen Zelle [BLS19:98, rechte Spalte, Punkt. 4], die das ``interzellulläre chemische Signal [...] in ein intrazelluläres Signal (eine Änderung des Membranpotenzials oder eine chemische Veränderung) in der postsynaptischen Zelle umwandeln`` [BCP18:123, Abs. 2].
 
@@ -166,7 +175,7 @@ Als Beispiel sei hier noch einmal der ``Vagusstoff`` ACh erwähnt, der die Kontr
 Erregende und hemmende Synapsen kann man auch an ihrer Struktur erkennen: Asymmetrische oder \textit{Gray-Typ-I-Synapsen} sind auf der postsynaptischen Seite dicker als auf der präsynaptischen, bei gleicher Dimension der Membrandifferenzierungen spricht man von \textit{Gray-Typ-II-Synapsen}. Typ-I sind in der Regel exzitatorisch, Typ-II inhibitorische  [BCP18:127, Abs. 1 u. S. 147 ``Struktur und Position von exzitatorischen und inhibitorischen Synapsen``].
 
 
-\subsection{Perzeptron}\label{appendix:perzeptron}
+\section{Perzeptron}\label{appendix:perzeptron}
 \subsection*{The Perceptron - A perceiving and recognizing automaton}
 Das Forschungsprojekt ``\textit{Perceiving and Recognizing Automaton}`` beschreibt einen Apparat, der mittels einer Kamera geometrische Figuren erkennen und zuordnen kann [Ros57].
 Die Funktionen simuliert Rosenblatt zunächst auf einem IBM 704 Rechner [Ros60], bevor  die Hardware Anfang der 60er Jahre als \textit{Mark 1 Perceptron} gebaut wird: 400 Cadmiumsulfid-Photozellen auf einem 20x20 großen Raster angeordnet - dem \textbf{S-System} (\textbf{S} = \textit{Sensory}) - leiten Signale an das \textbf{A-System} (\textbf{A} = \textit{Association}); dort werden sie registriert und ausgewertet, und schlussendlich über das \textbf{R-System} (\textbf{R} = \textit{Response}) ausgegeben (vgl. [Ros57:4, f.], [Ros58 S. 389 ff.] sowie [Bis06:193 ``Frank Rosenblatt`` sowie S. 196 Figure 4.8]).
@@ -185,3 +194,14 @@ Die \textbf{S}-Units konnten sowohl hemmende als auch erregende Signale in das \
 \end{figure}
 
 
+\section{Shunting Inhibition}\label{appendix:shuntinginhibition}
+\subsection*{Kurzschlusshemmung bei Neuronen}
+Wenn ein Transmitter einer inhibitorischen Synapse $Cl^-$-Kanäle aktiviert, verschiebt sich das Membranpotenzial in Richtung $E_{Cl} \sim -65 mV$.
+Ist das Membranpotential der Zelle $> -65 mV$, kann ein hyperpolarisierendes IPSP ausgelöst werden.
+Wenn allerdings bereits $V_m = E_{Cl}$ ist\footnote{
+    ``häufig bei für Chloridleitfähigen GABA Rezeptoren`` [HS19a:100, ``Kurzschlusshemmung``]
+}, wird kein ``sichtbares`` IPSP ausgelöst [BCP18:145, letzter Absatz ff.] - die $Cl^-$-Kanäle sind offen, aber es findet keine Nettoionenbewegung statt.
+Eine Hemmung der Zelle kann aber trotzdem noch stattfinden, wenn bspw. ein distal liegende exzitatorische Synapse positive Ladungsströme verursacht, und die inhibitorische Synapse proximal zum Soma liegt, in Stromrichtung ausgehend von der exzitatorischen Synapse.
+Der positive Ladungsstrom kommt an der inhibitorischen Synapse mit den geöffnet $Cl^-$-Kanälen an, und die Depolarisation durch das EPSP wird durch den Einfluss von $Cl^-$-Ionen (die $V_m$ wieder auf $V_{rev} = E_{Cl}$ bringen wollen) mitigiert.
+
+Aus diesem Grund sind inhibitorische Synapsen oft proximal zum Soma zu finden [KSJ+13:231, rechte Spalte, Abs. 2 f.]}

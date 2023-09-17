@@ -22,7 +22,7 @@
 
 Die eingehende Schnittstelle eines Neurons sind seine \textbf{Dendriten}\footnotetext{
  ``\textgreek{δένδρον} (dendrón)`` (altgriechisch): Baum; einzelne selten länger als 2mm {[BCP18:28, Abs. 2]}. Längere Dendriten finden sich an den kortikalen Pyramidenzellen mit einer Länge von 1 cm {[Eil19:58, ``Polarisierung``]}
-}: Baumförmige Fortsätze\footnotemark, die um das \textbf{Soma}\footnote{
+}: Baumförmige Fortsätze, die um das \textbf{Soma}\footnote{
   ``\textgreek{σῶμα} (sõma)`` (altgriechisch): Körper; auch \textit{Perikaryon} [RK18:58, ``Aufbau``]. Bezeichnet den Zellkörper und das Stoffwechselzentrum des Neurons mit der eine Grösse von ca. 20 μm [BCP18:29]. Zum Vergleich: ein menschliches Haar hat einen Durchmesser von ca. 70 μm, kleine Bakterien bis zu 20 μm.
 } herum gelagert sind.
 Diese Dendritenbäume [BCP18:47] fungieren \textit{postsynaptisch} und empfangen afferente\footnotetext{
@@ -107,9 +107,8 @@ Diese \textit{Membranspannung} $V_m$ wird durch eine ungleiche Ionenverteilung b
  \includegraphics{images/p1ReadSeq.pdf}
  \caption{Ionenverteilung im Zytosol und der EZF}
  \small
- Aufgrund der elektrostatischen Anziehungskraft ziehen sich Anionen und Kationen\footnotemark[25] in der Nähe der Membran gegenseitig an, es kommt zu einer negativen Spannung in Membrannähe (zwischen -70 mV -90 mV in Ruhe).
+ Aufgrund der elektrostatischen Anziehungskraft ziehen sich Anionen (neg. geladen) und Kationen (pos. geladen) in der Nähe der Membran gegenseitig an, es kommt zu einer negativen Spannung in Membrannähe (zwischen -70 mV -90 mV in Ruhe).
 \end{figure}
-
 
 In Ruhe ist die Leitfähigkeit der Membran für $Na^+$ gering, für $K^+$ hingegen hoch [SD07:44 f.].
 $K^+$-Ionen folgen ihrem Konzentrationsgradienten\footnote{
@@ -244,7 +243,7 @@ Die Stärke des Signals selber ist unabhängig von dem Wert, zur überschwellige
 \subsection{Signalweiterleitung über das Axon}
 
 Kurz nach der Aktionspotenzialbildung befinden sich daran beteiligte Membrane in der Refraktärphase, ihre $Na^+$-Kanäle sind inaktiviert. 
-Somit pflanzt sich das Aktionspotenzial nur in eine Richtung fort\footnotemark{
+Somit pflanzt sich das Aktionspotenzial nur in eine Richtung fort\footnote{
   {[BCP18:106, Abs. 3]} verweist auf \textit{antidrome} Fortleitung, die in Experimenten ausgelöst werden kann
 } ( \textit{orthodrome} Fortleitung) [BCP18:106, Abs. 3].
 Die Fortleitung geschieht in Richtung der Axonterminal, wo sich die präsynaptischen Endigungen befinden und das elektrische Signal in chemische Signale umgewandelt werden.
@@ -343,7 +342,9 @@ Der Wert für $V_m$, bei dem die Differenz zwischen $V_m$ und $E_{Ion}$ bei $0$ 
 Für ionenspezifische Kanäle entspricht das \textit{Umkehrpotenzial} ihrem \textit{Gleichgewichtspotenzial} [SBB+12:95, ``Hyperpolarization or Depolarization`` f.].\\
 
 Sobald eine Membran permeabel für mehr als ein spezifisches Ion ist, muss nach [KSJ+13] die relative Leitfähigkeit der Membran für diese Ionen sowie deren Gleichgewichtspotenziale zur Bestimmung des Umkehrpotenzials berücksichtigt werden. 
-Für die ACh-Rezeptoren an der motorischen Endplatte\footnotemark[64], die für $Na^+$ und $K^+$ permeabel sind, folgt damit, dass die Summe ihrer Ströme am Umkehrpotenzial $V_{rev} = 0$ sein muss:
+Für die ACh-Rezeptoren an der motorischen Endplatte\footnote{
+ chemische Synapse, die Erregungen an eine Muskelfaser weiterleitet [SD07:56, ``Motorische Endplatte``]
+}, die für $Na^+$ und $K^+$ permeabel sind, folgt damit, dass die Summe ihrer Ströme am Umkehrpotenzial $V_{rev} = 0$ sein muss:
 
 \begin{equation}
 I_{Ka} + I_{Na} = 0
@@ -375,21 +376,10 @@ Wenn nun das Membranpotenzial vor der Einwirkung von ACh $< 0mV$ ist, bewirkt ei
 
 Im Allgemeinen gilt, das an erregenden Synapsen unspezifische Kationenkanäle öffnen, deren Umkehrpotential im Bereich von $0mV$ liegt: Hier kommt es zu einer Depolarisation (EPSP). An hemmenden Synapsen öffnen $Cl^-$- oder $K^+$-Kanäle und es gilt dort $V_{rev} \leq V_r$, wonach es meist zu einer leichten Hyperpolarisation kommt [BLS19:100, ``9.3.2 Umkehrpotenzial`` ff.].\\
 
-Die Verrechnung von EPSP und IPSP erfolgt nicht ausschließlich linear durch Summation - inhibitorische Synapsen können auch für einen ``Kurzschluss`` sorgen und somit ein EPSP um ein Vielfaches verkleinern [Sil03:477, ``Shunting inhibitory conductances`` f.]. Man spricht dann von einer \textit{Kurzschlusshemmung} (\textbf{shunting inhibition}). 
-Wenn ein Transmitter einer inhibitorischen Synapse $Cl^-$-Kanäle aktiviert, verschiebt sich das Membranpotenzial in Richtung $E_{Cl} \sim -65 mV$. 
-Ist das Membranpotential der Zelle $> -65 mV$, kann ein hyperpolarisierendes IPSP ausgelöst werden. 
-Wenn allerdings bereits $V_m = E_{Cl}$ ist\footnotemark[65], wird kein ``sichtbares`` IPSP ausgelöst [BCP18:145, letzter Absatz ff.] - die $Cl^-$-Kanäle sind offen, aber es findet keine Nettoionenbewegung statt.
-Eine Hemmung der Zelle kann aber trotzdem noch stattfinden, wenn bspw. ein distal liegende exzitatorische Synapse positive Ladungsströme verursacht, und die inhibitorische Synapse proximal zum Soma liegt, in Stromrichtung ausgehend von der exzitatorischen Synapse. 
-Der positive Ladungsstrom kommt an der inhibitorischen Synapse mit den geöffnet $Cl^-$-Kanälen an, und die Depolarisation durch das EPSP wird durch den Einfluss von $Cl^-$-Ionen (die $V_m$ wieder auf $V_{rev} = E_{Cl}$ bringen wollen) mitigiert.
+Die Verrechnung von EPSP und IPSP erfolgt nicht ausschließlich linear durch Summation - inhibitorische Synapsen können auch für einen ``Kurzschluss`` sorgen und somit ein EPSP um ein Vielfaches verkleinern [Sil03:477, ``Shunting inhibitory conductances`` f.]. Man spricht dann von einer \textit{Kurzschlusshemmung} (\textbf{shunting inhibition})\footnote{
+ s. \ref{appendix:shuntinginhibition}
+}.
 
-\footnotetext[64]{
- chemische Synapse, die Erregungen an eine Muskelfaser weiterleitet [SD07:56, ``Motorische Endplatte``]
-}
-\footnotetext[65]{
- ``häufig bei für Chloridleitfähigen GABA Rezeptoren`` [HS19a:100, ``Kurzschlusshemmung``]
-}
-
-Aus diesem Grund sind inhibitorische Synapsen oft proximal zum Soma zu finden [KSJ+13:231, rechte Spalte, Abs. 2 f.]
 
 
 

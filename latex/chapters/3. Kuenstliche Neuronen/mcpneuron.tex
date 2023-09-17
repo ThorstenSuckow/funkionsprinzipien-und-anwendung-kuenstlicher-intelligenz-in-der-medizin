@@ -99,11 +99,10 @@ X \in \{1, 0\}^{n+m} := (x_1, x_2 ..., x_n, y_1, y_2, ... y_m)
 \end{equation}\linebreak[2]
 
 \noindent
-definieren wir die \textit{Gewichte} $w_+ \in \{2, 1\}$\footnotemark[18] mit $w^1_+ =1, w^2_+ = 2$ für erregende Signale, $w_- = -1$ für hemmende Signale (vgl. [Fau94:27-28]).\\
-
-\footnotetext[18]{
+definieren wir die \textit{Gewichte} $w_+ \in \{2, 1\}$\footnote{
     In der Original-Arbeit stehen zwei ``erregende Synapsen`` auch für einen Schwellenwert von $2$ (siehe Abbildung~\ref{fig-mcpcell})
-}
+} mit $w^1_+ =1, w^2_+ = 2$ für erregende Signale, $w_- = -1$ für hemmende Signale (vgl. [Fau94:27-28]).\\
+
 
 \noindent
 Die \textbf{Eingabefunktion} $g$ (vgl. 2.1.3 b.)
@@ -157,7 +156,9 @@ Ein zyklenfreies Netz aus MCP-Zellen, das aus \textbf{AND} (Konjunktion)-, \text
 
 
 \begin{definition} Ein MCP-Netz ist ein gerichteter Graph\footnotetext{
-    Gerichtete Kanten eine MCP-Netzes nehmen eigentlich keine Gewichtung der Information vor [Roj93:40, ``2.4.1 Gewichtete und ungewichtete Netze``]. Sowohl [Min67:34] als auch [Roj93:32] nutzen unter Berücksichtigung der \textit{absoluten Hemmung} nur die Summe der erregenden Signale und vergleichen diese mit $\Theta$ - dieser Vergleich findet nur statt, wenn \textit{kein} hemmendes Signal ankommt: Die Zelle liefert sonst direkt $0$ als Ausgabe zurück. [Fau94] nutzt\footnotemark[19] unter Berücksichtigung von Gleichung~\ref{eq:gl-activation} gewichtete Kanten, in ähnlicher Weise auch [BJ90:39 ff.]. Wie wir später sehen werden, wird die Gewichtung von Kanten ein wichtiger Bestandteil der Funktionsweise neuronaler Netze. Wir entfernen uns mit dem o.g. Modell ein Stück von der ursprünglichen Modellierung.
+    Gerichtete Kanten eine MCP-Netzes nehmen eigentlich keine Gewichtung der Information vor [Roj93:40, ``2.4.1 Gewichtete und ungewichtete Netze``]. Sowohl [Min67:34] als auch [Roj93:32] nutzen unter Berücksichtigung der \textit{absoluten Hemmung} nur die Summe der erregenden Signale und vergleichen diese mit $\Theta$ - dieser Vergleich findet nur statt, wenn \textit{kein} hemmendes Signal ankommt: Die Zelle liefert sonst direkt $0$ als Ausgabe zurück. [Fau94] nutzt\footnote{
+        Gewichte sind in absolut hemmenden Leitungen unsinnig nach [Roj93:42, Abs. 1]
+    } unter Berücksichtigung von Gleichung~\ref{eq:gl-activation} gewichtete Kanten, in ähnlicher Weise auch [BJ90:39 ff.]. Wie wir später sehen werden, wird die Gewichtung von Kanten ein wichtiger Bestandteil der Funktionsweise neuronaler Netze. Wir entfernen uns mit dem o.g. Modell ein Stück von der ursprünglichen Modellierung.
 } $G = (V, E)$ mit der Knotenmenge
 
 \begin{equation}
@@ -185,15 +186,9 @@ sowie der Kantengewichtsfunktion
 
 
 
-\footnotetext[19]{
-    Gewichte sind in absolut hemmenden Leitungen unsinnig nach [Roj93:42, Abs. 1]
-}
-
 \subsection{Implementierung von Booleschen Funktionen}\label{seq-mcpbool}
 
-Mit den eingeführten Formalismen können wir nun aussagenlogische Funktionen auf Basis von MCP-Zellen modellieren\footnote{
-In \ref{appendix:paradoxehitzeempfindung} findet sich ein ausführliches Beispiel zur Modellierung eines MCP-Netzes unter Berücksichtigung von Zeiteinheiten.
-}.
+Mit den eingeführten Formalismen können wir nun aussagenlogische Funktionen auf Basis von MCP-Zellen modellieren.
 
 
 \subsection*{AND (Konjunktion)}
@@ -334,7 +329,7 @@ Für die Konstruktion des Netzes können wir zunächst ein Grundgerüst definier
 In diesem Fall muss also eine Hemmung zwischengeschaltet werden, was mit je zwei hemmenden Eingaben realisiert werden kann: $N_1$ hemmt $Z_2$, wenn $N_1$ aktiv ist.
 Das führt dazu, das ein von $N_2$ ausgehendes erregendes Signal gehemmt wird: $Z_2$ leitet in dem Fall $0$ an $N_3$ weiter. Die Zellen $N_2$ und $Z_1$ werden analog verbunden, wodurch dann das Netz in Abbildung~\ref{fig-mcpxorf} entsteht.
 
-Die \textbf{disjunktive Normalform} (Gleichung~\ref{eq:gl-xordis}) und die \textbf{konjunktive Normalform} (Gleichung~\ref{eq:gl-xorcon}) von \textbf{XOR} liefern anschaulich die Formel für das Netz.
+Die \textbf{disjunktive Normalform} (Gleichung~\ref{eq:gl-xordis}) und die \textbf{konjunktive Normalform} (Gleichung~\ref{eq:gl-xorcon}) von \textbf{XOR} liefern anschaulich die Formel für das Netz.\\
 
 \begin{equation}
 A \oplus B \equiv (\neg A \land B) \lor (A \land \neg B)
@@ -362,54 +357,50 @@ A \oplus B \equiv (A \lor B) \land (\neg A \lor \neg B)
 \end{figure}
 
 
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        In \ref{appendix:paradoxehitzeempfindung} findet sich ein ausführliches Beispiel zur Modellierung eines MCP-Netzes unter Berücksichtigung von Zeiteinheiten.
+    }%
+}
 
 
 \clearpage
 \pagebreak
 
 
-\subsection{Zusammenfassung}\label{mcp-summary}}
+\subsection{Zusammenfassung}\label{mcp-summary}
 
-Das MCP-Modell ist ein \textbf{empirisches Modell}\footnotemark[20] [HI97:4] und basiert auf Analyse und einfacher Schwellenwertlogik [AR88:16, Abs. 2]. 
-In ihrem Papier weisen McCulloch und Pitts darauf hin, dass das Alles-Oder-Nichts-Prinzip als Vorbild für ihre Abstraktion durch Aussagenlogik dient. 
-Von allem, was wir in Kapitel 1 über Nervenzellen erfahren haben, dürfen wir den Schluss ziehen, dass das von ihnen erstellte Modell eine starke Vereinfachung ist\footnotemark[21].
-Aktionspotenzialen lassen sich gewiss nicht auf zweiwertige Logik reduzieren, darüber hinaus berücksichtigen sie auch nicht eine mögliche Veränderung des Netzes, z.B. durch Lernen\footnotemark[22]. 
-McCulloch und Pitts sind sich dessen durchaus bewußt\footnotemark[23]. 
-Es bleibt ein statisches Modell, es muß ``konstruiert`` werden [Fau94:28, ``1.6.2 Algorithm``]. 
+Das MCP-Modell ist ein \textbf{empirisches Modell}\footnote{
+    auch ``caricature model`` [HI97:4]
+} [HI97:4] und basiert auf Analyse und einfacher Schwellenwertlogik [AR88:16, Abs. 2].
+In ihrem Papier weisen McCulloch und Pitts darauf hin, dass das Alles-Oder-Nichts-Prinzip als Vorbild für ihre Abstraktion durch Aussagenlogik dient.
+Von allem, was wir in Kapitel 1 über Nervenzellen erfahren haben, dürfen wir den Schluss ziehen, dass das von ihnen erstellte Modell eine starke Vereinfachung ist\footnote{
+    ``This ensures its status as a \textit{model}, and not a \textit{copy}, of a real neuron, and makes it possible to implement on a digital computer.`` [BJ90:43, Hervorhebungen i. O.]
+}.
+Aktionspotenzialen lassen sich gewiss nicht auf zweiwertige Logik reduzieren, darüber hinaus berücksichtigen sie auch nicht eine mögliche Veränderung des Netzes, z.B. durch Lernen\footnote{
+    ``Lernen`` geschieht auf physiologischer Ebene durch die Modulierung von Synapsen:[HS19:115 ff.]
+}.
+McCulloch und Pitts sind sich dessen durchaus bewußt\footnote{
+    ``McCulloch and Pitts acknowledged in their paper that their definition of a neuron was idealized, and that they made physical assumptions that were 'most convenient for the calculus'`` [Abr02:21, ``Conclusion``]. Siehe auch [MP43:101]: ``[...]we regard facilitation and extinction as dependent upon continuous changes in threshold related to electrical and chemical variables, [...]``, sowie ``He {[McCulloch]} never claimed that the 1943 model exhausted the richness of individual neurons`` [Arb19:11, ``Does the Brain Have a Logic{?}``, Abs. 4]
+}.
+Es bleibt ein statisches Modell, es muß ``konstruiert`` werden [Fau94:28, ``1.6.2 Algorithm``].
 Es ist nur durch Änderung der Netztopologie bzw. der Schwellenwerte anpassungsfähig [Roj93:51, Abs. 2] Selbständig zu lernen vermag es nicht.\\
 
-\footnotetext[20]{
-    auch ``caricature model`` [HI97:4]
-}
-\footnotetext[21]{
-    ``This ensures its status as a \textit{model}, and not a \textit{copy}, of a real neuron, and makes it possible to implement on a digital computer.`` [BJ90:43, Hervorhebungen i. O.]
-}
-\footnotetext[22]{
-    ``Lernen`` geschieht auf physiologischer Ebene durch die Modulierung von Synapsen:[HS19:115 ff.]
-}
-\footnotetext[23]{
-    ``McCulloch and Pitts acknowledged in their paper that their definition of a neuron was idealized, and that they made physical assumptions that were 'most convenient for the calculus'`` [Abr02:21, ``Conclusion``]. Siehe auch [MP43:101]: ``[...]we regard facilitation and extinction as dependent upon continuous changes in threshold related to electrical and chemical variables, [...]``, sowie ``He {[McCulloch]} never claimed that the 1943 model exhausted the richness of individual neurons`` [Arb19:11, ``Does the Brain Have a Logic{?}``, Abs. 4]
-}
 
-
-
-Tatsächlich ist die McCulloch-Pitts-Zelle von eher geringer Bedeutung für die Neurowissenschaft gewesen\footnotemark[24][AR88:17, Abs. 2]. 
-Umso größer war ihr Einfluss auf die Computerwissenschaften\footnotemark[25]. 
-McCulloch und Pitts nahmen für ihr Modell das menschliche Gehirn als Grundlage und ermöglichten so einen neuen Blickwinkel auf Ursache und Wirkung. ``Mind`` no longer ``goes more ghostly than a ghost``[MP43:114]:
-
-\footnotetext[24]{
+Tatsächlich ist die McCulloch-Pitts-Zelle von eher geringer Bedeutung für die Neurowissenschaft gewesen\footnote{
     [AR88:17]: ``The immense theoretical influence of this paper was not among neuroscientists but among computer scientists.``; [Roj93:51] kommt zu einem ähnlichen Schluss: ``Die Art der Schaltungen, die mit
     diesen Zellen gebaut werden, ist aber biologisch gesehen nicht so relevant.``
-}
-\footnotetext[25]{
+}[AR88:17, Abs. 2].
+Umso größer war ihr Einfluss auf die Computerwissenschaften\footnote{
     Die Arbeit war ebenso wichtig für die Entwicklung des ``Konnektionismus`` [Arb19:11, ``Does the Brain Have a Logic{?}``, Abs. 4], einer Forschungsrichtung der künstlichen Intelligenz, in der Modelle (neuronale Netze) untersucht werden, mit deren Hilfe sich intelligente und kognitive Handlungen auf Maschinen übertragen lassen [Dor91:v]
-}
+}.
+McCulloch und Pitts nahmen für ihr Modell das menschliche Gehirn als Grundlage und ermöglichten so einen neuen Blickwinkel auf Ursache und Wirkung. ``Mind`` no longer ``goes more ghostly than a ghost``[MP43:114]:
 
 \blockquote[{[Per88:9, ``Logical Neurons and immanent ideas``]}]{
 If nerve cells were equivalent to the formal neurons of McCulloch and Pitts and if circuits of such elements could be made arbitrarily complicated, then any kind of animal behavior, however marvelously complicated or however intricately linked to sensory input, could be reproduced, and hence understood, in terms of these circuits.
 }
 
-Logische Schaltungen, die Intelligenz und Kognition ermöglichen, brachte den Gedanken an eine ``intelligente Maschine`` hervor (vgl. [Pic04:204, Abs. 3]): So war ihre Formalisierung ein wichtiges Schlüsselelement für die von-Neumann-Rechnerarchitektur [Neu45] sowie Wieners Kybernetik\footnotemark[2], und zusammen mit den nachfolgenden Arbeiten von Hebb [Heb49] und Rosenblatt ebnete es den Weg für die Forschung an künstlicher Intelligenz [Arb19:1 ``Introduction``].
+Logische Schaltungen, die Intelligenz und Kognition ermöglichen, brachte den Gedanken an eine ``intelligente Maschine`` hervor (vgl. [Pic04:204, Abs. 3]): So war ihre Formalisierung ein wichtiges Schlüsselelement für die von-Neumann-Rechnerarchitektur [Neu45] sowie Wieners Kybernetik\footnote{s. \ref{appendix:wiener}}, und zusammen mit den nachfolgenden Arbeiten von Hebb [Heb49] und Rosenblatt ebnete es den Weg für die Forschung an künstlicher Intelligenz [Arb19:1 ``Introduction``].
 
 \noindent
 Interessant ist ihr Vermerk, dass der Entwurf von Netzen mit Zyklen ungleich schwerer sei als der für zyklenfreie Netze, denn:
@@ -449,15 +440,12 @@ Pitts and I showed that brains were Turing machines, and that any Turing machine
 und stellt fest, dass das Nervensystem eine ausgezeichnete logische Maschine repräsentiert [Mcc51:80].\\
 
 \noindent
-Konsequenterweise nutzt [Min67] die MCP-Zelle als endlichen Automaten\footnotemark[26]\footnotemark[27] mit zwei Zuständen, aus denen andere endliche Automaten gebaut werden, und nennt diese, im Jahr 1967 schon geläufig: \textbf{Neuronale Netze} [Min67:33].
-
-
-\footnotetext[26]{
+Konsequenterweise nutzt [Min67] die MCP-Zelle als endlichen Automaten\footnote{
     Ein endlicher Automat ist eine informationsverarbeitende Maschine. Basierend auf Eingaben lassen sich mit einer solchen Maschine Zustände, Zustandsübergänge und Ausgaben modellieren. Bei einem \textit{endlichen} Automaten sind die genannten Eingaben, Zustände, und Ausgaben endlich. [SSH95:29, ``2.1 Endliche Automaten`` ff.]
-}
-\footnotetext[27]{
+}\footnote{
     dass MCP-Netze endliche Automaten sind: Auch in [Cow90:76] sowie [Roj93:47, ``Satz 2.4``].  [Arb19] weist darauf hin, dass die Arbeit von McCulloch und Pitts grundlegend für Automatentheorie gewesen ist [Arb19:8, ``A Selection of Key Papers``, Abs. 3]
-}
+} mit zwei Zuständen, aus denen andere endliche Automaten gebaut werden, und nennt diese, im Jahr 1967 schon geläufig: \textbf{Neuronale Netze} [Min67:33].
+
 
 
 

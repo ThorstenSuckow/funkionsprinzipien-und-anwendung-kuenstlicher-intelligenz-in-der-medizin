@@ -1,6 +1,4 @@
-\chapter{Perzeptron-Implementierung in Python\footnote{
-    vollständiger Quellcode unter \url{https://github.com/ThorstenSuckow/pylabs} (abgerufen 25.08.2023)
-}}\label{appendix:pythonperzeptron}
+\chapter{Perzeptron-Implementierung in Python}\label{appendix:pythonperzeptron}
 
 Wie bereits Abschnitt~\ref{seq-mcpbool} wollen wir auch mit dem Rosenblatt Perzeptron boolesche Funktionen nachbilden.
 Das folgende Beispiel bezieht sich auf die \textbf{AND}-Funktion (vgl. Tabelle~\ref{tab:and}).
@@ -24,7 +22,9 @@ Zunächst definieren wir zwei Mengen $M_+$ und $M_-$: Für Elemente in $M_+$ ist
 \end{figure}
 
 \pagebreak
-Für unsere Perzeptron-Implementierung in Python implementieren wir die Lernregel wie folgt:
+Für unsere Perzeptron-Implementierung in Python\footnote{
+    vollständiger Quellcode unter \url{https://github.com/ThorstenSuckow/pylabs} (abgerufen 25.08.2023)
+} implementieren wir die Lernregel wie folgt:
 
 
 \begin{lstlisting}[language=Python]

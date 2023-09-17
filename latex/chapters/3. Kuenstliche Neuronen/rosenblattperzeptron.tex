@@ -131,7 +131,7 @@ Wir können feststellen, dass
     \item Punkte, die $x_1 - x_2 > 0$ erfüllen (im folgenden $M_-$) in dem Halbrum \textit{unter} der durch $L$ beschriebenen Gerade liegen
     \item Punkte, für die  $x_1 - x_2 < 0$ gilt (im folgenden $M_+$) \textit{über} der durch $L$ beschriebenen Gerade liegen
     \item Punkte mit $x_1 - x_2 = 0$ \textit{auf} der Geraden liegen (im folgenden $\subset M_-$\footnote{
-        Wenn die Hyperebene selbst im Halbraum enthalten ist, spricht man von einem _abgeschlossenen Halbraum_. (\url{https://de.wikipedia.org/wiki/Halbraum}, abgerufen 22.08.2023)
+        Wenn die Hyperebene selbst im Halbraum enthalten ist, spricht man von einem \textit{abgeschlossenen Halbraum}. (\url{https://de.wikipedia.org/wiki/Halbraum}, abgerufen 22.08.2023)
     })
 \end{itemize}
 
@@ -197,16 +197,15 @@ dar.
 
 \end{definition}
 
-\subsection{Die Lernregel}\label{lernregel}
+\subsection{Die Lernregel}\label{sec-lernregel}
 
 Die Eigenschaft linearer Trennbarkeit von Daten ist eine wesentliche Voraussetzung dafür, dass ein Perzeptron \textit{konvergiert}: Die \textit{Lernregel} des Perzeptrons passt während der Laufzeit die Gewichte $w_1 ... w_n$ solange an, bis sie - eingesetzt in eine lineare Gleichung [Ert21:311] - die $n$-dimensionalen Daten entsprechend Definition~\ref{eq:gl-rpact} \textit{klassifizieren} kann.
 Aus diesem Grund wird das Perzeptron auch \textbf{linearer Klassifizierer} genannt [Ert21:210 - 216].
 
 Das Perzeptron \textbf{lernt} diese Gewichte zunächst durch \textit{Traningsdaten}\footnote{
-    ``supervised learning``: überwachtes lernen; vgl. [RN09:811, ``18.2 Überwachtes Lernen``] sowie [Fau94:15]. \textit{Arbib et al.} weisen darauf hin, dass \textit{überwachtes Lernen} mit dem Perzeptron eingeführt wurde: ``Supervised learning adjusts the weights in an attempt to respond to explicit error signals provided by a “teacher,” which    may be external, or another network in the same “brain.” This model was introduced in the perceptron model, [...].``  [Arb02:30, rechte Spalte unten]
+    ``supervised learning``: überwachtes lernen; vgl. [RN09:811, ``18.2 Überwachtes Lernen``] sowie [Fau94:15]. \textit{Arbib et al.} weisen darauf hin, dass \textit{überwachtes Lernen} mit dem Perzeptron eingeführt wurde: ``Supervised learning adjusts the weights in an attempt to respond to explicit error signals provided by a “teacher,” which may be external, or another network in the same “brain.” This model was introduced in the perceptron model, [...].``  [Arb02:30, rechte Spalte unten]
 }.
-Jeder Eintrag dieser Trainingsdaten ist einer erwarteten Ausgabe zugeordnet.
-Der Algorithmus besteht aus folgenden Schritten (vgl. [RM87 S. 65] sowie [RN09 S. 842]):
+Jeder Eintrag dieser Trainingsdaten ist einer erwarteten Ausgabe zugeordnet. Der Algorithmus besteht aus folgenden Schritten (vgl. [RM87 S. 65] sowie [RN09 S. 842]):
 
 
 
@@ -221,7 +220,7 @@ Der Algorithmus besteht aus folgenden Schritten (vgl. [RM87 S. 65] sowie [RN09 S
 
 \noindent
 Die Beziehung zu der Hebbschen Lernregel formulieren \textit{Arbib et al.}\footnote{
-    vgl. hierzu auch \textit{Rosenblatt} : ``[ein Perzeptron hat] a tendency to develop 'cell assemblies' (in Hebb's sense), and these cell-assemblies tend to rival one another for dominance at all times. [Ros62:464, Abs. 2, Anführungszeichen doppelt i.O.]
+    vgl. hierzu auch _Rosenblatt_ : ``[ein Perzeptron hat] a tendency to develop 'cell assemblies' (in Hebb's sense), and these cell-assemblies tend to rival one another for dominance at all times. [Ros62:464, Abs. 2, Anführungszeichen doppelt i.O.]
 }:
 
 \blockquote[{[Arb03:20, rechte Spalte, Abs.1]}]{
@@ -312,28 +311,20 @@ Mit $0$ als Schwellenwert wird dadurch eine Verschiebung der Trenngeraden entlan
     \label{fig-geominterpretation}
 \end{figure}
 
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        Eine Implementierung eines Rosenblatt-Perzeptrons in Python findet sich in \ref{appendix:pythonperzeptron}.
+    }%
+}
 
-\subsection*{Lernrate}
-Bevor wir uns eine Implementierung in Python anschauen, wollen wir noch kurz die \textbf{Lernrate} $\eta$ (in der Literatur auch $\alpha$) erklären.
-Wie wir in diesem Abschnitt erfahren haben, berechnet die Lernregel die Gewichte auf Basis des \textit{Fehlers}, also der Differenz von $\text{erwartete Ausgabe}$ und $\text{tatsächliche Ausgabe}$: Ist der Fehler $-1$, werden die Gewichte verringert, ist der Fehler 1, werden die Gewichte erhöht.
-Die Lernrate $\eta$ ist der Koeffizient für die Gewichtsanpassung \footnote{
-    Auch \textit{Schrittweite}: vgl [GBC18:93] und [RN09:172]
-}.
-Üblicherweise liegt $\eta$ zwischen $0$ und $1$\footnote{
-    ``$\alpha$ [$\eta$] ist eine kleine Konstante`` [RN09:172, Abs. 2]. Gleiche Stelle beleuchtet das Für und Wider kleiner und großer Werte von $\eta$; \textit{Salomon} weist in [Dor90:173] darauf hin, dass eine geeignete Lernrate auch von der Aufgabenstellung abhängt.
-} [Fau94:61].
-
-Eine Implementierung in Python des Rosenblatt-Perzeptrons findet sich in \ref{appendix:pythonperzeptron}.
 
 
 
 \subsection{Die XOR-Funktion}
 
-Wenn ein Perzeptron nicht konvergiert, kann es ausreichen, die Anzahl der Epochen zu erhöhen, damit ein passender Gewichtsvektor gefunden wird\footnotemark[34].
-
-\footnotetext[34] {
+Wenn ein Perzeptron nicht konvergiert, kann es ausreichen, die Anzahl der Epochen zu erhöhen, damit ein passender Gewichtsvektor gefunden wird\footnote{
     \textit{Arbib et al} berufen sich auf das Konvergenz-Theorem und führen an, dass ``[das Rosenblatt Perzeptron] does not yield an endless seesaw, but will eventually converge to a correct set of weights if one exists, albeit perhaps after many iterations through the set of trial patterns.`` [Arb03:20, rechte Spalte, Abs. 1]: \textit{Minsky und Papert} formulieren lose: ``if the sets are separable [...], then the program will separate them`` [MP17:165, Abs. 1] und stellen im Hinblick auf Parameteranpassungen fest: ``Usually, when a failure occurred, neither prolonging the training experiments nor building larger machines helped.`` [MP17:xix, Abs. 3]
-}
+}.
 
 
 \begin{figure}[h]
@@ -372,25 +363,19 @@ Offensichtlich kann $w_1 + w_2 < \Theta$ nicht erfüllt werden, wenn gleichzeiti
 
 \subsection{Der KI-Winter}\label{kiwinter}
 
-In \textit{Perceptrons - An introduction to Computational Geometry (1969)} [MP17] behandeln \textit{Minsky und Papert} u.a. das Verhalten des Perzeptrons im Fall nicht-separabler Daten\footnotemark[35] sowie das Problem bzgl. \textit{recognition of connectedness}\footnotemark[36], bei dem es um die Erkennung zusammenhängender geometrischer Figuren geht.
-Ihr Anliegen mit dem Buch ist es, die (mathematischen) Grenzen des Rosenblatt-Perzeptrons auf ein formales Gerüst zu stellen [MP17:249, ``What Perceptrons Can't Do``].
-Ihre Ausführungen verstärken aber die ohnehin schon skeptische Haltung\footnotemark[37] gegenüber der Fähigkeiten des Perzeptrons\footnotemark[38] und künstlicher neuronaler Netze allgemein, was [AR88:159] rückblickend auch auf Aussagen in der Einleitung des Buches\footnotemark[39] zurückführen wie
-
-\footnotetext[35]{
+In \textit{Perceptrons - An introduction to Computational Geometry (1969)} [MP17] behandeln \textit{Minsky und Papert} u.a. das Verhalten des Perzeptrons im Fall nicht-separabler Daten\footnote{
     in [MP17:181, ``11.8 The nonseparable case`` ff.]
-}
-\footnotetext[36]{
+} sowie das Problem bzgl. \textit{recognition of connectedness}\footnote{
     [MP17:12, ``Theorem 0.8``],  _recognition of connectedness_ [MP17:249, letzter Abs. ff.]. In dem Epilog, der 19 Jahre später in einer Neuausgabe von _Minsky und Papert_ veröffentlicht wird, machen sie deutlich, dass sie damit nicht nachweisen wollten, dass ein Perzeptron nicht in der Lage zu der Erkennung zusammenhängender geometrischer Figuren sei, sondern dass die Komplexität von verschiedenen Aufgaben Anforderungen an ein Perzeptron stellt, die zu der damaligen Zeit (Ende 1950er / Anfang 1960er) schwierig umzusetzen gewesen sind [MP17:250, Abs. 2] &nbsp;
-}
-\footnotetext[37]{
+}, bei dem es um die Erkennung zusammenhängender geometrischer Figuren geht.
+Ihr Anliegen mit dem Buch ist es, die (mathematischen) Grenzen des Rosenblatt-Perzeptrons auf ein formales Gerüst zu stellen [MP17:249, ``What Perceptrons Can't Do``].
+Ihre Ausführungen verstärken aber die ohnehin schon skeptische Haltung\footnote{
     Here was a machine that could do pattern recognition in a humanlike way; it could recognize all kinds of things. Almost everyone at MIT was very skeptical`` [Cow98:99]
-}
-\footnotetext[38]{
+} gegenüber der Fähigkeiten des Perzeptrons\footnote{
     auch wegen schlechter Skalierbarkeit des Modells in der Praxis [AR88:159, Abs. 2]
-}
-\footnotetext[39]{
+} und künstlicher neuronaler Netze allgemein, was [AR88:159] rückblickend auch auf Aussagen in der Einleitung des Buches\footnote{
     [MP17,S. 1-20]
-}
+} zurückführen wie
 
 \blockquote[{[MP17:19. Abs. 3]}]{
 hundreds of projects and experiments [bzgl. des Perzeptrons] were generally disappointing, and the explanations inconclusive. The machines usually work quite well on very simple problems but detoriate very rapidly as the tasks assigned to the get harder.
@@ -413,14 +398,11 @@ One popular version is  that the publication of our book so discouraged research
 \noindent
 In  [AR98:X] verweisen \textit{Anderson und Rosenfeld} auf [Cow90], in dem auch über ``the influence of Marvin Minsky and Seymour Papert on the loss of interest in neural networks during the 1970s`` [AR98:X] gesprochen wird.
 
-\textit{Russell und Norvig} fassen zusammen, dass \textit{Minsky und Papert} in ihrem Buch bewiesen haben, dass ein Perzeptron alles lernen kann, was es auch darstellen kann, aber es könnte halt nur sehr wenig darstellen[RN09:45]\footnotemark[40]. Auf gleicher Seite verweisen sie auf die zunehmende Komplexität der zu berechnenden Modelle, die nicht alleine durch schnellere und bessere Hardware kompensiert werden konnte.
+\textit{Russell und Norvig} fassen zusammen, dass \textit{Minsky und Papert} in ihrem Buch bewiesen haben, dass ein Perzeptron alles lernen kann, was es auch darstellen kann, aber es könnte halt nur sehr wenig darstellen[RN09:45]\footnote{
+    vgl. hierzu [MP17:xxi, Abs. 1]
+}. Auf gleicher Seite verweisen sie auf die zunehmende Komplexität der zu berechnenden Modelle, die nicht alleine durch schnellere und bessere Hardware kompensiert werden konnte.
 
-Der Lighthill Report\footnotemark[41] sollte dann 1973 eine Grundlage für die Entscheidung der britischen Regierung darstellen, das Budget für die Forschung an KI zu kürzen [RN09:45]. Neuronale Netze wurden als Grundlage künstlicher Intelligenz zunächst verworfen [Ola96:641, letzter Abs.], und die Forschung daran ging zurück, bis sie Anfang/Mitte der 1980er Jahre wieder aufgenommen wurde: Diese Periode ist gemeinhin als ``KI-Winter`` (vgl. \ref{appendix:kiwinter}) bekannt.
+Der Lighthill Report\footnote{
+    ``Workers entered the field around 1950, and even around 1960, with high hopes that are very far from having been realised in 1972. In no part of the field have the discoveries made so far produced the major impact that was then promised.`` in \url{https://www.chilton-computing.org.uk/inf/literature/reports/lighthill\_report/p001.htm}, ``3 Past disappointments``, abgerufen 28.08.2023
+} sollte dann 1973 eine Grundlage für die Entscheidung der britischen Regierung darstellen, das Budget für die Forschung an KI zu kürzen [RN09:45]. Neuronale Netze wurden als Grundlage künstlicher Intelligenz zunächst verworfen [Ola96:641, letzter Abs.], und die Forschung daran ging zurück, bis sie Anfang/Mitte der 1980er Jahre wieder aufgenommen wurde: Diese Periode ist gemeinhin als ``KI-Winter`` (vgl. \ref{appendix:kiwinter}) bekannt.
 
-
-\footnotetext[40]{
-vgl. hierzu [MP17:xxi, Abs. 1]
-}
-\footnotetext[41]{
-``Workers entered the field around 1950, and even around 1960, with high hopes that are very far from having been realised in 1972. In no part of the field have the discoveries made so far produced the major impact that was then promised.`` in https://www.chilton-computing.org.uk/inf/literature/reports/lighthill\_report/p001.htm, ``3 Past disappointments``, abgerufen 28.08.2023
-}
