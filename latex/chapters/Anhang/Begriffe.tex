@@ -166,4 +166,22 @@ Als Beispiel sei hier noch einmal der ``Vagusstoff`` ACh erwähnt, der die Kontr
 Erregende und hemmende Synapsen kann man auch an ihrer Struktur erkennen: Asymmetrische oder \textit{Gray-Typ-I-Synapsen} sind auf der postsynaptischen Seite dicker als auf der präsynaptischen, bei gleicher Dimension der Membrandifferenzierungen spricht man von \textit{Gray-Typ-II-Synapsen}. Typ-I sind in der Regel exzitatorisch, Typ-II inhibitorische  [BCP18:127, Abs. 1 u. S. 147 ``Struktur und Position von exzitatorischen und inhibitorischen Synapsen``].
 
 
+\subsection{Perzeptron}\label{appendix:perzeptron}
+\subsection*{The Perceptron - A perceiving and recognizing automaton}
+Das Forschungsprojekt ``\textit{Perceiving and Recognizing Automaton}`` beschreibt einen Apparat, der mittels einer Kamera geometrische Figuren erkennen und zuordnen kann [Ros57].
+Die Funktionen simuliert Rosenblatt zunächst auf einem IBM 704 Rechner [Ros60], bevor  die Hardware Anfang der 60er Jahre als \textit{Mark 1 Perceptron} gebaut wird: 400 Cadmiumsulfid-Photozellen auf einem 20x20 großen Raster angeordnet - dem \textbf{S-System} (\textbf{S} = \textit{Sensory}) - leiten Signale an das \textbf{A-System} (\textbf{A} = \textit{Association}); dort werden sie registriert und ausgewertet, und schlussendlich über das \textbf{R-System} (\textbf{R} = \textit{Response}) ausgegeben (vgl. [Ros57:4, f.], [Ros58 S. 389 ff.] sowie [Bis06:193 ``Frank Rosenblatt`` sowie S. 196 Figure 4.8]).
+Dabei lernt die Maschine im ersten Schritt durch die Unterstützung der Ingenieure, wie gegebene Formen zu interpretieren sind: Für aktivierte Photozellen wird die erwartete Ausgabe manuell festgelegt.
+Die Verbindungen zwischen den \textbf{S}-, \textbf{A}- und \textbf{R}-Units erinnert nicht nur von der Namensgebung her an biologische Neuronen, auch deren Struktur und Verschaltung wird hier als Vorbild genommen [Ros62:4, Abs. 2].\\
+
+Die \textbf{S}-Units konnten sowohl hemmende als auch erregende Signale in das \textbf{A}-System einspeisen. Darüber hinaus war das \textbf{R}-System in der Lage, über Rückkoppelungen hemmende Signale an das \textbf{A}-System zu senden: Damit sollte verhindert werden, dass weitere \textbf{R}-Units aktiviert werden, die sich mit den bereits aktivierten Units gegenseitig ausschließen [Ros57:4, Punkt (3)].
+
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{images/p1ReadSeq.pdf}
+    \caption{Schematische Darstellung der S, A, R Units}
+    \label{fig-sarunits}
+\end{figure}
+
 
