@@ -223,7 +223,7 @@ Die Beziehung zu der Hebbschen Lernregel formulieren \textit{Arbib et al.}\footn
     vgl. hierzu auch _Rosenblatt_ : ``[ein Perzeptron hat] a tendency to develop 'cell assemblies' (in Hebb's sense), and these cell-assemblies tend to rival one another for dominance at all times. [Ros62:464, Abs. 2, Anführungszeichen doppelt i.O.]
 }:
 
-\blockquote[{[Arb03:20, rechte Spalte, Abs.1]}]{
+\blockquote[{\cite[20]{Arb03}}]{
     The best-known perceptron learning rule strengthens an active synapse if the efferent neuron fails to fire when it should have fired, and weakens an active synapse if the neuron fires when it should not have done so.
 }
 
@@ -233,7 +233,7 @@ Einen Trainingslauf nennt man dabei \textit{Epoche} [Fau94:436, ``Training epoch
 Sind die Trainingsdaten linear separabel, \textit{konvergiert}\footnote{
     ``iterative training processes converge if the weight updates reach equilibrium (stop changing)`` [Fau94:425, ``Convergence``]
 } das Perzeptron nach einer endlichen Zahl von Epochen [MP17:164]\footnote{
-    Das Konvergenz-Theorem besagt: ``if a linear separation exists, the perceptron error-correction scheme will find it.`` [Arb03:20, ``Network Complexity``] Beweise führen [Ros62:111 ff.], [MP17:167 ff.] sowie [Nov62].
+    Das Konvergenz-Theorem besagt: ``if a linear separation exists, the perceptron error-correction scheme will find it.``~\cite[20]{Arb03}] Beweise führen [Ros62:111 ff.], [MP17:167 ff.] sowie [Nov62].
 }, und ist danach in der Lage zu \textit{generalisieren} [Ert21:202].\\
 
 Da wir in unserem Beispiel nur Daten betrachtet haben, die durch eine Gerade durch den Ursprung ($(0,0)$) getrennt sind, brauchen wir noch eine Möglichkeit, die $x_2$-Koordinate der Trenngerade anzupassen.
@@ -323,7 +323,7 @@ Mit $0$ als Schwellenwert wird dadurch eine Verschiebung der Trenngeraden entlan
 \subsection{Die XOR-Funktion}
 
 Wenn ein Perzeptron nicht konvergiert, kann es ausreichen, die Anzahl der Epochen zu erhöhen, damit ein passender Gewichtsvektor gefunden wird\footnote{
-    \textit{Arbib et al} berufen sich auf das Konvergenz-Theorem und führen an, dass ``[das Rosenblatt Perzeptron] does not yield an endless seesaw, but will eventually converge to a correct set of weights if one exists, albeit perhaps after many iterations through the set of trial patterns.`` [Arb03:20, rechte Spalte, Abs. 1]: \textit{Minsky und Papert} formulieren lose: ``if the sets are separable [...], then the program will separate them`` [MP17:165, Abs. 1] und stellen im Hinblick auf Parameteranpassungen fest: ``Usually, when a failure occurred, neither prolonging the training experiments nor building larger machines helped.`` [MP17:xix, Abs. 3]
+    \textit{Arbib et al} berufen sich auf das Konvergenz-Theorem und führen an, dass ``[das Rosenblatt Perzeptron] does not yield an endless seesaw, but will eventually converge to a correct set of weights if one exists, albeit perhaps after many iterations through the set of trial patterns.``~\cite[20]{Arb03}: \textit{Minsky und Papert} formulieren lose: ``if the sets are separable [...], then the program will separate them`` [MP17:165, Abs. 1] und stellen im Hinblick auf Parameteranpassungen fest: ``Usually, when a failure occurred, neither prolonging the training experiments nor building larger machines helped.`` [MP17:xix, Abs. 3]
 }.
 
 \begin{figure}[h]
@@ -335,7 +335,7 @@ Wenn ein Perzeptron nicht konvergiert, kann es ausreichen, die Anzahl der Epoche
 \end{figure}
 
 \noindent
-Allerdings kann es bereits bei wenigen Daten und beliebig großer Epochenzahl passieren, dass ein Perzeptron nicht konvergiert, nämlich wenn die Daten nicht linear separabel sind [Arb03:2, rechte Spalte, Abs. 1].
+Allerdings kann es bereits bei wenigen Daten und beliebig großer Epochenzahl passieren, dass ein Perzeptron nicht konvergiert, nämlich wenn die Daten nicht linear separabel sind~\cite[20]{Arb03}.
 
 Als Beispiel betrachten wir die boolesche Funktion \textbf{XOR} (vgl. Tabelle~\ref{tab:xor}). In Abbildung~\ref{fig-rp-xor } ist die geometrische Repräsentation der möglichen Interpretationen für $A \oplus B$ dargestellt.
 Zwar lassen sich die Elemente separieren, aber nicht linear.
