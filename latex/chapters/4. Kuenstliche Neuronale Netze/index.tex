@@ -105,16 +105,16 @@ Der Physiker John J. Hopfield stellt 1982 in [Hop82] ein Modell für ein \textit
     in asynchronen Modellen werden die Aktivierungen der Neuronen unabhängig voneinander und zu unterschiedlichen Zeitpunkten berechnet (vgl. [Roj02:49] sowie ebenda S. 282)
 }  vor, das auf neurobiologischen Aspekten [Hop82:2554] beruht und 5 Jahre später in Zusammenarbeit mit At & T Bell Laboratories\footnote{
     ehemalige Forschungsabteilung der Telefongesellschaft AT \& T;  gehört seit 2016 zu Nokia (https://www.bell-labs.com/, abgerufen 03.09.2023)
-} in Form eines ``neural network chip``\footnote{
+} in Form eines ``neural network chip``~\cite[457]{AR88}\footnote{
     https://techmonitor.ai/technology/att\_creates\_parallel\_neural\_net\_chip\_to\_solve\_routing\_problems
-} [AR88:457] als Hardware umgesetzt wird: Das Modell ist ein \textbf{rekurrentes Netz}\footnote{
+} als Hardware umgesetzt wird: Das Modell ist ein \textbf{rekurrentes Netz}\footnote{
 Ein rekurrentes neuronales Netz ``speist seine Ausgaben wieder in seine eigenen Eingaben ein``[RN09:847]. Im Gegensatz zu Feedforward-Netzen sind rekurrente Netze also \textit{rückgekoppelt}
 } ohne Schlingen ($w_{ij} = 0$)\footnote{ Eine \textit{Schlinge} (engl. \textit{loop}) in einem Graphen ist ein Kantenzug, der einen Knoten mit sich selbst verbindet [Die17 S. 30]. Ein Beispiel für ein Netz mit Schlingen ist das \textbf{MAXNET} [Lip87], das zu der Gruppe der \textbf{competitive nets} gehört: Es kann als Subnetz zur Ermittlung der Zelle mit dem größten Aktivierungswert genutzt werden [Fau94:158 ff.]
 } [Ert21:291] mit bidirektionalen symmetrischen Kanten ($w_{ij} = w_{ji}$) und fungiert als \textbf{Assoziativspeicher}, also als Netz, das, wenn es für eine Eingabe $x$ die Ausgabe $y$ liefert, $y$ auch für $x'$ berechnet, sofern $x'$ nahe genug bei $x$ liegt\footnote{ Nach dem Training ist das Netz dazu in der Lage, für einen Stimulus ein Aktualisierungsmuster einzunehmen, dass diesem am ähnlichsten ist [RN09:882], was an die ``Cell Assemblies`` von Hebb erinnert (Kapitel 2.2.1). \textit{Lansner} verweist in [Lan09:179] genau darauf, merkt aber gleichfalls an, dass das Modell aufgrund der Rekurrenz und Symmetrie nicht seinem biologischen Vorbild entspricht [Lan09:180]
 } [Roj93:251], was das Netz gegenüber \textit{Rauschen} und \textit{Störungen}\footnote{
     Rauschen bzw. Störungen bei Stimuli in Form von Bildern ($n * m$ Pixeln) können durch zufällig hinzugefügte oder entfernte Pixel entstehen, oder durch Rotation (axiale Verschiebung) der Daten vor dem Einspeisen in das Netz. Beispiele für verrauschte Daten in [Ert21, S 294 ff.]
 } resistenter macht.
-\textit{Ertel} führt die Begeisterung für neuronale Netze und den Aufschwung der Neuroinformatik in den 80er Jahren wesentlich auf die ``biologische Plausibilität, das gut verstandene mathematische Modell`` und ``die beeindruckende Simulation zur Mustererkennung`` auf das Hopfield Modell zurück [Ert21:297]. \textit{Anderson und Rosenfeld} bemerken, dass der Einfluss physikalischer Systeme auf das Hopfield Netz auch das Interesse der Physiker an neuronalen Netzen geweckt hat, und dadurch das Forschungsfeld erweitert wurde (vgl. [AR88:458]). Dies ist darauf zurückzuführen, dass sich die Summe aller Terme in einem Hopfield-Netz wie folgt berechnet (vgl. [Roj93:287]\footnote{
+\textit{Ertel} führt die Begeisterung für neuronale Netze und den Aufschwung der Neuroinformatik in den 80er Jahren wesentlich auf die ``biologische Plausibilität, das gut verstandene mathematische Modell`` und ``die beeindruckende Simulation zur Mustererkennung`` auf das Hopfield Modell zurück [Ert21:297]. \textit{Anderson und Rosenfeld} bemerken, dass der Einfluss physikalischer Systeme auf das Hopfield Netz auch das Interesse der Physiker an neuronalen Netzen geweckt hat, und dadurch das Forschungsfeld erweitert wurde (vgl.~\cite[458]{AR88}). Dies ist darauf zurückzuführen, dass sich die Summe aller Terme in einem Hopfield-Netz wie folgt berechnet (vgl. [Roj93:287]\footnote{
     mit dem Faktor $1/2$, damit aufgrund der Symmetrie in dem Netz $w_{ij}x_ix_j$ und $w_{ji}x_jx_i$ nur einmal berechnet wird [Roj93:287]
 })
 
@@ -132,7 +132,7 @@ Damit ist das Modell ``formal äquivalent zu einem physikalischen Modell des Mag
 
 \textit{Ackley, Hinton und Sejnowski} stellen 1985 in [AHS85] die \textbf{Boltzmann-Maschine}\footnote{
     eine Beschreibung des Verhalten findet sich 1983 bereits in [HS83]
-} vor, eine Modifikation eines Hopfield-Netzes, in dem sich die Zellen \textit{stochastisch} [AR88:635] und globale Zustände des Netzes nach der \textit{Boltzmann-Verteilung}\footnote{
+} vor, eine Modifikation eines Hopfield-Netzes, in dem sich die Zellen \textit{stochastisch}~\cite[635]{AR88} und globale Zustände des Netzes nach der \textit{Boltzmann-Verteilung}\footnote{
     die \textit{Boltzmann-Verteilung} gibt die Wahrscheinlichkeit an, ein geg. physik. System in einem bestimmten Zustand anzutreffen (https://de.wikipedia.org/wiki/Boltzmann-Statistik, abgerufen  05.09.2023)
 } verhalten. Das Netz versucht lokale Minima zu überwinden (vgl. ``Gradientenabstiegsverfahren`` in \textbf{Kapitel 3.2.1 Backpropagation}), indem ihm erlaubt wird, zu größeren $E$ (s. Gleichung~\ref{eq:gl-energie}) zu springen, um so zu einem globalen Minimum zu konvergieren\footnote{vgl. [AHS85:151] sowie [Koe90:107]}.
 Das Verfahren wird auch \textit{simulated annealing} bezeichnet\footnote{vgl. [Ert21:297]. \textit{Rojas} schreibt dazu
@@ -152,9 +152,9 @@ In [Fuk80] war der Training-Prozess des Modells gegeben durch wiederholte Einspe
     ``learning without a teacher``, also unüberwachtes Lernen (unsupervised learning).
 } [Fuk80:197]: Die Erweiterung des Modells beinhaltet nun die Verstärkung der modifizierten Synapsen durch überwachtes Lernen\footnote{
     ``We use a learning-with-a-teacher process for the reinforcement of the modifiable synapses in the new large-scale
-model, instead of the learning-without-a-teacher process applied to the previous model.`` [FMI83:827]; \textit{Anderson und Rosenfeld} vermerken dies als ``some handcrafted fine tuning`` [AR88:524 ff.]
+model, instead of the learning-without-a-teacher process applied to the previous model.`` [FMI83:827]; \textit{Anderson und Rosenfeld} vermerken dies als ``some handcrafted fine tuning``~\cite[524 f.]{ARR88}
 }, um bessere Resultate bei handgeschriebenen Zeichen zu erzielen [FMI83:829].
-\textit{Anderson und Rosenfeld} attestieren dem Netz von \textit{Fukushima, Miyake und Ito} Aspekte, die bei der Entwicklung neuronaler Netze eine wesentliche Rolle spielen werden [AR88:524]:  Tatsächlich inspiriert das Neocognitron die Convolutional Neural Networks (CNN) [LBH15:439], deren erster Entwurf erstmalig 1989\footnote{
+\textit{Anderson und Rosenfeld} attestieren dem Netz von \textit{Fukushima, Miyake und Ito} Aspekte, die bei der Entwicklung neuronaler Netze eine wesentliche Rolle spielen werden~\cite[524]{ARR88}:  Tatsächlich inspiriert das Neocognitron die Convolutional Neural Networks (CNN) [LBH15:439], deren erster Entwurf erstmalig 1989\footnote{
     ein Jahr nach Erscheinen von [AR88]
 } von \textit{LeCun} vorgestellt wird [Cun89].
 

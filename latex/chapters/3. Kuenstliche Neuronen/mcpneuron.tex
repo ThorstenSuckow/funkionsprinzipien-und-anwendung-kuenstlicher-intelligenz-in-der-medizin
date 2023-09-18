@@ -9,7 +9,7 @@ Ihre Arbeit liefert grundlegende Ideen für die Kybernetik\footnote{
     s. \ref{appendix:wiener}
 } und die Von-Neumann-Rechnerarchitektur\footnote{
     Die Architektur zeichnet sich durch eine Zentraleinheit, der Speichereinheit und Ein-/Ausgabeinheit aus, die über Busse verbunden sind [OV08:230]
-} [Arb19:1, ``Introduction``] und ebnet der Erforschung der \textit{Künstlichen Intelligenz} den Weg.
+}~\cite[1]{Arb19} und ebnet der Erforschung der \textit{Künstlichen Intelligenz} den Weg.
 
 
 \subsection{Der Kalkül}
@@ -19,14 +19,14 @@ Die \textbf{Principia Mathematica}\footnote{
 } (PM) der Philosophen und Mathematiker Bertrand Russell (1872 - 1970) und Alfred Whitehead (1861 - 1947) ist ein Werk über die Grundlagen der Mathematik und erschien in drei Bänden zwischen 1910 und 1913. In ihr versuchen Russel und Bertrand die Mathematik auf ein Fundament logischer Grundprinzipien zu stellen\footnote{
     Nach [Lev94:2] liest Pitts die Principia Mathematica mit 12 Jahren
 } [She26:226, Abs. 2].
-McCulloch beschäftigt die Frage, ob es nicht gleichsam möglich sei, die Vorgänge im Gehirn durch ein ähnliches Fundament logischer Prinzipien erklärbar zu machen [Arb19:4, Abs. 1]. Basierend auf der Zweiwertigkeit des Alles-oder-nichts-Gesetz (Aktionspotenzial findet statt/ findet nicht statt) finden Pitts und McCulloch ihren Kalkül mit Hilfe der Aussagenlogik.\\
+McCulloch beschäftigt die Frage, ob es nicht gleichsam möglich sei, die Vorgänge im Gehirn durch ein ähnliches Fundament logischer Prinzipien erklärbar zu machen~\cite[4]{Arb19}. Basierend auf der Zweiwertigkeit des Alles-oder-nichts-Gesetz (Aktionspotenzial findet statt/ findet nicht statt) finden Pitts und McCulloch ihren Kalkül mit Hilfe der Aussagenlogik.\\
 
 \blockquote{
     The `all-or-none law` of nervous activity is sufficient to insure that the activity of any neuron may be represented as a proposition.
 }[MP43:100]\\
 
 Für ihren Kalkül entwerfen sie zwei Netze: Ein zyklenfreies Netz [MP43:101, ``2. The Theory: Nets without Circles``] sowie ein Netz, in dem Zyklen vorhanden sind\footnote{
-    Die Frage nach Ursprung und Bedeutung von ``loops`` in einem Netz von Nervenzellen beschäftigte McCulloch bereits 1928: ``The tremors of Parkinson’s disease, McCulloch thought, could be explained by closed loops of activity connecting the spinal cord and the contracting muscles.``[Pic04:178, Abs. 3]. [Arb19:3, Abs. 2] vermerkt:  ``As another stage in McCulloch's search for the logic of the nervous system, he began thinking about loops in the nervous system. [...] which made explicit the possibility of loops in the nervous system, an idea that today we take for granted.`` Lawrence Kubie veröffentlicht im Jahr 1930 eine Arbeit, in der er zur Erklärung des Erinnerungsvermögens Schleifen im Nervensystem nutzt [Kub30]QUELLE
+    Die Frage nach Ursprung und Bedeutung von ``loops`` in einem Netz von Nervenzellen beschäftigte McCulloch bereits 1928: ``The tremors of Parkinson’s disease, McCulloch thought, could be explained by closed loops of activity connecting the spinal cord and the contracting muscles.``[Pic04:178, Abs. 3]. \textit{Arbib} vermerkt in~\cite[3]{Arb19}:  ``As another stage in McCulloch's search for the logic of the nervous system, he began thinking about loops in the nervous system. [...] which made explicit the possibility of loops in the nervous system, an idea that today we take for granted.`` Lawrence Kubie veröffentlicht im Jahr 1930 eine Arbeit, in der er zur Erklärung des Erinnerungsvermögens Schleifen im Nervensystem nutzt [Kub30]QUELLE
     paper postulating closed loops in the central nervous system to explain memory (Kubie 1930).12
 } [MP43:108, ``3. The Theory: Nets with Circles``]. Insgesamt gehen sie von folgenden physischen Eigenschaften von Nervenzellen aus [MP43:101]:
 
@@ -46,7 +46,7 @@ Einen Teil der Arbeit von McCulloch und Pitts nehmen wir uns als Vorbild zur Mod
 Wir werden auf eine vollständige Erklärung der Theoreme verzichten, die die Arbeit begleiten und die formalen Bausteine liefern.
 
 Im Sinne einer besseren Lesbarkeit überführen wir ausserdem die für die Original-Arbeit aus der PM entnommene Notation für Aussagenlogik\footnote{
-    Die Notation aus der PM gilt als sperrig [AR88:16, Abs. 3]. Eine ausführliche Übersicht der in der PM gebräuchlichen Notation findet sich unter \url{https://plato.stanford.edu/entries/pm-notation/} (abgerufen 10.8.2023)
+    Die übernommene Notation gilt als sperrig~\cite[16]{AR88}. Eine ausführliche Übersicht der in der PM gebräuchlichen Notation findet sich unter \url{https://plato.stanford.edu/entries/pm-notation/} (abgerufen 10.8.2023)
 } in die heutzutage geläufigere Form: ``$\land$`` für \textit{Konjunktion}, ``$\lor$`` für \textit{Disjunktion} sowie ``$\neg$`` für die \textit{Negation}. $\equiv$ verwenden wir im Sinne der Äquivalenz.
 Für McCulloch-Pitts-Neuron verwenden wir im Folgenden auch abkürzend \textbf{MCP-Zelle}, für ein Netz, das aus solchen besteht, einfach \textbf{MCP-Netz}.\\
 
@@ -372,7 +372,7 @@ A \oplus B \equiv (A \lor B) \land (\neg A \lor \neg B)
 
 Das MCP-Modell ist ein \textbf{empirisches Modell}\footnote{
     auch ``caricature model`` [HI97:4]
-} [HI97:4] und basiert auf Analyse und einfacher Schwellenwertlogik [AR88:16, Abs. 2].
+} [HI97:4] und basiert auf Analyse und einfacher Schwellenwertlogik~\cite[16]{AR88}.
 In ihrem Papier weisen McCulloch und Pitts darauf hin, dass das Alles-Oder-Nichts-Prinzip als Vorbild für ihre Abstraktion durch Aussagenlogik dient.
 Von allem, was wir in Kapitel 1 über Nervenzellen erfahren haben, dürfen wir den Schluss ziehen, dass das von ihnen erstellte Modell eine starke Vereinfachung ist\footnote{
     ``This ensures its status as a \textit{model}, and not a \textit{copy}, of a real neuron, and makes it possible to implement on a digital computer.`` [BJ90:43, Hervorhebungen i. O.]
@@ -381,18 +381,18 @@ Aktionspotenzialen lassen sich gewiss nicht auf zweiwertige Logik reduzieren, da
     ``Lernen`` geschieht auf physiologischer Ebene durch die Modulierung von Synapsen~\cite[115]{HS19c}
 }.
 McCulloch und Pitts sind sich dessen durchaus bewußt\footnote{
-    ``McCulloch and Pitts acknowledged in their paper that their definition of a neuron was idealized, and that they made physical assumptions that were 'most convenient for the calculus'`` [Abr02:21, ``Conclusion``]. Siehe auch [MP43:101]: ``[...]we regard facilitation and extinction as dependent upon continuous changes in threshold related to electrical and chemical variables, [...]``, sowie ``He {[McCulloch]} never claimed that the 1943 model exhausted the richness of individual neurons`` [Arb19:11, ``Does the Brain Have a Logic{?}``, Abs. 4]
+    ``McCulloch and Pitts acknowledged in their paper that their definition of a neuron was idealized, and that they made physical assumptions that were 'most convenient for the calculus'`` [Abr02:21, ``Conclusion``]. Siehe auch [MP43:101]: ``[...]we regard facilitation and extinction as dependent upon continuous changes in threshold related to electrical and chemical variables, [...]``, sowie ``He {[McCulloch]} never claimed that the 1943 model exhausted the richness of individual neurons``~\cite[11]{Arb19}
 }.
 Es bleibt ein statisches Modell, es muß ``konstruiert`` werden [Fau94:28, ``1.6.2 Algorithm``].
 Es ist nur durch Änderung der Netztopologie bzw. der Schwellenwerte anpassungsfähig [Roj93:51, Abs. 2] Selbständig zu lernen vermag es nicht.\\
 
 
 Tatsächlich ist die McCulloch-Pitts-Zelle von eher geringer Bedeutung für die Neurowissenschaft gewesen\footnote{
-    [AR88:17]: ``The immense theoretical influence of this paper was not among neuroscientists but among computer scientists.``; [Roj93:51] kommt zu einem ähnlichen Schluss: ``Die Art der Schaltungen, die mit
+    ``The immense theoretical influence of this paper was not among neuroscientists but among computer scientists.``~\cite[17]{AR88}; [Roj93:51] kommt zu einem ähnlichen Schluss: ``Die Art der Schaltungen, die mit
     diesen Zellen gebaut werden, ist aber biologisch gesehen nicht so relevant.``
-}[AR88:17, Abs. 2].
+}.
 Umso größer war ihr Einfluss auf die Computerwissenschaften\footnote{
-    Die Arbeit war ebenso wichtig für die Entwicklung des ``Konnektionismus`` [Arb19:11, ``Does the Brain Have a Logic{?}``, Abs. 4], einer Forschungsrichtung der künstlichen Intelligenz, in der Modelle (neuronale Netze) untersucht werden, mit deren Hilfe sich intelligente und kognitive Handlungen auf Maschinen übertragen lassen [Dor91:v]
+    Die Arbeit war ebenso wichtig für die Entwicklung des ``Konnektionismus``~\cite[11]{Arb19}, einer Forschungsrichtung der künstlichen Intelligenz, in der Modelle (neuronale Netze) untersucht werden, mit deren Hilfe sich intelligente und kognitive Handlungen auf Maschinen übertragen lassen [Dor91:v]
 }.
 McCulloch und Pitts nahmen für ihr Modell das menschliche Gehirn als Grundlage und ermöglichten so einen neuen Blickwinkel auf Ursache und Wirkung. ``Mind`` no longer ``goes more ghostly than a ghost``[MP43:114]:
 
@@ -400,7 +400,7 @@ McCulloch und Pitts nahmen für ihr Modell das menschliche Gehirn als Grundlage 
 If nerve cells were equivalent to the formal neurons of McCulloch and Pitts and if circuits of such elements could be made arbitrarily complicated, then any kind of animal behavior, however marvelously complicated or however intricately linked to sensory input, could be reproduced, and hence understood, in terms of these circuits.
 }
 
-Logische Schaltungen, die Intelligenz und Kognition ermöglichen, brachte den Gedanken an eine ``intelligente Maschine`` hervor (vgl. [Pic04:204, Abs. 3]): So war ihre Formalisierung ein wichtiges Schlüsselelement für die von-Neumann-Rechnerarchitektur [Neu45] sowie Wieners Kybernetik\footnote{s. \ref{appendix:wiener}}, und zusammen mit den nachfolgenden Arbeiten von Hebb [Heb49] und Rosenblatt ebnete es den Weg für die Forschung an künstlicher Intelligenz [Arb19:1 ``Introduction``].
+Logische Schaltungen, die Intelligenz und Kognition ermöglichen, brachte den Gedanken an eine ``intelligente Maschine`` hervor (vgl. [Pic04:204, Abs. 3]): So war ihre Formalisierung ein wichtiges Schlüsselelement für die von-Neumann-Rechnerarchitektur [Neu45] sowie Wieners Kybernetik\footnote{s. \ref{appendix:wiener}}, und zusammen mit den nachfolgenden Arbeiten von Hebb [Heb49] und Rosenblatt ebnete es den Weg für die Forschung an künstlicher Intelligenz~\cite[1]{Arb19}.
 
 \noindent
 Interessant ist ihr Vermerk, dass der Entwurf von Netzen mit Zyklen ungleich schwerer sei als der für zyklenfreie Netze, denn:
@@ -443,7 +443,7 @@ und stellt fest, dass das Nervensystem eine ausgezeichnete logische Maschine rep
 Konsequenterweise nutzt [Min67] die MCP-Zelle als endlichen Automaten\footnote{
     Ein endlicher Automat ist eine informationsverarbeitende Maschine. Basierend auf Eingaben lassen sich mit einer solchen Maschine Zustände, Zustandsübergänge und Ausgaben modellieren. Bei einem \textit{endlichen} Automaten sind die genannten Eingaben, Zustände, und Ausgaben endlich. [SSH95:29, ``2.1 Endliche Automaten`` ff.]
 }\footnote{
-    dass MCP-Netze endliche Automaten sind: Auch in [Cow90:76] sowie [Roj93:47, ``Satz 2.4``].  [Arb19] weist darauf hin, dass die Arbeit von McCulloch und Pitts grundlegend für Automatentheorie gewesen ist [Arb19:8, ``A Selection of Key Papers``, Abs. 3]
+    dass MCP-Netze endliche Automaten sind: Auch in [Cow90:76] sowie [Roj93:47, ``Satz 2.4``].  \textit{Arbib} weist darauf hin, dass die Arbeit von McCulloch und Pitts grundlegend für Automatentheorie gewesen ist~\cite[8]{Arb19}
 } mit zwei Zuständen, aus denen andere endliche Automaten gebaut werden, und nennt diese, im Jahr 1967 schon geläufig: \textbf{Neuronale Netze} [Min67:33].
 
 
