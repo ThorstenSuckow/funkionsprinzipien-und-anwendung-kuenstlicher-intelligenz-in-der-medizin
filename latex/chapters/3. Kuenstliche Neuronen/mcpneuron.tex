@@ -155,10 +155,10 @@ Is $w_+$ bekannt, können wir abkürzen zu
 Ein zyklenfreies Netz aus MCP-Zellen, das aus \textbf{AND} (Konjunktion)-, \textbf{OR} (Disjunktion)- und \textbf{NOT} (Negation)-Zellen (siehe nachfolgender Abschnitt) besteht, können wir wie folgt definieren (vgl. [Roj93:32, Definition 2.1]):
 
 
-\begin{definition} Ein MCP-Netz ist ein gerichteter Graph\footnotetext{
+\begin{definition} Ein MCP-Netz ist ein gerichteter Graph\footnote{
     Gerichtete Kanten eine MCP-Netzes nehmen eigentlich keine Gewichtung der Information vor [Roj93:40, ``2.4.1 Gewichtete und ungewichtete Netze``]. Sowohl [Min67:34] als auch [Roj93:32] nutzen unter Berücksichtigung der \textit{absoluten Hemmung} nur die Summe der erregenden Signale und vergleichen diese mit $\Theta$ - dieser Vergleich findet nur statt, wenn \textit{kein} hemmendes Signal ankommt: Die Zelle liefert sonst direkt $0$ als Ausgabe zurück. [Fau94] nutzt\footnote{
         Gewichte sind in absolut hemmenden Leitungen unsinnig nach [Roj93:42, Abs. 1]
-    } unter Berücksichtigung von Gleichung~\ref{eq:gl-activation} gewichtete Kanten, in ähnlicher Weise auch [BJ90:39 ff.]. Wie wir später sehen werden, wird die Gewichtung von Kanten ein wichtiger Bestandteil der Funktionsweise neuronaler Netze. Wir entfernen uns mit dem o.g. Modell ein Stück von der ursprünglichen Modellierung.
+    } unter Berücksichtigung von Gleichung~\ref{eq:gl-activation} gewichtete Kanten, in ähnlicher Weise auch \textit{Beale und Jackson}~\cite[41]{BJ90}. Wie wir später sehen werden, wird die Gewichtung von Kanten ein wichtiger Bestandteil der Funktionsweise neuronaler Netze. Wir entfernen uns mit dem o.g. Modell ein Stück von der ursprünglichen Modellierung.
 } $G = (V, E)$ mit der Knotenmenge
 
 \begin{equation}
@@ -375,7 +375,7 @@ Das MCP-Modell ist ein \textbf{empirisches Modell}\footnote{
 } [HI97:4] und basiert auf Analyse und einfacher Schwellenwertlogik~\cite[16]{AR88}.
 In ihrem Papier weisen McCulloch und Pitts darauf hin, dass das Alles-Oder-Nichts-Prinzip als Vorbild für ihre Abstraktion durch Aussagenlogik dient.
 Von allem, was wir in Kapitel 1 über Nervenzellen erfahren haben, dürfen wir den Schluss ziehen, dass das von ihnen erstellte Modell eine starke Vereinfachung ist\footnote{
-    ``This ensures its status as a \textit{model}, and not a \textit{copy}, of a real neuron, and makes it possible to implement on a digital computer.`` [BJ90:43, Hervorhebungen i. O.]
+    ``This ensures its status as a \textit{model}, and not a \textit{copy}, of a real neuron, and makes it possible to implement on a digital computer.``~\cite[43, Hervorhebungen i. O.]{BJ90}
 }.
 Aktionspotenzialen lassen sich gewiss nicht auf zweiwertige Logik reduzieren, darüber hinaus berücksichtigen sie auch nicht eine mögliche Veränderung des Netzes, z.B. durch Lernen\footnote{
     ``Lernen`` geschieht auf physiologischer Ebene durch die Modulierung von Synapsen~\cite[115]{HS19c}
