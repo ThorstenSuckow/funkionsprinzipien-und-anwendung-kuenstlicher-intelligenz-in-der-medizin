@@ -156,22 +156,22 @@ model, instead of the learning-without-a-teacher process applied to the previous
 }, um bessere Resultate bei handgeschriebenen Zeichen zu erzielen [FMI83:829].
 \textit{Anderson und Rosenfeld} attestieren dem Netz von \textit{Fukushima, Miyake und Ito} Aspekte, die bei der Entwicklung neuronaler Netze eine wesentliche Rolle spielen werden~\cite[524]{ARR88}:  Tatsächlich inspiriert das Neocognitron die Convolutional Neural Networks (CNN) [LBH15:439], deren erster Entwurf erstmalig 1989\footnote{
     ein Jahr nach Erscheinen von~\cite{AR88}.
-} von \textit{LeCun} vorgestellt wird [Cun89].
+} von \textit{LeCun} vorgestellt wird~\cite{Cun89}.
 
 
 
 \subsection{Convolutional Neural Networks}\label{cnn}
 
-\textit{Yann LeCun} veröffentlicht 1989 seine Arbeit [Cun89], in der er verschiedene Netzwerkarchitekturen auf Generalisierungsfähigkeit (s. Abschnitt~\ref{lernregel}) und Performance untersucht. Er kommt zu dem Schluss, dass eine Reduzierung der \textit{freien Parameter}\footnote{
+\textit{Yann LeCun} veröffentlicht 1989 seine Arbeit~\cite{Cun89}, in der er verschiedene Netzwerkarchitekturen auf Generalisierungsfähigkeit (s. Abschnitt~\ref{lernregel}) und Performance untersucht. Er kommt zu dem Schluss, dass eine Reduzierung der \textit{freien Parameter}\footnote{
     \textit{freie Parameter} sind die Parameter des Netzes, die durch den Lernvorgang festgelegt werden, also bspw. die Gewichte, Schwellenwerte oder auch die Lernrate, wenn diese durch Verwendung bestimmter Optimierungsalgorithmen adaptiv ist, wie bspw. \textbf{Adam} (vgl. [GBC18:346] mit Verweis auf [KB15])
 } in einem mehrschichtigen Netz zu einer hohen Generalisierungsfähigkeit führt: Bessere Ergebnisse im Vergleich zu  ein- bzw. zweischichtigen Netzen können erzielt werden, indem sog. \textit{feature maps} genutzt werden, die in den Schichten für die Merkmalsextraktion der Eingabedaten (hier: zweidimensionale Bilder) verantwortlich sind.
 Zusätzliche Information wie die Lage der Merkmale in den Eingabedaten werden näherungsweise gespeichert, was zu einer Reduzierung der Größe der \textit{feature maps} im Vergleich zu der Größe der Eingabedaten führt, und damit auch zu einer Reduzierung der Gewichte.
-Darüber hinaus können mehrere feature maps die gleichen Merkmale an unterschiedlichen Orten (\textit{shift invariance}) in den Eingabedaten extrahieren, wodurch die Gewichte unter diesen feature maps geteilt werden können [Cun89:151 ff.].
-In [CBD+89] stellen \textit{LeCun et al.} diese Architektur als \textbf{Convolutional Network} \textit{LeNet-1}\footnotetext{
+Darüber hinaus können mehrere feature maps die gleichen Merkmale an unterschiedlichen Orten (\textit{shift invariance}) in den Eingabedaten extrahieren, wodurch die Gewichte unter diesen feature maps geteilt werden können~\cite[151 f.]{Cun89}.
+In~\cite{CBD+89} stellen \textit{LeCun et al.} diese Architektur als \textbf{Convolutional Network} \textit{LeNet-1}\footnotetext{
     s. \ref{appendix:lenet1}
-}  vor [CBB89:13], das äusserst erfolgreich durch Unterstützung von Backpropagation  handgeschriebene Postleitzahlen erkennt\footnote{
-    Wobei die Bilder zu Matrizen der Dimension $16 \times 16$ transformiert und als Eingabedaten in das Netz eingespeist werden. Die Transformation behält das Seitenverhältnis der Zeichen bei. Die Werte der Matrix an den Positionen $a_{ij}$ entsprechen Grauwerten mit einem normalisierten Wertebereich von $[-1, 1]$ [CBD+89:542]
-}. Das Netz performt mit 30 Klassifizierungen pro Sekunde, lediglich die Normalisierung der Eingabedaten stellt einen Flaschenhals bei dem Prozess dar. Wird dieser berücksichtigt, werden 10-12 Ergebnisse pro Sekunde erzielt [CBD+89:549].\\
+}  vor\cite[13]{CBBH98}, das äusserst erfolgreich durch Unterstützung von Backpropagation  handgeschriebene Postleitzahlen erkennt\footnote{
+    Wobei die Bilder zu Matrizen der Dimension $16 \times 16$ transformiert und als Eingabedaten in das Netz eingespeist werden. Die Transformation behält das Seitenverhältnis der Zeichen bei. Die Werte der Matrix an den Positionen $a_{ij}$ entsprechen Grauwerten mit einem normalisierten Wertebereich von $[-1, 1]$\cite[542]{CBD+89}
+}. Das Netz performt mit 30 Klassifizierungen pro Sekunde, lediglich die Normalisierung der Eingabedaten stellt einen Flaschenhals bei dem Prozess dar. Wird dieser berücksichtigt, werden 10-12 Ergebnisse pro Sekunde erzielt~\cite[549]{CBD+89}.\\
 
 
 
@@ -179,7 +179,7 @@ Die mathematische Basis von CNNs ist u.a. die \textbf{Faltungsoperation}\footnot
     ``\textit{convolution}`` (engl.): Faltung
 }: Hierbei wird auf Eingabedaten ein \textbf{Kernel} (die \textit{Faltungsmatrix})\footnote{
     ``das biologische Analogon zu den Filtern [Kerneln] sind die bei den Sinnesorganen vorkommenden rezeptiven Felder.`` [Ert21:326]. Vgl. hierzu auch [LBH15:439].
-} angewendet, wobei das Ergebnis der Faltungsoperation die \textbf{feature map} (\textit{Merkmalskarte}) ist [CBG18:370 ff.]. \textit{Goodfellow, Bengio und Courville} erläutern in [CBG18:374 ff.] die Optimierungen, die durch den Einsatz von Faltung hervorgehen: Durch den Einsatz von Kerneln, die nur aus einem Bruchteil der Größe der Eingabedaten bestehen\footnote{ ``einige Dutzend oder hundert Pixeln`` [GBC18:374]
+} angewendet, wobei das Ergebnis der Faltungsoperation die \textbf{feature map} (\textit{Merkmalskarte}) ist [CBG18:370 ff.]. \textit{Goodfellow, Bengio und Courville} erläutern in [GBC18:374 ff.] die Optimierungen, die durch den Einsatz von Faltung hervorgehen: Durch den Einsatz von Kerneln, die nur aus einem Bruchteil der Größe der Eingabedaten bestehen\footnote{ ``einige Dutzend oder hundert Pixeln`` [GBC18:374]
 }, können ``aussagekräftige Merkmale`` aufgespürt werden, was dazu führt, das weniger Parameter gespeichert werden müssen und gleichzeitig die ``statistische Effizienz`` des Netzes erhöht wird (\textbf{sparse interaction} bzw. \textbf{sparse weights}). Durch das bereits erwähnte \textbf{parameter sharing} (auch: \textbf{tied weights}) kann die Effizienz des Netzes weiter erhöht und Speicherplatzverbrauch weiter verringert werden, und Schichten weisen eine \textbf{Äquivarianz} gegenüber Verschiebung auf\footnote{ bereits erwähnt wurde die \textit{shift invariance}: Wird bspw. ein Bild $X$ in das Netz $f$ eingespeist, das in einer Ausgabe $f(X) = Y$ resultiert, dann bedeutet \textit{shift invariance}, das eine Verschiebung der Eingabedaten $g(X) = X+\Gamma$ in dem gleichen $Y$ resultiert: $f(X) = f(g(X))$.  \textit{Äquivarianz} (engl. ``equivariance``) bedeutet, das eine Änderung der Eingabedaten auch zu einer ``gleichartigen Änderung der Ausgabe`` führt: $f(g(x)) = g(f(x))$ [GBC18:377 f.]
 }.
 
