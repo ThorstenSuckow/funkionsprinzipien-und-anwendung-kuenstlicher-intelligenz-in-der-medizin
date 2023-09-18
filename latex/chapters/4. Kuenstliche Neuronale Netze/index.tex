@@ -125,16 +125,16 @@ E = -1/2 * \sum^n_{i=1}\sum^n_{j=1} w_{ij}x_ix_j + \sum^n_{i=1}\Theta_ix_i
 
 Dies wird auch als die \textbf{Energiefunktion} des Netzes bezeichnet, wobei $E$ entweder konstant bleibt oder kleiner wird - aber nicht größer: Ist in einem Netz eine solche Energiefunktion vorhanden, kann gezeigt werden, das das Netz konvergiert [Fau94:139], und zwar hin zu einem Zustand \textit{minimaler Energie}: \textit{Ertel} erklärt hierzu, dass gelernte Muster in dem Netz ``Minima der Energiefunktion im Zustandsraum`` darstellen; werden zuviele Muster gelernt, ``konvergiert das System gegen Minima, die keinen gelernten Muster entsprechen``.
 Damit ist das Modell ``formal äquivalent zu einem physikalischen Modell des Magnetismus`` [Ert21:293]\footnote{
-    vgl. auch [AR98:417] sowie [Hop82:2556, ``Studies of the collective behaviors of the model`` f.]
+    vgl. auch~\cite[417]{AR98} sowie [Hop82:2556, ``Studies of the collective behaviors of the model`` f.]
 }, wo ebenfalls solche \textit{Phasenübergänge} von einem geordneten hin zu einem chaotischen System beobachtet werden können\footnote{
     dem so genannten \textit{Spinglass} (auch: \textit{spin glass}); vgl.[BY86:900 mit Bezug auf Hopfield-Netze]
 }.\\
 
-\textit{Ackley, Hinton und Sejnowski} stellen 1985 in [AHS85] die \textbf{Boltzmann-Maschine}\footnote{
+\textit{Ackley, Hinton und Sejnowski} stellen 1985 in~\cite{AHS85} die \textbf{Boltzmann-Maschine}\footnote{
     eine Beschreibung des Verhalten findet sich 1983 bereits in [HS83]
 } vor, eine Modifikation eines Hopfield-Netzes, in dem sich die Zellen \textit{stochastisch}~\cite[635]{AR88} und globale Zustände des Netzes nach der \textit{Boltzmann-Verteilung}\footnote{
     die \textit{Boltzmann-Verteilung} gibt die Wahrscheinlichkeit an, ein geg. physik. System in einem bestimmten Zustand anzutreffen (https://de.wikipedia.org/wiki/Boltzmann-Statistik, abgerufen  05.09.2023)
-} verhalten. Das Netz versucht lokale Minima zu überwinden (vgl. ``Gradientenabstiegsverfahren`` in \textbf{Kapitel 3.2.1 Backpropagation}), indem ihm erlaubt wird, zu größeren $E$ (s. Gleichung~\ref{eq:gl-energie}) zu springen, um so zu einem globalen Minimum zu konvergieren\footnote{vgl. [AHS85:151] sowie [Koe90:107]}.
+} verhalten. Das Netz versucht lokale Minima zu überwinden (vgl. ``Gradientenabstiegsverfahren`` in \textbf{Kapitel 3.2.1 Backpropagation}), indem ihm erlaubt wird, zu größeren $E$ (s. Gleichung~\ref{eq:gl-energie}) zu springen, um so zu einem globalen Minimum zu konvergieren\footnote{vgl.~\cite[151]{AHS85} sowie [Koe90:107]}.
 Das Verfahren wird auch \textit{simulated annealing} bezeichnet\footnote{vgl. [Ert21:297]. \textit{Rojas} schreibt dazu
     ``Gelingt es, die Temperatur nach dem richtigen Plan auf null zu verringern, wird sich das Netz mit großer Wahrscheinlichkeit in einem globalen Minimum stabilisieren.``[Roj93:322]. Der Begriff \textit{Annealing} ist hier aus der Werkstoffkunde entlehnt: Eine entsprechende Wärmebehandlung von Materialien unterstützt die Erzeugung gewünschter Werkstoffeigenschaften wie Festigkeit, z.B.  bei der Verarbeitung von Glas [Jeb11:3] oder Schweißverbindungen von Metallen [FJO+19]
 }.
@@ -155,7 +155,7 @@ In [Fuk80] war der Training-Prozess des Modells gegeben durch wiederholte Einspe
 model, instead of the learning-without-a-teacher process applied to the previous model.`` [FMI83:827]; \textit{Anderson und Rosenfeld} vermerken dies als ``some handcrafted fine tuning``~\cite[524 f.]{ARR88}
 }, um bessere Resultate bei handgeschriebenen Zeichen zu erzielen [FMI83:829].
 \textit{Anderson und Rosenfeld} attestieren dem Netz von \textit{Fukushima, Miyake und Ito} Aspekte, die bei der Entwicklung neuronaler Netze eine wesentliche Rolle spielen werden~\cite[524]{ARR88}:  Tatsächlich inspiriert das Neocognitron die Convolutional Neural Networks (CNN) [LBH15:439], deren erster Entwurf erstmalig 1989\footnote{
-    ein Jahr nach Erscheinen von [AR88]
+    ein Jahr nach Erscheinen von~\cite{AR88}.
 } von \textit{LeCun} vorgestellt wird [Cun89].
 
 
