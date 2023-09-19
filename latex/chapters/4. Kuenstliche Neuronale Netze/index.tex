@@ -7,8 +7,8 @@
 In den 80er Jahren sahen die großen Industrienationen in der Erforschung von KI einen Wettbewerbsvorteil, nachdem die Technologie durch den Einsatz von Expertensystemen (vgl \ref{appendix:expertensystem}) Einzug in die Wirtschaft gefunden hatte: So ermöglichte R1/XCON\footnote{
     das ``erste erfolgreiche kommerzielle Expertensystem`` [RN09:48, Abs. 1]
 }  bei dem einsetzenden Unternehmen DEC (Digital Equipment Corporation) Einsparungen in Millionenhöhe [RN:48]: Die Domäne von R1 war die regelbasierte Konfiguration von VAX-11/780 Systemen nach Kundenanforderungen\footnote{
-    siehe hierzu insb. [Mcd80] sowie [Hor90:63, Punkt 2]
-}. Japan kündigte 1981 das 5th Generation Projekt [Gar19] an, einen Zehnjahresplan für den Aufbau ``intelligenter Computer`` [RN09:48, Abs. 2]\footnote{
+    siehe hierzu insb. [Mcd80] sowie~\cite[63]{Hor90}
+}. Japan kündigte 1981 das 5th Generation Projekt (vgl.~\cite{Gar19}) an, einen Zehnjahresplan für den Aufbau ``intelligenter Computer`` [RN09:48, Abs. 2]\footnote{
     Zusammenfassend war das Ziel des 5th Generation Computer Systems (FGCS)-Projekt: ``Its ultimate goal is to develop integrated systems, both hardware and software, suitable for the major computer application in the nextdecade, identified by the Japanese as 'knowledge information processing'.`` in [Sha83:637, Anführungszeichen i.O. doppelt]
 }, und in Großbritannien sorgte der Alvey-Report\footnote{
     \url{https://www.chilton-computing.org.uk/inf/literature/reports/alvey\_report/overview.htm} - empfohlene Massnahmen: \url{https://www.chilton-computing.org.uk/inf/literature/reports/alvey\_report/p008.htm} (beide abgerufen 31.08.2023)
@@ -101,9 +101,9 @@ In den 80er Jahren werden neben dem Backpropagation-Algorithmus weitere Entwürf
 
 \subsection{Hopfield-Netz}
 
-Der Physiker John J. Hopfield stellt 1982 in [Hop82] ein Modell für ein \textit{asynchrones} neuronales Netz\footnote{
+Der Physiker \textit{John J. Hopfield} stellt 1982 in~\cite{Hop82} ein Modell für ein \textit{asynchrones} neuronales Netz\footnote{
     in asynchronen Modellen werden die Aktivierungen der Neuronen unabhängig voneinander und zu unterschiedlichen Zeitpunkten berechnet (vgl. [Roj02:49] sowie ebenda S. 282)
-}  vor, das auf neurobiologischen Aspekten [Hop82:2554] beruht und 5 Jahre später in Zusammenarbeit mit At & T Bell Laboratories\footnote{
+}  vor, das auf neurobiologischen Aspekten beruht~\cite[2554]{Hop82} und 5 Jahre später in Zusammenarbeit mit At & T Bell Laboratories\footnote{
     ehemalige Forschungsabteilung der Telefongesellschaft AT \& T;  gehört seit 2016 zu Nokia (https://www.bell-labs.com/, abgerufen 03.09.2023)
 } in Form eines ``neural network chip``~\cite[457]{AR88}\footnote{
     https://techmonitor.ai/technology/att\_creates\_parallel\_neural\_net\_chip\_to\_solve\_routing\_problems
@@ -125,13 +125,13 @@ E = -1/2 * \sum^n_{i=1}\sum^n_{j=1} w_{ij}x_ix_j + \sum^n_{i=1}\Theta_ix_i
 
 Dies wird auch als die \textbf{Energiefunktion} des Netzes bezeichnet, wobei $E$ entweder konstant bleibt oder kleiner wird - aber nicht größer: Ist in einem Netz eine solche Energiefunktion vorhanden, kann gezeigt werden, das das Netz konvergiert [Fau94:139], und zwar hin zu einem Zustand \textit{minimaler Energie}: \textit{Ertel} erklärt hierzu, dass gelernte Muster in dem Netz ``Minima der Energiefunktion im Zustandsraum`` darstellen; werden zuviele Muster gelernt, ``konvergiert das System gegen Minima, die keinen gelernten Muster entsprechen``.
 Damit ist das Modell ``formal äquivalent zu einem physikalischen Modell des Magnetismus``~\cite[293]{Ert21b}\footnote{
-    vgl. auch~\cite[417]{AR98} sowie [Hop82:2556, ``Studies of the collective behaviors of the model`` f.]
+    vgl. auch~\cite[417]{AR98} sowie~\cite[2556 f.]{Hop82}
 }, wo ebenfalls solche \textit{Phasenübergänge} von einem geordneten hin zu einem chaotischen System beobachtet werden können\footnote{
     dem so genannten \textit{Spinglass} (auch: \textit{spin glass}); vgl.~\cite[900]{BY86} mit Bezug auf Hopfield-Netze
 }.\\
 
 \textit{Ackley, Hinton und Sejnowski} stellen 1985 in~\cite{AHS85} die \textbf{Boltzmann-Maschine}\footnote{
-    eine Beschreibung des Verhalten findet sich 1983 bereits in [HS83]
+    eine Beschreibung des Verhalten findet sich 1983 bereits in~\cite{HS83}
 } vor, eine Modifikation eines Hopfield-Netzes, in dem sich die Zellen \textit{stochastisch}~\cite[635]{AR88} und globale Zustände des Netzes nach der \textit{Boltzmann-Verteilung}\footnote{
     die \textit{Boltzmann-Verteilung} gibt die Wahrscheinlichkeit an, ein geg. physik. System in einem bestimmten Zustand anzutreffen (https://de.wikipedia.org/wiki/Boltzmann-Statistik, abgerufen  05.09.2023)
 } verhalten. Das Netz versucht lokale Minima zu überwinden (vgl. ``Gradientenabstiegsverfahren`` in \textbf{Kapitel 3.2.1 Backpropagation}), indem ihm erlaubt wird, zu größeren $E$ (s. Gleichung~\ref{eq:gl-energie}) zu springen, um so zu einem globalen Minimum zu konvergieren\footnote{vgl.~\cite[151]{AHS85} sowie [Koe90:107]}.

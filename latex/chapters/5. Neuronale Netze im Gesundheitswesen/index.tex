@@ -21,11 +21,11 @@ In jeder dieser Schicht übernimmt die KI wichtige Rollen, z.B. in der Diagnosti
 \subsection{Automatisierung in der Gesundheitswirtschaft}
 Um für die in Deutschland knapp 73 Millionen gesetzlich Krankenversicherten\footnote{
     \url{https://www.gkv-spitzenverband.de/krankenversicherung/kv_grundprinzipien/alle_gesetzlichen_krankenkassen/alle_gesetzlichen_krankenkassen.jsp}, abgerufen 12.09.2023
-} Leistungen im Gesundheitswesen abzurechnen, werden durch die Leistungserbringer Finanzdienstleister beauftragt. So leiten bspw. Apotheken eingelöste Kassenrezepte an Apothekenrechenzentren weiter, die die Abrechnungen mit den Krankenkassen durchführen. Obwohl Rezepte heutzutage überwiegend maschinell erstellt werden, kommt es bei den Rechenzentren nach der Digitalisierung der Rezepte (bspw. durch Scannen) häufig zu manueller Nachkorrektur, wenn abrechnungsrelevante Daten nicht vollständig erfasst werden können, wie \textit{Höfer et al.} in [HWN22] feststellen. Um den zusätzlichen Arbeitsaufwand durch Nachkorrekturen zu reduzieren (aufgrund von Störfaktoren wie ausgedünnte Zeichen oder Textüberlagerungen), zeigen sie ein neuronales Netz, das in Auftrag für ein führenden Abrechnungs- und Finanzdienstleister erstellt wurde. Ziel des Netzes ist die Rekonstruktion\footnote{
-    tatsächlich liegt die Vermutung nahe, das Netz sollte eingesetzt werden, um den Hochleistungsscanner zu ersetzen. Ziel war es aber, in einem Vorverarbeitungsschritt die Bildqualität zu erhöhen [HWN22, S. 698]
+} Leistungen im Gesundheitswesen abzurechnen, werden durch die Leistungserbringer Finanzdienstleister beauftragt. So leiten bspw. Apotheken eingelöste Kassenrezepte an Apothekenrechenzentren weiter, die die Abrechnungen mit den Krankenkassen durchführen. Obwohl Rezepte heutzutage überwiegend maschinell erstellt werden, kommt es bei den Rechenzentren nach der Digitalisierung der Rezepte (bspw. durch Scannen) häufig zu manueller Nachkorrektur, wenn abrechnungsrelevante Daten nicht vollständig erfasst werden können, wie \textit{Höfer et al.} in~\cite[698]{HWN22} feststellen. Um den zusätzlichen Arbeitsaufwand durch Nachkorrekturen zu reduzieren (aufgrund von Störfaktoren wie ausgedünnte Zeichen oder Textüberlagerungen), zeigen sie ein neuronales Netz, das in Auftrag für ein führenden Abrechnungs- und Finanzdienstleister erstellt wurde. Ziel des Netzes ist die Rekonstruktion\footnote{
+    tatsächlich liegt die Vermutung nahe, das Netz sollte eingesetzt werden, um den Hochleistungsscanner zu ersetzen. Ziel war es aber, in einem Vorverarbeitungsschritt die Bildqualität zu erhöhen~\cite[698]{HWN22}
 } von Rezepten, die bei Plausibilitätskontrollen auffällig sind.
 Ihr neuronales Netz zur Rekonstruktion von Rezepten ist ein CNN mit 7 Faltungsschichten, denen jeweils eine Poolingschicht folgt. Insgesamt werden 40.000 Datensätze für das Training genutzt, sowie 10.000 Validierungsdatensätze. Die Rezepte werden auf den für die Abrechnung relevanten Teil zugeschnitten, sodass die Eingabedaten aus $720 \times 460$ Pixeln bestehen. Sie zeigen, dass Ihr Netz bei der Rekonstruktion von Korrekturzeichen eine relative Verbesserung von 27,85\% erreicht\footnote{
-    5\% waren ursprünglich anvisiert [HWN22, S. 711]
+    5\% waren ursprünglich anvisiert~\cite[711]{HWN22}
 } und aufgrund dieses Erfolges in den  Workflow der zu dem Auftraggeber gehörenden Abrechnungszentren integriert wurde.
 
 
@@ -34,8 +34,8 @@ Im Jahr 2016 gelingt es der von \textit{Google DeepMind} entwickelten Software \
     \url{https://www.spiegel.de/netzwelt/gadgets/go-duell-software-alphago-siegt-gegen-lee-sedol-a-1081975.html}, abgerufen 08.09.2023
 }. \textit{Go} verfügt über $2,08 \times 10^{170}$ gültige Spielpositionen und gehört damit zu den komplexesten Brettspielen der Welt\footnote{
     \url{https://tromp.github.io/go/legal.html}, abgerufen 08.09.2023
-}. Kurz nach diesem beachtlichen Erfolg entscheidet \textit{Google DeepMind}, dass das in der Software verwendete 13-lagige CNN-Netz mit seiner $19 \times 19$ Eingabe- und Ausgabematrix sowie trainiert mit über 30 Millionen Spielzügen~\cite[371]{Ert21c}, reif sei für den Einsatz in der Wissenschaft. Im selben Jahr beginnt das Unternehmen mit der Forschung an \textit{AlphaFold}[JEP+21]\footnote{
-    \url{https://www.deepmind.com/research/highlighted-research/alphafold/timeline-of-a-breakthrough}, abgerufen 08.09.2023
+}. Kurz nach diesem beachtlichen Erfolg entscheidet \textit{Google DeepMind}, dass das in der Software verwendete 13-lagige CNN-Netz mit seiner $19 \times 19$ Eingabe- und Ausgabematrix sowie trainiert mit über 30 Millionen Spielzügen~\cite[371]{Ert21c}, reif sei für den Einsatz in der Wissenschaft. Im selben Jahr beginnt das Unternehmen mit der Forschung an \textit{AlphaFold}\footnote{
+    \cite{JEP+21}, s. a. \url{https://www.deepmind.com/research/highlighted-research/alphafold/timeline-of-a-breakthrough}, abgerufen 08.09.2023
 }: Die Software soll helfen, das Problem der \textbf{Proteinfaltung} zu vereinfachen: Darunter versteht man die Vorhersage der Struktur eines Proteins auf Basis seiner Aminosäuresequenz (vgl.~\cite{DOSW08}) \footnote{
     postuliert 1972 von \textit{Anfinsen} in seiner Nobelpreislaudatio~\cite[223]{Anf73}
 }; mit $10^{300}$ verschiedenen Konstellationen\footnote{
@@ -72,9 +72,9 @@ Trotz allem ist nicht von der Hand zu weisen, dass neuronale Netze in der Qualit
 } mit 129.450 gelabelten Bilddateien aus 2032 verschiedenen Krankheiten ein Netz zur Diagnose von Hautkrebs zu erstellen. Sie zeigen, dass das Netz bei der Korrektheit der gestellten Diagnosen genauere Diagnosen erstellt als ein Mediziner\footnote{
     ``The deep learning CNN outperforms the average of the dermatologists at skin cancer classification using photographic and dermoscopic images``~\cite[3, Figure 2]{EKN+17}
 }.
-\textit{Irving et al.} stellen in [IRK+19] ``CheXpert``\footnote{
+\textit{Irving et al.} stellen in~\cite{IRK+19} ``CheXpert``\footnote{
     \url{https://stanfordmlgroup.github.io/competitions/chexpert/}, abgerufen 10.09.2023
-} vor, einen öffentlichen Datensatz mit 224.316 Aufnahmen des Thorax von 65.240 verschiedenen Patienten zur Klassifizierung von 14 Befunden (u.a. Lungenentzündung, Fraktur, Pleuraerguss). Für das Training nutzen sie \textit{DenseNet121}, ein CNN, in dem jede Schicht mit jeder anderen verbunden ist [HLW16]\footnote{
+} vor, einen öffentlichen Datensatz mit 224.316 Aufnahmen des Thorax von 65.240 verschiedenen Patienten zur Klassifizierung von 14 Befunden (u.a. Lungenentzündung, Fraktur, Pleuraerguss). Für das Training nutzen sie \textit{DenseNet121}, ein CNN, in dem jede Schicht mit jeder anderen verbunden ist~\cite{HLW16}\footnote{
     DenseNet: Dense Convolutional Network. In klassischen CNNs mit $L$ Schichten existieren $L$ direkte Verbindungen, also eine Verbindung für eine obere und die darunterliegende Schicht. Durch die Architektur von \textit{Densenet} existieren in dem Netz $L(L +1)/2$ direkte Verbindungen.
 }. Die Inputdaten bestehen aus $320 \times 320$ Pixeln. Bei den Tests zeigt sich, dass ihr Netz bei der Diagnostizierung von Kardiomegalie, Ödemen sowie Pleuraergüssen besser abschneidet als die in der Studie eingesetzten Radiologen\footnote{
     \url{https://intermountainhealthcare.org/news/2019/09/ai-system-accurately-detects-key-findings-in-chest-x-rays-of-pneumonia-patients-within-10-seconds/} (abgerufen 10.09.2023) fasst die Ergebnisse bei der Diagnose von Lungenentzündung zusammen
