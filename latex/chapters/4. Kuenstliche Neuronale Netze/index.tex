@@ -66,7 +66,7 @@ Die mathematische Basis für Backpropagation ist das \textbf{Gradientenabstiegsv
 }.  Ausserdem unterstützt die \textbf{Sigmoid}\footnote{
     \textit{sigmoid}: ``Sigma``, griechischer Buchstabe $\Sigma$, entspricht dem lateinischen ``S``; ``\textit{eidos}`` (griechisch) Form, Gestalt
 }-Funktion (Gleichung~\ref{eq:gl-sigmoid} sowie Abbildung~\ref{fig-sigmoid}) als Aktivierungsfunktion\footnote{ ``Historisch wurde Backpropagation mit der Sigmoidfunktion implementiert.``~\cite[314, Fussnote 4]{Ert21b} In Kapitel 9.5.3 (vgl. [RHW86a:329, (15)]). \textit{Ertel} fügt hinzu: ``Mittlerweile haben sich jedoch andere Funktionen als besser bewährt.`` In~\cite[319 f.]{Ert21b} geht der Autor auf ``Probleme und Verbesserungen`` des mittlerweile über 30 Jahre alten Verfahrens ein. [GBC18:19]  stellt fest, dass Backpropagation der ``vorherrschende Ansatz für das Training tiefer Modelle`` (im Jahr 2018) ist.
-}  aufgrund ihres nicht-linearen Charakters eine größere Klasse darstellbarer Funktionen und damit Lösungen für Probleme, die ein klassisches Perzeptron nicht lösen kann (vgl. [Ert 21:316])\footnote{
+}  aufgrund ihres nicht-linearen Charakters eine größere Klasse darstellbarer Funktionen und damit Lösungen für Probleme, die ein klassisches Perzeptron nicht lösen kann (vgl.~\cite[316]{Ert21b})\footnote{
     In [RM86a] zeigen \textit{Rumelhart, Hinton und Williams} die Architektur eines mehrschichtigen neuronalen Netzes, das XOR über Backpropagation repräsentiert. Gleichzeitig grenzen sie in [RHW86b:536] ihr Modell vom biologischen Lernen ab: ``The learning procedure, in its current form, is not a plausible model of learning in brains``.
 } \footnote{
     \textit{Ertel} weist darauf hin, dass die Klasse der darstellbaren Funktionen erhöht wird, wenn man für ein Perzeptron eine variable Sigmoid-Funktion verwendet~\cite[316]{Ert21b}. Siehe hierzu auch ``Sigmoid-Perzeptron`` in [RN09:847]
@@ -142,19 +142,19 @@ Das Verfahren wird auch \textit{simulated annealing} bezeichnet\footnote{vgl.~\c
 \subsection{Neocognitron}
 
 Unter dem Namen \textit{Cognitron} 1975 beschreibt \textit{Fukushima} in [Fuk75] ein mehrschichtiges Netz mit selbst-organisierenden Eigenschaften zur Mustererkennung, in dem Zellen selektiv auf häufig präsentierte Merkmale reagieren.
-1983 veröffentlichen \textit{Fukushima, Miyake und Ito} eine Modifikation dieser Architektur in [FMI83]\footnote{
+1983 veröffentlichen \textit{Fukushima, Miyake und Ito} eine Modifikation dieser Architektur in~\cite{FMI83}\footnote{
     Mit Bezug auf [Fuk80] (``Neocognitron: A self-organizing neural network model for a mechanism of pattern recognition unaffected by shift in position``)
 } unter dem Namen \textbf{Neocognitron}\footnote{
     Video mit Demonstration des Netzes unter https://www.youtube.com/watch?v=Qil4kmvm2Sw, abgerufen 04.09.2023
-}; sein biologisches Vorbild ist das durch \textit{Hubel und Wiesel} in [HW62] beschriebene hierarchische Modell des Wahrnehmungssystems [FMI83:827].
+}; sein biologisches Vorbild ist das durch \textit{Hubel und Wiesel} in~\cite{HW62} beschriebene hierarchische Modell des Wahrnehmungssystems~\cite[827]{FMI83}.
 In dem künstlichen neuronalen Netz haben Zellen in tiefer liegenden Schichten die Eigenschaft, selektiv komplexere Merkmale der Stimuli zu extrahieren, womit sie weniger anfällig auf Rauschen in den Eingabedaten sind.
 In [Fuk80] war der Training-Prozess des Modells gegeben durch wiederholte Einspeisung von Mustern ohne weitere Information\footnote{
     ``learning without a teacher``, also unüberwachtes Lernen (unsupervised learning).
 } [Fuk80:197]: Die Erweiterung des Modells beinhaltet nun die Verstärkung der modifizierten Synapsen durch überwachtes Lernen\footnote{
     ``We use a learning-with-a-teacher process for the reinforcement of the modifiable synapses in the new large-scale
-model, instead of the learning-without-a-teacher process applied to the previous model.`` [FMI83:827]; \textit{Anderson und Rosenfeld} vermerken dies als ``some handcrafted fine tuning``~\cite[524 f.]{ARR88}
-}, um bessere Resultate bei handgeschriebenen Zeichen zu erzielen [FMI83:829].
-\textit{Anderson und Rosenfeld} attestieren dem Netz von \textit{Fukushima, Miyake und Ito} Aspekte, die bei der Entwicklung neuronaler Netze eine wesentliche Rolle spielen werden~\cite[524]{ARR88}:  Tatsächlich inspiriert das Neocognitron die Convolutional Neural Networks (CNN) [LBH15:439], deren erster Entwurf erstmalig 1989\footnote{
+model, instead of the learning-without-a-teacher process applied to the previous model.``~\cite[827]{FMI83}; \textit{Anderson und Rosenfeld} vermerken dies als ``some handcrafted fine tuning``~\cite[524 f.]{AR88}
+}, um bessere Resultate bei handgeschriebenen Zeichen zu erzielen~\cite[829]{FMI83}.
+\textit{Anderson und Rosenfeld} attestieren dem Netz von \textit{Fukushima, Miyake und Ito} Aspekte, die bei der Entwicklung neuronaler Netze eine wesentliche Rolle spielen werden~\cite[524]{AR88}:  Tatsächlich inspiriert das Neocognitron die Convolutional Neural Networks (CNN) [LBH15:439], deren erster Entwurf erstmalig 1989\footnote{
     ein Jahr nach Erscheinen von~\cite{AR88}.
 } von \textit{LeCun} vorgestellt wird~\cite{Cun89}.
 
