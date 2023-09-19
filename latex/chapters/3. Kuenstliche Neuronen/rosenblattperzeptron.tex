@@ -178,9 +178,9 @@ Dass diese Mengen nach Definition~\ref{def-halbraum} linear separabel sind, läs
 
 
 \noindent
-Die von \textit{Ertel} formulierte Definition\footnote{
-    [Ert21:212, ``Definition 8.3``, Hervorhebungen i.O.]
-} für ein Perzeptron wollen wir für die weiteren Betrachtungen übernehmen:
+Die von \textit{Ertel} formulierte Definition für ein Perzeptron wollen wir für die weiteren Betrachtungen übernehmen\footnote{
+    \cite[212, ``Definition 8.3``, Hervorhebungen i.O.]{Ert21a}
+}:
 
 \begin{definition}
 \noindent
@@ -199,8 +199,8 @@ dar.
 
 \subsection{Die Lernregel}\label{sec-lernregel}
 
-Die Eigenschaft linearer Trennbarkeit von Daten ist eine wesentliche Voraussetzung dafür, dass ein Perzeptron \textit{konvergiert}: Die \textit{Lernregel} des Perzeptrons passt während der Laufzeit die Gewichte $w_1 ... w_n$ solange an, bis sie - eingesetzt in eine lineare Gleichung [Ert21:311] - die $n$-dimensionalen Daten entsprechend Definition~\ref{eq:gl-rpact} \textit{klassifizieren} kann.
-Aus diesem Grund wird das Perzeptron auch \textbf{linearer Klassifizierer} genannt [Ert21:210 - 216].
+Die Eigenschaft linearer Trennbarkeit von Daten ist eine wesentliche Voraussetzung dafür, dass ein Perzeptron \textit{konvergiert}: Die \textit{Lernregel} des Perzeptrons passt während der Laufzeit die Gewichte $w_1 ... w_n$ solange an, bis sie - eingesetzt in eine lineare Gleichung~\cite[311]{Ert21b} - die $n$-dimensionalen Daten entsprechend Definition~\ref{eq:gl-rpact} \textit{klassifizieren} kann.
+Aus diesem Grund wird das Perzeptron auch \textbf{linearer Klassifizierer} genannt (vgl.~\cite[210-216]{Ert21a}).
 
 Das Perzeptron \textbf{lernt} diese Gewichte zunächst durch \textit{Traningsdaten}\footnote{
     ``supervised learning``: überwachtes lernen; vgl. [RN09:811, ``18.2 Überwachtes Lernen``] sowie [Fau94:15]. \textit{Arbib et al.} weisen darauf hin, dass \textit{überwachtes Lernen} mit dem Perzeptron eingeführt wurde: ``Supervised learning adjusts the weights in an attempt to respond to explicit error signals provided by a “teacher,” which may be external, or another network in the same “brain.” This model was introduced in the perceptron model, [...].``~\cite[30]{Arb03}
@@ -234,7 +234,7 @@ Sind die Trainingsdaten linear separabel, \textit{konvergiert}\footnote{
     ``iterative training processes converge if the weight updates reach equilibrium (stop changing)`` [Fau94:425, ``Convergence``]
 } das Perzeptron nach einer endlichen Zahl von Epochen [MP17:164]\footnote{
     Das Konvergenz-Theorem besagt: ``if a linear separation exists, the perceptron error-correction scheme will find it.``~\cite[20]{Arb03}] Beweise führen [Ros62:111 ff.], [MP17:167 ff.] sowie [Nov62].
-}, und ist danach in der Lage zu \textit{generalisieren} [Ert21:202].\\
+}, und ist danach in der Lage zu \textit{generalisieren}~\cite[202]{Ert21a}.\\
 
 Da wir in unserem Beispiel nur Daten betrachtet haben, die durch eine Gerade durch den Ursprung ($(0,0)$) getrennt sind, brauchen wir noch eine Möglichkeit, die $x_2$-Koordinate der Trenngerade anzupassen.
 
@@ -251,7 +251,7 @@ Dies erreicht man mit einer sogenannten \textbf{bias unit}.
 Das Bias-Gewicht\footnote{
     vgl. [RN09:839]
 } ist ein Wert, der zu der Gleichung aus Definition\ref{eq:gl-rpact} hinzuaddiert wird, und für eine Verschiebung der Ursprungsgeraden\footnote{
-    im $ \mathbb{R}^n$ durch eine Hyperebene im Ursprung [Ert21:215]
+    im $ \mathbb{R}^n$ durch eine Hyperebene im Ursprung~\cite[215]{Ert21a}
 } sorgt.
 
 Den Eingabedaten wird ein fester Eingabewert $x_{n+1} = 1$ hinzufügt: Der Eingabevektor $x \in  \mathbb{R}^n$ wird \textit{erweitert}: $(x_1, ..., x_n, 1)$ [Roj93:58, ``3.2.2 Gewichtete Netze mit einem kanonischen Baustein``].
@@ -300,7 +300,7 @@ was der Abstand $x_2$ von der $y$-Achse ist.
 
 \noindent
 Mit $b$ als Teil der Eingabe folgt auch dessen Gewichtung $bw_{n+1} = w_{n+1}$.
-Mit $0$ als Schwellenwert wird dadurch eine Verschiebung der Trenngeraden entlang der $y$-Achse im $ \mathbb{R}^2$ bzw. eine Verschiebung der Hyperebene im $ \mathbb{R}^n$ ermöglicht[Ert21:215] \footnote{
+Mit $0$ als Schwellenwert wird dadurch eine Verschiebung der Trenngeraden entlang der $y$-Achse im $ \mathbb{R}^2$ bzw. eine Verschiebung der Hyperebene im $ \mathbb{R}^n$ ermöglicht~\cite[215]{Ert21a} \footnote{
     einen Überblick über die geometrischen Zusammenhänge liefert ``Einführung in die Neuroinformatik`` von Prof. Dr. G. Sommer \url{https://www.informatik.uni-kiel.de/inf/Sommer/doc/Downloads/Skripte/neuroskript.pdf}:33 ff. (abgerufen 27.08.2023)
 }.
 

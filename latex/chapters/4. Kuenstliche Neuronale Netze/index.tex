@@ -24,7 +24,7 @@ Auch der technologische Fortschritt begünstigte das Wiederaufleben des Interess
 
 denn mit den in den 80er Jahren verfügbaren Supercomputern und Parallelrechner\footnote{
     Auch \textit{Fausett} nennt bessere Rechenleistung als einen Grund für den erneuerten Enthusiasmus [Fau94:26]. Im Kontext der in diesem Kapitel vorgestellten mehrschichtigen Netzen und ihrem Konzept der versteckten Schichten ist nachvollziehbar, das mehr Rechenleistung den komplexen Verfahren entgegenkommt. \textit{Goodfellow, Bengio und Courville} gehen auf die Korrelation Modellgrösse und Anzahl der Nervenzellen in einem menschlichen Gehirn (vgl. Fussnote 15 in **Kapitel 1.2**) in [GBC18:24 ff.] ein
-} erhält auch der Konnektionismus Auftrieb, der \textbf{neuronale Netze} als Grundlage hat [Dor91:15], und mit dem sich Modelle wieder mehr an den biologischen Vorbildern orientieren sollten\footnote{
+} erhält auch der Konnektionismus Auftrieb, der \textbf{neuronale Netze} als Grundlage hat~\cite[15]{Dor91}, und mit dem sich Modelle wieder mehr an den biologischen Vorbildern orientieren sollten\footnote{
     vgl. [RM87:43, Abs. 3] sowie [GBC18:18-19]}.
 
 
@@ -49,13 +49,13 @@ Ein MLP repräsentiert ein tiefes Feedforward-Netz, in dem die Eingabeschicht (\
 
 \subsection{Backpropagation}
 In gleicher Arbeit ([Mur91:185 ff.]) zeigt \textit{Murtagh} ein MLP, das mittels \textbf{Backpropagation}\footnote{
-    ``das meist genutzte neuronale Modell`` [Ert21:313, ``9.5 Der Backpropagation Algorithmus``]
+    ``das meist genutzte neuronale Modell``~\cite[313]{Ert21b}
 } Daten klassifiziert, die keinen linearen Zusammenhang besitzen.
 Der Algorithmus geht auf \textit{Rumelhart, Hinton und Williams} zurück, die in [RHW86a] eine Methode\footnote{
     ``The ability to create useful new features distinguishes back-propagation from earlier, simpler methods such as the perceptron-convergence procedure.`` [RHW86b:533]
 } vorstellen, um berechnete Werte \textit{rückwärts} in das Netz einzuspeisen.
 Hierbei wird für die Netzausgabe (\textit{forward pass}) ein Approximationsfehler berechnet, der als Basis für die Gewichtsänderungen beim rückwärtigen Lauf (\textit{backward pass}) bis zur ersten verborgenen Schicht genutzt wird.
-Der Vorgang (forward pass, backward pass, forward pass...) wird so lange für alle Trainingsbeispiele wiederholt, bis die Gewichte sich nicht mehr ändern, oder eine andere Schranke (Epochen, Zeit) erreicht ist [Ert21:315]\footnote{
+Der Vorgang (forward pass, backward pass, forward pass...) wird so lange für alle Trainingsbeispiele wiederholt, bis die Gewichte sich nicht mehr ändern, oder eine andere Schranke (Epochen, Zeit) erreicht ist~\cite[315]{Ert21b}\footnote{
     ausführlicher Algorithmus in [RN09:853, Abbildung 18.24]
 }.
 
@@ -65,11 +65,11 @@ Die mathematische Basis für Backpropagation ist das \textbf{Gradientenabstiegsv
     ein kompakter Überblick zum Thema ``Optimierung auf Gradientenbasis`` findet sich in [GBC18:90 ff.]
 }.  Ausserdem unterstützt die \textbf{Sigmoid}\footnote{
     \textit{sigmoid}: ``Sigma``, griechischer Buchstabe $\Sigma$, entspricht dem lateinischen ``S``; ``\textit{eidos}`` (griechisch) Form, Gestalt
-}-Funktion (Gleichung~\ref{eq:gl-sigmoid} sowie Abbildung~\ref{fig-sigmoid}) als Aktivierungsfunktion\footnote{ ``Historisch wurde Backpropagation mit der Sigmoidfunktion implementiert.`` [Ert21:314, Fussnote 4] In Kapitel 9.5.3 (vgl. [RHW86a:329, (15)]). \textit{Ertel} fügt hinzu: ``Mittlerweile haben sich jedoch andere Funktionen als besser bewährt.`` In [Ert21:319] geht der Autor auf ``Probleme und Verbesserungen`` des mittlerweile über 30 Jahre alten Verfahrens ein. [GBC18:19]  stellt fest, dass Backpropagation der ``vorherrschende Ansatz für das Training tiefer Modelle`` (im Jahr 2018) ist.
+}-Funktion (Gleichung~\ref{eq:gl-sigmoid} sowie Abbildung~\ref{fig-sigmoid}) als Aktivierungsfunktion\footnote{ ``Historisch wurde Backpropagation mit der Sigmoidfunktion implementiert.``~\cite[314, Fussnote 4]{Ert21b} In Kapitel 9.5.3 (vgl. [RHW86a:329, (15)]). \textit{Ertel} fügt hinzu: ``Mittlerweile haben sich jedoch andere Funktionen als besser bewährt.`` In~\cite[319 f.]{Ert21b} geht der Autor auf ``Probleme und Verbesserungen`` des mittlerweile über 30 Jahre alten Verfahrens ein. [GBC18:19]  stellt fest, dass Backpropagation der ``vorherrschende Ansatz für das Training tiefer Modelle`` (im Jahr 2018) ist.
 }  aufgrund ihres nicht-linearen Charakters eine größere Klasse darstellbarer Funktionen und damit Lösungen für Probleme, die ein klassisches Perzeptron nicht lösen kann (vgl. [Ert 21:316])\footnote{
     In [RM86a] zeigen \textit{Rumelhart, Hinton und Williams} die Architektur eines mehrschichtigen neuronalen Netzes, das XOR über Backpropagation repräsentiert. Gleichzeitig grenzen sie in [RHW86b:536] ihr Modell vom biologischen Lernen ab: ``The learning procedure, in its current form, is not a plausible model of learning in brains``.
 } \footnote{
-    \textit{Ertel} weist darauf hin, dass die Klasse der darstellbaren Funktionen erhöht wird, wenn man für ein Perzeptron eine variable Sigmoid-Funktion verwendet [Ert21:316, Abs. 2]. Siehe hierzu auch ``Sigmoid-Perzeptron`` in [RN09:847]
+    \textit{Ertel} weist darauf hin, dass die Klasse der darstellbaren Funktionen erhöht wird, wenn man für ein Perzeptron eine variable Sigmoid-Funktion verwendet~\cite[316]{Ert21b}. Siehe hierzu auch ``Sigmoid-Perzeptron`` in [RN09:847]
 }.\\
 
 Sigmoid:
@@ -109,12 +109,12 @@ Der Physiker John J. Hopfield stellt 1982 in [Hop82] ein Modell für ein \textit
     https://techmonitor.ai/technology/att\_creates\_parallel\_neural\_net\_chip\_to\_solve\_routing\_problems
 } als Hardware umgesetzt wird: Das Modell ist ein \textbf{rekurrentes Netz}\footnote{
 Ein rekurrentes neuronales Netz ``speist seine Ausgaben wieder in seine eigenen Eingaben ein``[RN09:847]. Im Gegensatz zu Feedforward-Netzen sind rekurrente Netze also \textit{rückgekoppelt}
-} ohne Schlingen ($w_{ij} = 0$)\footnote{ Eine \textit{Schlinge} (engl. \textit{loop}) in einem Graphen ist ein Kantenzug, der einen Knoten mit sich selbst verbindet [Die17 S. 30]. Ein Beispiel für ein Netz mit Schlingen ist das \textbf{MAXNET} [Lip87], das zu der Gruppe der \textbf{competitive nets} gehört: Es kann als Subnetz zur Ermittlung der Zelle mit dem größten Aktivierungswert genutzt werden [Fau94:158 ff.]
-} [Ert21:291] mit bidirektionalen symmetrischen Kanten ($w_{ij} = w_{ji}$) und fungiert als \textbf{Assoziativspeicher}, also als Netz, das, wenn es für eine Eingabe $x$ die Ausgabe $y$ liefert, $y$ auch für $x'$ berechnet, sofern $x'$ nahe genug bei $x$ liegt\footnote{ Nach dem Training ist das Netz dazu in der Lage, für einen Stimulus ein Aktualisierungsmuster einzunehmen, dass diesem am ähnlichsten ist [RN09:882], was an die ``Cell Assemblies`` von Hebb erinnert (Kapitel 2.2.1). \textit{Lansner} verweist in [Lan09:179] genau darauf, merkt aber gleichfalls an, dass das Modell aufgrund der Rekurrenz und Symmetrie nicht seinem biologischen Vorbild entspricht [Lan09:180]
+} ohne Schlingen ($w_{ij} = 0$)~\cite[291]{Ert21b}\footnote{ Eine \textit{Schlinge} (engl. \textit{loop}) in einem Graphen ist ein Kantenzug, der einen Knoten mit sich selbst verbindet~\cite[30]{Die17}. Ein Beispiel für ein Netz mit Schlingen ist das \textbf{MAXNET} [Lip87], das zu der Gruppe der \textbf{competitive nets} gehört: Es kann als Subnetz zur Ermittlung der Zelle mit dem größten Aktivierungswert genutzt werden [Fau94:158 ff.]
+} mit bidirektionalen symmetrischen Kanten ($w_{ij} = w_{ji}$) und fungiert als \textbf{Assoziativspeicher}, also als Netz, das, wenn es für eine Eingabe $x$ die Ausgabe $y$ liefert, $y$ auch für $x'$ berechnet, sofern $x'$ nahe genug bei $x$ liegt\footnote{ Nach dem Training ist das Netz dazu in der Lage, für einen Stimulus ein Aktualisierungsmuster einzunehmen, dass diesem am ähnlichsten ist [RN09:882], was an die ``Cell Assemblies`` von Hebb erinnert (Kapitel 2.2.1). \textit{Lansner} verweist in [Lan09:179] genau darauf, merkt aber gleichfalls an, dass das Modell aufgrund der Rekurrenz und Symmetrie nicht seinem biologischen Vorbild entspricht [Lan09:180]
 } [Roj93:251], was das Netz gegenüber \textit{Rauschen} und \textit{Störungen}\footnote{
-    Rauschen bzw. Störungen bei Stimuli in Form von Bildern ($n * m$ Pixeln) können durch zufällig hinzugefügte oder entfernte Pixel entstehen, oder durch Rotation (axiale Verschiebung) der Daten vor dem Einspeisen in das Netz. Beispiele für verrauschte Daten in [Ert21, S 294 ff.]
+    Rauschen bzw. Störungen bei Stimuli in Form von Bildern ($n * m$ Pixeln) können durch zufällig hinzugefügte oder entfernte Pixel entstehen, oder durch Rotation (axiale Verschiebung) der Daten vor dem Einspeisen in das Netz. Beispiele für verrauschte Daten in~\cite[294]{Ert21b}
 } resistenter macht.
-\textit{Ertel} führt die Begeisterung für neuronale Netze und den Aufschwung der Neuroinformatik in den 80er Jahren wesentlich auf die ``biologische Plausibilität, das gut verstandene mathematische Modell`` und ``die beeindruckende Simulation zur Mustererkennung`` auf das Hopfield Modell zurück [Ert21:297]. \textit{Anderson und Rosenfeld} bemerken, dass der Einfluss physikalischer Systeme auf das Hopfield Netz auch das Interesse der Physiker an neuronalen Netzen geweckt hat, und dadurch das Forschungsfeld erweitert wurde (vgl.~\cite[458]{AR88}). Dies ist darauf zurückzuführen, dass sich die Summe aller Terme in einem Hopfield-Netz wie folgt berechnet (vgl. [Roj93:287]\footnote{
+\textit{Ertel} führt die Begeisterung für neuronale Netze und den Aufschwung der Neuroinformatik in den 80er Jahren wesentlich auf die ``biologische Plausibilität, das gut verstandene mathematische Modell`` und ``die beeindruckende Simulation zur Mustererkennung`` auf das Hopfield Modell zurück~\cite[297]{Ert21b}. \textit{Anderson und Rosenfeld} bemerken, dass der Einfluss physikalischer Systeme auf das Hopfield Netz auch das Interesse der Physiker an neuronalen Netzen geweckt hat, und dadurch das Forschungsfeld erweitert wurde (vgl.~\cite[458]{AR88}). Dies ist darauf zurückzuführen, dass sich die Summe aller Terme in einem Hopfield-Netz wie folgt berechnet (vgl. [Roj93:287]\footnote{
     mit dem Faktor $1/2$, damit aufgrund der Symmetrie in dem Netz $w_{ij}x_ix_j$ und $w_{ji}x_jx_i$ nur einmal berechnet wird [Roj93:287]
 })
 
@@ -124,7 +124,7 @@ E = -1/2 * \sum^n_{i=1}\sum^n_{j=1} w_{ij}x_ix_j + \sum^n_{i=1}\Theta_ix_i
 \end{equation}
 
 Dies wird auch als die \textbf{Energiefunktion} des Netzes bezeichnet, wobei $E$ entweder konstant bleibt oder kleiner wird - aber nicht größer: Ist in einem Netz eine solche Energiefunktion vorhanden, kann gezeigt werden, das das Netz konvergiert [Fau94:139], und zwar hin zu einem Zustand \textit{minimaler Energie}: \textit{Ertel} erklärt hierzu, dass gelernte Muster in dem Netz ``Minima der Energiefunktion im Zustandsraum`` darstellen; werden zuviele Muster gelernt, ``konvergiert das System gegen Minima, die keinen gelernten Muster entsprechen``.
-Damit ist das Modell ``formal äquivalent zu einem physikalischen Modell des Magnetismus`` [Ert21:293]\footnote{
+Damit ist das Modell ``formal äquivalent zu einem physikalischen Modell des Magnetismus``~\cite[293]{Ert21b}\footnote{
     vgl. auch~\cite[417]{AR98} sowie [Hop82:2556, ``Studies of the collective behaviors of the model`` f.]
 }, wo ebenfalls solche \textit{Phasenübergänge} von einem geordneten hin zu einem chaotischen System beobachtet werden können\footnote{
     dem so genannten \textit{Spinglass} (auch: \textit{spin glass}); vgl.~\cite[900]{BY86} mit Bezug auf Hopfield-Netze
@@ -135,7 +135,7 @@ Damit ist das Modell ``formal äquivalent zu einem physikalischen Modell des Mag
 } vor, eine Modifikation eines Hopfield-Netzes, in dem sich die Zellen \textit{stochastisch}~\cite[635]{AR88} und globale Zustände des Netzes nach der \textit{Boltzmann-Verteilung}\footnote{
     die \textit{Boltzmann-Verteilung} gibt die Wahrscheinlichkeit an, ein geg. physik. System in einem bestimmten Zustand anzutreffen (https://de.wikipedia.org/wiki/Boltzmann-Statistik, abgerufen  05.09.2023)
 } verhalten. Das Netz versucht lokale Minima zu überwinden (vgl. ``Gradientenabstiegsverfahren`` in \textbf{Kapitel 3.2.1 Backpropagation}), indem ihm erlaubt wird, zu größeren $E$ (s. Gleichung~\ref{eq:gl-energie}) zu springen, um so zu einem globalen Minimum zu konvergieren\footnote{vgl.~\cite[151]{AHS85} sowie [Koe90:107]}.
-Das Verfahren wird auch \textit{simulated annealing} bezeichnet\footnote{vgl. [Ert21:297]. \textit{Rojas} schreibt dazu
+Das Verfahren wird auch \textit{simulated annealing} bezeichnet\footnote{vgl.~\cite[297]{Ert21b}. \textit{Rojas} schreibt dazu
     ``Gelingt es, die Temperatur nach dem richtigen Plan auf null zu verringern, wird sich das Netz mit großer Wahrscheinlichkeit in einem globalen Minimum stabilisieren.``[Roj93:322]. Der Begriff \textit{Annealing} ist hier aus der Werkstoffkunde entlehnt: Eine entsprechende Wärmebehandlung von Materialien unterstützt die Erzeugung gewünschter Werkstoffeigenschaften wie Festigkeit, z.B.  bei der Verarbeitung von Glas [Jeb11:3] oder Schweißverbindungen von Metallen [FJO+19]
 }.
 
@@ -178,8 +178,8 @@ In~\cite{CBD+89} stellen \textit{LeCun et al.} diese Architektur als \textbf{Con
 Die mathematische Basis von CNNs ist u.a. die \textbf{Faltungsoperation}\footnote{
     ``\textit{convolution}`` (engl.): Faltung
 }: Hierbei wird auf Eingabedaten ein \textbf{Kernel} (die \textit{Faltungsmatrix})\footnote{
-    ``das biologische Analogon zu den Filtern [Kerneln] sind die bei den Sinnesorganen vorkommenden rezeptiven Felder.`` [Ert21:326]. Vgl. hierzu auch [LBH15:439].
-} angewendet, wobei das Ergebnis der Faltungsoperation die \textbf{feature map} (\textit{Merkmalskarte}) ist [CBG18:370 ff.]. \textit{Goodfellow, Bengio und Courville} erläutern in [GBC18:374 ff.] die Optimierungen, die durch den Einsatz von Faltung hervorgehen: Durch den Einsatz von Kerneln, die nur aus einem Bruchteil der Größe der Eingabedaten bestehen\footnote{ ``einige Dutzend oder hundert Pixeln`` [GBC18:374]
+    ``das biologische Analogon zu den Filtern [Kerneln] sind die bei den Sinnesorganen vorkommenden rezeptiven Felder.``~\cite[326]{Ert21b}. Vgl. hierzu auch [LBH15:439].
+} angewendet, wobei das Ergebnis der Faltungsoperation die \textbf{feature map} (\textit{Merkmalskarte}) ist [GBC18:370 ff.]. \textit{Goodfellow, Bengio und Courville} erläutern in [GBC18:374 ff.] die Optimierungen, die durch den Einsatz von Faltung hervorgehen: Durch den Einsatz von Kerneln, die nur aus einem Bruchteil der Größe der Eingabedaten bestehen\footnote{ ``einige Dutzend oder hundert Pixeln`` [GBC18:374]
 }, können ``aussagekräftige Merkmale`` aufgespürt werden, was dazu führt, das weniger Parameter gespeichert werden müssen und gleichzeitig die ``statistische Effizienz`` des Netzes erhöht wird (\textbf{sparse interaction} bzw. \textbf{sparse weights}). Durch das bereits erwähnte \textbf{parameter sharing} (auch: \textbf{tied weights}) kann die Effizienz des Netzes weiter erhöht und Speicherplatzverbrauch weiter verringert werden, und Schichten weisen eine \textbf{Äquivarianz} gegenüber Verschiebung auf\footnote{ bereits erwähnt wurde die \textit{shift invariance}: Wird bspw. ein Bild $X$ in das Netz $f$ eingespeist, das in einer Ausgabe $f(X) = Y$ resultiert, dann bedeutet \textit{shift invariance}, das eine Verschiebung der Eingabedaten $g(X) = X+\Gamma$ in dem gleichen $Y$ resultiert: $f(X) = f(g(X))$.  \textit{Äquivarianz} (engl. ``equivariance``) bedeutet, das eine Änderung der Eingabedaten auch zu einer ``gleichartigen Änderung der Ausgabe`` führt: $f(g(x)) = g(f(x))$ [GBC18:377 f.]
 }.
 
@@ -194,8 +194,8 @@ Die mathematische Basis von CNNs ist u.a. die \textbf{Faltungsoperation}\footnot
 
 
 
-CNNs nutzen neben den Convolution Schichten auch Pooling Schichten [Ert21:325], die die Ausgaben des Netzes durch eine ``statistische Größe der nahegelegenen Ausgaben`` ersetzt [GBC18:379], was die Zahl der Pixel auf den feature maps reduziert\footnote{ \textit{LeCun, Bengio und Hinton} weisen in [LBH15:439] darauf hin, dass die Pooling Schicht auch die Aufgabe hat, semantisch ähnliche Merkmale zusammenzufassen: ``the role of the pooling layer is to merge semantically similar features into one.``
-}, ausserdem wird als Aktivierungsfunktion meistens die nichtlineare ReLu (Rectified Linear Unit, s. Gleichung~\ref{eq:gl-relu} und Abbildung~\ref{fig-relu}) verwendet, die die Konvergenz der Netze verbessert [Ert21:327].\\
+CNNs nutzen neben den Convolution Schichten auch Pooling Schichten~\cite[325]{Ert21b}, die die Ausgaben des Netzes durch eine ``statistische Größe der nahegelegenen Ausgaben`` ersetzt [GBC18:379], was die Zahl der Pixel auf den feature maps reduziert\footnote{ \textit{LeCun, Bengio und Hinton} weisen in [LBH15:439] darauf hin, dass die Pooling Schicht auch die Aufgabe hat, semantisch ähnliche Merkmale zusammenzufassen: ``the role of the pooling layer is to merge semantically similar features into one.``
+}, ausserdem wird als Aktivierungsfunktion meistens die nichtlineare ReLu (Rectified Linear Unit, s. Gleichung~\ref{eq:gl-relu} und Abbildung~\ref{fig-relu}) verwendet, die die Konvergenz der Netze verbessert~\cite[327]{Ert21b}.\\
 
 ReLU:
 \begin{equation} f(x) = max(0, x)
