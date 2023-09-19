@@ -8,11 +8,11 @@ In Abschnitt~\ref{mcp-summary} haben wir geschlossen, dass ein MCP-Netz nur durc
 
 \subsection{Das Perzeptron - ein linearer Klassifizierer}
 
-Bereits 1954 wurden Versuche unternommen, lernfähige neuronale Netze zu modellieren [Ros62:24, Abs. 2]\footnote{
+Bereits 1954 wurden Versuche unternommen, lernfähige neuronale Netze zu modellieren~\cite[24]{Ros62}\footnote{
     Rosenblatt verweist hier auf~\cite{FC54}
 }.
 Erst 1958 schafft es ein Modell, eine Sensation\footnote{
-    In der Presse publikumswirksam, aber wenig vertrauenserweckend: ``Frankenstein Monster Designed by Navy Robot That Thinks`` [Ros62:v]. Vgl. dazu aktuelle Schlagzeilen der hiesigen Boulevardpresse zum Thema KI. bild.de titelt: ``Übernehmen Computer die Weltherrschaft?`` (\url{https://www.bild.de/news/ausland/news-ausland/experten-warnen-ki-so-gefaehrlich-wie-pandemien-und-atomkrieg-84130180.bild.html}, abgerufen 27.08.2023) als Reaktion auf ``Statement on AI Risk`` des \textit{Center for AI Safety}, in dem zahlreiche Wissenschaftler zur Vorsicht beim Umgang, Einsatz und Forschung von KI mahnen. Im Wortlaut: ``Mitigating the risk of extinction from AI should be a global priority alongside other societal-scale risks such as pandemics and nuclear war.`` (\url{https://www.safe.ai/statement-on-ai-risk}, abgerufen 27.08.2023)
+    In der Presse publikumswirksam, aber wenig vertrauenserweckend: ``Frankenstein Monster Designed by Navy Robot That Thinks``~\cite[v]{Ros62}. Vgl. dazu aktuelle Schlagzeilen der hiesigen Boulevardpresse zum Thema KI. bild.de titelt: ``Übernehmen Computer die Weltherrschaft?`` (\url{https://www.bild.de/news/ausland/news-ausland/experten-warnen-ki-so-gefaehrlich-wie-pandemien-und-atomkrieg-84130180.bild.html}, abgerufen 27.08.2023) als Reaktion auf ``Statement on AI Risk`` des \textit{Center for AI Safety}, in dem zahlreiche Wissenschaftler zur Vorsicht beim Umgang, Einsatz und Forschung von KI mahnen. Im Wortlaut: ``Mitigating the risk of extinction from AI should be a global priority alongside other societal-scale risks such as pandemics and nuclear war.`` (\url{https://www.safe.ai/statement-on-ai-risk}, abgerufen 27.08.2023)
 } auszulösen: Das \textbf{Perceptron} (im folgenden ``Perzeptron``)~\cite[89]{AR88}\footnote{
     s. auch ``Interest in connectionist networks revivied dramatically in 1962 with the publication of Frank Rosenblatt's book \textit{Principles of Neurodynamics}, [...]``~\cite[xi, Hervorhebung i.O.]{MP88}
 }.
@@ -28,17 +28,17 @@ Erst 1958 schafft es ein Modell, eine Sensation\footnote{
 \subsection{Das Modell}
 
 Rosenblatt definiert das Perzeptron wie folgt\footnote{
-    Ausführliche Definitionen aller Zustände, Signale und Funktionen in [Ros62:79 - 94]
+    Ausführliche Definitionen aller Zustände, Signale und Funktionen in~\cite[79 - 94]{Ros62}
 }:
 
-\blockquote[{[Ros62:83, ``DEFINITION 17`` (Hervorhebung i.O.)]}]{
+\blockquote[{\cite[83 ``DEFINITION 17`` (Hervorhebung i.O.)]{Ros62}}]{
     A \underline{perceptron} is a network of S, A, and R units with a variable interaction matrix \textit{V} which depends on the
     sequence of past activity states of the network.
 }
 
 Für die \textbf{A}-Units wird definiert:
 
-\blockquote[{[Ros62:81, ``DEFINITION 9`` (Hervorhebung i.O.)]}]{
+\blockquote[{\cite[81  ``DEFINITION 9`` (Hervorhebung i.O.)]{Ros62}}]{
     A \underline{simple A-unit} is a logical decision element, which
     generates an output signal if the algebraic sum of its
     input signals, $\alpha_i$ , is equal or greater than a threshold
@@ -50,7 +50,7 @@ Für die \textbf{A}-Units wird definiert:
 Ähnlichkeiten zu der in Abschnitt~\ref{mcp-inputactivfunc} beschriebenen Aktivierungsfunktion sind durchaus erkennbar.
 Rosenblatt selber weist darauf hin, dass er sein Modell direkt von dem von McCulloch und Pitts eingeführten Modell ableitet\footnote{
     vgl. auch ``Ein \texit{einfaches Perzeptron} ist eine McCulloch-Pitts-Zelle, die ihre Eingabe gewichtet berechnet.`` in [Roj93:57, ``Definition 3.1``, Hervorhebungen i.O.]
-}. Darüber hinaus weist er auch auf Einflüsse von Hebb und von Neumann hin [Ros62:5].\\
+}. Darüber hinaus weist er auch auf Einflüsse von Hebb und von Neumann hin~\cite[5]{Ros62}.\\
 
 
 Das klassische Rosenblatt-Perzeptron verwendet in einem Netz von Eingabe- und Ausgabe-Knoten gewichtete Verbindungen - die Knoten selber sind Schwellenwertelemente, Verbindungen werden stochastisch ermittelt [Roj93:51, Abs. 3].
@@ -220,7 +220,7 @@ Jeder Eintrag dieser Trainingsdaten ist einer erwarteten Ausgabe zugeordnet. Der
 
 \noindent
 Die Beziehung zu der Hebbschen Lernregel formulieren \textit{Arbib et al.}\footnote{
-    vgl. hierzu auch _Rosenblatt_ : ``[ein Perzeptron hat] a tendency to develop 'cell assemblies' (in Hebb's sense), and these cell-assemblies tend to rival one another for dominance at all times. [Ros62:464, Abs. 2, Anführungszeichen doppelt i.O.]
+    vgl. hierzu auch _Rosenblatt_ : ``[ein Perzeptron hat] a tendency to develop 'cell assemblies' (in Hebb's sense), and these cell-assemblies tend to rival one another for dominance at all times.``~\cite[464]{Ros62}
 }:
 
 \blockquote[{\cite[20]{Arb03}}]{
@@ -233,7 +233,7 @@ Einen Trainingslauf nennt man dabei \textit{Epoche} [Fau94:436, ``Training epoch
 Sind die Trainingsdaten linear separabel, \textit{konvergiert}\footnote{
     ``iterative training processes converge if the weight updates reach equilibrium (stop changing)`` [Fau94:425, ``Convergence``]
 } das Perzeptron nach einer endlichen Zahl von Epochen~\cite[164]{MP88}\footnote{
-    Das Konvergenz-Theorem besagt: ``if a linear separation exists, the perceptron error-correction scheme will find it.``~\cite[20]{Arb03}] Beweise führen [Ros62:111 ff.], \cite[168 ff.]{MP88} sowie \cite{Nov62}.
+    Das Konvergenz-Theorem besagt: ``if a linear separation exists, the perceptron error-correction scheme will find it.``~\cite[20]{Arb03}] Beweise führen~\cite[111 ff.]{Ros62}, \cite[168 ff.]{MP88} sowie \cite{Nov62}.
 }, und ist danach in der Lage zu \textit{generalisieren}~\cite[202]{Ert21a}.\\
 
 Da wir in unserem Beispiel nur Daten betrachtet haben, die durch eine Gerade durch den Ursprung ($(0,0)$) getrennt sind, brauchen wir noch eine Möglichkeit, die $x_2$-Koordinate der Trenngerade anzupassen.
