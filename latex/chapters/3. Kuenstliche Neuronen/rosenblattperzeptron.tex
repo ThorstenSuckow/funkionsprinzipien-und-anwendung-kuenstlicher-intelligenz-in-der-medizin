@@ -54,14 +54,14 @@ Rosenblatt selber weist darauf hin, dass er sein Modell direkt von dem von McCul
 
 
 Das klassische Rosenblatt-Perzeptron verwendet in einem Netz von Eingabe- und Ausgabe-Knoten gewichtete Verbindungen - die Knoten selber sind Schwellenwertelemente, Verbindungen werden stochastisch ermittelt [Roj93:51, Abs. 3].
-Nach Rosenblatts Veröffentlichung wurde sein Modell analysiert und verfeinert [Roj93:51, Abs. 3] u. a. von Minsky und Papert in [MP17], die wie folgt definieren:
+Nach Rosenblatts Veröffentlichung wurde sein Modell analysiert und verfeinert [Roj93:51, Abs. 3] u. a. von \textit{Minsky und Papert} in~\cite{MP88}, die wie folgt definieren:
 
-\blockquote[{[MP17:12 (Herorhebung i.O.)]}]{
+\blockquote[{~\cite[12, Hervorhebung i.O.]{MP88}}]{
     A \underline{perceptron} is a device capable of computing all predicates which are linear in some given set $\Phi$ of partial predicates.
 }
 
 Prädikate sind hier Verbindungen zu den Eingabesignalen, die einen Wahrheitswert $0$ oder $1$ basierend auf der Eingabe $X$ berechnen.
-Die Ausgabe der Prädikate werden individuell gewichtet und an die Zelle weitergeleitet, die die Aktivierungsfunktion implementiert (vgl. [Roj93:52] und [MP17:8-12]).
+Die Ausgabe der Prädikate werden individuell gewichtet und an die Zelle weitergeleitet, die die Aktivierungsfunktion implementiert (vgl. [Roj93:52] und~\cite[8-12]{MP88}).
 
 
 \begin{figure}[h]
@@ -232,8 +232,8 @@ Die Schritte werden so lange durchlaufen, bis für alle Trainingsdaten die Ausga
 Einen Trainingslauf nennt man dabei \textit{Epoche} [Fau94:436, ``Training epoch``].
 Sind die Trainingsdaten linear separabel, \textit{konvergiert}\footnote{
     ``iterative training processes converge if the weight updates reach equilibrium (stop changing)`` [Fau94:425, ``Convergence``]
-} das Perzeptron nach einer endlichen Zahl von Epochen [MP17:164]\footnote{
-    Das Konvergenz-Theorem besagt: ``if a linear separation exists, the perceptron error-correction scheme will find it.``~\cite[20]{Arb03}] Beweise führen [Ros62:111 ff.], [MP17:167 ff.] sowie [Nov62].
+} das Perzeptron nach einer endlichen Zahl von Epochen~\cite[164]{MP88}\footnote{
+    Das Konvergenz-Theorem besagt: ``if a linear separation exists, the perceptron error-correction scheme will find it.``~\cite[20]{Arb03}] Beweise führen [Ros62:111 ff.], \cite[168 ff.]{MP88} sowie [Nov62].
 }, und ist danach in der Lage zu \textit{generalisieren}~\cite[202]{Ert21a}.\\
 
 Da wir in unserem Beispiel nur Daten betrachtet haben, die durch eine Gerade durch den Ursprung ($(0,0)$) getrennt sind, brauchen wir noch eine Möglichkeit, die $x_2$-Koordinate der Trenngerade anzupassen.
@@ -323,7 +323,7 @@ Mit $0$ als Schwellenwert wird dadurch eine Verschiebung der Trenngeraden entlan
 \subsection{Die XOR-Funktion}
 
 Wenn ein Perzeptron nicht konvergiert, kann es ausreichen, die Anzahl der Epochen zu erhöhen, damit ein passender Gewichtsvektor gefunden wird\footnote{
-    \textit{Arbib et al} berufen sich auf das Konvergenz-Theorem und führen an, dass ``[das Rosenblatt Perzeptron] does not yield an endless seesaw, but will eventually converge to a correct set of weights if one exists, albeit perhaps after many iterations through the set of trial patterns.``~\cite[20]{Arb03}: \textit{Minsky und Papert} formulieren lose: ``if the sets are separable [...], then the program will separate them`` [MP17:165, Abs. 1] und stellen im Hinblick auf Parameteranpassungen fest: ``Usually, when a failure occurred, neither prolonging the training experiments nor building larger machines helped.`` [MP17:xix, Abs. 3]
+    \textit{Arbib et al} berufen sich auf das Konvergenz-Theorem und führen an, dass ``[das Rosenblatt Perzeptron] does not yield an endless seesaw, but will eventually converge to a correct set of weights if one exists, albeit perhaps after many iterations through the set of trial patterns.``~\cite[20]{Arb03}: \textit{Minsky und Papert} formulieren lose: ``if the sets are separable [...], then the program will separate them``~\cite[165]{MP88} und stellen im Hinblick auf Parameteranpassungen fest: ``Usually, when a failure occurred, neither prolonging the training experiments nor building larger machines helped.``~\cite[xi]{MP88}
 }.
 
 \begin{figure}[h]
@@ -362,35 +362,33 @@ Offensichtlich kann $w_1 + w_2 < \Theta$ nicht erfüllt werden, wenn gleichzeiti
 
 \subsection{Der KI-Winter}\label{kiwinter}
 
-In \textit{Perceptrons - An introduction to Computational Geometry (1969)} [MP17] behandeln \textit{Minsky und Papert} u.a. das Verhalten des Perzeptrons im Fall nicht-separabler Daten\footnote{
-    in [MP17:181, ``11.8 The nonseparable case`` ff.]
+In \textit{Perceptrons - An introduction to Computational Geometry (1969)}~\cite{MP88} behandeln \textit{Minsky und Papert} u.a. das Verhalten des Perzeptrons im Fall nicht-separabler Daten\footnote{
+    in~\cite[181 ff.]{MP88}
 } sowie das Problem bzgl. \textit{recognition of connectedness}\footnote{
-    [MP17:12, ``Theorem 0.8``],  _recognition of connectedness_ [MP17:249, letzter Abs. ff.]. In dem Epilog, der 19 Jahre später in einer Neuausgabe von _Minsky und Papert_ veröffentlicht wird, machen sie deutlich, dass sie damit nicht nachweisen wollten, dass ein Perzeptron nicht in der Lage zu der Erkennung zusammenhängender geometrischer Figuren sei, sondern dass die Komplexität von verschiedenen Aufgaben Anforderungen an ein Perzeptron stellt, die zu der damaligen Zeit (Ende 1950er / Anfang 1960er) schwierig umzusetzen gewesen sind [MP17:250, Abs. 2] &nbsp;
+    s. \cite[12, ``Theorem 0.8``]{MP88} sowie~\cite[249 f.]{MP88}. In dem Epilog, der 19 Jahre später in einer Neuausgabe von \textit{Minsky und Papert} veröffentlicht wird, machen sie deutlich, dass sie damit nicht nachweisen wollten, dass ein Perzeptron nicht in der Lage zu der Erkennung zusammenhängender geometrischer Figuren sei, sondern dass die Komplexität von verschiedenen Aufgaben Anforderungen an ein Perzeptron stellt, die zu der damaligen Zeit (Ende 1950er / Anfang 1960er) schwierig umzusetzen gewesen sind (vgl. ~\cite[250]{MP88})
 }, bei dem es um die Erkennung zusammenhängender geometrischer Figuren geht.
-Ihr Anliegen mit dem Buch ist es, die (mathematischen) Grenzen des Rosenblatt-Perzeptrons auf ein formales Gerüst zu stellen [MP17:249, ``What Perceptrons Can't Do``].
+Ihr Anliegen mit dem Buch ist es, die (mathematischen) Grenzen des Rosenblatt-Perzeptrons auf ein formales Gerüst zu stellen (vgl.~\cite[249]{MP88}).
 Ihre Ausführungen verstärken aber die ohnehin schon skeptische Haltung\footnote{
     Here was a machine that could do pattern recognition in a humanlike way; it could recognize all kinds of things. Almost everyone at MIT was very skeptical``~\cite[99]{AR98}
 } gegenüber der Fähigkeiten des Perzeptrons\footnote{
     auch wegen schlechter Skalierbarkeit des Modells in der Praxis~\cite[159]{AR88}
-} und künstlicher neuronaler Netze allgemein, was \textit{Anderson und Rosenfeld} rückblickend auch auf Aussagen in der Einleitung des Buches\footnote{
-    [MP17,S. 1-20]
-} zurückführen wie
+} und künstlicher neuronaler Netze allgemein, was \textit{Anderson und Rosenfeld} rückblickend auch auf Aussagen in der Einleitung des Buches zurückführen wie
 
-\blockquote[{[MP17:19. Abs. 3]}]{
+\blockquote[{~\cite[19]{MP88}}]{
 hundreds of projects and experiments [bzgl. des Perzeptrons] were generally disappointing, and the explanations inconclusive. The machines usually work quite well on very simple problems but detoriate very rapidly as the tasks assigned to the get harder.
 }
 
 \noindent
 Auch eine generelle Irritation und Enttäuschung über das Perzeptron-Modell meinen \textit{Anderson und Rosenfeld} zu erkennen:
 
-\blockquote[{[MP17:232]}]{
+\blockquote[{~\cite[232]{MP88}}]{
 we [Minsky und Papert] consider it to be an important research problem to elucidate (or reject) our intuitive judgement that the extension is sterile.
 }
 
 \noindent
-Diesen ``Pessimismus`` betrachten \textit{Minsky und Papert} im Jahr 1988 in Retrospektive [MP17. S xxi]. Sie sind sich der Behauptung bewusst, ihr Buch hätte mit dem Aufzeigen der Grenzen des Rosenblatt-Modells den Forscherdrang an maschinellem Lernen gebremst:
+Diesen ``Pessimismus`` betrachten \textit{Minsky und Papert} im Jahr 1988 in Retrospektive (s. ~\cite[xiii]{MP88}). Sie sind sich der Behauptung bewusst, ihr Buch hätte mit dem Aufzeigen der Grenzen des Rosenblatt-Modells den Forscherdrang an maschinellem Lernen gebremst:
 
-\blockquote[{[MP17:xx]}]{
+\blockquote[{~\cite[xii]{MP88}}]{
 One popular version is  that the publication of our book so discouraged research on learning in network machines that a promising line of research was interrupted.
 }
 
@@ -398,7 +396,7 @@ One popular version is  that the publication of our book so discouraged research
 \textit{Anderson und Rosenfeld} erwähnen ``the influence of Marvin Minsky and Seymour Papert on the loss of interest in neural networks during the 1970s``~\cite[X]{AR98}, worüber ihre Interviewpartner in gleicher Quelle sprechen.
 
 \textit{Russell und Norvig} fassen zusammen, dass \textit{Minsky und Papert} in ihrem Buch bewiesen haben, dass ein Perzeptron alles lernen kann, was es auch darstellen kann, aber es könnte halt nur sehr wenig darstellen[RN09:45]\footnote{
-    vgl. hierzu [MP17:xxi, Abs. 1]
+    vgl. hierzu~\cite[xiii]{MP88}
 }. Auf gleicher Seite verweisen sie auf die zunehmende Komplexität der zu berechnenden Modelle, die nicht alleine durch schnellere und bessere Hardware kompensiert werden konnte.
 
 Der Lighthill Report\footnote{
