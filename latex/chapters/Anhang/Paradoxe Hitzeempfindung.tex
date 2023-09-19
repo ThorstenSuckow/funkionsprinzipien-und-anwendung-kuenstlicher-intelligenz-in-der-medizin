@@ -3,15 +3,17 @@
 
 Bislang haben wir nur MCP-Netze betrachtet, bei denen wir die Zeiteinheiten nicht berücksichtigt haben. In Anlehnung an das McCulloch und Pitts-Paper Original-Arbeit wollen wir jetzt ein Netz modellieren, das die \textbf{paradoxe Hitzeempfindung}~\cite{HVKJ82} simuliert: Das Phänomen, das bei kurzzeitiger Kühlung der Haut Hitze empfunden wird.\\
 
-\blockquote{
+\blockquote[{\cite[106]{MP43}}]{
     If a cold object is held to the skin for a moment and removed, a sensation of heat will be felt; if it is applied for a longer time, the sensation will be only of cold, with no preliminary warmth, however transient.
-}[MP43:106]\\
+}\\
 
-Das nach [MP43:105 Figure 1 (e)] aufgestellte Modell und die dazugehörige Formel übertragen wir nun in die von uns verwendete Notation (vgl. [Fau94:31 ff.]). In der Abbildung~\ref{fig-mcpheat} sind zwei Temperaturrezeptoren $H_i$ (Hitze) und $K_i$ (Kälte) dargestellt, ausserdem hat das Netz zwei Ausgänge, $H_o$ und $K_o$. $H_o$ wird zum Zeitpunkt $t$ aktiviert, wenn Hitze empfunden wird, $K_o$ entsprechend bei Kälte.
+Das nach~\cite[105, Figure 1 (e)]{MP43} aufgestellte Modell und die dazugehörige Formel übertragen wir nun in die von uns verwendete Notation (vgl. [Fau94:31 ff.]). In der Abbildung~\ref{fig-mcpheat} sind zwei Temperaturrezeptoren $H_i$ (Hitze) und $K_i$ (Kälte) dargestellt, ausserdem hat das Netz zwei Ausgänge, $H_o$ und $K_o$. $H_o$ wird zum Zeitpunkt $t$ aktiviert, wenn Hitze empfunden wird, $K_o$ entsprechend bei Kälte.
 \noindent
 Die Bedingungen für eine Aktivierung von $H_o$ lauten: Hitze wird signalisiert, wenn entweder der Wäremerezeptor durch Wärme stimuliert wird \textbf{oder} kurzzeitig ein Kälteimpuls von den Kälterezeptoren registriert wird.\\
 
-Formal dargestellt (vgl. [MP43 S. 106]):
+Formal dargestellt\footnote{
+    s.~\cite[106]{MP43}
+}:
 
 \begin{equation}
     H_o(t) \equiv H_i(t-1) \lor (K_i(t-3) \land \neg K_i(t - 2))

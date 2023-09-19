@@ -2,7 +2,7 @@
 
 Im Jahr 1943 veröffentlichen Warren McCulloch und Walter Pitts\footnote{
     s. \ref{appendix:mcculloch}
-} die Arbeit ``A logical calculus of the ideas immanent in nervous activity`` [MP43], in der sie ein auf \textbf{Aussagenlogik}\footnote{
+} die Arbeit ``A logical calculus of the ideas immanent in nervous activity`` \cite{MP43}, in der sie ein auf \textbf{Aussagenlogik}\footnote{
     Die (zweiwertige) Aussagenlogik beschäftigt sich mit der Verknüpfung von Aussagen und deren Wertigkeit unter der Berücksichtigung der Wahrheitswerte ``wahr`` und ``falsch`` [Rau88]
 } basierendes mathematisches Modell zur Erklärung von Signalverarbeitung und  -weiterleitung im Nervensystem präsentieren.
 Ihre Arbeit liefert grundlegende Ideen für die Kybernetik\footnote{
@@ -21,13 +21,13 @@ Die \textbf{Principia Mathematica}\footnote{
 } [She26:226, Abs. 2].
 McCulloch beschäftigt die Frage, ob es nicht gleichsam möglich sei, die Vorgänge im Gehirn durch ein ähnliches Fundament logischer Prinzipien erklärbar zu machen~\cite[4]{Arb19}. Basierend auf der Zweiwertigkeit des Alles-oder-nichts-Gesetz (Aktionspotenzial findet statt/ findet nicht statt) finden Pitts und McCulloch ihren Kalkül mit Hilfe der Aussagenlogik.\\
 
-\blockquote{
+\blockquote[{\cite[100]{MP43}}]{
     The `all-or-none law` of nervous activity is sufficient to insure that the activity of any neuron may be represented as a proposition.
-}[MP43:100]\\
+}\\
 
-Für ihren Kalkül entwerfen sie zwei Netze: Ein zyklenfreies Netz [MP43:101, ``2. The Theory: Nets without Circles``] sowie ein Netz, in dem Zyklen vorhanden sind\footnote{
+Für ihren Kalkül entwerfen sie zwei Netze: Ein zyklenfreies Netz~\cite[101]{MP43} sowie ein Netz, in dem Zyklen vorhanden sind\footnote{
     Die Frage nach Ursprung und Bedeutung von ``loops`` in einem Netz von Nervenzellen beschäftigte McCulloch bereits 1928: ``The tremors of Parkinson’s disease, McCulloch thought, could be explained by closed loops of activity connecting the spinal cord and the contracting muscles.``[Pic04:178, Abs. 3]. \textit{Arbib} vermerkt in~\cite[3]{Arb19}: ``As another stage in McCulloch's search for the logic of the nervous system, he began thinking about loops in the nervous system. [...] an idea that today we take for granted.`` \textit{Arbib} verweist auf \textit{Lawrence Kubie}, der im Jahr 1930~\cite{Kub30} veröffentlicht, eine Arbeit über ``the possible importance of reverberating loops``~\cite[5]{Arb19}, die für die Forschungen McCullochs wichtig gewesen ist (vgl. ~\cite[5]{Arb19})
-} [MP43:108, ``3. The Theory: Nets with Circles``]. Insgesamt gehen sie von folgenden physischen Eigenschaften von Nervenzellen aus [MP43:101]:
+}~\cite[108]{MP43}. Insgesamt gehen sie von folgenden physischen Eigenschaften von Nervenzellen aus\footnote{s.~\cite[101]{MP43}}:
 
 
 \begin{enumerate}
@@ -69,7 +69,7 @@ Insgesamt ergeben sich folgende Anforderungen an unser Modell (vgl. [Fau94:26 ff
 \begin{figure}[h]
     \centering
     \includegraphics{images/p1ReadSeq.pdf}
-    \caption{Schematische Darstellung einer MCP-Zelle, nach [MP43]}
+    \caption{Schematische Darstellung einer MCP-Zelle, nach \cite{MP43}}
     \small
      schwarze Kreise sind erregende Signale, offene Kreise sind hemmende Signale. In der Original-Arbeit benötigt ein Neuron zwei erregende Eingaben, um aktiviert zu werden. a) Zeigt damit ein Netz von zwei Neuronen, bei denen $N_2$ feuert, wenn $N_1$ feuert. Mit der Berücksichtigung der Zeiteinheit folgt die formale Darstellung $N_2(t) \equiv N(t - 1)$. Gleicherwiese ergibt sich aus b), das $N_3$ nur feuert, wenn $N_1$ \textbf{und} $N_2$ feuern: $N3(t) \equiv N(t - 1) \land N(t - 2)$. Analog folgt für c) $N3(t) \equiv N(t - 1) \lor N(t - 2)$ und für d) $N3(t) \equiv \neg N(t - 1)$
 \label{fig-mcpcell}
@@ -155,9 +155,9 @@ Ein zyklenfreies Netz aus MCP-Zellen, das aus \textbf{AND} (Konjunktion)-, \text
 
 
 \begin{definition} Ein MCP-Netz ist ein gerichteter Graph\footnote{
-    Gerichtete Kanten eine MCP-Netzes nehmen eigentlich keine Gewichtung der Information vor [Roj93:40, ``2.4.1 Gewichtete und ungewichtete Netze``]. Sowohl [Min67:34] als auch [Roj93:32] nutzen unter Berücksichtigung der \textit{absoluten Hemmung} nur die Summe der erregenden Signale und vergleichen diese mit $\Theta$ - dieser Vergleich findet nur statt, wenn \textit{kein} hemmendes Signal ankommt: Die Zelle liefert sonst direkt $0$ als Ausgabe zurück. [Fau94] nutzt\footnote{
+    Gerichtete Kanten eine MCP-Netzes nehmen eigentlich keine Gewichtung der Information vor [Roj93:40, ``2.4.1 Gewichtete und ungewichtete Netze``]. Sowohl \textit{Minsky} in~\cite[34]{Min67} als auch \textit{Rojas} in [Roj93:32] nutzen unter Berücksichtigung der \textit{absoluten Hemmung} nur die Summe der erregenden Signale und vergleichen diese mit $\Theta$ - dieser Vergleich findet nur statt, wenn \textit{kein} hemmendes Signal ankommt: Die Zelle liefert sonst direkt $0$ als Ausgabe zurück. [Fau94] nutzt\footnote{
         Gewichte sind in absolut hemmenden Leitungen unsinnig nach [Roj93:42, Abs. 1]
-    } unter Berücksichtigung von Gleichung~\ref{eq:gl-activation} gewichtete Kanten, in ähnlicher Weise auch \textit{Beale und Jackson}~\cite[41]{BJ90}. Wie wir später sehen werden, wird die Gewichtung von Kanten ein wichtiger Bestandteil der Funktionsweise neuronaler Netze. Wir entfernen uns mit dem o.g. Modell ein Stück von der ursprünglichen Modellierung.
+    } unter Berücksichtigung von Gleichung~\ref{eq:gl-activation} gewichtete Kanten, in ähnlicher Weise auch \textit{Beale und Jackson}~\cite[41]{BJ90}. \textit{Minsky} weist auf die Äquivalenz eines solchen Modells hin (vgl. ~\cite[34 f.]{Min67}), dessen wir uns im Folgenden auch bedienen werden.
 } $G = (V, E)$ mit der Knotenmenge
 
 \begin{equation}
@@ -380,7 +380,7 @@ Aktionspotenzialen lassen sich gewiss nicht auf zweiwertige Logik reduzieren, da
     ``Lernen`` geschieht auf physiologischer Ebene durch die Modulierung von Synapsen~\cite[115]{HS19c}
 }.
 McCulloch und Pitts sind sich dessen durchaus bewußt\footnote{
-    ``McCulloch and Pitts acknowledged in their paper that their definition of a neuron was idealized, and that they made physical assumptions that were 'most convenient for the calculus'``~\cite[21]{Abr02}. Siehe auch [MP43:101]: ``[...]we regard facilitation and extinction as dependent upon continuous changes in threshold related to electrical and chemical variables, [...]``, sowie ``He {[McCulloch]} never claimed that the 1943 model exhausted the richness of individual neurons``~\cite[11]{Arb19}
+    ``McCulloch and Pitts acknowledged in their paper that their definition of a neuron was idealized, and that they made physical assumptions that were 'most convenient for the calculus'``~\cite[21]{Abr02}. Siehe auch~\cite[101]{MP43}: ``[...]we regard facilitation and extinction as dependent upon continuous changes in threshold related to electrical and chemical variables, [...]``, sowie ``He {[McCulloch]} never claimed that the 1943 model exhausted the richness of individual neurons``~\cite[11]{Arb19}
 }.
 Es bleibt ein statisches Modell, es muß ``konstruiert`` werden [Fau94:28, ``1.6.2 Algorithm``].
 Es ist nur durch Änderung der Netztopologie bzw. der Schwellenwerte anpassungsfähig [Roj93:51, Abs. 2] Selbständig zu lernen vermag es nicht.\\
@@ -393,18 +393,18 @@ Tatsächlich ist die McCulloch-Pitts-Zelle von eher geringer Bedeutung für die 
 Umso größer war ihr Einfluss auf die Computerwissenschaften\footnote{
     Die Arbeit war ebenso wichtig für die Entwicklung des ``Konnektionismus``~\cite[11]{Arb19}, einer Forschungsrichtung der künstlichen Intelligenz, in der Modelle (neuronale Netze) untersucht werden, mit deren Hilfe sich intelligente und kognitive Handlungen auf Maschinen übertragen lassen~\cite[v]{Dor91}
 }.
-McCulloch und Pitts nahmen für ihr Modell das menschliche Gehirn als Grundlage und ermöglichten so einen neuen Blickwinkel auf Ursache und Wirkung. ``Mind`` no longer ``goes more ghostly than a ghost``[MP43:114]:
+McCulloch und Pitts nahmen für ihr Modell das menschliche Gehirn als Grundlage und ermöglichten so einen neuen Blickwinkel auf Ursache und Wirkung. ``Mind`` no longer ``goes more ghostly than a ghost``~\cite[114]{MP43}:
 
 \blockquote[{[Per88:9, ``Logical Neurons and immanent ideas``]}]{
 If nerve cells were equivalent to the formal neurons of McCulloch and Pitts and if circuits of such elements could be made arbitrarily complicated, then any kind of animal behavior, however marvelously complicated or however intricately linked to sensory input, could be reproduced, and hence understood, in terms of these circuits.
 }
 
-Logische Schaltungen, die Intelligenz und Kognition ermöglichen, brachte den Gedanken an eine ``intelligente Maschine`` hervor (vgl. [Pic04:204, Abs. 3]): So war ihre Formalisierung ein wichtiges Schlüsselelement für die von-Neumann-Rechnerarchitektur [Neu45] sowie Wieners Kybernetik\footnote{s. \ref{appendix:wiener}}, und zusammen mit den nachfolgenden Arbeiten von \textit{Hebb}\footnote{~\cite{Heb49}} und \textit{Rosenblatt} ebnete es den Weg für die Forschung an künstlicher Intelligenz~\cite[1]{Arb19}.
+Logische Schaltungen, die Intelligenz und Kognition ermöglichen, brachte den Gedanken an eine ``intelligente Maschine`` hervor (vgl. [Pic04:204, Abs. 3]): So war ihre Formalisierung ein wichtiges Schlüsselelement für die von-Neumann-Rechnerarchitektur \cite{Neu93} sowie Wieners Kybernetik\footnote{s. \ref{appendix:wiener}}, und zusammen mit den nachfolgenden Arbeiten von \textit{Hebb}\footnote{~\cite{Heb49}} und \textit{Rosenblatt} ebnete es den Weg für die Forschung an künstlicher Intelligenz~\cite[1]{Arb19}.
 
 \noindent
 Interessant ist ihr Vermerk, dass der Entwurf von Netzen mit Zyklen ungleich schwerer sei als der für zyklenfreie Netze, denn:
 
-\blockquote[{[MP43:108, ``3. The Theory: Nets with Circles``, Hervorhebung i.O.]}]{
+\blockquote[{~\cite[108, Hervorhebungen i.O.]{MP43}}]{
  This is largely a consequence of the possibility that activity may be set up in a circuit and continue reverberating around it for an indefinite period of time, so that the realizable \textbf{\textit{Pr}} may involve reference to past events of an indefinite degree of remoteness.
 }
 
@@ -414,7 +414,7 @@ Eine wie in Gleichung~\ref{eq:gl-z1} beschriebe MCP-Zelle $Z_i(t)$ könnte also 
 \noindent
 Besondere Beachtung verdient die Bemerkung von McCulloch und Pitts bzgl. ``Berechenbarkeit``
 
-\blockquote[{[MP43:113]}]{
+\blockquote[{~\cite[113]{MP43}}]{
 This is of interest as affording a psychological justification of the Turing definition of computability and its equivalents, Church’s A-definability and Kleene’s primitive recursiveness: if any number can be computed by an organism, it is computable by these definitions, and conversely.
 }
 
@@ -431,19 +431,19 @@ Parallelen zu der Architektur der von Turing aufgestellten Modelle und dem von M
 \noindent
 McCulloch schreibt dazu später
 
-\blockquote[{[Mcc55:164, letzter Abs.]}]{
-Pitts and I showed that brains were Turing machines, and that any Turing machine could be made out of neurons
+\blockquote[{\cite[164]{Mcc16}}]{
+Pitts and I showed that brains were Turing machines, and that any Turing machine could be made out of neurons.
 }
 
 \noindent
-und stellt fest, dass das Nervensystem eine ausgezeichnete logische Maschine repräsentiert [Mcc51:80].\\
+und stellt fest, dass das Nervensystem eine ausgezeichnete logische Maschine repräsentiert (vgl. ~\cite[80]{Mcc16}).\\
 
 \noindent
-Konsequenterweise nutzt [Min67] die MCP-Zelle als endlichen Automaten\footnote{
+Konsequenterweise nutzt \textit{Minsky} in~\cite[32 ff.]{Min67} die MCP-Zelle als endlichen Automaten\footnote{
     Ein endlicher Automat ist eine informationsverarbeitende Maschine. Basierend auf Eingaben lassen sich mit einer solchen Maschine Zustände, Zustandsübergänge und Ausgaben modellieren. Bei einem \textit{endlichen} Automaten sind die genannten Eingaben, Zustände, und Ausgaben endlich. [SSH95:29, ``2.1 Endliche Automaten`` ff.]
 }\footnote{
     dass MCP-Netze endliche Automaten sind: Auch in~\cite[76]{Cow90} sowie [Roj93:47, ``Satz 2.4``].  \textit{Arbib} weist darauf hin, dass die Arbeit von McCulloch und Pitts grundlegend für Automatentheorie gewesen ist~\cite[8]{Arb19}
-} mit zwei Zuständen, aus denen andere endliche Automaten gebaut werden, und nennt diese, im Jahr 1967 schon geläufig: \textbf{Neuronale Netze} [Min67:33].
+} mit zwei Zuständen, aus denen andere endliche Automaten gebaut werden, und nennt diese, im Jahr 1967 schon geläufig: \textbf{Neuronale Netze}~\cite[33]{Min67}.
 
 
 

@@ -7,7 +7,7 @@
 In den 80er Jahren sahen die großen Industrienationen in der Erforschung von KI einen Wettbewerbsvorteil, nachdem die Technologie durch den Einsatz von Expertensystemen (vgl \ref{appendix:expertensystem}) Einzug in die Wirtschaft gefunden hatte: So ermöglichte R1/XCON\footnote{
     das ``erste erfolgreiche kommerzielle Expertensystem`` [RN09:48, Abs. 1]
 }  bei dem einsetzenden Unternehmen DEC (Digital Equipment Corporation) Einsparungen in Millionenhöhe [RN:48]: Die Domäne von R1 war die regelbasierte Konfiguration von VAX-11/780 Systemen nach Kundenanforderungen\footnote{
-    siehe hierzu insb. [Mcd80] sowie~\cite[63]{Hor90}
+    siehe hierzu insb. \cite{Mcd80} sowie~\cite[63]{Hor90}
 }. Japan kündigte 1981 das 5th Generation Projekt (vgl.~\cite{Gar19}) an, einen Zehnjahresplan für den Aufbau ``intelligenter Computer`` [RN09:48, Abs. 2]\footnote{
     Zusammenfassend war das Ziel des 5th Generation Computer Systems (FGCS)-Projekt: ``Its ultimate goal is to develop integrated systems, both hardware and software, suitable for the major computer application in the nextdecade, identified by the Japanese as 'knowledge information processing'.`` in [Sha83:637, Anführungszeichen i.O. doppelt]
 }, und in Großbritannien sorgte der Alvey-Report\footnote{
@@ -36,7 +36,7 @@ Bei dem Rosenblatt-Perzeptron, das alleine nicht in der Lage ist, XOR zu erlerne
 Das bedeutet, dass es nur Eingabe und Ausgabe gibt und die Informationen ausschliesslich in Richtung Ausgang fliessen [RN09:848 ff.].
 
 Allerdings ist auch ein \textbf{mehrschichtiges Perzeptron} (MLP, \textit{multi-layer perceptron}) [GBC18:6] in der Lage, nicht linear-separable Daten zu klassifizieren.
-Ein MLP repräsentiert ein tiefes Feedforward-Netz, in dem die Eingabeschicht (\textbf{Input Layer}) und die Ausgabeschicht (\textbf{Output Layer}) über weitere Schichten von Neuronen (\textbf{hidden layer}) verbunden ist; die Neuronen in diesen Schichten implementieren Eingabe- und Aktivierungsfunktion und leiten ihre Berechnungen an die nächsten Zellen bis zu der Ausgabeschicht weiter. \textit{Murtagh} zeigt in [Mur91:184 ff.] die Modellierung von XOR anhand eines MLPs.
+Ein MLP repräsentiert ein tiefes Feedforward-Netz, in dem die Eingabeschicht (\textbf{Input Layer}) und die Ausgabeschicht (\textbf{Output Layer}) über weitere Schichten von Neuronen (\textbf{hidden layer}) verbunden ist; die Neuronen in diesen Schichten implementieren Eingabe- und Aktivierungsfunktion und leiten ihre Berechnungen an die nächsten Zellen bis zu der Ausgabeschicht weiter. \textit{Murtagh} zeigt in \cite[184 f.]{Mur91} die Modellierung von XOR anhand eines MLPs.
 
 \begin{figure}[h]
     \centering
@@ -48,9 +48,9 @@ Ein MLP repräsentiert ein tiefes Feedforward-Netz, in dem die Eingabeschicht (\
 
 
 \subsection{Backpropagation}
-In gleicher Arbeit ([Mur91:185 ff.]) zeigt \textit{Murtagh} ein MLP, das mittels \textbf{Backpropagation}\footnote{
+In gleicher Arbeit zeigt \textit{Murtagh} ein MLP, das mittels \textbf{Backpropagation}\footnote{
     ``das meist genutzte neuronale Modell``~\cite[313]{Ert21b}
-} Daten klassifiziert, die keinen linearen Zusammenhang besitzen.
+} Daten klassifiziert, die keinen linearen Zusammenhang besitzens.~\cite[185 f.]{Mur91}.
 Der Algorithmus geht auf \textit{Rumelhart, Hinton und Williams} zurück, die in [RHW86a] eine Methode\footnote{
     ``The ability to create useful new features distinguishes back-propagation from earlier, simpler methods such as the perceptron-convergence procedure.`` [RHW86b:533]
 } vorstellen, um berechnete Werte \textit{rückwärts} in das Netz einzuspeisen.

@@ -14,7 +14,7 @@ Bereits 1954 wurden Versuche unternommen, lernfähige neuronale Netze zu modelli
 Erst 1958 schafft es ein Modell, eine Sensation\footnote{
     In der Presse publikumswirksam, aber wenig vertrauenserweckend: ``Frankenstein Monster Designed by Navy Robot That Thinks`` [Ros62:v]. Vgl. dazu aktuelle Schlagzeilen der hiesigen Boulevardpresse zum Thema KI. bild.de titelt: ``Übernehmen Computer die Weltherrschaft?`` (\url{https://www.bild.de/news/ausland/news-ausland/experten-warnen-ki-so-gefaehrlich-wie-pandemien-und-atomkrieg-84130180.bild.html}, abgerufen 27.08.2023) als Reaktion auf ``Statement on AI Risk`` des \textit{Center for AI Safety}, in dem zahlreiche Wissenschaftler zur Vorsicht beim Umgang, Einsatz und Forschung von KI mahnen. Im Wortlaut: ``Mitigating the risk of extinction from AI should be a global priority alongside other societal-scale risks such as pandemics and nuclear war.`` (\url{https://www.safe.ai/statement-on-ai-risk}, abgerufen 27.08.2023)
 } auszulösen: Das \textbf{Perceptron} (im folgenden ``Perzeptron``)~\cite[89]{AR88}\footnote{
-    vgl. auch [MP69:xix] ``Interest in connectionist networks revivied dramatically in 1962 with the publication of Frank Rosenblatt's book \textit{Principles of Neurodynamics}, [...]`` (Hervorhebung i.O.)
+    s. auch ``Interest in connectionist networks revivied dramatically in 1962 with the publication of Frank Rosenblatt's book \textit{Principles of Neurodynamics}, [...]``~\cite[xi, Hervorhebung i.O.]{MP88}
 }.
 1957 beschreibt es sein Schöpfer Frank Rosenblatt (1928 - 1971) in [Ros57]\footnote{
     s. \ref{appendix:perzeptron}
@@ -233,7 +233,7 @@ Einen Trainingslauf nennt man dabei \textit{Epoche} [Fau94:436, ``Training epoch
 Sind die Trainingsdaten linear separabel, \textit{konvergiert}\footnote{
     ``iterative training processes converge if the weight updates reach equilibrium (stop changing)`` [Fau94:425, ``Convergence``]
 } das Perzeptron nach einer endlichen Zahl von Epochen~\cite[164]{MP88}\footnote{
-    Das Konvergenz-Theorem besagt: ``if a linear separation exists, the perceptron error-correction scheme will find it.``~\cite[20]{Arb03}] Beweise führen [Ros62:111 ff.], \cite[168 ff.]{MP88} sowie [Nov62].
+    Das Konvergenz-Theorem besagt: ``if a linear separation exists, the perceptron error-correction scheme will find it.``~\cite[20]{Arb03}] Beweise führen [Ros62:111 ff.], \cite[168 ff.]{MP88} sowie \cite{Nov62}.
 }, und ist danach in der Lage zu \textit{generalisieren}~\cite[202]{Ert21a}.\\
 
 Da wir in unserem Beispiel nur Daten betrachtet haben, die durch eine Gerade durch den Ursprung ($(0,0)$) getrennt sind, brauchen wir noch eine Möglichkeit, die $x_2$-Koordinate der Trenngerade anzupassen.
