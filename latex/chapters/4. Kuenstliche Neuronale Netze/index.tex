@@ -25,7 +25,7 @@ Auch der technologische Fortschritt begünstigte das Wiederaufleben des Interess
 denn mit den in den 80er Jahren verfügbaren Supercomputern und Parallelrechner\footnote{
     Auch \textit{Fausett} nennt bessere Rechenleistung als einen Grund für den erneuerten Enthusiasmus [Fau94:26]. Im Kontext der in diesem Kapitel vorgestellten mehrschichtigen Netzen und ihrem Konzept der versteckten Schichten ist nachvollziehbar, das mehr Rechenleistung den komplexen Verfahren entgegenkommt. \textit{Goodfellow, Bengio und Courville} gehen auf die Korrelation Modellgrösse und Anzahl der Nervenzellen in einem menschlichen Gehirn (vgl. Fussnote 15 in **Kapitel 1.2**) in [GBC18:24 ff.] ein
 } erhält auch der Konnektionismus Auftrieb, der \textbf{neuronale Netze} als Grundlage hat~\cite[15]{Dor91}, und mit dem sich Modelle wieder mehr an den biologischen Vorbildern orientieren sollten\footnote{
-    vgl. [RM87:43, Abs. 3] sowie [GBC18:18-19]}.
+    vgl.~\cite[43]{RM87} sowie [GBC18:18-19]}.
 
 
 \subsection{Mehrschichtige neuronale Netze}
@@ -51,8 +51,8 @@ Ein MLP repräsentiert ein tiefes Feedforward-Netz, in dem die Eingabeschicht (\
 In gleicher Arbeit zeigt \textit{Murtagh} ein MLP, das mittels \textbf{Backpropagation}\footnote{
     ``das meist genutzte neuronale Modell``~\cite[313]{Ert21b}
 } Daten klassifiziert, die keinen linearen Zusammenhang besitzens.~\cite[185 f.]{Mur91}.
-Der Algorithmus geht auf \textit{Rumelhart, Hinton und Williams} zurück, die in [RHW86a] eine Methode\footnote{
-    ``The ability to create useful new features distinguishes back-propagation from earlier, simpler methods such as the perceptron-convergence procedure.`` [RHW86b:533]
+Der Algorithmus geht auf \textit{Rumelhart, Hinton und Williams} zurück, die in~\cite[318 ff.]{RM87} eine Methode\footnote{
+    ``The ability to create useful new features distinguishes back-propagation from earlier, simpler methods such as the perceptron-convergence procedure.``~\cite[533]{RHW86}
 } vorstellen, um berechnete Werte \textit{rückwärts} in das Netz einzuspeisen.
 Hierbei wird für die Netzausgabe (\textit{forward pass}) ein Approximationsfehler berechnet, der als Basis für die Gewichtsänderungen beim rückwärtigen Lauf (\textit{backward pass}) bis zur ersten verborgenen Schicht genutzt wird.
 Der Vorgang (forward pass, backward pass, forward pass...) wird so lange für alle Trainingsbeispiele wiederholt, bis die Gewichte sich nicht mehr ändern, oder eine andere Schranke (Epochen, Zeit) erreicht ist~\cite[315]{Ert21b}\footnote{
@@ -65,9 +65,9 @@ Die mathematische Basis für Backpropagation ist das \textbf{Gradientenabstiegsv
     ein kompakter Überblick zum Thema ``Optimierung auf Gradientenbasis`` findet sich in [GBC18:90 ff.]
 }.  Ausserdem unterstützt die \textbf{Sigmoid}\footnote{
     \textit{sigmoid}: ``Sigma``, griechischer Buchstabe $\Sigma$, entspricht dem lateinischen ``S``; ``\textit{eidos}`` (griechisch) Form, Gestalt
-}-Funktion (Gleichung~\ref{eq:gl-sigmoid} sowie Abbildung~\ref{fig-sigmoid}) als Aktivierungsfunktion\footnote{ ``Historisch wurde Backpropagation mit der Sigmoidfunktion implementiert.``~\cite[314, Fussnote 4]{Ert21b} In Kapitel 9.5.3 (vgl. [RHW86a:329, (15)]). \textit{Ertel} fügt hinzu: ``Mittlerweile haben sich jedoch andere Funktionen als besser bewährt.`` In~\cite[319 f.]{Ert21b} geht der Autor auf ``Probleme und Verbesserungen`` des mittlerweile über 30 Jahre alten Verfahrens ein. [GBC18:19]  stellt fest, dass Backpropagation der ``vorherrschende Ansatz für das Training tiefer Modelle`` (im Jahr 2018) ist.
+}-Funktion (Gleichung~\ref{eq:gl-sigmoid} sowie Abbildung~\ref{fig-sigmoid}) als Aktivierungsfunktion\footnote{ ``Historisch wurde Backpropagation mit der Sigmoidfunktion implementiert.``~\cite[314, Fussnote 4]{Ert21b} In Kapitel 9.5.3 (vgl.~\cite[328 f.]{RM87}). \textit{Ertel} fügt hinzu: ``Mittlerweile haben sich jedoch andere Funktionen als besser bewährt.`` In~\cite[319 f.]{Ert21b} geht der Autor auf ``Probleme und Verbesserungen`` des mittlerweile über 30 Jahre alten Verfahrens ein. [GBC18:19]  stellt fest, dass Backpropagation der ``vorherrschende Ansatz für das Training tiefer Modelle`` (im Jahr 2018) ist.
 }  aufgrund ihres nicht-linearen Charakters eine größere Klasse darstellbarer Funktionen und damit Lösungen für Probleme, die ein klassisches Perzeptron nicht lösen kann (vgl.~\cite[316]{Ert21b})\footnote{
-    In [RM86a] zeigen \textit{Rumelhart, Hinton und Williams} die Architektur eines mehrschichtigen neuronalen Netzes, das XOR über Backpropagation repräsentiert. Gleichzeitig grenzen sie in [RHW86b:536] ihr Modell vom biologischen Lernen ab: ``The learning procedure, in its current form, is not a plausible model of learning in brains``.
+    In~\cite[311 ff.]{RM87} zeigen \textit{Rumelhart, Hinton und Williams} die Architektur eines mehrschichtigen neuronalen Netzes, das das XOR-Problem über Backpropagation löst. In~\cite[536]{RHW86} grenzen sie ihr Modell vom biologischen Lernen ab: ``The learning procedure, in its current form, is not a plausible model of learning in brains``.
 } \footnote{
     \textit{Ertel} weist darauf hin, dass die Klasse der darstellbaren Funktionen erhöht wird, wenn man für ein Perzeptron eine variable Sigmoid-Funktion verwendet~\cite[316]{Ert21b}. Siehe hierzu auch ``Sigmoid-Perzeptron`` in [RN09:847]
 }.\\
@@ -102,7 +102,7 @@ In den 80er Jahren werden neben dem Backpropagation-Algorithmus weitere Entwürf
 \subsection{Hopfield-Netz}
 
 Der Physiker \textit{John J. Hopfield} stellt 1982 in~\cite{Hop82} ein Modell für ein \textit{asynchrones} neuronales Netz\footnote{
-    in asynchronen Modellen werden die Aktivierungen der Neuronen unabhängig voneinander und zu unterschiedlichen Zeitpunkten berechnet (vgl. [Roj02:49] sowie ebenda S. 282)
+    in asynchronen Modellen werden die Aktivierungen der Neuronen unabhängig voneinander und zu unterschiedlichen Zeitpunkten berechnet (vgl.~\cite[49]{Roj93} sowie ebenda S. 282)
 }  vor, das auf neurobiologischen Aspekten beruht~\cite[2554]{Hop82} und 5 Jahre später in Zusammenarbeit mit At & T Bell Laboratories\footnote{
     ehemalige Forschungsabteilung der Telefongesellschaft AT \& T;  gehört seit 2016 zu Nokia (https://www.bell-labs.com/, abgerufen 03.09.2023)
 } in Form eines ``neural network chip``~\cite[457]{AR88}\footnote{
@@ -110,12 +110,13 @@ Der Physiker \textit{John J. Hopfield} stellt 1982 in~\cite{Hop82} ein Modell f�
 } als Hardware umgesetzt wird: Das Modell ist ein \textbf{rekurrentes Netz}\footnote{
 Ein rekurrentes neuronales Netz ``speist seine Ausgaben wieder in seine eigenen Eingaben ein``[RN09:847]. Im Gegensatz zu Feedforward-Netzen sind rekurrente Netze also \textit{rückgekoppelt}
 } ohne Schlingen ($w_{ij} = 0$)~\cite[291]{Ert21b}\footnote{ Eine \textit{Schlinge} (engl. \textit{loop}) in einem Graphen ist ein Kantenzug, der einen Knoten mit sich selbst verbindet~\cite[30]{Die17}. Ein Beispiel für ein Netz mit Schlingen ist das \textbf{MAXNET} (s.~\cite{Lip87}), das zu der Gruppe der \textbf{competitive nets} gehört: Es kann als Subnetz zur Ermittlung der Zelle mit dem größten Aktivierungswert genutzt werden [Fau94:158 ff.]
-} mit bidirektionalen symmetrischen Kanten ($w_{ij} = w_{ji}$) und fungiert als \textbf{Assoziativspeicher}, also als Netz, das, wenn es für eine Eingabe $x$ die Ausgabe $y$ liefert, $y$ auch für $x'$ berechnet, sofern $x'$ nahe genug bei $x$ liegt\footnote{ Nach dem Training ist das Netz dazu in der Lage, für einen Stimulus ein Aktualisierungsmuster einzunehmen, dass diesem am ähnlichsten ist [RN09:882], was an die ``Cell Assemblies`` von Hebb erinnert (Kapitel 2.2.1). \textit{Lansner} verweist in~\cite[179]{Lan09} genau darauf, merkt aber gleichfalls an, dass das Modell aufgrund der Rekurrenz und Symmetrie nicht seinem biologischen Vorbild entspricht~\cite[180]{Lan09}
-} [Roj93:251], was das Netz gegenüber \textit{Rauschen} und \textit{Störungen}\footnote{
-    Rauschen bzw. Störungen bei Stimuli in Form von Bildern ($n * m$ Pixeln) können durch zufällig hinzugefügte oder entfernte Pixel entstehen, oder durch Rotation (axiale Verschiebung) der Daten vor dem Einspeisen in das Netz. Beispiele für verrauschte Daten in~\cite[294]{Ert21b}
+} mit bidirektionalen symmetrischen Kanten ($w_{ij} = w_{ji}$) und fungiert als \textbf{Assoziativspeicher}, also als Netz, das, wenn es für eine Eingabe $x$ die Ausgabe $y$ liefert, $y$ auch für $x'$ berechnet, sofern $x'$ nahe genug bei $x$ liegt~\cite[251]{Roj93}\footnote{
+    Nach dem Training ist das Netz dazu in der Lage, für einen Stimulus ein Aktualisierungsmuster einzunehmen, dass diesem am ähnlichsten ist [RN09:882], was an die ``Cell Assemblies`` von Hebb erinnert (Kapitel 2.2.1). \textit{Lansner} verweist in~\cite[179]{Lan09} genau darauf, merkt aber gleichfalls an, dass das Modell aufgrund der Rekurrenz und Symmetrie nicht seinem biologischen Vorbild entspricht~\cite[180]{Lan09}
+}, was das Netz gegenüber \textit{Rauschen} und \textit{Störungen}\footnote{
+    Rauschen bzw. Störungen bei Stimuli in Form von Bildern ($n * m$ Pixeln) können durch zufällig hinzugefügte oder entfernte Pixel entstehen, oder durch Rotation (axiale Verschiebung) der Daten vor dem Einspeisen in das Netz. Beispiele für verrauschte Daten in~\cite[294]{Ert21b}.
 } resistenter macht.
-\textit{Ertel} führt die Begeisterung für neuronale Netze und den Aufschwung der Neuroinformatik in den 80er Jahren wesentlich auf die ``biologische Plausibilität, das gut verstandene mathematische Modell`` und ``die beeindruckende Simulation zur Mustererkennung`` auf das Hopfield Modell zurück~\cite[297]{Ert21b}. \textit{Anderson und Rosenfeld} bemerken, dass der Einfluss physikalischer Systeme auf das Hopfield Netz auch das Interesse der Physiker an neuronalen Netzen geweckt hat, und dadurch das Forschungsfeld erweitert wurde (vgl.~\cite[458]{AR88}). Dies ist darauf zurückzuführen, dass sich die Summe aller Terme in einem Hopfield-Netz wie folgt berechnet (vgl. [Roj93:287]\footnote{
-    mit dem Faktor $1/2$, damit aufgrund der Symmetrie in dem Netz $w_{ij}x_ix_j$ und $w_{ji}x_jx_i$ nur einmal berechnet wird [Roj93:287]
+\textit{Ertel} führt die Begeisterung für neuronale Netze und den Aufschwung der Neuroinformatik in den 80er Jahren wesentlich auf die ``biologische Plausibilität, das gut verstandene mathematische Modell`` und ``die beeindruckende Simulation zur Mustererkennung`` auf das Hopfield Modell zurück~\cite[297]{Ert21b}. \textit{Anderson und Rosenfeld} bemerken, dass der Einfluss physikalischer Systeme auf das Hopfield Netz auch das Interesse der Physiker an neuronalen Netzen geweckt hat, und dadurch das Forschungsfeld erweitert wurde (vgl.~\cite[458]{AR88}). Dies ist darauf zurückzuführen, dass sich die Summe aller Terme in einem Hopfield-Netz wie folgt berechnet\footnote{
+    s.~\cite[287]{Roj93}; \textit{Rojas} weist an selber Stelle auf den Faktor $1/2$ hin, damit aufgrund der Symmetrie in dem Netz $w_{ij}x_ix_j$ und $w_{ji}x_jx_i$ nur einmal berechnet wird.
 })
 
 \begin{equation}
@@ -138,7 +139,7 @@ Damit ist das Modell ``formal äquivalent zu einem physikalischen Modell des Mag
     vgl.~\cite[151]{AHS85} sowie~\cite[107]{Koh90}
 }.
 Das Verfahren wird auch \textit{simulated annealing} bezeichnet\footnote{vgl.~\cite[297]{Ert21b}. \textit{Rojas} schreibt dazu
-    ``Gelingt es, die Temperatur nach dem richtigen Plan auf null zu verringern, wird sich das Netz mit großer Wahrscheinlichkeit in einem globalen Minimum stabilisieren.``[Roj93:322]. Der Begriff \textit{Annealing} ist hier aus der Werkstoffkunde entlehnt: Eine entsprechende Wärmebehandlung von Materialien unterstützt die Erzeugung gewünschter Werkstoffeigenschaften wie Festigkeit, z.B.  bei der Verarbeitung von Glas~\cite[3]{Jeb11} oder Schweißverbindungen von Metallen (vgl. ~\cite{FJOA19})
+    ``Gelingt es, die Temperatur nach dem richtigen Plan auf null zu verringern, wird sich das Netz mit großer Wahrscheinlichkeit in einem globalen Minimum stabilisieren.``~\cite[322]{Roj93}. Der Begriff \textit{Annealing} ist hier aus der Werkstoffkunde entlehnt: Eine entsprechende Wärmebehandlung von Materialien unterstützt die Erzeugung gewünschter Werkstoffeigenschaften wie Festigkeit, z.B.  bei der Verarbeitung von Glas~\cite[3]{Jeb11} oder Schweißverbindungen von Metallen (vgl. ~\cite{FJOA19})
 }.
 
 \subsection{Neocognitron}

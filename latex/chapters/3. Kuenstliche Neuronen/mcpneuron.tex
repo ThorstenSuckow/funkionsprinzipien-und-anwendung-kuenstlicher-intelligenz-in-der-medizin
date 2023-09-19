@@ -3,7 +3,7 @@
 Im Jahr 1943 veröffentlichen Warren McCulloch und Walter Pitts\footnote{
     s. \ref{appendix:mcculloch}
 } die Arbeit ``A logical calculus of the ideas immanent in nervous activity`` \cite{MP43}, in der sie ein auf \textbf{Aussagenlogik}\footnote{
-    Die (zweiwertige) Aussagenlogik beschäftigt sich mit der Verknüpfung von Aussagen und deren Wertigkeit unter der Berücksichtigung der Wahrheitswerte ``wahr`` und ``falsch`` [Rau88]
+    Die (zweiwertige) Aussagenlogik beschäftigt sich mit der Verknüpfung von Aussagen und deren Wertigkeit unter der Berücksichtigung der Wahrheitswerte ``wahr`` und ``falsch`` (vgl.~\cite[2]{Rau88}).
 } basierendes mathematisches Modell zur Erklärung von Signalverarbeitung und  -weiterleitung im Nervensystem präsentieren.
 Ihre Arbeit liefert grundlegende Ideen für die Kybernetik\footnote{
     s. \ref{appendix:wiener}
@@ -58,9 +58,9 @@ Insgesamt ergeben sich folgende Anforderungen an unser Modell (vgl. [Fau94:26 ff
     \item An einem Neuron liegen (beliebig viele) Eingaben an (im Sinne von a.)
     \item Ein Schwellenwert ist jedem Neuron zu eigen und wird für das Neuron festgelegt. Der Schwellenwert muss getroffen oder übertroffen werden, damit das Neuron feuert.
     \item Hemmung ist ``absolut``: Liegt ein hemmendes Signal zusammen mit nicht-hemmenden Signalen an, feuert das Neuron nicht\footnote{
-        Für eine formale Beschreibung von absoluter und relativer Hemmung siehe [Roj03:42 ff.]
+        Für eine formale Beschreibung von absoluter und relativer Hemmung siehe~\cite[42 f.]{Roj93}.
     }
-    \item Für die Signalübertragung wird ein diskreter Zeitwert $t \in \mathbb{Z}$ vereinbart: Die Übertragung eines Signals dauert eine Zeiteinheit, also $t + 1$. Für eine einführende Betrachtung folgen wir [Roj93 S. 33 letzter Abs. ff.] und ignorieren zunächst die Zeitwerte.
+    \item Für die Signalübertragung wird ein diskreter Zeitwert $t \in \mathbb{Z}$ vereinbart: Die Übertragung eines Signals dauert eine Zeiteinheit, also $t + 1$. Für eine einführende Betrachtung folgen wir~\cite[33 f.]{Roj93} und ignorieren zunächst die Zeitwerte.
 \end{enumerate}
 
 
@@ -149,12 +149,12 @@ Is $w_+$ bekannt, können wir abkürzen zu
 
 \subsection{McCulloch-Pitts-Netz als Graph}
 
-Ein zyklenfreies Netz aus MCP-Zellen, das aus \textbf{AND} (Konjunktion)-, \textbf{OR} (Disjunktion)- und \textbf{NOT} (Negation)-Zellen (siehe nachfolgender Abschnitt) besteht, können wir wie folgt definieren (vgl. [Roj93:32, Definition 2.1]):
+Ein zyklenfreies Netz aus MCP-Zellen, das aus \textbf{AND} (Konjunktion)-, \textbf{OR} (Disjunktion)- und \textbf{NOT} (Negation)-Zellen (siehe nachfolgender Abschnitt) besteht, können wir wie folgt definieren (vgl.~\cite[32 ``Definition 2.1``]{Roj93}):
 
 
 \begin{definition} Ein MCP-Netz ist ein gerichteter Graph\footnote{
-    Gerichtete Kanten eine MCP-Netzes nehmen eigentlich keine Gewichtung der Information vor [Roj93:40, ``2.4.1 Gewichtete und ungewichtete Netze``]. Sowohl \textit{Minsky} in~\cite[34]{Min67} als auch \textit{Rojas} in [Roj93:32] nutzen unter Berücksichtigung der \textit{absoluten Hemmung} nur die Summe der erregenden Signale und vergleichen diese mit $\Theta$ - dieser Vergleich findet nur statt, wenn \textit{kein} hemmendes Signal ankommt: Die Zelle liefert sonst direkt $0$ als Ausgabe zurück. [Fau94] nutzt\footnote{
-        Gewichte sind in absolut hemmenden Leitungen unsinnig nach [Roj93:42, Abs. 1]
+    Gerichtete Kanten eine MCP-Netzes nehmen eigentlich keine Gewichtung der Information vor~\cite[40]{Roj93}. Sowohl \textit{Minsky} in~\cite[34]{Min67} als auch \textit{Rojas} in~\cite[32]{Roj93} nutzen unter Berücksichtigung der \textit{absoluten Hemmung} nur die Summe der erregenden Signale und vergleichen diese mit $\Theta$ - dieser Vergleich findet nur statt, wenn \textit{kein} hemmendes Signal ankommt: Die Zelle liefert sonst direkt $0$ als Ausgabe zurück. [Fau94] nutzt\footnote{
+        Gewichte sind in absolut hemmenden Leitungen unsinnig nach~\cite[42]{Roj93}
     } unter Berücksichtigung von Gleichung~\ref{eq:gl-activation} gewichtete Kanten, in ähnlicher Weise auch \textit{Beale und Jackson}~\cite[41]{BJ90}. \textit{Minsky} weist auf die Äquivalenz eines solchen Modells hin (vgl. ~\cite[34 f.]{Min67}), dessen wir uns im Folgenden auch bedienen werden.
 } $G = (V, E)$ mit der Knotenmenge
 
@@ -381,12 +381,12 @@ McCulloch und Pitts sind sich dessen durchaus bewußt\footnote{
     ``McCulloch and Pitts acknowledged in their paper that their definition of a neuron was idealized, and that they made physical assumptions that were 'most convenient for the calculus'``~\cite[21]{Abr02}. Siehe auch~\cite[101]{MP43}: ``[...]we regard facilitation and extinction as dependent upon continuous changes in threshold related to electrical and chemical variables, [...]``, sowie ``He {[McCulloch]} never claimed that the 1943 model exhausted the richness of individual neurons``~\cite[11]{Arb19}
 }.
 Es bleibt ein statisches Modell, es muß ``konstruiert`` werden [Fau94:28, ``1.6.2 Algorithm``].
-Es ist nur durch Änderung der Netztopologie bzw. der Schwellenwerte anpassungsfähig [Roj93:51, Abs. 2] Selbständig zu lernen vermag es nicht.\\
+Es ist nur durch Änderung der Netztopologie bzw. der Schwellenwerte anpassungsfähig\footnote{s.~\cite[51]{Roj93}} Selbständig zu lernen vermag es nicht.\\
 
 
 Tatsächlich ist die McCulloch-Pitts-Zelle von eher geringer Bedeutung für die Neurowissenschaft gewesen\footnote{
-    ``The immense theoretical influence of this paper was not among neuroscientists but among computer scientists.``~\cite[17]{AR88}; [Roj93:51] kommt zu einem ähnlichen Schluss: ``Die Art der Schaltungen, die mit
-    diesen Zellen gebaut werden, ist aber biologisch gesehen nicht so relevant.``
+    ``The immense theoretical influence of this paper was not among neuroscientists but among computer scientists.``~\cite[17]{AR88}; \textit{Rojas} kommt zu einem ähnlichen Schluss: ``Die Art der Schaltungen, die mit
+    diesen Zellen gebaut werden, ist aber biologisch gesehen nicht so relevant.``~\cite[51]{Roj93}
 }.
 Umso größer war ihr Einfluss auf die Computerwissenschaften\footnote{
     Die Arbeit war ebenso wichtig für die Entwicklung des ``Konnektionismus``~\cite[11]{Arb19}, einer Forschungsrichtung der künstlichen Intelligenz, in der Modelle (neuronale Netze) untersucht werden, mit deren Hilfe sich intelligente und kognitive Handlungen auf Maschinen übertragen lassen~\cite[v]{Dor91}
@@ -440,7 +440,7 @@ und stellt fest, dass das Nervensystem eine ausgezeichnete logische Maschine rep
 Konsequenterweise nutzt \textit{Minsky} in~\cite[32 ff.]{Min67} die MCP-Zelle als endlichen Automaten\footnote{
     Ein endlicher Automat ist eine informationsverarbeitende Maschine. Basierend auf Eingaben lassen sich mit einer solchen Maschine Zustände, Zustandsübergänge und Ausgaben modellieren. Bei einem \textit{endlichen} Automaten sind die genannten Eingaben, Zustände, und Ausgaben endlich. [SSH95:29, ``2.1 Endliche Automaten`` ff.]
 }\footnote{
-    dass MCP-Netze endliche Automaten sind: Auch in~\cite[76]{Cow90} sowie [Roj93:47, ``Satz 2.4``].  \textit{Arbib} weist darauf hin, dass die Arbeit von McCulloch und Pitts grundlegend für Automatentheorie gewesen ist~\cite[8]{Arb19}
+    dass MCP-Netze endliche Automaten sind: Auch in~\cite[76]{Cow90} sowie~\cite[47, ``Satz 2.4``]{Roj93}. \textit{Arbib} weist darauf hin, dass die Arbeit von McCulloch und Pitts grundlegend für Automatentheorie gewesen ist~\cite[8]{Arb19}
 } mit zwei Zuständen, aus denen andere endliche Automaten gebaut werden, und nennt diese, im Jahr 1967 schon geläufig: \textbf{Neuronale Netze}~\cite[33]{Min67}.
 
 

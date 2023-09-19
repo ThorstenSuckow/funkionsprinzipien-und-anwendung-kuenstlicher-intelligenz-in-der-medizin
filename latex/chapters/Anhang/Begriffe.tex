@@ -161,7 +161,7 @@ Die Lernrate $\eta$ ist der Koeffizient für die Gewichtsanpassung, und wird auc
 Die Diffusion der Vesikel in den synaptischen Spalt dauert ca. 10–100 µs, danach binden sich die Transmitter an die Rezeptoren der postsynaptischen Zelle~\cite[96]{HS19a}, die das ``interzellulläre chemische Signal [...] in ein intrazelluläres Signal (eine Änderung des Membranpotenzials oder eine chemische Veränderung) in der postsynaptischen Zelle umwandeln``~\cite[123]{BCP18}.
 
 Rezeptoren können hierbei \textit{ionotrop} oder \textit{metabotrop} sein: Inotrope Rezeptoren sind gleichzeitig auch Ionenkanäle und aktivieren sich, wenn ein bestimmter Transmitter an sie bindet~\cite[109]{HS19b}.
-Metabotrope Rezeptoren lösen intrazelluläre Stoffwechselvorgänge aus, und weitere Botenstoffe (sog. \textbf{second messenger}) können dann für eine Aktivierung von Ionenkanälen verantwortlich sein[RK18:134, rechte Spalte, Abs. 2``]\footnote{
+Metabotrope Rezeptoren lösen intrazelluläre Stoffwechselvorgänge aus, und weitere Botenstoffe (sog. \textbf{second messenger}) können dann für eine Aktivierung von Ionenkanälen verantwortlich sein~\cite[134]{RK18}\footnote{
     ``postsynaptische Verdichtung`` bei~\cite[123]{BCP18}
 }.
 
@@ -180,12 +180,14 @@ Erregende und hemmende Synapsen kann man auch an ihrer Struktur erkennen: Asymme
 
 \section{Perzeptron}\label{appendix:perzeptron}
 \subsection*{The Perceptron - A perceiving and recognizing automaton}
-Das Forschungsprojekt ``\textit{Perceiving and Recognizing Automaton}`` beschreibt einen Apparat, der mittels einer Kamera geometrische Figuren erkennen und zuordnen kann [Ros57].
-Die Funktionen simuliert Rosenblatt zunächst auf einem IBM 704 Rechner [Ros60], bevor  die Hardware Anfang der 60er Jahre als \textit{Mark 1 Perceptron} gebaut wird: 400 Cadmiumsulfid-Photozellen auf einem 20x20 großen Raster angeordnet - dem \textbf{S-System} (\textbf{S} = \textit{Sensory}) - leiten Signale an das \textbf{A-System} (\textbf{A} = \textit{Association}); dort werden sie registriert und ausgewertet, und schlussendlich über das \textbf{R-System} (\textbf{R} = \textit{Response}) ausgegeben (vgl. [Ros57:4, f.], [Ros58 S. 389 ff.] sowie~\cite[193, ``Frank Rosenblatt]{Bis06} und~\cite[196, Figure 4.8]{Bis06}).
+Das Forschungsprojekt ``\textit{Perceiving and Recognizing Automaton}`` beschreibt einen Apparat, der mittels einer Kamera geometrische Figuren erkennen und zuordnen kann~\cite[3]{Ros57}.
+Die Funktionen simuliert Rosenblatt zunächst auf einem IBM 704 Rechner\footnote{
+    ausführlich beschrieben in~\cite{Ros60}
+}, bevor  die Hardware Anfang der 60er Jahre als \textit{Mark 1 Perceptron} gebaut wird: 400 Cadmiumsulfid-Photozellen auf einem 20x20 großen Raster angeordnet - dem \textbf{S-System} (\textbf{S} = \textit{Sensory}) - leiten Signale an das \textbf{A-System} (\textbf{A} = \textit{Association}); dort werden sie registriert und ausgewertet, und schlussendlich über das \textbf{R-System} (\textbf{R} = \textit{Response}) ausgegeben (vgl.~\cite[4 f.]{Ros57},~\cite[389 f.]{Ros58} sowie~\cite[193, ``Frank Rosenblatt]{Bis06} und~\cite[196, Figure 4.8]{Bis06}).
 Dabei lernt die Maschine im ersten Schritt durch die Unterstützung der Ingenieure, wie gegebene Formen zu interpretieren sind: Für aktivierte Photozellen wird die erwartete Ausgabe manuell festgelegt.
 Die Verbindungen zwischen den \textbf{S}-, \textbf{A}- und \textbf{R}-Units erinnert nicht nur von der Namensgebung her an biologische Neuronen, auch deren Struktur und Verschaltung wird hier als Vorbild genommen (vgl. ~\cite[4]{Ros62}).\\
 
-Die \textbf{S}-Units konnten sowohl hemmende als auch erregende Signale in das \textbf{A}-System einspeisen. Darüber hinaus war das \textbf{R}-System in der Lage, über Rückkoppelungen hemmende Signale an das \textbf{A}-System zu senden: Damit sollte verhindert werden, dass weitere \textbf{R}-Units aktiviert werden, die sich mit den bereits aktivierten Units gegenseitig ausschließen [Ros57:4, Punkt (3)].
+Die \textbf{S}-Units konnten sowohl hemmende als auch erregende Signale in das \textbf{A}-System einspeisen. Darüber hinaus war das \textbf{R}-System in der Lage, über Rückkoppelungen hemmende Signale an das \textbf{A}-System zu senden: Damit sollte verhindert werden, dass weitere \textbf{R}-Units aktiviert werden, die sich mit den bereits aktivierten Units gegenseitig ausschließen~\cite[4 f.]{Ros57}.
 
 
 

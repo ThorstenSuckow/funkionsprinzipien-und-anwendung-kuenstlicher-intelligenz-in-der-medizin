@@ -16,7 +16,7 @@ Erst 1958 schafft es ein Modell, eine Sensation\footnote{
 } auszulösen: Das \textbf{Perceptron} (im folgenden ``Perzeptron``)~\cite[89]{AR88}\footnote{
     s. auch ``Interest in connectionist networks revivied dramatically in 1962 with the publication of Frank Rosenblatt's book \textit{Principles of Neurodynamics}, [...]``~\cite[xi, Hervorhebung i.O.]{MP88}
 }.
-1957 beschreibt es sein Schöpfer Frank Rosenblatt (1928 - 1971) in [Ros57]\footnote{
+1957 beschreibt es sein Schöpfer \textit{Frank Rosenblatt} (1928 - 1971) in~\cite{Ros57}\footnote{
     s. \ref{appendix:perzeptron}
 } als Teil eines internen Forschungsprojektes des \textit{Cornell Aeronautical Labors}\footnote{
     Die Forschungseinrichtung gehörte von 1946 bis 1972 zu der Cornell Universität (\url{https://www.cornell.edu}; ab 1972 gehörte die Forschungseinrichtung dann zu der Calspan Corporation, \url{https://calspan.com}, beides abgerufen 18.08.2023)
@@ -49,25 +49,25 @@ Für die \textbf{A}-Units wird definiert:
 
 Ähnlichkeiten zu der in Abschnitt~\ref{mcp-inputactivfunc} beschriebenen Aktivierungsfunktion sind durchaus erkennbar.
 Rosenblatt selber weist darauf hin, dass er sein Modell direkt von dem von McCulloch und Pitts eingeführten Modell ableitet\footnote{
-    vgl. auch ``Ein \texit{einfaches Perzeptron} ist eine McCulloch-Pitts-Zelle, die ihre Eingabe gewichtet berechnet.`` in [Roj93:57, ``Definition 3.1``, Hervorhebungen i.O.]
+    vgl. auch ``Ein \texit{einfaches Perzeptron} ist eine McCulloch-Pitts-Zelle, die ihre Eingabe gewichtet berechnet.`` in~\cite[57, ``Definition 3.1`` (Hervorhebungen i.O.)]{Roj93}
 }. Darüber hinaus weist er auch auf Einflüsse von Hebb und von Neumann hin~\cite[5]{Ros62}.\\
 
 
-Das klassische Rosenblatt-Perzeptron verwendet in einem Netz von Eingabe- und Ausgabe-Knoten gewichtete Verbindungen - die Knoten selber sind Schwellenwertelemente, Verbindungen werden stochastisch ermittelt [Roj93:51, Abs. 3].
-Nach Rosenblatts Veröffentlichung wurde sein Modell analysiert und verfeinert [Roj93:51, Abs. 3] u. a. von \textit{Minsky und Papert} in~\cite{MP88}, die wie folgt definieren:
+\textit{Rojas} schreibt in~\cite[51]{Roj93}, dass das klassische Rosenblatt-Perzeptron in einem Netz von Eingabe- und Ausgabe-Knoten gewichtete Verbindungen nutzt - die Knoten selber sind Schwellenwertelemente, Verbindungen werden stochastisch ermittelt.
+Er weist dort ausserdem darauf hin, dass nach Rosenblatts Veröffentlichung sein Modell analysiert und verfeinert wurde, u. a. von \textit{Minsky und Papert} in~\cite{MP88}, die wie folgt definieren:
 
 \blockquote[{~\cite[12, Hervorhebung i.O.]{MP88}}]{
     A \underline{perceptron} is a device capable of computing all predicates which are linear in some given set $\Phi$ of partial predicates.
 }
 
 Prädikate sind hier Verbindungen zu den Eingabesignalen, die einen Wahrheitswert $0$ oder $1$ basierend auf der Eingabe $X$ berechnen.
-Die Ausgabe der Prädikate werden individuell gewichtet und an die Zelle weitergeleitet, die die Aktivierungsfunktion implementiert (vgl. [Roj93:52] und~\cite[8-12]{MP88}).
+Die Ausgabe der Prädikate werden individuell gewichtet und an die Zelle weitergeleitet, die die Aktivierungsfunktion implementiert (vgl.~\cite[52 f.]{Roj93} und~\cite[8-12]{MP88}).
 
 
 \begin{figure}[h]
     \centering
     \includegraphics{images/p1ReadSeq.pdf}
-    \caption{Schematische Darstellung der Eingabesignale, Prädikate, Gewichte und Schwellenwertzelle [Ro93:53]}
+    \caption{Schematische Darstellung der Eingabesignale, Prädikate, Gewichte und Schwellenwertzelle nach~\cite[53 Abb. 3.2]{Roj93}}
     \label{fig-perctheda}
 \end{figure}
 
@@ -143,10 +143,10 @@ Wir können feststellen, dass
     \label{fig-halbraeume}
 \end{figure}
 
-Formal ausgedrückt bedeutet das, dass $M_+$ und $M_-$ \textit{linear separabel} sind. Nach [Roj93] lautet die Definition für \textit{Lineare Trennbarkeit}:
+Formal ausgedrückt bedeutet das, dass $M_+$ und $M_-$ \textit{linear separabel} sind. Nach \textit{Rojas} lautet die Definition für \textit{Lineare Trennbarkeit}:
 
 \begin{definition}\footnote{
-    [Roj93:61, ``Definition 3.2``, Hervorhebungen i.O., Nummerierung eigene]
+    \cite[60, ``Definition 3.2`` (Hervorhebungen i.O., Nummerierung eigene)]{Roj93}
 }
 
 Zwei Mengen \textit{A} und \textit{B} von Punkten in einem \textit{n}-dimensionalen Raum sind \textit{linear trennbar}, falls \textit{n}+1 reelle Zahlen $w_1, ... , w_{n+1}$ existieren, so daß für jeden Punkt $x_1, ... , x_n \in A$ gilt
@@ -205,7 +205,7 @@ Aus diesem Grund wird das Perzeptron auch \textbf{linearer Klassifizierer} genan
 Das Perzeptron \textbf{lernt} diese Gewichte zunächst durch \textit{Traningsdaten}\footnote{
     ``supervised learning``: überwachtes lernen; vgl. [RN09:811, ``18.2 Überwachtes Lernen``] sowie [Fau94:15]. \textit{Arbib et al.} weisen darauf hin, dass \textit{überwachtes Lernen} mit dem Perzeptron eingeführt wurde: ``Supervised learning adjusts the weights in an attempt to respond to explicit error signals provided by a “teacher,” which may be external, or another network in the same “brain.” This model was introduced in the perceptron model, [...].``~\cite[30]{Arb03}
 }.
-Jeder Eintrag dieser Trainingsdaten ist einer erwarteten Ausgabe zugeordnet. Der Algorithmus besteht aus folgenden Schritten (vgl. [RM87 S. 65] sowie [RN09 S. 842]):
+Jeder Eintrag dieser Trainingsdaten ist einer erwarteten Ausgabe zugeordnet. Der Algorithmus besteht aus folgenden Schritten (vgl.~\cite[65]{RM87} sowie [RN09 S. 842]):
 
 
 
@@ -254,7 +254,7 @@ Das Bias-Gewicht\footnote{
     im $ \mathbb{R}^n$ durch eine Hyperebene im Ursprung~\cite[215]{Ert21a}
 } sorgt.
 
-Den Eingabedaten wird ein fester Eingabewert $x_{n+1} = 1$ hinzufügt: Der Eingabevektor $x \in  \mathbb{R}^n$ wird \textit{erweitert}: $(x_1, ..., x_n, 1)$ [Roj93:58, ``3.2.2 Gewichtete Netze mit einem kanonischen Baustein``].
+Den Eingabedaten wird ein fester Eingabewert $x_{n+1} = 1$ hinzufügt: Der Eingabevektor $x \in  \mathbb{R}^n$ wird \textit{erweitert}: $(x_1, ..., x_n, 1)$ (vgl.~\cite[58]{Roj93}).
 
 \noindent
 Der bias $b$ wird für unser Beispiel im $ \mathbb{R}^2$ mit Definition\ref{eq:gl-rpact} in die Berechnung Schwellenwerts miteinbezogen:
