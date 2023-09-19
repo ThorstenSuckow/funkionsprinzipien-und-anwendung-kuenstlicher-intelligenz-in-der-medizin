@@ -141,16 +141,16 @@ Das Verfahren wird auch \textit{simulated annealing} bezeichnet\footnote{vgl.~\c
 
 \subsection{Neocognitron}
 
-Unter dem Namen \textit{Cognitron} 1975 beschreibt \textit{Fukushima} in [Fuk75] ein mehrschichtiges Netz mit selbst-organisierenden Eigenschaften zur Mustererkennung, in dem Zellen selektiv auf häufig präsentierte Merkmale reagieren.
+Unter dem Namen \textit{Cognitron} 1975 beschreibt \textit{Fukushima} in~\cite{Fuk75} ein mehrschichtiges Netz mit selbst-organisierenden Eigenschaften zur Mustererkennung, in dem Zellen selektiv auf häufig präsentierte Merkmale reagieren.
 1983 veröffentlichen \textit{Fukushima, Miyake und Ito} eine Modifikation dieser Architektur in~\cite{FMI83}\footnote{
-    Mit Bezug auf [Fuk80] (``Neocognitron: A self-organizing neural network model for a mechanism of pattern recognition unaffected by shift in position``)
+    Mit Bezug auf~\cite{Fuk80} (``Neocognitron: A self-organizing neural network model for a mechanism of pattern recognition unaffected by shift in position``)
 } unter dem Namen \textbf{Neocognitron}\footnote{
     Video mit Demonstration des Netzes unter https://www.youtube.com/watch?v=Qil4kmvm2Sw, abgerufen 04.09.2023
 }; sein biologisches Vorbild ist das durch \textit{Hubel und Wiesel} in~\cite{HW62} beschriebene hierarchische Modell des Wahrnehmungssystems~\cite[827]{FMI83}.
 In dem künstlichen neuronalen Netz haben Zellen in tiefer liegenden Schichten die Eigenschaft, selektiv komplexere Merkmale der Stimuli zu extrahieren, womit sie weniger anfällig auf Rauschen in den Eingabedaten sind.
-In [Fuk80] war der Training-Prozess des Modells gegeben durch wiederholte Einspeisung von Mustern ohne weitere Information\footnote{
+In~\cite{Fuk80} war der Training-Prozess des Modells gegeben durch wiederholte Einspeisung von Mustern ohne weitere Information~\cite[197]{Fuk80}\footnote{
     ``learning without a teacher``, also unüberwachtes Lernen (unsupervised learning).
-} [Fuk80:197]: Die Erweiterung des Modells beinhaltet nun die Verstärkung der modifizierten Synapsen durch überwachtes Lernen\footnote{
+}: Die Erweiterung des Modells beinhaltet nun die Verstärkung der modifizierten Synapsen durch überwachtes Lernen\footnote{
     ``We use a learning-with-a-teacher process for the reinforcement of the modifiable synapses in the new large-scale
 model, instead of the learning-without-a-teacher process applied to the previous model.``~\cite[827]{FMI83}; \textit{Anderson und Rosenfeld} vermerken dies als ``some handcrafted fine tuning``~\cite[524 f.]{AR88}
 }, um bessere Resultate bei handgeschriebenen Zeichen zu erzielen~\cite[829]{FMI83}.
