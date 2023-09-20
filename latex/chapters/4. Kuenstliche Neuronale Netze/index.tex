@@ -23,9 +23,9 @@ Auch der technologische Fortschritt begünstigte das Wiederaufleben des Interess
 }
 
 denn mit den in den 80er Jahren verfügbaren Supercomputern und Parallelrechner\footnote{
-    Auch \textit{Fausett} nennt bessere Rechenleistung als einen Grund für den erneuerten Enthusiasmus (vgl.~\cite[26]{Fau94}). Im Kontext der in diesem Kapitel vorgestellten mehrschichtigen Netzen und ihrem Konzept der versteckten Schichten ist nachvollziehbar, das mehr Rechenleistung den komplexen Verfahren entgegenkommt. \textit{Goodfellow, Bengio und Courville} gehen auf die Korrelation Modellgrösse und Anzahl der Nervenzellen in einem menschlichen Gehirn (vgl. Fussnote 15 in **Kapitel 1.2**) in [GBC18:24 ff.] ein
+    Auch \textit{Fausett} nennt bessere Rechenleistung als einen Grund für den erneuerten Enthusiasmus (vgl.~\cite[26]{Fau94}). Im Kontext der in diesem Kapitel vorgestellten mehrschichtigen Netzen und ihrem Konzept der versteckten Schichten ist nachvollziehbar, das mehr Rechenleistung den komplexen Verfahren entgegenkommt. \textit{Goodfellow, Bengio und Courville} gehen auf die Korrelation Modellgrösse und Anzahl der Nervenzellen in einem menschlichen Gehirn in~\cite[24 f.]{GBC18} ein
 } erhält auch der Konnektionismus Auftrieb, der \textbf{neuronale Netze} als Grundlage hat~\cite[15]{Dor91}, und mit dem sich Modelle wieder mehr an den biologischen Vorbildern orientieren sollten\footnote{
-    vgl.~\cite[43]{RM87} sowie [GBC18:18-19]}.
+    vgl.~\cite[43]{RM87} sowie~\cite[18 f.]{GBC18}}.
 
 
 \subsection{Mehrschichtige neuronale Netze}
@@ -35,7 +35,7 @@ Bislang haben wir überwiegend künstliche Neuronen betrachtet, bei denen die Ei
 Bei dem Rosenblatt-Perzeptron, das alleine nicht in der Lage ist, XOR zu erlernen, handelt es sich um ein \textbf{Einschichtiges neuronales Feedforward-Netz}.
 Das bedeutet, dass es nur Eingabe und Ausgabe gibt und die Informationen ausschliesslich in Richtung Ausgang fliessen [RN09:848 ff.].
 
-Allerdings ist auch ein \textbf{mehrschichtiges Perzeptron} (MLP, \textit{multi-layer perceptron}) [GBC18:6] in der Lage, nicht linear-separable Daten zu klassifizieren.
+Allerdings ist auch ein \textbf{mehrschichtiges Perzeptron} (MLP, \textit{multi-layer perceptron})~\cite[6]{GBC18} in der Lage, nicht linear-separable Daten zu klassifizieren.
 Ein MLP repräsentiert ein tiefes Feedforward-Netz, in dem die Eingabeschicht (\textbf{Input Layer}) und die Ausgabeschicht (\textbf{Output Layer}) über weitere Schichten von Neuronen (\textbf{hidden layer}) verbunden ist; die Neuronen in diesen Schichten implementieren Eingabe- und Aktivierungsfunktion und leiten ihre Berechnungen an die nächsten Zellen bis zu der Ausgabeschicht weiter. \textit{Murtagh} zeigt in \cite[184 f.]{Mur91} die Modellierung von XOR anhand eines MLPs.
 
 \begin{figure}[h]
@@ -62,10 +62,10 @@ Der Vorgang (forward pass, backward pass, forward pass...) wird so lange für al
 
 
 Die mathematische Basis für Backpropagation ist das \textbf{Gradientenabstiegsverfahren}, das hilft, in einem neuronalen Netz Parameter für möglichst optimale Verlust-Werte (also geringe Fehler-Werte) zu finden [RN09:837] (s. Abbildung~\ref{fig-gradient})\footnote{
-    ein kompakter Überblick zum Thema ``Optimierung auf Gradientenbasis`` findet sich in [GBC18:90 ff.]
+    ein kompakter Überblick zum Thema ``Optimierung auf Gradientenbasis`` findet sich in~\cite[90 ff.]{GBC18}
 }.  Ausserdem unterstützt die \textbf{Sigmoid}\footnote{
     \textit{sigmoid}: ``Sigma``, griechischer Buchstabe $\Sigma$, entspricht dem lateinischen ``S``; ``\textit{eidos}`` (griechisch) Form, Gestalt
-}-Funktion (Gleichung~\ref{eq:gl-sigmoid} sowie Abbildung~\ref{fig-sigmoid}) als Aktivierungsfunktion\footnote{ ``Historisch wurde Backpropagation mit der Sigmoidfunktion implementiert.``~\cite[314, Fussnote 4]{Ert21b} In Kapitel 9.5.3 (vgl.~\cite[328 f.]{RM87}). \textit{Ertel} fügt hinzu: ``Mittlerweile haben sich jedoch andere Funktionen als besser bewährt.`` In~\cite[319 f.]{Ert21b} geht der Autor auf ``Probleme und Verbesserungen`` des mittlerweile über 30 Jahre alten Verfahrens ein. [GBC18:19]  stellt fest, dass Backpropagation der ``vorherrschende Ansatz für das Training tiefer Modelle`` (im Jahr 2018) ist.
+}-Funktion (Gleichung~\ref{eq:gl-sigmoid} sowie Abbildung~\ref{fig-sigmoid}) als Aktivierungsfunktion\footnote{ ``Historisch wurde Backpropagation mit der Sigmoidfunktion implementiert.``~\cite[314, Fussnote 4]{Ert21b} In Kapitel 9.5.3 (vgl.~\cite[328 f.]{RM87}). \textit{Ertel} fügt hinzu: ``Mittlerweile haben sich jedoch andere Funktionen als besser bewährt.`` In~\cite[319 f.]{Ert21b} geht der Autor auf ``Probleme und Verbesserungen`` des mittlerweile über 30 Jahre alten Verfahrens ein. \textit{Goodfellow et al.} stellen fest, dass Backpropagation der ``vorherrschende Ansatz für das Training tiefer Modelle`` (im Jahr 2018) ist~\cite[19]{GBC18}.
 }  aufgrund ihres nicht-linearen Charakters eine größere Klasse darstellbarer Funktionen und damit Lösungen für Probleme, die ein klassisches Perzeptron nicht lösen kann (vgl.~\cite[316]{Ert21b})\footnote{
     In~\cite[311 ff.]{RM87} zeigen \textit{Rumelhart, Hinton und Williams} die Architektur eines mehrschichtigen neuronalen Netzes, das das XOR-Problem über Backpropagation löst. In~\cite[536]{RHW86} grenzen sie ihr Modell vom biologischen Lernen ab: ``The learning procedure, in its current form, is not a plausible model of learning in brains``.
 } \footnote{
@@ -166,7 +166,7 @@ model, instead of the learning-without-a-teacher process applied to the previous
 \subsection{Convolutional Neural Networks}\label{cnn}
 
 \textit{Yann LeCun} veröffentlicht 1989 seine Arbeit~\cite{Cun89}, in der er verschiedene Netzwerkarchitekturen auf Generalisierungsfähigkeit (s. Abschnitt~\ref{lernregel}) und Performance untersucht. Er kommt zu dem Schluss, dass eine Reduzierung der \textit{freien Parameter}\footnote{
-    \textit{freie Parameter} sind die Parameter des Netzes, die durch den Lernvorgang festgelegt werden, also bspw. die Gewichte, Schwellenwerte oder auch die Lernrate, wenn diese durch Verwendung bestimmter Optimierungsalgorithmen adaptiv ist, wie bspw. \textbf{Adam} (vgl. [GBC18:346] mit Verweis auf~\cite{KB17})
+    \textit{freie Parameter} sind die Parameter des Netzes, die durch den Lernvorgang festgelegt werden, also bspw. die Gewichte, Schwellenwerte oder auch die Lernrate, wenn diese durch Verwendung bestimmter Optimierungsalgorithmen adaptiv ist, wie bspw. \textbf{Adam} (vgl.~\cite[346]{GBC18} mit Verweis auf~\cite{KB17})
 } in einem mehrschichtigen Netz zu einer hohen Generalisierungsfähigkeit führt: Bessere Ergebnisse im Vergleich zu  ein- bzw. zweischichtigen Netzen können erzielt werden, indem sog. \textit{feature maps} genutzt werden, die in den Schichten für die Merkmalsextraktion der Eingabedaten (hier: zweidimensionale Bilder) verantwortlich sind.
 Zusätzliche Information wie die Lage der Merkmale in den Eingabedaten werden näherungsweise gespeichert, was zu einer Reduzierung der Größe der \textit{feature maps} im Vergleich zu der Größe der Eingabedaten führt, und damit auch zu einer Reduzierung der Gewichte.
 Darüber hinaus können mehrere feature maps die gleichen Merkmale an unterschiedlichen Orten (\textit{shift invariance}) in den Eingabedaten extrahieren, wodurch die Gewichte unter diesen feature maps geteilt werden können~\cite[151 f.]{Cun89}.
@@ -182,8 +182,8 @@ Die mathematische Basis von CNNs ist u.a. die \textbf{Faltungsoperation}\footnot
     ``\textit{convolution}`` (engl.): Faltung
 }: Hierbei wird auf Eingabedaten ein \textbf{Kernel} (die \textit{Faltungsmatrix})\footnote{
     ``das biologische Analogon zu den Filtern [Kerneln] sind die bei den Sinnesorganen vorkommenden rezeptiven Felder.``~\cite[326]{Ert21b}. Vgl. hierzu auch~\cite[439]{LBH15}.
-} angewendet, wobei das Ergebnis der Faltungsoperation die \textbf{feature map} (\textit{Merkmalskarte}) ist [GBC18:370 ff.]. \textit{Goodfellow, Bengio und Courville} erläutern in [GBC18:374 ff.] die Optimierungen, die durch den Einsatz von Faltung hervorgehen: Durch den Einsatz von Kerneln, die nur aus einem Bruchteil der Größe der Eingabedaten bestehen\footnote{ ``einige Dutzend oder hundert Pixeln`` [GBC18:374]
-}, können ``aussagekräftige Merkmale`` aufgespürt werden, was dazu führt, das weniger Parameter gespeichert werden müssen und gleichzeitig die ``statistische Effizienz`` des Netzes erhöht wird (\textbf{sparse interaction} bzw. \textbf{sparse weights}). Durch das bereits erwähnte \textbf{parameter sharing} (auch: \textbf{tied weights}) kann die Effizienz des Netzes weiter erhöht und Speicherplatzverbrauch weiter verringert werden, und Schichten weisen eine \textbf{Äquivarianz} gegenüber Verschiebung auf\footnote{ bereits erwähnt wurde die \textit{shift invariance}: Wird bspw. ein Bild $X$ in das Netz $f$ eingespeist, das in einer Ausgabe $f(X) = Y$ resultiert, dann bedeutet \textit{shift invariance}, das eine Verschiebung der Eingabedaten $g(X) = X+\Gamma$ in dem gleichen $Y$ resultiert: $f(X) = f(g(X))$.  \textit{Äquivarianz} (engl. ``equivariance``) bedeutet, das eine Änderung der Eingabedaten auch zu einer ``gleichartigen Änderung der Ausgabe`` führt: $f(g(x)) = g(f(x))$ [GBC18:377 f.]
+} angewendet, wobei das Ergebnis der Faltungsoperation die \textbf{feature map} (\textit{Merkmalskarte}) ist [GBC18:370 ff.]. \textit{Goodfellow et al.} erläutern in~\cite[374 ff.]{GBC18} die Optimierungen, die durch den Einsatz von Faltung hervorgehen: Durch den Einsatz von Kerneln, die nur aus einem Bruchteil der Größe der Eingabedaten bestehen\footnote{ ``einige Dutzend oder hundert Pixeln`` [GBC18:374]
+}, können ``aussagekräftige Merkmale`` aufgespürt werden, was dazu führt, das weniger Parameter gespeichert werden müssen und gleichzeitig die ``statistische Effizienz`` des Netzes erhöht wird (\textbf{sparse interaction} bzw. \textbf{sparse weights}). Durch das bereits erwähnte \textbf{parameter sharing} (auch: \textbf{tied weights}) kann die Effizienz des Netzes weiter erhöht und Speicherplatzverbrauch weiter verringert werden, und Schichten weisen eine \textbf{Äquivarianz} gegenüber Verschiebung auf\footnote{ bereits erwähnt wurde die \textit{shift invariance}: Wird bspw. ein Bild $X$ in das Netz $f$ eingespeist, das in einer Ausgabe $f(X) = Y$ resultiert, dann bedeutet \textit{shift invariance}, das eine Verschiebung der Eingabedaten $g(X) = X+\Gamma$ in dem gleichen $Y$ resultiert: $f(X) = f(g(X))$.  \textit{Äquivarianz} (engl. ``equivariance``) bedeutet, das eine Änderung der Eingabedaten auch zu einer ``gleichartigen Änderung der Ausgabe`` führt: $f(g(x)) = g(f(x))$~\cite[377]{GBC18}.
 }.
 
 \begin{figure}[h]
@@ -197,7 +197,7 @@ Die mathematische Basis von CNNs ist u.a. die \textbf{Faltungsoperation}\footnot
 
 
 
-CNNs nutzen neben den Convolution Schichten auch Pooling Schichten~\cite[325]{Ert21b}, die die Ausgaben des Netzes durch eine ``statistische Größe der nahegelegenen Ausgaben`` ersetzt [GBC18:379], was die Zahl der Pixel auf den feature maps reduziert\footnote{ \textit{LeCun et al.} weisen darauf hin, dass die Pooling Schicht auch die Aufgabe hat, semantisch ähnliche Merkmale zusammenzufassen: ``the role of the pooling layer is to merge semantically similar features into one.``~\cite[439]{LBH15}
+CNNs nutzen neben den Convolution Schichten auch Pooling Schichten~\cite[325]{Ert21b}, die die Ausgaben des Netzes durch eine ``statistische Größe der nahegelegenen Ausgaben`` ersetzt~\cite[379]{GBC18}, was die Zahl der Pixel auf den feature maps reduziert\footnote{ \textit{LeCun et al.} weisen darauf hin, dass die Pooling Schicht auch die Aufgabe hat, semantisch ähnliche Merkmale zusammenzufassen: ``the role of the pooling layer is to merge semantically similar features into one.``~\cite[439]{LBH15}
 }, ausserdem wird als Aktivierungsfunktion meistens die nichtlineare ReLu (Rectified Linear Unit, s. Gleichung~\ref{eq:gl-relu} und Abbildung~\ref{fig-relu}) verwendet, die die Konvergenz der Netze verbessert~\cite[327]{Ert21b}.\\
 
 ReLU:
