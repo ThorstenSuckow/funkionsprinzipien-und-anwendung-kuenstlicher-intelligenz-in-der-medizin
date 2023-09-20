@@ -14,9 +14,9 @@ Ihre Arbeit liefert grundlegende Ideen für die Kybernetik\footnote{
 
 \subsection{Der Kalkül}
 
-Die \textbf{Principia Mathematica}~\cite{PW27} (PM) der Philosophen und Mathematiker Bertrand Russell (1872 - 1970) und Alfred Whitehead (1861 - 1947) ist ein Werk über die Grundlagen der Mathematik und erschien in drei Bänden zwischen 1910 und 1913. In ihr versuchen Russel und Bertrand die Mathematik auf ein Fundament logischer Grundprinzipien zu stellen\footnote{
+Die \textbf{Principia Mathematica}~\cite{PW27} (PM) der Philosophen und Mathematiker Bertrand Russell (1872 - 1970) und Alfred Whitehead (1861 - 1947) ist ein Werk über die Grundlagen der Mathematik und erschien in drei Bänden zwischen 1910 und 1913. In ihr versuchen Russel und Bertrand die Mathematik auf ein Fundament logischer Grundprinzipien zu stellen (vgl.~\cite[225]{She26})\footnote{
     \textit{Lettvin} erwähnt in einem Interview mit \textit{Anderson und Rosenfeld}, dass Pitts die Principia Mathematica mit 12 Jahren~\cite[2]{AR98} liest
-} [She26:226, Abs. 2].
+}.
 McCulloch beschäftigt die Frage, ob es nicht gleichsam möglich sei, die Vorgänge im Gehirn durch ein ähnliches Fundament logischer Prinzipien erklärbar zu machen~\cite[4]{Arb19}. Basierend auf der Zweiwertigkeit des Alles-oder-nichts-Gesetz (Aktionspotenzial findet statt/ findet nicht statt) finden Pitts und McCulloch ihren Kalkül mit Hilfe der Aussagenlogik.\\
 
 \blockquote[{\cite[100]{MP43}}]{
@@ -270,10 +270,9 @@ Für die \textbf{NOT}-Funktion ($\neg$) legen wir $\Theta = 0$ und ein erregende
 \subsection*{NAND (NOT AND)}
 
 $\{\neg, \lor, \land\}$ bilden ein vollständiges Operatorensystem, d.h., jede boolesche Funktion lässt sich durch einen aussagenlogischen Ausdruck  beschreiben, in dem ausschließlich Operatoren aus dieser Menge vorkommen~\cite[89]{Hof22}.
-[She13] hat gezeigt, das bereits $\{\neg, \land\}$  ausreicht, um ein vollständiges Operatorensystem zu bilden.
 Wie wir oben gesehen haben, können wir über MCP-Zellen die Operatoren $\neg, \lor, \land$ darstellen.
 Ein MCP-Netz ist nach Definition also in der Lage, jede boolesche Funktion zu modellieren.
-Bereits $\{\neg, \land\}$ reichen aus, um dieses Ziel zu erfüllen. \textbf{NAND} (Tabelle~\ref{tab:nand}) kann in einem MCP-Netz folgendermaßen modelliert werden:
+Bereits $\{\neg, \land\}$ reichen aus, um dieses Ziel zu erfüllen\footnote{wie \textit{Sheffer} in~\cite{She13} zeigt}. \textbf{NAND} (Tabelle~\ref{tab:nand}) kann in einem MCP-Netz folgendermaßen modelliert werden:
 
 \begin{table} %[hbtp]
     \centering
@@ -438,7 +437,7 @@ und stellt fest, dass das Nervensystem eine ausgezeichnete logische Maschine rep
 
 \noindent
 Konsequenterweise nutzt \textit{Minsky} in~\cite[32 ff.]{Min67} die MCP-Zelle als endlichen Automaten\footnote{
-    Ein endlicher Automat ist eine informationsverarbeitende Maschine. Basierend auf Eingaben lassen sich mit einer solchen Maschine Zustände, Zustandsübergänge und Ausgaben modellieren. Bei einem \textit{endlichen} Automaten sind die genannten Eingaben, Zustände, und Ausgaben endlich. [SSH95:29, ``2.1 Endliche Automaten`` ff.]
+    Ein endlicher Automat ist eine informationsverarbeitende Maschine. Basierend auf Eingaben lassen sich mit einer solchen Maschine Zustände, Zustandsübergänge und Ausgaben modellieren. Bei einem \textit{endlichen} Automaten sind die genannten Eingaben, Zustände, und Ausgaben endlich (vgl.~\cite[26 ff.]{SSH95}).
 }\footnote{
     dass MCP-Netze endliche Automaten sind: Auch in~\cite[76]{Cow90} sowie~\cite[47, ``Satz 2.4``]{Roj93}. \textit{Arbib} weist darauf hin, dass die Arbeit von McCulloch und Pitts grundlegend für Automatentheorie gewesen ist~\cite[8]{Arb19}
 } mit zwei Zuständen, aus denen andere endliche Automaten gebaut werden, und nennt diese, im Jahr 1967 schon geläufig: \textbf{Neuronale Netze}~\cite[33]{Min67}.
