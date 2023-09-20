@@ -69,7 +69,7 @@ Die Weiterleitung in myeliniserten Axonen bezeichnet man deshalb als \textbf{sal
 \noindent
 Im groben besteht ein Expertensystem aus einer domänenspezifischen \textit{Wissensbasis}, auf der ein \textit{Inferenzmotor} zur Findung von Antworten und Schlussfolgerungen operiert. \textit{Russel und Norvig} erklären, dass Expertensysteme
 
-\blockquote[{[RN09, S. 737]}]{
+\blockquote[{\cite[737]{RN09}}]{
     optimale Entscheidungen empfehlen und dabei die Prioritäten des Benutzers sowie die verfügbaren Evidenzen berücksichtigen
 }
 
@@ -119,7 +119,7 @@ In dem Kontext des im Abschnitt~\ref{kiwinter} erwähnten Lighthill Reports bezi
 }
 
 \noindent
-\textit{Russell und Norvig} beziehen sich auf einen Zeitraum um/ nach 1988, in dem nach einer Phase von Investitionen in Milliardenhöhe in den Forschungszweig ``viele Unternehmen verschwanden, weil sie ihre außergewöhnlichen Versprechungen nicht halten konnten.`` [RN09, S. 48, 1.3.6 letzter Abs.]. Auf gleichen Zeitraum bezieht sich \textit{McCorduck} in~\cite[432]{Mcc04}; vgl. hierzu auch:
+\textit{Russell und Norvig} beziehen sich auf einen Zeitraum um/ nach 1988, in dem nach einer Phase von Investitionen in Milliardenhöhe in den Forschungszweig ``viele Unternehmen verschwanden, weil sie ihre außergewöhnlichen Versprechungen nicht halten konnten.``~\cite[48]{RN09}. Auf gleichen Zeitraum bezieht sich \textit{McCorduck} in~\cite[432]{Mcc04}; vgl. hierzu auch:
 
 \blockquote[{\cite[656]{Gar19}}]{
     Dozens of expert systems companies and AI-focused hardware manufacturers failed \textit{en masse} as hype turned to disillusionment.
@@ -148,10 +148,10 @@ Eine vollständige Beschreibung der eindrucksvollen Architektur findet sich in\c
 Die \textbf{Lernrate} ($\eta$,in der Literatur auch $\alpha$) ist der Koeffizient für die Gewichtsanpassungen in einem künstlichen Neuron.
 
 Wie in Abschnitt~\ref{sec-lernregel} gesehen, berechnet die Lernregel die Gewichte auf Basis des \textit{Fehlers}, also der Differenz von $\text{erwartete Ausgabe}$ und $\text{tatsächliche Ausgabe}$: Ist der Fehler $-1$, werden die Gewichte verringert, ist der Fehler 1, werden die Gewichte erhöht.
-Die Lernrate $\eta$ ist der Koeffizient für die Gewichtsanpassung, und wird auch \textit{Schrittweite} genannt (vgl.~\cite[93]{GBC18} und [RN09:172]).
+Die Lernrate $\eta$ ist der Koeffizient für die Gewichtsanpassung, und wird auch \textit{Schrittweite} genannt (vgl.~\cite[93]{GBC18} und~\cite[172]{RN09}).
 
 Üblicherweise liegt $\eta$ zwischen $0$ und $1$\footnote{
-    vgl.~\cite[61]{Fau94}; ausserdem: ``$\alpha$ [$\eta$] ist eine kleine Konstante`` [RN09:172, Abs. 2]. Gleiche Stelle beleuchtet das Für und Wider kleiner und großer Werte von $\eta$; \textit{Salomon} weist in~\cite[173]{Sal90} darauf hin, dass eine geeignete Lernrate auch von der Aufgabenstellung abhängt.
+    vgl.~\cite[61]{Fau94}; ausserdem: ``$\alpha$ [$\eta$] ist eine kleine Konstante``~\cite[172]{RN09}. Gleiche Stelle beleuchtet das Für und Wider kleiner und großer Werte von $\eta$; \textit{Salomon} weist in~\cite[173]{Sal90} darauf hin, dass eine geeignete Lernrate auch von der Aufgabenstellung abhängt.
 }.
 
 

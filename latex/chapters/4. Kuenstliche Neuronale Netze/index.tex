@@ -4,15 +4,15 @@
 \subsection{Renaissance der neuronalen Netze}\label{renaissance}
 
 
-In den 80er Jahren sahen die großen Industrienationen in der Erforschung von KI einen Wettbewerbsvorteil, nachdem die Technologie durch den Einsatz von Expertensystemen (vgl \ref{appendix:expertensystem}) Einzug in die Wirtschaft gefunden hatte: So ermöglichte R1/XCON\footnote{
-    das ``erste erfolgreiche kommerzielle Expertensystem`` [RN09:48, Abs. 1]
-}  bei dem einsetzenden Unternehmen DEC (Digital Equipment Corporation) Einsparungen in Millionenhöhe [RN:48]: Die Domäne von R1 war die regelbasierte Konfiguration von VAX-11/780 Systemen nach Kundenanforderungen\footnote{
+In den 80er Jahren sahen die großen Industrienationen in der Erforschung von KI einen Wettbewerbsvorteil, nachdem die Technologie durch den Einsatz von Expertensystemen (vgl \ref{appendix:expertensystem}) Einzug in die Wirtschaft gefunden hatte: So ermöglichte R1/XCON bei dem einsetzenden Unternehmen DEC (Digital Equipment Corporation) Einsparungen in Millionenhöhe\footnote{
+    ~\cite[48]{RN09}; ebenda wird es von \textit{Russell und Norvig} als das ``erste erfolgreiche kommerzielle Expertensystem`` bezeichnet
+} : Die Domäne von R1 war die regelbasierte Konfiguration von VAX-11/780 Systemen nach Kundenanforderungen\footnote{
     siehe hierzu insb. \cite{Mcd80} sowie~\cite[63]{Hor90}
-}. Japan kündigte 1981 das 5th Generation Projekt (vgl.~\cite{Gar19}) an, einen Zehnjahresplan für den Aufbau ``intelligenter Computer`` [RN09:48, Abs. 2]\footnote{
+}. Japan kündigte 1981 das 5th Generation Projekt (vgl.~\cite{Gar19}) an, einen Zehnjahresplan für den Aufbau ``intelligenter Computer``~\cite[48]{RN09}\footnote{
     Zusammenfassend war das Ziel des 5th Generation Computer Systems (FGCS)-Projekt: ``Its ultimate goal is to develop integrated systems, both hardware and software, suitable for the major computer application in the nextdecade, identified by the Japanese as 'knowledge information processing'.``~\cite[637]{Sha83}.
 }, und in Großbritannien sorgte der Alvey-Report\footnote{
     \url{https://www.chilton-computing.org.uk/inf/literature/reports/alvey\_report/overview.htm} - empfohlene Massnahmen: \url{https://www.chilton-computing.org.uk/inf/literature/reports/alvey\_report/p008.htm} (beide abgerufen 31.08.2023)
-} für eine Wiederaufnahme finanzieller Unterstützung, die durch den Lighthill-Report aufgehoben worden war [RN09:48, Abs. 2]\footnote{
+} für eine Wiederaufnahme finanzieller Unterstützung, die durch den Lighthill-Report aufgehoben worden war (vgl.~\cite[48]{RN09})\footnote{
     In Deutschland wird 1988 die DFKI GmbH (Deutsches Forschungszentrum für Künstliche Intelligenz) gegründet, eine ``wirtschaftsnahe Forschungseinrichtung`` auf ``dem Gebiet innovativer Softwaretechnologien auf der Basis von Methoden der Künstlichen Intelligenz`` (\url{https://www.dfki.de/fileadmin/user\_upload/DFKI/Medien/Ueber\_uns/DFKI\_im\_UEberblick/Unternehmensprofil/20210120\_DFKI\_Unternehmensprofil\_DE.pdf}, abgerufen 31.08.2023)
 }.
 
@@ -33,7 +33,7 @@ denn mit den in den 80er Jahren verfügbaren Supercomputern und Parallelrechner\
 Bislang haben wir überwiegend künstliche Neuronen betrachtet, bei denen die Eingabe direkt mit der Ausgabe verbunden ist. Allerdings haben wir bereits für komplexe Boolesche Funktionen in Abschnitt~\ref{seq-mcpbool} gesehen, dass ein Verbund von mehreren MCP-Zellen in der Lage ist, auch Funktionen für nicht linear separable Daten zu modellieren. Hierzu hatten wir das MCP-Netz in zwei Schichten aufgeteilt, in denen die erste Schicht $X_1 := (\neg A \lor B)$ sowie $X_2 := (\neg B \lor A)$ und die zweite Schicht $X_1 \lor X_2$ formt, was nichts anderes als die disjunktive Normalform von XOR (Tabelle~\ref{tab:xor})ist.
 
 Bei dem Rosenblatt-Perzeptron, das alleine nicht in der Lage ist, XOR zu erlernen, handelt es sich um ein \textbf{Einschichtiges neuronales Feedforward-Netz}.
-Das bedeutet, dass es nur Eingabe und Ausgabe gibt und die Informationen ausschliesslich in Richtung Ausgang fliessen [RN09:848 ff.].
+Das bedeutet, dass es nur Eingabe und Ausgabe gibt und die Informationen ausschliesslich in Richtung Ausgang fliessen~\cite[848]{RN09}.
 
 Allerdings ist auch ein \textbf{mehrschichtiges Perzeptron} (MLP, \textit{multi-layer perceptron})~\cite[6]{GBC18} in der Lage, nicht linear-separable Daten zu klassifizieren.
 Ein MLP repräsentiert ein tiefes Feedforward-Netz, in dem die Eingabeschicht (\textbf{Input Layer}) und die Ausgabeschicht (\textbf{Output Layer}) über weitere Schichten von Neuronen (\textbf{hidden layer}) verbunden ist; die Neuronen in diesen Schichten implementieren Eingabe- und Aktivierungsfunktion und leiten ihre Berechnungen an die nächsten Zellen bis zu der Ausgabeschicht weiter. \textit{Murtagh} zeigt in \cite[184 f.]{Mur91} die Modellierung von XOR anhand eines MLPs.
@@ -56,12 +56,12 @@ Der Algorithmus geht auf \textit{Rumelhart, Hinton und Williams} zurück, die in
 } vorstellen, um berechnete Werte \textit{rückwärts} in das Netz einzuspeisen.
 Hierbei wird für die Netzausgabe (\textit{forward pass}) ein Approximationsfehler berechnet, der als Basis für die Gewichtsänderungen beim rückwärtigen Lauf (\textit{backward pass}) bis zur ersten verborgenen Schicht genutzt wird.
 Der Vorgang (forward pass, backward pass, forward pass...) wird so lange für alle Trainingsbeispiele wiederholt, bis die Gewichte sich nicht mehr ändern, oder eine andere Schranke (Epochen, Zeit) erreicht ist~\cite[315]{Ert21b}\footnote{
-    ausführlicher Algorithmus in [RN09:853, Abbildung 18.24]
+    ausführlicher Algorithmus in~\cite[853 Abbildung 18.24]{RN09}.
 }.
 
 
 
-Die mathematische Basis für Backpropagation ist das \textbf{Gradientenabstiegsverfahren}, das hilft, in einem neuronalen Netz Parameter für möglichst optimale Verlust-Werte (also geringe Fehler-Werte) zu finden [RN09:837] (s. Abbildung~\ref{fig-gradient})\footnote{
+Die mathematische Basis für Backpropagation ist das \textbf{Gradientenabstiegsverfahren}, das hilft, in einem neuronalen Netz Parameter für möglichst optimale (d.h. kleine) Verlust-Werte (also geringe Fehler-Werte) zu finden (vgl.~\cite[837]{RN09}; s. a. Abbildung~\ref{fig-gradient})\footnote{
     ein kompakter Überblick zum Thema ``Optimierung auf Gradientenbasis`` findet sich in~\cite[90 ff.]{GBC18}
 }.  Ausserdem unterstützt die \textbf{Sigmoid}\footnote{
     \textit{sigmoid}: ``Sigma``, griechischer Buchstabe $\Sigma$, entspricht dem lateinischen ``S``; ``\textit{eidos}`` (griechisch) Form, Gestalt
@@ -69,7 +69,7 @@ Die mathematische Basis für Backpropagation ist das \textbf{Gradientenabstiegsv
 }  aufgrund ihres nicht-linearen Charakters eine größere Klasse darstellbarer Funktionen und damit Lösungen für Probleme, die ein klassisches Perzeptron nicht lösen kann (vgl.~\cite[316]{Ert21b})\footnote{
     In~\cite[311 ff.]{RM87} zeigen \textit{Rumelhart, Hinton und Williams} die Architektur eines mehrschichtigen neuronalen Netzes, das das XOR-Problem über Backpropagation löst. In~\cite[536]{RHW86} grenzen sie ihr Modell vom biologischen Lernen ab: ``The learning procedure, in its current form, is not a plausible model of learning in brains``.
 } \footnote{
-    \textit{Ertel} weist darauf hin, dass die Klasse der darstellbaren Funktionen erhöht wird, wenn man für ein Perzeptron eine variable Sigmoid-Funktion verwendet~\cite[316]{Ert21b}. Siehe hierzu auch ``Sigmoid-Perzeptron`` in [RN09:847]
+    \textit{Ertel} weist darauf hin, dass die Klasse der darstellbaren Funktionen erhöht wird, wenn man für ein Perzeptron eine variable Sigmoid-Funktion verwendet~\cite[316]{Ert21b}. Siehe hierzu auch ``Sigmoid-Perzeptron`` in~\cite[847]{RN09}
 }.\\
 
 Sigmoid:
@@ -108,10 +108,10 @@ Der Physiker \textit{John J. Hopfield} stellt 1982 in~\cite{Hop82} ein Modell f�
 } in Form eines ``neural network chip``~\cite[457]{AR88}\footnote{
     https://techmonitor.ai/technology/att\_creates\_parallel\_neural\_net\_chip\_to\_solve\_routing\_problems
 } als Hardware umgesetzt wird: Das Modell ist ein \textbf{rekurrentes Netz}\footnote{
-Ein rekurrentes neuronales Netz ``speist seine Ausgaben wieder in seine eigenen Eingaben ein``[RN09:847]. Im Gegensatz zu Feedforward-Netzen sind rekurrente Netze also \textit{rückgekoppelt}
+Ein rekurrentes neuronales Netz ``speist seine Ausgaben wieder in seine eigenen Eingaben ein``~\cite[847]{RN09}. Im Gegensatz zu Feedforward-Netzen sind rekurrente Netze also \textit{rückgekoppelt}
 } ohne Schlingen ($w_{ij} = 0$)~\cite[291]{Ert21b}\footnote{ Eine \textit{Schlinge} (engl. \textit{loop}) in einem Graphen ist ein Kantenzug, der einen Knoten mit sich selbst verbindet~\cite[30]{Die17}. Ein Beispiel für ein Netz mit Schlingen ist das \textbf{MAXNET} (s.~\cite{Lip87}), das zu der Gruppe der \textbf{competitive nets} gehört: Es kann als Subnetz zur Ermittlung der Zelle mit dem größten Aktivierungswert genutzt werden~\cite[158 f.]{Fau94}.
 } mit bidirektionalen symmetrischen Kanten ($w_{ij} = w_{ji}$) und fungiert als \textbf{Assoziativspeicher}, also als Netz, das, wenn es für eine Eingabe $x$ die Ausgabe $y$ liefert, $y$ auch für $x'$ berechnet, sofern $x'$ nahe genug bei $x$ liegt~\cite[251]{Roj93}\footnote{
-    Nach dem Training ist das Netz dazu in der Lage, für einen Stimulus ein Aktualisierungsmuster einzunehmen, dass diesem am ähnlichsten ist [RN09:882], was an die ``Cell Assemblies`` von Hebb erinnert (Kapitel 2.2.1). \textit{Lansner} verweist in~\cite[179]{Lan09} genau darauf, merkt aber gleichfalls an, dass das Modell aufgrund der Rekurrenz und Symmetrie nicht seinem biologischen Vorbild entspricht~\cite[180]{Lan09}
+    Nach dem Training ist das Netz dazu in der Lage, für einen Stimulus ein Aktualisierungsmuster einzunehmen, dass diesem am ähnlichsten ist (vgl.~\cite[882]{RN09}), was an die ``Cell Assemblies`` von Hebb erinnert (Kapitel 2.2.1). \textit{Lansner} verweist in~\cite[179]{Lan09} genau darauf, merkt aber gleichfalls an, dass das Modell aufgrund der Rekurrenz und Symmetrie nicht seinem biologischen Vorbild entspricht~\cite[180]{Lan09}
 }, was das Netz gegenüber \textit{Rauschen} und \textit{Störungen}\footnote{
     Rauschen bzw. Störungen bei Stimuli in Form von Bildern ($n * m$ Pixeln) können durch zufällig hinzugefügte oder entfernte Pixel entstehen, oder durch Rotation (axiale Verschiebung) der Daten vor dem Einspeisen in das Netz. Beispiele für verrauschte Daten in~\cite[294]{Ert21b}.
 } resistenter macht.
@@ -182,7 +182,7 @@ Die mathematische Basis von CNNs ist u.a. die \textbf{Faltungsoperation}\footnot
     ``\textit{convolution}`` (engl.): Faltung
 }: Hierbei wird auf Eingabedaten ein \textbf{Kernel} (die \textit{Faltungsmatrix})\footnote{
     ``das biologische Analogon zu den Filtern [Kerneln] sind die bei den Sinnesorganen vorkommenden rezeptiven Felder.``~\cite[326]{Ert21b}. Vgl. hierzu auch~\cite[439]{LBH15}.
-} angewendet, wobei das Ergebnis der Faltungsoperation die \textbf{feature map} (\textit{Merkmalskarte}) ist [GBC18:370 ff.]. \textit{Goodfellow et al.} erläutern in~\cite[374 ff.]{GBC18} die Optimierungen, die durch den Einsatz von Faltung hervorgehen: Durch den Einsatz von Kerneln, die nur aus einem Bruchteil der Größe der Eingabedaten bestehen\footnote{ ``einige Dutzend oder hundert Pixeln`` [GBC18:374]
+} angewendet, wobei das Ergebnis der Faltungsoperation die \textbf{feature map} (\textit{Merkmalskarte}) ist (vgl.~\cite[370]{GBC18}). \textit{Goodfellow et al.} erläutern in~\cite[374 ff.]{GBC18} die Optimierungen, die durch den Einsatz von Faltung hervorgehen: Durch den Einsatz von Kerneln, die nur aus einem Bruchteil der Größe der Eingabedaten bestehen\footnote{ ``einige Dutzend oder hundert Pixeln`` [GBC18:374]
 }, können ``aussagekräftige Merkmale`` aufgespürt werden, was dazu führt, das weniger Parameter gespeichert werden müssen und gleichzeitig die ``statistische Effizienz`` des Netzes erhöht wird (\textbf{sparse interaction} bzw. \textbf{sparse weights}). Durch das bereits erwähnte \textbf{parameter sharing} (auch: \textbf{tied weights}) kann die Effizienz des Netzes weiter erhöht und Speicherplatzverbrauch weiter verringert werden, und Schichten weisen eine \textbf{Äquivarianz} gegenüber Verschiebung auf\footnote{ bereits erwähnt wurde die \textit{shift invariance}: Wird bspw. ein Bild $X$ in das Netz $f$ eingespeist, das in einer Ausgabe $f(X) = Y$ resultiert, dann bedeutet \textit{shift invariance}, das eine Verschiebung der Eingabedaten $g(X) = X+\Gamma$ in dem gleichen $Y$ resultiert: $f(X) = f(g(X))$.  \textit{Äquivarianz} (engl. ``equivariance``) bedeutet, das eine Änderung der Eingabedaten auch zu einer ``gleichartigen Änderung der Ausgabe`` führt: $f(g(x)) = g(f(x))$~\cite[377]{GBC18}.
 }.
 

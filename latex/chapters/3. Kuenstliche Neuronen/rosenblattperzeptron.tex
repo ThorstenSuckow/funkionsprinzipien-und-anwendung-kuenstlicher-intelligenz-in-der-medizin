@@ -92,7 +92,7 @@ g:= g(X) = \sum^n_{i=1} P_i(X) w_i
 
 \subsection{Lineare Trennbarkeit}
 Mit Gleichung~\ref{eq:gl-rpact} folgt für eine Eingabe, dass sie entweder eine $0$ oder $1$ als Ausgabe erzeugt.
-Wir haben es hier also wieder mit einem binären Wertebereich zu tun, den wir auch als zwei unterschiedliche Klassen [RN09:812, Abs. 2] verstehen können: Eingabedaten können somit einer der beiden Klassen zugeordnet werden.
+Wir haben es hier also wieder mit einem binären Wertebereich zu tun, den wir auch als zwei unterschiedliche Klassen verstehen können: Eingabedaten können somit einer der beiden Klassen zugeordnet werden (vgl.~\cite[812]{RN09}).
 Im Folgenden wollen wir die Zusammenhänge geometrisch darstellen.
 Der Einfachheit halber beschränken wir uns hierzu auf den zweidimensionalen Raum $\R_+^2$ und betrachten hier die \textit{1. Winkelhalbierende} im 1. Quadrant des kartesischen Koordinatensystems.
 Die zugehörige \textit{Gerade} $L$ ist
@@ -203,9 +203,9 @@ Die Eigenschaft linearer Trennbarkeit von Daten ist eine wesentliche Voraussetzu
 Aus diesem Grund wird das Perzeptron auch \textbf{linearer Klassifizierer} genannt (vgl.~\cite[210-216]{Ert21a}).
 
 Das Perzeptron \textbf{lernt} diese Gewichte zunächst durch \textit{Traningsdaten}\footnote{
-    ``supervised learning``: überwachtes lernen; vgl. [RN09:811, ``18.2 Überwachtes Lernen``] sowie~\cite[15]{Fau94}. \textit{Arbib et al.} weisen darauf hin, dass \textit{überwachtes Lernen} mit dem Perzeptron eingeführt wurde: ``Supervised learning adjusts the weights in an attempt to respond to explicit error signals provided by a “teacher,” which may be external, or another network in the same “brain.” This model was introduced in the perceptron model, [...].``~\cite[30]{Arb03}
+    ``supervised learning``: überwachtes lernen; vgl.~\cite[811]{RN09} sowie~\cite[15]{Fau94}. \textit{Arbib et al.} weisen darauf hin, dass \textit{überwachtes Lernen} mit dem Perzeptron eingeführt wurde: ``Supervised learning adjusts the weights in an attempt to respond to explicit error signals provided by a “teacher,” which may be external, or another network in the same “brain.” This model was introduced in the perceptron model, [...].``~\cite[30]{Arb03}
 }.
-Jeder Eintrag dieser Trainingsdaten ist einer erwarteten Ausgabe zugeordnet. Der Algorithmus besteht aus folgenden Schritten (vgl.~\cite[65]{RM87} sowie [RN09 S. 842]):
+Jeder Eintrag dieser Trainingsdaten ist einer erwarteten Ausgabe zugeordnet. Der Algorithmus besteht aus folgenden Schritten (vgl.~\cite[65]{RM87} sowie~\cite[842]{RN09}):
 
 
 
@@ -249,7 +249,7 @@ Da wir in unserem Beispiel nur Daten betrachtet haben, die durch eine Gerade dur
 \noindent
 Dies erreicht man mit einer sogenannten \textbf{bias unit}.
 Das Bias-Gewicht\footnote{
-    vgl. [RN09:839]
+    vgl.~\cite[839]{RN09}
 } ist ein Wert, der zu der Gleichung aus Definition\ref{eq:gl-rpact} hinzuaddiert wird, und für eine Verschiebung der Ursprungsgeraden\footnote{
     im $ \mathbb{R}^n$ durch eine Hyperebene im Ursprung~\cite[215]{Ert21a}
 } sorgt.
@@ -395,13 +395,13 @@ One popular version is  that the publication of our book so discouraged research
 \noindent
 \textit{Anderson und Rosenfeld} erwähnen ``the influence of Marvin Minsky and Seymour Papert on the loss of interest in neural networks during the 1970s``~\cite[X]{AR98}, worüber ihre Interviewpartner in gleicher Quelle sprechen.
 
-\textit{Russell und Norvig} fassen zusammen, dass \textit{Minsky und Papert} in ihrem Buch bewiesen haben, dass ein Perzeptron alles lernen kann, was es auch darstellen kann, aber es könnte halt nur sehr wenig darstellen[RN09:45]\footnote{
+\textit{Russell und Norvig} fassen zusammen, dass \textit{Minsky und Papert} in ihrem Buch bewiesen haben, dass ein Perzeptron alles lernen kann, was es auch darstellen kann, aber es könnte halt nur sehr wenig darstellen (vgl.~\cite[45]{RN09})\footnote{
     vgl. hierzu~\cite[xiii]{MP88}
 }. Auf gleicher Seite verweisen sie auf die zunehmende Komplexität der zu berechnenden Modelle, die nicht alleine durch schnellere und bessere Hardware kompensiert werden konnte.
 
 Der Lighthill Report\footnote{
     ``Workers entered the field around 1950, and even around 1960, with high hopes that are very far from having been realised in 1972. In no part of the field have the discoveries made so far produced the major impact that was then promised.`` in \url{https://www.chilton-computing.org.uk/inf/literature/reports/lighthill\_report/p001.htm}, ``3 Past disappointments``, abgerufen 28.08.2023
-} sollte dann 1973 eine Grundlage für die Entscheidung der britischen Regierung darstellen, das Budget für die Forschung an KI zu kürzen [RN09:45]. Neuronale Netze wurden als Grundlage künstlicher Intelligenz zunächst verworfen\footnote{
+} sollte dann 1973 eine Grundlage für die Entscheidung der britischen Regierung darstellen, das Budget für die Forschung an KI zu kürzen (vgl. ~\cite[45]{RN09}). Neuronale Netze wurden als Grundlage künstlicher Intelligenz zunächst verworfen\footnote{
     vgl.~\cite[641]{Ola96}
 }, und die Forschung daran ging zurück, bis sie Anfang/Mitte der 1980er Jahre wieder aufgenommen wurde: Diese Periode ist gemeinhin als ``KI-Winter`` (vgl. \ref{appendix:kiwinter}) bekannt.
 
