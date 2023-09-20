@@ -23,7 +23,7 @@ Auch der technologische Fortschritt begünstigte das Wiederaufleben des Interess
 }
 
 denn mit den in den 80er Jahren verfügbaren Supercomputern und Parallelrechner\footnote{
-    Auch \textit{Fausett} nennt bessere Rechenleistung als einen Grund für den erneuerten Enthusiasmus [Fau94:26]. Im Kontext der in diesem Kapitel vorgestellten mehrschichtigen Netzen und ihrem Konzept der versteckten Schichten ist nachvollziehbar, das mehr Rechenleistung den komplexen Verfahren entgegenkommt. \textit{Goodfellow, Bengio und Courville} gehen auf die Korrelation Modellgrösse und Anzahl der Nervenzellen in einem menschlichen Gehirn (vgl. Fussnote 15 in **Kapitel 1.2**) in [GBC18:24 ff.] ein
+    Auch \textit{Fausett} nennt bessere Rechenleistung als einen Grund für den erneuerten Enthusiasmus (vgl.~\cite[26]{Fau94}). Im Kontext der in diesem Kapitel vorgestellten mehrschichtigen Netzen und ihrem Konzept der versteckten Schichten ist nachvollziehbar, das mehr Rechenleistung den komplexen Verfahren entgegenkommt. \textit{Goodfellow, Bengio und Courville} gehen auf die Korrelation Modellgrösse und Anzahl der Nervenzellen in einem menschlichen Gehirn (vgl. Fussnote 15 in **Kapitel 1.2**) in [GBC18:24 ff.] ein
 } erhält auch der Konnektionismus Auftrieb, der \textbf{neuronale Netze} als Grundlage hat~\cite[15]{Dor91}, und mit dem sich Modelle wieder mehr an den biologischen Vorbildern orientieren sollten\footnote{
     vgl.~\cite[43]{RM87} sowie [GBC18:18-19]}.
 
@@ -97,7 +97,7 @@ Sigmoid:
     Informelle Darstellung des Gradientenabtiegsverfahrens. Die y-Achse repräsentiert die Anzahl der Fehler, die x-Achse den berechneten Gewichtsvektor in einem neuronalen Netz. Offensichtlich existiert in dem Netz ein optimaler Wert für w, der mittels Gradientenabstieg gefunden werden soll (vgl.~\cite[52, Abb. 2.15]{Son22}).
 \end{figure}
 
-In den 80er Jahren werden neben dem Backpropagation-Algorithmus weitere Entwürfe für neuronale Netze erstellt, die für ein Wiederaufleben des Interesses an der transdisziplinären Wissenschaft sorgen\footnote{vgl. [Fau94:25 ff.]}.
+In den 80er Jahren werden neben dem Backpropagation-Algorithmus weitere Entwürfe für neuronale Netze erstellt, die für ein Wiederaufleben des Interesses an der transdisziplinären Wissenschaft sorgen\footnote{vgl.~\cite[25 f.]{Fau94}}.
 
 \subsection{Hopfield-Netz}
 
@@ -109,7 +109,7 @@ Der Physiker \textit{John J. Hopfield} stellt 1982 in~\cite{Hop82} ein Modell f�
     https://techmonitor.ai/technology/att\_creates\_parallel\_neural\_net\_chip\_to\_solve\_routing\_problems
 } als Hardware umgesetzt wird: Das Modell ist ein \textbf{rekurrentes Netz}\footnote{
 Ein rekurrentes neuronales Netz ``speist seine Ausgaben wieder in seine eigenen Eingaben ein``[RN09:847]. Im Gegensatz zu Feedforward-Netzen sind rekurrente Netze also \textit{rückgekoppelt}
-} ohne Schlingen ($w_{ij} = 0$)~\cite[291]{Ert21b}\footnote{ Eine \textit{Schlinge} (engl. \textit{loop}) in einem Graphen ist ein Kantenzug, der einen Knoten mit sich selbst verbindet~\cite[30]{Die17}. Ein Beispiel für ein Netz mit Schlingen ist das \textbf{MAXNET} (s.~\cite{Lip87}), das zu der Gruppe der \textbf{competitive nets} gehört: Es kann als Subnetz zur Ermittlung der Zelle mit dem größten Aktivierungswert genutzt werden [Fau94:158 ff.]
+} ohne Schlingen ($w_{ij} = 0$)~\cite[291]{Ert21b}\footnote{ Eine \textit{Schlinge} (engl. \textit{loop}) in einem Graphen ist ein Kantenzug, der einen Knoten mit sich selbst verbindet~\cite[30]{Die17}. Ein Beispiel für ein Netz mit Schlingen ist das \textbf{MAXNET} (s.~\cite{Lip87}), das zu der Gruppe der \textbf{competitive nets} gehört: Es kann als Subnetz zur Ermittlung der Zelle mit dem größten Aktivierungswert genutzt werden~\cite[158 f.]{Fau94}.
 } mit bidirektionalen symmetrischen Kanten ($w_{ij} = w_{ji}$) und fungiert als \textbf{Assoziativspeicher}, also als Netz, das, wenn es für eine Eingabe $x$ die Ausgabe $y$ liefert, $y$ auch für $x'$ berechnet, sofern $x'$ nahe genug bei $x$ liegt~\cite[251]{Roj93}\footnote{
     Nach dem Training ist das Netz dazu in der Lage, für einen Stimulus ein Aktualisierungsmuster einzunehmen, dass diesem am ähnlichsten ist [RN09:882], was an die ``Cell Assemblies`` von Hebb erinnert (Kapitel 2.2.1). \textit{Lansner} verweist in~\cite[179]{Lan09} genau darauf, merkt aber gleichfalls an, dass das Modell aufgrund der Rekurrenz und Symmetrie nicht seinem biologischen Vorbild entspricht~\cite[180]{Lan09}
 }, was das Netz gegenüber \textit{Rauschen} und \textit{Störungen}\footnote{
@@ -124,7 +124,7 @@ E = -1/2 * \sum^n_{i=1}\sum^n_{j=1} w_{ij}x_ix_j + \sum^n_{i=1}\Theta_ix_i
 \label{eq:gl-energie}
 \end{equation}
 
-Dies wird auch als die \textbf{Energiefunktion} des Netzes bezeichnet, wobei $E$ entweder konstant bleibt oder kleiner wird - aber nicht größer: Ist in einem Netz eine solche Energiefunktion vorhanden, kann gezeigt werden, das das Netz konvergiert [Fau94:139], und zwar hin zu einem Zustand \textit{minimaler Energie}: \textit{Ertel} erklärt hierzu, dass gelernte Muster in dem Netz ``Minima der Energiefunktion im Zustandsraum`` darstellen; werden zuviele Muster gelernt, ``konvergiert das System gegen Minima, die keinen gelernten Muster entsprechen``.
+Dies wird auch als die \textbf{Energiefunktion} des Netzes bezeichnet, wobei $E$ entweder konstant bleibt oder kleiner wird - aber nicht größer: Ist in einem Netz eine solche Energiefunktion vorhanden, kann gezeigt werden, das das Netz konvergiert (vgl.~\cite[139]{Fau94}), und zwar hin zu einem Zustand \textit{minimaler Energie}: \textit{Ertel} erklärt hierzu, dass gelernte Muster in dem Netz ``Minima der Energiefunktion im Zustandsraum`` darstellen; werden zuviele Muster gelernt, ``konvergiert das System gegen Minima, die keinen gelernten Muster entsprechen``.
 Damit ist das Modell ``formal äquivalent zu einem physikalischen Modell des Magnetismus``~\cite[293]{Ert21b}\footnote{
     vgl. auch~\cite[417]{AR98} sowie~\cite[2556 f.]{Hop82}
 }, wo ebenfalls solche \textit{Phasenübergänge} von einem geordneten hin zu einem chaotischen System beobachtet werden können\footnote{

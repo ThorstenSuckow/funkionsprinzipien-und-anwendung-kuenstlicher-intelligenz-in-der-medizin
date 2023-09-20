@@ -203,7 +203,7 @@ Die Eigenschaft linearer Trennbarkeit von Daten ist eine wesentliche Voraussetzu
 Aus diesem Grund wird das Perzeptron auch \textbf{linearer Klassifizierer} genannt (vgl.~\cite[210-216]{Ert21a}).
 
 Das Perzeptron \textbf{lernt} diese Gewichte zunächst durch \textit{Traningsdaten}\footnote{
-    ``supervised learning``: überwachtes lernen; vgl. [RN09:811, ``18.2 Überwachtes Lernen``] sowie [Fau94:15]. \textit{Arbib et al.} weisen darauf hin, dass \textit{überwachtes Lernen} mit dem Perzeptron eingeführt wurde: ``Supervised learning adjusts the weights in an attempt to respond to explicit error signals provided by a “teacher,” which may be external, or another network in the same “brain.” This model was introduced in the perceptron model, [...].``~\cite[30]{Arb03}
+    ``supervised learning``: überwachtes lernen; vgl. [RN09:811, ``18.2 Überwachtes Lernen``] sowie~\cite[15]{Fau94}. \textit{Arbib et al.} weisen darauf hin, dass \textit{überwachtes Lernen} mit dem Perzeptron eingeführt wurde: ``Supervised learning adjusts the weights in an attempt to respond to explicit error signals provided by a “teacher,” which may be external, or another network in the same “brain.” This model was introduced in the perceptron model, [...].``~\cite[30]{Arb03}
 }.
 Jeder Eintrag dieser Trainingsdaten ist einer erwarteten Ausgabe zugeordnet. Der Algorithmus besteht aus folgenden Schritten (vgl.~\cite[65]{RM87} sowie [RN09 S. 842]):
 
@@ -229,9 +229,9 @@ Die Beziehung zu der Hebbschen Lernregel formulieren \textit{Arbib et al.}\footn
 
 \noindent
 Die Schritte werden so lange durchlaufen, bis für alle Trainingsdaten die Ausgabe korrekt ist, oder eine maximale Anzahl von Trainingsläufen erreicht wurde.
-Einen Trainingslauf nennt man dabei \textit{Epoche} [Fau94:436, ``Training epoch``].
+Einen Trainingslauf nennt man dabei \textit{Epoche}~\cite[436]{Fau94}.
 Sind die Trainingsdaten linear separabel, \textit{konvergiert}\footnote{
-    ``iterative training processes converge if the weight updates reach equilibrium (stop changing)`` [Fau94:425, ``Convergence``]
+    ``iterative training processes converge if the weight updates reach equilibrium (stop changing)``~\cite[425 ``Convergence``]{Fau94}.
 } das Perzeptron nach einer endlichen Zahl von Epochen~\cite[164]{MP88}\footnote{
     Das Konvergenz-Theorem besagt: ``if a linear separation exists, the perceptron error-correction scheme will find it.``~\cite[20]{Arb03}] Beweise führen~\cite[111 ff.]{Ros62}, \cite[168 ff.]{MP88} sowie \cite{Nov62}.
 }, und ist danach in der Lage zu \textit{generalisieren}~\cite[202]{Ert21a}.\\
