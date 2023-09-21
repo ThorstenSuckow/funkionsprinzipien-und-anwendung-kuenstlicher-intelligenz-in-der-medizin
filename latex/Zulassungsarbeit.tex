@@ -17,7 +17,7 @@
 \usepackage{titlesec}
 \usepackage{xurl}
 \usepackage{appendix}
-
+\usepackage[backend=biber, style=alphabetic, isbn=true, doi=true]{biblatex}
 \usepackage{makeidx}         	% Index
 \usepackage{multicol}% Zweispaltiger Index
 \usepackage[threshold=0]{csquotes}
@@ -91,12 +91,17 @@
 
 % uncomment to hide tables, equations and figures
 %\excludecomment{confidential}
-\excludecomment{figure}
-\excludecomment{equation}
-\excludecomment{table}
-\let\endfigure\relax
-\let\endtable\relax
-\let\endequation\relax
+%\excludecomment{figure}
+%\excludecomment{equation}
+%\excludecomment{table}
+%\let\endfigure\relax
+%\let\endtable\relax
+%\let\endequation\relax
+
+\DeclareFieldFormat{doi}{\textsc{doi}: \texttt{#1}}
+\DeclareFieldFormat{isbn}{\textsc{isbn}: \texttt{#1}}
+
+\addbibresource{literatur.bib}
 
 %--------------------------------------------------------------------------
 \begin{document}
@@ -121,6 +126,7 @@
 %--------------------------------------------------------------------------
 \frontmatter 
 %--------------------------------------------------------------------------
+\input{chapters/Erklärung}
 \input{chapters/Kurzfassung} 			% Kurzfassung Deutsch/English
 \tableofcontents 						% Inhaltsverzeichnis
 %--------------------------------------------------------------------------
@@ -139,8 +145,9 @@
 %--------------------------------------------------------------------------
 \backmatter                        		% Anhang
 %-------------------------------------------------------------------------
-\bibliographystyle{geralpha}			% Literaturverzeichnis
-\bibliography{literatur}     			% BibTeX-File literatur.bib
 
+%\bibliographystyle{geralpha}			% Literaturverzeichnis
+%\bibliography{literatur}     			% BibTeX-File literatur.bib
+\printbibliography
 
 \end{document}
