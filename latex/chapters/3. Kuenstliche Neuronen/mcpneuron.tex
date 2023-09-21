@@ -65,11 +65,17 @@ Insgesamt ergeben sich folgende Anforderungen an unser Modell (vgl.~\cite[26 f.]
 
 
 \begin{figure}[h]
-    \centering
-    \includegraphics{images/p1ReadSeq.pdf}
-    \caption{Schematische Darstellung einer MCP-Zelle, nach \cite{MP43}}
+    \includegraphics[
+        width=16cm,
+        keepaspectratio,
+    ]{chapters/3. Kuenstliche Neuronen/mcpneuron}
+    \caption{Schematische Darstellung von MCP-Zellen (Quelle:~\cite[105, Figure 1]{MP43})}
     \small
-     schwarze Kreise sind erregende Signale, offene Kreise sind hemmende Signale. In der Original-Arbeit benötigt ein Neuron zwei erregende Eingaben, um aktiviert zu werden. a) Zeigt damit ein Netz von zwei Neuronen, bei denen $N_2$ feuert, wenn $N_1$ feuert. Mit der Berücksichtigung der Zeiteinheit folgt die formale Darstellung $N_2(t) \equiv N(t - 1)$. Gleicherwiese ergibt sich aus b), das $N_3$ nur feuert, wenn $N_1$ \textbf{und} $N_2$ feuern: $N3(t) \equiv N(t - 1) \land N(t - 2)$. Analog folgt für c) $N3(t) \equiv N(t - 1) \lor N(t - 2)$ und für d) $N3(t) \equiv \neg N(t - 1)$
+     Schwarze Kreise sind erregende Verbindungen, offene Kreise hemmende. Im ursprünglichen Modell benötigt ein Neuron zwei erregende Eingaben, um aktiviert zu werden.\\
+    a) Zeigt damit ein Netz von zwei Neuronen, bei denen $N_2$ feuert, wenn $N_1$ feuert. Unter Berücksichtigung der Zeiteinheit folgt die formale Darstellung $N_2(t) \equiv N_1(t - 1)$.\\
+    Gleicherwiese ergibt sich für b), das $N_3$ nur feuert, wenn $N_1$ \textbf{oder} $N_2$ feuern: $N_3(t) \equiv N_1(t - 1) \lor N_2(t - 1)$.\\
+    Analog folgt für c) $N_3(t) \equiv N_1(t - 1) \land N_2(t - 2)$.\\
+    Für d) ergibt sich somit $N_3(t) \equiv N_1(t - 1 ) \land \neg N_2(t - 1)$
 \label{fig-mcpcell}
 \end{figure}
 
@@ -137,7 +143,7 @@ Da die Erregung absolut ist, muss $\Theta$ die Ungleichung
 \end{equation}\linebreak[2]
 
 \noindent
-wobei $w_+ \in \{2, 1\}$ je nach Zielzelle. So folgt bspw. $w_+ = w^2_+$ für Zellen, die eine \textit{Disjunktion} implementieren.\\
+erfüllen, wobei $w_+ \in \{2, 1\}$ je nach Zielzelle. So folgt bspw. $w_+ = w^2_+$ für Zellen, die eine \textit{Disjunktion} implementieren.\\
 
 \noindent
 Is $w_+$ bekannt, können wir abkürzen zu
@@ -249,6 +255,15 @@ Für die \textbf{OR}-Funktion ($\lor$) legen wir $\Theta = 2$ und zwei erregende
 \label{tab:mcp-or}
 \end{table}
 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{chapters/3. Kuenstliche Neuronen/mcpor}
+    \caption{Ein MCP-Neuron zur Modellierung von \textbf{OR} (Quelle: eigene)}
+    \label{fig:mcpor}
+\end{figure}
+
+
 \subsection*{NOT (Negation)}
 
 Für die \textbf{NOT}-Funktion ($\neg$) legen wir $\Theta = 0$ und ein erregendes Eingabesignal $x_1$ fest. Das Gewichte für $x_1$ ist $w_-$: Zusammen mit $\Theta = 0$ würde also ein aktiv anliegendes Signal zu $1 * w_-=-1 < \Theta$. Durch die resultierende Hemmung könnte das Signal die Zelle nicht aktivieren (Tabelle~\ref{tab:mcp-neg}):
@@ -291,14 +306,14 @@ Bereits $\{\neg, \land\}$ reichen dazu aus\footnote{gezeigt von \textit{Sheffer}
 
 Wir legen $\Theta_1 = 2$ fest (s. \textbf{AND}-Zelle), an dem zwei erregende Eingaben anliegen. $\Theta_2$ ist $0$ (s. \textbf{NOT}-Zelle) und besitzt eine hemmende Eingabe.
 
-$N_1$ (\textbf{AND}) wird aktiviert, wenn sowohl $x_1$ als auch $x_2$ ein erregendes Signal weiterleiten. Das Ausgabesignal wird an $N_2$ (\textbf{NOT}) weitergeleitet und dort invertiert.
+$N_1$ (\textbf{AND}) wird aktiviert, wenn sowohl $x_1$ als auch $x_2$ ein erregendes Signal weiterleiten. Das Ausgabesignal von $N_1$  wird dann invertiert (siehe Abbildung~\ref{fig:mcpnand}).
 
 
 \begin{figure}[h]
     \centering
-    \includegraphics{images/p1ReadSeq.pdf}
-    \caption{Ein MCP-Netz zur Modellierung von \textbf{NAND}}
-    \label{fig-mcpnand}
+    \includegraphics{chapters/3. Kuenstliche Neuronen/mcpnand}
+    \caption{Ein MCP-Netz zur Modellierung von \textbf{NAND} (Quelle: eigene)}
+    \label{fig:mcpnand}
 \end{figure}
 
 
@@ -321,9 +336,8 @@ Eine weitere boolesche-Funktion, die aus mehreren MCP-Zellen als Netz modelliert
 \end{table}
 
 
-Für die Konstruktion des Netzes können wir zunächst ein Grundgerüst definieren, das wie eine \textbf{OR}-Zelle arbeitet. $\Theta = 2$ wird übertroffen, wenn entweder $N_1$ oder $N_2$ ein erregendes Signal weiterleitet (s. Abbildung~\ref{fig-mcpxornf}). Allerdings wird $\Theta$ auch übertroffen, wenn jeweils $N_1$ und $N_2$ gleichzeitig aktiv sind, denn dann ist $f_{xor}(g(X)) = 4$.
-In diesem Fall muss also eine Hemmung zwischengeschaltet werden, was mit je zwei hemmenden Eingaben realisiert werden kann: $N_1$ hemmt $Z_2$, wenn $N_1$ aktiv ist.
-Das führt dazu, das ein von $N_2$ ausgehendes erregendes Signal gehemmt wird: $Z_2$ leitet in dem Fall $0$ an $N_3$ weiter. Die Zellen $N_2$ und $Z_1$ werden analog verbunden, wodurch dann das Netz in Abbildung~\ref{fig-mcpxorf} entsteht.
+Für die Konstruktion des Netzes rufen wir uns Abbildung~\ref{fig:mcpor} ins Gedächtnis. $\Theta = 2$ wird übertroffen, wenn entweder $x_1$ oder $x_2$ ein erregendes Signal weiterleitet. Allerdings wird $\Theta$ auch übertroffen, wenn jeweils $x_1$ \textit{und} $x_2$ gleichzeitig aktiv sind, denn dann ist $f_{xor}(g(X)) = 4$.
+Also muss eine Hemmung zwischengeschaltet werden (s. Abbildung~\ref{fig-mcpxorf}): Ein aktives $x_1$ hemmt $N_2$. $N_2$ leitet in dem Fall $0$ an $Y$ weiter. Die Zellen $x_2$ und $N_1$ werden analog verbunden.
 
 Die \textbf{disjunktive Normalform} (Gleichung~\ref{eq:gl-xordis}) und die \textbf{konjunktive Normalform} (Gleichung~\ref{eq:gl-xorcon}) von \textbf{XOR} liefern anschaulich die Formel für das Netz.\\
 
@@ -340,15 +354,8 @@ A \oplus B \equiv (A \lor B) \land (\neg A \lor \neg B)
 
 \begin{figure}[h]
     \centering
-    \includegraphics{images/p1ReadSeq.pdf}
-    \caption{Entwurf für ein MCP-Netz zur Modellierung von \textbf{XOR} (nicht funktional)}
-    \label{fig-mcpxornf}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics{images/p1ReadSeq.pdf}
-    \caption{Entwurf für ein MCP-Netz zur Modellierung von \textbf{XOR} (funktional)}
+    \includegraphics{chapters/3. Kuenstliche Neuronen/mcpxor}
+    \caption{Entwurf für ein MCP-Netz zur Modellierung von \textbf{XOR}}
     \label{fig-mcpxorf}
 \end{figure}
 

@@ -2,6 +2,15 @@
 
 \section{Aktionspotenzial}\label{appendix:aktionspotenzial}
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[
+        width=6cm,
+        keepaspectratio,
+    ]{chapters/2. Das Neuron/aktionspotenzial_phasen}
+    \caption{Phasen des Aktionspotenzials (Quelle: ~\cite[88 Abb. 4.1b]{BCP18})}
+  \end{figure}
+
 \subsubsection{Phasen des Aktionspotenzials}
 Die Generierung von Aktionspotenzialen kann entsprechend der zeitlichen Reihenfolge in folgende Phasen eingeteilt werden:
 
@@ -14,12 +23,12 @@ $V_m$ wird positiv ($> 0 mV$) und nähert sich insgesamt $E_{Na} \sim 60 mV$\foo
     den es nicht erreicht. Erreicht werden Werte zwischen 0 und +40 mV~\cite[69]{FE19}
 } an~\cite[105]{BCP18}.
 
-\subsubsection*{3. Repolarisationsphase\footnote{
-    auch: Fallende Phase~\cite[105]{BCP18}
-}
-}
-Natriumkanäle werden \textbf{inaktiviert} .
-Spannungsabhängige Kaliumkanäle öffnen sich ca. 1 ms nach Depolarisation\footnote{vgl. ~\cite[105]{BCP18} und~\cite[47, Tafel 2.3 (A.2)]{SD07}, $K^+$-IOnen strömen aufgrund der elektrochemischen Triebkraft in den EZF, das Membranpotential wird wieder negativ\footnote{
+\subsubsection*{3. Repolarisationsphase}
+Auch: Fallende Phase~\cite[105]{BCP18}.
+Natriumkanäle werden \textbf{inaktiviert}.
+Spannungsabhängige Kaliumkanäle öffnen sich ca. 1 ms nach Depolarisation\footnote{
+    vgl. ~\cite[105]{BCP18} und~\cite[47, Tafel 2.3 (A.2)]{SD07}
+}, $K^+$-IOnen strömen aufgrund der elektrochemischen Triebkraft in den EZF, das Membranpotential wird wieder negativ\footnote{
     Die Kaliumleitfähigkeit wird ``verzögerter Gleichrichter`` genannt, da sie das ursprüngliche Membranpotenzial - mit Verzögerung - wiederherstellt~\cite[103]{BCP18}.
 }.
 
@@ -56,6 +65,13 @@ Dadurch wird der Stromfluss verstärkt und die Erregungsleitung erhöht sich.
 Diese Isolierschicht ist ``segmentiert``: Myelinscheiden sind in Abständen von 0,2 - 2mm durch sog.  \textit{Ranvier-Schnürringe} unterbrochem.
 Deren Membran besitzt spannungsabhängige $Na^+$-Kanäle, die das ankommende elektrische Signal durch  Depolarisierung der einzelnen Segmentabschnitte kontinuierlich weiterleiten - es wird an den Membranabschnitten jeweils ein neues Aktionspotenzial gebildet~\cite[48]{SD07}.
 Die Weiterleitung in myeliniserten Axonen bezeichnet man deshalb als \textbf{saltatorische} (sprunghafte) Erregungsleitung~\cite[109 f.]{BCP18}.
+
+\section{ATPasen}\label{appendix:atpasen}
+Kurzform für \textit{Adenosintriphosphasen}: Enzyme, die ATP in ADP und Phosphat aufspalten (vgl.~\cite[26]{SD07}).
+
+\section{Dendriten}\label{appendix:dendriten}
+von ``\textgreek{δένδρον} (dendrón)`` (altgriechisch): Baum; einzelne selten länger als 2 mm~\cite[28]{BCP18}.
+Längere Dendriten finden sich an den kortikalen Pyramidenzellen mit einer Länge von 1 cm~\cite[58]{Eil19}.
 
 
 \section{Expertensysteme}\label{appendix:expertensystem}
@@ -144,7 +160,7 @@ Spätere Iterationen von \textit{LeNet} durch \textit{LeNet-4} und \textit{LeNet
 Eingabedaten für Lenet-5 sind ein $32 \times 32$ Pixel grosses Bild, ausserdem besitzt das Netz 7 Schichten (ohne Eingabeschicht) (\textit{LeNet-1}: 3 verborgene Schichten~\cite[544]{CBD+89}).
 Eine vollständige Beschreibung der eindrucksvollen Architektur findet sich in\cite[7 f.]{CBBH98}
 
-\subsection*{Lernrate}
+\section{Lernrate}
 Die \textbf{Lernrate} ($\eta$,in der Literatur auch $\alpha$) ist der Koeffizient für die Gewichtsanpassungen in einem künstlichen Neuron.
 
 Wie in Abschnitt~\ref{sec-lernregel} gesehen, berechnet die Lernregel die Gewichte auf Basis des \textit{Fehlers}, also der Differenz von $\text{erwartete Ausgabe}$ und $\text{tatsächliche Ausgabe}$: Ist der Fehler $-1$, werden die Gewichte verringert, ist der Fehler 1, werden die Gewichte erhöht.
@@ -176,6 +192,10 @@ Als Beispiel sei hier noch einmal der ``Vagusstoff`` ACh erwähnt, der die Kontr
 Erregende und hemmende Synapsen kann man auch an ihrer Struktur erkennen: Asymmetrische oder \textit{Gray-Typ-I-Synapsen} sind auf der postsynaptischen Seite dicker als auf der präsynaptischen, bei gleicher Dimension der Membrandifferenzierungen spricht man von \textit{Gray-Typ-II-Synapsen}. Typ-I sind in der Regel exzitatorisch, Typ-II inhibitorisch\footnote{
     vgl.~\cite[127 u. 147]{BCP18}
     }.
+
+\section{Permeabilität}\label{appendix:permeabel}
+von ``\textit{permeare}`` (lat.) durchwandern. Ein selektiv permeabler Kanal ist nur für bestimmte Ionen durchlässig (\textit{ionenselektiv}). Kaliumkanäle sind durchlässig für $K^+$-Ionen, Natriumkanäle durchlässig für $Na^+$-Ionen usw. (vgl.~\cite[66]{BCP18}).
+Sie können über Änderungen in der Umgebung des Neurons geöffnet oder geschlossen werden, was auch als \textbf{Gating} bezeichnet wird (vgl.~\cite[108]{KSJ+13})
 
 
 \section{Perzeptron}\label{appendix:perzeptron}
@@ -210,3 +230,9 @@ Eine Hemmung der Zelle kann aber trotzdem noch stattfinden, wenn bspw. ein dista
 Der positive Ladungsstrom kommt an der inhibitorischen Synapse mit den geöffnet $Cl^-$-Kanälen an, und die Depolarisation durch das EPSP wird durch den Einfluss von $Cl^-$-Ionen (die $V_m$ wieder auf $V_{rev} = E_{Cl}$ bringen wollen) mitigiert.
 
 Aus diesem Grund sind inhibitorische Synapsen oft proximal zum Soma zu finden~\cite[231]{KSJ+13}.
+
+
+\section{Soma}\label{appendix:soma}
+von ``\textgreek{σῶμα} (sõma)`` (altgriechisch): Körper; auch \textit{Perikaryon}~\cite[58]{RK18}.
+Bezeichnet den Zellkörper und das Stoffwechselzentrum des Neurons mit der eine Grösse von ca. 20 μm~\cite[29]{BCP18}.
+Zum Vergleich: ein menschliches Haar hat einen Durchmesser von ca. 70 μm, kleine Bakterien bis zu 20 μm.
