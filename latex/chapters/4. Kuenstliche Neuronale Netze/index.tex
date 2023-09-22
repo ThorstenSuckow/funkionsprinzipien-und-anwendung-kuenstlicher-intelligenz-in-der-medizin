@@ -23,7 +23,7 @@ Auch der technologische Fortschritt begünstigte das Wiederaufleben des Interess
 }
 
 denn mit den in den 80er Jahren verfügbaren Supercomputern und Parallelrechner\footnote{
-    Auch \textit{Fausett} nennt bessere Rechenleistung als einen Grund für den erneuerten Enthusiasmus (vgl.~\cite[26]{Fau94}). Im Kontext der in diesem Kapitel vorgestellten mehrschichtigen Netzen und ihrem Konzept der versteckten Schichten ist nachvollziehbar, das mehr Rechenleistung den komplexen Verfahren entgegenkommt. \textit{Goodfellow, Bengio und Courville} gehen auf die Korrelation Modellgrösse und Anzahl der Nervenzellen in einem menschlichen Gehirn in~\cite[24 f.]{GBC18} ein
+    Auch \textit{Fausett} nennt bessere Rechenleistung als einen Grund für den erneuerten Enthusiasmus (vgl.~\cite[26]{Fau94}). Im Kontext der in diesem Kapitel vorgestellten mehrschichtigen Netzen und ihrem Konzept der versteckten Schichten ist nachvollziehbar, das mehr Rechenleistung den komplexen Verfahren entgegenkommt. \textit{Goodfellow et al.} gehen auf die Korrelation Modellgrösse und Anzahl der Nervenzellen in einem menschlichen Gehirn in~\cite[24 f.]{GBC18} ein
 } erhält auch der Konnektionismus Auftrieb, der \textbf{neuronale Netze} als Grundlage hat~\cite[15]{Dor91}, und mit dem sich Modelle wieder mehr an den biologischen Vorbildern orientieren sollten\footnote{
     vgl.~\cite[43]{RM87} sowie~\cite[18 f.]{GBC18}}.
 
@@ -40,9 +40,15 @@ Ein MLP repräsentiert ein tiefes Feedforward-Netz, in dem die Eingabeschicht (\
 
 \begin{figure}[h]
     \centering
-    \includegraphics{images/p1ReadSeq.pdf}
-    \caption{Skizzzierung eines mehrschichtigen neuronalen Feedforward-Netzwerks.}
+    \includegraphics[
+        width=12cm,
+        keepaspectratio,
+    ]{chapters/4. Kuenstliche Neuronale Netze/neuronalesnetz}
+    \caption{Architektur eines Feed-Forward-Netzes (Quelle: eigene)}
     \label{fig-multilayerfeedforward}
+    \small{
+        Ein Feed-Forward-Netz mit zwei Eingabeeinheiten, zwei versteckten Schichten und einer Ausgabeeinheiten.
+    }
 \end{figure}
 
 
@@ -79,23 +85,31 @@ Sigmoid:
 \end{equation}
 
 
-
 \begin{figure}[h]
     \centering
-    \includegraphics{images/p1ReadSeq.pdf}
-    \caption{Ein Plot einer Sigmoid-Funktion}
+    \includegraphics[
+        width=16cm,
+        keepaspectratio,
+    ]{chapters/4. Kuenstliche Neuronale Netze/sigmoid}
+    \caption{Plot einer Sigmoid-Funktion (Quelle: eigene)}
     \label{fig-sigmoid}
 \end{figure}
 
 
 \begin{figure}[h]
     \centering
-    \includegraphics{images/p1ReadSeq.pdf}
-    \caption{Skizzierung des Gradientenabtiegsverfahrens.}
+    \includegraphics[
+        width=8cm,
+        keepaspectratio,
+    ]{chapters/4. Kuenstliche Neuronale Netze/gradientenabstieg}
+    \caption{Skizzierung des Gradientenabtiegsverfahrens (Quelle: eigene, in Anlehnung an ~\cite[52, Abb. 2.15]{Son22})}
     \label{fig-gradient}
-    \small
-    Informelle Darstellung des Gradientenabtiegsverfahrens. Die y-Achse repräsentiert die Anzahl der Fehler, die x-Achse den berechneten Gewichtsvektor in einem neuronalen Netz. Offensichtlich existiert in dem Netz ein optimaler Wert für w, der mittels Gradientenabstieg gefunden werden soll (vgl.~\cite[52, Abb. 2.15]{Son22}).
+    \small{
+     Die $y$-Achse repräsentiert den Fehlerwert, die $x$-Achse den berechneten Gewichtsvektor $w_1$ in einem neuronalen Netz. Offensichtlich existiert in dem Netz $w^*$, für den der Fehler geringer ist als für $w_1$. Das Gradientenabstiegsverfahren wird genutzt, um diese Minima zu finden (vgl.~\cite[52]{Son22}).
+}
 \end{figure}
+
+
 
 In den 80er Jahren werden neben dem Backpropagation-Algorithmus weitere Entwürfe für neuronale Netze erstellt, die für ein Wiederaufleben des Interesses an der transdisziplinären Wissenschaft sorgen\footnote{vgl.~\cite[25 f.]{Fau94}}.
 
