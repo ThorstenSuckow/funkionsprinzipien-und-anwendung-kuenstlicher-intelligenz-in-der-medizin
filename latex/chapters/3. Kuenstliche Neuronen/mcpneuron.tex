@@ -108,7 +108,7 @@ definieren wir die \textit{Gewichte} $w_+ \in \{2, 1\}$\footnote{
 
 
 \noindent
-Die \textbf{Eingabefunktion} $g$ (vgl. 2.1.3 b.)
+Die \textbf{Eingabefunktion} $g$
 
 \begin{equation}
 g: \{1, 0\}^m \to  \mathbb{N}_0, X \mapsto \sum^n_{j=1} x_jw_+ + \sum^m_{k=1} y_kw_-
@@ -116,7 +116,7 @@ g: \{1, 0\}^m \to  \mathbb{N}_0, X \mapsto \sum^n_{j=1} x_jw_+ + \sum^m_{k=1} y_
 \end{equation}\linebreak[2]
 
 \noindent
-liefert dann die Summe der hemmenden und erregenden Eingabesignale zurück.
+liefert die Summe der hemmenden und erregenden Eingabesignale zurück.
 
 
 \subsection*{Aktivierungsfunktion}
@@ -324,7 +324,7 @@ Eine weitere boolesche-Funktion, die aus mehreren MCP-Zellen als Netz modelliert
 \begin{table} %[hbtp]
     \centering
     \begin{tabular}{c | c | c}
-        $A$ & $B$ & $\neg(A \oplus B)$ \\
+        $A$ & $B$ & $A \oplus B$ \\
         \hline
         1   & 1   & 0           \\
         1   & 0   & 1           \\
@@ -365,89 +365,6 @@ A \oplus B \equiv (A \lor B) \land (\neg A \lor \neg B)
         In \ref{appendix:paradoxehitzeempfindung} findet sich ein ausführliches Beispiel zur Modellierung eines MCP-Netzes unter Berücksichtigung von Zeiteinheiten.
     }%
 }
-
-
-\clearpage
-\pagebreak
-
-
-\subsection{Zusammenfassung}\label{mcp-summary}
-
-Das MCP-Modell ist ein \textbf{empirisches Modell}\footnote{
-    auch ``caricature model``; beides ~\cite[4]{HI97}
-} und basiert auf Analyse und einfacher Schwellenwertlogik~\cite[16]{AR88}.
-In ihrem Papier weisen McCulloch und Pitts darauf hin, dass das Alles-Oder-Nichts-Prinzip als Vorbild für ihre Abstraktion durch Aussagenlogik dient.
-Von allem, was wir in Kapitel 1 über Nervenzellen erfahren haben, dürfen wir den Schluss ziehen, dass das von ihnen erstellte Modell eine starke Vereinfachung ist\footnote{
-    ``This ensures its status as a \textit{model}, and not a \textit{copy}, of a real neuron, and makes it possible to implement on a digital computer.``~\cite[43, Hervorhebungen i. O.]{BJ90}
-}.
-Aktionspotenzialen lassen sich gewiss nicht auf zweiwertige Logik reduzieren, darüber hinaus berücksichtigen sie auch nicht eine mögliche Veränderung des Netzes, z.B. durch Lernen\footnote{
-    ``Lernen`` geschieht auf physiologischer Ebene durch die Modulierung von Synapsen~\cite[115]{HS19c}
-}.
-McCulloch und Pitts sind sich dessen durchaus bewußt\footnote{
-    ``McCulloch and Pitts acknowledged in their paper that their definition of a neuron was idealized, and that they made physical assumptions that were 'most convenient for the calculus'``~\cite[21]{Abr02}. Siehe auch~\cite[101]{MP43}: ``[...]we regard facilitation and extinction as dependent upon continuous changes in threshold related to electrical and chemical variables, [...]``, sowie ``He {[McCulloch]} never claimed that the 1943 model exhausted the richness of individual neurons``~\cite[11]{Arb19}
-}.
-Es bleibt ein statisches Modell, es muß ``konstruiert`` werden (vgl. ~\cite[28]{Fau94}).
-Es ist nur durch Änderung der Netztopologie bzw. der Schwellenwerte anpassungsfähig\footnote{s.~\cite[51]{Roj93}} Selbständig zu lernen vermag es nicht.\\
-
-
-Tatsächlich ist die McCulloch-Pitts-Zelle von eher geringer Bedeutung für die Neurowissenschaft gewesen\footnote{
-    ``The immense theoretical influence of this paper was not among neuroscientists but among computer scientists.``~\cite[17]{AR88}; \textit{Rojas} kommt zu einem ähnlichen Schluss: ``Die Art der Schaltungen, die mit
-    diesen Zellen gebaut werden, ist aber biologisch gesehen nicht so relevant.``~\cite[51]{Roj93}
-}.
-Umso größer war ihr Einfluss auf die Computerwissenschaften\footnote{
-    Die Arbeit war ebenso wichtig für die Entwicklung des ``Konnektionismus``~\cite[11]{Arb19}, einer Forschungsrichtung der künstlichen Intelligenz, in der Modelle (neuronale Netze) untersucht werden, mit deren Hilfe sich intelligente und kognitive Handlungen auf Maschinen übertragen lassen~\cite[v]{Dor91}
-}.
-McCulloch und Pitts nahmen für ihr Modell das menschliche Gehirn als Grundlage und ermöglichten so einen neuen Blickwinkel auf Ursache und Wirkung. ``Mind`` no longer ``goes more ghostly than a ghost``~\cite[114]{MP43}:
-
-\blockquote[{\cite[9]{Per88}}]{
-If nerve cells were equivalent to the formal neurons of McCulloch and Pitts and if circuits of such elements could be made arbitrarily complicated, then any kind of animal behavior, however marvelously complicated or however intricately linked to sensory input, could be reproduced, and hence understood, in terms of these circuits.
-}
-
-Logische Schaltungen, die Intelligenz und Kognition ermöglichen, brachte den Gedanken an eine ``intelligente Maschine`` hervor (vgl.~\cite[204]{Pic04}): So war ihre Formalisierung ein wichtiges Schlüsselelement für die von-Neumann-Rechnerarchitektur \cite{Neu93} sowie Wieners Kybernetik\footnote{s. \ref{appendix:wiener}}, und zusammen mit den nachfolgenden Arbeiten von \textit{Hebb}\footnote{~\cite{Heb49}} und \textit{Rosenblatt} ebnete es den Weg für die Forschung an künstlicher Intelligenz~\cite[1]{Arb19}.
-
-\noindent
-Interessant ist ihr Vermerk, dass der Entwurf von Netzen mit Zyklen ungleich schwerer sei als der für zyklenfreie Netze, denn:
-
-\blockquote[{~\cite[108, Hervorhebungen i.O.]{MP43}}]{
- This is largely a consequence of the possibility that activity may be set up in a circuit and continue reverberating around it for an indefinite period of time, so that the realizable \textbf{\textit{Pr}} may involve reference to past events of an indefinite degree of remoteness.
-}
-
-\noindent
-Eine wie in Gleichung~\ref{eq:gl-z1} beschriebe MCP-Zelle $Z_i(t)$ könnte also in solchen Netzen eine Aktivität $Z_k(t-n)$ referenzieren, bei der $n \in \mathbb{N}$ unbestimmt ist.
-
-\noindent
-Besondere Beachtung verdient die Bemerkung von McCulloch und Pitts bzgl. ``Berechenbarkeit``
-
-\blockquote[{~\cite[113]{MP43}}]{
-This is of interest as affording a psychological justification of the Turing definition of computability and its equivalents, Church’s A-definability and Kleene’s primitive recursiveness: if any number can be computed by an organism, it is computable by these definitions, and conversely.
-}
-
-\noindent
-Sie nehmen hiermit u.a. Bezug auf die von Alan Turing (1912 - 1954) bereits 1936 veröffentlichte Arbeit ``On Computable Numbers, with an Application to the Entscheidungsproblem`` ~\cite{Tur37}, in der Turing die Beschreibung der Operationen seines Computers einleitet mit:
-
-\blockquote[{~\cite[250]{Tur37}}]{
-Let us imagine the operations performed by the computer to be split up into 'simple operations' which are so elementary that it is not easy to imagine them further divided.
-}
-
-\noindent
-Parallelen zu der Architektur der von Turing aufgestellten Modelle und dem von McCulloch entworfenen ``psychons`` als kleinste Einheit psychischer Aktivitäten sind erkennbar. \textit{Piccinini} stellt darüber hinaus fest, dass die Aussage, MCP-Netze können Berechnungen anstellen, einen ersten wichtigen Bezug zwischen mathematischer Theorie und Neurowissenschaft herstellte~\cite[197]{Pic04}.
-
-\noindent
-McCulloch schreibt dazu später
-
-\blockquote[{\cite[164]{Mcc16}}]{
-Pitts and I showed that brains were Turing machines, and that any Turing machine could be made out of neurons.
-}
-
-\noindent
-und stellt fest, dass das Nervensystem eine ausgezeichnete logische Maschine repräsentiert (vgl. ~\cite[80]{Mcc16}).\\
-
-\noindent
-Konsequenterweise nutzt \textit{Minsky} in~\cite[32 ff.]{Min67} die MCP-Zelle als endlichen Automaten\footnote{
-    Ein endlicher Automat ist eine informationsverarbeitende Maschine. Basierend auf Eingaben lassen sich mit einer solchen Maschine Zustände, Zustandsübergänge und Ausgaben modellieren. Bei einem \textit{endlichen} Automaten sind die genannten Eingaben, Zustände, und Ausgaben endlich (vgl.~\cite[26 ff.]{SSH95}).
-}\footnote{
-    dass MCP-Netze endliche Automaten sind: Auch in~\cite[76]{Cow90} sowie~\cite[47, ``Satz 2.4``]{Roj93}. \textit{Arbib} weist darauf hin, dass die Arbeit von McCulloch und Pitts grundlegend für Automatentheorie gewesen ist~\cite[8]{Arb19}
-} mit zwei Zuständen, aus denen andere endliche Automaten gebaut werden, und nennt diese, im Jahr 1967 schon geläufig: \textbf{Neuronale Netze}~\cite[33]{Min67}.
 
 
 

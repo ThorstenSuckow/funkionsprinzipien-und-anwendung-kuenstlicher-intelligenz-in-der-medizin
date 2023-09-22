@@ -1,7 +1,7 @@
 \section{Das Das Rosenblatt-Perzeptron}
 
 In Abschnitt~\ref{mcp-summary} haben wir geschlossen, dass ein MCP-Netz nur durch vorhergehende Analyse der Aufgabe und Anpassung der Topologie von Außen zur Lösung einer Aufgabe imstande ist.
-\textit{Donald Hebbs} Erkenntnisse\footnote{
+\textit{Donald Hebbs} Theorien über \textit{synaptische Plastizität}\footnote{
     s. \ref{appendix:hebb}
 } führt kurz vor Beginn der 60er Jahre zu einem Modell, das in der Lage ist, sich selbst anzupassen.
 
@@ -19,11 +19,8 @@ Erst 1958 schafft es ein Modell, eine Sensation\footnote{
 1957 beschreibt es sein Schöpfer \textit{Frank Rosenblatt} (1928 - 1971) in~\cite{Ros57}\footnote{
     s. \ref{appendix:perzeptron}
 } als Teil eines internen Forschungsprojektes des \textit{Cornell Aeronautical Labors}\footnote{
-    Die Forschungseinrichtung gehörte von 1946 bis 1972 zu der Cornell Universität (\url{https://www.cornell.edu}; ab 1972 gehörte die Forschungseinrichtung dann zu der Calspan Corporation, \url{https://calspan.com}, beides abgerufen 18.08.2023)
-}, an der Rosenblatt 1950 seinen A.B und 1956 seinen Ph.D. gemacht hatte, und an der er bis zu seinem Lebensende\footnote{
-    1971 durch einen Bootsunfall; \url{https://ecommons.cornell.edu/items/91237274-dd25-4969-99cb-8758ca05cec9}, abgerufen 19.09.2023
-} als Psychologe und Neurobiologe forschen und lehren wird.
-
+    Die Forschungseinrichtung gehörte von 1946 bis 1972 zu der Cornell Universität (\url{https://www.cornell.edu}; ab 1972 gehörte die Forschungseinrichtung dann zu der Calspan Corporation, \url{https://calspan.com}, beides abgerufen 18.08.2023). Rosenblatt macht hier 1950 seinen A.B und 1956 seinen Ph.D. und wird dort bis zu seinem Lebensende (1971) als Psychologe und Neurobiologe forschen und lehren.
+}.
 
 \subsection{Das Modell}
 
@@ -66,13 +63,18 @@ Die Ausgabe der Prädikate werden individuell gewichtet und an die Zelle weiterg
 
 \begin{figure}[h]
     \centering
-    \includegraphics{images/p1ReadSeq.pdf}
-    \caption{Schematische Darstellung der Eingabesignale, Prädikate, Gewichte und Schwellenwertzelle nach~\cite[53 Abb. 3.2]{Roj93}}
+    \includegraphics{chapters/3. Kuenstliche Neuronen/perzeptron}
+    \caption{
+        Rosenblatt-Perzeptron (Quelle: eigene, in Anlehnung an~\cite[53, Abb. 3.2]{Roj93})
+    }
     \label{fig-perctheda}
+    \small{
+        Schematische Darstellung eines ``Perzeptron-Automats`` (vgl. auch~\cite[7]{Ros57}): Eingaben werden an die Prädikate $P_n$ weitergeleitet, deren binäre Ausgaben mit den Gewichten $w_n$ multipliziert werden. Deren Summe wird mit dem Schwellenwert $\Theta$ verglichen (vgl.~\cite[53]{Roj93}).
+    }
 \end{figure}
 
 
-Die Eingabefunktion setzt sich dann wie Gleichung~\ref{eq:gl-mcpinpfunc} aus der Summe der Produkte der Prädikate $P_i \in \Phi$ (wobei $P_i(X) \in \{0, 1\}$) und den Gewichten $w_i \in \R$ der Verbindungen zusammen (s. Gleichung~\ref{eq:gl-rpinput}), und die Aktivierungsfunktion (s. Gleichung~\ref{eq:gl-rpact}) ist wieder eine Treppenfunktion mit dem reellen Schwellenwert $\Theta$:
+Die Eingabefunktion setzt sich dann wie Gleichung~\ref{eq:gl-mcpinpfunc} aus der Summe der Produkte der Prädikate $P_i \in \Phi$ (wobei $P_i(X) \in \{0, 1\}$) und den Gewichten $w_i \in \mathbb{R}$ der Verbindungen zusammen (s. Gleichung~\ref{eq:gl-rpinput}), und die Aktivierungsfunktion (s. Gleichung~\ref{eq:gl-rpact}) ist wieder eine Treppenfunktion mit dem reellen Schwellenwert $\Theta$:
 
 \begin{equation}
 g:= g(X) = \sum^n_{i=1} P_i(X) w_i
@@ -94,22 +96,25 @@ g:= g(X) = \sum^n_{i=1} P_i(X) w_i
 Mit Gleichung~\ref{eq:gl-rpact} folgt für eine Eingabe, dass sie entweder eine $0$ oder $1$ als Ausgabe erzeugt.
 Wir haben es hier also wieder mit einem binären Wertebereich zu tun, den wir auch als zwei unterschiedliche Klassen verstehen können: Eingabedaten können somit einer der beiden Klassen zugeordnet werden (vgl.~\cite[812]{RN09}).
 Im Folgenden wollen wir die Zusammenhänge geometrisch darstellen.
-Der Einfachheit halber beschränken wir uns hierzu auf den zweidimensionalen Raum $\R_+^2$ und betrachten hier die \textit{1. Winkelhalbierende} im 1. Quadrant des kartesischen Koordinatensystems.
+Der Einfachheit halber beschränken wir uns hierzu auf den zweidimensionalen Raum $\mathbb{R}_+^2$ und betrachten hier die \textit{1. Winkelhalbierende} im 1. Quadrant des kartesischen Koordinatensystems.
 Die zugehörige \textit{Gerade} $L$ ist
 
 \begin{equation}
-L = \{(x_1, x_2) \in \R_+^2: x_1 = x_2\}
+L = \{(x_1, x_2) \in \mathbb{R}_+^2: x_1 = x_2\}
 \end{equation}
 
 
 \begin{figure}[h]
     \centering
-    \includegraphics{images/p1ReadSeq.pdf}
-    \caption{Winkelhalbierende im kartesischen Koordinatensystem}
+    \includegraphics[
+        width=12cm,
+        keepaspectratio,
+    ]{chapters/3. Kuenstliche Neuronen/winkelhalbierende}
+    \caption{Winkelhalbierende im kartesischen Koordinatensystem (Quelle: eigene)}
     \label{fig-winkelhalbierende}
 \end{figure}
 
-Für beliebige Punkte $(x_1, x_2) \in \R_+^2$ gilt offensichtlich
+Für beliebige Punkte $(x_1, x_2) \in \mathbb{R}_+^2$ gilt offensichtlich
 
 \begin{equation}
 x_1 - x_2 \begin{cases}
@@ -119,8 +124,8 @@ x_1 - x_2 \begin{cases}
 \end{cases}
 \end{equation}
 
-Die \textit{Gerade} $L$ repräsentiert eine \textit{Hyperebene} in $\R_+^2$~\cite[81, Definition 2.3]{BHW+12}.
-Punkte, die nicht zu dieser Hyperebene gehören, liegen in dem Fall $\R_+^2$ in zwei unterschiedlichen \textit{Halbräumen}\footnote{
+Die \textit{Gerade} $L$ repräsentiert eine \textit{Hyperebene} in $\mathbb{R}_+^2$~\cite[81, Definition 2.3]{BHW+12}.
+Punkte, die nicht zu dieser Hyperebene gehören, liegen in dem Fall $\mathbb{R}_+^2$ in zwei unterschiedlichen \textit{Halbräumen}\footnote{
     Renze, John; Uznanski, Dan; and Weisstein, Eric W. ``Half-Plane.`` From MathWorld--A Wolfram Web Resource. \url{https://mathworld.wolfram.com/Half-Plane.html} (abgerufen 21.08.2023)
 }.
 Die Halbräume und deren Trennung wird greifbarer durch die geometrische Darstellung in Abbildung~\ref{fig-halbraeume}.
@@ -138,10 +143,18 @@ Wir können feststellen, dass
 
 \begin{figure}[h]
     \centering
-    \includegraphics{images/p1ReadSeq.pdf}
-    \caption{Skizzierung der durch die 1. Winkelhalbierende entstandenen Halbräume. Die Mengen $M_-$ und $M_+$ sind linear separierbar, die Gleichung für die \textit{Trenngerade} hierzu lautet $x_1 - x_2 = 0$}
+    \includegraphics[
+        width=12cm,
+        keepaspectratio,
+    ]{chapters/3. Kuenstliche Neuronen/halbraum}
+    \caption{Halbräume im $R^2$ (Quelle: eigene)}
+    \small{
+        Skizzierung der durch die 1. Winkelhalbierende entstandenen Halbräume. Die Mengen $M_-$ und $M_+$ sind linear separierbar, die Gleichung für die \textit{Trenngerade} hierzu lautet $x_1 - x_2 = 0$
+    }
     \label{fig-halbraeume}
 \end{figure}
+
+
 
 Formal ausgedrückt bedeutet das, dass $M_+$ und $M_-$ \textit{linear separabel} sind. Nach \textit{Rojas} lautet die Definition für \textit{Lineare Trennbarkeit}:
 
@@ -238,13 +251,16 @@ Sind die Trainingsdaten linear separabel, \textit{konvergiert}\footnote{
 
 Da wir in unserem Beispiel nur Daten betrachtet haben, die durch eine Gerade durch den Ursprung ($(0,0)$) getrennt sind, brauchen wir noch eine Möglichkeit, die $x_2$-Koordinate der Trenngerade anzupassen.
 
-
 \begin{figure}[h]
     \centering
-    \includegraphics{images/p1ReadSeq.pdf}
-    \caption{Daten, die nicht durch eine Ursprungsgerade separabel sind.}
+    \includegraphics[
+        width=8cm,
+        keepaspectratio,
+    ]{chapters/3. Kuenstliche Neuronen/nichtseparierbar}
+    \caption{Punkte im $\mathbb{R}^2$, die nicht durch eine Ursprungsgerade separabel sind. Angedeutet eine mögliche Trenneggerade, die durch $(0,2)$ geht (Quelle: eigene).}
     \label{fig-nichtseparierbar}
 \end{figure}
+
 
 \noindent
 Dies erreicht man mit einer sogenannten \textbf{bias unit}.
@@ -304,13 +320,6 @@ Mit $0$ als Schwellenwert wird dadurch eine Verschiebung der Trenngeraden entlan
     einen Überblick über die geometrischen Zusammenhänge liefert ``Einführung in die Neuroinformatik`` von Prof. Dr. G. Sommer \url{https://www.informatik.uni-kiel.de/inf/Sommer/doc/Downloads/Skripte/neuroskript.pdf}:33 ff. (abgerufen 27.08.2023)
 }.
 
-\begin{figure}[h]
-    \centering
-    \includegraphics{images/p1ReadSeq.pdf}
-    \caption{Geometrische Interpretation der Perzeptron-Funktion im $\mathbb{R}^2$}
-    \label{fig-geominterpretation}
-\end{figure}
-
 \noindent\fbox{%
     \parbox{\textwidth}{%
         Eine Implementierung eines Rosenblatt-Perzeptrons in Python findet sich in \ref{appendix:pythonperzeptron}.
@@ -331,7 +340,7 @@ Wenn ein Perzeptron nicht konvergiert, kann es ausreichen, die Anzahl der Epoche
     \includegraphics{images/rosenblatt/blob_success.png}
     \caption{}
     \label{fig-rp-blobs}
-    \small Ein Perzeptron wird mit einer großen Datenmengen (50 Einträg) trainiert. Nach knapp 300 Trainingsschritten (in der 6ten Epoche) wird die Trenngerade gefunden. (Quelle: eigene)
+    \small Ein Perzeptron wird mit einer großen Datenmengen (50 Einträg) trainiert. Nach knapp 300 Trainingsschritten (in der 6ten Epoche) wird die Trenngerade (gestrichelt) gefunden. (Quelle: eigene)
 \end{figure}
 
 \noindent
@@ -351,57 +360,18 @@ $w_10 + w_21 \geq \Theta \implies w_2 \geq \Theta$\\
 $w_11 + w_21 < \Theta$\\
 
 \noindent
-Offensichtlich kann $w_1 + w_2 < \Theta$ nicht erfüllt werden, wenn gleichzeitig $w_1 \geq \Theta$ und $w_2 \geq \Theta$ gilt.
+Offensichtlich kann $w_1 + w_2 < \Theta$ nicht erfüllt werden, wenn gleichzeitig $w_1 \geq \Theta$ und $w_2 \geq \Theta$ gilt (s. Abbildung~\ref{fig-rp-xor}).
 
 \begin{figure}[h]
     \centering
-    \includegraphics{images/rosenblatt/blob_success.png}
-    \caption{Interpretationen der XOR-Funktion im kartesischen Koordinatensystem. Eine lineare Trenngerade existiert für die Werte nicht.}
+    \includegraphics[
+        width=8cm,
+        keepaspectratio,
+    ]{chapters/3. Kuenstliche Neuronen/xorr2}
+    \caption{XOR im $\mathbb{R}^2$ (Quelle: eigene)}
+    \small{
+        Interpretationen der XOR-Funktion im kartesischen Koordinatensystem. Hier existiert keine Trenngerade für die Punkte $\{(0, 0), (1, 1)\}$ und $\{(0, 1), (1, 0)\}$.
+    }
     \label{fig-rp-xor}
 \end{figure}
-
-\subsection{Der KI-Winter}\label{kiwinter}
-
-In \textit{Perceptrons - An introduction to Computational Geometry (1969)}~\cite{MP88} behandeln \textit{Minsky und Papert} u.a. das Verhalten des Perzeptrons im Fall nicht-separabler Daten\footnote{
-    in~\cite[181 ff.]{MP88}
-} sowie das Problem bzgl. \textit{recognition of connectedness}\footnote{
-    s. \cite[12, ``Theorem 0.8``]{MP88} sowie~\cite[249 f.]{MP88}. In dem Epilog, der 19 Jahre später in einer Neuausgabe von \textit{Minsky und Papert} veröffentlicht wird, machen sie deutlich, dass sie damit nicht nachweisen wollten, dass ein Perzeptron nicht in der Lage zu der Erkennung zusammenhängender geometrischer Figuren sei, sondern dass die Komplexität von verschiedenen Aufgaben Anforderungen an ein Perzeptron stellt, die zu der damaligen Zeit (Ende 1950er / Anfang 1960er) schwierig umzusetzen gewesen sind (vgl. ~\cite[250]{MP88})
-}, bei dem es um die Erkennung zusammenhängender geometrischer Figuren geht.
-Ihr Anliegen mit dem Buch ist es, die (mathematischen) Grenzen des Rosenblatt-Perzeptrons auf ein formales Gerüst zu stellen (vgl.~\cite[249]{MP88}).
-Ihre Ausführungen verstärken aber die ohnehin schon skeptische Haltung\footnote{
-    Here was a machine that could do pattern recognition in a humanlike way; it could recognize all kinds of things. Almost everyone at MIT was very skeptical``~\cite[99]{AR98}
-} gegenüber der Fähigkeiten des Perzeptrons\footnote{
-    auch wegen schlechter Skalierbarkeit des Modells in der Praxis~\cite[159]{AR88}
-} und künstlicher neuronaler Netze allgemein, was \textit{Anderson und Rosenfeld} rückblickend auch auf Aussagen in der Einleitung des Buches zurückführen wie
-
-\blockquote[{~\cite[19]{MP88}}]{
-hundreds of projects and experiments [bzgl. des Perzeptrons] were generally disappointing, and the explanations inconclusive. The machines usually work quite well on very simple problems but detoriate very rapidly as the tasks assigned to the get harder.
-}
-
-\noindent
-Auch eine generelle Irritation und Enttäuschung über das Perzeptron-Modell meinen \textit{Anderson und Rosenfeld} zu erkennen:
-
-\blockquote[{~\cite[232]{MP88}}]{
-we [Minsky und Papert] consider it to be an important research problem to elucidate (or reject) our intuitive judgement that the extension is sterile.
-}
-
-\noindent
-Diesen ``Pessimismus`` betrachten \textit{Minsky und Papert} im Jahr 1988 in Retrospektive (s. ~\cite[xiii]{MP88}). Sie sind sich der Behauptung bewusst, ihr Buch hätte mit dem Aufzeigen der Grenzen des Rosenblatt-Modells den Forscherdrang an maschinellem Lernen gebremst:
-
-\blockquote[{~\cite[xii]{MP88}}]{
-One popular version is  that the publication of our book so discouraged research on learning in network machines that a promising line of research was interrupted.
-}
-
-\noindent
-\textit{Anderson und Rosenfeld} erwähnen ``the influence of Marvin Minsky and Seymour Papert on the loss of interest in neural networks during the 1970s``~\cite[X]{AR98}, worüber ihre Interviewpartner in gleicher Quelle sprechen.
-
-\textit{Russell und Norvig} fassen zusammen, dass \textit{Minsky und Papert} in ihrem Buch bewiesen haben, dass ein Perzeptron alles lernen kann, was es auch darstellen kann, aber es könnte halt nur sehr wenig darstellen (vgl.~\cite[45]{RN09})\footnote{
-    vgl. hierzu~\cite[xiii]{MP88}
-}. Auf gleicher Seite verweisen sie auf die zunehmende Komplexität der zu berechnenden Modelle, die nicht alleine durch schnellere und bessere Hardware kompensiert werden konnte.
-
-Der Lighthill Report\footnote{
-    ``Workers entered the field around 1950, and even around 1960, with high hopes that are very far from having been realised in 1972. In no part of the field have the discoveries made so far produced the major impact that was then promised.`` in \url{https://www.chilton-computing.org.uk/inf/literature/reports/lighthill\_report/p001.htm}, ``3 Past disappointments``, abgerufen 28.08.2023
-} sollte dann 1973 eine Grundlage für die Entscheidung der britischen Regierung darstellen, das Budget für die Forschung an KI zu kürzen (vgl. ~\cite[45]{RN09}). Neuronale Netze wurden als Grundlage künstlicher Intelligenz zunächst verworfen\footnote{
-    vgl.~\cite[641]{Ola96}
-}, und die Forschung daran ging zurück, bis sie Anfang/Mitte der 1980er Jahre wieder aufgenommen wurde: Diese Periode ist gemeinhin als ``KI-Winter`` (vgl. \ref{appendix:kiwinter}) bekannt.
 
