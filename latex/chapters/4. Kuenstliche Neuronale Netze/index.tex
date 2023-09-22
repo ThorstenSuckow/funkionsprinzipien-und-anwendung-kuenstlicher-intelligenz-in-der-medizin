@@ -47,7 +47,7 @@ Ein MLP repräsentiert ein tiefes Feedforward-Netz, in dem die Eingabeschicht (\
     \caption{Architektur eines Feed-Forward-Netzes (Quelle: eigene)}
     \label{fig-multilayerfeedforward}
     \small{
-        Ein Feed-Forward-Netz mit zwei Eingabeeinheiten, zwei versteckten Schichten und einer Ausgabeeinheiten.
+        Ein Feed-Forward-Netz mit zwei Eingabeeinheiten $x_1, x_2$, zwei versteckten Schichten und einer Ausgabeeinheit $y$.
     }
 \end{figure}
 
@@ -99,7 +99,7 @@ Sigmoid:
 \begin{figure}[h]
     \centering
     \includegraphics[
-        width=8cm,
+        width=10cm,
         keepaspectratio,
     ]{chapters/4. Kuenstliche Neuronale Netze/gradientenabstieg}
     \caption{Skizzierung des Gradientenabtiegsverfahrens (Quelle: eigene, in Anlehnung an ~\cite[52, Abb. 2.15]{Son22})}
@@ -200,13 +200,18 @@ Die mathematische Basis von CNNs ist u.a. die \textbf{Faltungsoperation}\footnot
 }, können ``aussagekräftige Merkmale`` aufgespürt werden, was dazu führt, das weniger Parameter gespeichert werden müssen und gleichzeitig die ``statistische Effizienz`` des Netzes erhöht wird (\textbf{sparse interaction} bzw. \textbf{sparse weights}). Durch das bereits erwähnte \textbf{parameter sharing} (auch: \textbf{tied weights}) kann die Effizienz des Netzes weiter erhöht und Speicherplatzverbrauch weiter verringert werden, und Schichten weisen eine \textbf{Äquivarianz} gegenüber Verschiebung auf\footnote{ bereits erwähnt wurde die \textit{shift invariance}: Wird bspw. ein Bild $X$ in das Netz $f$ eingespeist, das in einer Ausgabe $f(X) = Y$ resultiert, dann bedeutet \textit{shift invariance}, das eine Verschiebung der Eingabedaten $g(X) = X+\Gamma$ in dem gleichen $Y$ resultiert: $f(X) = f(g(X))$.  \textit{Äquivarianz} (engl. ``equivariance``) bedeutet, das eine Änderung der Eingabedaten auch zu einer ``gleichartigen Änderung der Ausgabe`` führt: $f(g(x)) = g(f(x))$~\cite[377]{GBC18}.
 }.
 
+
+
 \begin{figure}[h]
     \centering
-    \includegraphics{images/p1ReadSeq.pdf}
-    \caption{Skizzierung einer Faltungsoperation.}
+    \includegraphics[
+        width=10cm,
+        keepaspectratio,
+    ]{chapters/4. Kuenstliche Neuronale Netze/faltung}
+    \caption{Beispiel einer einer Faltungsoperation (Quelle~\cite[372, Abbildung 9.1]{GBC18}, Darstellung eigene).}
     \label{fig-faltung}
     \small
-    In dem Beispiel werden 4x4 grosse Daten zu 3x2 grossen feature maps ``gefaltet``.
+    In dem Beispiel wird zur Faltung ein $2 \times 2$-Kernel mit einer $3 \times 4$-Eingabe verwendet. Das Ergebnis ist eine $2 \times 3$ \textit{feature map}.
 \end{figure}
 
 
@@ -222,8 +227,11 @@ ReLU:
 
 \begin{figure}[h]
     \centering
-    \includegraphics{images/p1ReadSeq.pdf}
-    \caption{Ein Plot der ReLU}
+    \includegraphics[
+        width=12cm,
+        keepaspectratio,
+    ]{chapters/4. Kuenstliche Neuronale Netze/relu}
+    \caption{Plot der ReLU (Quelle: eigene)}
     \label{fig-relu}
 \end{figure}
 
