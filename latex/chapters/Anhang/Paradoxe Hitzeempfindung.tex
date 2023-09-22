@@ -28,12 +28,17 @@ Die Bedingungen für eine Aktivierung der Zelle $K_o$, um Kälte zu signalisiere
     \label{eq:gl-cold}
 \end{equation}
 
+
 \begin{figure}[h]
     \centering
-    \includegraphics{images/p1ReadSeq.pdf}
-    \caption{MCP-Netz zur Modellierung der paradoxen Hitzeempfindung.}
+    \includegraphics[
+        width=8cm,
+        keepaspectratio,
+    ]{chapters/Anhang/mcpparadoxheat}
+    \caption{MCP-Netz zur Modellierung der paradoxen Hitzeempfindung (Quelle~\cite[31, Figure 1.18]{Fau94}, Darstellung eigene).}
     \label{fig-mcpheat}
 \end{figure}
+
 
 \noindent
 Zeitabhängige Werte der MCP-Zellen wollen wir nun durch Formeln auszudrücken.
@@ -68,10 +73,15 @@ Wir beginnen mit der Stimulierung von $K_i$ durch zwei aufeinanderfolgende Kält
 
 \begin{figure}[h]
     \centering
-    \includegraphics{images/p1ReadSeq.pdf}
-    \caption{Zwei Kälteimpulse werden nacheinander in das Netz gespeist.}
+    \includegraphics[
+        width=8cm,
+        keepaspectratio,
+    ]{chapters/Anhang/mcptwocold}
+    \caption{Zwei Kälteimpulse werden nacheinander in das Netz gespeist (Quelle~\cite[35, Figure 1.23]{Fau94}, Darstellung eigene).}
     \label{fig-coldimp}
 \end{figure}
+
+
 
 
 \begin{table} %[hbtp]
@@ -83,15 +93,18 @@ Wir beginnen mit der Stimulierung von $K_i$ durch zwei aufeinanderfolgende Kält
         $t-1$ & 0     & 1     & 0        & 1        &          &          \\
         $t$   &       &       & 0         & 1         & 0        & 1        \\
     \end{tabular}
-    \caption{Tabellarische Darstellung von zwei Kälteimpulsen}
+    \caption{Tabellarische Darstellung von zwei Kälteimpulsen. Vgl. Abbildung~\ref{fig-coldimp}.}
     \label{tab:coldimp}
 \end{table}
 
 
 \begin{figure}[h]
     \centering
-    \includegraphics{images/p1ReadSeq.pdf}
-    \caption{Ein einzelner Wärmeimpuls aktiviert das Wärmesignal.}
+    \includegraphics[
+        width=8cm,
+        keepaspectratio,
+    ]{chapters/Anhang/mcponehot}
+    \caption{Ein einzelner Wärmeimpuls aktiviert das Wärmesignal (Quelle~\cite[36, Figure 1.24]{Fau94}, Darstellung eigene).}
     \label{fig-heatimp}
 \end{figure}
 
@@ -105,7 +118,7 @@ Wir beginnen mit der Stimulierung von $K_i$ durch zwei aufeinanderfolgende Kält
         $t-1$ & 1     & 0     &          &          &          &          \\
         $t$   &       &       &          & 0         & 1        & 0        \\
     \end{tabular}
-    \caption{Tabellarische Darstellung von einem Wärmeimpuls}
+    \caption{Tabellarische Darstellung von einem Wärmeimpuls. Vgl. Abbildung~\ref{fig-heatimp}.}
     \label{tab:heatimp}
 \end{table}
 
@@ -124,13 +137,20 @@ Danach wird der Stimulus entfernt: formal wird das durch $\neg K_i (t-2)$ ausged
         $t-1$   &    &    &   1 & 0   &  0  & 0 \\
         $t$   &    &    &    &    &  1  & 0 \\
     \end{tabular}
-    \caption{Tabellarische Darstellung der paradoxen Hitzeempfindung}
+    \caption{Tabellarische Darstellung der paradoxen Hitzeempfindung. Vgl. Abbildung~\ref{fig-heatparad}}
     \label{tab:heatparad}
 \end{table}
 
+
 \begin{figure}[h]
     \centering
-    \includegraphics{images/p1ReadSeq.pdf}
-    \caption{Die paradoxen Hitzeempfindung durch einen einzelnen Kälteimpuls.}
+    \includegraphics[
+        width=8cm,
+        keepaspectratio,
+    ]{chapters/Anhang/mcponecold}
+    \caption{Die paradoxe Hitzeempfindung durch einen einzelnen Kälteimpuls (Quelle~\cite[34, Figure 1.22]{Fau94}, Darstellung eigene).}
     \label{fig-heatparad}
 \end{figure}
+
+
+
