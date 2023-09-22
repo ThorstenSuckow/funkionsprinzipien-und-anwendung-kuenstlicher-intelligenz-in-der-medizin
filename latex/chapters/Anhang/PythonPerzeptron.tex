@@ -3,7 +3,7 @@
 Wie bereits Abschnitt~\ref{seq-mcpbool} wollen wir auch mit dem Rosenblatt Perzeptron boolesche Funktionen nachbilden.
 Das folgende Beispiel bezieht sich auf die \textbf{AND}-Funktion (vgl. Tabelle~\ref{tab:and}).
 
-Zunächst definieren wir zwei Mengen $M_+$ und $M_-$: Für Elemente in $M_+$ ist die erwartete Ausgabe $1$, für Elemente in $M_-$ ist sie $0$:
+Zunächst definieren wir zwei Mengen $M_+$ und $M_-$: Für Elemente in $M_+$ ist die erwartete Ausgabe $1$, für Elemente in $M_-$ ist sie $0$ (vgl. Abbildung~\ref{fig-rpand}):
 
 \begin{equation}
     M_+ := \{(1, 1)\}\\
@@ -15,10 +15,10 @@ Zunächst definieren wir zwei Mengen $M_+$ und $M_-$: Für Elemente in $M_+$ ist
 
 \begin{figure}[h]
     \centering
-    \includegraphics{images/p1ReadSeq.pdf}
-    \caption{Geometrische Interpretation der Perzeptron-Funktion im $\mathbb{R}^2$}
+    \includegraphics{chapters/Anhang/perceptron-and}
+    \caption{Geometrische Interpretation der Perzeptron-Funktion im $\mathbb{R}^2$ (Quelle: eigene)}
     \label{fig-rpand}
-    \small Die Abbildung zeigt alle möglichen zweiwertigem Interpretation von $A \land B$ in einem kartesischen Koordinatensystem. Offensichtlich ist die Anzahl der möglichen Trenngeraden mit $L \subset  \mathbb{R}^2$ unendlich.
+    \small Die Abbildung zeigt alle möglichen zweiwertigem Interpretation von $A \land B$ in einem kartesischen Koordinatensystem. Offensichtlich ist die Anzahl der möglichen Trenngeraden (einige grau eingezeichnet) mit $L \subset  \mathbb{R}^2$ unendlich.
 \end{figure}
 
 \pagebreak
@@ -200,12 +200,44 @@ Die geometrische Darstellung hierzu findet sich in Abbildung~\ref{fig-rp-and-epo
 \end{table}
 
 
+\subsection{Geometrische Darstellung}
+
+Die folgende Abbildung~\ref{fig-rp-and-epochs} zeigt einen vollständigen Lauf über 5 Epochen für die \textbf{AND}-Funktion.
+Blaue gestrichelt ist die Trenngerade, auf der senkrecht der Gewichtsvektor (orange) steht.
+Grün umrandete Punkte sind Ziel des Trainingsschrittes und bedingen den ``Änderungsvektor`` (schwarz), der die Anpassung von $w_i$ im nächsten Schritt angibt.
+
+\begin{figure}[h]
+    \hspace*{-1cm}
+    \includegraphics[
+        width=18cm,
+        keepaspectratio,
+    ]{chapters/Anhang/epochs_1}
+\end{figure}
 
 
 \begin{figure}[h]
-    \centering
-    \includegraphics{images/p1ReadSeq.pdf}
-    \caption{}
+    \hspace*{-1cm}
+    \includegraphics[
+        width=18cm,
+        keepaspectratio,
+    ]{chapters/Anhang/epochs_2}
+\end{figure}
+
+
+\begin{figure}[h]
+    \hspace*{-1cm}
+    \includegraphics[
+        width=18cm,
+        keepaspectratio,
+    ]{chapters/Anhang/epochs_3}
+\end{figure}
+
+\begin{figure}[h]
+    \hspace*{-1cm}
+    \includegraphics[
+        width=18cm,
+        keepaspectratio,
+    ]{chapters/Anhang/epochs_4}
+    \caption{Geometrische Darstellung der Konvergenz eines Perzeptrons für AND (Quelle: eigene)}
     \label{fig-rp-and-epochs}
-    \small Ein vollständiger Lauf über 5 Epochen für die AND-Funktion. Blaue gestrichelt ist die Trenngerade, auf der senkrecht der Gewichtsvektor (orange) steht. Grün umrandete Punkte sind Ziel des Trainingsschrittes und bedingen den ``Änderungsvektor`` (schwarz), der die Anpassung von $w$ im nächsten Schritt angibt. (Quelle: eigene)
 \end{figure}
