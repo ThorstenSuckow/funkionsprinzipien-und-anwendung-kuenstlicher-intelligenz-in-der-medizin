@@ -59,6 +59,19 @@ Er weist ebenda ausserdem darauf hin, dass das Modell nach Rosenblatts Veröffen
 \textit{Prädikate} sind hier Verbindungen zu den Eingabesignalen, die einen Wahrheitswert $0$ oder $1$ basierend auf der Eingabe $X$ berechnen.
 Die Ausgaben der Prädikate werden individuell gewichtet und an die Zelle weitergeleitet, die die Aktivierungsfunktion implementiert (vgl.~\cite[52 f.]{Roj93} und~\cite[8-12]{MP88}).
 
+\begin{figure}[h]
+    \begin{center}
+        \includegraphics{chapters/3. Kuenstliche Neuronen/perzeptron}
+        \caption{
+            Rosenblatt-Perzeptron. (Quelle: in Anlehnung an~\cite[53, Abb. 3.2]{Roj93})
+        }
+        \label{fig-perctheda}
+    \end{center}
+    \small{
+        Schematische Darstellung eines Perzeptron-``Automats`` (siehe~\cite[7]{Ros57}): Eingaben werden an die Prädikate $P_n$ weitergeleitet, deren binäre Ausgaben mit den Gewichten $w_n$ multipliziert werden. Die Summe der Produkte wird mit dem Schwellenwert $\Theta$ verglichen (vgl.~\cite[53]{Roj93}).
+    }
+\end{figure}
+
 Die Eingabefunktion setzt sich dann wie Gleichung~\ref{eq:gl-mcpinpfunc} aus der Summe der Produkte der Prädikate $P_i \in \Phi$ (wobei $P_i(X) \in \{0, 1\}$) und den Gewichten $w_i \in \mathbb{R}$ der Verbindungen zusammen (s. Gleichung~\ref{eq:gl-rpinput}), und die Aktivierungsfunktion (s. Gleichung~\ref{eq:gl-rpact}) ist wieder eine Treppenfunktion mit dem reellen Schwellenwert $\Theta$:
 
 \begin{equation}

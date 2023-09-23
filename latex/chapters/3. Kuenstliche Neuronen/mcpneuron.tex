@@ -16,13 +16,13 @@ In dieser Arbeit stellen sie ein auf \textbf{Aussagenlogik}\footnote{
 
 In der \textbf{Principia Mathematica}\footnote{
     Die \textbf{Principia Mathematica}~\cite{PW27} (PM) der Philosophen und Mathematiker Bertrand Russell (1872 - 1970) und Alfred Whitehead (1861 - 1947) ist ein Werk über die Grundlagen der Mathematik und erschien in drei Bänden zwischen 1910 und 1913.
-} versuchen ihre Autoren \textit{Russel} und \textit{Bertrand} die Mathematik auf ein Fundament logischer Grundprinzipien zu stellen (vgl.~\cite[225]{She26}). McCulloch beschäftigt die Frage, ob es nicht gleichsam möglich sei, die Vorgänge im Gehirn durch ein ähnliches Fundament logischer Prinzipien erklärbar zu machen (vgl.~\cite[4]{Arb19}): Die Zweiwertigkeit des Alles-oder-nichts-Gesetz (siehe Abschnitt~\ref{sec:aktionspotenzial}) wird zum Fundament des Kalküls, angewendet mit Hilfe einfacher aussagenlogischer Formeln.\\
+} stellen \textit{Russel} und \textit{Bertrand} die Mathematik auf ein Fundament logischer Grundprinzipien (vgl.~\cite[225]{She26}). McCulloch beschäftigt die Frage, ob es nicht gleichsam möglich sei, die Vorgänge im Gehirn durch Anwendung logischer Prinzipien erklärbar zu machen (vgl.~\cite[4]{Arb19}). Die Zweiwertigkeit des Alles-oder-nichts-Prinzips (siehe Abschnitt~\ref{sec:aktionspotenzial}) führt zu dem Fundament des Kalküls:\\
 
 \blockquote[{\cite[100]{MP43}}]{
     The `all-or-none law` of nervous activity is sufficient to insure that the activity of any neuron may be represented as a proposition.
 }\\
 
-Insgesamt gehen sie von folgenden physischen Eigenschaften von Nervenzellen aus\footnote{
+Insgesamt gehen McCulloch und Pitts von folgenden physischen Eigenschaften von Nervenzellen aus\footnote{
     Für ihren Kalkül entwerfen sie zwei Netze: Ein zyklenfreies Netz (vgl.~\cite[101]{MP43}) sowie ein Netz, in dem Zyklen vorhanden sind (vgl. ~\cite[108]{MP43}), wobei
     die Frage nach Ursprung und Bedeutung von ``loops`` - also Zyklen - in einem Netz von Nervenzellen McCulloch bereits seit 1928 beschäftigt: ``The tremors of Parkinson’s disease, McCulloch thought, could be explained by closed loops of activity connecting the spinal cord and the contracting muscles.``~\cite[178]{Pic04}. \textit{Arbib} vermerkt in~\cite[3]{Arb19}: ``As another stage in McCulloch's search for the logic of the nervous system, he began thinking about loops in the nervous system. [...] an idea that today we take for granted.`` \textit{Arbib} verweist auf \textit{Lawrence Kubie}, der im Jahr 1930~\cite{Kub30} veröffentlicht, eine Arbeit über ``the possible importance of reverberating loops``~\cite[5]{Arb19}, die für die Forschungen McCullochs wichtig gewesen ist (vgl. ~\cite[5]{Arb19})
 } (vgl.~\cite[101]{MP43}):
@@ -39,9 +39,9 @@ Insgesamt gehen sie von folgenden physischen Eigenschaften von Nervenzellen aus\
 
 \subsection{Das Modell}
 
-Zur Anwendung des von McCulloch und Pitts entworfenen Neuronenmodells überführen wir  die für die Original-Arbeit aus der PM entnommene Notation für Aussagenlogik\footnote{
+Zur Anwendung des von McCulloch und Pitts entworfenen Neuronenmodells überführen wir  die für die Original-Arbeit aus der PM entnommenen Notation für Aussagenlogik\footnote{
     Die übernommene Notation gilt als sperrig~\cite[16]{AR88}. Eine ausführliche Übersicht der in der PM gebräuchlichen Notation findet sich unter \url{https://plato.stanford.edu/entries/pm-notation/} (abgerufen 10.8.2023)
-} in die heutzutage geläufigere Form: ``$\land$`` für \textit{Konjunktion}, ``$\lor$`` für \textit{Disjunktion} sowie ``$\neg$`` für die \textit{Negation}. $\equiv$ verwenden wir im Sinne der Äquivalenz.
+} in die heutzutage geläufigere Form: ``$\land$`` für \textit{Konjunktion}, ``$\lor$`` für \textit{Disjunktion} sowie ``$\neg$`` für die \textit{Negation}. ``$\equiv$`` verwenden wir im Sinne der Äquivalenz.
 Für McCulloch-Pitts-Neuron verwenden wir im Folgenden abkürzend \textbf{MCP-Zelle}; für ein Netz, das aus MCP-Zellen besteht, einfach \textbf{MCP-Netz}.\\
 
 Insgesamt ergeben sich folgende Anforderungen an unser Modell\footnote{
