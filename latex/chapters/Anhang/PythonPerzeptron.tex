@@ -6,11 +6,11 @@ Das folgende Beispiel bezieht sich auf die \textbf{AND}-Funktion (vgl. Tabelle~\
 Zunächst definieren wir zwei Mengen $M_+$ und $M_-$: Für Elemente in $M_+$ ist die erwartete Ausgabe $1$, für Elemente in $M_-$ ist sie $0$ (vgl. Abbildung~\ref{fig-rpand}):
 
 \begin{equation}
-    M_+ := \{(1, 1)\}\\
+    M_+ \coloneqq \{(1, 1)\}\\
 \end{equation}
 
 \begin{equation}
-    M_- := \{(0, 0), (0,1), (1,0)\}
+    M_- \coloneqq \{(0, 0), (0,1), (1,0)\}
 \end{equation}
 
 \begin{figure}[h]
@@ -71,20 +71,20 @@ Die Lernregel wird so lange durchlaufen, bis für alle Trainingsdaten kein Fehle
 Der Algorithmus nutzt folgende Nomenklatur:\\
 
 
-$\eta := 1 \space \space \text{ (Lernrate)}$
+$\eta \coloneqq 1 \space \space \text{ (Lernrate)}$
 
-$b := 0 \space \space \text{ (Bias)}$\\
+$b \coloneqq 0 \space \space \text{ (Bias)}$\\
 
-$w := \begin{pmatrix}
+$w \coloneqq \begin{pmatrix}
           1 \\
           1
 \end{pmatrix}\space \space \text{ (Gewichtsvektor)}$
 \\
 \\
 
-$M_+ := \{(1, 1)\}$
+$M_+ \coloneqq \{(1, 1)\}$
 
-$M_- := \{(0, 0), (0,1), (1,0)\}$
+$M_- \coloneqq \{(0, 0), (0,1), (1,0)\}$
 
 $net = w_1x_1 + w_2x_2 + b$\\
 

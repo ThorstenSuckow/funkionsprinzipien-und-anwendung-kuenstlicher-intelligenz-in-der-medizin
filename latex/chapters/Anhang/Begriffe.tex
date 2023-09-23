@@ -213,6 +213,19 @@ Die Funktionen simuliert Rosenblatt zunächst auf einem IBM 704 Rechner\footnote
 Dabei lernt die Maschine im ersten Schritt durch die Unterstützung der Ingenieure, wie gegebene Formen zu interpretieren sind: Für aktivierte Photozellen wird die erwartete Ausgabe manuell festgelegt.
 Die Verbindungen zwischen den \textbf{S}-, \textbf{A}- und \textbf{R}-Units erinnert nicht nur von der Namensgebung her an biologische Neuronen, auch deren Struktur und Verschaltung wird hier als Vorbild genommen (vgl. ~\cite[4]{Ros62}).\\
 
+\begin{figure}[h]
+    \begin{center}
+        \includegraphics{chapters/3. Kuenstliche Neuronen/perzeptron}
+        \caption{
+            Rosenblatt-Perzeptron. (Quelle: in Anlehnung an~\cite[53, Abb. 3.2]{Roj93})
+        }
+        \label{fig-perctheda}
+    \end{center}
+    \small{
+        Schematische Darstellung eines Perzeptron-``Automats`` (vgl. auch~\cite[7]{Ros57}): Eingaben werden an die Prädikate $P_n$ weitergeleitet, deren binäre Ausgaben mit den Gewichten $w_n$ multipliziert werden. Die Summe der Produkte wird mit dem Schwellenwert $\Theta$ verglichen (vgl.~\cite[53]{Roj93}).
+    }
+\end{figure}
+
 Die \textbf{S}-Units konnten sowohl hemmende als auch erregende Signale in das \textbf{A}-System einspeisen. Darüber hinaus war das \textbf{R}-System in der Lage, über Rückkoppelungen hemmende Signale an das \textbf{A}-System zu senden: Damit sollte verhindert werden, dass weitere \textbf{R}-Units aktiviert werden, die sich mit den bereits aktivierten Units gegenseitig ausschließen~\cite[4 f.]{Ros57}.
 
 
