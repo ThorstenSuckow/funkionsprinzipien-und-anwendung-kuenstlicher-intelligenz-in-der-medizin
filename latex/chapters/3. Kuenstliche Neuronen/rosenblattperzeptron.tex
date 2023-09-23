@@ -2,7 +2,7 @@
 
 In Abschnitt~\ref{mcp-summary} haben wir geschlossen, dass ein MCP-Netz nur durch vorhergehende Analyse der Aufgabe und Anpassung der Topologie von Außen zur Lösung einer Aufgabe imstande ist.
 \textit{Donald Hebbs} Theorien über \textit{synaptische Plastizität}\footnote{
-    s. \ref{appendix:hebb}
+    siehe Anhang~\ref{appendix:hebb}
 } führt kurz vor Beginn der 60er Jahre zu einem Modell, das in der Lage ist, sich selbst anzupassen.
 
 
@@ -17,7 +17,7 @@ Erst 1958 schafft es ein Modell, eine Sensation\footnote{
     s. auch ``Interest in connectionist networks revivied dramatically in 1962 with the publication of Frank Rosenblatt's book \textit{Principles of Neurodynamics}, [...]``~\cite[xi, Hervorhebung i.O.]{MP88}
 }.
 1957 beschreibt es sein Schöpfer \textit{Frank Rosenblatt} (1928 - 1971) in~\cite{Ros57}\footnote{
-    s. \ref{appendix:perzeptron}
+    siehe Anhang~\ref{appendix:perzeptron}
 } als Teil eines internen Forschungsprojektes des \textit{Cornell Aeronautical Labors}\footnote{
     Die Forschungseinrichtung gehörte von 1946 bis 1972 zu der Cornell Universität (\url{https://www.cornell.edu}; ab 1972 gehörte die Forschungseinrichtung dann zu der Calspan Corporation, \url{https://calspan.com}, beides abgerufen 18.08.2023). Rosenblatt macht hier 1950 seinen A.B und 1956 seinen Ph.D. und wird dort bis zu seinem Lebensende (1971) als Psychologe und Neurobiologe forschen und lehren.
 }.
@@ -62,14 +62,15 @@ Die Ausgabe der Prädikate werden individuell gewichtet und an die Zelle weiterg
 
 
 \begin{figure}[h]
-    \centering
+    \begin{center}
     \includegraphics{chapters/3. Kuenstliche Neuronen/perzeptron}
     \caption{
-        Rosenblatt-Perzeptron. (Quelle: ~\cite[53, Abb. 3.2]{Roj93}, Darstellung eigene)
+        Rosenblatt-Perzeptron. (Quelle: in Anlehnung an~\cite[53, Abb. 3.2]{Roj93})
     }
     \label{fig-perctheda}
+    \end{center}
     \small{
-        Schematische Darstellung eines ``Perzeptron-Automats`` (vgl. auch~\cite[7]{Ros57}): Eingaben werden an die Prädikate $P_n$ weitergeleitet, deren binäre Ausgaben mit den Gewichten $w_n$ multipliziert werden. Deren Summe wird mit dem Schwellenwert $\Theta$ verglichen (vgl.~\cite[53]{Roj93}).
+        Schematische Darstellung eines Perzeptron-``Automats`` (vgl. auch~\cite[7]{Ros57}): Eingaben werden an die Prädikate $P_n$ weitergeleitet, deren binäre Ausgaben mit den Gewichten $w_n$ multipliziert werden. Die Summe der Produkte wird mit dem Schwellenwert $\Theta$ verglichen (vgl.~\cite[53]{Roj93}).
     }
 \end{figure}
 
@@ -110,7 +111,7 @@ L = \{(x_1, x_2) \in \mathbb{R}_+^2: x_1 = x_2\}
         width=12cm,
         keepaspectratio,
     ]{chapters/3. Kuenstliche Neuronen/winkelhalbierende}
-    \caption{Winkelhalbierende im kartesischen Koordinatensystem (Quelle: eigene)}
+    \caption{Winkelhalbierende im kartesischen Koordinatensystem (Quelle: Eigene Darstellung)}
     \label{fig-winkelhalbierende}
 \end{figure}
 
@@ -142,12 +143,13 @@ Wir können feststellen, dass
 
 
 \begin{figure}[h]
-    \centering
+    \begin{center}
     \includegraphics[
         width=12cm,
         keepaspectratio,
     ]{chapters/3. Kuenstliche Neuronen/halbraum}
-    \caption{Halbräume im $R^2$ (Quelle: eigene)}
+    \caption{Halbräume im $R^2$ (Quelle: Eigene Darstellung)}
+    \end{center}
     \small{
         Skizzierung der durch die 1. Winkelhalbierende entstandenen Halbräume. Die Mengen $M_-$ und $M_+$ sind linear separierbar, die Gleichung für die \textit{Trenngerade} hierzu lautet $x_1 - x_2 = 0$
     }
@@ -257,7 +259,7 @@ Da wir in unserem Beispiel nur Daten betrachtet haben, die durch eine Gerade dur
         width=8cm,
         keepaspectratio,
     ]{chapters/3. Kuenstliche Neuronen/nichtseparierbar}
-    \caption{Punkte im $\mathbb{R}^2$, die nicht durch eine Ursprungsgerade separabel sind. Angedeutet eine mögliche Trenneggerade, die durch $(0,2)$ geht (Quelle: eigene).}
+    \caption{Punkte im $\mathbb{R}^2$, die nicht durch eine Ursprungsgerade separabel sind. Angedeutet eine mögliche Trenneggerade, die durch $(0,2)$ geht. (Quelle: Eigene Darstellung)}
     \label{fig-nichtseparierbar}
 \end{figure}
 
@@ -320,11 +322,8 @@ Mit $0$ als Schwellenwert wird dadurch eine Verschiebung der Trenngeraden entlan
     einen Überblick über die geometrischen Zusammenhänge liefert ``Einführung in die Neuroinformatik`` von Prof. Dr. G. Sommer \url{https://www.informatik.uni-kiel.de/inf/Sommer/doc/Downloads/Skripte/neuroskript.pdf}:33 ff. (abgerufen 27.08.2023)
 }.
 
-\noindent\fbox{%
-    \parbox{\textwidth}{%
-        Eine Implementierung eines Rosenblatt-Perzeptrons in Python findet sich in \ref{appendix:pythonperzeptron}.
-    }%
-}
+
+Eine praktische Anwendung des Perzeptron-Algorithmus in der Programmiersprache \textit{Python} findet sich in Anhang~\ref{appendix:pythonperzeptron}.
 
 
 
@@ -336,11 +335,12 @@ Wenn ein Perzeptron nicht konvergiert, kann es ausreichen, die Anzahl der Epoche
 }.
 
 \begin{figure}[h]
-    \centering
+    \begin{center}
     \includegraphics{images/rosenblatt/blob_success.png}
-    \caption{}
+    \caption{Perzeptron-Training für grosse Datenmengen. (Quelle: Eigene Darstellung)}
     \label{fig-rp-blobs}
-    \small Ein Perzeptron wird mit einer großen Datenmengen (50 Einträg) trainiert. Nach knapp 300 Trainingsschritten (in der 6ten Epoche) wird die Trenngerade (gestrichelt) gefunden. (Quelle: eigene)
+    \end{center}
+    \small Ein Perzeptron wird mit einer großen Datenmengen (50 Einträge) trainiert. Nach knapp 300 Trainingsschritten (in der 6ten Epoche) wird die Trenngerade (gestrichelt) gefunden.
 \end{figure}
 
 \noindent
@@ -363,12 +363,13 @@ $w_11 + w_21 < \Theta$\\
 Offensichtlich kann $w_1 + w_2 < \Theta$ nicht erfüllt werden, wenn gleichzeitig $w_1 \geq \Theta$ und $w_2 \geq \Theta$ gilt (s. Abbildung~\ref{fig-rp-xor}).
 
 \begin{figure}[h]
-    \centering
+    \begin{center}
     \includegraphics[
         width=8cm,
         keepaspectratio,
     ]{chapters/3. Kuenstliche Neuronen/xorr2}
-    \caption{XOR im $\mathbb{R}^2$ (Quelle: eigene)}
+    \caption{XOR im $\mathbb{R}^2$. (Quelle: Eigene Darstellung)}
+    \end{center}
     \small{
         Interpretationen der XOR-Funktion im kartesischen Koordinatensystem. Hier existiert keine Trenngerade für die Punkte $\{(0, 0), (1, 1)\}$ und $\{(0, 1), (1, 0)\}$.
     }

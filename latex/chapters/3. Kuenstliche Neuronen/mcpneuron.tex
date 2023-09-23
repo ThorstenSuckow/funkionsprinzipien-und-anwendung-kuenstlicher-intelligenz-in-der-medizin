@@ -1,12 +1,12 @@
 \section{Das McCulloch-Pitts-Neuron}
 
 Im Jahr 1943 veröffentlichen Warren McCulloch und Walter Pitts\footnote{
-    s. \ref{appendix:mcculloch}
+    siehe Anhang~\ref{appendix:mcculloch}
 } die Arbeit ``A logical calculus of the ideas immanent in nervous activity`` \cite{MP43}, in der sie ein auf \textbf{Aussagenlogik}\footnote{
     Die (zweiwertige) Aussagenlogik beschäftigt sich mit der Verknüpfung von Aussagen und deren Wertigkeit unter der Berücksichtigung der Wahrheitswerte ``wahr`` und ``falsch`` (vgl.~\cite[2]{Rau88}).
 } basierendes mathematisches Modell zur Erklärung von Signalverarbeitung und  -weiterleitung im Nervensystem präsentieren.
 Ihre Arbeit liefert grundlegende Ideen für die Kybernetik\footnote{
-    s. \ref{appendix:wiener}
+    siehe Anhang~\ref{appendix:wiener}
 } und die Von-Neumann-Rechnerarchitektur\footnote{
     Die Architektur zeichnet sich durch eine Zentraleinheit, der Speichereinheit und Ein-/Ausgabeinheit aus, die über Busse verbunden sind (vgl.~\cite[230]{OV00})
 }~\cite[1]{Arb19} und ebnet der Erforschung der \textit{Künstlichen Intelligenz} den Weg.
@@ -25,7 +25,7 @@ McCulloch beschäftigt die Frage, ob es nicht gleichsam möglich sei, die Vorgä
 
 Für ihren Kalkül entwerfen sie zwei Netze: Ein zyklenfreies Netz~\cite[101]{MP43} sowie ein Netz, in dem Zyklen vorhanden sind\footnote{
     Die Frage nach Ursprung und Bedeutung von ``loops`` in einem Netz von Nervenzellen beschäftigte McCulloch bereits 1928: ``The tremors of Parkinson’s disease, McCulloch thought, could be explained by closed loops of activity connecting the spinal cord and the contracting muscles.``~\cite[178]{Pic04}. \textit{Arbib} vermerkt in~\cite[3]{Arb19}: ``As another stage in McCulloch's search for the logic of the nervous system, he began thinking about loops in the nervous system. [...] an idea that today we take for granted.`` \textit{Arbib} verweist auf \textit{Lawrence Kubie}, der im Jahr 1930~\cite{Kub30} veröffentlicht, eine Arbeit über ``the possible importance of reverberating loops``~\cite[5]{Arb19}, die für die Forschungen McCullochs wichtig gewesen ist (vgl. ~\cite[5]{Arb19})
-}~\cite[108]{MP43}. Insgesamt gehen sie von folgenden physischen Eigenschaften von Nervenzellen aus\footnote{s.~\cite[101]{MP43}}:
+}~\cite[108]{MP43}. Insgesamt gehen sie von folgenden physischen Eigenschaften von Nervenzellen aus\footnote{siehe~\cite[101]{MP43}}:
 
 
 \begin{enumerate}
@@ -69,7 +69,7 @@ Insgesamt ergeben sich folgende Anforderungen an unser Modell (vgl.~\cite[26 f.]
         width=16cm,
         keepaspectratio,
     ]{chapters/3. Kuenstliche Neuronen/mcpneuron}
-    \caption{Schematische Darstellung von MCP-Zellen (Quelle:~\cite[105, Figure 1]{MP43}, Darstellung eigene)}
+    \caption{Schematische Darstellung von MCP-Zellen (Quelle: in Anlehnung an~\cite[105, Figure 1]{MP43})}
     \small
      Schwarze Kreise sind erregende Verbindungen, offene Kreise hemmende. Im ursprünglichen Modell benötigt ein Neuron zwei erregende Eingaben, um aktiviert zu werden.\\
     a) Zeigt damit ein Netz von zwei Neuronen, bei denen $N_2$ feuert, wenn $N_1$ feuert. Unter Berücksichtigung der Zeiteinheit folgt die formale Darstellung $N_2(t) \equiv N_1(t - 1)$.\\
@@ -259,7 +259,7 @@ Für die \textbf{OR}-Funktion ($\lor$) legen wir $\Theta = 2$ und zwei erregende
 \begin{figure}[h]
     \centering
     \includegraphics{chapters/3. Kuenstliche Neuronen/mcpor}
-    \caption{Ein MCP-Neuron zur Modellierung von \textbf{OR} (Quelle: eigene)}
+    \caption{Ein MCP-Neuron zur Modellierung von \textbf{OR} (Quelle: Eigene Darstellung)}
     \label{fig:mcpor}
 \end{figure}
 
@@ -312,7 +312,7 @@ $N_1$ (\textbf{AND}) wird aktiviert, wenn sowohl $x_1$ als auch $x_2$ ein errege
 \begin{figure}[h]
     \centering
     \includegraphics{chapters/3. Kuenstliche Neuronen/mcpnand}
-    \caption{Ein MCP-Netz zur Modellierung von \textbf{NAND} (Quelle: eigene)}
+    \caption{Ein MCP-Netz zur Modellierung von \textbf{NAND} (Quelle: Eigene Darstellung)}
     \label{fig:mcpnand}
 \end{figure}
 
@@ -360,11 +360,7 @@ A \oplus B \equiv (A \lor B) \land (\neg A \lor \neg B)
 \end{figure}
 
 
-\noindent\fbox{%
-    \parbox{\textwidth}{%
-        In \ref{appendix:paradoxehitzeempfindung} findet sich ein ausführliches Beispiel zur Modellierung eines MCP-Netzes unter Berücksichtigung von Zeiteinheiten.
-    }%
-}
+Für ein ausführliches Beispiel zur Modellierung eines MCP-Netzes unter Berücksichtigung von Zeiteinheiten sei auf Anhang~\ref{appendix:paradoxehitzeempfindung} verwiesen.
 
 
 

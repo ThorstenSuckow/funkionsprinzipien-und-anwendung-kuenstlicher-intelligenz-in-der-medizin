@@ -16,13 +16,14 @@
 \usepackage{comment}
 \usepackage{titlesec}
 \usepackage{xurl}
-\usepackage{appendix}
+\usepackage[titletoc,title,page, header]{appendix} % Anhang
 \usepackage[backend=biber, style=alphabetic, isbn=true, doi=true]{biblatex}
 \usepackage{makeidx}         	% Index
 \usepackage{multicol}% Zweispaltiger Index
 \usepackage[threshold=0]{csquotes}
 
- \newcommand{\textgreek}[1]{\begingroup\fontencoding{LGR}\selectfont#1\endgroup}
+\newtheorem{theorem}{Theorem}
+\newcommand{\textgreek}[1]{\begingroup\fontencoding{LGR}\selectfont#1\endgroup}
 
 %\usepackage[bottom]{footmisc}	% Erzeugung von Fu�noten
 
@@ -49,6 +50,8 @@
 %\usepackage{ngerman} 			% Neue deutsche Rechtsschreibung
 \usepackage[english, ngerman]{babel}
 
+\renewcommand\appendixpagename{Anhänge}
+\renewcommand\appendixtocname{Anhänge}
 %%-----------------------------------------------------
 % Unterscheidung für Umlaute Windows-Mac
 %%-----------------------------------------------------
@@ -98,6 +101,7 @@
 %\let\endtable\relax
 %\let\endequation\relax
 
+
 \DeclareFieldFormat{doi}{\textsc{doi}: \texttt{#1}}
 \DeclareFieldFormat{isbn}{\textsc{isbn}: \texttt{#1}}
 
@@ -118,6 +122,9 @@
 %  \mytitlepage
 %  \newpage
 %\endgroup
+
+
+
 \begingroup
   \renewcommand{\thepage}{Titel}
   \mytitlepage

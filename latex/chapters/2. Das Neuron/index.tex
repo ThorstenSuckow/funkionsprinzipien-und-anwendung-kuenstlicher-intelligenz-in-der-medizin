@@ -13,12 +13,13 @@ Oft stehen tausende Neuronen in Verbindung mit den Dendriten eines einzelnen Neu
 }(siehe Abbildung~\ref{fig:neuron}).
 
 \begin{figure}[h]
- \centering
+ \begin{center}
  \includegraphics[
   width=16cm,
   keepaspectratio,
  ]{chapters/2. Das Neuron/dasneuron}
- \caption{Aufbau einer Nervenzelle. (Quelle:~\cite[43 Tafel 2.1]{SD07}, Darstellung eigene)}
+ \caption{Aufbau einer Nervenzelle. (Quelle: in Anlehnung an~\cite[43 Tafel 2.1]{SD07})}
+ \end{center}
  \small{
  Die Dendriten leiten afferente Signale zum Soma, dem Zellkörper. Das Axon leitet ein efferentes (``efferre``
   (lat.): hinaustragen, mitnehmen) Nervensignal über präsynaptische Endigungen (Axonterminale) an (häufig weit entfernte) Effektoren wie Muskeln, Drüsen oder nachgeschaltete Neuronen weiter.}
@@ -95,7 +96,7 @@ Diese \textit{Membranspannung} $V_m$ wird durch eine ungleiche Ionenverteilung b
   width=8cm,
   keepaspectratio,
  ]{chapters/2. Das Neuron/ionenverteilung}
- \caption{Ionenverteilung im Zytosol und der EZF. (Quelle: ~\cite[72 Abb. 3.13]{BCP18}, Darstellung eigene)}
+ \caption{Ionenverteilung im Zytosol und der EZF. (Quelle: in Anlehnung an~\cite[72 Abb. 3.13]{BCP18})}
  \end{center}
  \small{
   Aufgrund der elektrostatischen Anziehungskraft ziehen sich Anionen (neg. geladen) und Kationen (pos. geladen) in der Nähe der Membran gegenseitig an, es kommt zu einer negativen Spannung in Membrannähe (zwischen -70 mV -90 mV in Ruhe). Dadurch ist die negative Ladung nicht gleichmässig im Zytosol verteilt. \textit{Bear et al.} weisen darauf hin, dass trotzdem der grösste Teil des Zytosols und der EZF elektrisch neutral ist (vgl.~\cite[72, Abb. 3.13]{BCP18})}
@@ -110,14 +111,8 @@ $K^+$-Ionen folgen ihrem Konzentrationsgradienten\footnote{
  ``the equilibrium potential of any ion that is present on both sides of a membrane permeable to that ion``~\cite[130]{KSJ+13}
 }.\\
 
-\noindent\fbox{%
- \parbox{\textwidth}{%
-  Das Wert des Membranpotenzial nähert sich dem Wert des Gleichgewichtspotenzials desjenigen Ions an, für den die Membran besonders permeabel ist~\cite[145 f.]{KSJ+13} $(S1.1)$.
- }%
-}\\
 
-
-Das Gleichgewichtspotenzial lässt sich für individuelle Ionen mit der Nernst-Gleichung\footnote{
+Es gilt, dass das Membranpotenzial sich dem Wert des Gleichgewichtspotenzials desjenigen Ions annähert, für den die Membran besonders permeabel ist (vgl. ~\cite[145 f.]{KSJ+13}). Das Gleichgewichtspotenzial lässt sich für individuelle Ionen mit der Nernst-Gleichung\footnote{
  vgl.~\cite[67]{FE19}.
 } ermitteln (s. Gleichung~\ref{eq:gl-nernst} sowie Tabelle~\ref{tab:nernstkonstanten}):\\
 
@@ -131,7 +126,7 @@ E_{Ion} = 2,303  \times \begin{matrix} RT \\ \hline zF \end{matrix} \times log_{
 
   {\renewcommand{\arraystretch}{1.5}%
 \begin{table} %[hbtp]
- \centering
+\begin{center}
  \begin{tabular}{l |l }
   \textbf{Variable / Konstante} & \textbf{Bedeutung}  \\
   \hline
@@ -145,8 +140,11 @@ E_{Ion} = 2,303  \times \begin{matrix} RT \\ \hline zF \end{matrix} \times log_{
  \end{tabular}
  \caption{Nomenklatur Nernst-Gleichung}
  \label{tab:nernstkonstanten}
- \small
-  $E$ steht für \textit{Equilibrium}: ``Gleichgewicht``; \textit{Faraday-Konstante}: elektrische Ladung eines Mols einfach geladener Ionen; 1 Mol = $6.02214076e10^{23}$ Teilchen
+\end{center}
+ \small{
+$E$: \textit{Equilibrium} (``Gleichgewicht``); \textit{Faraday-Konstante}: elektrische Ladung eines Mols einfach geladener Ionen; 1 Mol = $6.02214076e10^{23}$ Teilchen
+
+}
 
 \end{table}
 
@@ -168,10 +166,10 @@ E_{K} = 61,54 mV  \times log_{10} \begin{matrix} 1 \\ \hline 20 \end{matrix} = -
 \end{equation}
 
 \noindent
-Um auf $(S1.1)$ zu schliessen und $V_m$ zu berechnen müssen die Ionen mitberücksichtigt werden, für die die Membran permeabel ist.
-Dazu kann die \textbf{Goldman-Gleichung}\footnote{
- s. \ref{appendix:goldman}
-} genutzt werden:
+
+Zur Bestimmung von $V_m$ einer für mehrere Ionen permeablen Membran kann die \textbf{Goldman-Gleichung}\footnote{
+ siehe Anhang~\ref{appendix:goldman}
+} verwendet werden:
 
 \begin{equation}
 V_{r} = \begin{matrix} RT \\ \hline F \end{matrix}  \times ln \begin{matrix}
@@ -208,7 +206,7 @@ Damit solch ein Impuls ausgelöst werden kann, bedarf es eines \textbf{Aktionspo
   width=12cm,
   keepaspectratio,
  ]{chapters/2. Das Neuron/aktionspotenzial}
- \caption{Aktionspotenzial. (Quelle: ~\cite[47 Tafel 2.3]{SD07}, Darstellung eigene)}
+ \caption{Aktionspotenzial. (Quelle: in Anlehnung an~\cite[47 Tafel 2.3]{SD07})}
  \end{figure}
 
 Das Aktionspotenzial wird über das Axon weitergeleitet. Das Axon - die Nervenfaser - besteht aus einem zylindrischen Zytoplasmaschlaucch und ist von einer Plasmamembran umgeben~\cite[73]{Jon19} (siehe Abbildung~\ref{fig:neuron}).
@@ -239,7 +237,7 @@ Versuche zeigen, daß die Potenzialänderung der Membran in einem Bereich von -8
 
 
 Da sich $g_{Ka}$ erhöht durch zunehmende Öffnung der Natrium-Kanäle, strömen aufgrund der hohen Triebkraft für $Na^+$ mehr $Na^+$ Ionen in das Zellinnere. Es kommt zu einem \textbf{Rückkopplungseffekt} , denn die zunehmend weniger negative Membranspannung öffnet weitere Natrium-Kanäle, die Leitfähigkeit der Membran wird weiter erhöht und es kommt zu einem exponentiellen Anstieg der $Na^+$-Konzentration in der IZF. Der ``explosionsartige`` Natriumeinstrom bewirkt die Depolarisation der Membranspannung und das Aktionspotenzial wird ausgelöst~\cite[69]{FE19}\footnote{
-s. \ref{appendix:aktionspotenzial}
+siehe Anhang~\ref{appendix:aktionspotenzial}
 }.
 
 Die Stärke des Signals selber ist unabhängig von dem Wert, zur überschwelligen Reizung des Neurons geführt hat: Amplitude und Zeitverlauf des Signals im Axon relativ unabhängig von Intensität und Dauer des Reizes~\cite[75]{Jon19}. Entweder kommt es zu einem Aktionspotenzial, oder es bleibt bei der o.g. lokalen Antwort. Aus diesem Grund funktionieren Aktionspotenziale nach dem \textbf{``Alles-oder-Nichts-Prinzip``}~\cite[89]{BCP18}\footnote{
@@ -264,7 +262,7 @@ Die Fortleitung geschieht in Richtung der Axonterminal, wo sich die präsynaptis
 
 \subsection{Synaptische Übertragung}\label{synaptischeuebertragung}
 Neben elektrischen Synapsen, bei denen der Signalaustausch durch einen direkten Stromfluss über sogenannte \textit{gap junctions} und deren ionenleitfähige Verbindungen\footnote{
- ``\textit{Konnexone}``; s.~\cite[50]{SD07}
+ ``\textit{Konnexone}``; siehe~\cite[50]{SD07}
 } passiert~\cite[119]{BCP18}, erfolgt die Signalweiterleitung im Gehirn überwiegend auf chemische Weise~\cite[121 ff.]{BCP18}.
 
 Chemische Synapsen sind nicht direkt miteinander verbunden. 
@@ -385,7 +383,7 @@ Wenn nun das Membranpotenzial vor der Einwirkung von ACh $< 0mV$ ist, bewirkt ei
 Im Allgemeinen gilt, das an erregenden Synapsen unspezifische Kationenkanäle öffnen, deren Umkehrpotential im Bereich von $0mV$ liegt: Hier kommt es zu einer Depolarisation (EPSP). An hemmenden Synapsen öffnen $Cl^-$- oder $K^+$-Kanäle und es gilt dort $V_{rev} \leq V_r$, wonach es meist zu einer leichten Hyperpolarisation kommt~\cite[100]{HS19a}.\\
 
 Die Verrechnung von EPSP und IPSP erfolgt nicht ausschließlich linear durch Summation - inhibitorische Synapsen können auch für einen ``Kurzschluss`` sorgen und somit ein EPSP um ein Vielfaches verkleinern (vgl.~\cite[477]{Sil10}). Man spricht dann von einer \textit{Kurzschlusshemmung} (\textbf{shunting inhibition})\footnote{
- s. \ref{appendix:shuntinginhibition}
+siehe Anhang~\ref{appendix:shuntinginhibition}
 }.
 
 

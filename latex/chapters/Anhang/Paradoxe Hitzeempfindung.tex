@@ -12,7 +12,7 @@ Das nach~\cite[105, Figure 1 (e)]{MP43} aufgestellte Modell und die dazugehörig
 Die Bedingungen für eine Aktivierung von $H_o$ lauten: Hitze wird signalisiert, wenn entweder der Wäremerezeptor durch Wärme stimuliert wird \textbf{oder} kurzzeitig ein Kälteimpuls von den Kälterezeptoren registriert wird.\\
 
 Formal dargestellt\footnote{
-    s.~\cite[106]{MP43}
+    siehe~\cite[106]{MP43}
 }:
 
 \begin{equation}
@@ -35,7 +35,7 @@ Die Bedingungen für eine Aktivierung der Zelle $K_o$, um Kälte zu signalisiere
         width=8cm,
         keepaspectratio,
     ]{chapters/Anhang/mcpparadoxheat}
-    \caption{MCP-Netz zur Modellierung der paradoxen Hitzeempfindung (Quelle~\cite[31, Figure 1.18]{Fau94}, Darstellung eigene).}
+    \caption{MCP-Netz zur Modellierung der paradoxen Hitzeempfindung. (Quelle: in Anlehnung an~\cite[31, Figure 1.18]{Fau94})}
     \label{fig-mcpheat}
 \end{figure}
 
@@ -72,12 +72,13 @@ Hierbei ist der Inhalt der Tabellenzellen (bis auf die Spalte $t$) $f(g(X))$  (s
 Wir beginnen mit der Stimulierung von $K_i$ durch zwei aufeinanderfolgende Kälteimpulse (Abbildung~\ref{fig-coldimp}). Tabelle~\ref{tab:coldimp} stellt die die jeweiligen Schritte dar: Es wird erwartet, das $K_o$ feuert. Tabelle~\ref{tab:heatimp} beschreibt im Gegenzug die Erwartung ``Wärme`` an die Ausgabe für einen Stimulus von $H_i$, dargestellt in Abbildung~\ref{fig-heatimp}.
 
 \begin{figure}[h]
-    \centering
+    \begin{center}
     \includegraphics[
         width=8cm,
         keepaspectratio,
     ]{chapters/Anhang/mcptwocold}
-    \caption{Zwei Kälteimpulse werden nacheinander in das Netz gespeist (Quelle~\cite[35, Figure 1.23]{Fau94}, Darstellung eigene).}
+    \caption{Zwei Kälteimpulse als Eingabe für das MCP-Netz. (Quelle: in Anlehnung an~\cite[35, Figure 1.23]{Fau94}).}
+    \end{center}
     \label{fig-coldimp}
 \end{figure}
 
@@ -93,7 +94,7 @@ Wir beginnen mit der Stimulierung von $K_i$ durch zwei aufeinanderfolgende Kält
         $t-1$ & 0     & 1     & 0        & 1        &          &          \\
         $t$   &       &       & 0         & 1         & 0        & 1        \\
     \end{tabular}
-    \caption{Tabellarische Darstellung von zwei Kälteimpulsen. Vgl. Abbildung~\ref{fig-coldimp}.}
+    \caption{Verarbeitung von zwei Kälteimpulsen in dem MCP-Netz. Vgl. Abbildung~\ref{fig-coldimp}.}
     \label{tab:coldimp}
 \end{table}
 
@@ -104,7 +105,7 @@ Wir beginnen mit der Stimulierung von $K_i$ durch zwei aufeinanderfolgende Kält
         width=8cm,
         keepaspectratio,
     ]{chapters/Anhang/mcponehot}
-    \caption{Ein einzelner Wärmeimpuls aktiviert das Wärmesignal (Quelle~\cite[36, Figure 1.24]{Fau94}, Darstellung eigene).}
+    \caption{Ein einzelner Wärmeimpuls aktiviert das Wärmesignal. (Quelle: in Anlehnung an~\cite[36, Figure 1.24]{Fau94}).}
     \label{fig-heatimp}
 \end{figure}
 
@@ -148,7 +149,7 @@ Danach wird der Stimulus entfernt: formal wird das durch $\neg K_i (t-2)$ ausged
         width=8cm,
         keepaspectratio,
     ]{chapters/Anhang/mcponecold}
-    \caption{Die paradoxe Hitzeempfindung durch einen einzelnen Kälteimpuls (Quelle~\cite[34, Figure 1.22]{Fau94}, Darstellung eigene).}
+    \caption{Entstehung der ``paradoxen Hitzeempfindung`` durch einen einzelnen Kälteimpuls. (Quelle: in Anlehnung an~\cite[34, Figure 1.22]{Fau94}).}
     \label{fig-heatparad}
 \end{figure}
 
