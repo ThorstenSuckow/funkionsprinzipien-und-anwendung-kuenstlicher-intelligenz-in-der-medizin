@@ -73,6 +73,9 @@ Kurzform für \textit{Adenosintriphosphasen}: Enzyme, die ATP in ADP und Phospha
 von ``\textgreek{δένδρον} (dendrón)`` (altgriechisch): Baum; einzelne selten länger als 2 mm~\cite[28]{BCP18}.
 Längere Dendriten finden sich an den kortikalen Pyramidenzellen mit einer Länge von 1 cm~\cite[58]{Eil19}.
 
+\section{Diffusion}\labe{appendix:diffusion}
+unter der Diffusion (``\textit{diffundere}`` (lat.): zerstreuen, ausbreiten) von Molekülen versteht man ihr Bestreben, entlang eines Konzentrationsgradienten (auch: Konzentrationsgefälles) einen Ausgleich der Konzentrationsunterschiede zu erreichen. Moleküle in hoher Konzentration diffundieren dann in die Bereiche mit niedriger Konzentration: In den in Abschnitt~\ref{sec-ionenkonzentrationen} betrachteten Beispielen diffundieren bspw. $K^+$-Ionen, bis ein \textit{Gleichgewichtspotenzial} erreicht ist.
+
 \section{Effektoren}
 ``efficere`` (lat.): bewirken, hervorbringen.
 Effektoren können wir uns als Endglied der Signalübertragung vorstellen, auch wenn hier wieder interzelluläre Vorgänge stattfinden. Vgl. ``neuromuskuläre Endplatte``\cite[127, Abs. 3]{BCP18}.
@@ -231,3 +234,58 @@ Aus diesem Grund sind inhibitorische Synapsen oft proximal zum Soma zu finden~\c
 von ``\textgreek{σῶμα} (sõma)`` (altgriechisch): Körper; auch \textit{Perikaryon}~\cite[58]{RK18}.
 Bezeichnet den Zellkörper und das Stoffwechselzentrum des Neurons mit der eine Grösse von ca. 20 μm~\cite[29]{BCP18}.
 Zum Vergleich: ein menschliches Haar hat einen Durchmesser von ca. 70 μm, kleine Bakterien bis zu 20 μm.
+
+
+\section{Umkehrptenzial}\label{appendix:umkehrpotenzial}
+Wie wir bei der Entstehung des Aktionspotenzials (siehe Abschnitt~\ref{sec:aktionspotenzial}) gesehen haben, transportieren spannungsgesteuerte Ionenkanäle stets entlang des elektrochemischen Gradienten (vgl.~\cite[39]{Fak19}).
+Im Folgenden sei die Membran zur Vereinfachung nur permeabel für ein Ion, es gelte weiterhin $V_m < E_{Ion}$: Die Stromrichtung für das Ion ist einwärts IZF (vgl $Gl1.1$). Ist die Triebkraft positiv wegen $V_m > E_{Ion}$, strömt das Ion auswärts EZF. Wenn allerdings
+
+\begin{equation}
+    V_m - E_{Ion} = 0
+\end{equation}
+
+dann gilt:
+
+\begin{equation}
+    V_m = E_{Ion}
+\end{equation}
+
+In diesem Fall entspricht die Membranspannung dem Gleichgewichtspotenzial des Ions - es findet keine Nettoionenbewegung statt.\\
+
+Der Wert für $V_m$, bei dem die Differenz zwischen $V_m$ und $E_{Ion}$ bei $0$ liegt, wird das \textit{Umkehrpotenzial} $V_{rev}$ genannt, weil hier ein Vorzeichenwechsel stattfindet: Je nachdem, in welche Richtung sich $V_m$ ändert, ändert sich auch die Richtung des Stroms.
+Für ionenspezifische Kanäle entspricht das \textit{Umkehrpotenzial} ihrem \textit{Gleichgewichtspotenzial} (vgl.~\cite[95 f.]{SBB+13}).\\
+
+Sobald eine Membran permeabel für mehr als ein spezifisches Ion ist, muss nach \textit{Kandel et al.} die relative Leitfähigkeit der Membran für diese Ionen sowie deren Gleichgewichtspotenziale zur Bestimmung des Umkehrpotenzials berücksichtigt werden (vgl.~\cite[196, Box 9--1]{KSJ+13}).
+Für die ACh-Rezeptoren an der motorischen Endplatte\footnote{
+    chemische Synapse, die Erregungen an eine Muskelfaser weiterleitet~\cite[56]{SD07}
+}, die für $Na^+$ und $K^+$ permeabel sind, folgt damit, dass die Summe ihrer Ströme am Umkehrpotenzial $V_{rev} = 0$ sein muss:
+
+\begin{equation}
+    I_{Ka} + I_{Na} = 0
+\end{equation}
+
+Da der Membranstrom $I_{Ion}$ gleich dem Produkt der Membranleitfähigkeit und der elektrochemischen Triebkraft für dieses Ion ist (vgl.~\cite[93]{BCP18}), also
+
+\begin{equation}
+    I_{Ion} = g_{Ion} * (V_m - E_{Ion})
+\end{equation}
+
+liefert Ersetzen die Gleichung
+
+\begin{equation}
+    g_{Na} * (V_m - E_{Na}) = g_{K} * (V_m - E_{K})
+\end{equation}
+
+Da am Umkehrpotential $V_{rev} = V_m$ gilt, können wir $V_m$ durch $E_{rev}$ ersetzen und danach auflösen, was zur folgenden Gleichung führt (vgl.~\cite[196, Box 9-1]{KSJ+13}):
+
+\begin{equation}
+    E_{rev} = \begin{matrix}
+                  E_{Na} \space * \space (g_{Na} \space / \space g_{K}) \space + \space E_{K}  \\ \hline
+                  (g_{Na} \space / \space g_{K}) \space + 1
+    \end{matrix}
+\end{equation}
+
+Die ACh-Rezeptoren haben an der Endplatte eine relative Leitfähigkeit für $Na^+:K^+$ von $1,8$, für die Gleichgewichtspotenziale gilt $E_{Na} = +55 mV$ und $E_{K} = -100 mV$; somit folgt nach Einsetzen $E_{rev} = 0mV$ (vgl.~\cite[100]{HS19a}).
+Wenn nun das Membranpotenzial vor der Einwirkung von ACh $< 0mV$ ist, bewirkt ein Öffnen der Ionenkanäle einen Strom einwärts IZF, um $V_m$ auf $0$ zu bringen (Depolarisation); im umgekehrten Fall $V_m > 0$ fließen Ionen auswärts zu EZF, und es findet eine Hyperpolarisation statt~\cite[136, Exkurs 5.4]{BCP18}.\\
+
+

@@ -1,16 +1,14 @@
-\chapter{Das Neuron}
+\chapter{Das Neuron}\label{ch:neuron}
 
 \section{Struktur einer Nervenzelle}
 
 
-Die eingehende Schnittstelle eines Neurons sind seine \textbf{Dendriten}: Baumförmige Fortsätze, die um das \textbf{Soma} herum gelagert sind.
-Diese Dendritenbäume~\cite[47]{BCP18} fungieren \textit{postsynaptisch} und empfangen afferente\footnote{
+Die eingehenden Schnittstellen eines Neurons sind seine \textbf{Dendriten}: Baumförmige Fortsätze, die um das \textbf{Soma} - den Zellkörper - herum gelagert sind\footnote{siehe Anhang~\ref{appendix:soma}}.
+Dendriten fungieren \textit{postsynaptisch} und empfangen afferente\footnote{
   ``afferre`` (lat.): herbeibringen, melden, bringen
-} Signale in Form von Neurotransmittern~\cite[61]{Eil19}.
-Diese werden von Rezeptoren, die sich an den Enden der Dendriten befinden, aufgenommen.
-Oft stehen tausende Neuronen in Verbindung mit den Dendriten eines einzelnen Neurons\footnote{
- vgl.~\cite[42]{SD07}. Die Anzahl der Neuronen im menschlichen Gehirn beziffert sich auf mindestens $10^{11}$~\cite[175]{KSJ+13}
-}(siehe Abbildung~\ref{fig:neuron}).
+} Signale in Form von Neurotransmittern, welche von Rezeptoren, die sich an den Enden der Dendriten befinden, aufgenommen werden\footnote{ vgl.~\cite[61]{Eil19}.
+ Oft stehen tausende Neuronen in Verbindung mit den Dendriten eines einzelnen Neurons (vgl.~\cite[42]{SD07}). Die Anzahl der Neuronen im menschlichen Gehirn beziffert sich auf mindestens $10^{11}$ (vgl.~\cite[175]{KSJ+13}).
+} (siehe Abbildung~\ref{fig:neuron}).
 
 \begin{figure}[h]
  \begin{center}
@@ -27,27 +25,26 @@ Oft stehen tausende Neuronen in Verbindung mit den Dendriten eines einzelnen Neu
 \end{figure}
 
 Die \textbf{Dendriten} leiten Signale weiter an das Soma.
-In der Zelle befindet sich das durch die \textit{Neuronenmembran}\footnote{
- Membrandicke ca. 5 nm~\cite[66]{FE19}
-} von der Umgebung getrennte \textit{Zytosol}, eine salzige, wässrige Flüssigkeit mit einem hohen Anteil von Kalium~\cite[29]{BCP18}\footnote{
- vgl. Ionenkonzentrationen in Tabelle~\ref{tab:ionenkonzentration}. In dem Zytosol eingebettet sind weitere subzelluläre Strukturen mit eigener Membranbegrenzung, die \textit{Zellorganellen}~\cite[8]{SD07}.
+Darin befindet sich das durch die \textit{Neuronenmembran}\footnote{
+ Membrandicke ca. 5 nm (vgl.~\cite[66]{FE19})
+} von der Umgebung getrennte \textit{Zytosol}, eine salzige, wässrige Flüssigkeit mit einem hohen Anteil von Kalium\footnote{vgl.~\cite[29]{BCP18}. Siehe hierzu auch ``Ionenkonzentrationen`` in Tabelle~\ref{tab:ionenkonzentration}.
 }.\\
 
-Für die weitere Betrachtung ist für uns die Zellmembran und der \textit{transmembranale Transport} von Ionen\footnote{
- hier: der Austausch von Ionen zwischen dem intra- und extrazellulären Raum durch Kanäle und Pumpen. Ion: Ein elektrisch geladenes Atom oder Molekül.
+Für die weitere Betrachtung der Signalweiterleitung ist für uns die Zellmembran und der \textit{transmembranale Transport} von Ionen\footnote{
+ hier: der Austausch von Ionen zwischen dem intra- und extrazellulären Raum durch Kanäle und Pumpen. Ion: Ein elektrisch geladenes Atom oder Molekül; \textit{Kation}: positiv geladenes Ion; \textit{Anion}: negativ geladenes Ion.
 } zur Änderung des Membranpotenzials interessant.
 In der Nähe des \textbf{Axonhügels}\footnote{
  ca. 20 - 50 µm vom Soma entfernt~\cite[77]{Jon19}
 } entspringt das \textbf{Axon}\footnote{
  ``axon`` (lat.): Achse; Axone können sich im menschlichen Körper über Entfernungen von bis zu über 1m ausstrecken~\cite[28]{BCP18}
 }, welches in einer ``salzigen extrazellulären Flüssigkeit mit hoher Leitfähigkeit`` liegt~\cite[61]{BCP18}\footnote{
-  \textit{Bear et al.} führen das Axon metaphorisch mit einer Telefonleitung zusammen~\cite[43]{BCP18}. Aufgrund der signalempfangenden Eigenschaften und der dünnen Spitzen der Dendriten liegt auch der Vergleich mit ``Antennen`` nahe~\cite[28]{BCP18}
+  \textit{Bear et al.} führen das Axon metaphorisch mit einer Telefonleitung zusammen (siehe~\cite[43]{BCP18}). Aufgrund der signalempfangenden Eigenschaften und der dünnen Spitzen der Dendriten werden diese auch mit Antennen verglichen (siehe~\cite[28]{BCP18})
 }.
 Hier entscheidet sich, ob das Neuron Informationen weiterleitet: Die Summation der durch die postsynaptischen Endigungen eingehenden Signale kann eine Depolarisation\footnote{
   \textit{Depolarisation} bezeichnet die Verringerung des Membranpotenzials von einem negativen Wert auf einen weniger negativen oder gar einen positiven Wert (vgl. ~\cite[95 f.]{SBB+13})
-} der Membran an dieser Stelle\footnote{vgl.~\cite[61]{Eil19}} über einen gewissen \textbf{Schwellenwert} bewirken, so das ein \textbf{Aktionspotenzial} ausgelöst wird~\cite[142 f.]{BCP18}, was in den präsynaptischen Endigungen die \textbf{Exozytose}\footnote{
+} der Membran an dieser Stelle\footnote{vgl.~\cite[61]{Eil19}} über einen gewissen \textbf{Schwellenwert} bewirken, so das ein \textbf{Aktionspotenzial} erzeugt wird  (vgl.~\cite[142 f.]{BCP18}), was in den präsynaptischen Endigungen die \textbf{Exozytose}\footnote{
   bezeichnet den Stofftransport aus der Zelle heraus. In den nachfolgenden Abschnitten wird hierdrauf noch näher eingegangen.
-} verursacht.
+} auslöst.
 
 
 \section{Das Ruhepotenzial}
@@ -56,7 +53,7 @@ Hier entscheidet sich, ob das Neuron Informationen weiterleitet: Die Summation d
 
 Ein Neuron weist \textit{in Ruhe}\footnote{
  vgl. \textbf{Mempranpotenzial}: ``die Spannung an der Nervenzellmembran zu einem beliebigen Zeitpunkt``~\cite[70]{BCP18}; \textbf{Ruhepotenzial}: ``the electrical potential across the membrane in the absence of signaling``~\cite[126]{KSJ+13}
-} eine ungleiche Ionenverteilung zwischen der durch die Zellmembran getrennten intrazellulären Flüssigkeit (IZF: Zytosol) und der extrazellulären Flüssigkeit (EZF) auf.
+} eine ungleiche Ionenverteilung zwischen der durch die Zellmembran getrennten intrazellulären Flüssigkeit (im folgenden IZF: Zytosol) und der extrazellulären Flüssigkeit (im folgenden EZF) auf.
 In der IZF befinden sich mehr positiv geladene Natrium-Ionen ($Na^+$), und im EZF mehr positiv geladene Kalium- und Calcium-Ionen ($Ka^+$ und $Ca^{2+}$) sowie mehr negativ geladene Chlorid-Ionen ($Cl^-$).
 
 {\renewcommand{\arraystretch}{1.5}%
@@ -75,19 +72,19 @@ In der IZF befinden sich mehr positiv geladene Natrium-Ionen ($Na^+$), und im EZ
 \end{table}
 
 
-Das Membranpotenzial des Neurons wird durch die Verteilung von Ionen in der IZF und EZF bestimmt: In der Membran befinden sich \textbf{Ionenkanäle}, von denen viele \textit{selektiv permeabel} sind.
-Neben den Ionenkanälen existieren auch \textbf{Ionenpumpen} die für die Aufrechterhaltung der Ionenverteilung zuständig sind: die $Ca^{2+}$- und $Na^+$-$K^+$-ATPasen sorgen dafür, dass im Neuron laufend  $Ca^{2+}$ und $Na^+$ aus und $K^+$ in die Zelle gepumpt wird~\cite[44]{SD07}).
+Das Membranpotenzial des Neurons wird durch die Verteilung von Ionen in der IZF und EZF bestimmt: In der Membran befinden sich \textbf{Ionenkanäle}, von denen viele \textit{selektiv permeabel}\footnote{siehe Anhang~\ref{appendix:permeabel}} sind.
+Neben den Ionenkanälen existieren auch \textbf{Ionenpumpen} die für die Aufrechterhaltung der Ionenverteilung zuständig sind: So sorgen die $Ca^{2+}$- und $Na^+$-$K^+$-ATPasen dafür, dass im Neuron laufend  $Ca^{2+}$ und $Na^+$ aus und $K^+$ in die Zelle gepumpt wird (vgl.~\cite[44]{SD07}).
 Zusammen mit den selektiv permeablen Ionenkanälen entstehen so die Ionenkonzentrationen in Tabelle~\ref{tab:ionenkonzentration}.\\
 
 
-Wenn auf das Neuron kein \textit{postsynaptisches Potenzial} (PSP) wirkt und das Neuron keinen Impuls abgibt, liegt das Ruhepotenzial $V_r$ der Zelle zwischen -70 mV und -90 mV\footnote{
-   vgl.~\cite[47, Tafel 2.3 (A.1)]{SD07}. \textit{Bear et al.} geben -65 mV an (1 mV = 0,001 V), also wird von einer 40-mal höheren Ionenpermeabilität für $K^+$ gegenüber $Na^+$ ausgegangen (~\cite[74, Exkurs 3.2]{BCP18} und~\cite[70]{BCP18})
-}: Das Zytosol weist entlang der Membranoberfläche im IZF eine negative Ladung auf\footnote{
- vgl.~\cite[61]{BCP18}. Das Membranpotenzial $V_m$ ergibt sich als die Differenz der Spannungen $V_{IZF}$ und $V_ezf$, wobei $V_{IZF}$ die Spannung im IZF und $V_{EZF}$ die Spannung im EZF ist. $V_r$ ist dann gleich zu $V_{IZF}$: Wenn die Zelle in Ruhe ist, wird die Spannung im EZF als $0$ definiert~\cite[127]{KSJ+13}.
+Wenn keine Erregung des Neurons stattfindet, also kein \textit{postsynaptisches Potenzial} (PSP) wirkt und das Neuron selber keinen Impuls abgibt, liegt das Ruhepotenzial $V_r$ der Zelle zwischen $-70 mV$ und $-90 mV$\footnote{
+   vgl.~\cite[47, Tafel 2.3 (A.1)]{SD07}. \textit{Bear et al.} geben $-65 mV$ an ($1 mV = 0,001 V$), also wird von einer 40-mal höheren Ionenpermeabilität für $K^+$ gegenüber $Na^+$ ausgegangen (vgl.~\cite[74, Exkurs 3.2]{BCP18} sowie~\cite[70]{BCP18})
+}: Das Zytosol weist entlang der Membranoberfläche in der IZF eine negative Ladung auf\footnote{
+ vgl.~\cite[61]{BCP18}. Das Membranpotenzial $V_m$ ergibt sich als die Differenz der Spannungen $V_{IZF}$ und $V_ezf$, wobei $V_{IZF}$ die Spannung im IZF und $V_{EZF}$ die Spannung im EZF ist. $V_r$ ist dann gleich zu $V_{IZF}$: Wenn die Zelle in Ruhe ist, wird die Spannung im EZF als $0$ definiert (vgl.~\cite[127]{KSJ+13}).
 }.
-Diese \textit{Membranspannung} $V_m$ wird durch eine ungleiche Ionenverteilung bewirkt~\cite[66]{FE19}, verursacht durch die Ladung der Teilchen im IZF und EZF in Membrannähe\footnote{
+Diese \textit{Membranspannung} $V_m$ wird durch eine ungleiche Ionenverteilung bewirkt, verursacht durch die Ladung der Teilchen in der IZF und EZF in Membrannähe\footnote{vgl.~\cite[66]{FE19}. \textit{Bear et al.} stellen fest:
  ``Die negativen Ladungen im Inneren des Neurons und die positiven Ladungen außerhalb des Neurons ziehen sich in Richtung Zellmembran gegenseitig an, {[...]} Dementsprechend ist die negative Nettoladung im Inneren der Zelle nicht gleichmäßig im Cytosol verteilt, sondern an der Innenseite der Membran lokalisiert.``~\cite[72, Punkt 2]{BCP18}
-}.
+} (siehe Abbildung~\ref{fig:ionenverteilung}).
 
 
 \begin{figure}[htpb]
@@ -99,24 +96,23 @@ Diese \textit{Membranspannung} $V_m$ wird durch eine ungleiche Ionenverteilung b
  \caption{Ionenverteilung im Zytosol und der EZF. (Quelle: in Anlehnung an~\cite[72 Abb. 3.13]{BCP18})}
  \end{center}
  \small{
-  Aufgrund der elektrostatischen Anziehungskraft ziehen sich Anionen (neg. geladen) und Kationen (pos. geladen) in der Nähe der Membran gegenseitig an, es kommt zu einer negativen Spannung in Membrannähe (zwischen -70 mV -90 mV in Ruhe). Dadurch ist die negative Ladung nicht gleichmässig im Zytosol verteilt. \textit{Bear et al.} weisen darauf hin, dass trotzdem der grösste Teil des Zytosols und der EZF elektrisch neutral ist (vgl.~\cite[72, Abb. 3.13]{BCP18})}
+  Aufgrund der elektrostatischen Anziehungskraft ziehen sich Anionen (neg. geladen) und Kationen (pos. geladen) in der Nähe der Membran gegenseitig an, es kommt zu einer negativen Spannung in Membrannähe (zwischen $-70 mV$ und $-90 mV$ in Ruhe). Dadurch ist die negative Ladung nicht gleichmässig im Zytosol verteilt. \textit{Bear et al.} weisen darauf hin, dass trotzdem der grösste Teil des Zytosols und der EZF elektrisch neutral ist (vgl.~\cite[72, Abb. 3.13]{BCP18})}
  }
+\label{fig:ionenverteilung}
 \end{figure}
 
-In Ruhe ist die Leitfähigkeit der Membran für $Na^+$ gering, für $K^+$ hingegen hoch~\cite[44]{SD07}.
-$K^+$-Ionen folgen ihrem Konzentrationsgradienten\footnote{
- unter der Diffusion (``\textit{diffundere}`` (lat.): zerstreuen, ausbreiten) von Molekülen versteht man ihr Bestreben, entlang eines Konzentrationsgradienten (auch: Konzentrationsgefälles) einen Ausgleich der Konzentrationsunterschiede zu erreichen. Moleküle in hoher Konzentration diffundieren dann in die Bereiche mit niedriger Konzentration: In den hier betrachteten Beispielen diffundieren bspw. $K^+$-Ionen, bis das Gleichgewichtspotenzial erreicht ist.
-} und gelangen über die Ionenkanäle in den EZF, bis die Potenzialdifferenz entlang der Neuronenmembran ausströmende $K^+$-Ionen zurückhält: Wenn diese Differenz den Konzentrationsgradienten für $K^+$ kompensiert, erhält man das \textbf{Gleichgewichtspotenzial}\footnote{
+In Ruhe ist die Leitfähigkeit der Membran für $Na^+$ gering, für $K^+$ hingegen hoch (vgl.~\cite[44]{SD07}).
+$K^+$-Ionen folgen ihrem Konzentrationsgradienten und gelangen über die Ionenkanäle in die EZF, bis die Potenzialdifferenz entlang der Neuronenmembran ausströmende $K^+$-Ionen zurückhält: Wenn diese Differenz den Konzentrationsgradienten für $K^+$ kompensiert, erhält man das \textbf{Gleichgewichtspotenzial}\footnote{
  vgl. ~\cite[72]{BCP18}. \textit{Kandel et al.} schreiben hierzu:
  ``the equilibrium potential of any ion that is present on both sides of a membrane permeable to that ion``~\cite[130]{KSJ+13}
 }.\\
 
 
-Es gilt, dass das Membranpotenzial sich dem Wert des Gleichgewichtspotenzials desjenigen Ions annähert, für den die Membran besonders permeabel ist (vgl. ~\cite[145 f.]{KSJ+13}). Das Gleichgewichtspotenzial lässt sich für individuelle Ionen mit der Nernst-Gleichung\footnote{
+Es gilt, dass sich das Membranpotenzial dem Gleichgewichtspotenzial desjenigen Ions annähert, für den die Membran besonders permeabel ist (vgl. ~\cite[145 f.]{KSJ+13}): Bestimmen lässt sich das Gleichgewichtspotenzial für individuelle Ionen mit der Nernst-Gleichung\footnote{
  vgl.~\cite[67]{FE19}.
 } ermitteln (s. Gleichung~\ref{eq:gl-nernst} sowie Tabelle~\ref{tab:nernstkonstanten}):\\
 
-\textit{Bear et al.} definieren~\cite[74, Exkurs 3.2]{BCP18}:
+\textit{Bear et al.} definieren\footnote{siehe ~\cite[74, Exkurs 3.2]{BCP18}}:
 \begin{equation}
 E_{Ion} = 2,303  \times \begin{matrix} RT \\ \hline zF \end{matrix} \times log_{10} \times \begin{matrix} [Ion]_{EZF} \\ \hline [Ion]_{IZF} \end{matrix}
 \label{eq:gl-nernst}
@@ -179,15 +175,15 @@ V_{r} = \begin{matrix} RT \\ \hline F \end{matrix}  \times ln \begin{matrix}
 \label{eq:gl-goldman}
 \end{equation}
 
-Ein weiteres Merkmal der Membran, auf das wir später zurückgreifen werden, ist die \textit{elektrische Leitfähigkeit} $g_{Ion}$; für sie gilt, dass sie proportional zu der Anzahl der offenen Ionenkanäle $N_{Ion}$ ist~\cite[93]{BCP18}.
+Ein weiteres Merkmal der Membran, auf das wir später zurückgreifen werden, ist die \textit{elektrische Leitfähigkeit} $g_{Ion}$; für sie gilt, dass sie proportional zu der Anzahl der offenen Ionenkanäle $N_{Ion}$ ist (vgl.~\cite[93]{BCP18}).
 
-\section{Das Aktionspotenzial}
+\section{Das Aktionspotenzial}\label{sec:aktionspotenzial}
 
 \subsection{Eigenschaften des Aktionspotenzials}
 
-In Ruhe ist die Ladung in der IZF negativ, in der EZF positiv.
+In Ruhe ist die Ladung in Membrannähe in der IZF negativ, in der EZF positiv.
 Durch eine schnelle Umkehrung dieser Verhältnisse ist eine Nervenzelle dazu in der Lage, ein \textit{Signal} auszulösen~\cite[86]{BCP18}.
-Damit solch ein Impuls ausgelöst werden kann, bedarf es eines \textbf{Aktionspotenzials}: Wir wir im folgenden sehen werden, ist die Entstehung eines Aktionspotenzials auf Ionenbewegungen durch Kanäle zurückzuführen, die durch die Veränderung des Membranpotenzials geöffnet oder geschlossen werden~\cite[96]{BCP18}.
+Hierzu bedarf es eines \textbf{Aktionspotenzials}, das durch Ionenbewegungen entsteht. Die Ionenbewegungen selber sind auf die Änderung des Membranpotenzials zurückzuführen, das ein Öffnen oder Schliessen von ionenspezifischen Kanälen verursacht (vgl.~\cite[96]{BCP18}).
 
  \textit{Kandel et al.} führen 4 wichtige Eigenschaften des Aktionspotenzials auf~\cite[148 f.]{KSJ+13}:
 \begin{enumerate}
@@ -209,24 +205,23 @@ Damit solch ein Impuls ausgelöst werden kann, bedarf es eines \textbf{Aktionspo
  \caption{Aktionspotenzial. (Quelle: in Anlehnung an~\cite[47 Tafel 2.3]{SD07})}
  \end{figure}
 
-Das Aktionspotenzial wird über das Axon weitergeleitet. Das Axon - die Nervenfaser - besteht aus einem zylindrischen Zytoplasmaschlaucch und ist von einer Plasmamembran umgeben~\cite[73]{Jon19} (siehe Abbildung~\ref{fig:neuron}).
 
 Die \textbf{Initiationszone}~\cite[111]{BCP18} des Aktionspotenzials ist der Axonhügel. Hier findet sich eine besonders dichte Anhäufung von spannungsabhängigen $Na^+$-Kanälen\footnote{
  pro Quadratmikrometer (µm²) kann eine Membran viele tausend Natriumkanäle enthalten~\cite[99]{BCP18}
-}, deren Aktivierungskurve um ca. 10 mV zu den negativen Membranpotenzialen verschoben ist, was die Initiierung des Signals begünstigt~\cite[77]{Jon19}.
+}, deren Aktivierungskurve um ca. $10 mV$ zu den negativen Membranpotenzialen verschoben ist, was die Initiierung des Signals begünstigt (vgl. ~\cite[77]{Jon19}).
 
 Damit ein Aktionspotenzial ausgelöst werden kann, muß die Membran nahe der Initiationszone über ihren \textbf{Schwellenwert} \footnote{
  ``das kritische Niveau der Depolarisation, das überschritten werden muss, um ein Aktionspotenzial auszulösen``~\cite[88]{BCP18} oder auch ``Erregungsschwelle``~\cite[69]{FE19}
-} $V_t$ ( > $V_r$ ) depolarisiert werden~\cite[111]{BCP18}.
+} $V_t$ ( > $V_r$ ) depolarisiert werden (vgl.~\cite[111]{BCP18}).
 
 
- Als Schwellenwert wird das Membranpotenzial bezeichnet, bei dem die Permeabilität für $Na^+$ größer als für $Ka^+$ ist~\cite[103]{BCP18} ($V_r$ ist in Ruhe nahe an $E_K$); $V_t$ liegt bei ca. - 50mV, unabhängig vom Typ des Neurons~\cite[75]{Jon19}.
- Damit sich $V_r$ an $V_t$ nähert, bedarf es einer Erregung der Zelle durch postsynaptische Potenziale~\cite[69]{FE19} oder ``eine aus der Umgebung weitergeleitete (elektrotonische) Erregung``~\cite[46]{SD07}.
+ Als Schwellenwert wird das Membranpotenzial bezeichnet, bei dem die Permeabilität für $Na^+$ größer als für $Ka^+$ ist (vgl.~\cite[103]{BCP18})\footnote{$V_r$ ist in Ruhe nahe an $E_K$.}; $V_t$ liegt bei ca. $- 50mV$, unabhängig vom Typ des Neurons (vgl.~\cite[75]{Jon19}).
+ Damit sich $V_r$ an $V_t$ nähert, bedarf es einer Erregung der Zelle durch postsynaptische Potenziale (vgl. ~\cite[69]{FE19}) oder ``eine aus der Umgebung weitergeleitete (elektrotonische) Erregung``~\cite[46]{SD07}.
 
-Die Stärke der Erregung der Zelle ist entscheidend für das Auslösen eines Aktionspotenzials. Es muß mehr $Na^+$ in die Zelle einströmen, als $K^+$ aus der Zelle ausströmen kann~\cite[69]{FE19} (durch die offenen Ruhemembranpotenzialkanäle und Konzentrationsgradientenausgleich der $Na^+$-$K^+$-ATPasen).
-Versuche zeigen, daß die Potenzialänderung der Membran in einem Bereich von -80 mV zu -65 mV kaum Änderung bewirkt~\cite[99]{BCP18}. $g_{Ka}$ erhöht sich, aber wenn $V_r$ nicht erreicht wird, bleibt es bei dieser ``lokalen Antwort``~\cite[46]{SD07}. Erst eine Depolarisation der Membran hin über diesen Wert\footnote{
- ab -60 mV gehen die Natrium-Kanäle ein den Offen-Zustand über\cite[69]{FE19}
-} kann die \textbf{Initiationsphase}~\cite[68]{FE19} des Aktionspotenzials eingeleitet werden: Es öffnen sich mehr Natrium-Kanäle, und durch die negative Ladung der Membran-Innenseite (IZF) gibt es eine starke elektrochemische Triebkraft für $Na^+$-Ionen~\cite[103]{BCP18}. Die Triebkraft ist zu diesem Zeitpunkt die Differenz des Membranpotenzials $V_m$ und $E_{Ka}$. Bei $-60 mV$ beträgt die Triebkraft\footnote{
+Die Stärke der Erregung der Zelle ist entscheidend für das Auslösen eines Aktionspotenzials. Es muss mehr $Na^+$ in die Zelle einströmen, als $K^+$ aus der Zelle ausströmen kann (vgl.~\cite[69]{FE19}).
+Versuche zeigen, daß die Potenzialänderung der Membran in einem Bereich von $-80 mV$ zu $-65 mV$ in dieser Hinsicht kaum Änderung bewirkt (vgl.~\cite[99]{BCP18}). $g_{Ka}$ erhöht sich, aber wenn $V_r$ nicht erreicht wird, bleibt es bei dieser ``lokalen Antwort``~\cite[46]{SD07}. Erst eine Depolarisation der Membran hin über diesen Wert\footnote{
+ ab -60 mV gehen die Natrium-Kanäle ein den Offen-Zustand über (vgl.~\cite[69]{FE19}).
+} kann die \textbf{Initiationsphase}\footnote{siehe ~\cite[68]{FE19}} des Aktionspotenzials eingeleitet werden: Es öffnen sich mehr Natrium-Kanäle, und durch die negative Ladung der Membran-Innenseite (in der IZF) gibt es eine starke elektrochemische Triebkraft für $Na^+$-Ionen (vgl.~\cite[103]{BCP18}(). Die Triebkraft ist zu diesem Zeitpunkt die Differenz des Membranpotenzials $V_m$ und $E_{Ka}$. Bei $-60 mV$ beträgt die Triebkraft\footnote{
  vgl.~\cite[39]{Fak19}
 }:
 
@@ -236,12 +231,12 @@ Versuche zeigen, daß die Potenzialänderung der Membran in einem Bereich von -8
  \end{equation}
 
 
-Da sich $g_{Ka}$ erhöht durch zunehmende Öffnung der Natrium-Kanäle, strömen aufgrund der hohen Triebkraft für $Na^+$ mehr $Na^+$ Ionen in das Zellinnere. Es kommt zu einem \textbf{Rückkopplungseffekt} , denn die zunehmend weniger negative Membranspannung öffnet weitere Natrium-Kanäle, die Leitfähigkeit der Membran wird weiter erhöht und es kommt zu einem exponentiellen Anstieg der $Na^+$-Konzentration in der IZF. Der ``explosionsartige`` Natriumeinstrom bewirkt die Depolarisation der Membranspannung und das Aktionspotenzial wird ausgelöst~\cite[69]{FE19}\footnote{
-siehe Anhang~\ref{appendix:aktionspotenzial}
+Da sich durch zunehmende Öffnung der Natrium-Kanäle $g_{Ka}$ erhöht, strömen aufgrund der hohen Triebkraft für $Na^+$ mehr $Na^+$ Ionen in das Zellinnere. Es kommt zu einem \textbf{Rückkopplungseffekt} , denn die zunehmend weniger negative Membranspannung öffnet weitere Natrium-Kanäle, die Leitfähigkeit der Membran wird weiter erhöht und es kommt zu einem exponentiellen Anstieg der $Na^+$-Konzentration in der IZF. Der ``explosionsartige`` Natriumeinstrom bewirkt die Depolarisation der Membranspannung und das Aktionspotenzial wird ausgelöst (vgl.~\cite[69]{FE19})\footnote{
+siehe hierzu auch Anhang~\ref{appendix:aktionspotenzial}
 }.
 
-Die Stärke des Signals selber ist unabhängig von dem Wert, zur überschwelligen Reizung des Neurons geführt hat: Amplitude und Zeitverlauf des Signals im Axon relativ unabhängig von Intensität und Dauer des Reizes~\cite[75]{Jon19}. Entweder kommt es zu einem Aktionspotenzial, oder es bleibt bei der o.g. lokalen Antwort. Aus diesem Grund funktionieren Aktionspotenziale nach dem \textbf{``Alles-oder-Nichts-Prinzip``}~\cite[89]{BCP18}\footnote{
- ``Im Computerzeitalter bezeichnet man das axonale Aktionspotenzial auch als 'digitales' Signal.``~\cite[75]{Jon19}. \tetxit{Frank} bietet eine Übersicht über die Erforschung des Alles-oder-Nichts-Prinzip in~\cite{Fra94}. Dort wird \textit{Lucas} erwähnt, der 1905 in~\cite{Luc05} die Kontraktionen von Muskelfasern unter diesem Gesichtspunkt untersucht hat~\cite[210]{Fra94}
+Die Stärke des Signals selber ist unabhängig von dem Wert, der zu der überschwelligen Reizung des Neurons geführt hat: Amplitude und Zeitverlauf des Signals im Axon hängen nicht von Intensität und Dauer des Reizes ab (vgl.~\cite[75]{Jon19}). Entweder kommt es zu einem Aktionspotenzial, oder es bleibt bei einer lokalen Antwort. Aus diesem Grund funktionieren Aktionspotenziale nach dem \textbf{``Alles-oder-Nichts-Prinzip``}\footnote{vgl.~\cite[89]{BCP18}. Ausserdem:
+ ``Im Computerzeitalter bezeichnet man das axonale Aktionspotenzial auch als 'digitales' Signal.``~\cite[75]{Jon19}. \tetxit{Frank} bietet eine Übersicht über die Erforschung des Alles-oder-Nichts-Prinzip in~\cite{Fra94}. Dort wird \textit{Lucas} erwähnt, der 1905 in~\cite{Luc05} die Kontraktionen von Muskelfasern unter diesem Gesichtspunkt untersucht hat (vgl.~\cite[210]{Fra94})
 }:
 
 \blockquote[{\cite[157]{KSJ+13}}]{
@@ -251,10 +246,10 @@ Die Stärke des Signals selber ist unabhängig von dem Wert, zur überschwellige
 \subsection{Signalweiterleitung über das Axon}
 
 Kurz nach der Aktionspotenzialbildung befinden sich daran beteiligte Membrane in der Refraktärphase, ihre $Na^+$-Kanäle sind inaktiviert. 
-Somit pflanzt sich das Aktionspotenzial nur in eine Richtung fort\footnote{
+Somit pflanzt sich das Aktionspotenzial nur in eine Richtung fort\footnote{\textit{orthodrome} Fortleitung.
   \textit{Bear et al.} verweisen auf \textit{antidrome} Fortleitung, die in Experimenten ausgelöst werden kann~\cite[106]{BCP18}
-} ( \textit{orthodrome} Fortleitung)~\cite[106]{BCP18}.
-Die Fortleitung geschieht in Richtung der Axonterminal, wo sich die präsynaptischen Endigungen befinden und das elektrische Signal in chemische Signale umgewandelt werden.
+} (vgl.~\cite[106]{BCP18}).
+Die Fortleitung geschieht in Richtung der Axonterminal, wo sich die präsynaptischen Endigungen befinden und das elektrische Signal in chemische Signale umgewandelt werden (siehe Abbildung\ref{fig:neuron}).
 
 
 \section{Synaptische Übertragung und Integration}
@@ -262,17 +257,17 @@ Die Fortleitung geschieht in Richtung der Axonterminal, wo sich die präsynaptis
 
 \subsection{Synaptische Übertragung}\label{synaptischeuebertragung}
 Neben elektrischen Synapsen, bei denen der Signalaustausch durch einen direkten Stromfluss über sogenannte \textit{gap junctions} und deren ionenleitfähige Verbindungen\footnote{
- ``\textit{Konnexone}``; siehe~\cite[50]{SD07}
-} passiert~\cite[119]{BCP18}, erfolgt die Signalweiterleitung im Gehirn überwiegend auf chemische Weise~\cite[121 ff.]{BCP18}.
+ ``\textit{Konnexone}``; vgl.~\cite[50]{SD07}
+} passiert (vgl.~\cite[119]{BCP18}), erfolgt die Signalweiterleitung im Gehirn überwiegend auf chemische Weise (vgl.~\cite[121 ff.]{BCP18}).
 
 Chemische Synapsen sind nicht direkt miteinander verbunden. 
-Zwischen ihnen existiert ein Spalt, der ca. 20-40 nM breit ist~\cite[184]{KSJ+13}, in der sich eine ``Matrix aus extrazellulären Proteinen``\footnote{
+Zwischen ihnen existiert ein Spalt, der ca. $20$ - $40 nM$ breit ist (vgl.~\cite[184]{KSJ+13}), und in der sich eine ``Matrix aus extrazellulären Proteinen``\footnote{
  lies: \textit{extrazelluläre Matrix}. Hierbei handelt sich um den Gewebeanteil im \textit{Interzellularraum}, also der Raum ausserhalb der Zellen: ``The extracellular matrix {[...]} surrounds all connective tissue cells providing mechanical support and physical strength to tissues, organs and the organism as a whole``~\cite[3]{AHH+98}
 } befindet, die den Synapsenspalt überbrückt~\cite[122]{BCP18}.
-Die Übertragung von Signalen erfolgt über Exozytose: Botenstoffe (\textit{Neurotransmittern}) diffundieren aus den präsynaptischen Endigungen in diesen Spalt~\cite[122]{BCP18}, und verschiedene Typen von Rezeptoren an den postsynaptischen Endigungen wandeln die Botenstoffe in hemmende oder erregende Signale um, die dann von der postsynaptischen Zelle nach dem Alles-oder-Nichts-Prinzip integriert werden.
+Die Übertragung von Signalen erfolgt über Exozytose: Botenstoffe (\textit{Neurotransmittern}) diffundieren aus den präsynaptischen Endigungen in diesen Spalt (vgl.~\cite[122]{BCP18}), und verschiedene Typen von Rezeptoren an den postsynaptischen Endigungen wandeln die Botenstoffe in hemmende oder erregende Signale um, die dann von der postsynaptischen Zelle nach dem Alles-oder-Nichts-Prinzip integriert werden.
 
 Die durch das Aktionspotenzial ausgelöste Depolarisation der Membran an den Axonterminalen bewirkt eine Öffnung spannungsgeladener Calcium-Canäle~\cite[184]{KSJ+13}.
-Durch die ungleiche $Ca^{2+}$ Ionenkonzentration zwischen der EZF und IZF (10.000 : 1:Tabelle~\ref{tab:ionenkonzentration}) entsteht eine hohe Triebkraft für $Ca^{2+}$: Nach Gleichung~\ref{eq:gl-nernst} ergibt sich für das Gleichgewichtspotenzial für $Ca^2+$
+Durch die ungleiche $Ca^{2+}$ Ionenkonzentration zwischen der EZF und IZF (10.000 : 1, siehe Tabelle~\ref{tab:ionenkonzentration}) entsteht eine hohe Triebkraft für $Ca^{2+}$: Nach Gleichung~\ref{eq:gl-nernst} ergibt sich für das Gleichgewichtspotenzial für $Ca^2+$
 
 \begin{equation}
  E_{Ca^{2+}} = 123,08 mV
@@ -293,100 +288,42 @@ und bei einem Membranpotenzial von $V_m \sim 20 mV$ durch Depolarisation liegt d
 
 Die Calcium-Ionen strömen in das Innere der Zelle und lösen die Exozytose von \textbf{synaptischen Vesikeln}\footnote{
  ``\textit{vesicula}`` (lat.): ``Bläschen``
-} aus, kleine, mit einer Membran von der IZF getrennte Strukturen von etwa 50 nm Durchmesser, die mit Neurotransmittern gefüllt sind~\cite[1000]{BCP18}.
-Im \textit{synaptischen Endknöpfchen} befinden sich 100-200 von diesen Bläschen, die jeweils tausende Moleküle eines Neurotransmitters beinhalten~\cite[184]{KSJ+13}.
+} aus, kleine, mit einer Membran von der IZF getrennte Strukturen von etwa $50 nm$ Durchmesser, die mit Neurotransmittern gefüllt sind (vgl.~\cite[1000]{BCP18}).
+Im \textit{synaptischen Endknöpfchen} befinden sich 100--200 von diesen Bläschen, die jeweils tausende Moleküle eines Neurotransmitters beinhalten (vgl.~\cite[184]{KSJ+13}).
 
 Der Calciumeinstrom in die präsynaptische Endigung löst die Verschmelzung dieser Bläschen mit der Zellmembran des Endknöpfchens an der sogenannten \textbf{aktiven Zonen}\footnote{
- \textit{Bear et al.} beschreiben das Aussehen der aktiven Zone als ``ein Feld winziger Pyramiden``~\cite[123]{BCP18}
-} aus: Ein spezialisierter Abschnitt der Membran, der direkt gegenüber der \textbf{postsynaptischen Dichte}\footnote{
- \textit{Rohkamm und Kerner} sprechen von direkter Einwirkung (inotrop) und indirekter Einwirkung (metabotrop) ~\cite[134]{RK18}
-} liegt, der Abschnitt der postsynaptischen Endigung, in der sich die Rezeptoren befinden~\cite[96]{HS19a}.
-Kurz nach Beginn der Transmitterübertragung über den synaptischen Spalt findet die \textbf{Endozytose} statt, ein Recyclingprozess, in dem die individuellen Vesikelmembranen wiederhergestellt und mit Neurotransmitter erneut aufgefüllt werden~\cite[133]{BCP18}.
+ \textit{Bear et al.} beschreiben das Aussehen der aktiven Zone als ``ein Feld winziger Pyramiden``~\cite[123]{BCP18}; \textit{Rohkamm und Kerner} verweisen in diesem Zusammenhang auf direkte Einwirkung (ionotrop) und indirekte Einwirkung (metabotrop) der Neurotransmitter (siehe. ~\cite[134]{RK18})
+} aus: Ein spezialisierter Abschnitt der Membran, der direkt gegenüber der \textbf{postsynaptischen Dichte} liegt, der Abschnitt der postsynaptischen Endigung, in der sich die Rezeptoren befinden (vgl.~\cite[96]{HS19a})\footnote{
+Kurz nach Beginn der Transmitterübertragung über den synaptischen Spalt findet die \textbf{Endozytose} statt, ein Recyclingprozess, in dem die individuellen Vesikelmembranen wiederhergestellt und mit Neurotransmitter erneut aufgefüllt werden (vgl.~\cite[133]{BCP18}).
+}.
+
 
 
 \subsection{Synaptische Integration}
 
-Die Neurotransmitter eines einzelnen Vesikels lösen einen minimalen exzitatorischen oder inhibitorischen postsynaptischen Strom aus (\textbf{mEPSC} bzw. \textbf{mIPSC}, \textit{miniature excitatory / inhibitory postsynaptic current}) . 
+Die Neurotransmitter eines einzelnen Vesikels lösen einen minimalen exzitatorischen oder inhibitorischen postsynaptischen Strom aus (\textbf{mEPSC} bzw. \textbf{mIPSC}, \textit{miniature excitatory / inhibitory postsynaptic current})\footnote{
 EPSCs und IPSCs setzen sich aus einzelnen dieser mEPSC bzw. mIPSC zusammen und bilden die kleinste Einheit der postsynaptischen Ströme, weshalb man sie als \textit{Quanten} bezeichnet~\cite[98]{HS19a}.
-Da EPSPs ein Vielfaches des Quantums sind, ``das die Menge an Transmitter in einem einzigen Vesikel und die Anzahl der postsynaptischen Rezeptoren an der Synapse widerspiegelt``, nennt man sie ``gequantelt``\footnote{
- \cite[142]{BCP18}. Gleiche Stelle weist darauf hin, dass sich mit Hilfe der \textbf{Quantelungsanalyse} die Anzahl der an einer synaptischen Übertragung beteiligten Vesikel bestimmen lässt.
+Da EPSPs ein Vielfaches des Quantums sind, ``das die Menge an Transmitter in einem einzigen Vesikel und die Anzahl der postsynaptischen Rezeptoren an der Synapse widerspiegelt``, nennt man sie ``gequantelt``~\cite[142]{BCP18}. Mit Hilfe der \textbf{Quantelungsanalyse} lässt sich die Anzahl der an einer synaptischen Übertragung beteiligten Vesikel bestimmen (vgl. \cite[142]{BCP18}).
 }.
 
 Wesentlich für die Entstehung eines neuen Aktionspotenzials in der postsynaptischen Zelle ist die Verrechnung der räumlich oder zeitlich eintreffenden Signale. 
-Hierbei ist die \textbf{räumliche Summation} die Integration von vielen fast gleichzeitig eintreffenden Signalen mehrerer präsynaptischer Zellen, die sich in der Folgezelle zu einem EPSP aufaddieren~\cite[101]{HS19a}.
+Hierbei ist die \textbf{räumliche Summation} die Integration von vielen fast gleichzeitig eintreffenden Signalen mehrerer präsynaptischer Zellen, die sich in der Folgezelle zu einem \textit{exzitatorischen postsynaptischen Potenzial} (EPSP) aufaddieren (vgl.~\cite[101]{HS19a}).
 Unter der \textbf{zeitlichen Summation} versteht man die in gewissen Abständen von ein und derselben Synapse hintereinander eintreffenden EPSPs, die jeweils  das Membranpotenzial für nachfolgende Signale zum Schwellenwert hin verschieben\footnote{
  vgl.~\cite[142]{BCP18} sowie~\cite[101]{HS19a}
 }.
-Ob der Schwellenwert der postsynaptischen Zelle überschritten werden kann ist auch abhängig von dem Abstand der Synapsen von der Initiationszone und den Eigenschaften der dendritischen Membran.
 
-So kann die EPSP-Amplitude kleiner werden, wenn Strom auf dem Weg zu dem Axonhügel durch die Membran verloren geht~\cite[142 f.]{BCP18}\footnote{
- \textit{Bear et al.} vergleichen die Dendriten mit einem löchrigen Gartenschlauch~\cite[143]{BCP18}
-}.
-
-Zu berücksichtigen ist natürlich auch der Einfluss inhibitorischer Synapsen auf die Zelle: Inhibitorische ``Eingaben``, die hyperpolarisierend wirken, werden von den exzitatorischen Eingaben subtrahiert\footnote{
- \textit{Bear et al.} stellen in~\cite[146, Exkurs 5.6]{BCP18} die Bedeutung inhibitorischer Synapsen anschaulich dar.
-}~\cite[225]{KSJ+13}.
+Ob der Schwellenwert der postsynaptischen Zelle überschritten werden kann ist auch abhängig von dem Einfluss der \textit{inhibitorischen Synapsen} auf die Zelle: Inhibitorische ``Eingaben``, die hyperpolarisierend wirken, werden von den exzitatorischen Eingaben subtrahiert\footnote{
+ \textit{Bear et al.} stellen in~\cite[146, Exkurs 5.6]{BCP18} die Bedeutung inhibitorischer Synapsen anschaulich dar.}\footnote{Daneben ist auch der Abstand der Synapsen von der Initiationszone sowie die Eigenschaften der dendritischen Membran zu berücksichtigen. So kann die EPSP-Amplitude kleiner werden, wenn Strom auf dem Weg zu dem Axonhügel durch die Membran verloren geht (vgl.~\cite[142 f.]{BCP18}). \textit{Bear et al.} vergleichen die Dendriten diesbzgl. mit einem löchrigen Gartenschlauch (vgl.~\cite[143]{BCP18}).
+} (vgl.~\cite[225]{KSJ+13}).\\
 
 
-Das Zusammenspiel zwischen exzitatorischen und inhibitorischen Synapsen wird auch durch das \textbf{Umkehrpotential} bestimmt. 
-Wie wir bei der Entstehung des Aktionspotenzials gesehen haben, transportieren spannungsgesteuerte Ionenkanäle stets entlang des elektrochemischen Gradienten~\cite[39]{Fak19}.
-Die Membran sei zur Vereinfachung nur permeabel für ein Ion, es gelte weiterhin $V_m < E_{Ion}$: Die Stromrichtung für das Ion ist einwärts IZF (vgl $Gl1.1$). Ist die Triebkraft positiv wegen $V_m > E_{Ion}$, strömt das Ion auswärts EZF. Wenn allerdings
+Das Zusammenspiel zwischen exzitatorischen und inhibitorischen Synapsen wird auch durch das \textbf{Umkehrpotential} $V_{rev}$ bestimmt\footnote{
+Anhang~\ref{appendix:umkehrpotenzial} beschäftigt sich ausführlicher damit.
+}: Im Allgemeinen gilt, das an erregenden Synapsen unspezifische Kationenkanäle öffnen, deren Umkehrpotential im Bereich von $0mV$ liegt: Hier kommt es zu einer Depolarisation (EPSP). An hemmenden Synapsen öffnen $Cl^-$- oder $K^+$-Kanäle und es gilt dort $V_{rev} \leq V_r$, wonach es meist zu einer leichten Hyperpolarisation kommt (vgl. ~\cite[100]{HS19a}).\\
 
-\begin{equation}
-V_m - E_{Ion} = 0
-\end{equation}
-
-dann gilt:
-
-\begin{equation}
-V_m = E_{Ion}
-\end{equation}
-
-In diesem Fall entspricht die Membranspannung dem Gleichgewichtspotenzial des Ions - es findet keine Nettoionenbewegung statt.\\
-
-Der Wert für $V_m$, bei dem die Differenz zwischen $V_m$ und $E_{Ion}$ bei $0$ liegt, wird das \textit{Umkehrpotenzial} $V_{rev}$ genannt, weil hier ein Vorzeichenwechsel stattfindet: Je nachdem, in welche Richtung sich $V_m$ ändert, ändert sich auch die Richtung des Stroms.
-Für ionenspezifische Kanäle entspricht das \textit{Umkehrpotenzial} ihrem \textit{Gleichgewichtspotenzial} (vgl.~\cite[95 f.]{SBB+13}).\\
-
-Sobald eine Membran permeabel für mehr als ein spezifisches Ion ist, muss nach \textit{Kandel et al.} die relative Leitfähigkeit der Membran für diese Ionen sowie deren Gleichgewichtspotenziale zur Bestimmung des Umkehrpotenzials berücksichtigt werden.
-Für die ACh-Rezeptoren an der motorischen Endplatte\footnote{
- chemische Synapse, die Erregungen an eine Muskelfaser weiterleitet~\cite[56]{SD07}
-}, die für $Na^+$ und $K^+$ permeabel sind, folgt damit, dass die Summe ihrer Ströme am Umkehrpotenzial $V_{rev} = 0$ sein muss:
-
-\begin{equation}
-I_{Ka} + I_{Na} = 0
-\end{equation}
-
-Da der Membranstrom $I_{Ion}$ gleich dem Produkt der Membranleitfähigkeit und der elektrochemischen Triebkraft für dieses Ion ist~\cite[93]{BCP18}, also
-
-\begin{equation}
-I_{Ion} = g_{Ion} * (V_m - E_{Ion})
-\end{equation}
-
-liefert Ersetzen die Gleichung
-
-\begin{equation}
-g_{Na} * (V_m - E_{Na}) = g_{K} * (V_m - E_{K})
-\end{equation}
-
-Da am Umkehrpotential $V_{rev} = V_m$ gilt, können wir $V_m$ durch $E_{rev}$ ersetzen und danach auflösen, was zur folgenden Gleichung führt (vgl.~\cite[196, Box 9-1]{KSJ+13}):
-
-\begin{equation}
-E_{rev} = \begin{matrix}
-            E_{Na} \space * \space (g_{Na} \space / \space g_{K}) \space + \space E_{K}  \\ \hline
-            (g_{Na} \space / \space g_{K}) \space + 1
-\end{matrix}
-\end{equation}
-
-Die ACh-Rezeptoren haben an der Endplatte eine relative Leitfähigkeit für $Na^+:K^+$ von $1,8$, für die Gleichgewichtspotenziale gilt $E_{Na} = +55 mV$ und $E_{K} = -100 mV$; somit folgt nach Einsetzen $E_{rev} = 0mV$~\cite[100]{HS19a}.
-Wenn nun das Membranpotenzial vor der Einwirkung von ACh $< 0mV$ ist, bewirkt ein Öffnen der Ionenkanäle einen Strom einwärts IZF, um $V_m$ auf $0$ zu bringen (Depolarisation); im umgekehrten Fall $V_m > 0$ fließen Ionen auswärts zu EZF, und es findet eine Hyperpolarisation statt~\cite[136, Exkurs 5.4]{BCP18}.\\
-
-Im Allgemeinen gilt, das an erregenden Synapsen unspezifische Kationenkanäle öffnen, deren Umkehrpotential im Bereich von $0mV$ liegt: Hier kommt es zu einer Depolarisation (EPSP). An hemmenden Synapsen öffnen $Cl^-$- oder $K^+$-Kanäle und es gilt dort $V_{rev} \leq V_r$, wonach es meist zu einer leichten Hyperpolarisation kommt~\cite[100]{HS19a}.\\
-
-Die Verrechnung von EPSP und IPSP erfolgt nicht ausschließlich linear durch Summation - inhibitorische Synapsen können auch für einen ``Kurzschluss`` sorgen und somit ein EPSP um ein Vielfaches verkleinern (vgl.~\cite[477]{Sil10}). Man spricht dann von einer \textit{Kurzschlusshemmung} (\textbf{shunting inhibition})\footnote{
+Die Verrechnung von EPSP und IPSP (inhibitorisches postsynaptisches Potenzial) erfolgt nicht ausschließlich linear durch Summation - inhibitorische Synapsen können auch für einen ``Kurzschluss`` sorgen und somit ein EPSP um ein Vielfaches verkleinern (vgl.~\cite[477]{Sil10}). Man spricht dann von einer \textit{Kurzschlusshemmung} (\textbf{shunting inhibition})\footnote{
 siehe Anhang~\ref{appendix:shuntinginhibition}
 }.
-
-
 
 
 
