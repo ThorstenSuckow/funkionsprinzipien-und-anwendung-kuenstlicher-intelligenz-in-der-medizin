@@ -32,7 +32,7 @@ Darin befindet sich das durch die \textit{Neuronenmembran}\footnote{
 
 Für die weitere Betrachtung der Signalweiterleitung ist für uns die Zellmembran und der \textit{transmembranale Transport} von Ionen\footnote{
  hier: der Austausch von Ionen zwischen dem intra- und extrazellulären Raum durch Kanäle und Pumpen. Ion: Ein elektrisch geladenes Atom oder Molekül; \textit{Kation}: positiv geladenes Ion; \textit{Anion}: negativ geladenes Ion.
-} zur Änderung des Membranpotenzials interessant.
+} zur Änderung des Membranpotenzials von Interesse.
 In der Nähe des \textbf{Axonhügels}\footnote{
  ca. 20 - 50 µm vom Soma entfernt~\cite[77]{Jon19}
 } entspringt das \textbf{Axon}\footnote{
@@ -80,7 +80,7 @@ Zusammen mit den selektiv permeablen Ionenkanälen entstehen so die Ionenkonzent
 Wenn keine Erregung des Neurons stattfindet, also kein \textit{postsynaptisches Potenzial} (PSP) wirkt und das Neuron selber keinen Impuls abgibt, liegt das Ruhepotenzial $V_r$ der Zelle zwischen $-70 mV$ und $-90 mV$\footnote{
    vgl.~\cite[47, Tafel 2.3 (A.1)]{SD07}. \textit{Bear et al.} geben $-65 mV$ an ($1 mV = 0,001 V$), also wird von einer 40-mal höheren Ionenpermeabilität für $K^+$ gegenüber $Na^+$ ausgegangen (vgl.~\cite[74, Exkurs 3.2]{BCP18} sowie~\cite[70]{BCP18})
 }: Das Zytosol weist entlang der Membranoberfläche in der IZF eine negative Ladung auf\footnote{
- vgl.~\cite[61]{BCP18}. Das Membranpotenzial $V_m$ ergibt sich als die Differenz der Spannungen $V_{IZF}$ und $V_ezf$, wobei $V_{IZF}$ die Spannung im IZF und $V_{EZF}$ die Spannung im EZF ist. $V_r$ ist dann gleich zu $V_{IZF}$: Wenn die Zelle in Ruhe ist, wird die Spannung im EZF als $0$ definiert (vgl.~\cite[127]{KSJ+13}).
+ vgl.~\cite[61]{BCP18}. Das Membranpotenzial $V_m$ ergibt sich als die Differenz der Spannungen $V_{IZF}$ und $V_{EZF}$, wobei $V_{IZF}$ die Spannung im IZF und $V_{EZF}$ die Spannung im EZF ist. $V_r$ ist dann gleich zu $V_{IZF}$: Wenn die Zelle in Ruhe ist, wird die Spannung im EZF als $0$ definiert (vgl.~\cite[127]{KSJ+13}).
 }.
 Diese \textit{Membranspannung} $V_m$ wird durch eine ungleiche Ionenverteilung bewirkt, verursacht durch die Ladung der Teilchen in der IZF und EZF in Membrannähe\footnote{vgl.~\cite[66]{FE19}. \textit{Bear et al.} stellen fest:
  ``Die negativen Ladungen im Inneren des Neurons und die positiven Ladungen außerhalb des Neurons ziehen sich in Richtung Zellmembran gegenseitig an, {[...]} Dementsprechend ist die negative Nettoladung im Inneren der Zelle nicht gleichmäßig im Cytosol verteilt, sondern an der Innenseite der Membran lokalisiert.``~\cite[72, Punkt 2]{BCP18}
@@ -96,7 +96,7 @@ Diese \textit{Membranspannung} $V_m$ wird durch eine ungleiche Ionenverteilung b
  \caption{Ionenverteilung im Zytosol und der EZF. (Quelle: in Anlehnung an~\cite[72 Abb. 3.13]{BCP18})}
  \end{center}
  \small{
-  Aufgrund der elektrostatischen Anziehungskraft ziehen sich Anionen (neg. geladen) und Kationen (pos. geladen) in der Nähe der Membran gegenseitig an, es kommt zu einer negativen Spannung in Membrannähe (zwischen $-70 mV$ und $-90 mV$ in Ruhe). Dadurch ist die negative Ladung nicht gleichmässig im Zytosol verteilt. \textit{Bear et al.} weisen darauf hin, dass trotzdem der grösste Teil des Zytosols und der EZF elektrisch neutral ist (vgl.~\cite[72, Abb. 3.13]{BCP18})}
+  Aufgrund der elektrostatischen Anziehungskraft ziehen sich Anionen (neg. geladen) und Kationen (pos. geladen) in der Nähe der Membran gegenseitig an, es kommt zu einer negativen Spannung in Membrannähe (zwischen $-70 mV$ und $-90 mV$ in Ruhe). Dadurch ist die negative Ladung nicht gleichmässig im Zytosol verteilt. \textit{Bear et al.} weisen darauf hin, dass trotzdem der größte Teil des Zytosols und der EZF elektrisch neutral ist (vgl.~\cite[72, Abb. 3.13]{BCP18})}
  }
 \label{fig:ionenverteilung}
 \end{figure}
@@ -110,7 +110,7 @@ $K^+$-Ionen folgen ihrem Konzentrationsgradienten und gelangen über die Ionenka
 
 Es gilt, dass sich das Membranpotenzial dem Gleichgewichtspotenzial desjenigen Ions annähert, für den die Membran besonders permeabel ist (vgl. ~\cite[145 f.]{KSJ+13}): Bestimmen lässt sich das Gleichgewichtspotenzial für individuelle Ionen mit der Nernst-Gleichung\footnote{
  vgl.~\cite[67]{FE19}.
-} ermitteln (s. Gleichung~\ref{eq:gl-nernst} sowie Tabelle~\ref{tab:nernstkonstanten}):\\
+} (s. Gleichung~\ref{eq:gl-nernst} sowie Tabelle~\ref{tab:nernstkonstanten}):\\
 
 \textit{Bear et al.} definieren\footnote{siehe ~\cite[74, Exkurs 3.2]{BCP18}}:
 \begin{equation}
@@ -183,14 +183,14 @@ Ein weiteres Merkmal der Membran, auf das wir später zurückgreifen werden, ist
 
 In Ruhe ist die Ladung in Membrannähe in der IZF negativ, in der EZF positiv.
 Durch eine schnelle Umkehrung dieser Verhältnisse ist eine Nervenzelle dazu in der Lage, ein \textit{Signal} auszulösen~\cite[86]{BCP18}.
-Hierzu bedarf es eines \textbf{Aktionspotenzials}, das durch Ionenbewegungen entsteht. Die Ionenbewegungen selber sind auf die Änderung des Membranpotenzials zurückzuführen, das ein Öffnen oder Schliessen von ionenspezifischen Kanälen verursacht (vgl.~\cite[96]{BCP18}).
+Hierzu bedarf es eines \textbf{Aktionspotenzials}, das durch Ionenbewegungen entsteht. Die Ionenbewegungen selber sind auf die Änderung des Membranpotenzials zurückzuführen, wodurch ein Öffnen oder Schliessen von ionenspezifischen Kanälen verursacht wird (vgl.~\cite[96]{BCP18}).
 
- \textit{Kandel et al.} führen 4 wichtige Eigenschaften des Aktionspotenzials auf~\cite[148 f.]{KSJ+13}:
+ \textit{Kandel et al.} führen 4 wichtige Eigenschaften des Aktionspotenzials auf (vgl.~\cite[148 f.]{KSJ+13}):
 \begin{enumerate}
  \item Es gibt einen \textbf{Schwellenwert} für die Auslösung des Potenzials.
  \item Das Aktionspotenzial ist ein \textbf{Alles-oder-nichts} Ereignis.
  \item Das Aktionspotenzial wird ohne Verlust weitergeleitet.
- \item Nach dem auslösen des Aktionspotenzial kommt es zu einer \textbf{Refraktärzeit} , in der zunächst kein weiteres Aktionspotenzial ausgelöst werden kann (\textbf{absolute Refraktärzeit}), und dann ein stärkeres Signal benötigt wird, um das Aktionspotenzial auszulösen (\textbf{relative Refraktärzeit}).
+ \item Nach dem auslösen des Aktionspotenzial kommt es zu einer \textbf{Refraktärzeit}, in der zunächst kein weiteres Aktionspotenzial ausgelöst werden kann (\textbf{absolute Refraktärzeit}), und dann ein stärkeres Signal benötigt wird, um das Aktionspotenzial erneut auszulösen (\textbf{relative Refraktärzeit}).
 \end{enumerate}
 
 
@@ -210,7 +210,7 @@ Die \textbf{Initiationszone}~\cite[111]{BCP18} des Aktionspotenzials ist der Axo
  pro Quadratmikrometer (µm²) kann eine Membran viele tausend Natriumkanäle enthalten~\cite[99]{BCP18}
 }, deren Aktivierungskurve um ca. $10 mV$ zu den negativen Membranpotenzialen verschoben ist, was die Initiierung des Signals begünstigt (vgl. ~\cite[77]{Jon19}).
 
-Damit ein Aktionspotenzial ausgelöst werden kann, muß die Membran nahe der Initiationszone über ihren \textbf{Schwellenwert} \footnote{
+Damit ein Aktionspotenzial ausgelöst werden kann, muss die Membran nahe der Initiationszone über ihren \textbf{Schwellenwert} \footnote{
  ``das kritische Niveau der Depolarisation, das überschritten werden muss, um ein Aktionspotenzial auszulösen``~\cite[88]{BCP18} oder auch ``Erregungsschwelle``~\cite[69]{FE19}
 } $V_t$ ( > $V_r$ ) depolarisiert werden (vgl.~\cite[111]{BCP18}).
 
@@ -219,9 +219,9 @@ Damit ein Aktionspotenzial ausgelöst werden kann, muß die Membran nahe der Ini
  Damit sich $V_r$ an $V_t$ nähert, bedarf es einer Erregung der Zelle durch postsynaptische Potenziale (vgl. ~\cite[69]{FE19}) oder ``eine aus der Umgebung weitergeleitete (elektrotonische) Erregung``~\cite[46]{SD07}.
 
 Die Stärke der Erregung der Zelle ist entscheidend für das Auslösen eines Aktionspotenzials. Es muss mehr $Na^+$ in die Zelle einströmen, als $K^+$ aus der Zelle ausströmen kann (vgl.~\cite[69]{FE19}).
-Versuche zeigen, daß die Potenzialänderung der Membran in einem Bereich von $-80 mV$ zu $-65 mV$ in dieser Hinsicht kaum Änderung bewirkt (vgl.~\cite[99]{BCP18}). $g_{Ka}$ erhöht sich, aber wenn $V_r$ nicht erreicht wird, bleibt es bei dieser ``lokalen Antwort``~\cite[46]{SD07}. Erst eine Depolarisation der Membran hin über diesen Wert\footnote{
+Versuche zeigen, dass die Potenzialänderung der Membran in einem Bereich von $-80 mV$ zu $-65 mV$ in dieser Hinsicht kaum Änderung bewirkt (vgl.~\cite[99]{BCP18}). $g_{Ka}$ erhöht sich, aber wenn $V_r$ nicht erreicht wird, bleibt es bei dieser ``lokalen Antwort``~\cite[46]{SD07}. Erst eine Depolarisation der Membran hin über diesen Wert\footnote{
  ab -60 mV gehen die Natrium-Kanäle ein den Offen-Zustand über (vgl.~\cite[69]{FE19}).
-} kann die \textbf{Initiationsphase}\footnote{siehe ~\cite[68]{FE19}} des Aktionspotenzials eingeleitet werden: Es öffnen sich mehr Natrium-Kanäle, und durch die negative Ladung der Membran-Innenseite (in der IZF) gibt es eine starke elektrochemische Triebkraft für $Na^+$-Ionen (vgl.~\cite[103]{BCP18}(). Die Triebkraft ist zu diesem Zeitpunkt die Differenz des Membranpotenzials $V_m$ und $E_{Ka}$. Bei $-60 mV$ beträgt die Triebkraft\footnote{
+} kann die \textbf{Initiationsphase}\footnote{siehe ~\cite[68]{FE19}} des Aktionspotenzials einleiten: Es öffnen sich mehr Natrium-Kanäle, und durch die negative Ladung der Membran-Innenseite gibt es eine starke elektrochemische Triebkraft für $Na^+$-Ionen (vgl.~\cite[103]{BCP18}). Die Triebkraft ist zu diesem Zeitpunkt die Differenz des Membranpotenzials $V_m$ und $E_{Ka}$. Bei $-60 mV$ beträgt die Triebkraft\footnote{
  vgl.~\cite[39]{Fak19}
 }:
 
@@ -231,7 +231,7 @@ Versuche zeigen, daß die Potenzialänderung der Membran in einem Bereich von $-
  \end{equation}
 
 
-Da sich durch zunehmende Öffnung der Natrium-Kanäle $g_{Ka}$ erhöht, strömen aufgrund der hohen Triebkraft für $Na^+$ mehr $Na^+$ Ionen in das Zellinnere. Es kommt zu einem \textbf{Rückkopplungseffekt} , denn die zunehmend weniger negative Membranspannung öffnet weitere Natrium-Kanäle, die Leitfähigkeit der Membran wird weiter erhöht und es kommt zu einem exponentiellen Anstieg der $Na^+$-Konzentration in der IZF. Der ``explosionsartige`` Natriumeinstrom bewirkt die Depolarisation der Membranspannung und das Aktionspotenzial wird ausgelöst (vgl.~\cite[69]{FE19})\footnote{
+Da sich durch zunehmende Öffnung der Natrium-Kanäle $g_{Ka}$ erhöht, strömen aufgrund der hohen Triebkraft für $Na^+$ mehr $Na^+$-Ionen in das Zellinnere. Es kommt zu einem \textbf{Rückkopplungseffekt} , denn die zunehmend weniger negative Membranspannung öffnet weitere Natrium-Kanäle, die Leitfähigkeit der Membran wird weiter erhöht und es kommt zu einem exponentiellen Anstieg der $Na^+$-Konzentration in der IZF. Der ``explosionsartige`` Natriumeinstrom bewirkt die Depolarisation der Membranspannung und das Aktionspotenzial wird ausgelöst (vgl.~\cite[69]{FE19})\footnote{
 siehe hierzu auch Anhang~\ref{appendix:aktionspotenzial}
 }.
 
@@ -266,8 +266,8 @@ Zwischen ihnen existiert ein Spalt, der ca. $20$ - $40 nM$ breit ist (vgl.~\cite
 } befindet, die den Synapsenspalt überbrückt~\cite[122]{BCP18}.
 Die Übertragung von Signalen erfolgt über Exozytose: Botenstoffe (\textit{Neurotransmittern}) diffundieren aus den präsynaptischen Endigungen in diesen Spalt (vgl.~\cite[122]{BCP18}), und verschiedene Typen von Rezeptoren an den postsynaptischen Endigungen wandeln die Botenstoffe in hemmende oder erregende Signale um, die dann von der postsynaptischen Zelle nach dem Alles-oder-Nichts-Prinzip integriert werden.
 
-Die durch das Aktionspotenzial ausgelöste Depolarisation der Membran an den Axonterminalen bewirkt eine Öffnung spannungsgeladener Calcium-Canäle~\cite[184]{KSJ+13}.
-Durch die ungleiche $Ca^{2+}$ Ionenkonzentration zwischen der EZF und IZF (10.000 : 1, siehe Tabelle~\ref{tab:ionenkonzentration}) entsteht eine hohe Triebkraft für $Ca^{2+}$: Nach Gleichung~\ref{eq:gl-nernst} ergibt sich für das Gleichgewichtspotenzial für $Ca^2+$
+Die durch das Aktionspotenzial ausgelöste Depolarisation der Membran an den Axonterminalen bewirkt eine Öffnung spannungsgeladener Calcium-Kanäle (vgl.~\cite[184]{KSJ+13}).
+Durch die ungleiche $Ca^{2+}$-Ionenkonzentration zwischen der EZF und IZF (10.000 : 1, siehe Tabelle~\ref{tab:ionenkonzentration}) entsteht eine hohe Triebkraft für $Ca^{2+}$: Nach Gleichung~\ref{eq:gl-nernst} ergibt sich für das Gleichgewichtspotenzial für $Ca^2+$
 
 \begin{equation}
  E_{Ca^{2+}} = 123,08 mV
@@ -306,7 +306,7 @@ EPSCs und IPSCs setzen sich aus einzelnen dieser mEPSC bzw. mIPSC zusammen und b
 Da EPSPs ein Vielfaches des Quantums sind, ``das die Menge an Transmitter in einem einzigen Vesikel und die Anzahl der postsynaptischen Rezeptoren an der Synapse widerspiegelt``, nennt man sie ``gequantelt``~\cite[142]{BCP18}. Mit Hilfe der \textbf{Quantelungsanalyse} lässt sich die Anzahl der an einer synaptischen Übertragung beteiligten Vesikel bestimmen (vgl. \cite[142]{BCP18}).
 }.
 
-Wesentlich für die Entstehung eines neuen Aktionspotenzials in der postsynaptischen Zelle ist die Verrechnung der räumlich oder zeitlich eintreffenden Signale. 
+Wesentlich für die Entstehung eines neuen Aktionspotenzials in der postsynaptischen Zelle ist die Verrechnung dieser Signale, die räumlich oder zeitlich eintreffen.
 Hierbei ist die \textbf{räumliche Summation} die Integration von vielen fast gleichzeitig eintreffenden Signalen mehrerer präsynaptischer Zellen, die sich in der Folgezelle zu einem \textit{exzitatorischen postsynaptischen Potenzial} (EPSP) aufaddieren (vgl.~\cite[101]{HS19a}).
 Unter der \textbf{zeitlichen Summation} versteht man die in gewissen Abständen von ein und derselben Synapse hintereinander eintreffenden EPSPs, die jeweils  das Membranpotenzial für nachfolgende Signale zum Schwellenwert hin verschieben\footnote{
  vgl.~\cite[142]{BCP18} sowie~\cite[101]{HS19a}
@@ -317,9 +317,9 @@ Ob der Schwellenwert der postsynaptischen Zelle überschritten werden kann ist a
 } (vgl.~\cite[225]{KSJ+13}).\\
 
 
-Das Zusammenspiel zwischen exzitatorischen und inhibitorischen Synapsen wird auch durch das \textbf{Umkehrpotential} $V_{rev}$ bestimmt\footnote{
+Das Zusammenspiel zwischen exzitatorischen und inhibitorischen Synapsen wird auch durch das \textbf{Umkehrpotenzial} $V_{rev}$ bestimmt\footnote{
 Anhang~\ref{appendix:umkehrpotenzial} beschäftigt sich ausführlicher damit.
-}: Im Allgemeinen gilt, das an erregenden Synapsen unspezifische Kationenkanäle öffnen, deren Umkehrpotential im Bereich von $0mV$ liegt: Hier kommt es zu einer Depolarisation (EPSP). An hemmenden Synapsen öffnen $Cl^-$- oder $K^+$-Kanäle und es gilt dort $V_{rev} \leq V_r$, wonach es meist zu einer leichten Hyperpolarisation kommt (vgl. ~\cite[100]{HS19a}).\\
+}: Im Allgemeinen gilt, das an erregenden Synapsen unspezifische Kationenkanäle öffnen, deren Umkehrpotenzial im Bereich von $0mV$ liegt: Hier kommt es zu einer Depolarisation (EPSP). An hemmenden Synapsen öffnen $Cl^-$- oder $K^+$-Kanäle und es gilt dort $V_{rev} \leq V_r$, wonach es meist zu einer leichten Hyperpolarisation kommt (vgl. ~\cite[100]{HS19a}).\\
 
 Die Verrechnung von EPSP und IPSP (inhibitorisches postsynaptisches Potenzial) erfolgt nicht ausschließlich linear durch Summation - inhibitorische Synapsen können auch für einen ``Kurzschluss`` sorgen und somit ein EPSP um ein Vielfaches verkleinern (vgl.~\cite[477]{Sil10}). Man spricht dann von einer \textit{Kurzschlusshemmung} (\textbf{shunting inhibition})\footnote{
 siehe Anhang~\ref{appendix:shuntinginhibition}
