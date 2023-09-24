@@ -13,7 +13,7 @@ Bereits 1954 wurden Versuche unternommen, lernfähige neuronale Netze zu modelli
 }.
 Erst 1958 schafft es ein Modell, eine Sensation\footnote{
     In der Presse publikumswirksam, aber wenig vertrauenserweckend: ``Frankenstein Monster Designed by Navy Robot That Thinks``~\cite[v]{Ros62}. Vgl. dazu aktuelle Schlagzeilen der hiesigen Boulevardpresse zum Thema KI. bild.de titelt: ``Übernehmen Computer die Weltherrschaft{?}`` (\url{https://www.bild.de/news/ausland/news-ausland/experten-warnen-ki-so-gefaehrlich-wie-pandemien-und-atomkrieg-84130180.bild.html}, abgerufen 27.08.2023) als Reaktion auf ``Statement on AI Risk`` des \textit{Center for AI Safety}, in dem zahlreiche Wissenschaftler zur Vorsicht beim Umgang, Einsatz und Forschung von KI mahnen. Im Wortlaut: ``Mitigating the risk of extinction from AI should be a global priority alongside other societal-scale risks such as pandemics and nuclear war.`` (\url{https://www.safe.ai/statement-on-ai-risk}, abgerufen 27.08.2023)
-} auszulösen: Das \textbf{Perceptron} (im folgenden ``Perzeptron``) (vgl.~\cite[89]{AR88})\footnote{
+} auszulösen: Das \textbf{Perceptron} (im folgenden Perzeptron) (vgl.~\cite[89]{AR88})\footnote{
     s. auch ``Interest in connectionist networks revivied dramatically in 1962 with the publication of Frank Rosenblatt's book \textit{Principles of Neurodynamics}, [...]``~\cite[xi, Hervorhebung i.O.]{MP88}
 }.
 1957 beschreibt es sein Schöpfer \textit{Frank Rosenblatt} (1928 - 1971) in~\cite{Ros57}\footnote{
@@ -179,8 +179,9 @@ und für jeden Punkt $x_1, ... , x_n \in B$
 
 
 \noindent
-Für unser Beispiel mit den oben eingeführten Mengen $M_- = \{(x_1, x_2) \in  \mathbb{R}^2: x_1 \geq x_2\}$ und $M_+=\{(x_1, x_2) \in  \mathbb{R}^2: x_1 < x_2\}$ in $ \mathbb{R}^2$ wählen wir $w_1 = -1, w_2 = 1, w_3 = 0$.
-Dass diese Menger nach Definition~\ref{def-halbraum} linear separierbar sind, lässt sich leicht anhand einer Fallunterscheidung nachweisen:
+Als Beispiel sei $M_- = \{(x_1, x_2) \in  \mathbb{R}_{0+}^2: x_1 \geq x_2\}$ und $M_+=\{(x_1, x_2) \in  \mathbb{R}_{0+}^2: x_1 < x_2\}$.
+Weiter sei $w_1 = -1, w_2 = 1, w_3 = 0$.
+Dass diese Mengen nach Definition~\ref{def-halbraum} linear separierbar sind\footnote{entspricht zwei Punktmengen, die durch die 1. Winkelhalbierende im I. Quadranten des kartesischen Koordinatensystems separierbar sind}, lässt sich leicht nachweisen:
 
 \begin{enumerate}
     \item Fall $x_1 = x_2$: Es gilt $w_1x_1 + w_2x_2 = w_1x_1 + w_2x_1 = -x_1 + x_1 = w_3 = 0$. Mit $0 \geq 0$ ist somit Gleichung~\ref{eq:gl-defhalbraum-gl1} erfüllt.
