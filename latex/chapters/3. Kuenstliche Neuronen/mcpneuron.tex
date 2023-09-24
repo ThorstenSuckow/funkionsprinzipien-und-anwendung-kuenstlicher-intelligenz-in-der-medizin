@@ -112,7 +112,7 @@ liefert die Summe der hemmenden und erregenden Eingabesignale zurück.
 
 \subsection*{Aktivierungsfunktion}
 Die Schwellenwertfunktion wird im Kontext von künstlichen neuronalen Netzen auch \textbf{Aktivierungsfunktion} genannt (vgl. ~\cite[847]{RN09}), da sie entscheidet, ob einzelne Neuronen aktiviert werden oder nicht. In diesem Fall realisieren wir sie als \textbf{Treppenfunktion}\footnote{
-    auch \textbf{Heaviside}-Funktion, die für beliebige negative Zahlen $0$ zurückliefert, ansonsten $1$. Wir werden später sehen, wie wir einen Schwellenwert wie in Gleichung~\ref{eq:gl-activation} in die Berechnung der Summe einfliessen lassen können, um die Funktion in dieser Form zu nutzen.
+    auch \textbf{Heaviside}-Funktion, die für beliebige negative Zahlen $0$ zurückliefert, ansonsten $1$.
 }, die $1$ zurückliefert, falls $g(X) >= \Theta$, und $0$ sonst :
 
 \begin{equation}
@@ -122,6 +122,16 @@ f:  \mathbb{Z} \to \{0, 1\}, f(u) = f(g(X)) = \begin{cases}
 \end{cases}
 \label{eq:gl-activation}
 \end{equation}\linebreak[2]
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[
+        width=12cm,
+        keepaspectratio,
+    ]{chapters/3. Kuenstliche Neuronen/images/heaviside}
+    \caption{Plot der Heaviside-Funktion $H\left(x\right)=\left\{x<0\ :\ 0,\ x\ge0\ :\ 1\right\}$. (Quelle: Eigene Darstellung)}
+    \label{fig:heaviside}
+\end{figure}
 
 
 \noindent
