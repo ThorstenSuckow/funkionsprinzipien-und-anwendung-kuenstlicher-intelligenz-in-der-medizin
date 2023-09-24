@@ -1,12 +1,17 @@
 \chapter{Einführung}
 
-Für die weitere Betrachtung der Signalweiterleitung ist für uns die Zellmembran und der \textit{transmembranale Transport} von Ionen\footnote{
-    hier: der Austausch von Ionen zwischen dem intra- und extrazellulären Raum durch Kanäle und Pumpen. Ion: Ein elektrisch geladenes Atom oder Molekül; \textit{Kation}: positiv geladenes Ion; \textit{Anion}: negativ geladenes Ion.
-} zur Änderung des Membranpotenzials von Interesse.
+Um die am Ende dieser Arbeit vorgestellten künstlichen neuronale Netze - sowie deren Erfolge - im Gesundheitswesen besser verstehen zu können, wollen wir zunächst die theoretischen Grundlagen beleuchten, auf denen diese Netze aufbauen.
 
-Um ein Verständnis für die Strukturen zu erhalten, die ein künstliches neuronales Netz modelliert, wollen wir uns zunächst mit dem Neuron als ``strukturelle und funktionelle Einheit des Nervensystems``~\cite[42]{SD07} beschäftigen.
-Von Interesse ist für uns die Funktionsweise dieser Zellen im Kontext von Informationsverarbeitung und -weiterleitung, weshalb wir die molekulare und die zelluläre Ebene des einzelnen Neurons betrachten wollen, sowie den Verbund von Neuronen.
+Im Sinne der Software-Entwicklung wird deshalb - das Domain-Modelling zum Vorbild - zunächst die Fachlichkeit geklärt.
+Wir wollen hierdurch ein notwendiges Verständnis für einige Begriffe und Vorgänge aufbauen, die uns in der Künstlichen Intelligenz - sobald es um das Thema neuronale Netze geht - begegnen werden. \\
 
-Hierzu skizzieren wir zunächst den Aufbau eines Neurons und verschaffen uns im Anschluss einen Überblick über die komplexen biochemischen Vorgänge, die nötig sind, damit Neuronen Signale senden und empfangen können. Wir werden sehen, dass Änderungen der Zellmembran-Eigenschaften (hier: das Membranpotenzial) eines Neurons mitverantwortlich sind für die Exozytose1 von hemmenden oder erregenden Neurotransmittern, und wie Rezeptoren postsynaptischer Zellen chemische Signale gemäß ihren Eigenschaften zu inhibitorischen2 oder exzitatorischen3 Signalen verarbeiten.
+Ein nicht unwesentlicher Teil dieser Fachlichkeit beschränkt sich allerdings nicht bloß auf die hochkomplexen biochemischen Vorgänge, die in der biologischen Nervenzelle bei Signalverarbeitung und -weiterleitung stattfinden: Ein gewisses grundlegendes mathematisches Verständnis ist vonnöten, wenn diese Vorgänge in Formeln und Gleichungen der Aussagenlogik {bzw.} analytischen Geometrie überführt werden, damit diese Modelle in der Informatik Anwendung finden können\footnote{
+    Möglichst verständliche und umfassende Erklärungen zu diesen Themen zu bieten mag wegen des begrenzten Umfangs nicht immer gelingen: Verweise und Anmerkungen in den Fussnoten, Ergänzungen zu Begriffen und Personen im Anhang sowie die zahlreich zitierte Literatur sollen eine weiterführende selbständige Recherche erleichtern.
+}.\\
 
-Einige Begrifflichkeiten dieses hochkomplexen Themas, deren voller Hintergrund und Bedeutung, muss im Verborgenen. Das ist dem begrenzten Umfang dieser Arbeit geschuldet. Fußnoten und ausführliche Quellenzitate sollen den interessierten Leser zur eigenständigen Recherche ermutigen.
+Zunächst beschäftigen wir uns mit dem Neuron als ``strukturelle und funktionelle Einheit des Nervensystems``~\cite[42]{SD07}.
+Für uns ist vor allem die Signalweiterleitung von Interesse, weshalb wir uns eingehend mit der Zellmembran und dem \textit{transmembranalen Transport} von Ionen beschäftigen.\\
+
+Es wird sich zeigen, dass Änderungen der Zellmembran-Eigenschaften hinsichtlich des Membranpotenzials grundlegend ist für die Exozytose von hemmenden oder erregenden Neurotransmittern, welche von den Rezeptoren postsynaptischer Zellen als chemische Signale gemäß ihren Eigenschaften zu inhibitorischen oder exzitatorischen Signalen verarbeitet werden.\\
+
+Dies bildet die Grundlage für die Neuronenmodelle von McCulloch und Pitts sowie Rosenblatt im zweiten Teil der Arbeit, in dem der Schwerpunkt vor allem auf der mathematischen Modellierung von Eingabe- und Ausgabefunktion sowie deren Anwendung liegt, bevor abschliessend Architektur und Algorithmen einiger neuronaler Netze und deren überaus erfolgreiche Anwendung im Gesundheitswesen vorgestellt werden.
