@@ -106,7 +106,7 @@ L = \{(x_1, x_2) \in \mathbb{R}^2: x_1 = x_2\}
         width=12cm,
         keepaspectratio,
     ]{chapters/3. Kuenstliche Neuronen/images/winkelhalbierende}
-    \caption{Winkelhalbierende im kartesischen Koordinatensystem (Quelle: Eigene Darstellung)}
+    \caption{1. Winkelhalbierende im kartesischen Koordinatensystem (Quelle: Eigene Darstellung)}
     \label{fig-winkelhalbierende}
 \end{figure}
 
@@ -131,7 +131,7 @@ Wir können feststellen, dass
 
 
 \begin{itemize}
-    \item Punkte, die $x_1 - x_2 > 0$ erfüllen (im folgenden $M_-$) in dem Halbrum \textit{unter} der durch $L$ beschriebenen Gerade liegen
+    \item Punkte, die $x_1 - x_2 > 0$ erfüllen (im folgenden $M_-$) in dem Halbraum \textit{unter} der durch $L$ beschriebenen Gerade liegen
     \item Punkte, für die  $x_1 - x_2 < 0$ gilt (im folgenden $M_+$) \textit{über} der durch $L$ beschriebenen Gerade liegen
     \item Punkte mit $x_1 - x_2 = 0$ \textit{auf} der Geraden liegen (im folgenden als Teilmenge von $M_-$\footnote{
         Wenn die Hyperebene selbst im Halbraum enthalten ist, spricht man von einem \textit{abgeschlossenen Halbraum}. (\url{https://de.wikipedia.org/wiki/Halbraum}, abgerufen 22.08.2023)
@@ -264,19 +264,19 @@ Wir betrachten jetzt eine Möglichkeit, die $y$-Koordinate unserer Trenngerade a
 Dies erreicht man mit einer sogenannten \textbf{bias unit}.
 Das Bias-Gewicht\footnote{
     vgl.~\cite[839]{RN09}
-} ist ein Wert, der zu der Gleichung aus Definition~\ref{eq:gl-rpact} hinzuaddiert wird, und für eine Verschiebung der Ursprungsgeraden\footnote{
+} ist ein Wert, der zu der Gleichung aus Definition~\ref{eq:gl-rpact} hinzuaddiert wird. In der geometrischen Darstellung sorgt dieser Wert für eine Verschiebung der Ursprungsgeraden entlang der $x_2$-Achse\footnote{
     im $ \mathbb{R}^n$ durch eine Hyperebene im Ursprung~\cite[215]{Ert21a}
 } sorgt.
 
 Den Eingabedaten wird ein fester Eingabewert $x_{n+1} = 1$ hinzufügt: Der Eingabevektor $x \in  \mathbb{R}^n$ wird \textit{erweitert}: $(x_1, ..., x_n, 1)$ (vgl.~\cite[58]{Roj93}).
 
 \noindent
-Der bias $b$ wird für unser Beispiel im $ \mathbb{R}^2$ mit Definition\ref{eq:gl-rpact} in die Berechnung Schwellenwerts miteinbezogen:
+Der bias $b$ wird für unser Beispiel im $ \mathbb{R}^2$ mit Definition~\ref{eq:gl-rpact} in die Berechnung des Schwellenwerts miteinbezogen:
 
 \begin{equation}
 P(x) = \begin{cases}
-            1 &\text{falls} &wx > 0 \\
-            0 &\text{sonst}
+            1 \text{ falls } wx > 0 \\
+            0 \text{ sonst }
 \end{cases}
 \end{equation}
 
@@ -310,11 +310,11 @@ x_2 = \Theta/w_2 -(w_1/w_2)x_1  = \Theta
 \end{equation}
 
 \noindent
-$x_2$ ergibt sich somit als der Abstand von der $y$-Achse.\\
+$x_2$ ergibt sich somit als der horizontale Abstand vom Ursprung.\\
 
 \noindent
 Mit $b$ als Teil der Eingabe folgt auch dessen Gewichtung $bw_{n+1} = w_{n+1}$.
-Mit $0$ als Schwellenwert wird dadurch eine Verschiebung der Trenngeraden entlang der $y$-Achse im $ \mathbb{R}^2$ bzw. eine Verschiebung der Hyperebene im $ \mathbb{R}^n$ ermöglicht~\cite[215]{Ert21a} \footnote{
+Mit $0$ als Schwellenwert wird dadurch eine Verschiebung der Trenngeraden entlang der $x_2$-Achse im $ \mathbb{R}^2$ bzw. eine Verschiebung der Hyperebene im $ \mathbb{R}^n$ ermöglicht (vgl. ~\cite[215]{Ert21a})\footnote{
     einen Überblick über die geometrischen Zusammenhänge liefert ``Einführung in die Neuroinformatik`` von Prof. Dr. G. Sommer \url{https://www.informatik.uni-kiel.de/inf/Sommer/doc/Downloads/Skripte/neuroskript.pdf}:33 ff. (abgerufen 27.08.2023)
 }.
 
