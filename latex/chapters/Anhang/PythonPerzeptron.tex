@@ -1,6 +1,7 @@
 \chapter{Perzeptron-Implementierung in Python}\label{appendix:pythonperzeptron}
 
-Wie bereits Abschnitt~\ref{seq-mcpbool} wollen wir auch mit dem Rosenblatt Perzeptron boolesche Funktionen nachbilden.
+Wie bereits in Abschnitt~\ref{seq-mcpbool} für das MCP-Neuron gezeigt, wollen wir auch mit dem Rosenblatt-Perzeptron boolesche Funktionen nachbilden.\\
+
 Das folgende Beispiel bezieht sich auf die \textbf{AND}-Funktion (vgl. Tabelle~\ref{tab:and}).
 
 Zunächst definieren wir zwei Mengen $M_+$ und $M_-$: Für Elemente in $M_+$ ist die erwartete Ausgabe $1$, für Elemente in $M_-$ ist sie $0$ (vgl. Abbildung~\ref{fig-rpand}):
@@ -50,7 +51,7 @@ Für unsere Perzeptron-Implementierung in Python\footnote{
 \end{lstlisting}
 
 \noindent
-Der Algorithmus erhält eine vorgegebene Zahl von Epochen, in denen wir eine vollständige Konvergenz erwarten.
+Der Algorithmus erhält eine vorgegebene Zahl von Epochen, in denen eine vollständige Konvergenz erwartet wird.
 Innerhalb einer Epoche werden alle \verb|n| Trainingsdaten (enthalten in \verb|X|) durchgegangen.
 In \verb|y| finden wir die erwartete Klassifizierung der Trainingsdaten:
 Ist \verb|X[i] = [1,1]|, entspricht \verb|y[i] = 1| (vgl. Gleichung~\ref{eq:gl-expnet}).
@@ -241,7 +242,7 @@ Grün umrandete Punkte sind Ziel des Trainingsschrittes und bedingen den ``Ände
     \includegraphics[
         width=18cm,
         keepaspectratio,
-    ]{chapters/Anhang/epochs_4}
+    ]{chapters/Anhang/images/epochs_4}
     \caption{Geometrische Darstellung der Konvergenz eines Perzeptrons für AND (Quelle: Eigene Darstellung)}
     \label{fig-rp-and-epochs}
 \end{figure}
