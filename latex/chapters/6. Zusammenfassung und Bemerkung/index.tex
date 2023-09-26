@@ -12,53 +12,54 @@ Die Frage, welches der über tausenden Vesikel, die in einem Neuronenverband an 
 
 Tiefe künstliche neuronale Netz mit ihren Millionen von Parametern (vgl.~\cite{SVI+15}) erweisen sich im Hinblick auf eine Analyse ähnlich undurchschaubar\footnote{ dieser Blackbox-Charakter wird problematisch, wenn {bspw.} von Assistenzsystemen in der Medizin Entscheidungswege aufgezeigt werden sollen, die zu einer bestimmten Diagnose oder Therapieempfehlung führen (siehe Abschnitt~\ref{sec:diagnostik}).}.\\
 
-Die Modellierung solcher Netze folgt dabei in Teilen dem biologischen Vorbild, und es mag zunächst überraschen, dass einige solcher Verschaltungsmuster - wie die \textbf{Divergenz} oder die \textbf{rekurrente} oder \textbf{laterale Hemmung} - zunächst an Logikgatter erinnern (vgl.~\cite[58 f.]{Eil19}). Doch eben weil diese Verschaltung von verrechnenden Einheiten naturgegeben ist, zeigt sich die Wissenschaft versucht, diese Komplexität zu verstehen und in mathematische Formeln zu gießen, um ein Modell zu erstellen, das menschliche Intelligenz erklärt und nachstellt, und sicherlich auch, um die Erkenntnisse als Abstraktion auf Maschinen zu übertragen: ``if you really understand something, you can usually make a machine do it``~\cite[xiii]{AR88}.\\
+Die Modellierung solcher Netze folgt dabei in Teilen dem biologischen Vorbild, und es mag zunächst überraschen, dass einige solcher Verschaltungsmuster - wie die \textbf{Divergenz} oder die \textbf{rekurrente} oder \textbf{laterale Hemmung} - zunächst an Logikgatter erinnern (vgl.~\cite[58 f.]{Eil19}). Es liegt nahe, dass die Wissenschaft versucht ist, solche naturgegebenen verrechnende Einheiten und logischen Verschaltung zu verstehen und in mathematische Formeln zu gießen, um ein Modell zu erstellen, das menschliche Intelligenz erklärt und nachstellt, die als Abstraktionen auf Maschinen übertragen wird: ``if you really understand something, you can usually make a machine do it``~\cite[xiii]{AR88}.\\
 
 Einer dieser Versuche wurde in Abschnitt~\ref{sec:mcpneuron} mit dem MCP-Modell vorgestellt, ein \textbf{empirisches Modell}\footnote{
     auch ``caricature model``; beides ~\cite[4]{HI97}
 }, das auf Analyse und einfacher Schwellenwertlogik basiert (vgl.~\cite[16]{AR88}).
 
-In dem zitierten Papier weisen McCulloch und Pitts darauf hin, dass das Alles-Oder-Nichts-Prinzip ({vgl.} Abschnitt~\ref{sec:synaptischeuebertragung}) als Vorbild für ihre Abstraktion durch Aussagenlogik dient.
+In dem dort zitierten Papier weisen McCulloch und Pitts darauf hin, dass das Alles-Oder-Nichts-Prinzip ({vgl.} Abschnitt~\ref{sec:synaptischeuebertragung}) als Vorbild für ihre Abstraktion durch Aussagenlogik dient.
 Das von ihnen erstellte Modell ist dabei eine starke Vereinfachung des biologischen Vorbilds mit einem äußerst mützlichen Nebeneffekt:
 
 \blockquote[{\cite[43; Hervorhebung i. O.]{BJ90}}]{
     This ensures its status as a \textit{model}, and not a \textit{copy}, of a real neuron, and makes it possible to implement on a digital computer.
 }.
 
-Ein anderer neurobiologischer Prozess, der heute wesentlicher Bestandteil künstlicher neuronaler Netze ist, wurde damals ebenfalls nicht von ihnen berücksichtigt: Eine mögliche Veränderung des Netzes, {z.B.} durch Lernen,\footnote{
+Dabei wurde ein anderer neurobiologischer Prozess, der heutzutage bei maschinellen Lernenverfahren Standard ist, nicht von ihnen berücksichtigt: Die dynamische Anpassung des Netzes \footnote{
     ``Lernen`` geschieht auf physiologischer Ebene durch die Modulierung von Synapsen~\cite[115]{HS19c}; McCulloch und Pitts setzen in ihrem Kalkül voraus, dass sich das Netz nicht verändert (siehe Abschnitt~\ref{sec:mcpkalkül}).
 }.
 
-Doch McCulloch und Pitts sind sich dessen durchaus bewusst\footnote{
+Doch McCulloch und Pitts sind sich all dessen durchaus bewusst\footnote{
     ``McCulloch and Pitts acknowledged in their paper that their definition of a neuron was idealized, and that they made physical assumptions that were 'most convenient for the calculus'``~\cite[21]{Abr02}. Siehe auch~\cite[101]{MP43}: ``we regard facilitation and extinction as dependent upon continuous changes in threshold related to electrical and chemical variables``, sowie ``He {[McCulloch]} never claimed that the 1943 model exhausted the richness of individual neurons``~\cite[11]{Arb19}
-}, und folgerichtig ist ihr Modell statisch und muss zur Bewältigung von Aufgaben zunächst ``konstruiert`` werden (vgl. ~\cite[28]{Fau94}): Nur durch Änderung der Netztopologie {bzw.} Anpassung einzelner Schwellenwerte kann es angepasst werden\footnote{siehe~\cite[51]{Roj93}}, selbständig zu lernen vermag es nicht.\\
+}.
+Entsprechend ist ihr Modell statisch und muss zur Bewältigung von Aufgaben zunächst durch Änderung der Netztopologie {bzw.} Anpassung einzelner Schwellenwerte ``konstruiert`` werden (vgl.~\cite[28]{Fau94} sowie~\cite[51]{Roj93}), selbständig zu lernen vermag es nicht.\\
 
 
-Schlussendlich ist die McCulloch-Pitts-Zelle von eher geringer Bedeutung für die Neurowissenschaft gewesen\footnote{
+Die McCulloch-Pitts-Zelle ist von eher geringer Bedeutung für die Neurowissenschaft gewesen\footnote{
     ``The immense theoretical influence of this paper was not among neuroscientists but among computer scientists.``~\cite[17]{AR88}; \textit{Rojas} kommt zu einem ähnlichen Schluss: ``Die Art der Schaltungen, die mit diesen Zellen gebaut werden, ist aber biologisch gesehen nicht so relevant.``~\cite[51]{Roj93}
 }.
 Umso größer war ihr Einfluss auf die Computerwissenschaften\footnote{
     Die Arbeit war ebenso wichtig für die Entwicklung des ``Konnektionismus``(vgl.~\cite[11]{Arb19}), einer Forschungsrichtung der künstlichen Intelligenz, in der Modelle (neuronale Netze) untersucht werden, mit deren Hilfe sich intelligente und kognitive Handlungen auf Maschinen übertragen lassen (vgl.~\cite[v]{Dor91})
-}: Logische Schaltungen, die Intelligenz und Kognition ermöglichen, brachte den Gedanken an eine ``intelligente Maschine`` hervor (vgl.~\cite[204]{Pic04}): So war ihre Formalisierung ein wichtiges Schlüsselelement für die von-Neumann-Rechnerarchitektur\footnote{\cite{Neu93}} sowie Wieners Kybernetik\footnote{siehe Anhang~\ref{appendix:wiener}}, und zusammen mit den nachfolgenden Arbeiten von \textit{Hebb}\footnote{~\cite{Heb49}} und \textit{Rosenblatt} ebnete es den Weg für die Forschung an künstlicher Intelligenz (vgl.~\cite[1]{Arb19}).
+}: Logische Schaltungen, die Intelligenz und Kognition ermöglichen, brachte den Gedanken an eine ``intelligente Maschine`` hervor (vgl.~\cite[204]{Pic04}): So war diese Formalisierung ein wichtiges Schlüsselelement für die von-Neumann-Rechnerarchitektur\footnote{\cite{Neu93}} sowie Wieners Kybernetik\footnote{siehe Anhang~\ref{appendix:wiener}}, und zusammen mit den nachfolgenden Arbeiten von \textit{Hebb}\footnote{~\cite{Heb49}} und \textit{Rosenblatt} ebnete es den Weg für die Forschung an künstlicher Intelligenz (vgl.~\cite[1]{Arb19}).
 
-\noindent
-Besondere Beachtung verdient hierbei auch die Bemerkung von McCulloch und Pitts bzgl. ``Berechenbarkeit``
+
+Zu erwähnen ist auch die Bemerkung von McCulloch und Pitts bzgl. ``Berechenbarkeit``:
 
 \blockquote[{~\cite[113]{MP43}}]{
     This is of interest as affording a psychological justification of the Turing definition of computability and its equivalents, Church’s A-definability and Kleene’s primitive recursiveness: if any number can be computed by an organism, it is computable by these definitions, and conversely.
 }
 
-\noindent
+
 Sie nehmen hiermit Bezug auf die von \textit{Alan Turing} (1912 - 1954) bereits 1936 veröffentlichte Arbeit~\cite{Tur37}, in der Turing die Beschreibung der Operationen seines Computers einleitet mit:
 
 \blockquote[{~\cite[250]{Tur37}}]{
     Let us imagine the operations performed by the computer to be split up into 'simple operations' which are so elementary that it is not easy to imagine them further divided.
 }
 
-\noindent
+
 Parallelen zu der Architektur der von Turing aufgestellten Modelle und dem von McCulloch entworfenen ``psychon`` als kleinste Einheit psychischer Aktivitäten sind erkennbar. \textit{Piccinini} stellt dazu fest, dass die Aussage, MCP-Netze können Berechnungen anstellen, einen ersten wichtigen Bezug zwischen mathematischer Theorie und Neurowissenschaft herstellte (vgl.~\cite[197]{Pic04}).
 
-\noindent
+
 McCulloch schreibt dazu später
 
 \blockquote[{\cite[164]{Mcc16}}]{
@@ -68,7 +69,7 @@ McCulloch schreibt dazu später
 \noindent
 und stellt fest, dass das Nervensystem eine ausgezeichnete logische Maschine repräsentiert (vgl.~\cite[80]{Mcc16}).\\
 
-\noindent
+
 Konsequenterweise nutzt \textit{Minsky} in~\cite[32 ff.]{Min67} die MCP-Zelle als \textit{endlichen Automaten}\footnote{
     Ein endlicher Automat ist eine informationsverarbeitende Maschine. Basierend auf Eingaben lassen sich mit einer solchen Maschine Zustände, Zustandsübergänge und Ausgaben modellieren. Bei einem \textit{endlichen} Automaten sind die genannten Eingaben, Zustände, und Ausgaben endlich (vgl.~\cite[26 ff.]{SSH95}).
 }\footnote{
@@ -80,14 +81,14 @@ Konsequenterweise nutzt \textit{Minsky} in~\cite[32 ff.]{Min67} die MCP-Zelle al
 \textit{Minsky} analysiert ebenfalls das im Abschnitt~\ref{sec:rosenblattperceptron} vorgestellten Perzeptron umfangreich.
 
 
-In \textit{Perceptrons - An introduction to Computational Geometry (1969)}~\cite{MP88} behandeln er zusammen mit \textit{Papert} u.a. das Verhalten des Perzeptrons im Fall nicht-separabler Daten\footnote{
+In \textit{Perceptrons - An introduction to Computational Geometry (1969)}~\cite{MP88} behandelt er zusammen mit \textit{Papert} u.a. das Verhalten des Perzeptrons im Fall nicht-separierbarer Daten\footnote{
     in~\cite[181 ff.]{MP88}
 } sowie das Problem bzgl. \textit{recognition of connectedness}\footnote{
     s. \cite[12, ``Theorem 0.8``]{MP88} sowie~\cite[249 f.]{MP88}. In dem Epilog, der 19 Jahre später in einer Neuausgabe von \textit{Minsky und Papert} veröffentlicht wird, machen sie deutlich, dass sie damit nicht nachweisen wollten, dass ein Perzeptron nicht in der Lage zu der Erkennung zusammenhängender geometrischer Figuren sei, sondern dass die Komplexität von verschiedenen Aufgaben Anforderungen an ein Perzeptron stellt, die zu der damaligen Zeit (Ende 1950er / Anfang 1960er) schwierig umzusetzen gewesen sind (vgl. ~\cite[250]{MP88})
 }, bei dem es um die Erkennung zusammenhängender geometrischer Figuren geht.
 
 Ihr Anliegen mit dem Buch ist es, die (mathematischen) Grenzen des Rosenblatt-Perzeptrons auf ein formales Gerüst zu stellen (vgl.~\cite[249]{MP88}).
-Ihre Ausführungen verstärken die zu diesem Zeitpunkt ohnehin schon skeptische Haltung\footnote{
+Allerdings verstärken ihre Ausführungen die zu diesem Zeitpunkt ohnehin schon skeptische Haltung\footnote{
     Here was a machine that could do pattern recognition in a humanlike way; it could recognize all kinds of things. Almost everyone at MIT was very skeptical``~\cite[99]{AR98}
 } gegenüber der Fähigkeiten des Perzeptrons\footnote{
     auch wegen schlechter Skalierbarkeit des Modells in der Praxis (vgl.~\cite[159]{AR88})
@@ -107,7 +108,7 @@ Diesen ``Pessimismus`` betrachten \textit{Minsky und Papert} im Jahr 1988 in Ret
 }
 
 \noindent
-\textit{Anderson und Rosenfeld} erwähnen ``the influence of Marvin Minsky and Seymour Papert on the loss of interest in neural networks during the 1970s``~\cite[X]{AR98}, worüber ihre Interviewpartner in gleicher Quelle sprechen.
+\textit{Anderson und Rosenfeld} erwähnen ``the influence of Marvin Minsky and Seymour Papert on the loss of interest in neural networks during the 1970s``~\cite[X]{AR98}.
 
 \textit{Russell und Norvig} fassen zusammen, dass \textit{Minsky und Papert} in ihrem Buch bewiesen haben, dass ein Perzeptron alles lernen kann, was es auch darstellen kann, aber es könnte halt nur sehr wenig darstellen (vgl.~\cite[45]{RN09})\footnote{
     vgl. hierzu~\cite[xiii]{MP88}
@@ -120,13 +121,17 @@ Der Lighthill Report\footnote{
     vgl.~\cite[641]{Ola96}
 }, und die Forschung daran ging zurück, bis sie Anfang/Mitte der 1980er Jahre wieder aufgenommen wurde: Diese Periode ist gemeinhin als ``KI-Winter`` (siehe Anhang~\ref{appendix:kiwinter}) bekannt.\\
 
-Die in Kapitel~\ref{ch:knn} vorgestellten Architekturen und Algorithmen waren dann mit zunehmender Rechenleistung mitverantwortlich für ein Aufleben der Forschung an neuronalen Netzen und Künstlicher Intelligenz, mit dem Ergebnis, das Kapitel~\ref{ch:gesundheitswesen} in Auszügen vorstellt.
+Die in Kapitel~\ref{ch:knn} vorgestellten Architekturen und Algorithmen sorgten dann zusammen mit dem technologischen Fortschritt für ein erneutes Aufleben der Forschung an neuronalen Netzen und Künstlicher Intelligenz in den 80er Jahren.
+Einige der Ergebnisse dieser Anstrengung wurden in Kapitel~\ref{ch:gesundheitswesen} in Auszügen vorgestellt.
+Dass dabei die Algorithmen nicht immer der Funktionsweise des natürlichen Vorbildes entsprechen, haben wir bei dem Backpropagation-Verfahren gesehen (siehe Abschnitt~\ref{sec:backpropagation}).
 
-Bei allem Fortschritt, der durch Forschung und Wissenschaft in den Jahren gemacht wurde, ist bei den vorgestellten Ergebnissen aber vor allem eins deutlich: Zur Generalisierung müssen die Netze lernen.
-Hierzu wird eine umfangreiche, qualitativ hochwertige Datenbasis benötigt, die, wenn Medizinunternehmen und Forschungsabteilungen international zusammenarbeiten wollen, normiert sein muss, damit ein institutsübergreifende Zusammenarbeit möglich ist\footnote {
-    Bemühungen wie FH7 (siehe Abschnitt~\ref{sec:therapieprognose}) geben hier sicherlich eine Richtung vor.
-}.
+Bei allem Fortschritt, der durch Forschung und Wissenschaft in den vergangenen Jahren erreicht wurde, ist bei den hier vorgestellten Ergebnissen aber vor allem eins deutlich: Die hohe Leistungsfähigkeit einiger dieser Netze kann nur durch Lernen erreicht werden (vgl.~\cite[40]{AHR19}), wozu umfangreiche, qualitativ hochwertige Daten benötigt werden.
 
+\textit{Nguyen und Patrick} stellen in~\cite{NP16} fest, dass klinische Daten aufgrund verschiedener Faktoren wie Heterogenität (maschinell / handschriftlich erstellte Daten) und weiterem Rauschen wie unbekannten Abkürzungen oder Rechtschreibfehlern, als Trainingsdaten für maschinelles Lernen eine besondere Herausforderung darstellen.
+
+Normierte Daten können deshalb helfen, die Auswertung, Anwendung aber auch den Austausch derselben zu erleichtern, wie das Beispiel aus Abschnitt~\ref{sec:therapieprognose} zeigt (vgl. auch ~\cite[42]{AHR19}).
+
+Wir dürfen schliessen, dass Künstliche Intelligenz in Form neuronaler Netze nicht nur aufgrund komplexer mathematischer Verfahren, die durch hohe Rechenleistung ermöglicht wird, wertvolle Dienste leistet: Maschinelle Lernverfahren benötigen eine gesunde Datenbasis, damit ein anwendendes Computer-System zur Generalisierung fähig ist.
 
 
 
