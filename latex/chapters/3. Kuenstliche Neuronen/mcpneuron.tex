@@ -71,7 +71,7 @@ In Anlehnung an das Original legen wir folgende Anforderungen für die Anwendung
     \small
      Schwarze Kreise sind erregende Verbindungen, offene Kreise hemmende. Im ursprünglichen Modell benötigt ein Neuron zwei erregende Eingaben, um aktiviert zu werden.\\
     In a) ist damit ein Netz dargestellt von zwei Neuronen, bei denen $N_2$ feuert, wenn $N_1$ feuert. Unter Berücksichtigung der Zeiteinheit folgt die formale Darstellung $N_2(t) \equiv N_1(t - 1)$.\\
-    Gleicherwiese ergibt sich für b), das $N_3$ nur feuert, wenn $N_1$ \textbf{oder} $N_2$ feuern: $N_3(t) \equiv N_1(t - 1) \lor N_2(t - 1)$.\\
+    Gleicherweise ergibt sich für b), das $N_3$ nur feuert, wenn $N_1$ \textbf{oder} $N_2$ feuern: $N_3(t) \equiv N_1(t - 1) \lor N_2(t - 1)$.\\
     Analog folgt für c) $N_3(t) \equiv N_1(t - 1) \land N_2(t - 2)$.\\
     Für d) ergibt sich somit $N_3(t) \equiv N_1(t - 1 ) \land \neg N_2(t - 1)$
 \end{figure}
@@ -339,7 +339,7 @@ Eine weitere boolesche-Funktion, die aus mehreren MCP-Zellen als Netz modelliert
 Für die Konstruktion des Netzes rufen wir uns Abbildung~\ref{fig:mcpor} ins Gedächtnis. $\Theta = 2$ wird übertroffen, wenn entweder $x_1$ oder $x_2$ ein erregendes Signal weiterleitet. Allerdings wird $\Theta$ auch übertroffen, wenn jeweils $x_1$ \textit{und} $x_2$ gleichzeitig aktiv sind, denn dann ist $f_{xor}(g(X)) = 4$.
 Also muss eine Hemmung zwischengeschaltet werden (s. Abbildung~\ref{fig-mcpxorf}): Ein aktives $x_1$ hemmt $N_2$. $N_2$ leitet in dem Fall $0$ an $Y$ weiter. Die Zellen $x_2$ und $N_1$ werden analog verbunden.
 
-Die \textbf{disjunktive Normalform} (Gleichung~\ref{eq:gl-xordis}) und die \textbf{konjunktive Normalform} (Gleichung~\ref{eq:gl-xorcon}) von \textbf{XOR} liefern die Formel für das Netz, wobei insb. die disjunktive Normalform die abgebildete Verschaltung in Abbildung~\ref{fig-mcpxorf} erklärt.\\
+Die \textbf{disjunktive Normalform} (Gleichung~\ref{eq:gl-xordis}) und die \textbf{konjunktive Normalform} (Gleichung~\ref{eq:gl-xorcon}) von \textbf{XOR} liefern die Formel für das Netz, wobei insbesondere die disjunktive Normalform die abgebildete Verschaltung in Abbildung~\ref{fig-mcpxorf} erklärt.\\
 
 \begin{equation}
 A \oplus B \equiv (\neg A \land B) \lor (A \land \neg B)
