@@ -65,7 +65,7 @@ Die Ausgaben der Prädikate werden individuell gewichtet und an die Zelle weiter
         \caption{
             Rosenblatt-Perzeptron. (Quelle: in Anlehnung an~\cite[53, Abb. 3.2]{Roj93})
         }
-        \label{fig-perctheda}
+        \label{fig:perctheda}
     \end{center}
     \small{
         Schematische Darstellung eines Perzeptron-``Automats`` (siehe~\cite[7]{Ros57}): Eingaben werden an die Prädikate $P_n$ weitergeleitet, deren binäre Ausgaben mit den Gewichten $w_n$ multipliziert werden. Die Summe der Produkte wird mit dem Schwellenwert $\Theta$ verglichen (vgl.~\cite[53]{Roj93}).
@@ -107,7 +107,7 @@ L = \{(x_1, x_2) \in \mathbb{R}^2: x_1 = x_2\}
         keepaspectratio,
     ]{chapters/3. Kuenstliche Neuronen/images/winkelhalbierende}
     \caption{1. Winkelhalbierende im kartesischen Koordinatensystem (Quelle: Eigene Darstellung)}
-    \label{fig-winkelhalbierende}
+    \label{fig:winkelhalbierende}
 \end{figure}
 
 Für beliebige Punkte $(x_1, x_2) \in \mathbb{R}^2$ gilt offensichtlich
@@ -125,7 +125,7 @@ Die \textit{Gerade} $L$ repräsentiert eine \textit{Hyperebene} in $\mathbb{R}^2
 }.
 Punkte, die nicht zu dieser Hyperebene gehören, liegen in dem Fall $\mathbb{R}_+^2$ in zwei unterschiedlichen \textit{Halbräumen}\footnote{
     Renze, John; Uznanski, Dan; and Weisstein, Eric W. ``Half-Plane.`` From MathWorld--A Wolfram Web Resource. \url{https://mathworld.wolfram.com/Half-Plane.html} (abgerufen 21.08.2023)
-} (siehe geometrische Darstellung in Abbildung~\ref{fig-halbraeume}).
+} (siehe geometrische Darstellung in Abbildung~\ref{fig:halbraeume}).
 
 Wir können feststellen, dass
 
@@ -146,7 +146,7 @@ Wir können feststellen, dass
         keepaspectratio,
     ]{chapters/3. Kuenstliche Neuronen/images/halbraum}
     \caption{Halbräume im $R^2$ (Quelle: Eigene Darstellung)}
-    \label{fig-halbraeume}
+    \label{fig:halbraeume}
     \end{center}
     \small{
         Skizzierung der durch die 1. Winkelhalbierende entstandenen Halbräume. Die Mengen $M_-$ und $M_+$ sind linear separierbar, die Gleichung für die \textit{Trenngerade} hierzu lautet $x_1 - x_2 = 0$
@@ -247,7 +247,7 @@ Sind die Trainingsdaten linear separierbar, {konvergiert}\footnote{
     Das Konvergenz-Theorem besagt: ``if a linear separation exists, the perceptron error-correction scheme will find it.``~\cite[20]{Arb03}] Beweise führen~\cite[111 ff.]{Ros62}, \cite[168 ff.]{MP88} sowie \cite{Nov62}.
 }, und ist danach in der Lage weitere Daten zu \textbf{generalisieren} (vgl.~\cite[202]{Ert21a}).\\
 
-Wir betrachten jetzt eine Möglichkeit, die $y$-Koordinate unserer Trenngerade anzupassen, falls Punkte vorliegen, die nicht durch eine Ursprungsgerade separierbar sind (siehe Abbildung~\ref{fig-nichtseparierbar}).
+Wir betrachten jetzt eine Möglichkeit, die $y$-Koordinate unserer Trenngerade anzupassen, falls Punkte vorliegen, die nicht durch eine Ursprungsgerade separierbar sind (siehe Abbildung~\ref{fig:nichtseparierbar}).
 
 \begin{figure}[h]
     \centering
@@ -256,7 +256,7 @@ Wir betrachten jetzt eine Möglichkeit, die $y$-Koordinate unserer Trenngerade a
         keepaspectratio,
     ]{chapters/3. Kuenstliche Neuronen/images/nichtseparierbar}
     \caption{Punkte im $\mathbb{R}^2$, die nicht durch eine Ursprungsgerade separierbar sind. Angedeutet eine mögliche Trenngerade, die durch $(0,2)$ geht. (Quelle: Eigene Darstellung)}
-    \label{fig-nichtseparierbar}
+    \label{fig:nichtseparierbar}
 \end{figure}
 
 
@@ -330,7 +330,7 @@ Wenn ein Perzeptron nicht konvergiert, kann es ausreichen, die Anzahl der Epoche
     \begin{center}
     \includegraphics{chapters/3. Kuenstliche Neuronen/images/blob_success}
     \caption{Perzeptron-Training für grosse Datenmengen. (Quelle: Eigene Darstellung)}
-    \label{fig-rp-blobs}
+    \label{fig:rp-blobs}
     \end{center}
     \small Ein Perzeptron wird mit einer großen Datenmengen (50 Einträge) trainiert. Nach knapp 300 Trainingsschritten (in der 6ten Epoche) wird die Trenngerade (gestrichelt) gefunden.
 \end{figure}

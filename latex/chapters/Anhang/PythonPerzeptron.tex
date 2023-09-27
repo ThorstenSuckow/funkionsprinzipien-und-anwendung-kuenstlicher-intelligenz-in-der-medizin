@@ -4,7 +4,7 @@ Wie bereits in Abschnitt~\ref{seq-mcpbool} für das MCP-Neuron gezeigt, wollen w
 
 Das folgende Beispiel bezieht sich auf die \textbf{AND}-Funktion (vgl. Tabelle~\ref{tab:and}).
 
-Zunächst definieren wir zwei Mengen $M_+$ und $M_-$: Für Elemente in $M_+$ ist die erwartete Ausgabe $1$, für Elemente in $M_-$ ist sie $0$ (vgl. Abbildung~\ref{fig-rpand}):
+Zunächst definieren wir zwei Mengen $M_+$ und $M_-$: Für Elemente in $M_+$ ist die erwartete Ausgabe $1$, für Elemente in $M_-$ ist sie $0$ (vgl. Abbildung~\ref{fig:rpand}):
 
 \begin{equation}
     M_+ \coloneqq \{(1, 1)\}\\
@@ -21,7 +21,7 @@ Zunächst definieren wir zwei Mengen $M_+$ und $M_-$: Für Elemente in $M_+$ ist
         keepaspectratio,
     ]{chapters/Anhang/images/perceptron-and}
     \caption{Geometrische Interpretation der Perzeptron-Funktion im $\mathbb{R}^2$ (Quelle: Eigene Darstellung)}
-    \label{fig-rpand}
+    \label{fig:rpand}
     \end{center}
     \small {
     Die Abbildung zeigt alle möglichen zweiwertigem Interpretation von $A \land B$ in einem kartesischen Koordinatensystem.
@@ -129,7 +129,7 @@ $w_11 + w_21 \geq \Theta$\\
 
 
 Die folgenden Tabellen zeigen die Anpassungen im Detail.
-Die geometrische Darstellung hierzu findet sich in Abbildung~\ref{fig-rp-and-epochs}.
+Die geometrische Darstellung hierzu findet sich in Abbildung~\ref{fig:rp-and-epochs}.
 
 \setlength{\tabcolsep}{0.8em}
 \begin{table} %[hbtp]
@@ -210,7 +210,7 @@ Die geometrische Darstellung hierzu findet sich in Abbildung~\ref{fig-rp-and-epo
 
 \subsection*{Geometrische Darstellung}
 
-Die folgende Abbildung~\ref{fig-rp-and-epochs} zeigt einen vollständigen Lauf über 5 Epochen für die \textbf{AND}-Funktion.
+Die folgende Abbildung~\ref{fig:rp-and-epochs} zeigt einen vollständigen Lauf über 5 Epochen für die \textbf{AND}-Funktion.
 Blaue gestrichelt ist die Trenngerade, auf der senkrecht der Gewichtsvektor (orange) steht.
 Grün umrandete Punkte sind Ziel des Trainingsschrittes und bedingen den ``Änderungsvektor`` (schwarz), der die Anpassung von $w_i$ im nächsten Schritt angibt.
 
@@ -247,5 +247,5 @@ Grün umrandete Punkte sind Ziel des Trainingsschrittes und bedingen den ``Ände
         keepaspectratio,
     ]{chapters/Anhang/images/epochs_4}
     \caption{Geometrische Darstellung der Konvergenz eines Perzeptrons für AND (Quelle: Eigene Darstellung)}
-    \label{fig-rp-and-epochs}
+    \label{fig:rp-and-epochs}
 \end{figure}

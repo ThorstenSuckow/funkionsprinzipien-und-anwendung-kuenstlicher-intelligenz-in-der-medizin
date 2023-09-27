@@ -8,7 +8,7 @@ Basierend auf dem von McCulloch und Pitts in~\cite{MP43} postulierte Neuronen-Mo
     If a cold object is held to the skin for a moment and removed, a sensation of heat will be felt; if it is applied for a longer time, the sensation will be only of cold, with no preliminary warmth, however transient.
 }\\
 
-Das nach~\cite[105, Figure 1 (e)]{MP43} aufgestellte Modell und die dazugehörige Formel übertragen wir in die von uns verwendete Notation (in Anlehnung an~\cite[31 f.]{Fau94}). In der Abbildung~\ref{fig-mcpheat} sind zwei Temperaturrezeptoren $H_i$ (Hitze) und $K_i$ (Kälte) dargestellt, außerdem hat das Netz zwei Ausgänge, $H_o$ und $K_o$. $H_o$ wird zum Zeitpunkt $t$ aktiviert, wenn Hitze empfunden wird, $K_o$ entsprechend bei Kälte.\\
+Das nach~\cite[105, Figure 1 (e)]{MP43} aufgestellte Modell und die dazugehörige Formel übertragen wir in die von uns verwendete Notation (in Anlehnung an~\cite[31 f.]{Fau94}). In der Abbildung~\ref{fo+mcpheat} sind zwei Temperaturrezeptoren $H_i$ (Hitze) und $K_i$ (Kälte) dargestellt, außerdem hat das Netz zwei Ausgänge, $H_o$ und $K_o$. $H_o$ wird zum Zeitpunkt $t$ aktiviert, wenn Hitze empfunden wird, $K_o$ entsprechend bei Kälte.\\
 
 Die Bedingungen für eine Aktivierung von $H_o$ lauten: Hitze wird signalisiert, wenn entweder der Wäremerezeptor durch Wärme stimuliert \textbf{oder} kurzzeitig ein Kälteimpuls von den Kälterezeptoren registriert wird.\\
 
@@ -37,7 +37,7 @@ Die Bedingungen für eine Aktivierung der Zelle $K_o$, um Kälte zu signalisiere
         keepaspectratio,
     ]{chapters/Anhang/images/mcpparadoxheat}
     \caption{MCP-Netz zur Modellierung der paradoxen Hitzeempfindung. (Quelle: in Anlehnung an~\cite[31, Figure 1.18]{Fau94})}
-    \label{fig-mcpheat}
+    \label{fig:mcpheat}
 \end{figure}
 
 
@@ -70,8 +70,8 @@ Deshalb benötigen wir nur noch $Z_2(t-2)$, was das efferente Signal von $K_i(t-
 Die Abfolge der Aktivierung von $K_o$ bzw. $H_o$ kann tabellarisch auf Grundlage der Gleichungen dargestellt werden.
 Hierbei ist der Inhalt der Tabellenzellen (bis auf die Spalte $t$) $f(g(X))$  (siehe Gleichung~\ref{eq:gl-activation}), sofern der Wert zu dem entsprechenden Zeitpunkt bekannt ist (vgl.~\cite[32 f.]{Fau94}).
 \noindent
-Wir beginnen mit der Stimulierung von $K_i$ durch zwei aufeinanderfolgende Kälteimpulse (Abbildung~\ref{fig-coldimp}). Tabelle~\ref{tab:coldimp} stellt die jeweiligen Schritte dar: Es wird erwartet, das $K_o$ feuert.
-Tabelle~\ref{tab:heatimp} beschreibt im Gegenzug die erwartete Ausgabe ``Wärme`` für einen Stimulus von $H_i$, dargestellt in Abbildung~\ref{fig-heatimp}.
+Wir beginnen mit der Stimulierung von $K_i$ durch zwei aufeinanderfolgende Kälteimpulse (Abbildung~\ref{fig:coldimp}). Tabelle~\ref{tab:coldimp} stellt die jeweiligen Schritte dar: Es wird erwartet, das $K_o$ feuert.
+Tabelle~\ref{tab:heatimp} beschreibt im Gegenzug die erwartete Ausgabe ``Wärme`` für einen Stimulus von $H_i$, dargestellt in Abbildung~\ref{fig:heatimp}.
 
 \begin{figure}[h]
     \begin{center}
@@ -80,7 +80,7 @@ Tabelle~\ref{tab:heatimp} beschreibt im Gegenzug die erwartete Ausgabe ``Wärme`
         keepaspectratio,
     ]{chapters/Anhang/images/mcptwocold}
     \caption{Zwei Kälteimpulse als Eingabe für das MCP-Netz. (Quelle: in Anlehnung an~\cite[35, Figure 1.23]{Fau94}).}
-    \label{fig-coldimp}
+    \label{fig:coldimp}
     \end{center}
 
 \end{figure}
@@ -97,7 +97,7 @@ Tabelle~\ref{tab:heatimp} beschreibt im Gegenzug die erwartete Ausgabe ``Wärme`
         $t-1$ & 0     & 1     & 0        & 1        &          &          \\
         $t$   &       &       & 0         & 1         & 0        & 1        \\
     \end{tabular}
-    \caption{Verarbeitung von zwei Kälteimpulsen in dem MCP-Netz. Vgl. Abbildung~\ref{fig-coldimp}.}
+    \caption{Verarbeitung von zwei Kälteimpulsen in dem MCP-Netz. Vgl. Abbildung~\ref{fig:coldimp}.}
     \label{tab:coldimp}
 \end{table}
 
@@ -109,7 +109,7 @@ Tabelle~\ref{tab:heatimp} beschreibt im Gegenzug die erwartete Ausgabe ``Wärme`
         keepaspectratio,
     ]{chapters/Anhang/images/mcponehot}
     \caption{Ein einzelner Wärmeimpuls aktiviert das Wärmesignal. (Quelle: in Anlehnung an~\cite[36, Figure 1.24]{Fau94}).}
-    \label{fig-heatimp}
+    \label{fig:heatimp}
 \end{figure}
 
 
@@ -122,13 +122,13 @@ Tabelle~\ref{tab:heatimp} beschreibt im Gegenzug die erwartete Ausgabe ``Wärme`
         $t-1$ & 1     & 0     &          &          &          &          \\
         $t$   &       &       &          & 0         & 1        & 0        \\
     \end{tabular}
-    \caption{Tabellarische Darstellung von einem Wärmeimpuls. Vgl. Abbildung~\ref{fig-heatimp}.}
+    \caption{Tabellarische Darstellung von einem Wärmeimpuls. Vgl. Abbildung~\ref{fig:heatimp}.}
     \label{tab:heatimp}
 \end{table}
 
 
 
-Die Simulation der paradoxen Hitzeempfindung (Abbildung~\ref{fig-heatparad}) erfolgt nun durch eine einmalige Aktivierung von $K_i$ zum Zeitpunkt $t-3$.
+Die Simulation der paradoxen Hitzeempfindung (Abbildung~\ref{fig:heatparad}) erfolgt nun durch eine einmalige Aktivierung von $K_i$ zum Zeitpunkt $t-3$.
 Danach wird der Stimulus entfernt: formal wird das durch $\neg K_i (t-2)$ ausgedrückt (s. Gleichung~\ref{eq:gl-heat}).
 
 \begin{table} %[hbtp]
@@ -141,7 +141,7 @@ Danach wird der Stimulus entfernt: formal wird das durch $\neg K_i (t-2)$ ausged
         $t-1$   &    &    &   1 & 0   &  0  & 0 \\
         $t$   &    &    &    &    &  1  & 0 \\
     \end{tabular}
-    \caption{Tabellarische Darstellung der paradoxen Hitzeempfindung. Vgl. Abbildung~\ref{fig-heatparad}}
+    \caption{Tabellarische Darstellung der paradoxen Hitzeempfindung. Vgl. Abbildung~\ref{fig:heatparad}}
     \label{tab:heatparad}
 \end{table}
 
@@ -153,7 +153,7 @@ Danach wird der Stimulus entfernt: formal wird das durch $\neg K_i (t-2)$ ausged
         keepaspectratio,
     ]{chapters/Anhang/images/mcponecold}
     \caption{Entstehung der ``paradoxen Hitzeempfindung`` durch einen einzelnen Kälteimpuls. (Quelle: in Anlehnung an~\cite[34, Figure 1.22]{Fau94}).}
-    \label{fig-heatparad}
+    \label{fig:heatparad}
 \end{figure}
 
 

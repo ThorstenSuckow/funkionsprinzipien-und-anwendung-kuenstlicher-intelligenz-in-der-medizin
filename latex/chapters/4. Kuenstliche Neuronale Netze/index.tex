@@ -47,7 +47,7 @@ Ein MLP repräsentiert ein tiefes Feedforward-Netz, in dem die Eingabeschicht (\
         keepaspectratio,
     ]{chapters/4. Kuenstliche Neuronale Netze/images/neuronalesnetz}
     \caption{Architektur eines Feed-Forward-Netzes. (Quelle: Eigene Darstellung)}
-    \label{fig-multilayerfeedforward}
+    \label{fig:multilayerfeedforward}
     \end{center}
     \small{
         Ein Feed-Forward-Netz mit zwei Eingabeeinheiten $x_1, x_2$, zwei versteckten Schichten und einer Ausgabeeinheit $y$.
@@ -70,13 +70,13 @@ Der Vorgang (forward pass, backward pass, forward pass...) wird so lange für al
 
 
 
-Die mathematische Basis für Backpropagation ist das \textbf{Gradientenabstiegsverfahren}, das dabei hilft, in einem neuronalen Netz Parameter für möglichst optimale (d.h. kleine) Verlust-Werte (also geringe Fehler-Werte) zu finden (vgl.~\cite[837]{RN09}; s. a. Abbildung~\ref{fig-gradient})\footnote{
+Die mathematische Basis für Backpropagation ist das \textbf{Gradientenabstiegsverfahren}, das dabei hilft, in einem neuronalen Netz Parameter für möglichst optimale (d.h. kleine) Verlust-Werte (also geringe Fehler-Werte) zu finden (vgl.~\cite[837]{RN09}; s. a. Abbildung~\ref{fig:gradient})\footnote{
     ein kompakter Überblick zum Thema ``Optimierung auf Gradientenbasis`` findet sich in~\cite[90 ff.]{GBC18}
 }.
 Als Aktivierungsfunktion unterstützt eine \textbf{Sigmoid}\footnote{
     \textit{sigmoid}: ``Sigma``, griechischer Buchstabe $\Sigma$, entspricht dem lateinischen ``S``; ``\textit{eidos}`` (griechisch) Form, Gestalt
 }-Funktion\footnote{``Historisch wurde Backpropagation mit der Sigmoidfunktion implementiert.``~\cite[314, Fussnote 4]{Ert21b} In Kapitel 9.5.3 (vgl.~\cite[328 f.]{RM87}). \textit{Ertel} fügt hinzu: ``Mittlerweile haben sich jedoch andere Funktionen als besser bewährt.`` In~\cite[319 f.]{Ert21b} geht der Autor auf ``Probleme und Verbesserungen`` des mittlerweile über 30 Jahre alten Verfahrens ein. \textit{Goodfellow et al.} stellen fest, dass Backpropagation der ``vorherrschende Ansatz für das Training tiefer Modelle`` (im Jahr 2018) ist~\cite[19]{GBC18}.
-} (Gleichung~\ref{eq:gl-sigmoid} sowie Abbildung~\ref{fig-sigmoid}) aufgrund ihres nicht-linearen Charakters eine größere Klasse darstellbarer Funktionen und damit Lösungen für Probleme, die ein klassisches Perzeptron nicht lösen kann (vgl.~\cite[316]{Ert21b})\footnote{
+} (Gleichung~\ref{eq:gl-sigmoid} sowie Abbildung~\ref{fig:sigmoid}) aufgrund ihres nicht-linearen Charakters eine größere Klasse darstellbarer Funktionen und damit Lösungen für Probleme, die ein klassisches Perzeptron nicht lösen kann (vgl.~\cite[316]{Ert21b})\footnote{
     In~\cite[311 ff.]{RM87} zeigen \textit{Rumelhart, Hinton und Williams} die Architektur eines mehrschichtigen neuronalen Netzes, das das XOR-Problem über Backpropagation löst. In~\cite[536]{RHW86} grenzen sie ihr Modell vom biologischen Lernen ab: ``The learning procedure, in its current form, is not a plausible model of learning in brains``.
 } \footnote{
     \textit{Ertel} weist darauf hin, dass die Klasse der darstellbaren Funktionen erhöht wird, wenn man für ein Perzeptron eine variable Sigmoid-Funktion verwendet~\cite[316]{Ert21b}. Siehe hierzu auch ``Sigmoid-Perzeptron`` in~\cite[847]{RN09}
@@ -96,7 +96,7 @@ Sigmoid:
         keepaspectratio,
     ]{chapters/4. Kuenstliche Neuronale Netze/images/sigmoid}
     \caption{Plot einer Sigmoid-Funktion. (Quelle: Eigene Darstellung)}
-    \label{fig-sigmoid}
+    \label{fig:sigmoid}
 \end{figure}
 
 
@@ -107,7 +107,7 @@ Sigmoid:
         keepaspectratio,
     ]{chapters/4. Kuenstliche Neuronale Netze/images/gradientenabstieg}
     \caption{Skizzierung des Gradientenabtiegsverfahrens. (Quelle: in Anlehnung an~\cite[52, Abb. 2.15]{Son22})}
-    \label{fig-gradient}
+    \label{fig:gradient}
     \end{enter}
     \small{
      Die $y$-Achse repräsentiert den Fehlerwert, die $x$-Achse den berechneten Gewichtsvektor $w_1$ in einem neuronalen Netz. Offensichtlich existiert in dem Netz $w^*$, für den der Fehler geringer ist als für $w_1$. Das Gradientenabstiegsverfahren wird genutzt, um diese Minima zu finden (vgl.~\cite[52]{Son22}).
@@ -215,7 +215,7 @@ Eine mathematische Basis von CNNs ist die \textbf{Faltungsoperation}\footnote{
         keepaspectratio,
     ]{chapters/4. Kuenstliche Neuronale Netze/images/faltung}
     \caption{Beispiel einer einer Faltungsoperation. (Quelle: in Anlehnung an~\cite[372, Abbildung 9.1]{GBC18})}
-    \label{fig-faltung}
+    \label{fig:faltung}
     \end{center}
     \small{
     In dem Beispiel wird zur Faltung ein $2 \times 2$-Kernel mit einer $3 \times 4$-Eingabe verwendet. Das Ergebnis ist eine $2 \times 3$-\textit{feature map}.
@@ -225,7 +225,7 @@ Eine mathematische Basis von CNNs ist die \textbf{Faltungsoperation}\footnote{
 
 
 CNNs nutzen neben den Convolution Schichten auch Pooling Schichten (vgl.~\cite[325]{Ert21b}), die die Ausgaben des Netzes durch eine ``statistische Größe der nahegelegenen Ausgaben`` ersetzt~\cite[379]{GBC18}, was die Zahl der Pixel auf den feature maps reduziert\footnote{ \textit{LeCun et al.} weisen darauf hin, dass die Pooling Schicht auch die Aufgabe hat, semantisch ähnliche Merkmale zusammenzufassen: ``the role of the pooling layer is to merge semantically similar features into one.``~\cite[439]{LBH15}
-}, außerdem wird als Aktivierungsfunktion meistens die nichtlineare ReLu (Rectified Linear Unit, s. Gleichung~\ref{eq:gl-relu} und Abbildung~\ref{fig-relu}) verwendet, die die Konvergenz der Netze verbessert (vgl.~\cite[327]{Ert21b}).\\
+}, außerdem wird als Aktivierungsfunktion meistens die nichtlineare ReLu (Rectified Linear Unit, s. Gleichung~\ref{eq:gl-relu} und Abbildung~\ref{fig:relu}) verwendet, die die Konvergenz der Netze verbessert (vgl.~\cite[327]{Ert21b}).\\
 
 ReLU:
 \begin{equation} f(x) = max(0, x)
@@ -240,7 +240,7 @@ ReLU:
         keepaspectratio,
     ]{chapters/4. Kuenstliche Neuronale Netze/images/relu}
     \caption{Plot der ReLU. (Quelle: Eigene Darstellung)}
-    \label{fig-relu}
+    \label{fig:relu}
 \end{figure}
 
 
