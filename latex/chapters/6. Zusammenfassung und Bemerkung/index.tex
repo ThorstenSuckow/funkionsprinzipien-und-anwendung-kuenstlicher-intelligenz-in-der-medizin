@@ -2,13 +2,13 @@
 
 
 
-Ein biologisches neuronales Netz ist ein hochkomplexer Kommunikationsverbund, in dem verschiedene biochemische Prozesse ineinandergreifen.
-Diese Prozesse ermöglichen eine Informationsverarbeitung: Eine einzelne Nervenzelle ist dazu in der Lage, Signale zu empfangen, zu verrechnen und ein Signal auszugeben.
+In Kapitel~\ref{ch:neuron} haben wir gesehen, dass ein biologisches neuronales Netz ein Kommunikationsverbund ist, in dem hochkomplexe biochemische Prozesse ineinandergreifen.
+Diese Prozesse ermöglichen eine Informationsverarbeitung: Eine einzelne Nervenzelle ist in der Lage, Signale zu empfangen, zu verrechnen und ein Signal auszugeben.
 
 
-Dies wurde in Kapitel~\ref{ch:neuron} gezeigt: Löst ein Aktionspotenzial aus, diffundieren Neurotransmitter in den synaptischen Spalt, die Folgezelle verrechnet die daraus entstehenden elektrischen Signale und so setzt sich die Kette fort, bis tausende von Neuronen ein Signal an das Ende der Kommunikationskette weitergeleitet haben.
+ Löst ein Aktionspotenzial aus, diffundieren Neurotransmitter in den synaptischen Spalt, die Folgezelle verrechnet die daraus entstehenden elektrischen Signale und so setzt sich die Kette fort, bis tausende von Neuronen ein Signal an das Ende der Kommunikationskette weitergeleitet haben.
 Ob ein einzelnes Vesikel ein \textbf{mEPSC} verursacht, mag dabei auf analytischer Ebene interessant sein.
-Die Frage, welches der über tausenden Vesikel, die in einem Neuronenverband an einer Signalweiterleitung beteiligt sind, dann letztendlich ursächlich für eine muskuläre Reaktion ist, ist sicherlich schwieriger zu beantworten.
+Die Frage, welches der über tausend Vesikel, die in einem Neuronenverband an einer Signalweiterleitung beteiligt sind, dann letztendlich ursächlich für eine muskuläre Reaktion ist, ist sicherlich schwieriger zu beantworten.
 
 Tiefe künstliche neuronale Netz mit ihren Millionen von Parametern (vgl.~\cite{SVI+15}) erweisen sich im Hinblick auf eine Analyse ähnlich undurchschaubar\footnote{ dieser Blackbox-Charakter wird problematisch, wenn {bspw.} von Assistenzsystemen in der Medizin Entscheidungswege aufgezeigt werden sollen, die zu einer bestimmten Diagnose oder Therapieempfehlung führen (siehe Abschnitt~\ref{sec:diagnostik}).}.\\
 
@@ -43,7 +43,7 @@ Umso größer war ihr Einfluss auf die Computerwissenschaften\footnote{
 }: Logische Schaltungen, die Intelligenz und Kognition ermöglichen, brachte den Gedanken an eine ``intelligente Maschine`` hervor (vgl.~\cite[204]{Pic04}): So war diese Formalisierung ein wichtiges Schlüsselelement für die von-Neumann-Rechnerarchitektur\footnote{\cite{Neu93}} sowie Wieners Kybernetik\footnote{siehe Anhang~\ref{appendix:wiener}}, und zusammen mit den nachfolgenden Arbeiten von \textit{Hebb}\footnote{~\cite{Heb49}} und \textit{Rosenblatt} ebnete es den Weg für die Forschung an künstlicher Intelligenz (vgl.~\cite[1]{Arb19}).
 
 
-Zu erwähnen ist auch die Bemerkung von McCulloch und Pitts bzgl. ``Berechenbarkeit``:
+Erwähnenswert ist auch die Bemerkung von McCulloch und Pitts bzgl. ``Berechenbarkeit``:
 
 \blockquote[{~\cite[113]{MP43}}]{
     This is of interest as affording a psychological justification of the Turing definition of computability and its equivalents, Church’s A-definability and Kleene’s primitive recursiveness: if any number can be computed by an organism, it is computable by these definitions, and conversely.
@@ -57,7 +57,7 @@ Sie nehmen hiermit Bezug auf die von \textit{Alan Turing} (1912 - 1954) bereits 
 }
 
 
-Parallelen zu der Architektur der von Turing aufgestellten Modelle und dem von McCulloch entworfenen ``psychon`` als kleinste Einheit psychischer Aktivitäten sind erkennbar. \textit{Piccinini} stellt dazu fest, dass die Aussage, MCP-Netze können Berechnungen anstellen, einen ersten wichtigen Bezug zwischen mathematischer Theorie und Neurowissenschaft herstellte (vgl.~\cite[197]{Pic04}).
+Parallelen zu der Architektur der von Turing aufgestellten Modelle und dem von McCulloch entworfenen ``psychon`` als kleinste Einheit psychischer Aktivitäten sind erkennbar. \textit{Piccinini} stellt dazu fest, dass die Aussage, MCP-Netze können Berechnungen anstellen, einen ersten wichtigen Bezug zwischen mathematischer Theorie und Neurowissenschaft herstellte (vgl.~\cite[197]{Pic04}).\\
 
 
 McCulloch schreibt dazu später
@@ -78,13 +78,13 @@ Konsequenterweise nutzt \textit{Minsky} in~\cite[32 ff.]{Min67} die MCP-Zelle al
 
 %
 
-\textit{Minsky} analysiert ebenfalls das im Abschnitt~\ref{sec:rosenblattperceptron} vorgestellten Perzeptron umfangreich.
+\textit{Minsky} analysiert ebenfalls das im Abschnitt~\ref{sec:rosenblattperceptron} vorgestellte Perzeptron.
 
 
-In \textit{Perceptrons - An introduction to Computational Geometry (1969)}~\cite{MP88} behandelt er zusammen mit \textit{Papert} u.a. das Verhalten des Perzeptrons im Fall nicht-separierbarer Daten\footnote{
+In~\cite{MP88} behandelt er zusammen mit \textit{Papert} u.a. das Verhalten des Perzeptrons im Fall nicht-separierbarer Daten\footnote{
     in~\cite[181 ff.]{MP88}
 } sowie das Problem bzgl. \textit{recognition of connectedness}\footnote{
-    s. \cite[12, ``Theorem 0.8``]{MP88} sowie~\cite[249 f.]{MP88}. In dem Epilog, der 19 Jahre später in einer Neuausgabe von \textit{Minsky und Papert} veröffentlicht wird, machen sie deutlich, dass sie damit nicht nachweisen wollten, dass ein Perzeptron nicht in der Lage zu der Erkennung zusammenhängender geometrischer Figuren sei, sondern dass die Komplexität von verschiedenen Aufgaben Anforderungen an ein Perzeptron stellt, die zu der damaligen Zeit (Ende 1950er / Anfang 1960er) schwierig umzusetzen gewesen sind (vgl. ~\cite[250]{MP88})
+    s. \cite[12, ``Theorem 0.8``]{MP88} sowie~\cite[249 f.]{MP88}. In dem Epilog, der 19 Jahre nach der Erstveröfffentlichung geschrieben wird, machen sie deutlich, dass sie nicht nachweisen wollten, dass ein Perzeptron nicht in der Lage zu der Erkennung zusammenhängender geometrischer Figuren sei, sondern dass die Komplexität von verschiedenen Aufgaben Anforderungen an ein Perzeptron stellt, die zu der damaligen Zeit (Ende 1950er / Anfang 1960er) schwierig umzusetzen gewesen sind (vgl. ~\cite[250]{MP88})
 }, bei dem es um die Erkennung zusammenhängender geometrischer Figuren geht.
 
 Ihr Anliegen mit dem Buch ist es, die (mathematischen) Grenzen des Rosenblatt-Perzeptrons auf ein formales Gerüst zu stellen (vgl.~\cite[249]{MP88}).
@@ -117,11 +117,12 @@ Auf gleicher Seite verweisen sie auf die zunehmende Komplexität der zu berechne
 
 Der Lighthill Report\footnote{
     ``Workers entered the field around 1950, and even around 1960, with high hopes that are very far from having been realised in 1972. In no part of the field have the discoveries made so far produced the major impact that was then promised.`` in \url{https://www.chilton-computing.org.uk/inf/literature/reports/lighthill\_report/p001.htm}, ``3 Past disappointments``, abgerufen 28.08.2023
-} sollte dann 1973 eine Grundlage für die Entscheidung der britischen Regierung darstellen, das Budget für die Forschung an KI zu kürzen (vgl. ~\cite[45]{RN09}). Neuronale Netze wurden als Grundlage künstlicher Intelligenz zunächst verworfen\footnote{
+} wird 1973 die britischen Regierung dazu bewegen, das Budget für die Forschung an KI zu kürzen (vgl. ~\cite[45]{RN09}): Neuronale Netze werden als Grundlage künstlicher Intelligenz zunächst verworfen\footnote{
     vgl.~\cite[641]{Ola96}
-}, und die Forschung daran ging zurück, bis sie Anfang/Mitte der 1980er Jahre wieder aufgenommen wurde: Diese Periode ist gemeinhin als ``KI-Winter`` (siehe Anhang~\ref{appendix:kiwinter}) bekannt.\\
+}, und Forschungsarbeiten an ihnen geht bis zum Anfang der 1980er Jahre zurück.
+Diese Periode ist gemeinhin als ``KI-Winter`` (siehe Anhang~\ref{appendix:kiwinter}) bekannt.\\
 
-Die in Kapitel~\ref{ch:knn} vorgestellten Architekturen und Algorithmen sorgten dann zusammen mit dem technologischen Fortschritt für ein erneutes Aufleben der Forschung an neuronalen Netzen und Künstlicher Intelligenz in den 80er Jahren.
+Die in Kapitel~\ref{ch:knn} vorgestellten Architekturen und Algorithmen sorgten dann zusammen mit dem technologischen Fortschritt für ein erneutes Aufleben der Forschung an neuronalen Netzen und Künstlicher Intelligenz in den 1980er Jahren.
 Einige der Ergebnisse dieser Anstrengung wurden in Kapitel~\ref{ch:gesundheitswesen} in Auszügen vorgestellt.
 Dass dabei die Algorithmen nicht immer der Funktionsweise des natürlichen Vorbildes entsprechen, haben wir bei dem Backpropagation-Verfahren gesehen (siehe Abschnitt~\ref{sec:backpropagation}).
 
@@ -131,7 +132,7 @@ Bei allem Fortschritt, der durch Forschung und Wissenschaft in den vergangenen J
 
 Normierte Daten können deshalb helfen, die Auswertung, Anwendung aber auch den Austausch derselben zu erleichtern, wie das Beispiel aus Abschnitt~\ref{sec:therapieprognose} zeigt (vgl. auch ~\cite[42]{AHR19}).
 
-Wir dürfen schliessen, dass Künstliche Intelligenz in Form neuronaler Netze nicht nur aufgrund komplexer mathematischer Verfahren, die durch hohe Rechenleistung ermöglicht wird, wertvolle Dienste leistet: Maschinelle Lernverfahren benötigen eine gesunde Datenbasis, damit ein anwendendes Computer-System zur Generalisierung fähig ist.
+Wir dürfen schliessen, dass Künstliche Intelligenz in Form neuronaler Netze nicht nur aufgrund komplexer mathematischer Verfahren, die durch hohe Rechenleistung ermöglicht wird, wertvolle Dienste leistet: Maschinelle Lernverfahren benötigen hierzu auch eine gesunde Datenbasis\footnote{s. hierzu auch~\cite{SSM+19}}.
 
 
 
