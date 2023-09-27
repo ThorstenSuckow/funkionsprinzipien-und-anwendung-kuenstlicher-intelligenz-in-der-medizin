@@ -47,8 +47,8 @@ Ein MLP repräsentiert ein tiefes Feedforward-Netz, in dem die Eingabeschicht (\
         keepaspectratio,
     ]{chapters/4. Kuenstliche Neuronale Netze/images/neuronalesnetz}
     \caption{Architektur eines Feed-Forward-Netzes. (Quelle: Eigene Darstellung)}
-    \end{center}
     \label{fig-multilayerfeedforward}
+    \end{center}
     \small{
         Ein Feed-Forward-Netz mit zwei Eingabeeinheiten $x_1, x_2$, zwei versteckten Schichten und einer Ausgabeeinheit $y$.
     }
@@ -107,8 +107,8 @@ Sigmoid:
         keepaspectratio,
     ]{chapters/4. Kuenstliche Neuronale Netze/images/gradientenabstieg}
     \caption{Skizzierung des Gradientenabtiegsverfahrens. (Quelle: in Anlehnung an~\cite[52, Abb. 2.15]{Son22})}
-    \end{enter}
     \label{fig-gradient}
+    \end{enter}
     \small{
      Die $y$-Achse repräsentiert den Fehlerwert, die $x$-Achse den berechneten Gewichtsvektor $w_1$ in einem neuronalen Netz. Offensichtlich existiert in dem Netz $w^*$, für den der Fehler geringer ist als für $w_1$. Das Gradientenabstiegsverfahren wird genutzt, um diese Minima zu finden (vgl.~\cite[52]{Son22}).
 }
@@ -215,8 +215,8 @@ Eine mathematische Basis von CNNs ist die \textbf{Faltungsoperation}\footnote{
         keepaspectratio,
     ]{chapters/4. Kuenstliche Neuronale Netze/images/faltung}
     \caption{Beispiel einer einer Faltungsoperation. (Quelle: in Anlehnung an~\cite[372, Abbildung 9.1]{GBC18})}
-    \end{center}
     \label{fig-faltung}
+    \end{center}
     \small{
     In dem Beispiel wird zur Faltung ein $2 \times 2$-Kernel mit einer $3 \times 4$-Eingabe verwendet. Das Ergebnis ist eine $2 \times 3$-\textit{feature map}.
     }
@@ -225,7 +225,7 @@ Eine mathematische Basis von CNNs ist die \textbf{Faltungsoperation}\footnote{
 
 
 CNNs nutzen neben den Convolution Schichten auch Pooling Schichten (vgl.~\cite[325]{Ert21b}), die die Ausgaben des Netzes durch eine ``statistische Größe der nahegelegenen Ausgaben`` ersetzt~\cite[379]{GBC18}, was die Zahl der Pixel auf den feature maps reduziert\footnote{ \textit{LeCun et al.} weisen darauf hin, dass die Pooling Schicht auch die Aufgabe hat, semantisch ähnliche Merkmale zusammenzufassen: ``the role of the pooling layer is to merge semantically similar features into one.``~\cite[439]{LBH15}
-}, ausserdem wird als Aktivierungsfunktion meistens die nichtlineare ReLu (Rectified Linear Unit, s. Gleichung~\ref{eq:gl-relu} und Abbildung~\ref{fig-relu}) verwendet, die die Konvergenz der Netze verbessert (vgl.~\cite[327]{Ert21b}).\\
+}, außerdem wird als Aktivierungsfunktion meistens die nichtlineare ReLu (Rectified Linear Unit, s. Gleichung~\ref{eq:gl-relu} und Abbildung~\ref{fig-relu}) verwendet, die die Konvergenz der Netze verbessert (vgl.~\cite[327]{Ert21b}).\\
 
 ReLU:
 \begin{equation} f(x) = max(0, x)

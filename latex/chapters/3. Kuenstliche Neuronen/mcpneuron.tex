@@ -62,18 +62,19 @@ In Anlehnung an das Original legen wir folgende Anforderungen für die Anwendung
 
 
 \begin{figure}[h]
-    \label{fig-mcpcell}
     \includegraphics[
         width=16cm,
         keepaspectratio,
     ]{chapters/3. Kuenstliche Neuronen/images/mcpneuron}
     \caption{Schematische Darstellung von MCP-Zellen (Quelle: in Anlehnung an~\cite[105, Figure 1]{MP43})}
-    \small
+    \label{fig-mcpcell}
+    \small{
      Schwarze Kreise sind erregende Verbindungen, offene Kreise hemmende. Im ursprünglichen Modell benötigt ein Neuron zwei erregende Eingaben, um aktiviert zu werden.\\
     In a) ist damit ein Netz dargestellt von zwei Neuronen, bei denen $N_2$ feuert, wenn $N_1$ feuert. Unter Berücksichtigung der Zeiteinheit folgt die formale Darstellung $N_2(t) \equiv N_1(t - 1)$.\\
     Gleicherweise ergibt sich für b), das $N_3$ nur feuert, wenn $N_1$ \textbf{oder} $N_2$ feuern: $N_3(t) \equiv N_1(t - 1) \lor N_2(t - 1)$.\\
     Analog folgt für c) $N_3(t) \equiv N_1(t - 1) \land N_2(t - 2)$.\\
     Für d) ergibt sich somit $N_3(t) \equiv N_1(t - 1 ) \land \neg N_2(t - 1)$
+    }
 \end{figure}
 
 

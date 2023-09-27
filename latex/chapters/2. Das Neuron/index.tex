@@ -14,11 +14,11 @@ Sie fungieren \textit{postsynaptisch} und empfangen über \textbf{Rezeptoren} af
   keepaspectratio,
  ]{chapters/2. Das Neuron/images/dasneuron}
  \caption{Aufbau einer Nervenzelle. (Quelle: in Anlehnung an~\cite[43 Tafel 2.1]{SD07})}
+ \label{fig:neuron}
  \end{center}
  \small{
  Die Dendriten leiten afferente Signale zum Soma, dem Zellkörper. Das Axon leitet ein efferentes (``efferre``
-  (lat.): hinaustragen, mitnehmen) Nervensignal über präsynaptische Endigungen (Axonterminale) an (häufig weit entfernte) Effektoren wie Muskeln, Drüsen oder nachgeschaltete Neuronen weiter.}
-\label{fig:neuron}
+  (lat.): hinaustragen, mitnehmen) Nervensignal über präsynaptische Endigungen (auch ``Axonterminale``) an (häufig weit entfernte) Effektoren wie Muskeln, Drüsen oder nachgeschaltete Neuronen weiter.}
 \end{figure}
 
 Dendriten leiten die Signale weiter an das Soma, in dem sich, durch die \textbf{Neuronenmembran}\footnote{
@@ -62,7 +62,11 @@ In der IZF befinden sich mehr positiv geladene Natrium-Ionen ($Na^+$), und in de
 \end{table}
 
 
-Das \textbf{Membranpotenzial} des Neurons wird durch die Verteilung der Ionen in der IZF und EZF bestimmt: In der Membran befinden sich \textbf{Ionenkanäle}, von denen viele \textbf{selektiv permeabel}\footnote{siehe Anhang~\ref{appendix:permeabel}} sind.
+Das \textbf{Membranpotenzial} des Neurons wird durch die Verteilung der Ionen in der IZF und EZF bestimmt: In der Membran befinden sich \textbf{Ionenkanäle}, von denen viele \textbf{selektiv permeabel}\footnote{
+ von ``\textit{permeare}`` (lat.) durchwandern.
+ Ein selektiv permeabler Kanal ist nur für bestimmte Ionen durchlässig (\textit{ionenselektiv}). Kaliumkanäle sind durchlässig für $K^+$-Ionen, Natriumkanäle durchlässig für $Na^+$-Ionen usw. (vgl.~\cite[66]{BCP18}).
+ Die Kanäle können über Änderungen in der Umgebung des Neurons geöffnet oder geschlossen werden, was auch als \textbf{Gating} bezeichnet wird (vgl.~\cite[108]{KSJ+13})
+} sind.
 Daneben existieren \textbf{Ionenpumpen} wie die $Ca^{2+}$- und $Na^+$-$K^+$-ATPasen. Sie sorgen dafür, dass im Neuron laufend $Ca^{2+}$ und $Na^+$ aus der Zelle und $K^+$ in die Zelle befördert wird (vgl.~\cite[44]{SD07}). Zusammen mit den selektiv permeablen Ionenkanälen entstehen so die Ionenkonzentrationen in Tabelle~\ref{tab:ionenkonzentration}.\\
 
 
@@ -83,11 +87,11 @@ Diese \textbf{Membranspannung} $V_m$ wird durch eine ungleiche Ionenverteilung b
   keepaspectratio,
  ]{chapters/2. Das Neuron/images/ionenverteilung}
  \caption{Ionenverteilung im Zytosol und der EZF. (Quelle: in Anlehnung an~\cite[72 Abb. 3.13]{BCP18})}
+ \label{fig:ionenverteilung}
  \end{center}
  \small{
   Aufgrund der elektrostatischen Anziehungskraft ziehen sich Anionen (neg. geladen) und Kationen (pos. geladen) in der Nähe der Membran gegenseitig an, es kommt zu einer negativen Spannung in Membrannähe (zwischen $-70 mV$ und $-90 mV$ in Ruhe). Dadurch ist die negative Ladung nicht gleichmässig im Zytosol verteilt. \textit{Bear et al.} weisen darauf hin, dass trotzdem der größte Teil des Zytosols und der EZF elektrisch neutral ist (vgl.~\cite[72, Abb. 3.13]{BCP18})}
  }
-\label{fig:ionenverteilung}
 \end{figure}
 
 In Ruhe ist die Leitfähigkeit der Membran für $Na^+$ gering, für $K^+$ hingegen hoch (vgl.~\cite[44]{SD07}).
@@ -176,8 +180,8 @@ Hierzu bedarf es eines \textbf{Aktionspotenzials}, das durch Ionenbewegungen ent
  \item Es gibt einen \textbf{Schwellenwert} für die Auslösung des Potenzials.
  \item Das Aktionspotenzial ist ein \textbf{Alles-oder-nichts} Ereignis.
  \item Das Aktionspotenzial wird ohne Verlust weitergeleitet.
- \item Nach dem auslösen des Aktionspotenzial kommt es zu einer \textbf{Refraktärzeit}, in der zunächst kein weiteres Aktionspotenzial ausgelöst werden kann (\textbf{absolute Refraktärzeit}). Bevor $V_r$ wieder erreicht ist, wird für eine kurze Dauer ein stärkeres Signal benötigt, um das Aktionspotenzial erneut auszulösen (\textbf{relative Refraktärzeit})\footnote{
-   beide Zeitabschnitte sind Teil der \textbf{Nachhyperpolarisation}, dargestellt in in Abbildung~\ref{fig:aktionspotenzial}.  ``Hyperpolarisation`` kann gleichbedeutend mit Hemmung verstanden werden.
+ \item Nach dem Auslösen des Aktionspotenzial kommt es zu einer \textbf{Refraktärzeit}, in der zunächst kein weiteres Aktionspotenzial ausgelöst werden kann (\textbf{absolute Refraktärzeit}). Bevor $V_r$ wieder erreicht ist, wird für eine kurze Dauer ein stärkeres Signal benötigt, um das Aktionspotenzial erneut auszulösen (\textbf{relative Refraktärzeit})\footnote{
+   beide Zeitabschnitte sind Teil der \textbf{Nachhyperpolarisation}, dargestellt in in Abbildung~\ref{fig:aktionspotenzial}.  Bei der ``Hyperpolarisation`` ändert sich das Membranpotenzial auf negative Werte in Richtung $V_r$ und darunter und wird in diesem Kontext als Hemmung verstanden.
 }
 \end{enumerate}
 
@@ -208,7 +212,7 @@ Damit ein Aktionspotenzial ausgelöst werden kann, muss die Membran nahe der Ini
  Damit sich $V_r$ an $V_t$ nähert, bedarf es einer Erregung der Zelle durch postsynaptische Potenziale (vgl. ~\cite[69]{FE19}) oder ``eine aus der Umgebung weitergeleitete (elektrotonische) Erregung``~\cite[46]{SD07}.
 
 Die Stärke der Erregung der Zelle ist entscheidend für das Auslösen eines Aktionspotenzials. Es muss mehr $Na^+$ in die Zelle einströmen, als $K^+$ aus der Zelle ausströmen kann (vgl.~\cite[69]{FE19}).
-Versuche zeigen, dass die Potenzialänderung der Membran in einem Bereich von $-80 mV$ zu $-65 mV$ in dieser Hinsicht kaum Änderung bewirkt (vgl.~\cite[99]{BCP18}). $g_{Ka}$ erhöht sich, aber wenn $V_r$ nicht erreicht wird, bleibt es bei dieser ``lokalen Antwort``~\cite[46]{SD07}. Erst eine Depolarisation der Membran hin über diesen Wert\footnote{
+Versuche zeigen, dass die Potenzialänderung der Membran in einem Bereich von $-80 mV$ zu $-65 mV$ in dieser Hinsicht kaum Änderung bewirkt (vgl.~\cite[99]{BCP18}). $g_{Na}$ erhöht sich, aber wenn $V_r$ nicht erreicht wird, bleibt es bei dieser ``lokalen Antwort``~\cite[46]{SD07}. Erst eine Depolarisation der Membran hin über diesen Wert\footnote{
  ab -60 mV gehen die Natrium-Kanäle in den Offen-Zustand über (vgl.~\cite[69]{FE19}).
 } kann die \textbf{Initiationsphase}\footnote{siehe ~\cite[68]{FE19}} des Aktionspotenzials einleiten: Es öffnen sich mehr Natrium-Kanäle, und durch die negative Ladung der Membran-Innenseite gibt es eine starke elektrochemische Triebkraft für $Na^+$-Ionen (vgl.~\cite[103]{BCP18}). Die Triebkraft ist zu diesem Zeitpunkt die Differenz des Membranpotenzials $V_m$ und $E_{Na}$. Bei $-60 mV$ beträgt die Triebkraft\footnote{
  vgl.~\cite[39]{Fak19}
@@ -224,7 +228,7 @@ Da sich durch zunehmende Öffnung der Natrium-Kanäle $g_{Na}$ erhöht, strömen
 siehe hierzu auch Anhang~\ref{appendix:aktionspotenzial}
 }.
 
-Die Stärke des Signals selber ist unabhängig von dem Wert, der zu der überschwelligen Reizung des Neurons geführt hat: Amplitude und Zeitverlauf des Signals im Axon hängen nicht von Intensität und Dauer des Reizes ab (vgl.~\cite[75]{Jon19}). Entweder kommt es zu einem Aktionspotenzial, oder es bleibt bei einer lokalen Antwort. Aus diesem Grund funktionieren Aktionspotenziale nach dem \textbf{Alles-oder-Nichts-Prinzip}\footnote{vgl.~\cite[89]{BCP18}. Ausserdem:
+Die Stärke des Signals selber ist unabhängig von dem Wert, der zu der überschwelligen Reizung des Neurons geführt hat: Amplitude und Zeitverlauf des Signals im Axon hängen nicht von Intensität und Dauer des Reizes ab (vgl.~\cite[75]{Jon19}). Entweder kommt es zu einem Aktionspotenzial, oder es bleibt bei einer lokalen Antwort. Aus diesem Grund funktionieren Aktionspotenziale nach dem \textbf{Alles-oder-Nichts-Prinzip}\footnote{vgl.~\cite[89]{BCP18}. Außerdem:
  ``Im Computerzeitalter bezeichnet man das axonale Aktionspotenzial auch als 'digitales' Signal.``~\cite[75]{Jon19}. \tetxit{Frank} bietet eine Übersicht über die Erforschung des Alles-oder-Nichts-Prinzip in~\cite{Fra94}. Dort wird \textit{Lucas} erwähnt, der 1905 in~\cite{Luc05} die Kontraktionen von Muskelfasern unter diesem Gesichtspunkt untersucht hat (vgl.~\cite[210]{Fra94})
 }:
 
@@ -238,7 +242,7 @@ Kurz nach der Aktionspotenzialbildung befinden sich daran beteiligte Membrane in
 Somit pflanzt sich das Aktionspotenzial nur in eine Richtung fort\footnote{\textit{orthodrome} Fortleitung.
   \textit{Bear et al.} verweisen auf \textit{antidrome} Fortleitung, die in Experimenten ausgelöst werden kann~\cite[106]{BCP18}
 } (vgl.~\cite[106]{BCP18}).
-Die Fortleitung geschieht in Richtung der Axonterminal, wo sich die präsynaptischen Endigungen befinden und das elektrische Signal in chemische Signale umgewandelt werden (siehe Abbildung\ref{fig:neuron}).
+Die Fortleitung geschieht in Richtung der Axonterminal, wo sich die präsynaptischen Endigungen befinden und das elektrische Signal in chemische Signale umgewandelt werden (siehe Abbildung~\ref{fig:neuron}).
 
 
 \section{Synaptische Übertragung und Integration}
