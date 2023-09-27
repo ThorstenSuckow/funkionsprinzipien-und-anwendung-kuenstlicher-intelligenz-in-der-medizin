@@ -54,7 +54,10 @@ In Anlehnung an das Original legen wir folgende Anforderungen für die Anwendung
         Die ausbleibende Exoztyose in chemischen Synapsen kann in dem Sinne einer Modellierung als ``0``-Signal verstanden werden (siehe Kapitel~\ref{sec:synaptischeuebertragung}).
     }.
     \item An einem Neuron liegen (beliebig viele) Eingaben an.
-    \item Jedes Neuron hat einen individuellen Schwellenwert. Der Schwellenwert muss getroffen oder übertroffen werden, damit das Neuron ``1`` feuert.
+    \item {
+        Jedes Neuron hat einen individuellen Schwellenwert.
+        Der Schwellenwert muss getroffen oder übertroffen werden, damit ein Neuron eine ``1`` feuert.
+    }
     \item Hemmung ist ``absolut``: Liegt ein hemmendes Signal zusammen mit nicht-hemmenden Signalen an, feuert das Neuron nicht\footnote{
         Für eine weitere Ausführung absoluter und relativer Hemmung siehe~\cite[42 f.]{Roj93}.
     }
@@ -284,11 +287,9 @@ Durch die resultierende Hemmung kann das Signal die Zelle nicht aktivieren (sieh
 
 \subsection*{NAND (NOT AND)}
 
-$\{\neg, \lor, \land\}$ bilden ein vollständiges Operatorensystem, d.h., jede boolesche Funktion lässt sich durch einen aussagenlogischen Ausdruck  beschreiben, in dem ausschließlich Operatoren aus dieser Menge vorkommen (vgl.~\cite[89]{Hof22}).
-Wie wir oben gesehen haben, können wir über MCP-Zellen die Operatoren $\neg, \lor, \land$ darstellen.
-Ein MCP-Netz ist nach Definition also in der Lage, jede boolesche Funktion zu modellieren - wozu allerdings bereits $\{\neg, \land\}$ ausreicht, wie \textit{Sheffer} in~\cite{She13} zeigt.
-
-$\{\neg, \land\}$ bildet die Operatorenmenge für \textbf{NAND}, was als MCP-Netz wie folgt modelliert werden kann (siehe Tabelle~\ref{tab:nand} sowie Abbildung~\ref{fig:mcpnand}):
+$\{\neg, \land\}$\footnote{
+    $\{\neg, \lor, \land\}$ bilden ein vollständiges Operatorensystem, d.h., jede boolesche Funktion lässt sich durch einen aussagenlogischen Ausdruck  beschreiben, in dem ausschließlich Operatoren aus dieser Menge vorkommen (vgl.~\cite[89]{Hof22}). Da MCP-Zellen die Operatoren $\neg, \lor, \land$ darstellen können, ist ein MCP-Netz nach Definition in der Lage, jede boolesche Funktion zu modellieren - hierzu reicht allerdings bereits $\{\neg, \land\}$ aus, wie \textit{Sheffer} in~\cite{She13} zeigt.
+} bildet die Operatorenmenge für \textbf{NAND}, was als MCP-Netz wie folgt modelliert werden kann (siehe Tabelle~\ref{tab:nand} sowie Abbildung~\ref{fig:mcpnand}):
 
 \begin{table} %[hbtp]
     \centering
@@ -340,7 +341,7 @@ Eine weitere boolesche-Funktion, die aus mehreren MCP-Zellen als Netz modelliert
 Für die Konstruktion des Netzes rufen wir uns Abbildung~\ref{fig:mcpor} ins Gedächtnis. $\Theta = 2$ wird übertroffen, wenn entweder $x_1$ oder $x_2$ ein erregendes Signal weiterleitet. Allerdings wird $\Theta$ auch übertroffen, wenn jeweils $x_1$ \textit{und} $x_2$ gleichzeitig aktiv sind, denn dann ist $f_{xor}(g(X)) = 4$.
 Also muss eine Hemmung zwischengeschaltet werden (s. Abbildung~\ref{fig:mcpxorf}): Ein aktives $x_1$ hemmt $N_2$. $N_2$ leitet in dem Fall $0$ an $Y$ weiter. Die Zellen $x_2$ und $N_1$ werden analog verbunden.
 
-Die \textbf{disjunktive Normalform} (Gleichung~\ref{eq:gl-xordis}) und die \textbf{konjunktive Normalform} (Gleichung~\ref{eq:gl-xorcon}) von \textbf{XOR} liefern die Formel für das Netz, wobei insbesondere die disjunktive Normalform die abgebildete Verschaltung in Abbildung~\ref{fig:mcpxorf} erklärt.\\
+Die \textbf{disjunktive Normalform} (Gleichung~\ref{eq:gl-xordis}) und die \textbf{konjunktive Normalform} (Gleichung~\ref{eq:gl-xorcon}) von \textbf{XOR} liefern die Formel für das Netz, wobei insbesondere die disjunktive Normalform in Abbildung~\ref{fig:mcpxorf} erkennbar ist.\\
 
 \begin{equation}
 A \oplus B \equiv (\neg A \land B) \lor (A \land \neg B)
