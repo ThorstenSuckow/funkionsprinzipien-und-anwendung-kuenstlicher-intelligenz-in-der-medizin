@@ -33,7 +33,7 @@ Rosenblatt definiert das Perzeptron wie folgt\footnote{
     sequence of past activity states of the network.
 }
 
-Die erwähnten \textbf{A}-Units werden definiert mit:
+Die darin erwähnten \textbf{A}-Units werden definiert mit:
 
 \blockquote[{\cite[81  ``DEFINITION 9``; Hervorhebung i.O.]{Ros62}}]{
     A \underline{simple A-unit} is a logical decision element, which
@@ -49,8 +49,8 @@ Die erwähnten \textbf{A}-Units werden definiert mit:
 }. Darüber hinaus weist er auch auf Einflüsse von Hebb und von Neumann hin (siehe ~\cite[5]{Ros62}).\\
 
 
-\textit{Rojas} schreibt, dass das klassische Rosenblatt-Perzeptron in einem Netz von Eingabe- und Ausgabe-Knoten gewichtete Verbindungen nutzt - die Knoten selber sind Schwellenwertelemente, Verbindungen werden stochastisch ermittelt (siehe~\cite[51]{Roj93}).
-Er weist ebenda außerdem darauf hin, dass das Modell nach Rosenblatts Veröffentlichung analysiert und verfeinert wurde, u. a. von \textit{Minsky und Papert} in~\cite{MP88}, die wie folgt definieren\footnote{wir werden später sehen, dass die Eigenschaft ``linear`` in ihrer Definition von besonderer Bedeutung sein wird.}:
+\textit{Rojas} schreibt, dass das klassische Rosenblatt-Perzeptron in einem Netz von Eingabe- und Ausgabenknoten gewichtete Verbindungen nutzt - die Knoten selber sind Schwellenwertelemente, Verbindungen werden stochastisch ermittelt (siehe~\cite[51]{Roj93}).
+Er weist ebenda außerdem darauf hin, dass das Modell nach Rosenblatts Veröffentlichung analysiert und verfeinert wurde, u. a. von \textit{Minsky und Papert} in~\cite{MP88}, die wie folgt definieren\footnote{wir werden später sehen, dass die Eigenschaft ``linear`` in dieser Definition von besonderer Bedeutung sein wird.}:
 
 \blockquote[{~\cite[12; Hervorhebung i.O.]{MP88}}]{
     A \underline{perceptron} is a device capable of computing all predicates which are linear in some given set $\Phi$ of partial predicates.
@@ -90,7 +90,7 @@ g \coloneqq g(X) = \sum^n_{i=1} P_i(X) w_i
 
 \subsection{Lineare Trennbarkeit}
 Mit Gleichung~\ref{eq:gl-rpact} folgt für eine Eingabe, dass sie entweder eine $0$ oder $1$ als Ausgabe erzeugt.
-Wir haben es hier also wieder mit einem binären Wertebereich zu tun, den wir auch als zwei unterschiedliche Klassen verstehen können: Eingabedaten können somit einer der beiden Klassen zugeordnet werden (vgl.~\cite[812]{RN09}).
+Wir haben es hier mit einem binären Wertebereich zu tun, der als zwei unterschiedliche Klassen aufgefasst werden kann: Eingabedaten können entsprechend ihrer Ausgabe einer der beiden Klassen zugeordnet werden (vgl.~\cite[812]{RN09}).
 Im Folgenden wollen wir die Zusammenhänge geometrisch darstellen.
 Der Einfachheit halber beschränken wir uns hierzu auf den zweidimensionalen Raum $\mathbb{R}^2$ und betrachten dort die \textit{1. Winkelhalbierende} im I. und III. Quadranten des kartesischen Koordinatensystems.
 Die zugehörige \textit{Gerade} $L$ ist
@@ -110,7 +110,7 @@ L = \{(x_1, x_2) \in \mathbb{R}^2: x_1 = x_2\}
     \label{fig:winkelhalbierende}
 \end{figure}
 
-Für beliebige Punkte $(x_1, x_2) \in \mathbb{R}^2$ gilt offensichtlich
+Für beliebige Punkte $(x_1, x_2) \in \mathbb{R}^2$ gilt damit offensichtlich
 
 \begin{equation}
 x_1 - x_2 \begin{cases}
@@ -120,10 +120,10 @@ x_1 - x_2 \begin{cases}
 \end{cases}
 \end{equation}
 
-Die \textit{Gerade} $L$ repräsentiert eine \textit{Hyperebene} in $\mathbb{R}^2$\footnote{
+Die \textit{Gerade} $L$ repräsentiert eine \textit{Hyperebene}\footnote{
     siehe~\cite[81, Definition 2.3]{BHW+12}
-}.
-Punkte, die nicht zu dieser Hyperebene gehören, liegen in dem Fall $\mathbb{R}_+^2$ in zwei unterschiedlichen \textit{Halbräumen}\footnote{
+} im $\mathbb{R}^2$.
+Punkte, die nicht zu dieser Hyperebene gehören, liegen in zwei unterschiedlichen \textit{Halbräumen}\footnote{
     Renze, John; Uznanski, Dan; and Weisstein, Eric W. ``Half-Plane.`` From MathWorld--A Wolfram Web Resource. \url{https://mathworld.wolfram.com/Half-Plane.html} (abgerufen 21.08.2023)
 } (siehe geometrische Darstellung in Abbildung~\ref{fig:halbraeume}).
 
@@ -155,7 +155,8 @@ Wir können feststellen, dass
 
 
 
-Formal ausgedrückt bedeutet das, dass $M_+$ und $M_-$ \textit{linear separierbar} sind. Nach \textit{Rojas} lautet die Definition für \textit{Lineare Trennbarkeit}:
+$M_+$ und $M_-$ sind damit \textit{linear separierbar}.
+Nach \textit{Rojas} lautet die Definition für \textbf{Lineare Trennbarkeit}:
 
 \begin{definition}\footnote{
     \cite[60, ``Definition 3.2``; Hervorhebung i.O., Nummerierung eigene]{Roj93}
@@ -191,24 +192,23 @@ Dass diese Mengen nach Definition~\ref{def-halbraum} linear separierbar sind\foo
 
 
 \noindent
-Die von \textit{Ertel} formulierte Definition für ein Perzeptron wollen wir für die weiteren Betrachtungen übernehmen\footnote{
-    ~\cite[212, ``Definition 8.3``; Hervorhebung i.O.]{Ert21a}
-}:
+Insgesamt kann ein Perzeptron als Funktion verstanden werden, was sich auch in der Definition nach \textit{Ertel} widerspiegelt:
 
-\begin{definition}
-\noindent
-Sei $w = (w_1, ..., w_n) \in  \mathbb{R}^n$ ein Gewichtsvektor und $x \in  \mathbb{R}^n$ ein Eingabevektor. Ein \textbf{Perzeptron} stellt eine Funktion $P:  \mathbb{R}^n \to \{0, 1\}$ mit
+\blockquote[{\cite[212, ``Definition 8.3``; Hervorhebung i.O.]{Ert21a}}]{
+    \noindent
+    Sei $w = (w_1, ..., w_n) \in  \mathbb{R}^n$ ein Gewichtsvektor und $x \in  \mathbb{R}^n$ ein Eingabevektor. Ein \textbf{Perzeptron} stellt eine Funktion $P:  \mathbb{R}^n \to \{0, 1\}$ mit
 
-\begin{equation}
-P(x) = \begin{cases}
-            1 \text{ falls } wx = \sum^n_{i=1} w_ix_i >0 \\
-            0 \text{ sonst }
-\end{cases}
-\end{equation}
-\noindent
-dar.
+    \begin{equation}
+        \nonumber
+        P(x) = \begin{cases}
+                   1 \text{ falls } wx = \sum^n_{i=1} w_ix_i >0 \\
+                   0 \text{ sonst }
+        \end{cases}
+    \end{equation}
+    \noindent
+    dar.
+}
 
-\end{definition}
 
 \subsection{Die Lernregel}\label{sec:lernregel}
 
@@ -229,7 +229,7 @@ Jeder Eintrag dieser Trainingsdaten ist einer erwarteten Ausgabe zugeordnet. Der
 \begin{enumerate}
     \item Wähle einen Datensatz und berechne die Ausgabe
     \item Wenn die Ausgabe $1$ ist, obwohl sie $0$ sein sollte (Fehler\footnote{
-    Der \textbf{Fehler} ist hierbei die Differenz von $\text{erwarteter Ausgabe}$ und $\text{tatsächlicher Ausgabe}$.
+    Der \textbf{Fehler} ist die Differenz von $\text{erwarteter Ausgabe}$ und $\text{tatsächlicher Ausgabe}$.
     } $=-1$), verringere die Gewichte
     \item Wenn die Ausgabe $0$ ist, obwohl sie $1$ sein sollte  (Fehler $=1$), erhöhe die Gewichte
     \item Wenn die Ausgabe korrekt ist, passe die Gewichte nicht an
@@ -266,7 +266,7 @@ Das Bias-Gewicht\footnote{
     vgl.~\cite[839]{RN09}
 } ist ein Wert, der zu der Gleichung aus Definition~\ref{eq:gl-rpact} hinzuaddiert wird. In der geometrischen Darstellung sorgt dieser Wert für eine Verschiebung der Ursprungsgeraden entlang der $x_2$-Achse\footnote{
     im $ \mathbb{R}^n$ durch eine Hyperebene im Ursprung~\cite[215]{Ert21a}
-} sorgt.
+}.
 
 Den Eingabedaten wird ein fester Eingabewert $x_{n+1} = 1$ hinzufügt: Der Eingabevektor $x \in  \mathbb{R}^n$ wird \textit{erweitert}: $(x_1, ..., x_n, 1)$ (vgl.~\cite[58]{Roj93}).
 
@@ -323,7 +323,7 @@ Mit $0$ als Schwellenwert wird dadurch eine Verschiebung der Trenngeraden entlan
 \subsection{Die XOR-Funktion}
 
 Wenn ein Perzeptron nicht konvergiert, kann es ausreichen, die Anzahl der Epochen zu erhöhen, damit ein passender Gewichtsvektor gefunden wird\footnote{
-    \textit{Arbib et al} berufen sich auf das Konvergenz-Theorem und führen an, dass ``[das Rosenblatt Perzeptron] does not yield an endless seesaw, but will eventually converge to a correct set of weights if one exists, albeit perhaps after many iterations through the set of trial patterns.``~\cite[20]{Arb03}: \textit{Minsky und Papert} formulieren lose: ``if the sets are separable [...], then the program will separate them``~\cite[165]{MP88} und stellen im Hinblick auf Parameteranpassungen fest: ``Usually, when a failure occurred, neither prolonging the training experiments nor building larger machines helped.``~\cite[xi]{MP88}
+    \textit{Arbib et al.} berufen sich auf das Konvergenz-Theorem und führen an, dass ``[das Rosenblatt Perzeptron] does not yield an endless seesaw, but will eventually converge to a correct set of weights if one exists, albeit perhaps after many iterations through the set of trial patterns.``~\cite[20]{Arb03}: \textit{Minsky und Papert} formulieren lose: ``if the sets are separable [...], then the program will separate them``~\cite[165]{MP88} und stellen im Hinblick auf Parameteranpassungen fest: ``Usually, when a failure occurred, neither prolonging the training experiments nor building larger machines helped.``~\cite[xi]{MP88}
 }.
 
 \begin{figure}[h]
