@@ -158,31 +158,32 @@ Wir können feststellen, dass
 $M_+$ und $M_-$ sind damit \textit{linear separierbar}.
 Nach \textit{Rojas} lautet die Definition für \textbf{Lineare Trennbarkeit}:
 
-\begin{definition}\footnote{
-    \cite[60, ``Definition 3.2``; Hervorhebung i.O., Nummerierung eigene]{Roj93}
+\blockquote[{\cite[60, ``Definition 3.2``; Hervorhebung i.O.; Nummerierung eigene]{Roj93}}]{
+    \noindent
+    Zwei Mengen \textit{A} und \textit{B} von Punkten in einem \textit{n}-dimensionalen Raum sind \textit{linear trennbar}, falls \textit{n}+1 reelle Zahlen $w_1, ... , w_{n+1}$ existieren, so dass für jeden Punkt $x_1, ... , x_n \in A$ gilt
+
+    \begin{equation}
+        \sum^n_{i=1} w_ix_i \geq w_{n+1}
+        \label{eq:gl-defhalbraum-gl1}
+    \end{equation}
+
+    und für jeden Punkt $x_1, ... , x_n \in B$
+
+    \begin{equation}
+        \sum^n_{i=1} w_ix_i < w_{n+1}
+        \label{eq:gl-defhalbraum-gl2}
+    \end{equation}
+    \noindent
+    dar.
 }
 
-Zwei Mengen \textit{A} und \textit{B} von Punkten in einem \textit{n}-dimensionalen Raum sind \textit{linear trennbar}, falls \textit{n}+1 reelle Zahlen $w_1, ... , w_{n+1}$ existieren, so dass für jeden Punkt $x_1, ... , x_n \in A$ gilt
 
-\begin{equation}
-\sum^n_{i=1} w_ix_i \geq w_{n+1}
-\label{eq:gl-defhalbraum-gl1}
-\end{equation}
-
-und für jeden Punkt $x_1, ... , x_n \in B$
-
-\begin{equation}
-    \sum^n_{i=1} w_ix_i < w_{n+1}
-\label{eq:gl-defhalbraum-gl2}
-\end{equation}
-\label{def-halbraum}
-\end{definition}
 
 
 \noindent
 Als Beispiel sei $M_- = \{(x_1, x_2) \in  \mathbb{R}_{0+}^2: x_1 \geq x_2\}$ und $M_+=\{(x_1, x_2) \in  \mathbb{R}_{0+}^2: x_1 < x_2\}$.
 Weiter sei $w_1 = -1, w_2 = 1, w_3 = 0$.
-Dass diese Mengen nach Definition~\ref{def-halbraum} linear separierbar sind\footnote{entspricht zwei Punktmengen, die durch die 1. Winkelhalbierende im I. Quadranten des kartesischen Koordinatensystems separierbar sind}, lässt sich leicht nachweisen:
+Die lineare Trennbarkeit der beiden Mengen lässt sich leicht nachweisen\footnote{entspricht zwei Punktmengen, die durch die 1. Winkelhalbierende im I. Quadranten des kartesischen Koordinatensystems separierbar sind}:
 
 \begin{enumerate}
     \item Fall $x_1 = x_2$: Es gilt $w_1x_1 + w_2x_2 = w_1x_1 + w_2x_1 = -x_1 + x_1 = w_3 = 0$. Mit $0 \geq 0$ ist somit Gleichung~\ref{eq:gl-defhalbraum-gl1} erfüllt.
