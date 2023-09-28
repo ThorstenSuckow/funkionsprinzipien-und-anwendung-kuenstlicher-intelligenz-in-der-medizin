@@ -4,7 +4,7 @@
 
 In Kapitel~\ref{ch:neuron} haben wir gesehen, dass ein biologisches neuronales Netz ein Kommunikationsverbund ist, in dem hochkomplexe biochemische Prozesse ineinandergreifen.
 Diese Prozesse ermöglichen eine Informationsverarbeitung: Eine einzelne Nervenzelle ist in der Lage, Signale zu empfangen, zu verrechnen und ein Signal auszugeben.
-Löst ein Aktionspotenzial aus, diffundieren Neurotransmitter in den synaptischen Spalt, die Folgezelle verrechnet die daraus entstehenden elektrischen Signale und so setzt sich die Kette fort, bis tausende von Neuronen ein Signal an das Ende der Kommunikationskette weitergeleitet haben.
+Löst ein Aktionspotenzial aus, diffundieren Neurotransmitter in den synaptischen Spalt, die Folgezelle verrechnet die daraus entstehenden elektrischen Signale und so setzt sich die Kette fort, oft bis tausende von Neuronen ein Signal an das Ende der Kommunikationskette weitergeleitet haben.
 Ob ein einzelnes Vesikel ein \textbf{mEPSC} verursacht, mag dabei auf analytischer Ebene interessant sein.
 Die Frage, welches der oft über tausend Vesikel, die in einem Neuronenverband an einer Signalweiterleitung beteiligt sind, ursächlich für eine muskuläre Reaktion ist, ist sicherlich schwieriger zu beantworten.
 
@@ -13,7 +13,7 @@ Tiefe künstliche neuronale Netz mit ihren Millionen von Parametern (vgl.~\cite{
 Die Modellierung solcher Netze folgt dabei in Teilen dem biologischen Vorbild, und es mag zunächst überraschen, dass einige solcher Verschaltungsmuster - wie die \textbf{Divergenz} oder die \textbf{rekurrente} oder \textbf{laterale Hemmung} - zunächst an Logikgatter erinnern (vgl.~\cite[58 f.]{Eil19}). Es liegt nahe, dass die Wissenschaft versucht ist, solche naturgegebenen verrechnenden Einheiten und logischen Verschaltungen zu verstehen und in mathematische Formeln zu gießen, um ein Modell zu erstellen, das menschliche Intelligenz erklärt und nachstellt, und dann als Abstraktionen auf Maschinen übertragen wird: ``if you really understand something, you can usually make a machine do it``~\cite[xiii]{AR88}.\\
 
 Einer dieser Versuche wurde in Abschnitt~\ref{sec:mcpneuron} mit dem MCP-Modell vorgestellt, ein \textbf{empirisches Modell}\footnote{
-    auch ``caricature model``; beides ~\cite[4]{HI97}
+    auch ``caricature model``; beides in~\cite[4]{HI97}
 }, das auf Analyse und einfacher Schwellenwertlogik basiert (vgl.~\cite[16]{AR88}).
 
 In dem dort zitierten Papier weisen McCulloch und Pitts darauf hin, dass das Alles-Oder-Nichts-Prinzip ({vgl.} Abschnitt~\ref{sec:synaptischeuebertragung}) als Vorbild für ihre Abstraktion durch Aussagenlogik dient.
@@ -24,7 +24,7 @@ Das von ihnen erstellte Modell ist dabei eine starke Vereinfachung des biologisc
 }.
 
 Dabei wurde ein anderer neurobiologischer Prozess, der heutzutage bei maschinellen Lernverfahren Standard ist, nicht von ihnen berücksichtigt: Die dynamische Anpassung des Netzes \footnote{
-    ``Lernen`` geschieht auf physiologischer Ebene durch die Modulierung von Synapsen~\cite[115]{HS19c}; McCulloch und Pitts setzen in ihrem Kalkül voraus, dass sich das Netz nicht verändert (siehe Abschnitt~\ref{sec:mcpkalkül}).
+    ``Lernen`` geschieht auf physiologischer Ebene durch die Modulierung von Synapsen (vgl.~\cite[115]{HS19c}); McCulloch und Pitts setzen in ihrem Kalkül voraus, dass sich das Netz nicht verändert (siehe Abschnitt~\ref{sec:mcpkalkül}).
 }.
 
 McCulloch und Pitts sind sich all dessen durchaus bewusst\footnote{
@@ -38,19 +38,19 @@ Die McCulloch-Pitts-Zelle ist von eher geringer Bedeutung für die Neurowissensc
 }.
 Umso größer war ihr Einfluss auf die Computerwissenschaften\footnote{
     Die Arbeit war ebenso wichtig für die Entwicklung des ``Konnektionismus``(vgl.~\cite[11]{Arb19}), einer Forschungsrichtung der künstlichen Intelligenz, in der Modelle (neuronale Netze) untersucht werden, mit deren Hilfe sich intelligente und kognitive Handlungen auf Maschinen übertragen lassen (vgl.~\cite[v]{Dor91})
-}: Logische Schaltungen, die Intelligenz und Kognition erklären sollen, brachten den Gedanken an eine ``intelligente Maschine`` hervor (vgl.~\cite[204]{Pic04}): So war diese Formalisierung ein wichtiges Schlüsselelement für die von-Neumann-Rechnerarchitektur\footnote{siehe \cite{Neu93}} sowie Wieners Kybernetik\footnote{siehe Anhang~\ref{appendix:wiener}}, und zusammen mit den nachfolgenden Arbeiten von \textit{Hebb}\footnote{siehe ~\cite{Heb49}} und \textit{Rosenblatt} ebnete es den Weg für die Forschung an künstlicher Intelligenz (vgl.~\cite[1]{Arb19}).
+}: Logische Schaltungen, die Intelligenz und Kognition erklären sollen, brachten den Gedanken an eine ``intelligente Maschine`` hervor (vgl.~\cite[204]{Pic04}). So war diese Formalisierung ein wichtiges Schlüsselelement für die von-Neumann-Rechnerarchitektur\footnote{siehe \cite{Neu93}} sowie Wieners Kybernetik\footnote{siehe Anhang~\ref{appendix:wiener}}, und zusammen mit den nachfolgenden Arbeiten von \textit{Hebb}\footnote{siehe ~\cite{Heb49}} und \textit{Rosenblatt} ebnete es den Weg für die Forschung an künstlicher Intelligenz (vgl.~\cite[1]{Arb19}).
 
 
 Erwähnenswert ist auch die Bemerkung von McCulloch und Pitts bzgl. ``Berechenbarkeit``:
 
-\blockquote[{~\cite[113]{MP43}}]{
+\blockquote[{\cite[113]{MP43}}]{
     This is of interest as affording a psychological justification of the Turing definition of computability and its equivalents, Church’s A-definability and Kleene’s primitive recursiveness: if any number can be computed by an organism, it is computable by these definitions, and conversely.
 }
 
 
 Sie nehmen hiermit Bezug auf die von \textit{Alan Turing} (1912 - 1954) bereits 1936 veröffentlichte Arbeit~\cite{Tur37}, in der Turing die Beschreibung der Operationen seines Computers einleitet mit:
 
-\blockquote[{~\cite[250]{Tur37}}]{
+\blockquote[{\cite[250]{Tur37}}]{
     Let us imagine the operations performed by the computer to be split up into 'simple operations' which are so elementary that it is not easy to imagine them further divided.
 }
 
@@ -94,14 +94,14 @@ Allerdings verstärken ihre Ausführungen die zu diesem Zeitpunkt ohnehin schon 
     Auch eine generelle Irritation und Enttäuschung über das Perzeptron-Modell in Hinblick auf mehrschichtige Modelle meinen \textit{Anderson und Rosenfeld} in ``we [Minsky und Papert] consider it to be an important research problem to elucidate (or reject) our intuitive judgement that the extension is sterile.``~\cite[232]{MP88} zu erkennen (vgl.~\cite[159]{AR88}).
 }
 
-\blockquote[{~\cite[19]{MP88}}]{
-    hundreds of projects and experiments [bzgl. des Perzeptrons] were generally disappointing, and the explanations inconclusive. The machines usually work quite well on very simple problems but detoriate very rapidly as the tasks assigned to the get harder.
+\blockquote[{\cite[19]{MP88}}]{
+    hundreds of projects and experiments [bzgl. des Perzeptrons] were generally disappointing, and the explanations inconclusive. The machines usually work quite well on very simple problems but detoriate very rapidly as the tasks assigned to them get harder.
 }
 
 \noindent
 Diesen ``Pessimismus`` betrachten \textit{Minsky und Papert} im Jahr 1988 in Retrospektive (vgl.~\cite[xiii]{MP88}). Sie sind sich der Behauptung bewusst, ihr Buch hätte mit dem Aufzeigen der Grenzen des Rosenblatt-Modells den Forscherdrang an maschinellem Lernen gebremst:
 
-\blockquote[{~\cite[xii]{MP88}}]{
+\blockquote[{\cite[xii]{MP88}}]{
     One popular version is  that the publication of our book so discouraged research on learning in network machines that a promising line of research was interrupted.
 }
 
@@ -121,7 +121,7 @@ Der Lighthill Report\footnote{
 Diese Periode ist gemeinhin als ``KI-Winter`` (siehe Anhang~\ref{appendix:kiwinter}) bekannt.\\
 
 Die in Kapitel~\ref{ch:knn} vorgestellten Architekturen und Algorithmen sorgten dann zusammen mit dem technologischen Fortschritt für ein erneutes Aufleben der Forschung an neuronalen Netzen und Künstlicher Intelligenz in den 1980er Jahren.
-Einige der Ergebnisse dieser Anstrengung wurden in Kapitel~\ref{ch:gesundheitswesen} in Auszügen vorgestellt.
+Einige der Ergebnisse dieser Anstrengungen wurden in Kapitel~\ref{ch:gesundheitswesen} in Auszügen vorgestellt.
 Dass dabei die Algorithmen nicht immer der Funktionsweise des natürlichen Vorbildes entsprechen, haben wir bei dem Backpropagation-Verfahren gesehen (siehe Abschnitt~\ref{sec:backpropagation}).
 
 Bei allem Fortschritt, der durch Forschung und Wissenschaft in den vergangenen Jahren erreicht wurde, ist bei den hier vorgestellten Ergebnissen aber vor allem eins deutlich: Die hohe Leistungsfähigkeit einiger dieser Netze kann nur durch Lernen erreicht werden (vgl.~\cite[40]{AHR19}), wozu umfangreiche, qualitativ hochwertige Daten benötigt werden.

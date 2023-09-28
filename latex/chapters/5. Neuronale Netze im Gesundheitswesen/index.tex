@@ -2,7 +2,7 @@
 
 
 
-\textit{Pfannstiel} stellt in~\cite[35, Abb. 1.14]{Pfa22} die Rolle der Künstlichen Intelligenz im Gesundheitswesen als Schichtenmodell dar: Als Kern wird die Künstliche Intelligenz umgeben von vier Schichten, von denen jede eine Menge repräsentativer Leistungen enthält.
+\textit{Pfannstiel} stellt in~\cite[35, Abb. 1.14]{Pfa22} die Rolle der Künstlichen Intelligenz im Gesundheitswesen als Schichtenmodell dar: Künstliche Intelligenz wird umgeben von vier Schichten, von denen jede eine Menge repräsentativer Leistungen enthält.
 Diese lassen sich grob einteilen in\footnote{
     Reihenfolge analog zu dem Modell in~\cite{Pfa22}, von Innen nach Aussen
 }
@@ -27,18 +27,18 @@ In jeder dieser Schicht übernimmt die KI wichtige Rollen, z.B. in der Diagnosti
 Um für die in Deutschland knapp 73 Millionen gesetzlich Krankenversicherten\footnote{
     \url{https://www.gkv-spitzenverband.de/krankenversicherung/kv_grundprinzipien/alle_gesetzlichen_krankenkassen/alle_gesetzlichen_krankenkassen.jsp}, abgerufen 12.09.2023
 } Leistungen im Gesundheitswesen abzurechnen, werden durch die Leistungserbringer Finanzdienstleister beauftragt. So leiten bspw. Apotheken eingelöste Kassenrezepte an Apothekenrechenzentren weiter, die die Abrechnungen mit den Krankenkassen durchführen. Obwohl Rezepte heutzutage überwiegend maschinell erstellt werden, kommt es bei den Rechenzentren nach der Digitalisierung der Rezepte (bspw. durch Scannen) häufig zu manueller Nachkorrektur, wenn abrechnungsrelevante Daten nicht vollständig erfasst werden können, wie \textit{Höfer et al.} in~\cite[698]{HWN22} feststellen. Um den zusätzlichen Arbeitsaufwand durch Nachkorrekturen zu reduzieren (aufgrund von Störfaktoren wie ausgedünnte Zeichen oder Textüberlagerungen), zeigen \textit{Höfer et al.} ebenda ein neuronales Netz, das in Auftrag eines führenden Abrechnungs- und Finanzdienstleisters erstellt wurde. Ziel des Netzes ist die Rekonstruktion\footnote{
-    tatsächlich liegt die Vermutung nahe, das Netz sollte eingesetzt werden, um den Hochleistungsscanner zu ersetzen. Ziel war es aber, in einem Vorverarbeitungsschritt die Bildqualität zu erhöhen~\cite[698]{HWN22}
+    tatsächlich liegt die Vermutung nahe, das Netz sollte eingesetzt werden, um den Hochleistungsscanner zu ersetzen. Ziel war es aber, in einem Vorverarbeitungsschritt die Bildqualität zu erhöhen (vgl.~\cite[698]{HWN22})
 } von Rezepten, die bei Plausibilitätskontrollen auffällig sind.
 
 Ihr neuronales Netz zur Rekonstruktion von Rezepten ist ein CNN mit 7 Faltungsschichten, denen jeweils eine Poolingschicht folgt. Insgesamt werden 40.000 Datensätze für das Training genutzt, sowie 10.000 Validierungsdatensätze. Die Rezepte werden auf den für die Abrechnung relevanten Teil zugeschnitten, sodass die Eingabedaten aus $720 \times 460$ Pixeln bestehen. Sie zeigen, dass Ihr Netz bei der Rekonstruktion von Korrekturzeichen eine relative Verbesserung von 27,85\% erreicht\footnote{
-    5\% waren ursprünglich anvisiert~\cite[711]{HWN22}
+    5\% waren ursprünglich anvisiert (vgl.~\cite[711]{HWN22}).
 } und aufgrund dieses Erfolges in den  Workflow der zu dem Auftraggeber gehörenden Abrechnungszentren integriert wurde.
 
 
 \section{Pharmaforschung}
 Im Jahr 2016 gelingt es der von \textit{Google DeepMind} entwickelten Software \textit{AlphaGo}, den Südkoreaner Lee Sedol als einen der weltbesten \textit{Go}-Spieler in diesem Spiel zu schlagen\footnote{
     \url{https://www.spiegel.de/netzwelt/gadgets/go-duell-software-alphago-siegt-gegen-lee-sedol-a-1081975.html}, abgerufen 08.09.2023
-}. \textit{Go} verfügt über $2,08 \times 10^{170}$ gültige Spielpositionen und gehört damit zu den komplexesten Brettspielen der Welt\footnote{
+}. \textit{Go} verfügt über $2,08 \times 10^{170}$ gültige Spielpositionen und gehört damit zu den komplexesten Brettspielen\footnote{
     \url{https://tromp.github.io/go/legal.html}, abgerufen 08.09.2023
 }. Kurz nach diesem beachtlichen Erfolg entscheidet \textit{Google DeepMind}, dass das in der Software verwendete 13-lagige CNN-Netz mit seiner $19 \times 19$ Eingabe- und Ausgabematrix sowie trainiert mit über 30 Millionen Spielzügen (vgl. ~\cite[371]{Ert21c}) reif sei für den Einsatz in der Wissenschaft. Im selben Jahr beginnt das Unternehmen mit der Forschung an \textit{AlphaFold}\footnote{
     \cite{JEP+21}, s. a. \url{https://www.deepmind.com/research/highlighted-research/alphafold/timeline-of-a-breakthrough}, abgerufen 08.09.2023
@@ -46,7 +46,7 @@ Im Jahr 2016 gelingt es der von \textit{Google DeepMind} entwickelten Software \
     postuliert 1972 von \textit{Anfinsen} in seiner Nobelpreislaudatio~\cite[223]{Anf73}
 }; mit $10^{300}$ verschiedenen Konstellationen\footnote{
     \url{https://web.archive.org/web/20110523080407/http://www-miller.ch.cam.ac.uk/levinthal/levinthal.html}, abgerufen 08.09.2023
-} ist die Struktur schwer zu berechnen. Der Pharmaindustrie erlaubt das Wissen über die Struktur von Proteinen die Herstellung von Medikamente, deren Wirkstoffe bspw. die Proteinfunktionen aktivieren oder hemmen\footnote{
+} ist die Struktur schwer zu berechnen. Der Pharmaindustrie erlaubt das Wissen über die Struktur von Proteinen die Herstellung von Medikamenten, deren Wirkstoffe bspw. Proteinfunktionen aktivieren oder hemmen\footnote{
     Bei dem strukturbasierten Wirkstoffdesign hilft die Kenntnis über die Struktur des Zielproteins bei der Entwicklung von Medikamenten, deren Moleküle zur Wirkstoffentfaltung an die Proteine andocken (vgl.~\cite[29 ff.]{SKM10}).
 }.
 
@@ -119,5 +119,5 @@ Behandlungsergebnis ermittelt wird\footnote{
 }.
 
 Als Beispiel führen \textit{Li et al.} die Flüssigkeitszufuhr zur Stabilisierung von Intensivpatienten an, die einen septischen Schock erlitten haben. Anwendungszeitpunkt-, -art und -menge bestimmen den Genesungsverlauf und können unerwünschte Nebenwirkungen verhindern, allerdings auch solche begünstigen, die bis hin zum Tode führen\footnote{vgl.~\cite[5 f.]{SST+20}}. Die in \textit{G-Net} verwendeten Netze sollen dabei helfen, in Verbindung von Parametern wie Laborwerte des Patienten sowie Zeitpunkt und Menge der Verabreichung eine Aussage über den Behandlungseffekt zu treffen\footnote{
-    unter \url{https://news.mit.edu/2022/deep-learning-technique-predicts-clinical-treatment-outcomes-0224} (abgerufen 10.09.2023) ist eine ausführlichere Pressemitteilung mit Verweis auf das zitierte Papier
+    unter \url{https://news.mit.edu/2022/deep-learning-technique-predicts-clinical-treatment-outcomes-0224} (abgerufen 10.09.2023) ist eine ausführlichere Pressemitteilung mit Verweis auf das zitierte Papier zu finden
 }, um so die bestmögliche Behandlungsmethode auszuwählen.

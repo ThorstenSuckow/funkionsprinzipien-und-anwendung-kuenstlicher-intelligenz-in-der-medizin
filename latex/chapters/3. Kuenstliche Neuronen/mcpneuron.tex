@@ -29,11 +29,11 @@ McCulloch und Pitts gehen für ihren Kalkül von folgenden physischen Eigenschaf
 
 
 \begin{enumerate}
-    \item Ein Neuron arbeitet auf Basis des Alles-oder-Nichts-Prinzip
-    \item Eine gewisse Anzahl von Synapsen muss innerhalb einer bestimmten Zeit angeregt werden, um ein Neuron zu erregen
-    \item Die einzige signifikante Verzögerung bei der Signalübertragung innerhalb des Nervensystems ist bedingt durch synaptische Verzögerungen
+    \item Ein Neuron arbeitet auf Basis des Alles-oder-Nichts-Prinzip.
+    \item Eine gewisse Anzahl von Synapsen muss innerhalb einer bestimmten Zeit angeregt werden, um ein Neuron zu erregen.
+    \item Die einzige signifikante Verzögerung bei der Signalübertragung innerhalb des Nervensystems ist bedingt durch synaptische Verzögerungen.
     \item Eine einzige hemmende Synapse verhindert die Erregung des betreffenden Neurons
-    \item Die Struktur des neuronalen Netzes ändert sich nicht
+    \item Die Struktur des neuronalen Netzes ändert sich nicht.
 \end{enumerate}
 
 
@@ -60,7 +60,7 @@ In Anlehnung an das Original legen wir folgende Anforderungen für die Anwendung
     }
     \item Hemmung ist ``absolut``: Liegt ein hemmendes Signal zusammen mit nicht-hemmenden Signalen an, feuert das Neuron nicht\footnote{
         Für eine weitere Ausführung absoluter und relativer Hemmung siehe~\cite[42 f.]{Roj93}.
-    }
+    }.
 \end{enumerate}
 
 
@@ -140,7 +140,7 @@ f:  \mathbb{Z} \to \{0, 1\}, f(g(X)) = f(u) = \begin{cases}
 Da die Erregung absolut ist, muss $\Theta$ die Ungleichung
 
 \begin{equation}
-\Theta > (\sum^{k^{w_+^2}}_{j=1} 2) + (\sum^{k^{w_+^1}}_{j=1} 1) - w_-
+\Theta > (\sum^{k^{w_+^2}}_{j=1} 2) + (\sum^{k^{w_+^1}}_{j=1} 1) + w_-
 \end{equation}\linebreak[2]
 
 
@@ -159,7 +159,7 @@ Ein zyklenfreies Netz aus MCP-Zellen können wir wie folgt definieren (vgl.~\cit
 
 
 \begin{definition} Ein MCP-Netz ist ein gerichteter Graph\footnote{
-    Gerichtete Kanten eine MCP-Netzes nehmen eigentlich keine Gewichtung der Information vor~\cite[40]{Roj93} (\textit{Rojas} verweist darauf, dass Gewichte in absolut hemmenden Leitungen unsinnig sind: Siehe~\cite[42]{Roj93}). Sowohl \textit{Minsky} in~\cite[34]{Min67} als auch \textit{Rojas} in~\cite[32]{Roj93} nutzen unter Berücksichtigung der \textit{absoluten Hemmung} nur die Summe der erregenden Signale und vergleichen diese mit $\Theta$ - dieser Vergleich findet nur statt, wenn \textit{kein} hemmendes Signal ankommt: Die Zelle liefert sonst direkt $0$ als Ausgabe zurück. \textit{Fausett} nutzt unter Berücksichtigung von Gleichung~\ref{eq:gl-activation} gewichtete Kanten, in ähnlicher Weise auch \textit{Beale und Jackson}~\cite[41]{BJ90}. \textit{Minsky} weist auf die Äquivalenz eines solchen Modells hin (vgl. ~\cite[34 f.]{Min67}), dessen wir uns im Folgenden auch bedienen werden.
+    Gerichtete Kanten eine MCP-Netzes nehmen eigentlich keine Gewichtung der Information vor~\cite[40]{Roj93} (\textit{Rojas} verweist darauf, dass Gewichte in absolut hemmenden Leitungen unsinnig sind: Siehe~\cite[42]{Roj93}). Sowohl \textit{Minsky} in~\cite[34]{Min67} als auch \textit{Rojas} in~\cite[32]{Roj93} nutzen unter Berücksichtigung der \textit{absoluten Hemmung} nur die Summe der erregenden Signale und vergleichen diese mit $\Theta$ - dieser Vergleich findet nur statt, wenn \textit{kein} hemmendes Signal ankommt: Die Zelle liefert sonst direkt $0$ als Ausgabe zurück. \textit{Fausett} nutzt unter Berücksichtigung von Gleichung~\ref{eq:gl-activation} gewichtete Kanten, in ähnlicher Weise auch \textit{Beale und Jackson} in~\cite[41]{BJ90}. \textit{Minsky} weist auf die Äquivalenz eines solchen Modells hin (vgl. ~\cite[34 f.]{Min67}), dessen wir uns im Folgenden auch bedienen werden.
 } $G = (V, E)$ mit der Knotenmenge
 
 \begin{equation}

@@ -14,7 +14,7 @@ Bereits 1954 wurden Versuche unternommen, lernfähige neuronale Netze zu modelli
 1958 schafft es ein Modell, für Aufsehen zu sorgen\footnote{
     nicht nur im Wissenschaftsbetrieb, auch in der Öffentlichkeit. In der Presse publikumswirksam, aber wenig vertrauenserweckend: ``Frankenstein Monster Designed by Navy Robot That Thinks``~\cite[v]{Ros62}. Vgl. dazu aktuelle Schlagzeilen der hiesigen Boulevardpresse zum Thema KI. bild.de titelt: ``Übernehmen Computer die Weltherrschaft{?}`` (\url{https://www.bild.de/news/ausland/news-ausland/experten-warnen-ki-so-gefaehrlich-wie-pandemien-und-atomkrieg-84130180.bild.html}, abgerufen 27.08.2023) als Reaktion auf ``Statement on AI Risk`` des \textit{Center for AI Safety}, in dem zahlreiche Wissenschaftler zur Vorsicht beim Umgang, Einsatz und Forschung von KI mahnen. Im Wortlaut: ``Mitigating the risk of extinction from AI should be a global priority alongside other societal-scale risks such as pandemics and nuclear war.`` (\url{https://www.safe.ai/statement-on-ai-risk}, abgerufen 27.08.2023)
 }: Das \textbf{Perceptron} (im folgenden Perzeptron) (vgl.~\cite[89]{AR88})\footnote{
-    s. auch ``Interest in connectionist networks revivied dramatically in 1962 with the publication of Frank Rosenblatt's book \textit{Principles of Neurodynamics}, [...]``~\cite[xi; Hervorhebung i.O.]{MP88}
+    s. auch ``Interest in connectionist networks revived dramatically in 1962 with the publication of Frank Rosenblatt's book \textit{Principles of Neurodynamics}, [...]``~\cite[xi; Hervorhebung i.O.]{MP88}
 }.
 1957 beschreibt es sein Schöpfer \textit{Frank Rosenblatt} (1928 - 1971) in~\cite{Ros57}\footnote{
     siehe Anhang~\ref{appendix:perzeptron}
@@ -49,10 +49,10 @@ Die darin erwähnten \textbf{A}-Units werden definiert mit:
 }. Darüber hinaus weist er auch auf Einflüsse von Hebb und von Neumann hin (siehe ~\cite[5]{Ros62}).\\
 
 
-\textit{Rojas} schreibt, dass das klassische Rosenblatt-Perzeptron in einem Netz von Eingabe- und Ausgabenknoten gewichtete Verbindungen nutzt - die Knoten selber sind Schwellenwertelemente, Verbindungen werden stochastisch ermittelt (siehe~\cite[51]{Roj93}).
+\textit{Rojas} schreibt, dass das klassische Rosenblatt-Perzeptron in einem Netz von Eingabe- und Ausgabeknoten gewichtete Verbindungen nutzt - die Knoten selber sind Schwellenwertelemente, Verbindungen werden stochastisch ermittelt (siehe~\cite[51]{Roj93}).
 Er weist ebenda darauf hin, dass das Modell nach Rosenblatts Veröffentlichung analysiert und verfeinert wurde, u. a. von \textit{Minsky und Papert} in~\cite{MP88}, die wie folgt definieren\footnote{wir werden später sehen, dass die Eigenschaft ``linear`` in dieser Definition von besonderer Bedeutung sein wird.}:
 
-\blockquote[{~\cite[12; Hervorhebung i.O.]{MP88}}]{
+\blockquote[{\cite[12; Hervorhebung i.O.]{MP88}}]{
     A \underline{perceptron} is a device capable of computing all predicates which are linear in some given set $\Phi$ of partial predicates.
 }
 
@@ -211,7 +211,7 @@ Insgesamt kann ein Perzeptron als Funktion verstanden werden, was sich auch in d
 
 \subsection{Die Lernregel}\label{sec:lernregel}
 
-Die Eigenschaft linearer Trennbarkeit von Daten ist eine wesentliche Voraussetzung dafür, dass ein Perzeptron \textbf{konvergiert}: Die \textbf{Lernregel} des Perzeptrons passt während der Laufzeit die Gewichte $w_1 ... w_n$ solange an, bis sie - eingesetzt in eine lineare Gleichung (vgl.~\cite[311]{Ert21b}) - die $n$-dimensionalen Daten entsprechend Definition~\ref{eq:gl-rpact} \textit{klassifizieren} kann.
+Die Eigenschaft linearer Trennbarkeit von Daten ist eine wesentliche Voraussetzung dafür, dass ein Perzeptron \textbf{konvergiert}: Die \textbf{Lernregel} des Perzeptrons passt während der Laufzeit die Gewichte $w_1 ... w_n$ solange an, bis sie - eingesetzt in eine lineare Gleichung (vgl.~\cite[311]{Ert21b}) - die $n$-dimensionalen Daten entsprechend Gleichung~\ref{eq:gl-rpact} \textit{klassifizieren} kann.
 Aus diesem Grund wird das Perzeptron auch \textbf{linearer Klassifizierer} genannt (vgl.~\cite[210-216]{Ert21a}).
 
 Das Perzeptron \textbf{lernt} diese Gewichte zunächst durch \textit{Trainingsdaten}\footnote{
@@ -226,12 +226,12 @@ Jeder Eintrag dieser Trainingsdaten ist einer erwarteten Ausgabe zugeordnet. Der
 
 
 \begin{enumerate}
-    \item Wähle einen Datensatz und berechne die Ausgabe
+    \item Wähle einen Datensatz und berechne die Ausgabe.
     \item Wenn die Ausgabe $1$ ist, obwohl sie $0$ sein sollte (Fehler\footnote{
     Der \textbf{Fehler} ist die Differenz von $\text{erwarteter Ausgabe}$ und $\text{tatsächlicher Ausgabe}$.
-    } $=-1$), verringere die Gewichte
-    \item Wenn die Ausgabe $0$ ist, obwohl sie $1$ sein sollte  (Fehler $=1$), erhöhe die Gewichte
-    \item Wenn die Ausgabe korrekt ist, passe die Gewichte nicht an
+    } $=-1$), verringere die Gewichte.
+    \item Wenn die Ausgabe $0$ ist, obwohl sie $1$ sein sollte  (Fehler $=1$), erhöhe die Gewichte.
+    \item Wenn die Ausgabe korrekt ist, passe die Gewichte nicht an.
 \end{enumerate}
 
 \noindent
@@ -263,14 +263,14 @@ Wir betrachten jetzt eine Möglichkeit, die $y$-Koordinate der Trenngerade anzup
 Dies erreicht man mit einer sogenannten \textbf{bias unit}.
 Das Bias-Gewicht\footnote{
     vgl.~\cite[839]{RN09}
-} ist ein Wert, der zu der Gleichung~\ref{eq:gl-rpact} hinzuaddiert wird. In der geometrischen Darstellung sorgt dieser Wert für eine Verschiebung der Ursprungsgeraden entlang der $x_2$-Achse\footnote{
+} ist ein Wert, der zu der Gleichung~\ref{eq:gl-rpinput} hinzuaddiert wird. In der geometrischen Darstellung sorgt dieser Wert für eine Verschiebung der Ursprungsgeraden entlang der $x_2$-Achse\footnote{
     im $ \mathbb{R}^n$ durch eine Hyperebene im Ursprung (vgl.~\cite[215]{Ert21a}).
 }.
 
 Den Eingabedaten wird ein fester Eingabewert $x_{n+1} = 1$ hinzufügt: Der Eingabevektor $x \in  \mathbb{R}^n$ wird \textit{erweitert}: $(x_1, ..., x_n, 1)$ (vgl.~\cite[58]{Roj93}).
 
 \noindent
-Der bias $b$ wird für unser Beispiel im $ \mathbb{R}^2$ mit Gleichung~\ref{eq:gl-rpact} in die Berechnung des Schwellenwerts miteinbezogen:
+Der bias $b$ wird für unser Beispiel im $ \mathbb{R}^2$ mit Gleichung~\ref{eq:gl-rpinput} in die Berechnung des Schwellenwerts miteinbezogen:
 
 \begin{equation}
 P(x) = \begin{cases}
@@ -313,7 +313,7 @@ $x_2$ ergibt sich somit als der horizontale Abstand vom Ursprung.\\
 
 \noindent
 Mit $b$ als Teil der Eingabe folgt auch dessen Gewichtung $bw_{n+1} = w_{n+1}$.
-Mit $0$ als Schwellenwert wird dadurch eine Verschiebung der Trenngeraden entlang der $x_2$-Achse im $ \mathbb{R}^2$ bzw. eine Verschiebung der Hyperebene im $ \mathbb{R}^n$ ermöglicht (vgl. ~\cite[215]{Ert21a})\footnote{
+Mit $0$ als Schwellenwert wird dadurch eine Verschiebung der Trenngerade entlang der $x_2$-Achse im $ \mathbb{R}^2$ bzw. eine Verschiebung der Hyperebene im $ \mathbb{R}^n$ ermöglicht (vgl. ~\cite[215]{Ert21a})\footnote{
     einen Überblick über die geometrischen Zusammenhänge liefert ``Einführung in die Neuroinformatik`` von Prof. Dr. G. Sommer \url{https://www.informatik.uni-kiel.de/inf/Sommer/doc/Downloads/Skripte/neuroskript.pdf}:33 ff. (abgerufen 27.08.2023)
 }.
 
@@ -322,7 +322,7 @@ Mit $0$ als Schwellenwert wird dadurch eine Verschiebung der Trenngeraden entlan
 \subsection{Die XOR-Funktion}
 
 Wenn ein Perzeptron nicht konvergiert, kann es ausreichen, die Anzahl der Epochen zu erhöhen, damit ein passender Gewichtsvektor gefunden wird\footnote{
-    \textit{Arbib et al.} berufen sich auf das Konvergenz-Theorem und führen an, dass ``[das Rosenblatt Perzeptron] does not yield an endless seesaw, but will eventually converge to a correct set of weights if one exists, albeit perhaps after many iterations through the set of trial patterns.``~\cite[20]{Arb03}: \textit{Minsky und Papert} formulieren lose: ``if the sets are separable [...], then the program will separate them``~\cite[165]{MP88} und stellen im Hinblick auf Parameteranpassungen fest: ``Usually, when a failure occurred, neither prolonging the training experiments nor building larger machines helped.``~\cite[xi]{MP88}
+    \textit{Arbib et al.} berufen sich auf das Konvergenz-Theorem: ``[das Rosenblatt Perzeptron] does not yield an endless seesaw, but will eventually converge to a correct set of weights if one exists, albeit perhaps after many iterations through the set of trial patterns.``~\cite[20]{Arb03}: \textit{Minsky und Papert} formulieren lose: ``if the sets are separable [...], then the program will separate them``~\cite[165]{MP88}. Sie stellen im Hinblick auf Parameteranpassungen fest: ``Usually, when a failure occurred, neither prolonging the training experiments nor building larger machines helped.``~\cite[xi]{MP88}
 }.
 
 \begin{figure}[h]
