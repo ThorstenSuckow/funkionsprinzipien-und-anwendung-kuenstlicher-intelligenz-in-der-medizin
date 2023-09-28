@@ -2,13 +2,13 @@
 \section*{Modellierung von MCP-Netzen unter Berücksichtigung von Zeiteinheiten}
 
 In Abschnitt~\ref{sec:mcpneuron} haben wir MCP-Netze betrachtet, bei denen Zeiteinheiten nicht berücksichtigt wurden.
-Basierend auf dem von McCulloch und Pitts in~\cite{MP43} postulierte Neuronen-Modell entwerfen wir im folgenden ein Netz, das die \textbf{paradoxe Hitzeempfindung} simuliert: Das Phänomen, das bei kurzzeitiger Kühlung der Haut Hitze empfunden wird (vgl.~\cite{HVKJ82}).\\
+Basierend auf dem von McCulloch und Pitts in~\cite{MP43} postulierten Neuronen-Modell entwerfen wir im folgenden ein Netz, das die \textbf{paradoxe Hitzeempfindung} simuliert: Das Phänomen, das bei kurzzeitiger Kühlung der Haut Hitze empfunden wird (vgl.~\cite{HVKJ82}):\\
 
 \blockquote[{\cite[106]{MP43}}]{
     If a cold object is held to the skin for a moment and removed, a sensation of heat will be felt; if it is applied for a longer time, the sensation will be only of cold, with no preliminary warmth, however transient.
 }\\
 
-Das nach~\cite[105, Figure 1 (e)]{MP43} aufgestellte Modell und die dazugehörige Formel übertragen wir in die von uns verwendete Notation (in Anlehnung an~\cite[31 f.]{Fau94}). In der Abbildung~\ref{fo+mcpheat} sind zwei Temperaturrezeptoren $H_i$ (Hitze) und $K_i$ (Kälte) dargestellt, außerdem hat das Netz zwei Ausgänge, $H_o$ und $K_o$. $H_o$ wird zum Zeitpunkt $t$ aktiviert, wenn Hitze empfunden wird, $K_o$ entsprechend bei Kälte.\\
+Das nach~\cite[105, Figure 1 (e)]{MP43} aufgestellte Modell und die dazugehörige Formel übertragen wir in die von uns verwendete Notation (in Anlehnung an~\cite[31 f.]{Fau94}). In der Abbildung~\ref{fig:mcpheat} sind zwei Temperaturrezeptoren $H_i$ (Hitze) und $K_i$ (Kälte) dargestellt, außerdem hat das Netz zwei Ausgänge, $H_o$ und $K_o$. $H_o$ wird zum Zeitpunkt $t$ aktiviert, wenn Hitze empfunden wird, $K_o$ entsprechend bei Kälte.\\
 
 Die Bedingungen für eine Aktivierung von $H_o$ lauten: Hitze wird signalisiert, wenn entweder der Wäremerezeptor durch Wärme stimuliert \textbf{oder} kurzzeitig ein Kälteimpuls von den Kälterezeptoren registriert wird.\\
 
