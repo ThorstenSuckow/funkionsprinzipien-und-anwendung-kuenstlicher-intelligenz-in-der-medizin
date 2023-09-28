@@ -9,7 +9,7 @@ Sie stellen darin ein auf \textbf{Aussagenlogik}\footnote{
     siehe Anhang~\ref{appendix:wiener}
 } und die Von-Neumann-Rechnerarchitektur\footnote{
     Die Architektur zeichnet sich durch eine Zentraleinheit, der Speichereinheit und Ein-/Ausgabeinheit aus, die über Busse verbunden sind (vgl.~\cite[230]{OV00})
-}. Insgesamt leisten sie damit einen wichtigen Beitrag für die Entwicklung \textit{Künstlicher Intelligenz}(vgl.~\cite[1]{Arb19}).
+}. Ihre Arbeit leistet insgesamt einen wichtigen Beitrag für die Entwicklung \textit{Künstlicher Intelligenz}(vgl.~\cite[1]{Arb19}).
 
 
 \subsection{Der Kalkül}\label{sec:mcpkalkül}
@@ -115,12 +115,10 @@ liefert die Summe der hemmenden und erregenden Eingabesignale zurück.
 
 
 \subsection*{Aktivierungsfunktion}
-Die Schwellenwertfunktion wird im Kontext von künstlichen neuronalen Netzen auch \textbf{Aktivierungsfunktion} genannt (vgl. ~\cite[847]{RN09}), da sie entscheidet, ob einzelne Neuronen aktiviert werden oder nicht. In diesem Fall realisieren wir sie als \textbf{Treppenfunktion}\footnote{
-    auch \textbf{Heaviside}-Funktion, die für beliebige negative Zahlen $0$ zurückliefert, ansonsten $1$.
-}, die $1$ zurückliefert, falls $g(X) >= \Theta$, und $0$ sonst :
+Die Schwellenwertfunktion wird im Kontext von künstlichen neuronalen Netzen auch \textbf{Aktivierungsfunktion} genannt (vgl. ~\cite[847]{RN09}), da sie entscheidet, ob einzelne Neuronen aktiviert werden oder nicht. In diesem Fall realisieren wir sie als \textbf{Treppenfunktion}, die $1$ zurückliefert, falls $g(X) >= \Theta$, und $0$ sonst :
 
 \begin{equation}
-f:  \mathbb{Z} \to \{0, 1\}, f(u) = f(g(X)) = \begin{cases}
+f:  \mathbb{Z} \to \{0, 1\}, f(g(X)) = f(u) = \begin{cases}
                                           1  &\text{falls } u >= \Theta \\
                                           0 &\text{falls } u < \Theta
 \end{cases}
@@ -133,7 +131,7 @@ f:  \mathbb{Z} \to \{0, 1\}, f(u) = f(g(X)) = \begin{cases}
         width=12cm,
         keepaspectratio,
     ]{chapters/3. Kuenstliche Neuronen/images/heaviside}
-    \caption{Plot der Heaviside-Funktion $H\left(x\right)=\left\{x<0\ :\ 0,\ x\ge0\ :\ 1\right\}$. (Quelle: Eigene Darstellung)}
+    \caption{Plot einer Treppenfunktion, hier als Heaviside-Funktion mit $H\left(x\right)=\left\{x<0\ :\ 0,\ x\ge0\ :\ 1\right\}$. (Quelle: Eigene Darstellung)}
     \label{fig:heaviside}
 \end{figure}
 
@@ -248,8 +246,8 @@ Die Gewichte für $x_1$ und $x_2$ sind jeweils $w^2_+$: Zusammen mit $\Theta = 2
  $A$ & $B$ & $A \lor B$ & $x_1w^2_+$ & $x_2w^2_+$ & $g_{or}(X)$ & $f_{or}(x)$ \\
 \hline
  1   & 1   & 1          & 2     & 2     & 4           & 1            \\
- 1   & 0   & 0          & 2     & 0     & 2           & 1            \\
- 0   & 1   & 0          & 0     & 2     & 2           & 1            \\
+ 1   & 0   & 1          & 2     & 0     & 2           & 1            \\
+ 0   & 1   & 1          & 0     & 2     & 2           & 1            \\
  0   & 0   & 0          & 0     & 0     & 0           & 0            \\
 \end{tabular}
 \caption{Werte der Aktivierungs- und Eingabefunktion für eine \textbf{OR-MCP-Zelle}}
@@ -341,7 +339,8 @@ Eine weitere boolesche-Funktion, die aus mehreren MCP-Zellen als Netz modelliert
 Für die Konstruktion des Netzes rufen wir uns Abbildung~\ref{fig:mcpor} ins Gedächtnis. $\Theta = 2$ wird übertroffen, wenn entweder $x_1$ oder $x_2$ ein erregendes Signal weiterleitet. Allerdings wird $\Theta$ auch übertroffen, wenn jeweils $x_1$ \textit{und} $x_2$ gleichzeitig aktiv sind, denn dann ist $f_{xor}(g(X)) = 4$.
 Also muss eine Hemmung zwischengeschaltet werden (s. Abbildung~\ref{fig:mcpxorf}): Ein aktives $x_1$ hemmt $N_2$. $N_2$ leitet in dem Fall $0$ an $Y$ weiter. Die Zellen $x_2$ und $N_1$ werden analog verbunden.
 
-Die \textbf{disjunktive Normalform} (Gleichung~\ref{eq:gl-xordis}) und die \textbf{konjunktive Normalform} (Gleichung~\ref{eq:gl-xorcon}) von \textbf{XOR} liefern die Formel für das Netz, wobei insbesondere die disjunktive Normalform in Abbildung~\ref{fig:mcpxorf} erkennbar ist.\\
+Die \textbf{disjunktive Normalform} (Gleichung~\ref{eq:gl-xordis}) und die \textbf{konjunktive Normalform} (Gleichung~\ref{eq:gl-xorcon}) von \textbf{XOR} liefern die Formel für das Netz.
+Insbesondere die disjunktive Normalform ist in Abbildung~\ref{fig:mcpxorf} erkennbar.\\
 
 \begin{equation}
 A \oplus B \equiv (\neg A \land B) \lor (A \land \neg B)
