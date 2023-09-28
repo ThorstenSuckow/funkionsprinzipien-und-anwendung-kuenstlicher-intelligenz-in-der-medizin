@@ -2,7 +2,8 @@
 
 
 
-\textit{Pfannstiel} stellt in~\cite[35, Abb. 1.14]{Pfa22} die Künstliche Intelligenz als Kern eines Schichtenmodells dar: Die vier umgebenden Schichten, von denen jede eine Menge repräsentativer Leistungen enthält, lassen sich grob einteilen in\footnote{
+\textit{Pfannstiel} stellt in~\cite[35, Abb. 1.14]{Pfa22} die Rolle der Künstlichen Intelligenz im Gesundheitswesen als Schichtenmodell dar: Als Kern wird die Künstliche Intelligenz umgeben von vier Schichten, von denen jede eine Menge repräsentativer Leistungen enthält.
+Diese lassen sich grob einteilen in\footnote{
     Reihenfolge analog zu dem Modell in~\cite{Pfa22}, von Innen nach Aussen
 }
 
@@ -17,7 +18,7 @@
 In jeder dieser Schicht übernimmt die KI wichtige Rollen, z.B. in der Diagnostik (1.), der Wirkstoffentwicklung (2.), der Abrechnung von Leistungen (3.) oder als Software in embedded Systems wie Wearables (4.). Zum Beispiel werden die in Abschnitt~\ref{cnn} vorgestellten CNNs aufgrund ihrer Erfolge bei der Objektklassifikation\footnote{
     vgl.~\cite[330]{Ert21b}. \textit{Goodfellow et al.} stellen etwas alle gemeiner fest, dass CNNs ``gewaltige Erfolge in der Praxis gebracht`` haben~\cite[369]{GBC18}. Als Beispiel sei PSPNet genannt, ein CNN zur semantischen Segmentierung von Bilddaten (``\textit{scene parsing}``), das \textit{Zhao et al.} in~\cite{ZSQ+17} vorstellen. Heutzutage betreiben Unternehmen wie Google, Facebook, Microsoft und IBM Forschung und Entwicklung im Bereich der Bildverarbeitung mit CNNs, und im Bereich Hardware entwickeln bspw. NVIDIA (\url{https://nvidianews.nvidia.com/news/nvidia-introduces-drive-agx-orin-advanced-software-defined-platform-for-autonomous-machines}, abgerufen 07.09.2023) und Samsung Chips zur Echtzeiterkennung der Umgebung~\cite[440]{LBH15}.
 } in der Diagnostik eingesetzt\footnote{
-    \textit{Brinker at al.} stellen bspw. 13 Arbeiten zur Klassifikation von Hautläsionen mit der Hilfe von CNNs vor~\cite{BHU+18}
+    bspw. stellen \textit{Brinker at al.} in~\cite{BHU+18} 13 Arbeiten zur Klassifikation von Hautläsionen mit Hilfe von CNNs vor.
 }: Je nach Verfahren zeigt sich, dass die Netze mindestens genauso gute Diagnosen erstellen wie erfahrene Ärzte, und bessere als wenig erfahrene Ärzte (vgl.~\cite[7]{SZJ+19}). Doch auch in anderen Bereichen des Gesundheitswesens finden neuronale Netze praktische Anwendungen. Im Folgenden werden einige vorgestellt.
 
 
@@ -60,19 +61,20 @@ Grossen Erfolg hat die Software 2020 bei dem CASP14-protein-folding-contest\foot
 \section{Diagnostik}\label{sec:diagnostik}
 \textit{Szolovits et al.} argumentieren 1988 in~\cite{Szo88}, dass die Abfrage von Symptomen zur Feststellung von Krankheiten\footnote{
     bei gleichzeitigem Ausschluss anderer Krankheiten
-} auch von Expertensystemen (s. Abschnitt~\ref{renaissance}) übernommen werden kann. Allerdings zeigt sich ebenfalls, dass Ärzte kritisch gegenüber computergestützten Assistenzsystemen stehen. \textit{Teach und Shortliffe} führen bereits 1981 aus, dass es medizinischem Fachpersonal wichtig ist, dass das System den Entscheidungsweg zur Diagnose erklären kann; dass der Computer stets die korrekten Diagnosen stellt, wird als weniger wichtig bewertet (vgl.~\cite[551, ``Table V``: ``D.1`` sowie ``D14``]{TS81}. In dieser Studie\footnote{
+} auch von Expertensystemen (s. Abschnitt~\ref{renaissance}) übernommen werden kann.
+Es zeigt sich dort ebenfalls, dass Ärzte kritisch gegenüber computergestützten Assistenzsystemen stehen. \textit{Teach und Shortliffe} stellen bereits 1981 fest, dass es medizinischem Fachpersonal wichtig ist, dass das System den Entscheidungsweg zur Diagnose erklären kann; dass der Computer stets die korrekten Diagnosen stellt, wird als weniger wichtig bewertet (vgl.~\cite[551, ``Table V``: ``D.1`` sowie ``D14``]{TS81}. In dieser Studie werden auch ethische Bedenken seitens der Mediziner aufgeführt\footnote{
     In dem Papier findet sich auch die Befürchtung unter den Teilnehmern an der Umfrage, dass computer-gestützte Systeme den Arzt ersetzen könnte (vgl.~\cite[543]{TS81}).
-} werden auch ethische Bedenken seitens der Mediziner aufgeführt. Dass computergestützte medizinische Assistenzsysteme dann kaum Anwendung im klinischen Umfeld fanden, führen \textit{Lucieri et al.} in~\cite{LBDA22} auch auf solche Bedenken zurück: Erst steigende Rechenleistung und die fortschreitende Leistungsfähigkeit tiefer neuronaler Netze weckte das Interesse an KI unter den Medizinern, dank der Erfolge bildbasierter CNNs auch in der Diagnostik (vgl.~\cite[728]{LBDA22}). Dem oben erwähnten Wunsch einer \textbf{erklärbaren KI} (\textbf{xAI} \footnote{
+}. Dass computergestützte medizinische Assistenzsysteme dann kaum Anwendung im klinischen Umfeld fanden, führen \textit{Lucieri et al.} in~\cite{LBDA22} auch auf solche Bedenken zurück: Erst steigende Rechenleistung und die fortschreitende Leistungsfähigkeit tiefer neuronaler Netze weckte das Interesse an KI unter den Medizinern, dank der Erfolge bildbasierter CNNs auch in der Diagnostik (vgl.~\cite[728]{LBDA22}). Dem oben erwähnten Wunsch einer \textbf{erklärbaren KI} (\textbf{xAI} \footnote{
     Abkürzung für (engl.) \textit{explainable AI}
 }) wird seitdem nachgegangen, was sich aufgrund des \textit{Blackbox-Charakters}\footnote{
     \textbf{AlexNet}: 60.000.000 Parameter~\cite[1]{KSH12}
 } insbesondere bei Architekturen mit Millionen von Parametern\footnote{
     \url{https://spectrum.ieee.org/ai-failures}, abgerufen 09.09.2023
-} in neuronalen Netzen aber als schwierig\footnote{
+} in neuronalen Netzen aber als schwierig erweist\footnote{
     Einige erfolgreiche Ansätze jüngster Zeit fassen \textit{Lucieri et al.} in~\cite[733 ff]{LBDA22} zusammen. \textit{Steinwender} geht in~\cite[765]{Ste22} auf die Zertifizierungspflicht von Medizinprodukten in der EU ein, und das mit der damit verbundenen Datenschutzgrundverordnung auch eine Interpretierbarkeit bzw. Erklärbarkeit für die KI-Systeme einhergeht
-} erweist
-.
-Trotz allem ist nicht von der Hand zu weisen, dass neuronale Netze in der Qualität der Diagnosen gleichauf sind mit denen von medizinischem Fachpersonal (vgl. \cite[1]{SZJ+19}). \textit{Amato et al.} listen in~\cite{ALP+13} unter anderem Studienergebnisse bzgl. des Einsatzes neuronaler Netze bei der Diagnostik von kardiovaskulären Krankheiten, Tumor-Erkrankungen sowie Diabetes auf, und kommen bei der Auswertung zu dem Ergebnis, das die neuronalen Netze bei einer Vielzahl verschiedener Symptomatiken die korrekte Diagnose erstellen: Zum Beispiel werden Audioaufnahmen der Pumptätigkeit des Herzens zur Klassifizierung von Herzklappenfehler genutzt, bei dem das eingesetzte Netz - ein MLP mit 3-Schichten unter Verwendung von Backpropagation - eine Erfolgsrate von knapp 95\% vorweisen kann\footnote{Bezug auf ~\cite[71]{Ugu12}}.
+}.
+
+Trotz allem ist nicht von der Hand zu weisen, dass neuronale Netze in der Qualität der Diagnosen gleichauf sind mit denen von medizinischem Fachpersonal (vgl. \cite[1]{SZJ+19}). \textit{Amato et al.} listen in~\cite{ALP+13} unter anderem Studienergebnisse bzgl. des Einsatzes neuronaler Netze bei der Diagnostik von kardiovaskulären Krankheiten, Tumor-Erkrankungen sowie Diabetes auf, und kommen bei der Auswertung zu dem Ergebnis, das die neuronalen Netze für einer Vielzahl verschiedener Symptome korrekte Diagnosen erstellen: Zum Beispiel werden Audioaufnahmen der Pumptätigkeit des Herzens zur Klassifizierung von Herzklappenfehler genutzt, bei dem das eingesetzte Netz - ein MLP mit 3-Schichten unter Verwendung von Backpropagation - eine Erfolgsrate von knapp 95\% vorweisen kann\footnote{Bezug auf ~\cite[71]{Ugu12}}.
 
 In~\cite{EKN+17} trainieren \textit{Estava et al.} ein CNN basierend auf \textit{GoogleNet Inception v3}\footnote{
     Im Vergleich zu \textbf{AlexNet} nur 5.000.000 Parameter, aber erreicht bei der Bildklassifizierung bessere Werte als andere Modelle (vgl.~\cite{SVI+15}). Eine interessanten Diskussionsgrundlage zu den Ausführungen in~\cite{Cun89} (s. Abschnitt~\ref{cnn}).
