@@ -118,3 +118,9 @@ https://de.wikipedia.org/wiki/Theoretische_Biologie, abgerufen 09.08.2023
 
  - https%3A%2F%2Fwww.gkv-spitzenverband.de%2Fkrankenversicherung%2Fkv_grundprinzipien
    https://www.gkv-spitzenverband.de/krankenversicherung/kv_grundprinzipien/alle_gesetzlichen_krankenkassen/alle_gesetzlichen_krankenkassen.jsp, abgerufen 12.09.2023
+
+ - https%3A%2F%2Fecommons.cornell.edu%2Fitems%2F91237274-dd25-4969-99cb-8758ca05cec9
+   https://ecommons.cornell.edu/items/91237274-dd25-4969-99cb-8758ca05cec9, abgerufen 19.09.2023
+
+ - https%3A%2F%2Fwww.microsoft.com%2Fen-us%2Fresearch%2Fblog
+https://www.microsoft.com/en-us/research/blog/using-deepspeed-and-megatron-to-train-megatron-turing-nlg-530b-the-worlds-largest-and-most-powerful-generative-language-model/, abgerufen 27.09.2023
