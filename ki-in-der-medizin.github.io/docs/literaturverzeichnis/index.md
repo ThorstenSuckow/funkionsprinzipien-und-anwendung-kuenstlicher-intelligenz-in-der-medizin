@@ -51,7 +51,7 @@ Quotation style: IEEE
 
 - **[KSJ+13]**  E. R. Kandel, J. H. Schwartz, T. M. Jessell, S. A. Siegelbaum und A. J. Hudspeth eds. _Principles of Neural Science_, ed. Fifth Edition. New York: McGraw-Hill Education, 2013.
 
-- **[DMW63]** P. Glees, „Nobelpreis für Physiologie und Medizin 1963“, Deutsche medizinische Wochenschrift, Bd. 88, Nr. 52, S. 2523–2526, Dez. 1963, https://doi.org/10.1055/s-0028-1112385.
+- **[Gle09]** P. Glees, „Nobelpreis für Physiologie und Medizin 1963“, Deutsche medizinische Wochenschrift, Bd. 88, Nr. 52, S. 2523–2526, Dez. 1963, https://doi.org/10.1055/s-0028-1112385.
 
 - **[Ber02]** J. Bernstein, „Untersuchungen zur Thermodynamik der bioelektrischen Ströme“, Archiv für die gesamte Physiologie des Menschen und der Tiere, Bd. 92, Nr. 10, S. 521–562, Nov. 1902, doi: 10.1007/BF01790181.
 
@@ -59,7 +59,7 @@ Quotation style: IEEE
 
 - **[Sey06]** E.-A. Seyfarth, „Julius Bernstein (1839–1917): pioneer neurobiologist and biophysicist“, _Biological Cybernetics_, Bd. 94, Nr. 1, S. 2–8, Jan. 2006, https://10.1007/s00422-005-0031-y.
 
-- **[Ber68]** J. Bernstein, „Ueber den zeitlichen Verlauf der negativen Schwankung des Nervenstroms“, _Archiv für die gesamte Physiologie des Menschen und der Tiere_, Bd. 1, Nr. 1, S. 173–207, Dez. 1868, https://10.1007/BF01640316.
+- **[Ber68]** J. Bernstein, „Ueber den zeitlichen Verlauf der negativen Schwankung des Nervenstroms“, _Archiv für die gesamte Physiologie des Menschen und der Tiere_, Bd. 1, Nr. 1, S. 173–207, Dez. 1868, https://doi.org/10.1007/BF01640316.
 
 - **[Sch83]** S. M. Schuetze, „The discovery of the action potential“, _Trends in Neurosciences_, Bd. 6, S. 164–168, Jan. 1983, https://10.1016/0166-2236(83)90078-4.
 
@@ -125,7 +125,7 @@ Quotation style: IEEE
 
  - **[Cow98]** Cowan, J. D. (1998). Interview with J.A. Anderson and E. Rosenfeld. In J. A. Anderson & E. Rosenfeld (Eds.), Talking nets: An oral history of neural networks (pp. 97–124). Cambridge MA: MIT Press.
 
- - **[Wie48]** N. Wiener, _Cybernetics of control and communication in the animal and the machine_. New York: The M.I.T. Press And John Wiley, 1961.
+ - **[Wie48]** N. Wiener, _Cybernetics; or control and communication in the animal and the machine_. New York: The M.I.T. Press And John Wiley, 1961.
    
 
  - **[Mas90]** R. Masani, „McCulloch, Pitts and the Evolution of Wiener’s Neurophysiological Ideas“, in _Norbert Wiener 1894–1964_, Basel: Birkhäuser Basel, 1990, S. 218–238. https://doi.org/10.1007/978-3-0348-9252-0_16.
@@ -160,7 +160,7 @@ Quotation style: IEEE
 
 - **[Cow90]** J. D. Cowan, „Discussion: McCulloch-Pitts and related neural nets from 1943 to 1989“, Bulletin of Mathematical Biology, Bd. 52, Nr. 1, S. 73–97, Jan. 1990, https://doi.org/10.1007/BF02459569.
 
-- **[Arb19]** M. Arbib, „Warren McCulloch’s Search for the Logic of the Nervous System“, Perspectives in biology and medicine, Bd. 43, S. 193–216, Feb. 2000, https://10.1353/pbm.2000.0001.
+- **[Arb19]** M. Arbib, „Warren McCulloch’s Search for the Logic of the Nervous System“, Perspectives in biology and medicine, Bd. 43, S. 193–216, Feb. 2000, https://doi.org/10.1353/pbm.2000.0001.
 
 - **[Per88]** D. H. Perkel, „Logical neurons: the enigmatic legacy of Warren McCulloch“, Trends in Neurosciences, Bd. 11, Nr. 1, S. 9–12, 1988, doi: https://doi.org/10.1016/0166-2236(88)90041-0.
 
@@ -181,8 +181,6 @@ Quotation style: IEEE
 
 ## 2.2 Das Rosenblatt-Perzeptron
 
-
-- **[Arb03]** M. A. Arbib, Hrsg., The handbook of brain theory and neural networks, 2nd ed. Cambridge, Mass: MIT Press, 2003.
 
 
 - **[GBC18]** I. Goodfellow, Y. Bengio, und A. Courville, Deep Learning. MIT Press, 2018. ISBN: 3958457002.
@@ -205,7 +203,7 @@ Quotation style: IEEE
 - **[Ros60]** F. Rosenblatt, „Perceptron Simulation Experiments“, Proceedings of the IRE, Bd. 48, Nr. 3, S. 301–309, 1960, https://doi.org/10.1109/JRPROC.1960.287598.
 
 
-- **[Bis06]** C. M. Bishop, (2006) Pattern Recognition and Machine Learning. 1st ed. New York, NY: Springer, 2006
+- **[Bis06]** C. M. Bishop, (2006) Patt[CC39] Electric impedance of the squid giant axonern Recognition and Machine Learning. 1st ed. New York, NY: Springer, 2006
 
 
 
@@ -405,7 +403,7 @@ Quotation style: IEEE
  - **[Cal20]** E. Callaway, „‘It will change everything’: DeepMind’s AI makes gigantic leap in solving protein structures“, Nature, Bd. 588, S. 203–204, Dez. 2020, https://doi.org/10.1038/d41586-020-03348-4.
 
 
- - **[Anf72]** C. B. Anfinsen, Studies on the principles that govern the foldnig of protein Chains, Nobel Lecturem 1972
+ - **[Anf72]** C. B. Anfinsen, Studies on the principles that govern the folding of protein Chains, Nobel Lecturem 1972
 
  - **[DOSW08]** K. A. Dill, S. B. Ozkan, M. S. Shell, und T. R. Weikl, „The Protein Folding Problem“, Annual Review of Biophysics, Bd. 37, Nr. 1, S. 289–316, 2008, doi: 10.1146/annurev.biophys.37.092707.153558.
 
