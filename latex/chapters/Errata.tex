@@ -6,9 +6,19 @@
 
 \noindent
 \textbf{Seite 16}:
-Die in (3.7) notierte Kantenmenge erlaubt nur einen Nachfolgeknoten und ermöglicht {bspw.} die Umsetzung von \textbf{XOR} in Abschnitt 3.1.5 nicht.
+Die in (3.7) notierte Kantenmenge ist fehlerhaft. Bspw. ist mit ihr die Umsetzung von \textbf{XOR} in Abschnitt 3.1.5 nicht möglich.\\
 
-Die Kantenmenge muss lauten: $E(G) = \{(N_i, N_j) | i < j\}$\\
+\noindent
+(3.7) muss ersetzt werden durch: $E(G) = \{(N_i, N_j) | i < j\}$\\
+
+\noindent
+Entsprechend ist (3.8) zu ersetzen durch:\\
+
+    $\gamma: N^2 \to \{w_+, w_-\}, \gamma((N_i, N_j)) = \begin{cases}
+                                                                 w_- \text{ falls } (N_i, N_j)  \text{ hemmend } \\
+                                                                 w_+  \text{ sonst}
+    \end{cases}$\\
+
 
 \noindent
 \textbf{Seite 33}:
