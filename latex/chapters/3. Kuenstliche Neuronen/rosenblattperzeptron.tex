@@ -1,26 +1,13 @@
 \section{Das Rosenblatt-Perzeptron}\label{sec:rosenblattperceptron}
 
-In Abschnitt~\ref{sec:mcpneuron} haben wir gesehen, wie MCP-Netze durch vorhergehende Analyse der Anforderungen und entsprechender Anpassung der Topologie zur Lösung verschiedener Aufgaben imstande sind.
-\textit{Donald Hebbs} Theorien über \textit{synaptische Plastizität}\footnote{
-    siehe Anhang~\ref{appendix:hebb}
-} führen einige Jahre nach dem MCP-Neuron zu einem Modell, das in der Lage ist, sich selbst anzupassen.
+MCP-Netze sind durch vorhergehende Analyse der Anforderungen und entsprechender Anpassung der Topologie zur Lösung verschiedener Aufgaben imstande. \textit{Donald Hebbs} Theorien über \textit{synaptische Plastizität} führen einige Jahre nach dem MCP-Neuron zu einem Modell, das in der Lage ist, sich selbst anzupassen.
 
 
 \subsection{Das Perzeptron - ein linearer Klassifizierer}
 
-Bereits 1954 wurden Versuche unternommen, lernfähige neuronale Netze zu modellieren (vgl.~\cite[24]{Ros62})\footnote{
-    Rosenblatt verweist hier auf~\cite{FC54}
-}.
-1958 schafft es ein Modell, für Aufsehen zu sorgen\footnote{
-    nicht nur im Wissenschaftsbetrieb, auch in der Öffentlichkeit. In der Presse publikumswirksam, aber wenig vertrauenserweckend: ``Frankenstein Monster Designed by Navy Robot That Thinks``~\cite[v]{Ros62}. Vgl. dazu aktuelle Schlagzeilen der hiesigen Boulevardpresse zum Thema KI. bild.de titelt: ``Übernehmen Computer die Weltherrschaft{?}`` (\url{https://www.bild.de/news/ausland/news-ausland/experten-warnen-ki-so-gefaehrlich-wie-pandemien-und-atomkrieg-84130180.bild.html}, abgerufen 27.08.2023) als Reaktion auf ``Statement on AI Risk`` des \textit{Center for AI Safety}, in dem zahlreiche Wissenschaftler zur Vorsicht beim Umgang, Einsatz und Forschung von KI mahnen. Im Wortlaut: ``Mitigating the risk of extinction from AI should be a global priority alongside other societal-scale risks such as pandemics and nuclear war.`` (\url{https://www.safe.ai/statement-on-ai-risk}, abgerufen 27.08.2023)
-}: Das \textbf{Perceptron} (im folgenden Perzeptron) (vgl.~\cite[89]{AR88})\footnote{
-    s. auch ``Interest in connectionist networks revived dramatically in 1962 with the publication of Frank Rosenblatt's book \textit{Principles of Neurodynamics}, [...]``~\cite[xi; Hervorhebung i.O.]{MP88}
-}.
-1957 beschreibt es sein Schöpfer \textit{Frank Rosenblatt} (1928 - 1971) in~\cite{Ros57}\footnote{
-    siehe Anhang~\ref{appendix:perzeptron}
-} als Teil eines internen Forschungsprojektes des \textit{Cornell Aeronautical Labors}\footnote{
-    Die Forschungseinrichtung gehörte von 1946 bis 1972 zu der Cornell Universität (\url{https://www.cornell.edu}; ab 1972 gehörte die Forschungseinrichtung dann zu der Calspan Corporation, \url{https://calspan.com}, beides abgerufen 18.08.2023). Rosenblatt macht an der Cornell Universität 1950 seinen A.B, 1956 seinen Ph.D. und wird dort bis zu seinem Lebensende (1971) als Psychologe und Neurobiologe forschen und lehren.
-}.
+Bereits 1954 wurden Versuche unternommen, lernfähige neuronale Netze zu modellieren (vgl.~\cite[24]{Ros62}).
+1958 schafft es ein Modell, für Aufsehen zu sorgen: Das \textbf{Perceptron} (im folgenden Perzeptron) (vgl.~\cite[89]{AR88}).
+1957 beschreibt es sein Schöpfer \textit{Frank Rosenblatt} (1928 - 1971) in~\cite{Ros57} als Teil eines internen Forschungsprojektes des \textit{Cornell Aeronautical Labors}.
 
 \subsection{Das Modell}
 
@@ -33,31 +20,9 @@ Rosenblatt definiert das Perzeptron wie folgt\footnote{
     sequence of past activity states of the network.
 }
 
-Die darin erwähnten \textbf{A}-Units werden definiert mit:
-
-\blockquote[{\cite[81  ``DEFINITION 9``; Hervorhebung i.O.]{Ros62}}]{
-    A \underline{simple A-unit} is a logical decision element, which
-    generates an output signal if the algebraic sum of its
-    input signals, $\alpha_i$ , is equal or greater than a threshold
-    quantity, $\Theta > 0$. The output signal $a^*_i$ is equal to $+1$ if $\alpha_i \geq \Theta$ and $0$ otherwise. If $a^*_i = +1$,
-    the unit is said to be \underline{active}.
-}
-
-
-Ähnlichkeiten zwischen den A-Units und zu der in Abschnitt~\ref{mcp-inputactivfunc} eingeführten Aktivierungsfunktion sind durchaus erkennbar: Rosenblatt selber weist darauf hin, dass er sein Modell direkt von dem von McCulloch und Pitts eingeführten Modell ableitet\footnote{
+Dabei ähneln die dort erwähnten A-Units als verrechnende Einheiten nicht bloß zufällig der in Abschnitt~\ref{mcp-inputactivfunc} eingeführten Aktivierungsfunktion: Rosenblatt selber weist darauf hin, dass er sein Modell direkt von dem von McCulloch und Pitts eingeführten Modell ableitet\footnote{
     vgl. auch ``Ein \texit{einfaches Perzeptron} ist eine McCulloch-Pitts-Zelle, die ihre Eingabe gewichtet berechnet.`` in~\cite[57, ``Definition 3.1``; Hervorhebung i.O.]{Roj93}
-}. Darüber hinaus weist er auch auf Einflüsse von Hebb und von Neumann hin (siehe ~\cite[5]{Ros62}).\\
-
-
-\textit{Rojas} schreibt, dass das klassische Rosenblatt-Perzeptron in einem Netz von Eingabe- und Ausgabeknoten gewichtete Verbindungen nutzt - die Knoten selber sind Schwellenwertelemente, Verbindungen werden stochastisch ermittelt (siehe~\cite[51]{Roj93}).
-Er weist ebenda darauf hin, dass das Modell nach Rosenblatts Veröffentlichung analysiert und verfeinert wurde, u. a. von \textit{Minsky und Papert} in~\cite{MP88}, die wie folgt definieren\footnote{wir werden später sehen, dass die Eigenschaft ``linear`` in dieser Definition von besonderer Bedeutung sein wird.}:
-
-\blockquote[{\cite[12; Hervorhebung i.O.]{MP88}}]{
-    A \underline{perceptron} is a device capable of computing all predicates which are linear in some given set $\Phi$ of partial predicates.
-}
-
-\textit{Prädikate} sind hier Verbindungen zu den Eingabesignalen, die einen Wahrheitswert $0$ oder $1$ basierend auf der Eingabe $X$ berechnen.
-Die Ausgaben der Prädikate werden individuell gewichtet und an die Zelle weitergeleitet, die die Aktivierungsfunktion implementiert (vgl.~\cite[52 f.]{Roj93} und~\cite[8-12]{MP88}).
+}.\\
 
 \begin{figure}[h]
     \begin{center}
@@ -91,7 +56,7 @@ g \coloneqq g(X) = \sum^n_{i=1} P_i(X) w_i
 \subsection{Lineare Trennbarkeit}
 Mit Gleichung~\ref{eq:gl-rpact} folgt für eine Eingabe, dass sie entweder eine $0$ oder $1$ als Ausgabe erzeugt.
 Es liegt ein binärer Wertebereich vor, der als zwei unterschiedliche Klassen aufgefasst werden kann: Eingabedaten können entsprechend ihrer Ausgabe einer der beiden Klassen zugeordnet werden (vgl.~\cite[812]{RN09}).
-Im Folgenden wollen wir die Zusammenhänge geometrisch darstellen.
+Im Folgenden sollen die Zusammenhänge geometrisch dargestellt werden.
 Der Einfachheit halber beschränken wir uns hierzu auf den zweidimensionalen Raum $\mathbb{R}^2$ und betrachten dort die \textit{1. Winkelhalbierende} im I. und III. Quadranten des kartesischen Koordinatensystems.
 Die zugehörige \textit{Gerade} $L$ ist
 
@@ -123,9 +88,7 @@ x_1 - x_2 \begin{cases}
 Die \textit{Gerade} $L$ repräsentiert eine \textit{Hyperebene}\footnote{
     siehe~\cite[81, Definition 2.3]{BHW+12}
 } im $\mathbb{R}^2$.
-Punkte, die nicht zu dieser Hyperebene gehören, liegen in zwei unterschiedlichen \textit{Halbräumen}\footnote{
-    Renze, John; Uznanski, Dan; and Weisstein, Eric W. ``Half-Plane.`` From MathWorld--A Wolfram Web Resource. \url{https://mathworld.wolfram.com/Half-Plane.html} (abgerufen 21.08.2023)
-} (siehe geometrische Darstellung in Abbildung~\ref{fig:halbraeume}).
+Punkte, die nicht zu dieser Hyperebene gehören, liegen in zwei unterschiedlichen \textit{Halbräumen} (siehe geometrische Darstellung in Abbildung~\ref{fig:halbraeume}).
 
 Wir können feststellen, dass
 
@@ -133,9 +96,7 @@ Wir können feststellen, dass
 \begin{itemize}
     \item Punkte, die $x_1 - x_2 > 0$ erfüllen (im folgenden $M_-$) in dem Halbraum \textit{unter} der durch $L$ beschriebenen Gerade liegen
     \item Punkte, für die  $x_1 - x_2 < 0$ gilt (im folgenden $M_+$) \textit{über} der durch $L$ beschriebenen Gerade liegen
-    \item Punkte mit $x_1 - x_2 = 0$ \textit{auf} der Geraden liegen (im folgenden als Teilmenge von $M_-$\footnote{
-        Wenn die Hyperebene selbst im Halbraum enthalten ist, spricht man von einem \textit{abgeschlossenen Halbraum}. (\url{https://de.wikipedia.org/wiki/Halbraum}, abgerufen 22.08.2023)
-    })
+    \item Punkte mit $x_1 - x_2 = 0$ \textit{auf} der Geraden liegen (im folgenden als Teilmenge von $M_-$)
 \end{itemize}
 
 
@@ -156,42 +117,10 @@ Wir können feststellen, dass
 
 
 $M_+$ und $M_-$ sind damit \textit{linear separierbar}.
-Nach \textit{Rojas} lautet die Definition für \textbf{Lineare Trennbarkeit}:
-
-\blockquote[{\cite[60 f., ``Definition 3.2``; Hervorhebung i.O.; Nummerierung eigene]{Roj93}}]{
-    \noindent
-    Zwei Mengen \textit{A} und \textit{B} von Punkten in einem \textit{n}-dimensionalen Raum sind \textit{linear trennbar}, falls \textit{n}+1 reelle Zahlen $w_1, ... , w_{n+1}$ existieren, so dass für jeden Punkt $x_1, ... , x_n \in A$ gilt
-
-    \begin{equation}
-        \sum^n_{i=1} w_ix_i \geq w_{n+1}
-        \label{eq:gl-defhalbraum-gl1}
-    \end{equation}
-
-    und für jeden Punkt $x_1, ... , x_n \in B$
-
-    \begin{equation}
-        \sum^n_{i=1} w_ix_i < w_{n+1}
-        \label{eq:gl-defhalbraum-gl2}
-    \end{equation}
-}
-
-
-
 
 \noindent
-Als Beispiel sei $M_- = \{(x_1, x_2) \in  \mathbb{R}_{0+}^2: x_1 \geq x_2\}$ und $M_+=\{(x_1, x_2) \in  \mathbb{R}_{0+}^2: x_1 < x_2\}$.
-Weiter sei $w_1 = -1, w_2 = 1, w_3 = 0$.
-Die lineare Trennbarkeit der beiden Mengen lässt sich leicht nachweisen\footnote{entspricht zwei Punktmengen, die durch die 1. Winkelhalbierende im I. Quadranten des kartesischen Koordinatensystems separierbar sind}:
-
-\begin{enumerate}
-    \item Fall $x_1 = x_2$: Es gilt $w_1x_1 + w_2x_2 = w_1x_1 + w_2x_1 = -x_1 + x_1 = w_3 = 0$. Mit $0 \geq 0$ ist somit Gleichung~\ref{eq:gl-defhalbraum-gl1} erfüllt.
-    \item Fall $x_1 < x_2$: Es gilt $w_1x_1 = -x_1$. Addition von $w_1x_1$ auf beiden Seiten von $x_2 > x_1$ liefert $x_2 + (-x_1) = w_2x_2 + w_1x_1 > 0 = w_3$ und erfüllt Gleichung~\ref{eq:gl-defhalbraum-gl1}.
-    \item Fall $x_1 > x_2$: Es gilt wieder $w_1x_1 = -x_1$. Addition auf beiden Seiten von $x_1 > x_2$ liefert $w_3 = 0 > x_2 + (-x_1) = w_2x_2 + w_1x_1$ und erfüllt Gleichung~\ref{eq:gl-defhalbraum-gl2}.
-\end{enumerate}
-
-
-\noindent
-Insgesamt kann ein Perzeptron als Funktion verstanden werden, was sich auch in der Definition nach \textit{Ertel} widerspiegelt:
+Insgesamt kann ein Perzeptron als Funktion verstanden werden.
+So definiert \textit{Ertel}:
 
 \blockquote[{\cite[212, ``Definition 8.3``; Hervorhebung i.O.]{Ert21a}}]{
     \noindent
@@ -214,14 +143,8 @@ Insgesamt kann ein Perzeptron als Funktion verstanden werden, was sich auch in d
 Die Eigenschaft linearer Trennbarkeit von Daten ist eine wesentliche Voraussetzung dafür, dass ein Perzeptron \textbf{konvergiert}: Die \textbf{Lernregel} des Perzeptrons passt während der Laufzeit die Gewichte $w_1 ... w_n$ solange an, bis sie - eingesetzt in eine lineare Gleichung (vgl.~\cite[311]{Ert21b}) - die $n$-dimensionalen Daten entsprechend Gleichung~\ref{eq:gl-rpact} \textit{klassifizieren} kann.
 Aus diesem Grund wird das Perzeptron auch \textbf{linearer Klassifizierer} genannt (vgl.~\cite[210-216]{Ert21a}).
 
-Das Perzeptron \textbf{lernt} diese Gewichte zunächst durch \textit{Trainingsdaten}\footnote{
-    ``supervised learning``: überwachtes lernen; vgl.~\cite[811]{RN09} sowie~\cite[15]{Fau94}. \textit{Arbib et al.} weisen darauf hin, dass \textit{überwachtes Lernen} mit dem Perzeptron eingeführt wurde: ``Supervised learning adjusts the weights in an attempt to respond to explicit error signals provided by a `teacher,` which may be external, or another network in the same `brain`. This model was introduced in the perceptron model``~\cite[30]{Arb03}
-}.
-Jeder Eintrag dieser Trainingsdaten ist einer erwarteten Ausgabe zugeordnet. Der Algorithmus besteht aus folgenden Schritten (vgl.~\cite[65]{RM87} sowie~\cite[842]{RN09})\footnote{
-    Die Beziehung zu der Hebbschen Lernregel formulieren \textit{Arbib et al.}:
-        ``The best-known perceptron learning rule strengthens an active synapse if the efferent neuron fails to fire when it should have fired, and weakens an active synapse if the neuron fires when it should not have done so.``~\cite[20]{Arb03}.
-        Vgl. hierzu auch \textit{Rosenblatt}: ``[a perceptron has] a tendency to develop 'cell assemblies' (in Hebb's sense), and these cell-assemblies tend to rival one another for dominance at all times.``~\cite[464]{Ros62}
-}:
+Das Perzeptron \textbf{lernt} diese Gewichte zunächst durch \textit{Trainingsdaten}.
+Jeder Eintrag dieser Trainingsdaten ist einer erwarteten Ausgabe zugeordnet. Der Algorithmus besteht aus folgenden Schritten (vgl.~\cite[65]{RM87} sowie~\cite[842]{RN09}):
 
 
 
@@ -246,84 +169,10 @@ Sind die Trainingsdaten linear separierbar, {konvergiert}\footnote{
     Das Konvergenz-Theorem besagt: ``if a linear separation exists, the perceptron error-correction scheme will find it.``~\cite[20]{Arb03}] Beweise führen~\cite[111 ff.]{Ros62}, \cite[168 ff.]{MP88} sowie \cite{Nov62}.
 }, und ist danach in der Lage weitere Daten zu \textbf{generalisieren} (vgl.~\cite[202]{Ert21a}).\\
 
-Wir betrachten jetzt eine Möglichkeit, die $y$-Koordinate der Trenngerade anzupassen, falls Punkte vorliegen, die nicht durch eine Ursprungsgerade separierbar sind (siehe Abbildung~\ref{fig:nichtseparierbar}).
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[
-        width=8cm,
-        keepaspectratio,
-    ]{chapters/3. Kuenstliche Neuronen/images/nichtseparierbar}
-    \caption{Punkte im $\mathbb{R}^2$, die nicht durch eine Ursprungsgerade separierbar sind. Angedeutet eine mögliche Trenngerade, die durch $(0,2)$ geht. (Quelle: Eigene Darstellung)}
-    \label{fig:nichtseparierbar}
-\end{figure}
-
-
-
-Dies erreicht man mit einer sogenannten \textbf{bias unit}.
-Das Bias-Gewicht\footnote{
-    vgl.~\cite[839]{RN09}
-} ist ein Wert, der zu der Gleichung~\ref{eq:gl-rpinput} hinzuaddiert wird. In der geometrischen Darstellung sorgt dieser Wert für eine Verschiebung der Ursprungsgeraden entlang der $x_2$-Achse\footnote{
-    im $ \mathbb{R}^n$ durch eine Hyperebene im Ursprung (vgl.~\cite[215]{Ert21a}).
-}.
-
-Den Eingabedaten wird ein fester Eingabewert $x_{n+1} = 1$ hinzufügt: Der Eingabevektor $x \in  \mathbb{R}^n$ wird \textit{erweitert}: $(x_1, ..., x_n, 1)$ (vgl.~\cite[58]{Roj93}).
-
-\noindent
-Der bias $b$ wird für unser Beispiel im $ \mathbb{R}^2$ mit Gleichung~\ref{eq:gl-rpinput} in die Berechnung des Schwellenwerts miteinbezogen:
-
-\begin{equation}
-P(x) = \begin{cases}
-            1 \text{ falls } wx > 0 \\
-            0 \text{ sonst }
-\end{cases}
-\end{equation}
-
-\noindent
-wobei
-
-\begin{equation}
-wx = b + \sum^n_{i=1} w_ix_i
-\label{eq:gl-net}
-\end{equation}
-
-\noindent
-Die Gleichung für die Trenngerade für unser Beispiel im $\mathbb{R}^2$ lautet somit
-
-\begin{equation}
-b + w_1x_1 + w_2x_2 = 0
-\end{equation}
-
-\noindent
-Wenn wir $b$ auf die rechte Seite der Gleichung bringen, kann $b$ auch als Schwellenwert $\Theta = -b$ betrachtet werden:
-
-\begin{equation}
-w_1x_1 + w_2x_2 = \Theta
-\end{equation}
-
-\noindent
-Für unser $x_2$ im $ \mathbb{R}^2$ folgt dann insgesamt mit $w_2 = 1$ und $x_1 = 0$:
-
-\begin{equation}
-x_2 = \Theta/w_2 -(w_1/w_2)x_1  = \Theta
-\end{equation}
-
-\noindent
-$x_2$ ergibt sich somit als der horizontale Abstand vom Ursprung.\\
-
-\noindent
-Mit $b$ als Teil der Eingabe folgt auch dessen Gewichtung $bw_{n+1} = w_{n+1}$.
-Mit $0$ als Schwellenwert wird dadurch eine Verschiebung der Trenngerade entlang der $x_2$-Achse im $ \mathbb{R}^2$ bzw. eine Verschiebung der Hyperebene im $ \mathbb{R}^n$ ermöglicht (vgl. ~\cite[215]{Ert21a})\footnote{
-    einen Überblick über die geometrischen Zusammenhänge liefert ``Einführung in die Neuroinformatik`` von Prof. Dr. G. Sommer \url{https://www.informatik.uni-kiel.de/inf/Sommer/doc/Downloads/Skripte/neuroskript.pdf}:33 ff. (abgerufen 27.08.2023)
-}.
-
-
 
 \subsection{Die XOR-Funktion}
 
-Wenn ein Perzeptron nicht konvergiert, kann es ausreichen, die Anzahl der Epochen zu erhöhen, damit ein passender Gewichtsvektor gefunden wird\footnote{
-    \textit{Arbib et al.} berufen sich auf das Konvergenz-Theorem: ``[das Rosenblatt Perzeptron] does not yield an endless seesaw, but will eventually converge to a correct set of weights if one exists, albeit perhaps after many iterations through the set of trial patterns.``~\cite[20]{Arb03}: \textit{Minsky und Papert} formulieren lose: ``if the sets are separable [...], then the program will separate them``~\cite[165]{MP88}. Sie stellen im Hinblick auf Parameteranpassungen fest: ``Usually, when a failure occurred, neither prolonging the training experiments nor building larger machines helped.``~\cite[xi]{MP88}
-}.
+Wenn ein Perzeptron nicht konvergiert, kann es ausreichen, die Anzahl der Epochen zu erhöhen, damit ein passender Gewichtsvektor gefunden wird (vgl.~\cite[20]{Arb03}).
 
 \begin{figure}[h]
     \begin{center}
@@ -367,6 +216,3 @@ Offensichtlich kann $w_1 + w_2 < \Theta$ nicht erfüllt werden, wenn gleichzeiti
         Interpretationen der XOR-Funktion im kartesischen Koordinatensystem. Hier existiert keine Trenngerade für die Punkte $\{(0, 0), (1, 1)\}$ und $\{(0, 1), (1, 0)\}$.
     }
 \end{figure}
-
-
-Für weitere Anwendungen des Perzeptron-Algorithmus sei auf Anhang~\ref{appendix:pythonperzeptron} verwiesen.
