@@ -169,7 +169,7 @@ V(G) =\{N_1, N_2, ... N_z\}
 und der paarweise verschiedenen Kantenmenge
 
 \begin{equation}
-E(G) = \{ (N^1_i, N_{i+1}), ..., (N^k_i, N_{i+1}) | i <= |V(G)|, k \in \mathbb{N} \}
+E(G) = \{(N_i, N_j) | i < j\}
 \end{equation}
 
 sowie der Kantengewichtsfunktion\footnote{
@@ -177,9 +177,9 @@ der Einfachheit halber wird bei der Fallunterscheidung keine weitere Unterteilun
 }
 
 \begin{equation}
-\gamma: N^2 \to \{w_+, w_-\}, \gamma((N^k_i, N_{i+1})) = \begin{cases}
-                                                              w_- \text{ falls } (N^k_i, N_{i+1})  \text{ hemmend } \\
-                                                              w_+  \text{ sonst}
+\gamma: N^2 \to \{w_+, w_-\}, \gamma(N_i, N_j) = \begin{cases}
+                                                       w_- \text{ falls } (N_i, N_j)  \text{ hemmend } \\
+                                                       w_+  \text{ sonst}
 \end{cases}
 \end{equation}
 \label{def:mcpnetz}

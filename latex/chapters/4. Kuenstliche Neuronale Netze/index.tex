@@ -127,9 +127,9 @@ Der Physiker \textit{John J. Hopfield} stellt 1982 in~\cite{Hop82} ein Modell f�
     \url{https://techmonitor.ai/technology/att\_creates\_parallel\_neural\_net\_chip\_to\_solve\_routing\_problems}
 } als Hardware umgesetzt wird: Das Modell ist ein \textbf{rekurrentes Netz}\footnote{
 Ein rekurrentes neuronales Netz ``speist seine Ausgaben wieder in seine eigenen Eingaben ein``~\cite[847]{RN09}. Im Gegensatz zu Feedforward-Netzen sind rekurrente Netze also \textit{rückgekoppelt}
-} ohne Schlingen ($w_{ij} = 0$) (vgl. ~\cite[291]{Ert21b})\footnote{ Eine \textit{Schlinge} (engl. \textit{loop}) in einem Graphen ist ein Kantenzug, der einen Knoten mit sich selbst verbindet~\cite[30]{Die17}. Ein Beispiel für ein Netz mit Schlingen ist das \textbf{MAXNET} (siehe~\cite{Lip87}), das zu der Gruppe der \textbf{competitive nets} gehört: Es kann als Subnetz zur Ermittlung der Zelle mit dem größten Aktivierungswert genutzt werden (vgl.~\cite[158 f.]{Fau94}).
+} ohne Schlingen ($w_{ii} = 0$) (vgl. ~\cite[291]{Ert21b})\footnote{ Eine \textit{Schlinge} (engl. \textit{loop}) in einem Graphen ist ein Kantenzug, der einen Knoten mit sich selbst verbindet~\cite[30]{Die17}. Ein Beispiel für ein Netz mit Schlingen ist das \textbf{MAXNET} (siehe~\cite{Lip87}), das zu der Gruppe der \textbf{competitive nets} gehört: Es kann als Subnetz zur Ermittlung der Zelle mit dem größten Aktivierungswert genutzt werden (vgl.~\cite[158 f.]{Fau94}).
 } mit bidirektionalen symmetrischen Kanten ($w_{ij} = w_{ji}$) und fungiert als \textbf{Assoziativspeicher}, also als Netz, das, wenn es für eine Eingabe $x$ die Ausgabe $y$ liefert, dieselbe Ausgabe $y$ auch für $x'$ berechnet, sofern $x'$ nahe genug bei $x$ liegt (vgl.~\cite[251]{Roj93})\footnote{
-    Nach dem Training ist das Netz dazu in der Lage, für einen Stimulus ein Aktualisierungsmuster einzunehmen, dass diesem am ähnlichsten ist (vgl.~\cite[882]{RN09}), was an die ``Cell Assemblies`` von Hebb erinnert (Kapitel 2.2.1). \textit{Lansner} verweist in~\cite[179]{Lan09} genau darauf, merkt aber gleichfalls an, dass das Modell aufgrund der Rekurrenz und Symmetrie nicht seinem biologischen Vorbild entspricht (vgl.~\cite[180]{Lan09}).
+    Nach dem Training ist das Netz dazu in der Lage, für einen Stimulus ein Aktualisierungsmuster einzunehmen, dass diesem am ähnlichsten ist (vgl.~\cite[882]{RN09}), was an die ``Cell Assemblies`` von Hebb erinnert (s. a. Anhang~\ref{appendix:hebb}). \textit{Lansner} verweist in~\cite[179]{Lan09} genau darauf, merkt aber gleichfalls an, dass das Modell aufgrund der Rekurrenz und Symmetrie nicht seinem biologischen Vorbild entspricht (vgl.~\cite[180]{Lan09}).
 }. Dadurch ist das Netz gegenüber \textit{Rauschen} und \textit{Störungen} resistent\footnote{
     Rauschen bzw. Störungen bei Stimuli in Form von Bildern ($n \times m$ Pixeln) können durch zufällig hinzugefügte oder entfernte Pixel entstehen, oder durch Rotation (axiale Verschiebung) der Daten vor dem Einspeisen in das Netz. Beispiele für verrauschte Daten in~\cite[294]{Ert21b}.
 }.
@@ -154,7 +154,7 @@ Damit ist das Modell ``formal äquivalent zu einem physikalischen Modell des Mag
     \textit{Hinton und Sejnowski} beschreiben das Verhalten bereits 1983 in~\cite{HS83}
 } vor, eine Modifikation eines Hopfield-Netzes, in dem sich die Zellen \textit{stochastisch}~\cite[635]{AR88} und globale Zustände des Netzes nach der \textit{Boltzmann-Verteilung}\footnote{
     die \textit{Boltzmann-Verteilung} gibt die Wahrscheinlichkeit an, ein geg. physik. System in einem bestimmten Zustand anzutreffen (\url{https://de.wikipedia.org/wiki/Boltzmann-Statistik}, abgerufen  05.09.2023)
-} verhalten. Das Netz versucht lokale Minima zu überwinden (vgl. ``Gradientenabstiegsverfahren`` in \textbf{Kapitel 3.2.1 Backpropagation}), indem ihm erlaubt wird, zu größeren $E$ (s. Gleichung~\ref{eq:gl-energie}) zu springen, um so zu einem globalen Minimum zu konvergieren\footnote{
+} verhalten. Das Netz versucht lokale Minima zu überwinden (vgl. ``Gradientenabstiegsverfahren`` in Abschnitt~\ref{sec:backpropagation}), indem ihm erlaubt wird, zu größeren $E$ (s. Gleichung~\ref{eq:gl-energie}) zu springen, um so zu einem globalen Minimum zu konvergieren\footnote{
     vgl.~\cite[151]{AHS85} sowie~\cite[107]{Koh90}
 }.
 Das Verfahren wird auch \textit{simulated annealing} bezeichnet\footnote{vgl.~\cite[297]{Ert21b}. \textit{Rojas} schreibt dazu
@@ -192,7 +192,7 @@ Darüber hinaus können mehrere feature maps die gleichen Merkmale an unterschie
 In~\cite{CBD+89} stellen \textit{LeCun et al.} diese Architektur als \textbf{Convolutional Network} \textit{LeNet-1}\footnote{
     siehe Anhang~\ref{appendix:lenet1}
 }  vor (vgl.~\cite[13]{CBBH98}), das äußerst erfolgreich mittels Backpropagation handgeschriebene Postleitzahlen erkennt\footnote{
-    Wobei die Bilder zu Matrizen der Dimension $16 \times 16$ transformiert und als Eingabedaten in das Netz eingespeist werden. Die Transformation behält das Seitenverhältnis der Zeichen bei. Die Werte der Matrix an den Positionen $a_{ij}$ entsprechen Grauwerten mit einem normalisierten Wertebereich von $[-1, 1]$ (vgl.~\cite[542]{CBD+89}).
+    Wobei die Ziffern zu Matrizen der Dimension $16 \times 16$ transformiert und als Eingabedaten in das Netz eingespeist werden. Die Transformation behält das Seitenverhältnis der Zeichen bei. Die Werte der Matrix an den Positionen $a_{ij}$ entsprechen Grauwerten mit einem normalisierten Wertebereich von $[-1, 1]$ (vgl.~\cite[542]{CBD+89}).
 }. Das Netz performt mit 30 Klassifizierungen pro Sekunde, lediglich die Normalisierung der Eingabedaten stellt einen Flaschenhals bei dem Prozess dar. Wird dieser berücksichtigt, werden 10-12 Ergebnisse pro Sekunde erzielt (vgl.~\cite[549]{CBD+89}).\\
 
 
