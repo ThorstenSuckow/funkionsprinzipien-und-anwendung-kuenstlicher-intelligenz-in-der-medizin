@@ -2,13 +2,11 @@
 
 \section{Mehrschichtige neuronale Netze}
 
-Bislang haben wir überwiegend künstliche Neuronen betrachtet, bei denen die Eingabe direkt mit der Ausgabe verbunden ist. Allerdings haben wir bereits für komplexe Boolesche Funktionen in Abschnitt~\ref{seq-mcpbool} gesehen, dass ein Verbund von mehreren MCP-Zellen in der Lage ist, auch Funktionen für nicht linear separierbare Daten zu modellieren. Hierzu hatten wir das MCP-Netz in zwei Schichten aufgeteilt, in denen die erste Schicht $X_1 \coloneqq (\neg A \land B)$ sowie $X_2 \coloneqq (\neg B \land A)$ und die zweite Schicht $X_1 \lor X_2$ formt, was die disjunktive Normalform von XOR ist (Tabelle~\ref{tab:xor}).
-
-Bei dem Rosenblatt-Perzeptron, das alleine nicht in der Lage ist, XOR zu erlernen, handelt es sich um ein \textbf{Einschichtiges neuronales Feedforward-Netz}.
+Bei dem Rosenblatt-Perzeptron, das alleine nicht in der Lage ist, XOR zu erlernen, handelt es sich um ein \textbf{einschichtiges neuronales Feedforward-Netz}.
 Das bedeutet, dass es nur Eingabe und Ausgabe gibt und die Informationen ausschliesslich in Richtung Ausgang fliessen (vgl.~\cite[848]{RN09}).
 
 Ein \textbf{mehrschichtiges Perzeptron} (MLP, \textit{multi-layer perceptron})~\cite[6]{GBC18} ist in der Lage, nicht-linear-separierbare Daten zu klassifizieren.
-Ein MLP repräsentiert ein tiefes Feedforward-Netz, in dem die Eingabeschicht (\textbf{Input Layer}) und die Ausgabeschicht (\textbf{Output Layer}) über weitere Schichten von Neuronen (\textbf{hidden layer}) verbunden ist; die Neuronen in diesen Schichten implementieren Eingabe- und Aktivierungsfunktion und leiten ihre Berechnungen an die nächsten Zellen bis zu der Ausgabeschicht weiter. \textit{Murtagh} zeigt in \cite[184 f.]{Mur91} die Modellierung von XOR anhand eines MLPs.
+Ein MLP repräsentiert ein tiefes Feedforward-Netz, in dem die Eingabeschicht (\textbf{Input Layer}) und die Ausgabeschicht (\textbf{Output Layer}) über weitere Schichten von Neuronen (\textbf{hidden layer}) verbunden ist; die Neuronen in diesen Schichten implementieren Eingabe- und Aktivierungsfunktion und leiten ihre Berechnungen an die nächsten Zellen bis zu der Ausgabeschicht weiter.
 
 \begin{figure}[h]
     \begin{center}
@@ -27,7 +25,7 @@ Ein MLP repräsentiert ein tiefes Feedforward-Netz, in dem die Eingabeschicht (\
 
 
 \subsection{Backpropagation}\label{sec:backpropagation}
-In gleicher Arbeit zeigt \textit{Murtagh} ein MLP, das mittels \textbf{Backpropagation}\footnote{
+\textit{Murtagh} zeigt in~\cite[184 f.]{Mur91} ein MLP, das mittels \textbf{Backpropagation}\footnote{
     ``das meist genutzte neuronale Modell``~\cite[313]{Ert21b}
 } Daten klassifiziert, die keinen linearen Zusammenhang besitzen (siehe~\cite[185 f.]{Mur91}).
 Der Algorithmus geht auf \textit{Rumelhart, Hinton und Williams} zurück, die in~\cite[318 ff.]{RM87} eine Methode\footnote{
@@ -85,7 +83,7 @@ Unter dem Namen \textit{Cognitron} 1975 beschreibt \textit{Fukushima} in~\cite{F
     Video mit Demonstration des Netzes unter \url{https://www.youtube.com/watch?v=Qil4kmvm2Sw}, abgerufen 04.09.2023
 }; sein biologisches Vorbild ist das durch \textit{Hubel und Wiesel} in~\cite{HW62} beschriebene hierarchische Modell des Wahrnehmungssystems (vgl.~\cite[827]{FMI83}).
 In dem künstlichen neuronalen Netz haben Zellen in tiefer liegenden Schichten die Eigenschaft, selektiv komplexere Merkmale der Stimuli zu extrahieren, womit sie weniger anfällig gegenüber Rauschen in den Eingabedaten sind.
-In~\cite{Fuk80} war der Training-Prozess durch wiederholte Einspeisung von Mustern ohne weitere Information gegeben (vgl. ~\cite[197]{Fuk80})\footnote{
+In~\cite{Fuk80} war der Trainingsprozess durch wiederholte Einspeisung von Mustern ohne weitere Information gegeben (vgl. ~\cite[197]{Fuk80})\footnote{
     ``learning without a teacher``, also unüberwachtes Lernen (unsupervised learning).
 }: Die Erweiterung des Modells beinhaltet nun die Verstärkung der modifizierten Synapsen durch überwachtes Lernen, um bessere Resultate bei handgeschriebenen Zeichen zu erzielen (vgl. ~\cite[829]{FMI83}).
 \textit{Anderson und Rosenfeld} attestieren dem Netz von \textit{Fukushima et al.} Aspekte, die bei der Entwicklung neuronaler Netze eine wesentliche Rolle spielen werden (siehe ~\cite[524]{AR88}):  Tatsächlich inspiriert das Neocognitron die Convolutional Neural Networks (CNN) (vgl.~\cite[439]{LBH15}), deren erster Entwurf 1989 von \textit{LeCun} in ~\cite{Cun89} vorgestellt wird.

@@ -20,7 +20,7 @@ McCulloch und Pitts gehen für ihren Kalkül von folgenden physischen Eigenschaf
     \item Ein Neuron arbeitet auf Basis des Alles-oder-Nichts-Prinzip.
     \item Eine gewisse Anzahl von Synapsen muss innerhalb einer bestimmten Zeit angeregt werden, um ein Neuron zu erregen.
     \item Die einzige signifikante Verzögerung bei der Signalübertragung innerhalb des Nervensystems ist bedingt durch synaptische Verzögerungen.
-    \item Eine einzige hemmende Synapse verhindert die Erregung des betreffenden Neurons
+    \item Eine einzige hemmende Synapse verhindert die Erregung des betreffenden Neurons.
     \item Die Struktur des neuronalen Netzes ändert sich nicht.
 \end{enumerate}
 
@@ -61,7 +61,7 @@ Das in diesem Abschnitt vorgestellte Modell soll - in Anlehnung an die Arbeit vo
 
 Mit $n \in  \mathbb{N}_0$ und $m \in  \mathbb{N}_0$ wird festgelegt, dass ein Neuron $n + m$ Eingaben haben soll, mit $n \geq 1 \lor m \geq 1$, wobei $n$ die Anzahl der erregenden und $m$ die der hemmenden Eingaben ist.
 
-Für die Schwellenwertfunktionen eines Neurons $N$ ergeben sich folgende Anforderungen: Die Summe der erregenden Eingabesignale $x_1, x_2, ..., x_n$ und der hemmenden Eingabesignale $y_1, y_2, ..., y_m$  muss den für das Neuron festgelegten Schwellenwert $\Theta \in  \mathbb{N}_0$ überschreiten, damit als Ausgabe eine $1$ erzeugt wird, ansonsten liefert die Funktion eine $0$ zurück.
+Für die Schwellenwertfunktionen eines Neurons $N$ ergeben sich folgende Anforderungen: Die Summe der erregenden Eingabesignale $x_1, x_2, ..., x_n$ und der hemmenden Eingabesignale $y_1, y_2, ..., y_m$  muss den für das Neuron festgelegten Schwellenwert $\Theta \in  \mathbb{N}_0$ treffen oder überschreiten, damit als Ausgabe eine $1$ erzeugt wird, ansonsten liefert die Funktion eine $0$ zurück.
 
 \subsection*{Eingabefunktion}
 Zur Integration der eingehenden Signale wird eine \textbf{Eingabefunktion} benötigt.
@@ -158,8 +158,8 @@ erfüllen, was abgekürzt werden kann zu
     \label{fig:mcpor}
 \end{figure}
 
-Für die Konstruktion eines Netzes zur Modellierung von \textbf{XOR} hilft zunächst das in Abbildung~\ref{fig:mcpor} dargestellte Modell der \textbf{OR}-Funktion. $\Theta = 2$ ist erfüllt, wenn entweder $x_1$ oder $x_2$ ein erregendes Signal weiterleitet.
-Allerdings wird $\Theta$ auch erfüllt, wenn jeweils $x_1$ \textit{und} $x_2$ gleichzeitig aktiv sind, denn dann ist $f_{xor}(g(X)) = 4$.
+Für die Konstruktion eines Netzes zur Modellierung von \textbf{XOR} hilft zunächst das in Abbildung~\ref{fig:mcpor} dargestellte Modell der \textbf{OR}-Funktion. Der Schwellenwert ($\Theta = 2$) wird erreicht, wenn entweder $x_1$ oder $x_2$ ein erregendes Signal weiterleitet.
+Allerdings wird der Schwellenwert auch erreicht, wenn jeweils $x_1$ \textit{und} $x_2$ gleichzeitig aktiv sind, denn dann ist $f_{xor}(g(X)) = 4$.
 Also muss eine Hemmung zwischengeschaltet werden (s. Abbildung~\ref{fig:mcpxorf}): Ein aktives $x_1$ hemmt $N_2$. $N_2$ leitet in dem Fall $0$ an $Y$ weiter.
 Die Zellen $x_2$ und $N_1$ werden analog verbunden.
 

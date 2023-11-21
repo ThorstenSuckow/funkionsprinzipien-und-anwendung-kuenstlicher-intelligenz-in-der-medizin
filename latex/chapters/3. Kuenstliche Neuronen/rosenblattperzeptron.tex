@@ -37,7 +37,17 @@ Dabei ähneln die dort erwähnten A-Units als verrechnende Einheiten nicht bloß
     }
 \end{figure}
 
-Die Eingabefunktion setzt sich dann wie Gleichung~\ref{eq:gl-mcpinpfunc} aus der Summe der Produkte der Prädikate $P_i \in \Phi$ (wobei $P_i(X) \in \{0, 1\}$) und den Gewichten $w_i \in \mathbb{R}$ der Verbindungen zusammen (s. Gleichung~\ref{eq:gl-rpinput}), und die Aktivierungsfunktion (s. Gleichung~\ref{eq:gl-rpact}) ist wieder eine Treppenfunktion mit dem reellen Schwellenwert $\Theta$:
+\textit{Rojas} schreibt, dass das klassische Rosenblatt-Perzeptron in einem Netz von Eingabe- und Ausgabeknoten gewichtete Verbindungen nutzt - die Knoten selber sind Schwellenwertelemente, Verbindungen werden stochastisch ermittelt (siehe~\cite[51]{Roj93}).
+Er weist ebenda darauf hin, dass das Modell nach Rosenblatts Veröffentlichung analysiert und verfeinert wurde, u. a. von \textit{Minsky und Papert} in~\cite{MP88}, die wie folgt definieren:
+
+\blockquote[{\cite[12; Hervorhebung i.O.]{MP88}}]{
+    A \underline{perceptron} is a device capable of computing all predicates which are linear in some given set $\Phi$ of partial predicates.
+}
+
+\textit{Prädikate} sind hier Verbindungen zu den Eingabesignalen, die einen Wahrheitswert $0$ oder $1$ basierend auf der Eingabe $X$ berechnen.
+Die Ausgaben der Prädikate werden individuell gewichtet und an die Zelle weitergeleitet, die die Aktivierungsfunktion implementiert (vgl.~\cite[52 f.]{Roj93} und~\cite[8-12]{MP88}).
+
+Diese Eingabefunktion setzt sich wie Gleichung~\ref{eq:gl-mcpinpfunc} aus der Summe der Produkte der Prädikate $P_i \in \Phi$ (wobei $P_i(X) \in \{0, 1\}$) und den Gewichten $w_i \in \mathbb{R}$ der Verbindungen zusammen (s. Gleichung~\ref{eq:gl-rpinput}), und die Aktivierungsfunktion (s. Gleichung~\ref{eq:gl-rpact}) ist wieder eine Treppenfunktion mit dem reellen Schwellenwert $\Theta$:
 
 \begin{equation}
 g \coloneqq g(X) = \sum^n_{i=1} P_i(X) w_i
@@ -116,11 +126,29 @@ Wir können feststellen, dass
 
 
 
-$M_+$ und $M_-$ sind damit \textit{linear separierbar}.
+$M_+$ und $M_-$ sind damit \textit{linear separierbar}. Nach \textit{Rojas} lautet die Definition für \textbf{Lineare Trennbarkeit}:
+
+\blockquote[{\cite[60 f., ``Definition 3.2``; Hervorhebung i.O.; Nummerierung eigene]{Roj93}}]{
+    \noindent
+    Zwei Mengen \textit{A} und \textit{B} von Punkten in einem \textit{n}-dimensionalen Raum sind \textit{linear trennbar}, falls \textit{n}+1 reelle Zahlen $w_1, ... , w_{n+1}$ existieren, so dass für jeden Punkt $x_1, ... , x_n \in A$ gilt
+
+    \begin{equation}
+        \sum^n_{i=1} w_ix_i \geq w_{n+1}
+        \label{eq:gl-defhalbraum-gl1}
+    \end{equation}
+
+    und für jeden Punkt $x_1, ... , x_n \in B$
+
+    \begin{equation}
+        \sum^n_{i=1} w_ix_i < w_{n+1}
+        \label{eq:gl-defhalbraum-gl2}
+    \end{equation}
+}
+
+
 
 \noindent
-Insgesamt kann ein Perzeptron als Funktion verstanden werden.
-So definiert \textit{Ertel}:
+Insgesamt kann ein Perzeptron als Funktion verstanden werden. \textit{Ertel} definiert hierzu :
 
 \blockquote[{\cite[212, ``Definition 8.3``; Hervorhebung i.O.]{Ert21a}}]{
     \noindent
@@ -136,6 +164,24 @@ So definiert \textit{Ertel}:
     \noindent
     dar.
 }
+
+\subsection*{Das Bias-Gewicht}
+Die sogenannte \textbf{bias unit} ermöglicht eine Trennbarkeit von Punktmengen, die nicht durch eine Ursprungsgerade separierbar sind (siehe Abbildung~\ref{fig:nichtseparierbar}): Das Bias-Gewicht\footnote{
+    vgl.~\cite[839]{RN09}
+} ist ein Wert, der zu der Gleichung~\ref{eq:gl-rpinput} hinzuaddiert wird.
+In der geometrischen Darstellung sorgt dieser Wert für eine Verschiebung der Ursprungsgeraden entlang der $x_2$-Achse\footnote{
+    im $ \mathbb{R}^n$ durch eine Hyperebene im Ursprung (vgl.~\cite[215]{Ert21a}).
+}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[
+        width=8cm,
+        keepaspectratio,
+    ]{chapters/3. Kuenstliche Neuronen/images/nichtseparierbar}
+    \caption{Punkte im $\mathbb{R}^2$, die nicht durch eine Ursprungsgerade separierbar sind. Angedeutet eine mögliche Trenngerade, die durch $(0,2)$ geht. (Quelle: Eigene Darstellung)}
+    \label{fig:nichtseparierbar}
+\end{figure}
 
 
 \subsection{Die Lernregel}\label{sec:lernregel}

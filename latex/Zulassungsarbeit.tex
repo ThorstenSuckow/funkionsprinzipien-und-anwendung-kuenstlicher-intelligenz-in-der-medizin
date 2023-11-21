@@ -22,6 +22,7 @@
 \usepackage{makeidx}         	% Index
 \usepackage{multicol}% Zweispaltiger Index
 \usepackage[threshold=0]{csquotes}
+\usepackage{verbatim} % provides the `\comment` block
 
 \newtheorem{theorem}{Theorem}
 \newcommand{\textgreek}[1]{\begingroup\fontencoding{LGR}\selectfont#1\endgroup}
@@ -104,6 +105,7 @@
 %\let\endequation\relax
 
 
+
 \DeclareFieldFormat{doi}{\textsc{doi}: \texttt{#1}}
 \DeclareFieldFormat{isbn}{\textsc{isbn}: \texttt{#1}}
 
@@ -125,7 +127,7 @@
 \author{\begin{center}
 			Thorsten Suckow-Homberg
 \end{center}}							% Autor der Arbeit
-\address{\begin{center}Aachen, 20.11.2023\end{center}} 							% Im Zusammenhang mit dem Datum wird hinter dem Ort ein Komma angegeben
+\address{\begin{center}Aachen, 21.11.2023\end{center}} 							% Im Zusammenhang mit dem Datum wird hinter dem Ort ein Komma angegeben
 \submitdate{} 				% Abgabedatum
 %\begingroup
 %  \renewcommand{\thepage}{title}
