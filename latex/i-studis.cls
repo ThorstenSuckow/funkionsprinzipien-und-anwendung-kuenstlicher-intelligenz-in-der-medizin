@@ -37,7 +37,7 @@
 	\begin{titlepage} 
 		%\begin{figure}[h]
 		%{
-			{\hspace {\fill} {\includegraphics[width=0.7\textwidth]{Logo_Hauptcampus_Informatik.eps}}} 
+			{\hspace {\fill} {\includegraphics[width=0.7\textwidth]{Logo_Hauptcampus_Informatik.eps}}}
 		%}
 		%\end{figure} 
 		
